@@ -1,0 +1,42 @@
+diff --git a/modem_proc/qmimsgs/nas/api/network_access_service_v01.h b/modem_proc/qmimsgs/nas/api/network_access_service_v01.h
+index 2f13550..2954d6d 100755
+--- a/modem_proc/qmimsgs/nas/api/network_access_service_v01.h
++++ b/modem_proc/qmimsgs/nas/api/network_access_service_v01.h
+@@ -10152,6 +10152,14 @@ typedef struct {
+   nas_common_network_id_type_v01 camped_plmn;
+   /**<   Camped PLMN consists of MCC and MNC.
+   */
++ 	
++  /* Optional */
++  /*  LTE SNR */
++  uint8_t lte_cell_snr_valid;  /**< Must be set to true if lte_cell_snr is being passed */
++  int16_t lte_cell_snr;
++  /**<   LTE signal-to-noise ratio of the serving cell in units of 0.1 dB.
++       Range of values: [-200, 300], which represents -20.0 dB to 30.0 dB.
++  */
+ }nas_get_cell_location_info_resp_msg_v01;  /* Message */
+ /**
+     @}
+diff --git a/modem_proc/qmimsgs/nas/src/network_access_service_v01.c b/modem_proc/qmimsgs/nas/src/network_access_service_v01.c
+index 35b916e..ed792fd 100755
+--- a/modem_proc/qmimsgs/nas/src/network_access_service_v01.c
++++ b/modem_proc/qmimsgs/nas/src/network_access_service_v01.c
+@@ -6459,11 +6459,16 @@ static const uint8_t nas_get_cell_location_info_resp_msg_data_v01[] = {
+    QMI_IDL_FLAGS_OFFSET_IS_16 | QMI_IDL_GENERIC_4_BYTE,
+   QMI_IDL_OFFSET16ARRAY(nas_get_cell_location_info_resp_msg_v01, nrdc_arfcn),
+ 
+-  QMI_IDL_TLV_FLAGS_LAST_TLV | QMI_IDL_TLV_FLAGS_OPTIONAL | (QMI_IDL_OFFSET16RELATIVE(nas_get_cell_location_info_resp_msg_v01, camped_plmn) - QMI_IDL_OFFSET16RELATIVE(nas_get_cell_location_info_resp_msg_v01, camped_plmn_valid)),
++  QMI_IDL_TLV_FLAGS_OPTIONAL | (QMI_IDL_OFFSET16RELATIVE(nas_get_cell_location_info_resp_msg_v01, camped_plmn) - QMI_IDL_OFFSET16RELATIVE(nas_get_cell_location_info_resp_msg_v01, camped_plmn_valid)),
+   0x32,
+    QMI_IDL_FLAGS_OFFSET_IS_16 | QMI_IDL_AGGREGATE,
+   QMI_IDL_OFFSET16ARRAY(nas_get_cell_location_info_resp_msg_v01, camped_plmn),
+-  QMI_IDL_TYPE88(0, 0)
++  QMI_IDL_TYPE88(0, 0),
++
++  QMI_IDL_TLV_FLAGS_LAST_TLV | QMI_IDL_TLV_FLAGS_OPTIONAL | (QMI_IDL_OFFSET16RELATIVE(nas_get_cell_location_info_resp_msg_v01, lte_cell_snr) - QMI_IDL_OFFSET16RELATIVE(nas_get_cell_location_info_resp_msg_v01, lte_cell_snr_valid)),
++  0x33,
++  QMI_IDL_FLAGS_OFFSET_IS_16 | QMI_IDL_GENERIC_2_BYTE,
++  QMI_IDL_OFFSET16ARRAY(nas_get_cell_location_info_resp_msg_v01, lte_cell_snr)
+ };
+ 
+ static const uint8_t nas_get_plmn_name_req_msg_data_v01[] = {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">	
+	<NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<NvEfsItemData name="ims_hybrid_enable" id="70287" description="Hybrid Feature to be Enabled/Disabled" comment="" category="IMS" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/ims/ims_hybrid_enable">
+		<Member name="IMS_Hybrid_Enable" description="Hybrid Feature to be Enabled/Disabled" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ims_hybrid_enable_Subscription01" id="70287" description="" comment="" category="IMS" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/ims/ims_hybrid_enable_Subscription01">
+		<Member name="IMS_Hybrid_Enable" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+</NvData>

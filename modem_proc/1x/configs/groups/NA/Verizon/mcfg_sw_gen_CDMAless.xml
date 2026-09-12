@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="1x.0.0" type="1"/>
+	<NvItemData name="1xEV Tx Partial RLP" id="4227" description="maximum message length" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_max_payload_length" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+	</NvItemData>
+	</NvData>

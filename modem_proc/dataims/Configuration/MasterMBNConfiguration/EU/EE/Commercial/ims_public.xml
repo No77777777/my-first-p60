@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">	
+	<NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<GroupFile name="ims_public.xml" description="Public Group MBN configuration XML for Common Items" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/common/EU/EE/Commercial/ims_public.xml"/>	
+  <GroupFile name="ims_public.xml" description="Public Group MBN configuration XML for DPL items" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/DPL/EU/EE/Commercial/ims_public.xml"/>		
+	<GroupFile name="ims_public.xml" description="Public Group MBN configuration XML for PM items" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/PM/EU/EE/Commercial/ims_public.xml"/>		
+	<GroupFile name="ims_public.xml" description="Public Group MBN configuration XML for RM items" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/RM/EU/EE/Commercial/ims_public.xml"/>
+	<GroupFile name="ims_public.xml" description="Public Group MBN configuration XML for SMS_DAN_USSD items" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/SMS_DAN_USSD/EU/EE/Commercial/ims_public.xml"/>		
+	<GroupFile name="ims_public.xml" description="Public Group MBN configuration XML for UT items" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/UT/EU/EE/Commercial/ims_public.xml"/>
+</NvData>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+    <NvConfigurationData carrierIndex="0" version="" type="1"/>		
+	<NvEfsItemData name="SMSConfiguration" id="73839" description="IMS SMS related Config Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/SMSConfiguration">
+	    <Member name="version" description="Version" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="smsFormat" description="SMS Format Specification" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="PSIValue" description="Configure SMS IMS PSI value" comment="" sizeOf="128" type="string"></Member>
+		<Member name="smsErrorCodeList" description="configure error code which need to send temp failure" comment="" sizeOf="128" type="string"></Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint6128"> </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="DANConfiguration" id="73840" description="IMS DAN related Config Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/DANConfiguration">
+	    <Member name="version" description="Version" comment="" sizeOf="1" type="uint8">0</Member> 	
+		<Member name="smsVDNConfig" description="IMS SMS VDN Config value" comment="" sizeOf="128" type="string">10138</Member> 
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint7160"> </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="USSDConfiguration" id="74445" description="Items to configure USSD Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/USSDConfiguration">
+	    <Member name="version" description="Version" comment="" sizeOf="1" type="uint8">0</Member> 	
+		<Member name="ussdErrorCodeList" description="configure error code which need to send CS Fallback" comment="" sizeOf="128" type="string"> </Member> 
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint7160"> </Member>
+	</NvEfsItemData>
+</NvData>

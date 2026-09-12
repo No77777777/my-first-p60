@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="" type="1"/>
+  <NvEfsItemData name="IRMConfig" id="74449" description="Items to configure IMSRecoveryManagerConfig" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IRMConfig">
+    <Member name="Version" description="Version control for IRMConfig" comment="" sizeOf="1" type="uint8">0</Member>
+    <Member name="Enable_IRM" description="Enable_IRM Value" comment="" sizeOf="1" type="uint8">1</Member>
+    <Member name="Enable_SSR_On_Max_Attempt" description="Enable_SSR_On_Max_Attempt Value" comment="" sizeOf="1" type="uint8">0</Member>
+    <Member name="Max_Attempt" description="Max_Attempt Value" comment="" sizeOf="1" type="uint16">30</Member>
+    <Member name="Max_Attempt_Timeout" description="Max_Attempt_Timeout Value in secs" comment="" sizeOf="1" type="uint32">9000</Member>
+    <Member name="Defer_Timer" description="Defer_Timer Value in secs" comment="" sizeOf="1" type="uint16">300</Member>
+    <Member name="reserved" description="Bytes reserved for future versions" comment="" sizeOf="21" type="uint8">0</Member>
+  </NvEfsItemData>
+</NvData>    

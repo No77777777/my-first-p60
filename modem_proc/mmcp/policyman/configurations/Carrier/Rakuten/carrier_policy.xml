@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier policy XML for Rakuten
+$Header: $
+-->
+<policy name        = "Rakuten"
+        changelist  = "$Change: 14971833 $"
+        policy_ver  = "135.1.2"
+>
+  <initial>
+
+    <mcc_list name="home_mcc"> 440 </mcc_list>
+
+    <rf_band_list name="rf_bands_home">  
+      <gw_bands base = "none" />
+      <lte_bands base="none">
+        <include> 0 2 17 25 27 </include>
+      </lte_bands>
+      <tds_bands base = "none" /> 
+    </rf_band_list>
+
+    <rf_band_list name="rf_bands_roam">
+      <gw_bands base="none">
+        <include> 7 8 9 19 20 21 22 23 25 26 49 </include>
+      </gw_bands>
+      <lte_bands base="none">
+        <include> 0 1 2 3 4 6 7 11 12 13 16 19 27 28 29 31 37 38 39 40 </include>
+      </lte_bands>
+      <tds_bands base="none" />
+    </rf_band_list>
+
+    <define_fullrat_config>
+      <rf_bands base="hardware" />
+      <rat_capability base="none">
+        <include> G W L </include>
+      </rat_capability>
+    </define_fullrat_config>
+
+    <rat_capability_if base="none">
+      <include> L </include>
+    </rat_capability_if>
+
+    <rf_bands_if list="rf_bands_home" /> 
+
+  </initial>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <svc_mode> FULL </svc_mode>
+
+  <!-- Determine configuration based on location -->
+  <select>
+
+    <case>
+      <location_mcc_in list="home_mcc" />
+      <actions>
+        <rf_bands list="rf_bands_home" />
+        <rat_capability base="none">
+          <include> L </include>
+        </rat_capability>
+      </actions>
+    </case>
+  
+    <case>
+      <true />
+      <actions>
+        <rf_bands list="rf_bands_roam" />
+        <rat_capability base="none">
+          <include> G W L </include>
+        </rat_capability>
+      </actions>
+    </case>
+
+  </select>
+
+</policy>

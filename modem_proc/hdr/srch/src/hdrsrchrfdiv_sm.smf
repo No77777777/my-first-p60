@@ -1,0 +1,166 @@
+/*===========================================================================
+
+       SIMPLE_SMGROUP.SMF - A simple one-state machine group example
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Copyright (c) 2009 - 2015
+                QUALCOMM Technologies, Incorporated. All Rights Reserved
+                Qualcomm Technologies, Proprietary
+
+  Export of this technology or software is regulated by the U.S. Government.
+  Diversion contrary to U.S. law prohibited.
+
+  All ideas, data and information contained in or disclosed by
+  this document are confidential and proprietary information of
+  QUALCOMM Technologies, Incorporated and all rights therein are expressly reserved.
+  By accepting this material the recipient agrees that this material
+  and the information contained therein are held in confidence and in
+  trust and will not be used, copied, reproduced in whole or in part,
+  nor its contents revealed in any manner to others without the express
+  written permission of QUALCOMM Technologies, Incorporated.
+
+===========================================================================*/
+
+/*===========================================================================
+
+                        EDIT HISTORY FOR MODULE
+
+This section contains comments describing changes made to the module.
+Notice that changes are listed in reverse chronological order.
+
+$Header$ $DateTime$ $Author$
+
+when       who     what, where, why
+--------   ---     ----------------------------------------------------------
+11/24/15   wsh     Added logic to handle DIV grant after TX in QTA
+07/06/15   wsh     Added delay for DIV release/request
+06/30/15   tnp     Update copyright info
+08/01/13   wsh     Fixed compiler warning and minor issues
+06/26/13   wsh     Added Selective TxD feature
+05/25/12   wsh     Moved ARD logic into it's own state machine
+05/02/12   rkc     Added HDRSRCHRFDIV_FL_ADPT_DIV_ALLOWED_CMD to all states.
+03/13/12   ljl     Added HDRSRCHRFDIV_HARD_TA_REQUEST_DIV_CMD and
+                   hdrsrchrfdiv_hard_ta_runtime_pref_ctrl_tf().
+01/09/12   smd     Supported ACQ diversity.
+12/22/11   rkc     Added handling of HDRSRCHRFDIV_FL_ADPT_DISABLE_DIV_CMD.
+11/11/11   arm     HDR idle and access state diversity implemetation.
+11/10/11   lyl     Handled FL ARD disabling in inactive state.
+10/14/11   lyl     Supported FL ARD enhancement.
+04/27/11   lyl     Supported HDR FL data driven adaptive RxD.
+06/10/10   lyl     Supported runtime diversity preference control.
+05/19/10   ljl     Supported SVDO diversity.
+05/13/09   grl     Initial revision
+=============================================================================*/
+
+/* It is standard process to run the STM description files through the C
+   preprocessor to allow for featurization.  Include the necessary header
+   files that contain the particular features needed.  */
+#include "hdr_variation.h"
+#include "target.h"
+#include "customer.h"
+
+STATE_MACHINE HDRSRCHRFDIV_SM
+{
+
+  ENTRY           hdrsrchrfdiv_init;
+  EXIT            NULL;
+  INITIAL_STATE   HDRSRCHRFDIV_INACTIVE_STATE;
+  START_ACTIVE    FALSE;
+
+  STATE HDRSRCHRFDIV_INACTIVE_STATE
+  {
+    ENTRY   hdrsrchrfdiv_enter_inactive;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFDIV_REQUEST_DIV_CMD         hdrsrchrfdiv_request_div_tf;
+      HDRSRCHRFDIV_SET_DIV_PREF_CMD        hdrsrchrfdiv_set_div_pref_tf;
+      HDRSRCHRFDIV_SET_RAMP_DOWN_STATE_CMD hdrsrchrfdiv_set_ramp_down_state_tf;
+      HDRSRCHRFDIV_RUNTIME_PREF_CTRL_CMD   hdrsrchrfdiv_runtime_pref_ctrl_tf;
+    }
+  }
+
+  STATE HDRSRCHRFDIV_WAIT_TO_ACQUIRE_STATE
+  {
+    ENTRY   hdrsrchrfdiv_enter_wait_to_acquire;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFDIV_REQUEST_DIV_CMD         hdrsrchrfdiv_request_div_tf;
+      HDRSRCHRFDIV_SET_DIV_PREF_CMD        hdrsrchrfdiv_set_div_pref_tf;
+      HDRSRCHRFDIV_SET_RAMP_DOWN_STATE_CMD hdrsrchrfdiv_set_ramp_down_state_tf;
+      HDRSRCHRFDIV_RUNTIME_PREF_CTRL_CMD   hdrsrchrfdiv_runtime_pref_ctrl_tf;
+      HDRSRCHRFDIV_DISABLE_DIV_CMD         hdrsrchrfdiv_disable_div_tf;
+      HDRSRCHRFDIV_WAIT_DONE_CMD           hdrsrchrfdiv_wait_done_tf;
+    }
+  }
+
+  STATE HDRSRCHRFDIV_ACQUIRING_RF_STATE
+  {
+    ENTRY   hdrsrchrfdiv_enter_acquiring_rf;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFDIV_RF_GRANTED_CMD          hdrsrchrfdiv_rf_granted_tf;
+      HDRSRCHRFDIV_DISABLE_DIV_CMD         hdrsrchrfdiv_disable_div_tf;
+      HDRSRCHRFDIV_SET_DIV_PREF_CMD        hdrsrchrfdiv_set_div_pref_tf;
+      HDRSRCHRFDIV_SET_RAMP_DOWN_STATE_CMD hdrsrchrfdiv_set_ramp_down_state_tf;
+      HDRSRCHRFDIV_RUNTIME_PREF_CTRL_CMD   hdrsrchrfdiv_runtime_pref_ctrl_tf;
+    }
+  }
+  STATE HDRSRCHRFDIV_WARM_UP_STATE
+  {
+    ENTRY   hdrsrchrfdiv_enter_warm_up;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFDIV_REDO_WARMUP_CMD         hdrsrchrfdiv_redo_warmup_tf;
+      HDRSRCHRFDIV_WARMUP_DONE_CMD         hdrsrchrfdiv_warm_up_done_tf;
+      HDRSRCHRFDIV_DISABLE_DIV_CMD         hdrsrchrfdiv_disable_div_tf;
+      HDRSRCHRFDIV_SET_DIV_PREF_CMD        hdrsrchrfdiv_set_div_pref_tf;
+      HDRSRCHRFDIV_SET_RAMP_DOWN_STATE_CMD hdrsrchrfdiv_set_ramp_down_state_tf;
+      HDRSRCHRFDIV_RUNTIME_PREF_CTRL_CMD   hdrsrchrfdiv_runtime_pref_ctrl_tf;
+    }
+  }
+  STATE HDRSRCHRFDIV_ENABLED_STATE
+  {
+    ENTRY   hdrsrchrfdiv_enter_enabled;
+#ifdef FEATURE_HDR_SELECTIVE_TXD
+    EXIT    hdrsrchrfdiv_exit_enabled;
+#else
+    EXIT    NULL;
+#endif /* FEATURE_HDR_SELECTIVE_TXD */
+
+    INPUTS
+    {
+      HDRSRCHRFDIV_RELEASE_DIV_CMD         hdrsrchrfdiv_release_div_event_tf;
+      HDRSRCHRFDIV_DISABLE_DIV_CMD         hdrsrchrfdiv_disable_div_tf;
+      HDRSRCHRFDIV_SET_DIV_PREF_CMD        hdrsrchrfdiv_set_div_pref_tf;
+      HDRSRCHRFDIV_SET_RAMP_DOWN_STATE_CMD hdrsrchrfdiv_set_ramp_down_state_tf;
+      HDRSRCHRFDIV_CONSIDER_DIV_SWITCH_CMD hdrsrchrfdiv_consider_div_switch_tf;
+      HDRSRCHRFDIV_RUNTIME_PREF_CTRL_CMD   hdrsrchrfdiv_runtime_pref_ctrl_tf;
+#ifdef FEATURE_HDR_SVDO_DIV_SUPPORT
+      HDRSRCHRFDIV_CHANGE_DIV_STATUS_CMD   hdrsrchrfdiv_change_div_status_tf;
+#endif /* FEATURE_HDR_SVDO_DIV_SUPPORT */
+    }
+  }
+  STATE HDRSRCHRFDIV_HARD_DIV_TUNE_AWAY_STATE
+  {
+    ENTRY   hdrsrchrfdiv_enter_hard_div_tune_away;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFDIV_HARD_TA_REQUEST_DIV_CMD hdrsrchrfdiv_request_div_tf;
+      HDRSRCHRFDIV_SET_DIV_PREF_CMD        hdrsrchrfdiv_set_div_pref_tf;
+      HDRSRCHRFDIV_SET_RAMP_DOWN_STATE_CMD hdrsrchrfdiv_set_ramp_down_state_tf;
+      HDRSRCHRFDIV_DISABLE_DIV_CMD         hdrsrchrfdiv_disable_div_tf;
+      HDRSRCHRFDIV_RUNTIME_PREF_CTRL_CMD   hdrsrchrfdiv_hard_ta_runtime_pref_ctrl_tf;
+    }
+  }
+}  /* STATE_MACHINE */
+

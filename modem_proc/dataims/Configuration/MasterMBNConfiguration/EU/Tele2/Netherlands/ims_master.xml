@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">	
+	<NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<GroupFile name="ims_private.xml" description="Private MBN configuration XML" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/MasterMBNConfiguration/EU/Tele2/Netherlands/ims_private.xml"/>
+	<GroupFile name="ims_public.xml" description="Public MBN configuration XML" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/MasterMBNConfiguration/EU/Tele2/Netherlands/ims_public.xml"/>
+</NvData>

@@ -1,0 +1,128 @@
+;============================================================================
+;  Name:
+;    RCINIT_INFO.CMM
+;
+;  Description:
+;    This script is used to extract RCINIT function and task related information
+; 
+;  Copyright (c) 2020 by Qualcomm Technologies, Inc.  All Rights Reserved.
+;  Qualcomm Confidential and Proprietary
+;----------------------------------------------------------------------------
+;============================================================================
+
+&file1="C:\Temp\"+"initFunc.csv"
+&file2="C:\Temp\"+"initTask.csv"
+&file3="C:\Temp\"+"initTime.csv"
+;These files will be created after executing the script
+;============================================================================
+
+OPEN #4 &file1 /CREATE
+CLOSE #4
+OPEN #4 &file1 /WRITE
+
+&i=0
+
+&total_start_time=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->initfn_time_log[0].start_time)
+
+&start=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->initfn_time_log[0].start_time)
+
+&initFunName=V.STRING(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->initfn_time_log[&i].name)
+
+;============================================================================
+;While loop will extract the RCINIT function information and writes it into initFunc.csv
+
+while (&start!=0) 
+(
+ &end=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->initfn_time_log[&i].end_time)
+ 
+ &Group=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->initfn_time_log[&i].group)
+ 
+ &time=&end-&start
+ 
+ &time_ms=(&time*0xa)/0xc0
+  if (&time>=0)
+  (
+  WRITE #4 "&Group,&initFunName,&time_ms,&time"
+  )
+  else ()
+  (
+  WRITE #4 "&Group,&initFunName,0,0"
+  )
+  &i=&i+1
+  &start=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->initfn_time_log[&i].start_time)
+  
+  &initFunName=V.STRING(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->initfn_time_log[&i].name) 
+)
+
+print ""
+print ""
+CLOSE #4
+;============================================================================
+
+
+OPEN #5 &file2 /CREATE
+CLOSE #5
+OPEN #5 &file2 /WRITE
+&i=0
+&start=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->hs_table[&i].start_time)
+
+&initTaskName=V.STRING(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->hs_table[&i].task_name)
+
+;============================================================================
+;While loop will extract the RCINIT task information and writes it into initTask.csv
+
+while (&start!=0) 
+(
+ &end=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->hs_table[&i].end_time)
+ 
+ &group=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->hs_table[&i].group)
+ 
+ &time=&end-&start
+ &time_ms=(&time*0xa)/0xc0
+ &handshake_given=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->hs_table[&i].hs)
+ WRITE #5 "&group,&initTaskName,&time_ms,&time,&handshake_given"
+ &i=&i+1
+ &start=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->hs_table[&i].start_time)
+ 
+ &initTaskName=V.STRING(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->hs_table[&i].task_name)
+)
+&total_end_time=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->hs_table[0xca].end_time)
+
+&total_time=&total_end_time-&total_start_time
+
+CLOSE #5
+
+OPEN #1 &file3 /CREATE
+CLOSE #1
+OPEN #1 &file3 /WRITE
+
+&j=0
+
+;============================================================================
+;While loop will extract group_start_time and writes it into initTime.csv
+
+while (&j!=9)
+(
+&group_start_time=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->group_start_time[&j])
+
+WRITE #1 "&group_start_time"
+&j=&j+1
+)
+
+&process_state=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->process_state)
+&group_current=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->group_curr)
+&function_current=V.VALUE(((rcinit_client_internal_q_data_s *)rcinit_internal_static.q_of_rcinit_client_internal_q_data_p.link.next_ptr)->client_internal->initfn_curr)
+WRITE #1 "&process_state"
+WRITE #1 "&group_current"
+WRITE #1 "&function_current"
+CLOSE #1
+;============================================================================
+print "=========================================================================="
+print %COLOR.BLUE "Make sure the python and cmm scripts are in the same folder."
+print ""
+print "You can look for cmm and python scripts in these folders."
+print ""
+print "xxxx_proc\core\debugtools\rcinit\cmm"
+print ""
+OS.Command python RCINIT_INFO_MAIN.py
+print "RCINIT_INFO file is created in C:\Temp folder."

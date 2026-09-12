@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="VAdc">
+  <device name="/vadc/pm6250">
+    <props name="VADC_BSP" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      VAdcBsp_agatti
+    </props>
+  </device>
+    <device name="/vadc/pmI455">
+    <props name="VADC_BSP" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      VAdcBspPMI455_agatti
+    </props>
+  </device>
+</driver>
+

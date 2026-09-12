@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1"/>
+<NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" mcfgAttributes="0x09" mcfgVariant="1">
+		<Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" mcfgAttributes="0x09" mcfgVariant="1">
+		<Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" mcfgAttributes="0x09" mcfgVariant="1">
+		<Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="Band Class Preference" id="441" description="" comment="" category="CDMA" mcfgAttributes="0x29" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="band" description="" comment="" sizeOf="1" type="uint16">384 </Member>
+	</NvItemData>
+	<NvItemData name="Expand Band Preference 16 To 32 Bits" id="946" description="" comment="" category="System" mcfgAttributes="0x29" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="band_pref_16_31" description="" comment="" sizeOf="1" type="int16">49151 </Member>
+	</NvItemData>
+	<NvEfsItemData name="rrc_ganss_support_nv" id="71564" description="RRC GANSS SUPPORT" comment="" category="WCDMA" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_ganss_support_nv">
+		<Member name="rrc_ganss_support_nv" description="RRC GANSS SUPPORT" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	</NvData>

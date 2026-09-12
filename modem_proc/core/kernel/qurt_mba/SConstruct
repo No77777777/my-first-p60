@@ -1,0 +1,84 @@
+#===============================================================================
+#                    Copyright (c) 2013  by Qualcomm Technologies, Inc.  All Rights Reserved.
+#                         QUALCOMM Proprietary/GTDR
+#===============================================================================
+import os
+import fnmatch
+import sys
+import re
+import SCons
+
+# Add command line parameters for target, install directory and build directory
+AddOption('--target',
+          dest='target',
+          default=ARGUMENTS.get('TARGET', ''),
+          type='string',
+          nargs=1,
+          action='store',
+          metavar='TRGT',
+          help='Initialize Target')
+
+AddOption('--install_dir',
+          dest='instdir',
+          default='install',
+          type='string',
+          nargs=1,
+          action='store',
+          metavar='INSTALL_DIR',
+          help='Initialize Install directory')
+
+AddOption('--build_dir',
+          dest='blddir',
+          default='build',
+          type='string',
+          nargs=1,
+          action='store',
+          metavar='BUILD_DIR',
+          help='Initialize Build directory')
+
+AddOption('--q6_tools_root',
+          dest='toolsroot',
+          type='string',
+          nargs=1,
+          action='store',
+          metavar='Q6_TOOLS_ROOT',
+          help='Set tools directory')
+
+AddOption('--use_llvm',
+          dest='usellvm',
+          default=False,
+          action='store_true',
+          help='use llvm tools')
+
+AddOption('--api_dir',
+          dest='apidir',
+          default='api',
+          type='string',
+          nargs=1,
+          action='store',
+          metavar='API_DIR',
+          help='Initialize api external location')
+
+if GetOption('help')==True:
+   print "\nUsage: \nscons qurt" 
+   print "          --target=<TARGET>"
+   print "          --install_dir=<INSTALL DIRECTORY>"
+   print "          --build_dir=<BUILD_DIRECTORY>"
+   print "          --q6_tools_root=<Q6_TOOLS_ROOT>"
+   print "          --api_dir=<API_DIRECTORY>"
+   sys.exit(0)
+
+env = DefaultEnvironment(ENV = {'PATH' : os.environ['PATH']}, 
+                         TRGT          = GetOption('target'), 
+                         Q6_RTOS_ROOT  = os.path.realpath(GetOption('instdir')),
+                         INSTALL_DIR   = os.path.realpath(GetOption('instdir')),
+                         BUILD_DIR     = os.path.abspath(GetOption('blddir')),
+                         Q6_TOOLS_ROOT = GetOption('toolsroot'),
+                         USE_LLVM = GetOption('usellvm'),
+                         API_DIR       = os.path.realpath(GetOption('apidir')),
+                         tools         = ['mingw'])          
+
+qurtenv = env.Clone()
+
+returnlibs = SConscript('SConscript', exports='qurtenv')
+

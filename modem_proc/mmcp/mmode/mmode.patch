@@ -1,0 +1,39 @@
+diff --git a/modem_proc/mmcp/mmode/qmi/src/network_access_service_impl_v01.c b/modem_proc/mmcp/mmode/qmi/src/network_access_service_impl_v01.c
+index ba7fbb9..ce80f75 100755
+--- a/modem_proc/mmcp/mmode/qmi/src/network_access_service_impl_v01.c
++++ b/modem_proc/mmcp/mmode/qmi/src/network_access_service_impl_v01.c
+@@ -776,7 +776,10 @@ static const uint32_t nas_get_cell_location_info_resp_msg_impl_array_v01[] =
+     QMI_SI_TLV_SET(0x14)   |  /* lte_inter */
+     QMI_SI_TLV_SET(0x15)   |  /* lte_gsm */
+     QMI_SI_TLV_SET(0x16)   |  /* lte_wcdma */
+-    QMI_SI_TLV_SET(0x17)      /* umts_cell_id */
++    QMI_SI_TLV_SET(0x17)   |  /* umts_cell_id */
++    /* FEATURE_MODEM_SINR ADD-S */
++    QMI_SI_TLV_SET(0x33)      /* lte_cell_snr */
++    /* FEATURE_MODEM_SINR ADD-E */
+ };
+ 
+ static const qmi_implemented_optionals nas_get_cell_location_info_resp_msg_impl_v01 =
+diff --git a/modem_proc/mmcp/mmode/qmi/src/qmi_nas.c b/modem_proc/mmcp/mmode/qmi/src/qmi_nas.c
+index 58a28b6..6d7c9a5 100755
+--- a/modem_proc/mmcp/mmode/qmi/src/qmi_nas.c
++++ b/modem_proc/mmcp/mmode/qmi/src/qmi_nas.c
+@@ -20928,7 +20928,17 @@ static dsm_item_type  *qmi_nasi_get_cell_location_info
+             {
+               QM_MSG_ERROR_1( "Recieved Invalid nbr_info->doppler_measurement = %d", nbr_info->doppler_measurement );
+             }
+-
++            /* FEATURE_MODEM_SINR ADD-S */
++            {
++              uint16 lte_sinr = qmi_nasi_global.cm_msim_ss_info[subs_id].stack_info[STACK_INDEX_0].sinr;
++              if ( lte_sinr != NASI_SIG_STRENGTH_INACTIVE_SINR )
++              {
++                rsp_msg->lte_cell_snr_valid = TRUE;
++                rsp_msg->lte_cell_snr = (int16_t)( lte_sinr * 2 - 200 );
++                QM_MSG_HIGH_2("cell_location_info: lte_cell_snr=%d (raw sinr=%d)", rsp_msg->lte_cell_snr, lte_sinr);
++              }
++            }
++            /* FEATURE_MODEM_SINR ADD-E */
+           }
+         }
+       }

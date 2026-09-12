@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR3925_QRD_CA_QPA8673_GSM_G850_RX1.xml -->
+	<NvItem id="26700" name="RFNV_GSM_C1_GSM850_LNA_SWPT_I" mapping="direct" encoding="dec">-100,-100,-35,-51,-22,-43,127,127</NvItem>
+</NvSource>

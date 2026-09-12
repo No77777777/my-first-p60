@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+	<NvConfigurationData carrierIndex="0" version="mcfg.0.0" type="1"/>
+	<NvItemData name="Banner" id="71" description="" comment="" category="Display" mcfgAttributes="0x09" mcfgVariant="1">
+		<Member name="letters" description="" comment="" sizeOf="13" type="string">HW_DEFAULT</Member>
+	</NvItemData>
+	<NvLargeEfsFile name="mcfg_sel_db.xml" id="none" description="" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="8" targetPath="/nv/item_files/mcfg/mcfg_sel_db.xml" buildPath="modem_proc/mcfg/mcfg_gen/scripts/mcfg_sel_db.xml"/>
+</NvData>

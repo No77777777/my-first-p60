@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="Timer">
+
+   <device id="DALDEVICEID_TIMER">
+   </device>
+</driver>

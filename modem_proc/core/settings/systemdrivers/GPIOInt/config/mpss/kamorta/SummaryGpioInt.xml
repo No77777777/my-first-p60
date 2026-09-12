@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<driver name="NULL">
+    <global_def>
+    <var_seq name="xo_shutdown" type="DALPROP_DATA_TYPE_STRING">/xo/cxo</var_seq>
+    </global_def>
+    <device name="SummaryGpioInt">
+    <props name="PROCESSOR" type="DALPROP_ATTR_TYPE_UINT32">
+    GPIOINT_DEVICE_MODEM
+    </props>
+    <props name="NUMBER_OF_SUMMARY_INTERRUPTS" type="DALPROP_ATTR_TYPE_UINT32">
+    20
+    </props>
+    <props name="SUMMARY_INTR_ID" type="DALPROP_ATTR_TYPE_UINT32">
+    446
+    </props>
+    <props name="XO_SHUTDOWN_RSRC" type="DALPROP_ATTR_TYPE_STRING_PTR">
+    xo_shutdown
+    </props>
+    </device>
+</driver>

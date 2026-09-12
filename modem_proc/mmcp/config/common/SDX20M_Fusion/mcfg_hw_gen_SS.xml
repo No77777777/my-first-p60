@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="mmcp.0.0" type="1"/>
+<NvEfsItemData name="enable_thin_ui_cfg" id="70310" description="UI Task Configurations" comment="" category="ThinUI" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/Thin_UI/enable_thin_ui_cfg">
+<Member name="enable_thin_ui_cfg" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+</NvEfsItemData>
+	<NvEfsItemData name="mcc_list_emerg_call_end_no_sim" id="74183" description="MCC list on which emergency call needs to be ended without  SIM" comment="" category="MMode" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/mcc_list_emerg_call_end_no_sim">
+		<Member name="mcc[0]" description="" comment="" sizeOf="1" type="uint32">262 </Member>
+		<Member name="mcc[1]" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+		<Member name="mcc[2]" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="sd_device_config_timers" id="74117" description="EFS item for all the device level timers at SD" comment="" category="MMode" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/nv/item_files/modem/mmode/sd/sd_device_config_timers" buildPath="modem_proc/mmcp/config/EFS_files/common/sd_device_config_timers"/>
+	<NvEfsFile name="post.xml" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/policyman/post.xml" buildPath="modem_proc/mmcp/policyman/configurations/Carrier/GenericUSA/post.xml"/>
+	<NvEfsItemData name="thinui_setup_resp_req" id="" description="" comment="" category="MMode" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/mmode/thinui_setup_resp_req.txt">
+		<Member name="thinui_setup_resp_req" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+<NvEfsFile name="device_config.xml" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/policyman/device_config.xml" buildPath="modem_proc/mmcp/policyman/configurations/DevConfig/SS/device_config.xml"/>
+	</NvData>

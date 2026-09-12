@@ -1,0 +1,83 @@
+/**
+  @file policyman_obsolete_apis.c
+
+  @brief  FIle for obsolete APIs
+*/
+
+/*
+    Copyright (c) 2013-2015 QUALCOMM Technologies Incorporated.
+    All Rights Reserved.
+    Qualcomm Technologies Confidential and Proprietary
+
+  Export of this technology or software is regulated by the U.S. Government.
+  Diversion contrary to U.S. law prohibited.
+
+  All ideas, data and information contained in or disclosed by this
+  document are confidential and proprietary information of
+  QUALCOMM Technologies Incorporated and all rights therein are expressly reserved.
+  By accepting this material the recipient agrees that this material
+  and the information contained therein are held in confidence and in
+  trust and will not be used, copied, reproduced in whole or in part,
+  nor its contents revealed in any manner to others without the express
+  written permission of QUALCOMM Technologies Incorporated.
+
+  $Header: //components/rel/mmcp.mpss/7.9.0/policyman/src/policyman_obsolete_apis.c#1 $
+  $DateTime: 2021/06/15 22:40:27 $
+  $Author: pwbldsvc $
+*/
+
+#include <comdef.h>
+#include "msgr_rex.h"
+#include "policyman.h"
+
+typedef struct cfcm_cmd_type_s cfcm_cmd_type_s;
+
+/*-------- policyman_report_thermal_state --------*/
+msgr_hdr_s * policyman_report_thermal_state(
+  cfcm_cmd_type_s *pCfcm_cmd
+)
+{
+  return NULL;
+}
+
+/*-------- policyman_sglte_plmn_is_sglte --------*/
+policyman_status_t policyman_sglte_plmn_is_sglte(
+  sys_plmn_id_s_type  *pPlmnId,
+  boolean             *pIsSglte
+)
+{
+  if (pPlmnId == NULL || pIsSglte == NULL)
+  {
+    return POLICYMAN_STATUS_ERR_INVALID_ARGS;
+  }
+
+  *pIsSglte = FALSE;
+
+  return POLICYMAN_STATUS_ERR;
+}
+
+/*-------- policyman_is_sglte_allowed --------*/
+policyman_status_t policyman_is_sglte_allowed(
+  boolean             *pIsSglte
+)
+{
+  if (NULL == pIsSglte)
+  {
+    return POLICYMAN_STATUS_ERR_INVALID_ARGS;
+  }
+
+  *pIsSglte = FALSE;
+
+  return POLICYMAN_STATUS_ERR;
+}
+
+/*-------- policyman_device_config_get_specialization --------*/
+policyman_status_t policyman_device_config_get_specialization(
+  policyman_item_t const  *pItem,
+  sys_specialization_t    *pSpecial
+)
+{
+  *pSpecial = SYS_SPECIAL_NONE;
+
+  return POLICYMAN_STATUS_SUCCESS;
+}

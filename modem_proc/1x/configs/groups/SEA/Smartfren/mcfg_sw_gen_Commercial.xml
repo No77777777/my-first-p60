@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="1x.0.0" type="1"/>
+<NvItemData name="Sync Channel Traffic Message" id="4102" description="Enables or Disables 4GV NB Voice SO" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cdma_so68_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="CDMA So73 Enabled" id="7166" description="Enables or Disables EVRC NW Voice SO" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cdma_so73_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvEfsItemData name="so73_cop0_supported" id="65634" description="" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/so73_cop0_supported">
+		<Member name="so73_cop0_supported" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="1xadvanced_capability" id="65881" description="1xadvanced capability status indicator" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/1xadvanced_capability">
+		<Member name="status" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="rej_voice_page_for_volte_CDMA" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/rej_voice_page_for_volte_CDMA">
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	</NvData>

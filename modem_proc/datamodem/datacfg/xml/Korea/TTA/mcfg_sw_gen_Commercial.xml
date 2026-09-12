@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="data.0.0" type="1"/>
+<GroupFile name="mcfg_sw_gen_Gen_3GPP_DeleteROW.xml" description="" comment="" category="" version="data.0.0" mcfgAttributes="0x09" buildPath="modem_proc/datamodem/datacfg/xml/common/ROW/mcfg_sw_gen_Gen_3GPP_DeleteROW.xml"/>
+<NvItemData name="eHRPD Authentication Mode" id="6862" description="In eHRPD to decide whether authentication to be done on USIM or S/W" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="Mode" description="In eHRPD to decide whether authentication to be done on USIM or S/W" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvEfsItemData name="EmergencyAPNType" id="74090" description="Defines the APN Type on which Emergency call shall be made" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/dsmgr/emergency_apn_type">
+ 		<Member name="wwan_preferred" description="" comment="" sizeOf="1" type="uint8">1</Member>
+ 		<Member name="wwan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 		<Member name="iwlan_preferred" description="" comment="" sizeOf="1" type="uint8">2</Member>
+ 		<Member name="iwlan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 	</NvEfsItemData>
+	</NvData>

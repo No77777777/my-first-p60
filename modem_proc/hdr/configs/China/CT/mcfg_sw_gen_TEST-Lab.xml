@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="hdr.0.0" type="1"/>
+	<NvItemData name="HDR SCP Session Status" id="475" description="" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdrscp_session_status" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+	</NvItemData>
+	<NvItemData name="1xEV Receive ATI List" id="4231" description="Changeable NV item used for enabling test features in HDR L1 SW" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdrsrch_dbg_msk" description="The debug mask used for the HDR searcher" comment="" sizeOf="1" type="uint64">0 </Member>
+		<Member name="hdrmac_dbg_msk" description="The debug mask used for HDR MAC" comment="" sizeOf="1" type="uint64">1 </Member>
+	</NvItemData>
+	<NvItemData name="HDRSCP Force Restricted CF" id="6832" description="Forces KDDI specific call flow" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdrscp_force_restricted_cf" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="RoHC Feedback Decompressor" id="4964" description="Force AT Configuration to Rel 0/A/B" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="nv_hdrscp_force_at_config_type" description="List of configurations supported by the AT" comment="" sizeOf="1" type="uint16">4 </Member>
+	</NvItemData>
+	<NvEfsItemData name="hdr_acq_div_enable" id="67290" description="Whether HDR acquistion diversiy is enabled" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/hdr/srch/hdr_acq_div_enable">
+		<Member name="hdr_acq_div_enable" description="Whether HDR acquistion diversiy is enabled" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="hdr_acq_div_thresh0" id="67288" description="HDR acquistion diversity threshold 0" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/hdr/srch/hdr_acq_div_thresh0">
+		<Member name="hdr_acq_div_thresh0" description="HDR acquistion diversity threshold 0" comment="" sizeOf="1" type="int16">65441 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="threshx_trig" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/hdr/cp/almp/threshx_trig">
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">16 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="serving_thresh_trig" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/hdr/cp/almp/serving_thresh_trig">
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+	</NvEfsItemData>
+<NvItemData name="HDR RX Diversity Control" id="818" description="" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdr_rx_diversity_ctrl" description="" comment="" sizeOf="1" type="int8">193 </Member>
+	</NvItemData>
+	</NvData>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="NULL">
+<include file="msmhwiobase.h"/>
+<include file="systemcache/systemcache.h"/>
+
+
+  <device name="/dev/systemcache">
+  
+     <props name="DDRSSBaseAddress" type="DALPROP_ATTR_TYPE_UINT32">
+       DDR_SS_BASE_PHYS 
+     </props>
+     <props name="SystemCacheSCTOffset" type="DALPROP_ATTR_TYPE_UINT32">
+       0x200000 
+     </props>
+     <props name="SysCacheBroadcastTRPOffset" type="DALPROP_ATTR_TYPE_UINT32">
+       0x400000 
+     </props>
+     <props name="DDRSSREGSBASEOFFSET" type="DALPROP_ATTR_TYPE_UINT32">
+       0xC0000 
+     </props>		 
+     <props name="SCIDMappingRegOffset" type="DALPROP_ATTR_TYPE_UINT32">
+       0x40
+     </props>	 
+     <props name="MAXSCIDVALUE" type="DALPROP_ATTR_TYPE_UINT32">
+       0x1F 
+     </props>
+	 
+	 <props id="SC_USE_CASE_ID_MODEM_HIGH_PRIO" type="DALPROP_ATTR_TYPE_UINT32">
+       7 
+     </props>
+	 <props id="SC_USE_CASE_ID_MODEM" type="DALPROP_ATTR_TYPE_UINT32">
+       8
+     </props>
+	 <props id="SC_USE_CASE_ID_MODEM_HW" type="DALPROP_ATTR_TYPE_UINT32">
+       9
+     </props>
+	 <props id="SC_USE_CASE_ID_MODEM_HP_FIX" type="DALPROP_ATTR_TYPE_UINT32">
+       20
+     </props>
+	 <props id="SC_USE_CASE_ID_MODEM_PAGING" type="DALPROP_ATTR_TYPE_UINT32">
+       21
+     </props>
+	 
+   </device>  
+   
+   <device name="/dev/systemcache/managedscids">
+     <props name="NumManagedSCIDs" type="DALPROP_ATTR_TYPE_UINT32">
+       5 
+     </props>	
+		 
+	 <props id="1" type="DALPROP_ATTR_TYPE_UINT32">
+       7 
+     </props>
+	 <props id="2" type="DALPROP_ATTR_TYPE_UINT32">
+       8
+     </props>
+	 <props id="3" type="DALPROP_ATTR_TYPE_UINT32">
+       9
+     </props>
+	 <props id="4" type="DALPROP_ATTR_TYPE_UINT32">
+       20
+     </props>
+	 <props id="5" type="DALPROP_ATTR_TYPE_UINT32">
+       21
+     </props>	 
+   </device>    
+</driver>
+

@@ -1,0 +1,20 @@
+//============================================================================
+//  Name:                                                                     
+//    std_postmortem.cmm 
+//
+//  Description:                                                              
+//    None 
+//                                                                            
+// Copyright (c) 2026 by QUALCOMM Technologies, Incorporated.  All Rights Reserved.        
+//============================================================================
+//                                                                            
+// *** AUTO GENERATED FILE - DO NOT EDIT                                      
+//                                                                            
+// GENERATED: Tue Aug 11 20:44:38 2026 
+//============================================================================
+
+&DEFAULTLOGDIR=os.env(temp)
+&DEFAULTLOGDIR="&DEFAULTLOGDIR\std_loadsim_logs"
+
+print "Logs saved to &DEFAULTLOGDIR"
+ENDDO

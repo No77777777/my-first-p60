@@ -1,0 +1,3570 @@
+
+[QIPCALL:SILENTREDIAL_OVERRIDE]
+
+#This config item determines usage to read the Call type parameter
+#Possible INTEGER values for override are as follows:
+#VOICE_SERVICE      = 0
+#VIDEO_SERVICE      = 1
+#USSD_SERVICE       = 2
+#RTT_SERVICE        = 3
+#MSG_SERVICE        = 4
+#RCS_SERVICE        = 5
+#EMERGENCY_SERVICE  = 6
+#REGMANAGER_SERVICE = 7
+
+CallType = 0
+
+#This config item determines usage to read the Action parameter
+#Possible INTEGER values for override are as follows:
+#ACTION_CS_REDIAL_OVERRIDE                  = 1
+#ACTION_LTE_REDIAL_OVERRIDE                 = 2
+#ACTION_NR_REDIAL_OVERRIDE                  = 3
+#ACTION_WIFI_REDIAL_OVERRIDE                = 4
+#ACTION_LTE_CS_REDIAL_OVERRIDE              = 5
+#ACTION_LTE_CS_WIFI_REDIAL_OVERRIDE         = 6
+#ACTION_NR_CS_REDIAL_OVERRIDE               = 7
+#ACTION_NR_LTE_CS_REDIAL_OVERRIDE           = 8
+#ACTION_NR_CS_WIFI_REDIAL_OVERRIDE          = 9
+#ACTION_NR_LTE_CS_WIFI_REDIAL_OVERRIDE      = 10
+#ACTION_NORMAL_OVERRIDE                     = 11
+#ACTION_NR_LTE_CS_REDIAL_TEMPORARY_OVERRIDE = 12
+#ACTION_RETRY_AFTER_OVERRIDE                = 13
+
+Action = 0
+
+#This config is required to pass SIP Error Code, in format "SIP_ERROR_XXX".
+#XXX will be same as standard SIP code.
+
+SipErrorCode = ""
+
+#This config is required to pass SIP Error Code range, in format "SIP_ERROR_RANGE_XXX_TO_XXX".
+#XXX will be same as standard SIP code.
+
+SipErrorCodeRange = ""
+
+
+[QIPCALL:H265_2]
+
+#payload type for packetization mode 0. number above 96
+
+payload_type = 0
+
+#This config is to ensure if the configuration is included in the
+#offer
+
+exclude_config_from_offer = '0'
+
+
+[Registration:RegistrationTimers]
+
+#This config item controls the waiting time receiving the response for Emergency Reg. Unit is ms.
+
+EmergencyRegRespWaitTimer = 0
+
+#This config item controls the duration for which that RAT has to be throttled when error codes has been received for maxRegRetriesWithCurrentPCSCF number of times in the last PCSCF available.
+
+ThrottleRegWithRetryAfter = 0
+
+#This config item controls the time in seconds to wait for WLAN RAT in wifi preferred mode for MSIM device
+
+wlanGaurdTimerMSIM = 7
+
+#This config item controls the T2 timer value upper limit (in seconds) that IMS can update to mmode
+
+MaxCapForT2Timer = 420
+
+#This config item controls the duration for which that RAT has to be throttled when 804 has been received for maxRegRetriesToMoveToNextPCSCF804 number of times in the last PCSCF available
+
+ThrottleRATTimer804 = 0
+
+#This config item controls the time in seconds for epDN retry procedures
+
+ePDNDefaultRetryTimerVal = 0
+
+#This config item controls the duration for which registration recovery needs to be done in case of state mismatch between modules.
+
+RegistrationRecoveryTimer = 0
+
+#This config item controls the time in seconds to wait for WWAN RAT in cellular preferred mode for MSIM device
+
+wwanGaurdTimerMSIM = 10
+
+#This config item controls the time(in seconds) that IWLAN needs to be throttled on PLMN block of cellular RAT (NR and LTEEPSOnly)
+
+WifiThrottleTimerOnPLMNBlock = 2
+
+#This config item controls the Options Unsubs Recovery Timeout Value. Unit is seconds.
+
+OptionUnsubscribedRecoveryTimeoutValue = 0
+
+#This config item controls the time in seconds to wait for WWAN RAT in cellular preferred mode for SSIM device
+
+wwanGaurdTimer = 7
+
+#Threshold of game application duration, it sets as seconds, 600s to 3000s is valid.
+
+TreRegSubThreshold = 2400
+
+#This config item controls the Register configuration for the network-initiated De reg Timer value.
+
+networkInitiatedDeRegistrationTimer = 0
+
+#This config item controls the Retry timer (in Min)for permanent PDP failures
+
+pdnRetryLongTimer = 10
+
+#This config item controls the  Retry timer (in sec) for temporary failures  on 4G EPS /5G
+
+pdnRetryShortTimerEPS = 20
+
+#This config item controls the time in seconds to wait for WLAN RAT in wifi preferred mode for SSIM device
+
+wlanGaurdTimer = 7
+
+#This config item is to override recovery type for error codes
+
+PdnLongRecoveryCodes = ""
+
+#This config item controls the waiting time for sending Reg or Dereg. Unit is ms.
+
+FTConsolidateTimer = 0
+
+#This config item is to override recovery type for error codes
+
+PdnImmediateRecoveryCodes = ""
+
+#This config item controls the  Retry timer (in Sec)for temporary failures
+
+pdnRetryShortTimer = 60
+
+#String Format "errorCode1:UnblockOn1,errorCode1:UnblockOn2"
+#UnblockOn integer values : eQP_UNBLOCK_PDN_ON_NONE ->0,
+#eQP_UNBLOCK_PDN_ON_POWER_CYCLE->1
+#eQP_UNBLOCK_PDN_ON_NEW_ATTACH->2
+#eQP_UNBLOCK_PDN_ON_TAU_OR_RATCHANGE->3
+
+PdnPermanentBlockCodes = ""
+
+#This config item is to override recovery type for error codes
+
+PdnShortRecoveryCodes = ""
+
+#This config item controls the time(in seconds) to wait for IP address changes indication from HLOS.
+
+IPAddressChangeWaitTime = 3
+
+#This config item controls the Retry timer (in min)for permanent PDP failures on 4G EPS /5G
+
+pdnRetryLongTimerEPS = 10
+
+#This config item controls the de reg wait response timeout. Unit is seconds.
+
+DeRegWaitResponseTimeoutValue = 1
+
+#String Format "errorCode1 errorCode2 errorCode3......"
+#Error codes with retry after header
+
+RegErrorCodesWithRetryAfter = ""
+
+
+[QIPCALL:H265_0]
+
+#payload type for packetization mode 0. number above 96
+
+payload_type = 0
+
+#This config is to ensure if the configuration is included in the
+#offer
+
+exclude_config_from_offer = '0'
+
+
+[QIPCALL:H265_1]
+
+#payload type for packetization mode 0. number above 96
+
+payload_type = 0
+
+#This config is to ensure if the configuration is included in the
+#offer
+
+exclude_config_from_offer = '0'
+
+
+[Registration:CoreServiceGenericConig]
+
+#This config item contains the value (in Milli seconds) for which UE has to wait for volte and VT settings change indication and consolidate featureTags to avoid multiple re registrations
+
+ftConsolidationTimerForVolteAndVTSettingsChange = 0
+
+#This config item controls whether re registartion for PANI update is needed for WWAN handover to and from NR5G
+
+reRegNeededforNR5GtoWWANTransition = 0
+
+#This config item controls whether re registartion for PANI update is needed for emergency PDN handover to IWLAN and viceVersa - as Some operators are fine with ReInvite
+
+reRegNeededforEmergencyPDNHandoverFromWWANToWLAN = 0
+
+
+[QIPCALL:ImsVoiceSrvccConfig]
+
+#This config is required to enable SRVCC based on contact header FT.
+
+enableSRVCCOnContactHeader = 0
+
+#This config is required to enable bSRVCC.
+
+bSrvccEnabled = 1
+
+#This config is required to enable aSRVCC.
+
+aSrvccEnabled = 1
+
+#This config is required to enable mid call SRVCC.
+
+midcallSrvccEnabled = 1
+
+
+[QIPCALL:ImsRtcpConfig]
+
+#This config is required to configure the RR bandwidth for Video.
+
+rrForVideo = 2000
+
+#This config is required to configure the timer for RTCP
+#monitoring.
+
+rtcpLinkAlivenessTimer = 20
+
+#This config is required to configure the RS bandwidth for Audio.
+
+rsForAudio = 600
+
+#This config is required to disbale/enable the RTCP monitoring.
+
+disableRTCPMonitoring = 0
+
+#This config is required to configure the timer for RTCP
+#Reporting in VT call.
+
+rtcpReportingIntervalInVideo = 1
+
+#This config is required to configure the RS bandwidth for Video.
+
+rsForVideo = 600
+
+#This config is required to configure the RS bandwidth for Text.
+
+rsForText = 600
+
+#This config is required to configure the RR bandwidth for Text.
+
+rrForText = 2000
+
+#This config is required to configure the RR bandwidth for Audio.
+
+rrForAudio = 2000
+
+
+[QIPCALL:ImsVoWifiConfig]
+
+#This config is to disable GBA checking
+#1 -> Disable the GBA irrespective of SIM card's interest
+#0 -> Allow GBA based on SIM card capability
+
+DisableGBACheck = 0
+
+#If Call times out on Wifi, then:
+#0 ->  Block Wifi
+#1 ->  There is no need to block wifi. Disable the blocking feature
+
+DisableWifiBlockOnCallTimeout = 1
+
+#This config is enable RAT measurements of PDN bring-up / HO cases for Verizon in home network for idle cases.
+
+bEnableVzwIdleHomeMeasurements = 0
+
+#This config is allows/disallows IMS services in bad WIFI only conditions in idle mode.
+#0 -> Allow IMS Services to linger in BadWifi Conditions.
+#1 -> Deregister IMS Services in BadWifi Conditions.
+
+DisableIMSServicesinBadWifi = 0
+
+#This config is required to enable performing on-demand DPD mid call check on WiFi call timeout to check backhaul connectivity
+#0 -> Disable on demand DPD check (default)
+#1 -> Enable on demand DPD check
+
+EnableOnDemandDPDCheckOnWiFiMidCallInactivityTimeOut = 0
+
+#This config is required to enable IMS APN WWAN->WLAN hand overs when Emergency procedures are active
+#Possible values are:
+#0 -> Disable IMS APN Handovers
+#1 -> Enable IMS APN Handovers
+
+EnableIMSAPNWWANToIWLANHODuringEmergency = 0
+
+#This config is required to configure the wifi blocking timer for FR54228.
+
+wifiBlockTimer = 0
+
+#This config is required to configure the wifi connectivity
+#backoff timer.
+
+wifiConnectivityBackoffTimer = 10
+
+#This config item lists all PS (mapped to DSS) error codes for which we should hold off on unthrottling Cellular when single RAT scenario and call pending at MMODE.
+
+DisableUnthrottleOnPendingMMODECall = "197745,"
+
+#This config is required to configure the information to be passed
+#in P-Emergency-Info header.
+
+PEIHeaderInfoForEmergency = 0
+
+#This config is required to enable IMS APN WLAN->WWAN hand overs when Emergency procedures are active
+#Possible values are:
+#0 -> Disable IMS APN Handovers
+#1 -> Enable IMS APN Handovers
+
+EnableIMSAPNWLANToWWANHODuringEmergency = 0
+
+#DPDMidCallInactivity_ping_interval_time
+
+DPDMidCallInactivity_ping_interval_time = 100
+
+#This config controls the behavior to reset back IMS APN preference to Cellular on PDN down.
+#This Value to be enabled when IMS APN is used as attach APN.
+#1 ->  DUT will start preferring either wifi or cellular based on previous rat disconnection.
+#0 -> After IMS APN is disconnected, DUT will start preferring ims service for cellular
+#when PDN is brought up.
+
+DisablePrefResettoCellularOnPDNDown = 1
+
+#This Config if enabled, will prevent PDN teardown on Wifi when CS voice call is active
+#0 -> Teardown on Wifi expected if call moves to CS (default)
+#1 -> Prevents teardown on wifi until CS voice call ends
+
+DisableWifiTeardownOnCScall = 0
+
+#This config is required to configure the 380 handling for Emergency calls
+#Possible values are:
+#0 -> Default behaviour present in the code
+#1 -> Force CSFB
+#2 -> Send Permanent failure
+
+Handling380forEmergency = 0
+
+#This config is required to configure the VT Mid-Call WIFI to LTE HO Hysteresis Timer.
+
+hoVTMidCallHystTimerEpdgLte = 0
+
+#This config is required to Enable/Disable handovers between 5g and wifi in call connecting phase
+#0 -> Disable handover between 5g and wifi
+#1 -> Allow handover from 5g and wifi in both directions
+#2 -> Allow handover from 5g to wifi only
+#3 -> Allow handover from wifi to 5g only
+
+Handover_5g_wifi_connecting = 3
+
+#This configuration is required to enforce srvcc procedures over wifi handovers when collision occurs.
+#
+#Possible values are:
+#0 -> By default this timer is disabled.
+#0 -> By default this timer is disabled.
+#unit8value -> timer in seconds.
+
+SRVCCPrioritizationTimer = 0
+
+#This config is required to configure the format of PEI header if MAC format or string format.
+
+PEIHeaderInfoMACFormat = 1
+
+#This config is required to enable IMS APN WLAN->WWAN hand overs when DUT is in roam
+#
+#Possible values are:
+#1 -> Enable IMS APN Handovers
+#2 -> Disable IMS APN Handovers , irrespective of if the UE is in a session or not..
+
+AllowIMSAPNHOinRoam = 1
+
+#This config is required to Enable/Disable handovers between LTE and WiFi in call connecting/connected phase
+#0 -> incall handover configuration to follow idlemode configurations.
+#1 -> Allow incall handover from LTE and Wifi in both directions
+#2 -> Allow incall handover from LTE to Wifi only
+#3 -> Allow  incall handover from Wifi to LTE only
+#4 -> Disable incall handover between LTE and wifi
+
+Handover_lte_wifi_incall_home = 0
+
+#This config is required to enable performing on-demand DPD check on WiFi call timeout to check backhaul connectivity
+#0 -> Disable on demand DPD check (default)
+#1 -> Enable on demand DPD check
+
+EnableOnDemandDPDCheckOnWiFiCallTimeOut = 0
+
+#DPDMidCallInactivity_ping_response_time_out
+
+DPDMidCallInactivity_ping_response_time_out = 2000
+
+#DPDMidCallInactivity_num_pings
+
+DPDMidCallInactivity_num_pings = 5
+
+
+[ISH:ConnectivityParams]
+
+#This config item configures the fastReturnTimer timer value in Secs
+
+fastReturnTimer = 12
+
+#This config is used to detect whether vowifi is enabled
+
+IsVoWifiEnabled = 1
+
+
+[ILS:BootupRetry]
+
+#This attribute specifies how long timer should run for next retry for specific failures. Should be removed when QMI Location provides Engine Lock Indication.
+
+bootupRetryTimer = 5
+
+#This attribute specifies how many times retry should happen.
+
+bootupRetryMaxCount = 5
+
+#This attribute specifies whether bootup query is supported or not. Bootup Query will only be done for fresh location.
+
+bootupQueryAllowed = 1
+
+#This attribute specifies whether bootup query retry is supported or not incase of failure.
+
+bootupRetryAllowed = 1
+
+
+[Registration:RegistrationFeatureFlags]
+
+#This config item controls whether Emergency Registration needs to be performed in EMM Limited Service states if security context in attach is valid
+
+performEmerRegInEMMLimitedSrvc = 1
+
+#This config item considers PS_NET_DOWN_REASON_IWLAN_S2B_NW_INIT_CONN_DOWN as internal recovery
+
+quickretryOnIWLANNWInitConn = 0
+
+#This config item controls whether to send 403 reg failure over IWLAN info to other modules
+
+Inform403RegFailureOverIWLAN = 0
+
+#This config item controls whether IWLAN Config failure is to be handled as internal failure.
+
+specialhandlingForIWLANConfigFailure = 0
+
+#This config item controls whether special handling of Normal registration failure inIR92 mode will be required or not.
+
+specialHandlingFor403RegFailure = 0
+
+#This config item controls whether Perm block over IWLAN need to reset or not.
+
+resetPermblockOverIwlan = 0
+
+#This config item controls whether to retain old pcscf on pcscf change event with null pcscf
+
+retainCurrentPcscfOnNullPcscf = 0
+
+#This config item controls whether measurement on IWLNA should be ignored during APM on.
+
+IgnoreWiFiMeasurementDuringAPMOn = 0
+
+#This config item controls if every subs failure needs to be indicated to APPS.
+
+IsSubsFailureIndRequiredOnEveryFailure = 0
+
+#This config item controls whether Network Initiated Dereg to be handle as subscribe failure.
+
+HandleNetworkInitDeregAsSubscribeFailure = 1
+
+#This config item controls Extra logs need to be enabled or Not.
+
+EnableLogging = 0
+
+#This config item controls whether ack ICM until Notify active subs come.
+
+ackICMUntilNotify = 1
+
+#This config item stops the T1 timer by sending MMODE Temp Failure indication. For all devices other than SRLTE devices.
+
+stopMMODET1TimerTempFail = 0
+
+#This config item controls whether Backoff timer is needed for IWLAN Failures or not.
+
+IsBackOffTimerNeededForIWLANFailures = 0
+
+#This config item is for rakuten operator for special handling.
+
+HandleInviteFailureRefreshPCSCF = 0
+
+#This config item controls whether imdn-aggregation ft need to add or not.
+
+imdnAggreationEnabled = 0
+
+#This config item controls whether Deregistration is required or not on moving to 2g/3G call active.
+
+IsDeRegNotRequiredDuring2G3GCallActive = 0
+
+#This config item controls whether audio FT should be added for E911 registration or not.
+
+IsAudioFTReqdForE911 = 1
+
+#This config item controls whether DS profile change event needs to be ignored.
+
+disableDsProfileChangeHandling = 0
+
+#This config item controls whether ISIM parameters need to be considered or not.
+
+ignoreISIMParameters = 0
+
+#This config item controls whether prority handling for re registartion scenarios is enabled for the operator
+
+priorityHandlingForReRegScenariosEnabled = 1
+
+#This config item controls whether to re register over cellular rats during call
+
+BlockReRegOverCellularDuringCall = 1
+
+#This config item controls whether permanently blocked registration can be unblocked on PLMN change. It also stops any retry timers that are running
+
+unblockRegistrationOnPLMNchange = 0
+
+#This config item controls whether resetting for PDN failure is required or not for IWLAN AUTH failures.
+
+specialResetForIWLANAuthFailure = 0
+
+#This config item controls whether need to reset AWT timer.
+
+notResetAWTTimerEnable = 0
+
+#This config item controls whether reg failure 808/805 has to be considered as 804, based on TRM availability.
+
+ConvertTo804BasedOnTRM = 1
+
+#This config item controls whether reg context needs to be cleaned up forcefully or not.
+
+specialHandlingForRegContextCleanup = 0
+
+#This config item controls to block PDN on option unsubscribed.
+
+blockpdnonoptionunsubscribed = 0
+
+#This config item controls whether all WWAN RATs needs to be blocked due to perm failue.
+
+blockAllWWANRats = 1
+
+#This config item controls whether IMS can update T2 timer value based on the available PCSCFs
+
+enableDynamicUpdateOfT2 = 1
+
+#This config item controls if geolocation is required to know current home and roam information.
+
+EnableGeolocationFetch = 1
+
+#This config item controls whether re register for PANI required on WLAN to RAT where maintain register context is SET
+
+ReRegForPANIWhenMaintainRegContext = 1
+
+#This config item specifies if the sub operator is APTG and special handling is required for Options unsubscribed error or not. 0:Not enabled(default),  1:enabled
+
+optionsUnsubscribedSpecialHandling = 0
+
+#This config item specifies if PDN tear down is expected for certain reg error codes. "":default
+
+SkipPdnTearDown = ""
+
+#This config item lists all reg error codes for which WiFi RAT throttling has to be done
+
+RATThrottlingRegErrorCodes = ""
+
+#This config item controls whether initial registartion is required on the registered PCSCF if network sends modify bearer request with the same set of PCSCF addresses
+
+InitialRegRequiredOnModifyBearerReqWithNoPCSCFChange = 0
+
+
+[QIPCALL:EVS_3]
+
+#This config is used for bit rate.
+
+BitRate = 120
+
+#This config is bandwidth.
+#enum - BW_NB, BW_WB, BW_SWB, BW_FB, BW_NB_WB, BW_NB_SWB, BW_NB_FWB,
+#
+#Possible INTEGER values for Bandwidth are as follows:
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+Bandwidth = BandWidth_WB
+
+
+[QIPCALL:ImsRtcpXRConfig]
+
+#This config is required to enable RTCP-XR support.
+
+rtcpXrEnabled = 0
+
+
+[ILS:IlsGeoLocEmerWlan]
+
+#This timer(sec) specifies the max wait time for best location request.
+
+bestLocationReqExpiryTime = 5
+
+#This timer(sec) specifies the max wait time for fresh location request.
+
+freshLocationReqExpiryTime = 5
+
+#This time(seconds) specifies the max time for which cached location can be used.
+#If cachedLocationTimeOutValue is set to 0 and isCachedLocationSupported is set to 1 then it means cached location has no staleness value.
+
+cachedLocationTimeOutValue = 0
+
+#This attribute specifies the access type of location.
+#ILS_ACCESS_CACHE                     0, --> Cached Location to be used.
+#ILS_ACCESS_FINE                      1, --> Fresh Location to be queried.
+#ILS_ACCESS_COARSE                    2, --> Best Location to be queried.
+
+firstPriorityForLocation = ILS_ACCESS_COARSE
+
+#This attribute specifies the discovery method of location.
+#ILS_LOC_INVALID_MEHTOD = 0,
+#ILS_LOC_CELL           = 1,
+#ILS_LOC_WIFI           = 2,
+#ILS_LOC_TRIANGULATION  = 3,
+#ILS_LOC_GPS            = 4,
+#ILS_LOC_HYBRID         = 5,
+#ILS_LOC_HYBRID_AGPS    = 6
+
+discoveryMethod = ILS_LOC_INVALID_MEHTOD
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+verticalUncertaintyThreshold = 1000000
+
+#This attribute specifies second priority of fetching country code.
+#ILS_COUNTRYCODE_NONE            0,  --> Not supported
+#ILS_COUNTRYCODE_PLMN            1,  --> Current PLMN MCC
+#ILS_COUNTRYCODE_SIM             2   --> Prev stored GeoCoder MCC or SIM Code
+
+secondPriorityForCountryCode = ILS_COUNTRYCODE_PLMN
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+radiusUncertaintyThreshold = 1000000
+
+#This timer(sec) specifies the time in which fresh location needs to be updated.
+
+periodicRefreshOfFreshLocation = 0
+
+#This attribute specifies whether fresh location needs to be fetched after best location.
+
+isFreshLocToBeQueriedAfterBestLocation = 0
+
+#This attribute specifies second priority of fetching country code.
+#ILS_COUNTRYCODE_NONE            0,  --> Not supported
+#ILS_COUNTRYCODE_PLMN            1,  --> Current PLMN MCC
+#ILS_COUNTRYCODE_SIM             2   --> Prev stored GeoCoder MCC or SIM Code
+
+thirdPriorityForCountryCode = ILS_COUNTRYCODE_SIM
+
+#This timer(sec) specifies the max wait time for civic address query.
+
+civicAdressTimeOutValue = 2
+
+#This attribute specifies whether civic address is needed for the context.
+
+isCivicAdressNeeded = 1
+
+#This attribute specifies whether lat/long obtained as 0 is valid or not.
+
+isZeroLatLongValid = 0
+
+#This attribute specifies whether cached location can be used or not.
+#It is to be used if best/fresh has failed or best/fresh respective timer has expired.
+
+isCachedLocationSupported = 1
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+horizontalUncertaintyThreshold = 1000000
+
+
+[IRM:IRM_ISH]
+
+#This config defines the max recovery timer value for PDN bring down for NR
+
+RecoveryTimerForPDNDown = 600
+
+#This config defines the max recovery timer value for PDN bring up for LTE
+
+RecoveryTimer_LTE = 600
+
+#This config defines the max recovery timer value for PDN bring up for NR
+
+RecoveryTimer_NR = 600
+
+
+[SMSDAN:SMSSettings]
+
+#This config is to set the emergency number for emergency SMS
+
+emergTelNumForSMS = "911"
+
+#For the In-Reply-To header isn't matched with the original call_id, UE will send 488 response if 0 or send 200 response if 1.
+
+IgnoreInReplyToHeaderError = 0
+
+#Config to check whether permanent failure should be sent to WMS for SMS AC barring enabled scenarios
+
+bSendPermFailureforSMSBarring = 0
+
+#This config is required to decide whther user info needs to be appended in from   URI.
+
+AppendUserInfoInURI = 0
+
+#This config is required to enable addition of Contact header field in MO SMS.
+
+smsContactHeaderEnabled = 0
+
+#This config is required to configure if SMS capability can be impacted by modile data.
+
+smsImpactedByDataSetting = 0
+
+#This config is required to enable addition of Accept-contact header field in MO SMS.
+
+smsAcceptContactEnabled = 0
+
+#This config item used to enable or disable feature of rejecting incoming SMS when IMS is already processing a SMS.
+
+EnableIncomingSmsRejectFeature = 0
+
+#Maximum time(in seconds) for IMS can hold TRM to complete a SMS transaction. Default value 35 seconds. Recommended between 35 to 45 seconds depending on the operator network.
+
+smsTR1MTimer = 4
+
+#This config item used to configure the error code and used while reject Incoming MT sms while NAS is busy in service one SMS.
+
+IncomingSmsRejectCode = 400
+
+#This config item controls the SMS Feature tag
+
+smsAcceptContact = "+g.3gpp.smsip"
+
+#This config is required to disable require exp in accept contac header in SMS
+
+smsAcceptwithoutReqExp = 0
+
+
+[Registration:RegistrationSettings]
+
+#This config item controls Registration over IWLAN in airplane mode
+#Possible INTEGER values for override are as follows:
+#QPE_ENABLE_REG_INLPM_INVALID           = 0 --> Reserved, Not to be used.
+#QPE_ENABLE_REG_INLPM_OFF               = 1 --> Registration is not on IWLAN as well enabled during LPM ON.
+#QPE_ENABLE_REG_INLPM_ON                = 2 --> Registration is enabled on IWLAN during LPM ON.
+
+enableRegistrationInLPM = 2
+
+#Use Default IMPU generation from SIM.
+
+useDefaultIMPUSelection = 0
+
+#This config item controls PCSCF IP fallback feature
+
+pcscfBasedIPFallback = 1
+
+#This config item controls TTY over IMS
+
+enableTTYOverIMS = 0
+
+#This config item controls Reregistration over WIFI during Activate 3G call
+#Possible INTEGER values for override are as follows:
+#eQP_IMS_REG_OVER_WIFI_WHILE_ACTIVE_GSM_CALL_DISABLED    = 0 --> Reg over WiFi is enabled by default irrespective of calls.
+#eQP_IMS_REG_OVER_WIFI_WHILE_ACTIVE_2G_3G_CALL           = 1 --> Reg over WiFi is blocked during 2G/3G calls
+#eQP_IMS_REG_OVER_WIFI_WHILE_ACTIVE_3G_CALL_ONLY         = 2 --> Reg over WiFi is blocked only during 3G calls
+#eQP_IMS_REG_OVER_WIFI_WHILE_ACTIVE_2G_CALL_ONLY         = 3 --> Reg over WiFi is blocked only during 2G calls
+
+BlockRegOverWifiWhileActiveCSCall = 1
+
+#This config item controls Reregistration over WIFI during Activate 1x call
+
+BlockRegOverWifiWhileActive1XCall = 0
+
+
+[DPL:Common]
+
+#This config is used to enable/disable Dynamic UserAgent update
+
+DisableUserAgentUpdate = 0
+
+#This timer specifies the max wait time for registration to happen on a particular sub, unit is millisecond, range is 0~65535
+
+ConcurrencyMgrREGTimer = 4500
+
+#This timer specifies the max wait time for cellular attach on both subs on bootup, unit is millisecond, range is 0~65535
+
+ConcurrencyMgrRATAcqTimer = 4500
+
+#This config item determines usage to read the SIM card parameters (ISIM, USIM ) etc
+#Possible INTEGER values for override are as follows:
+#QPE_CONFIG_IMS_FILE_READ              = 0 --> File Read Param Source
+#QPE_CONFIG_IMS_NV_READ                = 1 --> NV Read Param Source
+#QPE_CONFIG_IMS_CARD_READ              = 2 --> Card Read Param Source to read from ISIM
+#QPE_CONFIG_IMS_FILE_READ_AUTH_ENABLED = 3 --> File Read Param Auth enabled (ONLY for testing)
+#QPE_CONFIG_IMS_USIM_FB_MODE_ENABLED   = 4 --> USIM fallback enabled
+
+ParamSrc = QPE_CONFIG_IMS_USIM_FB_MODE_ENABLED
+
+#This Config will overwrite the default cellid value -1 by default returned by subsystem info during cellid irat transition to zeros
+
+EnableCellIdFormat = 0
+
+#This config is used to enable/disable periodic logging timer
+
+PeridicLoggingEnable = 0
+
+#This config is used to set the interval time for periodic logging timer. Unit is millisecond.
+
+PeriodicLoggingInterval = 1000
+
+#This config is used to set the card service bitmask
+
+ImsCardServiceBitmask = 65535
+
+#This config is used to set the maximum logging count for periodic logging timer
+
+PeriodicLoggingMaxCount = 60
+
+
+[QIPCALL:ImsCodecConfig]
+
+#This config is required to configure inclusion of CMR for EVS codec in SDP offer
+#QPE_EVS_CMR_NONE = 0,                     	No CMR in SDP
+#QPE_EVS_CMR_0 ,								CMR=0 in SDP
+#QPE_EVS_CMR_1								CMR=1 in SDP
+
+EVSCMRinclusionpolicyOffer = QPE_EVS_CMR_NONE
+
+#This config is required to configure inclusion of CMR for EVS codec in SDP answer
+#If offer has CMR present, answer will have the same valuues copied irrespective of this configuration.
+#QPE_EVS_CMR_NONE = 0,                     	No CMR in SDP
+#QPE_EVS_CMR_0 ,								CMR=0 in SDP
+#QPE_EVS_CMR_1								CMR=1 in SDP
+
+EVSCMRinclusionpolicyAnswer = QPE_EVS_CMR_NONE
+
+
+[SIPConfig:GeoLocation]
+
+#enable or disable location info inclusion in regular calls
+
+iEnableCellInfoInPANI = 0
+
+
+[SMSDAN:MWISettings]
+
+#This config is required to indicate upper layer about voice mail number when notify received with no msg waiting.
+
+sendIndicationForNoMsgWaiting = 0
+
+
+[IRM:IRM_Common]
+
+#This config is used to enable or disable Stack dump on modem restart. Default enabled.
+
+DisableStackDump = 1
+
+#This config defines defer timer in sec to be used in case there is emergency PDN active
+
+DeferTimerForEPDN = 120
+
+#This config defines defer timer in sec to be used in case there is SMS Transaction active
+
+DeferTimerForSMS = 60
+
+#This config defines the max recovery generic timer value for recovery manager to monitor ISH events
+
+RecoveryTimer = 600
+
+#This config is used to enable or disable defer action for all recovery types. Default enabled.
+
+DisableDeferAction = 0
+
+#This config defines defer timer in sec to be used in case there is RCS FT/IM session active
+
+DeferTimerForRCS = 150
+
+#This config is used to define a threshold for recovery event, when number of recovery happening for same reason cross this threshold, this would trigger modem SSR.
+
+RecoveryEventCountThreshold = 0
+
+#This config defines defer timer in sec to be used in case there is call active
+
+DeferTimerForCalls = 300
+
+#This config is used to define a threshold for NACK Count, if system goes in loop with continuous NACK and Nack count exceeds this threshold, this would trigger modem SSR.
+
+RecoveryNACKCountThreshold = 0
+
+#This config is used to enable or disable defer action when ePDN is active, when disabled (1) IRM will ignore NACK because of ePDN being active. Default enabled.
+
+DisableEPDNActiveStatus = 0
+
+#This config defines Reset timer in Hours which will start at first recovery event and resets all counters and variables when timer expires.
+#This is to flush all stale data to make sure stale data doesn't cause unexpected recoveries. Default 24Hrs. Value 0 disable this feature.
+
+RecoveryResetTimerHrs = 24
+
+
+[Ut:UtConfiguration]
+
+#This config item specifies the error list for which RPDN fialure erorr UT shall be blocked
+
+PDNPermanentBlockeDSErrors = ""
+
+#This config item specifies whether to send all the cipher suits
+
+SendAllCipherSuit = 0
+
+#This config item controls the media element type for Call Barring Service. Possible values for override are as follows:
+#QP_NO_MEDIA_TAG = 0   -->No media tag support
+#QP_ONLY_VIDEO_TAG_FOR_VT = 1  -->One media tag per media type
+#QP_AUDIO_AND_VIDEO_TAGS_FOR_VT = 2 -->include both audio and video tags
+#QP_NO_MEDIA_TAG_FOR_VOICE_AND_ONLY_VIDEO_TAG_FOR_VT = 3 -->include Only video tag
+
+mediaElementSupportForCB = 0
+
+#This config item specifies if the realm is to trimmed or not. 0:Not enabled(default),  1:enabled
+
+isTrimRealmEnabled = 0
+
+#This config item specifies whether to send PUT to create NRT element if not configured in simservs xml.
+
+CreateNRTElementIfNotConfigured = 1
+
+#This config item controls the behavior for failure in case of no response to DNS query. Possible values for override are as follows:
+#BLOCK_UT_WITH_CSFB = 1
+#BLOCK_UT_WITHOUT_CSFB   = 2
+#FAIL_SS_REQUEST_WITH_CSFB  = 3
+#FAIL_SS_REQUEST_WITHOUT_CSFB  = 4
+
+ActionOnNoResponseForDNSQuery = 3
+
+#This config item specifies if the Deactivate PUT request to be sent at rule id level. 0:send at condition level(default),  1:Send at Rule id level
+
+SendDeactAtRuleIDLevel = 0
+
+#This config item specifies the error list for which Round robin of ip addresses to be done for the xcap server
+
+ErrorsHandledInRRForXCAP = "408,410,501,502,503,504"
+
+#This config item specifies whether CRL certificate is needed or not
+
+isCRLCertNeeded = 0
+
+#This config item specifies if the NRT timer element to be inside the rule id. 0:disabled,  1:enabled
+
+NRTElementUnderCFNRy = 0
+
+#Flag indicates whether to send PUT request for deactivate at the rule id level or conditions level. if set to 1 , we will send first PUT of deactivate itself at rule id level instead of conditions level
+
+SendFirstDeactivateAtRuleID = 0
+
+#This config item controls the behavior for failure in case of zero DNS records. Possible values for override are as follows:
+#BLOCK_UT_WITH_CSFB = 1
+#BLOCK_UT_WITHOUT_CSFB   = 2
+#FAIL_SS_REQUEST_WITH_CSFB  = 3
+#FAIL_SS_REQUEST_WITHOUT_CSFB  = 4
+
+ActionOnZeroDNSRecords = 1
+
+#This config item controls whether if-mathc header isto be include in the PUT request
+
+IncludeIfMatchTag = 1
+
+#Flag indicates whether to ignore WFC config while validating RAT. Default: 0(do not ignore WFC status) 1(ignore)
+
+IgnoreWFCStatus = 0
+
+#This config item specifies iptype for wlan RAT PDN bringup for ACS:   IMS_SERV_UNKNOWN_IP_TYPE = 0,IMS_SERV_IPV4 = 1
+#IMS_SERV_IPV6   = 2
+#IMS_SERV_IPV4V6 = 4(IPV4V6 Address, Primary IPv4, Fallabck IPv6)
+#IMS_SERV_IPV6V4 = 5(IPV6V4 Address, Primary IPv6, Fallabck IPv4)
+#IMS_SERV_IPV4V6PIP = 6(IPV4V6 Address, Primary IPv4, Fallabck IPv6, Use Primary IP Type after LPM/Online)
+#IMS_SERV_IPV6V4PIP = 7(IPV6V4 Address, Primary IPv6, Fallabck IPv4, Use Primary IP Type after LPM/Online)
+
+LBOIpType = 0
+
+#This config item specifies the error codes for which current SS request is attempted on CS but Ut is not permanently blocked
+
+performCSFBOnError = ""
+
+#This config item specifies if media is to ignored in call barring or not. 0:disabled,  1:enabled
+
+IgnoreMediaElementforCallBarring = 0
+
+#This config item controls the time for which the PDN needs to be kept Active after a SS request is completed
+
+pdnHysTimerValue = 0
+
+#This config item controls the behavior for failure in case of no http response. Possible values for override are as follows:
+#BLOCK_UT_WITH_CSFB = 1
+#BLOCK_UT_WITHOUT_CSFB   = 2
+#FAIL_SS_REQUEST_WITH_CSFB  = 3
+#FAIL_SS_REQUEST_WITHOUT_CSFB  = 4
+
+ActionOnNoResponseForHTTPRequest = 3
+
+#This config item controls the time for which UE resends a request after any error respond comes from server. It is used to add an interval between requests.
+#In case of 0, default value comes from maxResponseTimerValue.
+
+RetryPendingTimerValue = 0
+
+#This config item controls the Maximum time within which a Response should be sent to UI
+
+maxResponseTimerValue = 5
+
+#This config item specifies if CFNL request is blocked with CFNRc. 0:Not enabled(default),  1:enabled
+
+isCFNLBlockedwithCFNRc = 1
+
+#This config item controls the action item when there is no SIB value for CB request. Possible values for override are as follows:
+#QP_NO_HANDLING = 0 --> Default
+#QP_REJECT_EMPTY_SIB = 1 --> Reject
+#QP_AUDIO_RULE_ONLY = 2 --> Audio Only
+#QP_AUDIO_AND_VIDEO_RULES = 3 --> Both Audio and Video
+
+emptySIBUsageForCB = 0
+
+#This config item specifies the error codes for which Ut is blocked permanently and SS requests are sent over CS
+
+blockUtpermWithCSFBOnError = ""
+
+#This config item specifies if the request is to be blocked for bscode 0 when media is configtured at xcap xml. 0:do not block(default),  1:Block
+
+BlockIfNoBSCode = 1
+
+#This config item specifies which service is allowed or not
+#1st bit from right: Availiablity of service masks (0:feature is disabled, 1:feature is enabled)
+#2nd bit - Call waiting(CW)
+#3rd bit - all_call_forwarding(CFAll)
+#4th bit - all_forwarding_unconditional(CFU)
+#5th bit - all_call_conditional_forwarding(allCondForwarding)
+#6th bit - call_forwarding_on_mobile_subscriber_busy(CFB)
+#7th bit - call_forwarding_on_no_reply(CFNRY)
+#8th bit - call_forwarding_on_mobile_subscriber_unreachable(CFNRC)
+#9th bit - barring_of_all_outgoing_calls(BAOC)
+#10th bit- barring_of_outgoing_international_calls(BOIC)
+#11th bit- barring_of_outgoing_international_calls_except_to_home_plmn(BoICExHC)
+#12th bit- barring of all incoming calls(BAIC)
+#13th bit- barring of incomming calls when roaming outside home PLMN Country(BICRoam)
+#14th bit- OIP (clip)
+#15th bit- TIP (colp)
+#16th bit- Barring list of incoming numbers(bil)
+#17th bit- Barring of all anonymous incoming number(bain)
+#18th bit- TIR (colr)
+#19th bit- OIR (clir)
+#Others  - Not used
+
+ServiceMask = 0
+
+#Flag indicates whether to remove port from the host header over Ua Interface. Default: 0(include port) 1(don't include)
+
+TrimPortFromHostHeaderForXCAP = 0
+
+#This config item specifies if the forward to target value is SIP or tel URI type. 1:TEL(default),  2:SIP
+
+isSipOrTelUriType = 1
+
+#This config item controls whether to perform round robin with the ip address in dns query for the xcap server or not
+
+IsRREnabledForXCAP = 1
+
+#This config item specifies the error codes for which Ut is blocked permanently and current SS request is not attempted on CS
+
+blockUtpermWithoutCSFBOnError = ""
+
+#This config item controls the time for which the PDN needs to be kept Active after a SS request is completed for Non-DDS sub
+
+pdnHysTimerValueOnNonDDS = 0
+
+#This config item specifies the DS error list for PDN fialure where PS fallback is needed
+
+PDNDSErrorsForPSFallback = ""
+
+#This config item specifies Instead of sending GET request with the NULL rule id, drop the request if the service is not configured
+
+BlockRequestIfNullRule = 1
+
+#This config item specifies additional flexibility to try on both the IP types based on the records received in the DNS response. 0:disabled,  1:enabled
+
+DNSBasedIPFallback = 0
+
+#Flag indicates whether to abort the unknwon dialed ss codes and report error straight away. 0(dont abort) Default:1(abort)
+
+AbortUnknownSScode = 1
+
+#This config item specifies whether CS Redial is needed by OEM or not. Default: 0(no csfb) 1: csfb
+
+IFCSRedialNeeded = 1
+
+#This config item specifies if the activate PUT request to be sent at rule id level. 0:send at condition level(default),  1:Send at Rule id level
+
+SendActAtRuleIDLevel = 0
+
+#This config item specifies if the special handling behavior for 404 and 409 error is enabled. 0:disabled,  1:enabled
+
+SpecialHandlingForUIUpdate = 1
+
+#This config item specifies whether to to deregister the UT interface on regular PDN deactivation from network.
+
+DeregUTonRegPDNDeactivation = 0
+
+#This config item specifies if media supoort is to configured dynamically or not. 0:Not enabled(default),  1:enabled
+
+isDynamicMediaConfigEnabled = 1
+
+#This config item specifies if the Ut to blocked or not when profile creaiton fials at bootup. 0:do not block(default),  1:Block UT
+
+BlockUtOnProfileFailure = 1
+
+#This config item specifies to re-attempt failed SS request on other IP type for specific failure reasons defined in FR 34850. 0:disabled,  1:enabled
+
+IPFallbackForSSRequests = 0
+
+#This config item specifies Option to Trigger CSFB for services not ocnigured in xcap xml. Default: 0(no csfb) 1: csfb
+
+CSFBIfSerivceNotConfigured = 0
+
+#This config item specifies IR92 version
+
+IR92ComplyVersion = 12
+
+#This config item specifies if the GET request is to be sent at simservs node level. 0:Not enabled(default),  1:enabled
+
+isReqAtSimservsNode = 0
+
+#This config item specifies if the NRT timer element to be updated or not as part of the . 0:disabled,  1:enabled
+
+DoNotUpdateNRTElementForCFNRY = 0
+
+#This config item specifies whether OCSP certificate is needed or not
+
+isOCSPCertNeeded = 0
+
+
+[SIPConfig:IPSec]
+
+#integrity scheme for ipsec sip messages
+#Possible INTEGER values for override Integrity Algorithm mask values are as follows:
+#0 --> Invalid - none of the algorithm is supported
+#1 --> alg=hmac-sha-1-96
+#2 --> alg=hmac-md5-96
+#3 --> alg=hmac-sha-1-96 and alg=hmac-md5-96
+
+IntScheme = 3
+
+#encryption algo for ipsec sip messages
+#Possible INTEGER values for override Encryption Algorithm mask values are as follows:
+#0 --> Invalid - none of the algorithm supported
+#1 --> ealg=null;
+#2 --> ealg=aes-cbc;
+#3 --> ealg=null; ealg=aes-cbc;
+#4 --> ealg=des-ede3-cbc;
+#5 --> ealg=des-ede3-cbc; ealg=null;
+#6 --> ealg=des-ede3-cbc; ealg=aes-cbc;
+#7 --> ealg=des-ede3-cbc; ealg=aes-cbc; ealg=null;
+
+EncAlgo = 7
+
+
+[QIPCALL:AMR_4]
+
+#This config is bandwidth.
+#enum - BW_NW, BW_WB
+#
+#Possible INTEGER values for Bandwidth are as follows:
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+BandWidth = BandWidth_WB
+
+#This config is modeset.
+
+ModeSet = 0
+
+#This config is mode.
+#enum - AMR_MODE_BE, AMR_MODE_OA
+#
+#Possible INTEGER values for Mode are as follows:
+#0 --> AMR_MODE_BE
+#1 --> AMR_MODE_OA
+#2 --> AMR_MODE_MAX
+
+Mode = AMR_MODE_OA
+
+
+[QIPCALL:G711_2]
+
+#This config is dtx.
+#0 - dtx disable
+#1 - dtx enable
+
+Dtx_enable = 1
+
+#This config is to set G711 mode
+#enum - G711_MODE_PCMU, G711_MODE_PCMA
+#
+#Possible INTEGER values for override Mode mask values are as follows:
+#0 --> G711_MODE_PCMU
+#1 --> G711_MODE_PCMA
+#2 --> G711_MODE_MAX
+
+Mode = G711_MODE_PCMA
+
+
+[QIPCALL:G711_1]
+
+#This config is dtx.
+#0 - dtx disable
+#1 - dtx enable
+
+Dtx_enable = 1
+
+#This config is to set G711 mode
+#enum - G711_MODE_PCMU, G711_MODE_PCMA
+#
+#Possible INTEGER values for override Mode mask values are as follows:
+#0 --> G711_MODE_PCMU
+#1 --> G711_MODE_PCMA
+#2 --> G711_MODE_MAX
+
+Mode = G711_MODE_PCMU
+
+
+[QIPCALL:G711_0]
+
+#This config is dtx.
+#0 - dtx disable
+#1 - dtx enable
+
+Dtx_enable = 1
+
+#This config is to set G711 mode
+#enum - G711_MODE_PCMU, G711_MODE_PCMA
+#
+#Possible INTEGER values for override Mode mask values are as follows:
+#0 --> G711_MODE_PCMU
+#1 --> G711_MODE_PCMA
+#2 --> G711_MODE_MAX
+
+Mode = G711_MODE_PCMU
+
+
+[QIPCALL:AMR_0]
+
+#This config is bandwidth.
+#enum - BW_NW, BW_WB
+#
+#Possible INTEGER values for Bandwidth are as follows
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+BandWidth = BandWidth_NB
+
+#This config is modeset.
+
+ModeSet = 0
+
+#This config is mode.
+#enum - AMR_MODE_BE, AMR_MODE_OA
+#
+#Possible INTEGER values for Mode are as follows:
+#0 --> AMR_MODE_BE
+#1 --> AMR_MODE_OA
+#2 --> AMR_MODE_MAX
+
+Mode = AMR_MODE_BE
+
+
+[QIPCALL:AMR_1]
+
+#This config is bandwidth.
+#enum - BW_NW, BW_WB
+#
+#Possible INTEGER values for Bandwidth are as follows:
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+BandWidth = BandWidth_WB
+
+#This config is modeset.
+
+ModeSet = 0
+
+#This config is mode.
+#enum - AMR_MODE_BE, AMR_MODE_OA
+#
+#Possible INTEGER values for Mode are as follows:
+#0 --> AMR_MODE_BE
+#1 --> AMR_MODE_OA
+#2 --> AMR_MODE_MAX
+
+Mode = AMR_MODE_BE
+
+
+[QIPCALL:AMR_2]
+
+#This config is bandwidth.
+#enum - BW_NW, BW_WB
+#
+#Possible INTEGER values for Bandwidth are as follows:
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+BandWidth = BandWidth_NB
+
+#This config is modeset.
+
+ModeSet = 0
+
+#This config is mode.
+#enum - AMR_MODE_BE, AMR_MODE_OA
+#
+#Possible INTEGER values for Mode are as follows:
+#0 --> AMR_MODE_BE
+#1 --> AMR_MODE_OA
+#2 --> AMR_MODE_MAX
+
+Mode = AMR_MODE_OA
+
+
+[QIPCALL:AMR_3]
+
+#This config is bandwidth.
+#enum - BW_NW, BW_WB
+#
+#Possible INTEGER values for Bandwidth are as follows:
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+BandWidth = BandWidth_NB
+
+#This config is modeset.
+
+ModeSet = 0
+
+#This config is mode.
+#enum - AMR_MODE_BE, AMR_MODE_OA
+#
+#Possible INTEGER values for Mode are as follows:
+#0 --> AMR_MODE_BE
+#1 --> AMR_MODE_OA
+#2 --> AMR_MODE_MAX
+
+Mode = AMR_MODE_BE
+
+
+[IMS_COMMON:ImsCommonPropertyValues]
+
+#This config item add prefix for the ims user agent
+
+ims_user_agent_prefix = ""
+
+
+[QIPCALL:ImsVoiceSuppsConfig]
+
+#This config is required to configure the timer for Notify
+#response to Refer(Timer value in milliseconds).
+
+notifyReferRspTimer = 20000
+
+#This config is required to know if call needs to be placed on hold before call transfer
+
+placeCallOnHoldBeforeCallTransfer = 0
+
+#This config is required to enable privacy for conference calls
+
+enablePrivacyInConferenceCall = 1
+
+#This config is required to enable setting the route header in SUBSCRIBE
+
+isRouteHeaderRequiredInSubscribe = 0
+
+#This config is required to end the conference call automatically
+#when user-count node in the CEP XML is 1.
+
+endConfCallBasedOnUserCountNode = 0
+
+#This config is required not to send unsubscribe to NW  for conference call when there is
+#no notify-terminated received.
+
+isUnsubcribeDisabled = 0
+
+#This config is required to include require=replaces string in ReferTo header
+
+includeRequireInReferTo = 1
+
+#This config is required to enable presentation of the call to
+#the user when UE is already in two calls (active and held).
+
+presentThirdCalltoUser = 0
+
+#This config is required to skip dialing out status participent from adding in conference list.
+
+skipDialingOutStatus = 0
+
+#This config is required to configure the conference event
+#package subscription timer.
+
+confEvtSubTimer = 3600
+
+#This config is required check CEP user state to be Connected on Notify Timer expiry when SIP Frag 200 ok is not received and treat it as user added successfully.
+
+checkCEPUserStateonNotifyTimerExpiry = 0
+
+#This config is required to configure the maximum user count
+#for conference.
+
+confMaxAllowedUser = 20
+
+#This config is required to remove user=phone in the conference invite
+
+donotIncludeUserPhone = 0
+
+#This config is required to enable the conference event package
+#subscription.
+#
+#Possible enum values are as follows:
+#QPE_IMS_CONF_PCKG_NONE = 0,
+#QPE_IMS_CONF_PCKG_ALL = 1,
+#QPE_IMS_CONF_PCKG_ORIGINATOR_ONLY = 2,
+#QPE_IMS_CONF_PCKG_ORIGINATOR_ONLY_NO_JOIN_IND = 3,
+#QPE_IMS_CONF_PCKG_PARTICIPANT_NO_SUBSCRIBE_NO_INDICATION = 4
+
+confEvtPakageEnabled = QPE_IMS_CONF_PCKG_ALL
+
+#This config is required to end the conference call automatically
+#when all other participants left the call.
+
+endConfCallUponNoParticipant = 1
+
+#This config is required enable maxptime negotiation.
+
+enableAudioMaxPtimeNegotiation = 0
+
+#This config is required to configure the dialog for the
+#conference event subscribe request.
+
+confEvtSubOutOfDialog = 0
+
+#This config is required to configure the three party conf URI
+#for KDDI.
+
+threePartyConfFactoryUri = ""
+
+#This config is required to create a new dialog with the conference server from participant side if user merges new calls
+
+createNewDialogForMergeFromParticipant = 0
+
+
+[Registration:RegistrationCounters]
+
+#This config item controls the Immediate  Retry timer for failures
+
+maxPDNIntermediateRetries = 1
+
+#This config item controls the Maximum registration retries with current pcscf after which we move to the next PCSCF when error codes with retry after header reg failure is received.
+
+maxRegRetriesWithCurrentPCSCF = -1
+
+
+[SMSDAN:DANSettings]
+
+#This config item controls QIPCall 1x SMS and Voice Enabled (0:DAN SMS can be sent only if there is no voice call.
+#1:Enabled; DAN and MO SMS can be sent even when a voice call is up).
+
+smsAndVoiceOver1x = 0
+
+#This NV item is used for configuring the transport channel preference on which DAN is to be sent.
+
+channelPreference = 0
+
+#This config item controls the DAN Retry Timer Interval Duration (In ms)
+
+retryTimer = 0
+
+#This config item controls the DAN Max Retry Counter
+
+maxRetryCount = 0
+
+#This NV item is used for controlling DAN Hysterisis Timer Duration
+
+hysterisisTimer = 0
+
+
+[SIPConfig:Transport]
+
+#enable or disable TCP Static threshold
+
+TCPEnableStaticThreshold = 0
+
+#Offset to calculate the dynamic MSS from the MTU size
+
+TCPDynamicThresholdOffset = 0
+
+#Config to support or not support interworking with N26 interface, with IWKN26 = '1'(interworking with N26 is not supported)
+
+IWKN26NotSupported = 0
+
+#enable or disable the feature: forced use of TCP for all msgs
+
+ForcedUseOfTCP = 0
+
+#Config to control transport switch from UCP to TCP
+
+TCPUasSwitch = 0
+
+#Number of REGISTER retry for TCP failure
+
+REGRetryCountForTCPFailure = 1
+
+#TCP Back-Off Timer Value for REGISTER
+
+TCPBackOffTimerForREG = 0
+
+#above this size choose TCP and value 0 means disable tcp port open on UE
+
+TCPThresholdValue = 1230
+
+#enable transport selection based on ROUTE and REQ URI
+
+SelectTransportByRouteHdrOrRequestUri = 0
+
+
+[QIPCALL:ImsVideoConfig]
+
+#This config is required to configure if VT call is priority over CS call.
+
+is_Vt_call_priority = 0
+
+#This config is required to retain negotiated VT config ,even if VT call downgraded to Voice
+
+is_RetainVTConfig = 0
+
+#This config is required to configure if VT capability can be impacted by modile data.
+
+vtImpactedByDataSetting = 0
+
+#This config is required to set the hold_downgrade_supported for VT
+#calls.
+
+hold_downgrade_supported = 1
+
+#This config is required to set the video_capability_for_invite_no_sdp for
+#incoming INVITE without SDP.
+
+video_capability_for_invite_no_sdp = 1
+
+#Internal:This config is required to check CSFB is supported for video
+
+isCSFBAllowedForVTcall = 0
+
+#Internal:This config is required to store peer supported
+#services
+
+trackPeerServices = 0
+
+#This config is required to enable AVPF retry
+
+avpf_retry_enabled = 1
+
+#This config is required to configure the LTR mode.
+#
+#Possible enum values are as follows:
+#/** Always disabled */
+#QP_CONFIG_IMS_LTR_DISABLED = 0x00,
+#/** Only enable for qc to qc devices negotiated via SDP */
+#QP_CONFIG_IMS_LTR_ENABLED_RESTRICT_QC = 0x01,
+#/** Always enabled */
+#QP_CONFIG_IMS_LTR_ENABLED_ALL = 0x02,
+
+ltrMode = QP_CONFIG_IMS_LTR_PROBING
+
+#This config is required to configure if VT to VOLTE downgrade is required when  video bearer setup is delayed
+
+VTToVolteDowngradeOnPrecondtionNotMet = 0
+
+#This config is required to redial as voice for 488 to VT INVITE.
+
+VoiceRetryforVT488 = 0
+
+
+[Ut:XcapHCConfigUserProfile]
+
+#This config item controls the configured user name
+
+configUserName = ""
+
+#This config item controls the configured user name
+
+configUserPassword = ""
+
+
+[MEDIA:MediaDscp]
+
+#This config item specifies dscp value for audio
+
+audio = 46
+
+#This config item specifies dscp value for video
+
+video = 46
+
+
+[QIPCALL:ImsMediaProfileConfig]
+
+#This config is required to video codec profile list on 4G.
+
+VideoProfile1 = "H264_0"
+
+#This config is required to audio codec profile list.
+
+AudioProfile1 = "EVS_0_126;AMR_1_104;AMR_4_110;AMR_0_102;AMR_2_108"
+
+
+[Registration:RegistrationPriorities]
+
+#This config item specifies the priority order for registartion failure initiated due to half timer expiry
+
+refreshRegistration = 6
+
+#This config item specifies the priority order for registartion failure with/without retry after header
+
+registrationFailure = 7
+
+#This config item specifies the priority order for registartion failure initiated due to feature tags change
+
+featureTagsChange = 5
+
+#This config item specifies the priority order for network initiated deregistraion
+
+networkInitiatedDereg = 1
+
+#This config item specifies the priority order for reg restoration triggered by UE
+
+regRestoration = 2
+
+#This config item specifies the priority order for registartion failure initiated due to PANI Update
+
+paniUpdate = 4
+
+#This config item specifies the priority order for Registartion final timer expiry at UE
+
+regFinalTimerExpiry = 3
+
+
+[ILS:IlsGeoLocEmerCellular]
+
+#This timer(sec) specifies the max wait time for best location request.
+
+bestLocationReqExpiryTime = 5
+
+#This timer(sec) specifies the max wait time for fresh location request.
+
+freshLocationReqExpiryTime = 5
+
+#This time(seconds) specifies the max time for which cached location can be used.
+#If cachedLocationTimeOutValue is set to 0 and isCachedLocationSupported is set to 1 then it means cached location has no staleness value.
+
+cachedLocationTimeOutValue = 0
+
+#This attribute specifies the access type of location.
+#ILS_ACCESS_CACHE                     0, --> Cached Location to be used.
+#ILS_ACCESS_FINE                      1, --> Fresh Location to be queried.
+#ILS_ACCESS_COARSE                    2, --> Best Location to be queried.
+
+firstPriorityForLocation = ILS_ACCESS_COARSE
+
+#This attribute specifies the discovery method of location.
+#ILS_LOC_INVALID_MEHTOD = 0,
+#ILS_LOC_CELL           = 1,
+#ILS_LOC_WIFI           = 2,
+#ILS_LOC_TRIANGULATION  = 3,
+#ILS_LOC_GPS            = 4,
+#ILS_LOC_HYBRID         = 5,
+#ILS_LOC_HYBRID_AGPS    = 6
+
+discoveryMethod = ILS_LOC_INVALID_MEHTOD
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+verticalUncertaintyThreshold = 1000000
+
+#This attribute specifies second priority of fetching country code.
+#ILS_COUNTRYCODE_NONE            0,  --> Not supported
+#ILS_COUNTRYCODE_PLMN            1,  --> Current PLMN MCC
+#ILS_COUNTRYCODE_SIM             2   --> Prev stored GeoCoder MCC or SIM Code
+
+secondPriorityForCountryCode = ILS_COUNTRYCODE_PLMN
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+radiusUncertaintyThreshold = 1000000
+
+#This timer(sec) specifies the time in which fresh location needs to be updated.
+
+periodicRefreshOfFreshLocation = 0
+
+#This attribute specifies whether fresh location needs to be fetched after best location.
+
+isFreshLocToBeQueriedAfterBestLocation = 0
+
+#This attribute specifies second priority of fetching country code.
+#ILS_COUNTRYCODE_NONE            0,  --> Not supported
+#ILS_COUNTRYCODE_PLMN            1,  --> Current PLMN MCC
+#ILS_COUNTRYCODE_SIM             2   --> Prev stored GeoCoder MCC or SIM Code
+
+thirdPriorityForCountryCode = ILS_COUNTRYCODE_SIM
+
+#This timer(sec) specifies the max wait time for civic address query.
+
+civicAdressTimeOutValue = 2
+
+#This attribute specifies whether civic address is needed for the context.
+
+isCivicAdressNeeded = 1
+
+#This attribute specifies whether lat/long obtained as 0 is valid or not.
+
+isZeroLatLongValid = 0
+
+#This attribute specifies whether cached location can be used or not.
+#It is to be used if best/fresh has failed or best/fresh respective timer has expired.
+
+isCachedLocationSupported = 1
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+horizontalUncertaintyThreshold = 1000000
+
+
+[QIPCALL:ImsVideoModifyConfig]
+
+#This config is required to configure the timer in msecs for
+#waiting on user response to the incoming upgrade req.
+
+localUpgradeAcceptTimer = 20000
+
+#This config is required to configure the timer in secs for
+#response from the peer to the sent upgrade req.
+
+remoteUpgradeRejectTimer = 40
+
+
+[QIPCALL:ImsEmergencyConfig]
+
+#This config is used to control from IMS stack if Test mode handling for an emergency call is enabled for a specific operator.
+
+EnableTestModeForOperator = 0
+
+#This config is used to determine when to stop e911 call timer (183/180/181/200/100 of e911 INVITE).This config can be a mask since call timer can be stopped at multiple places.
+#1- on 100 trying
+#2- on 183 session progress
+#4- on 180 ringing
+#8- on 181 call is being forwarded
+#16 - on 200 OK
+
+e911CallTimerStopPoint = 16
+
+#This config is required to retry next set PPI header
+
+setPPIheader = 0
+
+#This config is uesd to determine whether we support the Redial of E911 call with same call id and stored Contact header
+#received in  380 response.
+
+SupportRedialwithStoredCallidContactHeader = 1
+
+#This config is required to control if PUBLISH for current location discovery is sent in-dialog or out-of-dialog.
+
+LocationDiscoveryInDialogPublish = 1
+
+#This config is used to determine when to start e911 call timer(On e911 Register or on Call orig).
+#
+#QPE_IMS_E911_CALL_TIMER_START_POINT_ON_ORIG = 0
+#
+#QPE_IMS_E911_CALL_TIMER_START_POINT_ON_REGISTER = 1
+
+e911CallTimerStartPoint = QPE_IMS_E911_CALL_TIMER_START_POINT_ON_ORIG
+
+#This config is required to control if Fallback to CS on Connect Timer Expiry is needed.
+
+FallbacktoCSonConnectTimerExpiry = 0
+
+#This config is required to control if current location discovery during an emergency call is enabled.
+
+LocationDiscoveryEnabled = 0
+
+#This config is required to query geolocation ASAP when QIPCALL receives call orig request.
+
+enableEarlyGeoLocationQuery = 0
+
+#This config is uesd to determine whether GeoLocation Refresh using ILS callback is required for e911 calls
+
+ILSGeolocationRefreshEnabled = 0
+
+#This config is required to default to urn:service:sos urn when in VPLMN and multiple sub category is provided.
+
+e911DefaultURNinRoamingForMultiCategory = 1
+
+#This config is used to control update end reason for 380 for a specific operator.
+
+ForceUpdate380EndReasonForOperator = 1
+
+#This config is required to configure if end reason needs to be changed from AlternateCall to AlternateEmergencyCall if there is no Cellular available and call is on IWLAN.
+
+forceModifyEndreasonFor380 = 0
+
+#This config is required to enable the setting of display name in To Header.
+
+setDisplayNameInToHeader = 0
+
+#This config is required to exclude urn sub category for emergency call and just use urn:service:sos urn.
+
+e911URNSubCategoryExclude = 0
+
+#This config is required to exclude wifi for emergency call over IMS APN mask maps to below:
+#0x0 - QPE_IMS_E911_REMOVE_NONE
+#0x1 - QPE_IMS_E911_WIFI_REMOVE_ON_VOWIFI_RESTRICTION
+#0x2 - QPE_IMS_E911_WIFI_REMOVE_ON_PERM_FAILURE
+
+e911RemoveWIFIoverIMSAPNMask = 3
+
+
+[Registration:RegistrationDefaultParams]
+
+#This config item will be used to configure default UserName to register with Network
+
+userName = ""
+
+#This config item will be used to configure default authType to register with Network
+
+authType = ""
+
+#This config item will be used to configure default Display Name to register with Network
+
+displayName = ""
+
+#This config item will be used to configure default DomainName to register with Network
+
+domainName = ""
+
+#This config item will be used to configure default authSecertKey
+
+authSecertKey = "465b5ce8b199b49faa5f0a2ee238a6bc"
+
+#This config item will be used to configure default Private URI to register with Network
+
+privateURI = ""
+
+#This config item will be used to configure default is3GPP
+
+is3GPP = 0
+
+#This config item will be used to configure default Realm to register with Network
+
+realm = ""
+
+#This config item will be used to configure default public URI to register with Network
+
+publicURI = ""
+
+#This config item will be used to configure default Password to register with Network
+
+password = ""
+
+
+[ILS:IlsGeoLocImsWlan]
+
+#This timer(sec) specifies the max wait time for best location request.
+
+bestLocationReqExpiryTime = 5
+
+#This timer(sec) specifies the max wait time for fresh location request.
+
+freshLocationReqExpiryTime = 5
+
+#This time(seconds) specifies the max time for which cached location can be used.
+#If cachedLocationTimeOutValue is set to 0 and isCachedLocationSupported is set to 1 then it means cached location has no staleness value.
+
+cachedLocationTimeOutValue = 0
+
+#This attribute specifies the access type of location.
+#ILS_ACCESS_CACHE                     0, --> Cached Location to be used.
+#ILS_ACCESS_FINE                      1, --> Fresh Location to be queried.
+#ILS_ACCESS_COARSE                    2, --> Best Location to be queried.
+
+firstPriorityForLocation = ILS_ACCESS_COARSE
+
+#This attribute specifies the discovery method of location.
+#ILS_LOC_INVALID_MEHTOD = 0,
+#ILS_LOC_CELL           = 1,
+#ILS_LOC_WIFI           = 2,
+#ILS_LOC_TRIANGULATION  = 3,
+#ILS_LOC_GPS            = 4,
+#ILS_LOC_HYBRID         = 5,
+#ILS_LOC_HYBRID_AGPS    = 6
+
+discoveryMethod = ILS_LOC_INVALID_MEHTOD
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+verticalUncertaintyThreshold = 1000000
+
+#This attribute specifies second priority of fetching country code.
+#ILS_COUNTRYCODE_NONE            0,  --> Not supported
+#ILS_COUNTRYCODE_PLMN            1,  --> Current PLMN MCC
+#ILS_COUNTRYCODE_SIM             2   --> Prev stored GeoCoder MCC or SIM Code
+
+secondPriorityForCountryCode = ILS_COUNTRYCODE_PLMN
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+radiusUncertaintyThreshold = 1000000
+
+#This timer(sec) specifies the time in which fresh location needs to be updated.
+
+periodicRefreshOfFreshLocation = 0
+
+#This attribute specifies whether fresh location needs to be fetched after best location.
+
+isFreshLocToBeQueriedAfterBestLocation = 0
+
+#This attribute specifies second priority of fetching country code.
+#ILS_COUNTRYCODE_NONE            0,  --> Not supported
+#ILS_COUNTRYCODE_PLMN            1,  --> Current PLMN MCC
+#ILS_COUNTRYCODE_SIM             2   --> Prev stored GeoCoder MCC or SIM Code
+
+thirdPriorityForCountryCode = ILS_COUNTRYCODE_SIM
+
+#This timer(sec) specifies the max wait time for civic address query.
+
+civicAdressTimeOutValue = 2
+
+#This attribute specifies whether civic address is needed for the context.
+
+isCivicAdressNeeded = 1
+
+#This attribute specifies whether lat/long obtained as 0 is valid or not.
+
+isZeroLatLongValid = 0
+
+#This attribute specifies whether cached location can be used or not.
+#It is to be used if best/fresh has failed or best/fresh respective timer has expired.
+
+isCachedLocationSupported = 1
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+horizontalUncertaintyThreshold = 1000000
+
+
+[QIPCALL:EVS_0]
+
+#This config is used for bit rate. It has to be in DECIMAL format.
+
+BitRate = 127
+
+#This config is bandwidth.
+#enum - BW_NB, BW_WB, BW_SWB, BW_FB, BW_NB_WB, BW_NB_SWB, BW_NB_FWB,
+#
+#Possible INTEGER values for Bandwidth are as follows:
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+Bandwidth = BandWidth_NB_SWB
+
+#This config is used for hf only
+
+hf_only = 0
+
+
+[QIPCALL:EVS_1]
+
+#This config is used for bit rate.
+
+BitRate = 120
+
+#This config is bandwidth.
+#enum - BW_NB, BW_WB, BW_SWB, BW_FB, BW_NB_WB, BW_NB_SWB, BW_NB_FWB,
+#
+#Possible INTEGER values for Bandwidth are as follows:
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+Bandwidth = BandWidth_SWB
+
+
+[QIPCALL:EVS_2]
+
+#This config is used for bit rate.
+
+BitRate = 120
+
+#This config is bandwidth.
+#enum - BW_NB, BW_WB, BW_SWB, BW_FB, BW_NB_WB, BW_NB_SWB, BW_NB_FWB,
+#
+#Possible INTEGER values for Bandwidth are as follows:
+#0 --> BandWidth_NB
+#1 --> BandWidth_WB
+#2 --> BandWidth_SWB
+#3 --> BandWidth_FB
+#4 --> BandWidth_NB_WB
+#5 --> BandWidth_NB_SWB
+#6 --> BandWidth_NB_FWB
+#7 --> BandWidth_MAX
+
+Bandwidth = BandWidth_WB
+
+
+[SMSDAN:USSDSettings]
+
+#This config item controls the Language String to be used.
+
+ussdLangString = ""
+
+
+[QIPCALL:ImsVoiceConfig]
+
+#This config is required to configure the Emergency call Cancel Timer.TImer is started when UE triggered CANCEL and waiting for 200 OK of CANCEL from network
+
+emergencyCallCancelTimer = 500
+
+#This config is required to send permanent failiure instead of alternate emergency service for non standrad emergency service.
+
+sendPermanentFailon380 = 0
+
+#Allow mode-change-period and mode-change-neighbor in SDP answer
+
+AllowMCPandMCNinAnswer = 0
+
+#This config is required to enable CSFallBack in Case of Invite Retries Exhausted.
+
+CSFBRequiredOnMaxRetryAttempt = 0
+
+#This config is required to enable the responding the AMR/AMR-WB codec with fixed modeset
+
+enableSDPResponseWithModeSetForAMR = 1
+
+#Configure error code which needs to trigger reg restoration after CS call complete.
+
+RegRestorationErrorCode = ""
+
+#This config is required to set the Invite Timeout Timer.
+
+InviteTimeoutTimer = 0
+
+#This config is required to enable propagating the incoming CANCEL message's reason to UI
+
+propagateIncomingCancelReason = 1
+
+#This config is required to enable VT call redial on same RAT for voice call for error 400/503.
+
+VTRedialVoice = 0
+
+#This config is required to configure the error code that will be sent when incoming re-INVITE is received while 491 retry is going on
+
+InviteRejectCodeDuring491Retry = 491
+
+#This config is required to configure if Peer services need to be updated based on ACK contact.
+
+UpdatePeerServiceBasedOnAck = 0
+
+#This config is required to enable silent redial when IMS received 500/503 to UPDATE.
+
+enableSilentRedialForUpdate500_503 = 0
+
+#This config is required to see whether incoming re-INVITE can be rejected while UE is running timer to retry INVITE previously failed with 491
+
+bIsInviteRejectEnabledDuring491Retry = 0
+
+#This config is required to ignore netwrork verstat info in 200ok of REG
+
+ignoreNetworkVerStat = 0
+
+#This config is required to configure the ignoring of AS value
+
+ignoreASValidation = 0
+
+#This config is required to disable the default jitter buffer config
+
+disableDefaultJBConfig = 0
+
+#This config is required to configure the max-red value
+
+max_red = 0
+
+#This config is required to enable the propagation of multiple 180 to UI.
+
+enableMultiple180PropagationToUI = 0
+
+#This config is required to configure the Reject Timer . This timer is started on Alerting user when AutoReject is set.
+
+tWaitTimer = 4500
+
+#This config is required to decide whether AMR BE fallback needs to be disabled
+
+disableAMRBEFallBack = 1
+
+#This config is required to disable CSFB for alternate service call(380) if there is already an existing call.
+
+IgnoreAlternateServiceOnCall = 0
+
+#This config is required to control if we should check CSFB allowed before reporting CSFB on Tcal Timeout
+
+enableCSFBcheckonTcalTimeout = 0
+
+#This config is required to configure phone context for WLAN based on R15 releaseinfo.
+
+enableWlanPhoneContext = 0
+
+#This config is required to enable LTE silent redial if Tcall timer expires when call is originated on NR
+
+RedialOnTcallExpiryCallOrigNR = 1
+
+#This config is required to configure the last come first served guard timer.Timer is started when qipcall accept MT call.
+
+LastComeFirstServedGuardTimer = 0
+
+#This config is required to configure the display name to be same as CS call
+
+mimicCSCallNumberDisplay = 1
+
+#This config is required to enable Call end on RTP inactivity.
+
+CallEndonRTPInactivity = 0
+
+#Configures the invalid SDP IP timer value when invalid IP is received from network
+
+invalidSDPIPTimer = 20000
+
+#This config is required to end connecting call on LTE RRC T311 timer timeout
+
+endConnectingCallOnRRCT311timer = 0
+
+#This config is required to set the maximum period we will wait for any SIP msg from NW after 100 trying before UE triggers CS redial.
+
+WaitForSIPMsgTimer = 0
+
+#This config is required to include MTT USSD feature tag into IMS registration.
+
+ussdAcceptContact = "+g.3gpp.nw-init-ussi"
+
+#This config is required to remove P-Preferred-Service header in Invite message
+
+donotAddPreferredServiceInInvite = 0
+
+#This config is required to configure the default invite retry counter.
+
+inviteRetryCounter = 2
+
+#This config is required to set sdp direction sendrecv always in local resume
+
+dirSendRecvOnLocalResume = 0
+
+#This config is required to control if we should keep exist emergency call when modify energency call but get re-invite failure response
+
+keepEcallOnReinviteFailure = 1
+
+#This config is required to configure Call Waiting indication to UI
+
+enableCWI = 0
+
+#This config is required to disable or enable silent redial when receive 480.
+
+enableSilentRedialFor480 = 0
+
+#This config is required to configure the default URI type
+#(SIP/TEL) for MO calls.
+#
+#Possible INTEGER values for the enum are as follows:
+#QPE_IMS_URI_INIT = 0,                       enum value 0
+#QPE_IMS_URI_SIP = QPE_IMS_URI_INIT,         enum value 0
+#QPE_IMS_URI_TEL,                            enum value 1
+#QPE_IMS_URI_ANY,                            enum value 2
+#QPE_IMS_URI_MAX                             enum value 3
+
+uriType = QPE_IMS_URI_TEL
+
+#This config is required to configure the enabling of sending REINVITE
+#during Active calls HO.
+
+reInviteonHOforActiveCalls = 0
+
+#This config is required to configure if Subcribe Header is allowed Allow Header.
+
+endE911CallAfterTriedOnWifi = 0
+
+#This config is required to enable VoWIFI Call Continuity to LTE NonVOPS.
+
+enableVCCtoLTENonVOPS = 0
+
+#This config is required to enable replaces header in 183,200 Ok and refer.
+
+enableReplacesInHeader = 0
+
+#This config is required to set the maximum period we will wait for EPS fallback indication from NW before UE triggers silent redial/force search on LTE.
+
+EPSFallbackTimer = 0
+
+#This config is required to set error code for CT submode.
+
+sessionEndResponseTimeout = 0
+
+#This config is required to enable WPS calling feature.
+
+enableWPSCalling = 1
+
+#This config is required to consider a Normal call for end on Re-Reg Failure.
+#e911 calls are by default allowed to continue till network tears it down.
+
+endCallOnReRegFailure = 0
+
+#This config is required to set reason Header Type.
+#0 - No customization
+#1 - SIP based reason string
+#2 - Q.850 based reason string
+
+reasonHeaderCustomizationType = 0
+
+#This config is required to configure the Reject Timer . This timer is started on MT Invite when AutoReject is set.
+
+tRejectTimer = 1000
+
+#This config is required to set the phone context domain source.
+#
+#Possible INTEGER values for this enum are as follows:
+#QPE_IMS_PHONE_CONTEXT_SOURCE_FROM_MCC_MNC = 0,
+#QPE_IMS_PHONE_CONTEXT_SOURCE_FROM_PAU_HEADER = 1,
+#QPE_IMS_PHONE_CONTEXT_SOURCE_PRE_DEFINED = 2,
+
+PhoneContextSource = QPE_IMS_PHONE_CONTEXT_SOURCE_FROM_MCC_MNC
+
+#This config is required to wait for 400 ms before sending call end to MMode after receiving BYE/CANCEL/non 2xx response
+
+enableDelayedCallEndNotification = 0
+
+#This config is required to enable the MT USSI.
+
+enableMTUSSI = 1
+
+#This config is required to forcefully send CW indication even if early media is playing
+
+sendAlertInfoDuringEarlyMedia = 0
+
+#This config is required to configure the fast RRC release Timer.This timer is started when MT call is autorejected.
+
+fastRRCreleaseTimer = 200
+
+#This config is required to enable silent redial error code NV for wifi
+
+enableSilentRedialErrorCodes = 0
+
+#This config is required to retain local SDP direction when incoming message has no PEM header.
+
+PEMRetainLocalDirOnPeerNone = 0
+
+#This config is required to configure if device type is fax or not
+
+isFaxDevice = 0
+
+#This config is required to configure if Invalid IP in SDP is supported or not
+
+invalidSDPIPSupport = 0
+
+#This config is required to configure the default WPS invite duration.
+
+wpsInviteDuration = 0
+
+#This config is required to enable the increment of the session refresh version logic.
+
+enableSessionRefreshIncrementVersion = 1
+
+#When enabled, the UE would respond with currently-used-codec when UE receives a reinvite without SDP
+
+respondToEmptyReinviteWithNegotiatedCodec = 0
+
+#This config is required to provide workaround for the network issue to override sendonly to sendrecv on MT, recvonly to sendrecv on MO
+
+overrideSendonlyToSendrecv = 0
+
+#This config is required to configure if Media restriction is enabled or not
+
+mediaRestrictionEnabled = 0
+
+#This config is required to configure the voice call Cancel Timer.TImer is started when UE triggered CANCEL and waiting for 200 OK of CANCEL from network
+
+voiceCallCancelTimer = 0
+
+#This config is required to enable PEM header in 183.
+
+enablePEMHeaderIn183 = 0
+
+#This config is required to accommodate Network issue with symmetric payload for both TX/RX stream from Remote UE
+
+supportSymmetricPTforTxRx = 0
+
+#This config is required to enable RTP motoring while on hold call
+
+disableRTPmonforHoldCall = 0
+
+#This config is required to accept the 2nd call and reject 1st call when the PAI is same as previous in progress call.
+
+accept2ndCallWithSamePAI = 0
+
+#This config is required to decide whether sending dummy packet to keep alive feature is enabled.
+
+enableDummyPacket = 0
+
+#This config is required to configure the default WPS fallback duration.
+
+wpsFallbackDuration = 0
+
+#This config is required to enable the playing of local hold tone.
+
+enableLocalHoldTone = 0
+
+#This config is required to control if the string type in CANCEL and BYE message follow by 3GPP definition
+
+reasonHeader3GPPType = 1
+
+#This config is required to decide the interval to send dummy packet.
+
+keepAliveTimer = 0
+
+#This config is required to enable the responding the SDP with fixed modeset for A1, B0, B1 offers
+
+enableSDPResponseWithModeSetForA1B0B1 = 1
+
+#This config is required to enable emergency call operation in CS-only mode.
+
+emergCallCSOnly = 0
+
+#This config is required to enable redial on lte when IMS SIP error codes are received during voice call setup on NR.
+
+lteSilentRedialEnabled = 0
+
+#This config is required to set preconditions enabled with qos events ignored.
+
+ignoreQOSEvents = 0
+
+#This config is required to restart TCALL timer after EPS-FB
+
+RestartTcallOnEPSFB = 0
+
+#This config is required to enable timer to wait for IMS Registration to complete before triggering the emergency call.
+
+waitForIMSRegTimer = 0
+
+#This config is required to configure the timer for RTP monitoring for early media.
+
+EarlyRtpLinkAlivenessTimer = 1
+
+#This config is required to enable propagating the incoming CANCEL message's reason to UI if the cause=200 and reason string needs to be checked
+
+checkForReasonTextForCause200 = 1
+
+#This config is required to enable 380 response validation as per
+#3GPP.
+
+enableAlternateSrvRspCheck = 0
+
+#This config is required to configure the error code that will be sent when ringing timer expires
+
+ringingTimerExpiryResponseCode = 480
+
+#This config is required to select the default emergency URI if sub category matches with multiple entries
+
+e911SelectDefURI = 0
+
+#This config is required to disable early media timer.
+
+disableEarlyMediaTimer = 0
+
+#This config is required to place AMR WB before AMR in encryption call.
+
+preferAMRWBinEncryptionCall = 0
+
+#This config is to allow emergency calls on IWLAN on Limited/No Registration
+
+unauthemergCallonIWLAN = 1
+
+#This config is required to enable or disable the terminating identity service.
+
+terminatingIdentityService = QP_TERMINATING_IDENTITY_DISABLE
+
+#This config is required to configure the privacy type. Set 0: for none, 1: for id, 2: for header.
+
+privacyType = 2
+
+#This config is required to control if early media configure should be as per last valid PEM header.
+
+earlyMediaWithLastValidPEM = 0
+
+#This config is required to configure if VOLTE capability can be impacted by modile data.
+
+volteImpactedByDataSetting = 0
+
+#This config is required to forcefully enable the increment of the session refresh version logic.
+
+enforceSessionRefreshIncrementVersion = 1
+
+#This config is required to accommodate remote SDP answer with asymmetric payload in media config
+
+supportAsymmetricPTinReceivedSDPAnswer = 0
+
+#This config is required to configure if Subcribe Header is allowed Allow Header.
+
+addSubscribeInAllowHeader = 0
+
+#This config is required to configure the error code that will be sent when ringing timer expires
+
+callRejectionResponseCode = 486
+
+#This config is required to enable media dynamic switch in early media phase. If true, the feature will be enabled.
+
+earlyMediaDynamicSwitch = 1
+
+#This config is required to configure if end reason needs to be changed from AlternateCall to AlternateEmergencyCall.
+
+enableModifyEndReasonAlternateCall = 0
+
+#This config is required to prioritize exposing Tel URI to UI if there are multiple PAI headers.
+
+prioritizeTelURIinPAI = 0
+
+
+[IRM:IRM_OVERRIDE_POLICY]
+
+#Define override Action for Condition5 above.
+
+Action5 = 0
+
+#Define override Action for Condition4 above.
+
+Action4 = 0
+
+#Define override Action for Condition1 above.
+
+Action1 = 0
+
+#Define override Action for Condition3 above.
+
+Action3 = 0
+
+#Define override Action for Condition2 above.
+
+Action2 = 0
+
+#Define Condition which needs to override with new Action - Action5.
+
+Condition5 = 0
+
+#Define Condition which needs to override with new Action - Action4.
+
+Condition4 = 0
+
+#Define Condition which needs to override with new Action - Action3.
+
+Condition3 = 0
+
+#Define Condition which needs to override with new Action - Action2.
+
+Condition2 = 0
+
+#Define Condition which needs to override with new Action - Action1.
+
+Condition1 = 0
+
+
+[QIPCALL:ImsTextConfig]
+
+#This config is used to calculate RS and RR values for text and also on deciding on whether to enable RTCP for text in connected state
+
+enableRtcpInTextForConnectedCall = 1
+
+#This config is required to configure the timer for RTP
+#monitoring for text.
+
+rtpLinkAlivenessTimer = 0
+
+#This config is required to configure the timer for RTCP
+#monitoring for text.
+
+rtcpLinkAlivenessTimer = 0
+
+#This config is required to configure the if RTT UPGRADE can be auto upgraded or
+#wait for user or rejected, when RTT is disabled by config.
+
+RTT_Off_handling_During_Call_Setup = QPE_RTT_OFF_ACCEPT_WITHOUT_TEXT
+
+#This config is required to configure the if RTT UPGRADE can be auto upgraded or
+#wait for user or rejected, when RTT is disabled by config.
+
+RTT_Off_handling = QPE_RTT_OFF_REJECT
+
+#This config is required to configure the if RTT can be auto upgraded or
+#wait for user, when RTT is enabled by config.
+
+autoUpgradeAcceptedRTTOn = 0
+
+#This config is required to configure the if icoming RTT downgrade can be accepted.
+
+Accept_downgrade = 1
+
+
+[ILS:IlsConfiguration]
+
+#This attribute specifies how long timer(sec) should run for the next country code background search.
+
+countryCodeBKGSearchTimer = 0
+
+#This attribute specifies whether background search for Country Code is allowed
+
+countryCodeBKGSearchAllowed = 0
+
+#This attribute specifies each positioning request made by this client shall generate a notification to the application framework.
+#This is device specific setting.
+
+EnablePosRequestNotification = 0
+
+#This attribute specifies if GPS error QMI indication need to send to application framework.
+
+EnableGPSErrorQMINotification = 0
+
+
+[IRM:IRM_CoreSrv]
+
+#This config defines the max recovery timer in sec for Deregistration and SIP Resources (RP and RS) cleanup. This will be used if DeRegNoResponseRPClenupRecoveryTimerMultiplier is set to 0.
+
+DeleteRPRecoveryTimer = 130
+
+#This config defines the max recovery timer in sec for Service cleanup/SIP Resources cleanup by services before Registration service cleanup.
+
+ServiceCleanupRecoveryTimer = 0
+
+#This config defines the multiplier for Timer F for which De-Register no respons and RP cleanup recovery.Recovery timer will be DeRegNoResponseRPClenupRecoveryTimerMultiplier*TimerF. Set this to 0 if DeleteRPRecoveryTimer to be used.
+
+DeRegNoResponseRPClenupRecoveryTimerMultiplier = 9
+
+
+[IRM:IRM_RM]
+
+#This config defines the multiplier for Timer F for which (Re)Register no respons recovery.Recovery timer will be RegNoResponseRecoveryTimerMultiplier*TimerF
+
+RegNoResponseRecoveryTimerMultiplier = 9
+
+#This config defines the max count for local cleanup for (Re)Register no respons recovery.Exceding which next action as per policy will be taken.
+
+regNoResponseRegContextCleanUpActionMaxCount = 1
+
+
+[SIPConfig:StandardTimers]
+
+#sip registration expires value in milliseconds
+
+SipRegValue = 0
+
+#sip reg subscription expires value in milliseconds
+
+SipSubscribeValue = 0
+
+
+[IMS_COMMON:ImsCommonTestModeCellId]
+
+#This config item controls the test mode value
+#eCELLID_TEST_MODE_OFF       0
+#eCELLID_TEST_MODE_ON        1
+
+CellID_Test_Mode = 0
+
+#This config item controls the Cell ID value
+
+CellID = ""
+
+
+[QIPCALL:H264_2]
+
+#This config is to specify the profile for H264. Only use value 1
+#
+#The possible values of this enum are:
+#/** Invalid Profile*/
+#QP_CONFIG_IMS_H264_PROFILE_INVALID  = 0x00,
+#/** Baseline Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_BASELINE = 0x01,
+#/** Main Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_MAIN = 0x02,
+#/** Extended Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_EXTENDED = 0x03,
+#/** High Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_HIGH = 0x04
+
+profile = 1
+
+#Preffered resolution. Possible values:
+#INVALID_RESOLUTION = 0,
+#PORTRAIT_SQCIF_RESOLUTION,    // 1
+#LANDSCAPE_SQCIF_RESOLUTION,   // 2
+#PORTRAIT_QQVGA_RESOLUTION,    // 3
+#LANDSCAPE_QQVGA_RESOLUTION,   // 4
+#PORTRAIT_QCIF_RESOLUTION,     // 5
+#LANDSCAPE_QCIF_RESOLUTION,    // 6
+#PORTRAIT_QVGA_RESOLUTION,     // 7
+#LANDSCAPE_QVGA_RESOLUTION,    // 8
+#PORTRAIT_CIF_RESOLUTION,      // 9
+#LANDSCAPE_CIF_RESOLUTION,     // 10
+#PORTRAIT_VGA_RESOLUTION,      // 11
+#LANDSCAPE_VGA_RESOLUTION,     // 12
+#PORTRAIT_HD_720_RESOLUTION,   // 13
+#LANDSCAPE_HD_720_RESOLUTION,  // 14
+
+resolution_preferred = 8
+
+#Preffered Framerate
+
+framerate_preferred = 15
+
+#payload type for packetization mode 0. number above 96
+
+payload_type_packetization_mode0 = 117
+
+#Codec level. possible values:
+#INVALID_LEVEL = 0x00,
+#Level 1 = 0x01,
+#Level 1B = 0x02,
+#Level 11 = 0x03,
+#Level 12 = 0x04,
+#Level 13 = 0x05,
+#Level 2 = 0x06,
+#Level 21 = 0x07,
+#Level 22 = 0x08,
+#Level 3 = 0x09,
+#Level 31 = 0x0A,
+#Level 32 = 0x0B,
+#Level 4 = 0x0C,
+#Level 41 = 0x0D,
+#Level 42 = 0x0E,
+#Level 5 = 0x0F,
+#Level 51 = 0x10
+
+level = 4
+
+#payload type for packetization mode 1. number above 96 and
+#different from packetization mode 0
+
+payload_type_packetization_mode1 = 118
+
+#AS value if IPv6 is used
+
+ipv6_AS_value = 0
+
+#Max Bitrate
+
+bitrate_max = 335
+
+#Preffered bitrate
+
+bitrate_preferred = 335
+
+#Min Bitrate
+
+bitrate_min = 64
+
+#Max Framerate
+
+framerate_max = 15
+
+#This config is to ensure if the configuration is included in the
+#offer
+
+exclude_config_from_offer = '0'
+
+#Min Framerate
+
+framerate_min = 7
+
+#Supported resolution
+
+resolutions_supported = 0
+
+#AS value if IPv4 is used
+
+ipv4_AS_value = 0
+
+
+[QIPCALL:H264_1]
+
+#This config is to specify the profile for H264. Only use value 1
+#
+#The possible values of this enum are:
+#/** Invalid Profile*/
+#QP_CONFIG_IMS_H264_PROFILE_INVALID  = 0x00,
+#/** Baseline Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_BASELINE = 0x01,
+#/** Main Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_MAIN = 0x02,
+#/** Extended Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_EXTENDED = 0x03,
+#/** High Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_HIGH = 0x04
+
+profile = 1
+
+#Preffered resolution. Possible values:
+#INVALID_RESOLUTION = 0,
+#PORTRAIT_SQCIF_RESOLUTION,    // 1
+#LANDSCAPE_SQCIF_RESOLUTION,   // 2
+#PORTRAIT_QQVGA_RESOLUTION,    // 3
+#LANDSCAPE_QQVGA_RESOLUTION,   // 4
+#PORTRAIT_QCIF_RESOLUTION,     // 5
+#LANDSCAPE_QCIF_RESOLUTION,    // 6
+#PORTRAIT_QVGA_RESOLUTION,     // 7
+#LANDSCAPE_QVGA_RESOLUTION,    // 8
+#PORTRAIT_CIF_RESOLUTION,      // 9
+#LANDSCAPE_CIF_RESOLUTION,     // 10
+#PORTRAIT_VGA_RESOLUTION,      // 11
+#LANDSCAPE_VGA_RESOLUTION,     // 12
+#PORTRAIT_HD_720_RESOLUTION,   // 13
+#LANDSCAPE_HD_720_RESOLUTION,  // 14
+
+resolution_preferred = 8
+
+#Preffered Framerate
+
+framerate_preferred = 15
+
+#payload type for packetization mode 0. number above 96
+
+payload_type_packetization_mode0 = 115
+
+#Codec level. possible values:
+#INVALID_LEVEL = 0x00,
+#Level 1 = 0x01,
+#Level 1B = 0x02,
+#Level 11 = 0x03,
+#Level 12 = 0x04,
+#Level 13 = 0x05,
+#Level 2 = 0x06,
+#Level 21 = 0x07,
+#Level 22 = 0x08,
+#Level 3 = 0x09,
+#Level 31 = 0x0A,
+#Level 32 = 0x0B,
+#Level 4 = 0x0C,
+#Level 41 = 0x0D,
+#Level 42 = 0x0E,
+#Level 5 = 0x0F,
+#Level 51 = 0x10
+
+level = 4
+
+#payload type for packetization mode 1. number above 96 and
+#different from packetization mode 0
+
+payload_type_packetization_mode1 = 116
+
+#AS value if IPv6 is used
+
+ipv6_AS_value = 0
+
+#Max Bitrate
+
+bitrate_max = 335
+
+#Preffered bitrate
+
+bitrate_preferred = 335
+
+#Min Bitrate
+
+bitrate_min = 64
+
+#Max Framerate
+
+framerate_max = 15
+
+#This config is to ensure if the configuration is included in the
+#offer
+
+exclude_config_from_offer = '0'
+
+#Min Framerate
+
+framerate_min = 7
+
+#Supported resolution
+
+resolutions_supported = 0
+
+#AS value if IPv4 is used
+
+ipv4_AS_value = 0
+
+
+[QIPCALL:H264_0]
+
+#This config is to specify the profile for H264. Only use value 1
+#
+#The possible values of this enum are:
+#/** Invalid Profile*/
+#QP_CONFIG_IMS_H264_PROFILE_INVALID  = 0x00,
+#/** Baseline Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_BASELINE = 0x01,
+#/** Main Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_MAIN = 0x02,
+#/** Extended Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_EXTENDED = 0x03,
+#/** High Profile.*/
+#QP_CONFIG_IMS_H264_PROFILE_HIGH = 0x04
+
+profile = 1
+
+#Preffered resolution. Possible values:
+#INVALID_RESOLUTION = 0,
+#PORTRAIT_SQCIF_RESOLUTION,    // 1
+#LANDSCAPE_SQCIF_RESOLUTION,   // 2
+#PORTRAIT_QQVGA_RESOLUTION,    // 3
+#LANDSCAPE_QQVGA_RESOLUTION,   // 4
+#PORTRAIT_QCIF_RESOLUTION,     // 5
+#LANDSCAPE_QCIF_RESOLUTION,    // 6
+#PORTRAIT_QVGA_RESOLUTION,     // 7
+#LANDSCAPE_QVGA_RESOLUTION,    // 8
+#PORTRAIT_CIF_RESOLUTION,      // 9
+#LANDSCAPE_CIF_RESOLUTION,     // 10
+#PORTRAIT_VGA_RESOLUTION,      // 11
+#LANDSCAPE_VGA_RESOLUTION,     // 12
+#PORTRAIT_HD_720_RESOLUTION,   // 13
+#LANDSCAPE_HD_720_RESOLUTION,  // 14
+
+resolution_preferred = 11
+
+#Preffered Framerate
+
+framerate_preferred = 15
+
+#payload type for packetization mode 0. number above 96
+
+payload_type_packetization_mode0 = 113
+
+#Codec level. possible values:
+#INVALID_LEVEL = 0x00,
+#Level 1 = 0x01,
+#Level 1B = 0x02,
+#Level 11 = 0x03,
+#Level 12 = 0x04,
+#Level 13 = 0x05,
+#Level 2 = 0x06,
+#Level 21 = 0x07,
+#Level 22 = 0x08,
+#Level 3 = 0x09,
+#Level 31 = 0x0A,
+#Level 32 = 0x0B,
+#Level 4 = 0x0C,
+#Level 41 = 0x0D,
+#Level 42 = 0x0E,
+#Level 5 = 0x0F,
+#Level 51 = 0x10
+
+level = 8
+
+#payload type for packetization mode 1. number above 96 and
+#different from packetization mode 0
+
+payload_type_packetization_mode1 = 114
+
+#AS value if IPv6 is used
+
+ipv6_AS_value = 0
+
+#Max Bitrate
+
+bitrate_max = 768
+
+#Preffered bitrate
+
+bitrate_preferred = 768
+
+#Min Bitrate
+
+bitrate_min = 64
+
+#Max Framerate
+
+framerate_max = 15
+
+#This config is to ensure if the configuration is included in the
+#offer
+
+exclude_config_from_offer = '0'
+
+#Min Framerate
+
+framerate_min = 7
+
+#Supported resolution
+
+resolutions_supported = 4032
+
+#AS value if IPv4 is used
+
+ipv4_AS_value = 0
+
+
+[SIPConfig:FeatureFlags]
+
+#enable or disable IsUserPartNeededForContactHeader
+
+IsUserPartNeededForContactHeader = 1
+
+#enable or disable IsUIReadyStatusCheckNeeded
+
+IsUIReadyStatusCheckNeeded = 0
+
+#Max number of transactions to hold with PANI retry
+
+PANIRetryMaxTransactions = 4
+
+#Enable Custom user agent in format as required by operator
+
+EnableCustomUserAgent = 0
+
+#enable or disable PANI header in ACK
+
+IsPANIEnabledInAck = 1
+
+#enable or disable ServerHeader
+
+IsServerHeaderEnabled = 1
+
+#enable or disable IsImsiNeededForContactHeader
+
+IsImsiNeededForContactHeader = 0
+
+#enable or disable WLAN NW mode type addition in PANI header
+
+EnableWlanNWModeInPANI = 1
+
+#enable or disable addition of AKAv1-MD5 algorithm in initial REGISTER
+
+AKAv1MD5InInitialReg = 0
+
+#Number of times consecutive REGISTER 401 Auth is allowed by operator
+
+RegisterAuthRetryCount = 3
+
+#disable StopTimerBon1xx once 1xx response is not received
+
+StopTimerBon1xx = 0
+
+#enable or disable sip instance inclusion in contact header
+
+IsSipInstanceNeeded = 0
+
+#PANI retry max number of attempts
+
+PANIRetryMaxAttempt = 120
+
+#enable or disable Cellular-Network-Info header
+
+IsCNIEnabled = 1
+
+#PANI retry interval in milliseconds
+
+PANIRetryInterval = 500
+
+#CNI Cell Id Time Threshold value in secs
+
+CNICellIdTimeThreshold = 7200
+
+#To include the CNI header in the initial unprotected REGISTER
+
+IncludeCNIinUnProtectedREG = 1
+
+#enable or disable WLAN MAC Address addition in PANI header
+
+EnableWlanMACAddressInPANI = 1
+
+#enable or disable header compact form
+
+IsCompactFormEnabled = 0
+
+#enable or disable PANI header in CANCEL
+
+IsPANIEnabledInCancel = 0
+
+
+[ILS:IlsGeoLocImsCellular]
+
+#This timer(sec) specifies the max wait time for best location request.
+
+bestLocationReqExpiryTime = 5
+
+#This timer(sec) specifies the max wait time for fresh location request.
+
+freshLocationReqExpiryTime = 5
+
+#This time(seconds) specifies the max time for which cached location can be used.
+#If cachedLocationTimeOutValue is set to 0 and isCachedLocationSupported is set to 1 then it means cached location has no staleness value.
+
+cachedLocationTimeOutValue = 0
+
+#This attribute specifies the access type of location.
+#ILS_ACCESS_CACHE                     0, --> Cached Location to be used.
+#ILS_ACCESS_FINE                      1, --> Fresh Location to be queried.
+#ILS_ACCESS_COARSE                    2, --> Best Location to be queried.
+
+firstPriorityForLocation = ILS_ACCESS_COARSE
+
+#This attribute specifies the discovery method of location.
+#ILS_LOC_INVALID_MEHTOD = 0,
+#ILS_LOC_CELL           = 1,
+#ILS_LOC_WIFI           = 2,
+#ILS_LOC_TRIANGULATION  = 3,
+#ILS_LOC_GPS            = 4,
+#ILS_LOC_HYBRID         = 5,
+#ILS_LOC_HYBRID_AGPS    = 6
+
+discoveryMethod = ILS_LOC_INVALID_MEHTOD
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+verticalUncertaintyThreshold = 1000000
+
+#This attribute specifies second priority of fetching country code.
+#ILS_COUNTRYCODE_NONE            0,  --> Not supported
+#ILS_COUNTRYCODE_PLMN            1,  --> Current PLMN MCC
+#ILS_COUNTRYCODE_SIM             2   --> Prev stored GeoCoder MCC or SIM Code
+
+secondPriorityForCountryCode = ILS_COUNTRYCODE_PLMN
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+radiusUncertaintyThreshold = 1000000
+
+#This timer(sec) specifies the time in which fresh location needs to be updated. 0 means it is not supported.
+
+periodicRefreshOfFreshLocation = 0
+
+#This attribute specifies whether fresh location needs to be fetched after best location.
+
+isFreshLocToBeQueriedAfterBestLocation = 0
+
+#This attribute specifies second priority of fetching country code.
+#ILS_COUNTRYCODE_NONE            0,  --> Not supported
+#ILS_COUNTRYCODE_PLMN            1,  --> Current PLMN MCC
+#ILS_COUNTRYCODE_SIM             2   --> Prev stored GeoCoder MCC or SIM Code
+
+thirdPriorityForCountryCode = ILS_COUNTRYCODE_SIM
+
+#This timer(sec) specifies the max wait time for civic address query.
+
+civicAdressTimeOutValue = 2
+
+#This attribute specifies whether civic address is needed for the context.
+
+isCivicAdressNeeded = 1
+
+#This attribute specifies whether lat/long obtained as 0 is valid or not.
+
+isZeroLatLongValid = 0
+
+#This attribute specifies whether cached location can be used or not.
+#It is to be used if best/fresh has failed or best/fresh respective timer has expired.
+
+isCachedLocationSupported = 1
+
+#This attribute(metres) specifies whether obtained location is accurate or not.
+
+horizontalUncertaintyThreshold = 1000000
+
+
+[IRM:IRM_IMM]
+
+#This config defines the max recovery timer value for PDN bring up/bring down
+
+RecoveryTimer_BURATRecommendation = 600
+
+#This config defines the max recovery timer value for MEASUREMENTS TO COMPLETE.
+
+RecoveryTimer_MeasurementRecommendation = 150
+
+
+[Ut:XCAPCommonHC]
+
+#This config item specifies the response timer duration which Round robin of ip addresses to be done for the bsf server
+
+BsfServerDNSTimerValue = 3
+
+#This config item controls whether GBA_U is enabled or not
+
+useGBAMEOnly = 1
+
+#This config item specifies Option to re-attempt failed SS request on another available PS rat
+
+PSFallbackEnabled = 1
+
+#Flag indicates whether to remove port from the host header over Ub Interface. Default: 0(include port) 1(don't include)
+
+TrimPortFromHostHeaderForBSF = 0
+
+#This config item controls whether ims prefix is added or not for Ub request like as bsf.ims.mnc005.mcc232.pub.3gppnetwork.org
+
+includeIMSPrefixForUSIM = 0
+
+#This config item controls whether to perform round robin with the ip address in dns query for the bsf server or not
+
+IsRREnabledForBSF = 1
+
+#This config item specifies the error list for which Round robin of ip addresses t be done for the bsf server
+
+ErrorsHandledInRRForBSf = "408,410,501,502,503,504"
+
+#This config item controls whether to ignore RSp Auth failure or not
+
+IgnoreRSPAuthFailure = 1
+
+#This config item specifies Option to Trigger CSFB for 404 error over Ub interface
+
+TriggerCSFBfor404overUb = 0
+
+#This config item controls whether to enabe dynamic cert fetch or not
+
+dynamicCertFetchRequired = 1
+
+#This config item controls the configuration of BSF server address
+
+bsfServerAddress = ":8088"
+
+#This config item specifies behavior in case authentiation failure. Possible values for override are as follows:
+#FAIL_SS_REQUEST_WITH_CSFB  = 1
+#FAIL_SS_REQUEST_WITHOUT_CSFB  = 2
+
+ActionOnGBAAuthFailure = 1
+
+#This config item controls whether to use user mode for TLS
+
+useUserModeForTLS = 0
+
+#This config item controls whether BSF server supports TLS. Possible values for override are as follows:
+#eQP_IMS_XCAP_GBA_TLS_MODE_OVER_UB_NONE = 0 --> not enabled
+#eQP_IMS_XCAP_GBA_TLS_MODE_OVER_UB_ON   = 1 --> Enabled
+
+bsfServerTlsSupport = 0
+
+
+[QIPCALL:ImsVoiceQoSConfig]
+
+#This config is required to set the desired auido/text qos strength
+#for local and remote UEs.
+
+qosDesiredStrength = QP_QOS_DES_STREN_LOC_MAND_REM_OPT
+
+#This config is required to enable 183 for Reneg
+
+qosMc183 = 0
+
+#This config is required to enable qos call flow when call is on wifi
+
+simulateQoSInWifi = 0
+
+#This config is required to configure the early QoS timer for video dedicated
+#bearer allocation.
+
+earlyQosReservationTimer = 0
+
+#This config is required to enable 183 for Operators on WiFi.
+
+enable183onWiFi = 0
+
+#This config is required to enable 183 for Operators which need 183 even when Precondition call flow is disabled.
+
+enable183forNoPrecondition = 0
+
+#This config is required to set the desired video qos strength
+#for local and remote UEs.
+
+qosVideoDesiredStrength = QP_QOS_DES_STREN_LOC_MAND_REM_OPT
+
+#This config is required to enable sending SDP answer in PRACK
+#for 183 if the local qos is granted before 183 response is recvd by
+#the UE.
+
+qosOptimization = 0
+
+#This config is required to enable QCI match with the requested media type for qos
+
+checkQciForQoSMediaType = 0
+
+#This config is required to disable mid-call qos handling for CMCC HST
+
+qosHST = 0
+
+#This config is required to configure QoS regrant timer when QoS is lost
+
+QoSRegrantTimer = 3000
+
+#This config is required to configure the MBR threshold.
+
+iMBRthresholdValue = 0
+
+#This config is required to enable mid-call precondition for Call Hold/Resume
+
+qosMcHold = 0
+
+#This config is required to configure Mid-call qos timer after HO from Wifi to cellular is successful
+
+MidCallQoSTimerWiFiToCellularHO = 6000
+
+#This config is required to configure if the initial SDP
+#directionality should be inactive in REINVITE when preconditions are
+#used
+
+reinviteSdpDirInactive = 0
+
+#This config is required to enable MBR check for video bearer.
+
+qosMbrVideoCheckReqEnabled = 1
+
+#This config is required to configure if the initial SDP
+#directionality should be inactive when preconditions are used.
+
+inviteSdpDirInactive = 0
+
+#This config is required to enable MBR check for audio bearer.
+
+qosMbrAudioCheckReqEnabled = 0
+
+#This config is required to configure whether a locally held call is to be ended on MidcallQosTimer expiry
+
+MidCallQoSTimerExpiryLocalHeldCallEnd = 1
+
+#This config is required to allow media on default bearer when call is connected and dedicated bearer is not available, even when we are qos aware.
+
+allowMediaOnDefaultBearer = 0
+
+#This config is required to check if UL filter match can be skipped for non-connected calls
+
+IgnoreULFilterforConnectingCalls = 1
+
+#This config is required to enable Qos MC precondition negotiation
+#in SDP.
+
+qosMcPreconditionsEnabled = 0
+
+
+[RCS:AutoConfig]
+
+#This config item specifies maximum delay time in seconds for initial registration to wait for autoconfig procedure during powerup.
+
+maxInitRegDelay = 15
+
+#This config item specifies duration in seconds waiting for the response from network after sending HTTP request before give up and retry.
+
+responseWaitTime = 30
+
+#This config item specifies a list of retry intervals in seconds(up to 8) during ACS retry.
+
+retryIntervals = "30,120,300,900,1800"
+
+#This config item specifies throttle time in seconds for sending consecutive autoconfig request triggered by client.
+
+throttleTime = 0
+
+#This config item specifies a list of retry intervals in seconds(up to 8) during App Token request timeout retry.
+
+appTokenRetryIntervals = ""
+
+#This config item specifies recovery time in seconds to exit no-more-retry state.
+
+recoveryTime = 0
+
+
+[QIPCALL:ImsVoiceSessionTimerConfig]
+
+#This config is required to configure the session refresher shall
+#be UAC/UAS.
+#
+#Possible enum values are as follows:
+#QP_CONFIG_SES_REFRESHER_UAC     =0, UAC will go out as the refresh parameter in the initial Refresh Request
+#QP_CONFIG_SES_REFRESHER_UAS     =1, UAS will go out as the refresh parameter in the initial Refresh Request
+#QP_CONFIG_SES_REFRESHER_UNKNOWN =2  UNKNOWN
+
+sessionRefresherType = QP_CONFIG_SES_REFRESHER_UAC
+
+#This config is required to enable session timer support.
+
+sessionTimerEnabled = 1
+
+#This config is required to enable Stand Alone Session Expiry
+#negotiation.
+
+standAloneEnabled = 1
+
+#This config is required to enable Sesssion Expiry timer
+#negotiation.
+
+allowSeNegotiation = 0
+
+#This config is required to configure the method for session
+#referesh shall be REINVITE/UPDATE.
+#
+#Possible enum values are as follows:
+#QP_CONFIG_SES_REFRESH_UNKNOWN = -1,   UNKNOWN
+#QP_CONFIG_SES_REFRESH_INVITE,         INVITE will be the refresh method used
+#QP_CONFIG_SES_REFRESH_UPDATE
+
+sessionRefresherMethod = QP_CONFIG_SES_REFRESH_INVITE
+
+
+[QIPCALL:H263_0]
+
+#payload type number above 96
+
+payload_type = 0
+
+#This config is to ensure if the configuration is included in the
+#offer
+
+exclude_config_from_offer = '0'
+
+
+[MEDIA:MediaDeJitter]
+
+#This item specifies the window threshold for SID STDDEV optimization
+
+sid_wind_thrh = 50
+
+#This config item specifies to disable Variance based dejitter calculation
+
+disableVarDjtrOpt = 0
+
+#This item specifies the default scalar value for SID STDDEV optimization
+
+sid_w_std_dev = 4
+
+#This item specifies Alpha value for SID STDDEV
+
+sid_fltr_alpha = 98
+
+#This item disables SID STDEV optimization
+
+disable_sid_opt = 0
+
+#This item specifies to enable and present threshold for prohibit decrement tdelay threshold
+
+prohibitdec_tlksprtthresh = 2
+
+#This item specifies to disable mean delay or fallback to meanDelayOpt mode for lesser AV sync delay
+
+AVSyncDisableMeanDelayOpt = 1
+
+
+[QIPCALL:ImsVoiceConfigExt]
+
+#This config is required to enable sending UPDATE on local QoS is met when remote dont add precondition tag.
+#But added QoS attribute in SDP.
+
+QoSStatusUpdateWithoutPreconditionTag = 0
+
+#This config is required to enable USSD redial based on error code received in BYE
+
+ussdRedialOnByeErrorCode = 0
+
+#This config is required to check Emergency Service are available for 380/Invite.
+
+CheckEmeregencyServiceFor380Handling = 0
+
+#This config is to validate info package header in USSD info
+
+validateInfoPackageHeaderUSSD = 1
+
+#This config is to replace Invalid Audio direction with Video direction for Video call
+
+replaceInvalidAudiodirWithVideo = 0
+
+#This config is required to wait for 50 ms before sending emergency call end to MMode after receiving BYE/CANCEL/non 2xx response
+
+enableDelayedCallEndNotificationEmergency = 0
+
+
+[QIPCALL:ImsEarlyMediaConfig]
+
+#This config is required to enable CRS function.
+
+enableCrsService = 0
+
+#This config is required to indicate fallback type when video CRS negotiation fail.
+
+fallbackCrsType = 0
+
+#This config is required to configure CRS Update Timer.Timer is started when UE send 180,and waiting for CRS UPDATE from network.
+
+crsUpdateTimer = 0
+
+#This config is required to configure CRS Media Timer.Timer is started when UE send UPDATE 200OK,and waiting for first CRS RTP package from network.
+
+crsMeidaTimer = 0
+
+#This config is required to check "g.3gpp.cat" for video in CRBT UPDATE SDP.
+
+crbtCheckCAT = 0
+
+
+[MEDIA:MediaCommon]
+
+#This config item specifies if overall rate adaptation feature is enabled or not.
+
+audioRAEnable = 1
+
+#This config item specifies to disable sending BOM in text call.
+
+disableSendBOM = 0
+
+#This config item specifies if NO_DATA format rtp pkts send is enabled or not.
+
+rtpNoDataSend = 0
+
+#This config item specifies the playout mode to enable/disable Partial playout
+#or decide playout mode dynamically.
+#enum:
+#QP_ENABLE_DROPSET = 0,
+#QP_DISABLE_DROPSET = 1,
+#QP_DYNAMIC_PLAYOUT = 2
+
+playoutMode = QP_ENABLE_DROPSET
+
+#This config item specifies to disable PT matching.
+
+PTMatchDisable = 0
+
+#This config item specifies if RTT visual sound indication feature is enabled or not.
+
+enableSpeechInd = 0
+
+#This config item enables/disables RTP Assert for Customer.
+
+enableCustRtpAssert = 0
+
+#This config item specifies contrl UL RTP send on receive DL RTP during P-Early-Media stage is enabled or not.
+
+pemRtpTxCtrl = 1
+
+#This config item specifies maximum mtu size for the rtp packet
+
+mtuSize = 1400
+
+#This config is DL DTMF Mode.
+#enum -
+#QP_DTMF_PB_NONE = 0,
+#QP_DTMF_PB_ADSP = 1,
+#QP_DTMF_PB_HLOS = 2,
+#QP_DTMF_PB_ADSP_HLOS = 3,
+#QP_DTMF_PB_MAX
+
+DLDtmfMode = QP_DTMF_PB_HLOS
+
+#This config item specifies packet exchange mode.
+#enum:
+#/** use OOB mode. In VS arch it will be same as mode 4*/
+#QP_OOB_MODE = 0,
+#/** use mailbox mode and CDRX length from ML1.
+#Sync ADSP with CDRX ref time all the time i.e. at the beginning of the call
+#as well as any resync at the middle of the call */
+#QP_MB_FULL_CDRX_FULL_SYNC = 1,
+#/** use mailbox mode and default CDRX length to 20ms.
+#Sync ADSP with CDRX ref time at the beginning of the call
+#and disable any sync at the middle of the call */
+#QP_MB_CDRX_20_SYNC_ONCE = 2,
+#/** use mailbox mode and CDRX length from ML1.
+#Sync ADSP with CDRX ref time at the beginning of the call
+#and disable any sync at the middle of the call */
+#QP_MB_FULL_CDRX_SYNC_ONCE = 3,
+#/** use mailbox mode and use it as CDRX disabled
+#i.e. default CDRX length to 20ms and no sync with CDRX at all */
+#QP_MB_DISABLE_CDRX_SYNC = 4,
+#/** use mailbox mode and CDRX length from ML1.
+#Sync ADSP with CDRX ref time all the time i.e. at the beginning of the call
+#as well as any resync at the middle of the call but the length
+#will always be set to 20ms as vfr_cycle*/
+#QP_MB_CDRX_20_FULL_SYNC = 5,
+
+enableMailbox = QP_MB_FULL_CDRX_FULL_SYNC
+
+#This config item specifies the timeout value for Handoff threshold timer.
+
+HandoffThresholdTimer = 0
+
+
+[SIPConfig:CustomTimers]
+
+#reliable response retry timer cap in milliseconds
+
+TRelResponseRetry = 0
+
+

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier Policy file for SRLTE CHGWL roaming for Class A device
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/CT/1xSRLTE/subsidized/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "23.1.36"
+>
+
+  <initial>
+
+    <mcc_list name="sxlte_mccs"> 455 460 </mcc_list>
+
+    <mcc_list name="c2k_roaming_mccs"> 440 450 </mcc_list>
+
+    <mcc_list name="ct_mccs"> 455 460 </mcc_list>
+
+
+    <mcc_list name="home_mccs">
+      460
+    </mcc_list>
+
+
+    <plmn_list name = "sxlte_plmns">
+      455-02 455-07 460-03 460-11
+    </plmn_list>
+
+    <plmn_list name="unrestricted_operators">
+      455-02 455-07 460-03 460-11 460-12 460-59
+    </plmn_list>
+
+    <define_fullrat_config>
+      <if>
+        <any_of>
+          <imsi_plmn_in list="unrestricted_operators" />
+          <imsi_mcc_in session="1x" list="ct_mccs" />
+        </any_of>
+        <then>
+          <ue_mode> CSFB </ue_mode>
+          <rat_capability base="none">
+            <include> C H G W L </include>
+          </rat_capability>
+          <rf_bands base="hardware" />
+          <scan_optimization tgpp="no_auto_camp_only" tgpp2="wrlf" />
+        </then>
+      </if>
+    </define_fullrat_config>
+
+    <define_timer name = "1x_oos" interval = "1" units = "min" id = "100" />
+
+    <rat_capability_if base="none">
+      <include> C H L </include>
+    </rat_capability_if>
+
+    <feature single_sim="srlte"> dualmmode </feature>
+
+    <ue_mode_if> 1X_CSFB_PREF </ue_mode_if>
+
+    <rf_band_list name="rf_bands_home">
+      <gw_bands base = "hardware" />
+      <lte_bands base = "none">
+        <include> 0 2 4 7 40 </include>
+      </lte_bands>
+      <tds_bands base = "none" />
+    </rf_band_list>
+
+    <rf_bands_if list="rf_bands_home" />
+
+    <scan_optimization tgpp="no_auto_camp_only" tgpp2="wrlf" />
+    <freq_list_if list="cpfl" />
+
+    <boolean_define name="cm:L1x_before_GW_in_e911" initial="true" />
+	
+    <boolean_set name="cm:L1x_before_GW_in_e911">
+      <current_mcc_in list="sxlte_mccs" />
+    </boolean_set>
+	
+  </initial>
+
+  <if>
+    <all_of>
+      <have_imsi />
+      <not> <imsi_plmn_in list="unrestricted_operators" /> </not>
+      <not> <imsi_mcc_in session="1x" list="ct_mccs" /> </not>
+    </all_of>
+    <then>
+      <ue_mode> CSFB </ue_mode>
+      <rat_capability base = "none">
+        <include> G </include>
+      </rat_capability>
+      <rf_bands base="hardware" />
+      <svc_mode> FULL </svc_mode>
+      <boolean_set name="cm:L1x_before_GW_in_e911" value="false" />
+    </then>
+  </if>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <svc_mode> FULL </svc_mode>
+
+  <if>
+    <have_serving_system />
+    <then>
+      <if>
+        <location_mcc_in list="home_mccs" />
+        <then> <ca_band_combos string="5AA-1A-mAll;5A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;5AA-3A-mAll;5A-3AA-mAll;5AA-3A-1A-mAll;5A-3AA-1A-mAll;5A-3A-1AA-mAll;" /> </then>
+        <else>
+         <ca_band_combos string="" />
+        </else>
+      </if>
+      <continue />
+    </then>
+  </if>
+
+  <select>
+
+    <!-- Non-DDS, no VOLTE gets CH in Home -->
+    <case>
+      <all_of>
+        <not> <is_subs_dds /> </not>
+        <not> <volte_enabled /> </not>
+        <location_mcc_in list="sxlte_mccs" />
+      </all_of>
+      <then>
+        <rat_capability base="none">
+          <include> C H </include>
+        </rat_capability>
+        <rf_bands list="rf_bands_home" />
+        <ue_mode> 1X_CSFB_PREF </ue_mode>
+        <scan_optimization tgpp="no_auto_camp_only" tgpp2="disabled" />
+        <freq_list list="cpfl" />
+        <boolean_set name="cm:L1x_before_GW_in_e911" value="true" />
+      </then>
+    </case>
+
+    <case>
+      <location_mcc_in list="sxlte_mccs" />
+      <then>
+        <rf_bands list="rf_bands_home" />
+        <rat_capability base = "none">
+          <include> C H L </include>
+        </rat_capability>
+        <ue_mode> 1X_CSFB_PREF </ue_mode>
+        <scan_optimization tgpp="no_auto_camp_only" tgpp2="disabled" />
+        <freq_list list="cpfl" />
+        <boolean_set name="cm:L1x_before_GW_in_e911" value="true" />
+      </then>
+    </case>
+
+    <case>
+      <location_mcc_in list="c2k_roaming_mccs" />
+      <then>
+        <rf_bands base="hardware" />
+        <rat_capability base="none">
+          <include> C H G W L </include>
+        </rat_capability>
+        <ue_mode> CSFB </ue_mode>
+        <scan_optimization tgpp="no_auto_camp_only" tgpp2="wrlf" />
+        <freq_list list="default" />
+        <boolean_set name="cm:L1x_before_GW_in_e911" value="false" />
+      </then>
+    </case>
+
+    <case>
+      <true />
+      <then>
+        <rat_capability base="none">
+          <include> G W L </include>
+        </rat_capability>
+        <rf_bands base="hardware" />
+        <ue_mode> CSFB </ue_mode>
+        <scan_optimization tgpp="no_auto_camp_only" tgpp2="wrlf" />
+        <freq_list list="default" />
+        <boolean_set name="cm:L1x_before_GW_in_e911" value="false" />
+      </then>
+    </case>
+  </select>
+
+</policy>

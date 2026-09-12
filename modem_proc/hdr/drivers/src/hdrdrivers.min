@@ -1,0 +1,69 @@
+#-------------------------------------------------------------------------------
+# HDR Drivers source file(s)
+#-------------------------------------------------------------------------------
+HDRDRIVERS_SOURCES=\
+	hdrdec.c	\
+	hdrenc.c	\
+	hdrmod.c	\
+	hdrmdsp.c	\
+
+
+#-------------------------------------------------------------------------------
+# HDR Drivers include file(s) path
+#-------------------------------------------------------------------------------
+
+HDR_CINCPATH=\
+        $(COMMON)       \
+        $(ADC)          \
+        $(ADSP)         \
+        $(AVS)          \
+        $(CM)           \
+        $(BIO)          \
+        $(BOOT)         \
+        $(CLK)          \
+        $(CP)           \
+        $(DATA)         \
+        $(DEC)          \
+        $(DFM)          \
+        $(DIAG)         \
+        $(ENC)          \
+        $(FTM)          \
+        $(GPS)          \
+        $(HS)           \
+        $(HW)           \
+        $(MUX)          \
+        $(MDSP)         \
+        $(QDSP)         \
+        $(NV)           \
+        $(PM)           \
+        $(PLT)          \
+        $(RF)           \
+        $(SBI)          \
+        $(SIO)          \
+        $(SRCH)         \
+        $(TLMM)         \
+        $(TRAMP)        \
+        $(TRERM)        \
+        $(UASMS)        \
+        $(UI)           \
+        $(VBATT)        \
+        $(USB)
+
+#-----------------------------------------------------------------------------
+# HDR Drivers object file(s)
+#-----------------------------------------------------------------------------
+
+HDRDRIVERS_OBJS :=  $(addprefix $(TARGETDIR)/, $(HDRDRIVERS_SOURCES:%.c=%.o) )
+$(HDRDRIVERS_OBJS): INCLUDES = $(addprefix -I, $(HDR_CINCPATH))
+
+HDRDRIVERS_DEPS :=  $(addprefix $(TARGETDIR)/, $(HDRDRIVERS_SOURCES:%.c=%.dep) )
+$(HDRDRIVERS_DEPS): INCLUDES = $(addprefix -I, $(HDR_CINCPATH))
+
+#-----------------------------------------------------------------------------
+# HDR Drivers source files search path
+#-----------------------------------------------------------------------------
+
+vpath %.c $(HDRDRIVERS)/src
+
+
+

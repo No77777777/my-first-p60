@@ -1,0 +1,30 @@
+;****************************************************************************
+;**                            dsm_augment.cmm
+;**
+;** This script dumps dsm pool item data onto a file upon a crash. It 
+;** generates dsm_memory_pool_dump.txt.
+;**  
+;** Usage: do dsm4.cmm
+;**         
+;** Copyright (c) 2014-2021 by Qualcomm Technologies, Incorporated.  All Rights Reserved.
+;**
+;****************************************************************************
+;**
+;**                        EDIT HISTORY FOR MODULE
+;**
+;**  $Header: //source/qcom/qct/modem/mcs/dsm/rel/1h09/tools/dsm4.cmm#1
+;**
+;** when       who     what, where, why
+;** --------   ---     ------------------------------------------------------
+;** 05/04/09   ag      Merged from CVS.
+;** 07/14/13   sh      Modified for DSM Augment
+;** --------------------------------------------------------------------------
+
+ENTRY &OutputDir
+
+&DSMScript=OS.PPD();
+&DSMScript="&DSMScript"+"\dsm.cmm"
+
+print "&DSMScript"
+do &DSMScript &OutputDir
+

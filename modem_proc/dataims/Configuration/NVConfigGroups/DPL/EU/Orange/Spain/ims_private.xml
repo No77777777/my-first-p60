@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+    <NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<NvEfsFile name="imshandoverconfig" id="none" description="" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/ims/imshandoverconfig" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/DPL/EU/Orange/Spain/imshandoverconfig"/>
+	<NvEfsItemData name="qp_ims_plani_config" id="73527" description="PLANI related Config items" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_plani_config">
+		<Member name="Version" description="Version control for PLANI Items" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="AccessType" description="AccessType value" comment="" sizeOf="1" type="uint32"></Member>
+		<Member name="LAC" description="LAC Value" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="TAC" description="TAC Value" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="CellIdentity" description="CellIdentity Value" comment="" sizeOf="1" type="uint32"></Member>
+		<Member name="SID" description="CellIdentity Value" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="NID" description="NID Value" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="PZID" description="PZID Value" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="BASEID" description="BASEID Value" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="SectorID" description="SectorID value" comment="" sizeOf="16" type="uint8"></Member>
+		<Member name="SubnetLength" description="SubnetLength value" comment="" sizeOf="1" type="uint8"></Member>
+		<Member name="tm_sec" description="tm_sec Value" comment="" sizeOf="1" type="uint16">0</Member>
+		<Member name="tm_min" description="tm_min Value" comment="" sizeOf="1" type="uint16">0</Member>
+		<Member name="tm_hour" description="tm_hour Value" comment="" sizeOf="1" type="uint16">0</Member>
+		<Member name="tm_mday" description="tm_mday Value" comment="" sizeOf="1" type="uint16">0</Member>
+		<Member name="tm_mon" description="tm_mon Value" comment="" sizeOf="1" type="uint16">0</Member>
+		<Member name="tm_year" description="tm_year Value" comment="" sizeOf="1" type="uint16">0</Member>
+		<Member name="tm_wday" description="tm_wday Value" comment="" sizeOf="1" type="uint16">0</Member>
+		<Member name="tm_zone" description="tm_zone Value" comment="" sizeOf="1" type="int16">0</Member>
+		<Member name="MCC" description="MCC value" comment="" sizeOf="6" type="string"></Member>
+		<Member name="MNC" description="MNC value" comment="" sizeOf="6" type="string"></Member>
+		<Member name="iTac5g" description="5g TAC value" comment="" sizeOf="1" type="uint32"></Member>
+		<Member name="iCellIdentity5g" description="5g TAC Cellid value" comment="" sizeOf="1" type="uint64"></Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="50" type="uint8">0</Member>
+	</NvEfsItemData>
+</NvData>

@@ -1,0 +1,425 @@
+;=============================================================================
+;
+;                          IPCRTR DUMP
+;
+;  ---------------------------------------------------------------------------
+;  Copyright (c) 2021 Qualcomm Technologies, Inc.  
+;  All Rights Reserved.
+;  Qualcomm Technologies Proprietary and Confidential.
+;  ---------------------------------------------------------------------------
+;=============================================================================
+
+;=============================================================================
+;                         EDIT HISTORY FOR MODULE
+; 
+;  $Header: //source/qcom/qct/core/mproc/ipc_router/tools/ipcrtr_dump.cmm
+; 
+;  when       who     what, where, why
+;  --------   ---     ------------------------------------------------------
+; 
+;=============================================================================
+
+;=============================================================================
+; Constants
+;=============================================================================
+
+&VERSION="ipcrtr_dump.cmm, Version 1.0"
+&DEFAULT_OUTPUT_PATH="."
+
+&IPC_ROUTER_PROC_TABLE_SIZE=0x04
+&IPC_ROUTER_SERVER_TABLE_SIZE=0x20
+&IPC_ROUTER_CLIENT_TABLE_SIZE=0x20
+
+&OUTPUT_FILENAME="ipcrtr.csv"
+&OUTPUT_PATH=""
+&PARSE_WHAT=""
+
+; ============================================================================
+;
+; Function MAIN
+;
+; Description: MAIN()
+;
+; ============================================================================
+ENTRY &PARSE_WHAT &OUTPUT_PATH
+
+MAIN:
+  gosub INITLOGAREA
+
+  if ("&PARSE_WHAT"=="HELP"||"&PARSE_WHAT"=="help")
+  (
+    GOSUB HELP
+    ENDDO
+  )
+
+  if ("&OUTPUT_PATH"!="")
+  (
+    OPEN  #4 "&OUTPUT_PATH" /CREATE
+    CLOSE #4
+    OPEN  #4 "&OUTPUT_PATH" /WRITE
+    GOSUB PRINT_LINE "Output File: &OUTPUT_PATH"
+  )
+  
+  &PARSE_SERVERS=""
+  &PARSE_CLIENTS=""
+  if ("&PARSE_WHAT"==""||"&PARSE_WHAT"=="all"||"&PARSE_WHAT"=="ALL")
+  (
+    &PARSE_SERVERS="yes"
+    &PARSE_CLIENTS="yes"
+  )
+  if ("&PARSE_WHAT"=="servers"||"&PARSE_WHAT"=="SERVERS")
+  (
+    &PARSE_SERVERS="yes"
+  )
+
+  if ("&PARSE_WHAT"=="clients"||"&PARSE_WHAT"=="CLIENTS")
+  (
+    &PARSE_CLIENTS="yes"
+  )
+
+  if ("&PARSE_CLIENTS"=="yes")
+  (
+    ; parse ipc_router_g_client_tbls
+    GOSUB PRINT_LINE ""
+    GOSUB PRINT_LINE "================================================================================"
+    GOSUB PRINT_LINE "CLIENT_LIST"
+    GOSUB PRINT_LINE "CLIENT PTR can be type casted to (struct ipc_router_client_s*)"
+    GOSUB PRINT_LINE "QCSI_HANDLE can be type casted to (struct qmi_csi_xport_handle *)"
+    GOSUB PRINT_LINE "XPORT can be type casted to (qmi_csi_xport_type *)"
+    GOSUB PRINT_LINE "QCCI_XPORT can be type casted to (struct qmi_cci_xport_handle *)"
+    GOSUB PRINT_LINE "CLNT can be type casted to (qmi_cci_client_type *)"
+    symbol.foreach "gosub IPC_RTR_CLIENTS * " g_client_tbls
+    GOSUB PRINT_LINE "--------------------------------------------------------------------------------"
+  )
+
+  if ("&PARSE_SERVERS"=="yes")
+  (
+    GOSUB PRINT_LINE ""
+    GOSUB PRINT_LINE "================================================================================"
+    GOSUB PRINT_LINE "SERVICE_LIST"
+    GOSUB PRINT_LINE "SERVICE PTR can be type casted to (struct server_record *)"
+    symbol.foreach "gosub PRINT_SERVER_LIST * " g_server_tbl
+    GOSUB PRINT_LINE "--------------------------------------------------------------------------------"
+  )
+  
+  if ("&OUTPUT_PATH"!="")
+  (
+    CLOSE #4
+  )
+  
+  GOSUB PRINT_LINE "================================================================================"
+  GOSUB PRINT_LINE "               IPCRTR Report Generation Complete"
+  GOSUB PRINT_LINE "================================================================================"
+ENDDO
+; ============================================================================
+; End of main()
+; ============================================================================
+
+
+; ============================================================================
+;
+; Function HELP
+;
+; Description: Print out help message
+;
+; ============================================================================
+
+HELP:
+  GOSUB PRINT_LINE "*********************************************************************"
+  GOSUB PRINT_LINE "*          &VERSION"
+  GOSUB PRINT_LINE "*********************************************************************"
+  GOSUB PRINT_LINE "* Script Usage: "
+  GOSUB PRINT_LINE "*   do ipcrtr_dump.cmm [all|servers|clients|uservers|uclients] [output_path]"
+  GOSUB PRINT_LINE "*   default is to print all (both clients and servers) to IPCRTR screen area"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "* Example:"
+  GOSUB PRINT_LINE "*   do ipcrtr_dump"
+  GOSUB PRINT_LINE "*   do ipcrtr_dump servers"
+  GOSUB PRINT_LINE "*   do ipcrtr_dump all D:\ipcrtr_out.txt"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "* CLIENT PTR pointer can inspected as (struct ipc_router_client_s*)"
+  GOSUB PRINT_LINE "* QCSI_HANDLE can be type casted to (struct qmi_csi_xport_handle *)"
+  GOSUB PRINT_LINE "* XPORT can be type casted to (qmi_csi_xport_type *)"
+  GOSUB PRINT_LINE "* QCCI_XPORT can be type casted to (struct qmi_cci_xport_handle *)"
+  GOSUB PRINT_LINE "* CLNT can be type casted to (qmi_cci_client_type *)"
+  GOSUB PRINT_LINE "* SERVICE PTR pointer can inspected as (struct server_record *)"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "*********************************************************************"
+RETURN
+; ============================================================================
+; End of HELP()
+; ============================================================================
+
+
+; ============================================================================
+;
+; Function INITLOGAREA
+;
+; Description: Init message output window and output some help message
+;
+; ============================================================================
+
+INITLOGAREA:
+ AREA.Create IPCRTR 200. 800.
+ Area.Select IPCRTR
+ Area.Clear  IPCRTR
+ Area IPCRTR
+
+RETURN
+; ============================================================================
+; End of INITLOGAREA()
+; ============================================================================
+
+; ============================================================================
+;
+; Function IPC_RTR_CLIENTS
+;
+; Description: Parse QCCI Clients and QCSI Servers in g_client_tbls[]
+;
+; ============================================================================
+
+IPC_RTR_CLIENTS:
+  ENTRY &sym
+  GOSUB PRINT_LINE ""
+  GOSUB PRINT_LINE "SYMBOL=&sym"
+  
+  local &processor_id
+  local &port_id
+  local &xport
+  local &client
+  local &csi_or_cci
+  
+  &list_size=v.sizeof(&sym)/v.sizeof(&sym[0])
+  if (y.exist(&sym))
+  (
+    &proc_tbl_index=0
+    while (&proc_tbl_index<&list_size)
+    (
+      &tbl_ind=v.value(&sym[&proc_tbl_index].head)
+      while (&tbl_ind!=0x0)
+      (
+        &processor_id=v.value(((struct proc_record*)&tbl_ind)->processor_id)
+        &xport=v.value(((struct proc_record*)&tbl_ind)->xport)
+        &desc="local"
+        if (&xport!=0x0)
+        (
+          &desc_ptr=v.value(((struct proc_record*)&tbl_ind)->xport->desc)
+          &desc=v.string((char [5])&desc_ptr)
+        )
+
+
+        &clnt_tbl_index=0
+        &client_tbl=v.value((((struct proc_record*)&tbl_ind)->clients))
+
+        while (&clnt_tbl_index<&IPC_ROUTER_CLIENT_TABLE_SIZE)
+        (
+          &client_record=v.value((struct client_record*)(((ipc_router_client_table_type)&client_tbl)[&clnt_tbl_index].head))
+          while (&client_record!=0x0)
+          (
+            ; XXX use this for older code
+            &client_record_size=v.value(sizeof(struct client_record))
+            &port_id=0
+            &handle=0
+            if (&client_record_size>0x14)
+            (
+              if (&client_record_size>0x18)
+              (
+                ; Client handle is moved into record is present after addr.
+                ; &handle=&client_record+v.value(sizeof(ipc_router_address_type))
+                &handle=v.value(&(((struct client_record*)&client_record)->client))
+                &port_id=v.value(((struct client_record*)&client_record)->client.addr.port_id)
+              )
+              else
+              (
+                &port_id=v.value(((struct client_record*)&client_record)->addr.port_id)
+                &handle=v.value(((struct client_record*)&client_record)->client)
+              )
+            )
+            else
+            (
+              &port_id=v.value(((struct client_record*)&client_record)->port_id)
+              &handle=v.value(((struct client_record*)&client_record)->client)
+            )
+            &rx_cb_tmp1=v.value(((struct ipc_router_client_s*)&handle)->rx_cb)
+            &rx_cb="remote"
+            if (&rx_cb_tmp1!=0x0)
+            (
+              &ret=0
+              &rx_cb=y.name(P:&rx_cb_tmp1)
+              ; Get only the function name of rx_cb
+              &last_cut=0;
+              while (&ret!=-1)
+              (
+                &ret=string.scan("&rx_cb","\",&last_cut)
+                if (&ret!=-1)
+                (
+                  &last_cut=&ret+1
+                )
+              )
+              &rx_cb=string.cut("&rx_cb",&last_cut)
+            )
+            &rx_cb_data=v.value(((struct ipc_router_client_s*)&handle)->rx_cb_data)
+            &tx_count=v.value(((struct ipc_router_client_s*)&handle)->tx_count)
+            &tx_quota=v.value(((struct ipc_router_client_s*)&handle)->rx_quota)
+
+            if (&rx_cb_tmp1!=0x0)
+            (
+              if ("&rx_cb"=="qmi_csi_rx_cb")
+              (
+                &qcsi_xport=v.value(((struct qmi_csi_xport_handle *)&rx_cb_data)->xport)
+                &service=v.value(((qmi_csi_xport_type *)&qcsi_xport)->service)
+                GOSUB PRINT_LINE "ADDR=<&processor_id,&port_id>, LINK=&desc PTR=&handle FLOW_STATUS=&tx_count/&tx_quota, QCSI_HANDLE=&rx_cb_data XPORT=&qcsi_xport SVC=&service"
+              )
+              else
+              (
+                if ("&rx_cb"=="qmi_cci_rx_cb")
+                (
+                  &qcci_handle=v.value(((struct qmi_cci_xport_handle *)&rx_cb_data)->clnt)
+                  &qcci_id=v.value(((struct qmi_cci_xport_handle *)&rx_cb_data)->clnt->priv.clid)
+                  GOSUB PRINT_LINE "ADDR=<&processor_id,&port_id>, LINK=&desc PTR=&handle FLOW_STATUS=&tx_count/&tx_quota, QCCI_XPORT=&rx_cb_data CLNT=&qcci_handle CLNT_ID=&qcci_id"
+                )
+                else
+                (
+                  if ("&rx_cb"=="ipc_router_qdi_rx_cb")
+                  (
+                    &handle_port_id=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->handle->addr.port_id)
+                    &user_ep_fd=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->fd)
+                    &user_ep_allowed_flag=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->allowed_flag)
+                    &user_ep_ctrl_port=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->ctrl_port)
+                    &user_ep_conn_status=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->conn.status)
+                    &qdi_dev_qdi_handle=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->dev->qdi_handle)
+                    ;&qdi_dev_event_q_cnt=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->dev->event_q.count)
+                    &qdi_dev_rx_q_cnt=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->dev->rx_q.count)
+					&qdi_dev_active_receivers=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->dev->active_receivers)
+                    &qdi_dev_next_fd=v.value(((ipc_router_user_ep_t *)&rx_cb_data)->dev->next_fd)
+                    
+                    GOSUB PRINT_LINE "ADDR=<&processor_id,&port_id>, LINK=&desc PTR=&handle FLOW_STATUS=&tx_count/&tx_quota, RX_CB=&rx_cb, RX_CB_DATA=&rx_cb_data"
+                    GOSUB PRINT_LINE "                 handle_port_id=&handle_port_id, user_ep_fd=&user_ep_fd, user_ep_allowed_flag=&user_ep_allowed_flag, user_ep_ctrl_port=&user_ep_ctrl_port,  user_ep_conn_status=&user_ep_conn_status"
+                    GOSUB PRINT_LINE "                 qdi_dev_qdi_handle=&qdi_dev_qdi_handle, qdi_dev_rx_q_cnt=&qdi_dev_rx_q_cnt, qdi_dev_active_receivers=&qdi_dev_active_receivers,  qdi_dev_next_fd=&qdi_dev_next_fd"
+				  )
+				  else
+				  (
+                    if ("&rx_cb"=="sock_rx_cb")
+                    (
+                      &handle_port_id=v.value(((ipcr_sock_t *)&rx_cb_data)->handle->port_id)
+                      &fd=v.value(((ipcr_sock_t *)&rx_cb_data)->fd)
+                      &active=v.value(((ipcr_sock_t *)&rx_cb_data)->active)
+                      &connected=v.value(((ipcr_sock_t *)&rx_cb_data)->connected)
+                      &rx_q_cnt=v.value(((ipcr_sock_t *)&rx_cb_data)->rx_q.count)
+
+                      GOSUB PRINT_LINE "ADDR=<&processor_id,&port_id>, LINK=&desc PTR=&handle FLOW_STATUS=&tx_count/&tx_quota, RX_CB=&rx_cb, RX_CB_DATA=&rx_cb_data"
+                      GOSUB PRINT_LINE "                 handle_port_id=&handle_port_id, fd=&fd, active=&active, connected=&connected,  rx_q_cnt=&rx_q_cnt"
+
+                    )
+                    else
+                    (
+                      GOSUB PRINT_LINE "ADDR=<&processor_id,&port_id>, LINK=&desc PTR=&handle FLOW_STATUS=&tx_count/&tx_quota, RX_CB=&rx_cb, RX_CB_DATA=&rx_cb_data"
+                    )
+				  )
+                )
+              )
+
+              ; TODO You may add more stuff!
+            )
+            else
+            (
+              GOSUB PRINT_LINE "ADDR=<&processor_id,&port_id>, LINK=&desc PTR=&handle FLOW_STATUS=&tx_count/&tx_quota"
+            )
+
+            &client_record=v.value(((struct client_record*)&client_record)->link.next)
+          ) ; while (&client_record!=0x0)
+          &clnt_tbl_index=&clnt_tbl_index+1
+        ) ;  while (&clnt_tbl_index<&IPC_ROUTER_CLIENT_TABLE_SIZE)
+
+        &tbl_ind=v.value(((struct proc_record*)&tbl_ind)->link.next)
+
+      ) ; while (&tbl_ind!=0x0)
+
+      &proc_tbl_index=&proc_tbl_index+1
+
+    ) ; while (&proc_tbl_index<&IPC_ROUTER_PROC_TABLE_SIZE)
+
+  ) ; if(y.exist(ipc_router_g_client_tbls))
+RETURN
+
+; ============================================================================
+; End of IPC_RTR_CLIENTS()
+; ============================================================================
+
+
+; ============================================================================
+;
+; Function PRINT_SERVER_LIST
+;
+; Description: 
+;
+; ============================================================================
+PRINT_SERVER_LIST:
+  ENTRY &sym
+  GOSUB PRINT_LINE ""
+  GOSUB PRINT_LINE "SYMBOL=&sym"
+  
+  local &type
+  local &instance
+  local &next
+  local &processor_id
+  local &port_id
+  local &xport
+  
+  &list_size=v.sizeof(&sym)/v.sizeof(&sym[0])
+
+  if (y.exist(&sym))
+  (
+    &i=0
+    while (&i<&list_size)
+    (
+	  &tbl_ind=v.value(&sym[&i].head)
+      while (&tbl_ind!=0x0)
+      (
+        &type=v.value(((struct server_record*)&tbl_ind)->service.type)
+        &instance=v.value(((struct server_record*)&tbl_ind)->service.instance)
+        &processor_id=v.value(((struct server_record*)&tbl_ind)->server.processor_id)
+        &port_id=v.value(((struct server_record*)&tbl_ind)->server.port_id)
+        &xport=v.value(((struct server_record*)&tbl_ind)->xport)
+        &desc="local"
+        ;** print out desc string instead of desc address
+        if (&xport!=0x0)
+        (
+          &desc_ptr=var.value(((ipc_router_xport_type*)&xport)->desc)
+          &desc=var.string((char [5])&desc_ptr)
+        )
+        GOSUB PRINT_LINE "NAME=<&type,&instance>, ADDR=<&processor_id,&port_id>, LINK=&desc, PTR=&tbl_ind"
+        
+        &tbl_ind=v.value(((struct server_record*)&tbl_ind)->link.next)
+      )
+      &i=&i+1
+    )
+  )
+
+RETURN
+; ============================================================================
+; End of PRINT_SERVER_LIST()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PRINT_LINE
+;
+; Description: Prints the provided line
+;
+; ============================================================================
+PRINT_LINE:
+  ENTRY &line
+  if ("&OUTPUT_PATH"=="")
+  (
+    print &line
+  )
+  else
+  (
+    print &line
+    WRITE #4 &line
+  )
+RETURN
+; ============================================================================
+; End of PRINT_LINE()
+; ============================================================================

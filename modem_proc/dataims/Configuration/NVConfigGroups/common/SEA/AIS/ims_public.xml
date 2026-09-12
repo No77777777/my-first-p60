@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+	<NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<NvEfsItemData name="ims_user_agent" id="69689" description="User Agent string that needs to be sent with SIP message" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/ims_user_agent">
+		<Member name="ims_user_agent" description="User Agent string that needs to be sent with SIP message" comment="" sizeOf="1024" type="string"></Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="IMS_enable" id="67218" description="Enable or disable IMS task" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMS_enable">
+		<Member name="IMS_enable" description="Enable or disable IMS task" comment="" sizeOf="1" type="uint8">1</Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ims_operation_mode" id="69673" description="ims operation mode selection" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/ims_operation_mode">
+		<Member name="ims_operation_mode" description="ims operation mode selection" comment="" sizeOf="1" type="uint8">2</Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="IMS_Service_Enablement" id="73833" description="Switches to enable/disable IMS services" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_service_enablement_config">
+		<Member name="version" description="" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="VoLTEEnabled" description="Toggle Voice calling support on LTE" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="VideoTelephonyEnabled" description="Toggle Video Telephony support on the device" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="MobileDataEnabled" description="Toggle Mobile Data" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="ServicesMaskEnabledbyNetwork" description="Mask of services enabled by network through OMA-DM" comment="" sizeOf="1" type="uint32"></Member>
+		<Member name="WifiCallingEnabled" description="Toggle support for calls on wifi" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="CallModePref" description="Incase when wifi is enabled, call mode preference can be selected for calls as cellular preffered or wifi preffered" comment="" sizeOf="1" type="uint32">3</Member>
+		<Member name="WifiCallingEnabledinRoaming" description=" Toggle support for calls on wifi in roaming network" comment="" sizeOf="1" type="uint8">2</Member>
+		<Member name="WifiProvisioningID" description="Unique identifier required to enable wifi as per oprt reqs" comment="" sizeOf="20" type="string"></Member>
+		<Member name="ImsServiceEnabled" description="IMS Normal Registration Mode ENABLE/Disabled" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="UtEnabled" description="Enable/Disable UT feature" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="SmsEnabled" description="SMS Over IP Network indicatrion enable" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="DanEnabled" description="Enable/Disable DAN Feature" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="UssdEnabled" description="Enable/Disable USSD Feature" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="MwiEnabled" description="Enable/Disable MWI Feature" comment="" sizeOf="1" type="uint8"></Member>
+		<Member name="PresenceEnabled" description="Presence service enabled(1)/disabled(0)" comment="" sizeOf="1" type="uint8">0</Member> 
+		<Member name="AutoConfigEnabled" description="Auto-configuration service enabled (1)/disabled (0)" comment="" sizeOf="1" type="uint8">0</Member> 
+		<Member name="XdmClientEnabled" description="XDM client enabled(1)/disabled(0)" comment="" sizeOf="1" type="uint8">0</Member> 
+		<Member name="RcsMessagingEnabled" description="Rcs Messaging enabled(1)/disabled(0)" comment="" sizeOf="1" type="uint8"></Member> 
+		<!-- Start of version 1-->
+		<Member name="CallModePrefRoam" description="roaming preference" comment="" sizeOf="1" type="uint32">0</Member>
+		<!-- End of version 1-->
+		<!-- Start of version 2-->
+		<Member name="RttEnabled" description="RTT enabled(1)/disabled(0)" comment="" sizeOf="1" type="uint8">0</Member> 
+		<!-- End of version 2-->
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint7800"> </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="IMS_Common_Config" id="73835" description="IMS common group shared by multiple modules" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_common_config">
+		<Member name="version" description="" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="AllowedRATMask" description="Possible rats allowed at IMS level to proceed further" comment="" sizeOf="1" type="uint32">33555520</Member>
+		<Member name="PhoneContextUri" description="Configure Domain name for Phone" comment="" sizeOf="256" type="string"></Member>
+		<Member name="PhoneContextPolicy" description="Configure Geo/Home-local Policy Type" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint6096"></Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="SMSoIP_UsagePolicy" id="74110" description="SMS over IP/IMS usage policy with respective to voice enabled/disabled from domain selection" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/SMSoIP_UsagePolicy">
+        <Member name="version" description="Version" comment="" sizeOf="1" type="uint8">0</Member>
+        <Member name="SMSoIP_Usage" description="0 and 1 - enabled SMS if voice is enabled from domain selection, 2 - use SMoIP irrespective voice enabled/disabled" sizeOf="1" type="uint8">0</Member>
+        <Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint8176"> </Member>
+	</NvEfsItemData>	
+</NvData>

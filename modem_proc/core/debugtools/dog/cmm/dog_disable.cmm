@@ -1,0 +1,114 @@
+;============================================================================
+;  Name:
+;    DOG_DISABLE.CMM
+;
+;  Description:
+;
+; Copyright (c) 2017-2020 by Qualcomm Technologies, Inc.  All Rights Reserved.
+; Qualcomm Confidential and Proprietary
+;----------------------------------------------------------------------------
+;============================================================================
+;
+;                        EDIT HISTORY FOR MODULE
+;
+; when        who       what, where, why
+; ----------  --------  -----------------------------------------------------
+; 03/09/2018  bbhatt    Updated with new variable (dog_disable_state).
+; 03/16/2017  dlohia    Created.
+;============================================================================;
+
+;============================================================================
+
+;============================================================================
+; Get the arguments passed in.
+;============================================================================
+ENTRY 
+
+WE.AREA.RESet
+WE.WINPOS 0. 0. 45% 60%
+WE.AREA.Create DISABLE_DOG
+AREA DISABLE_DOG
+
+  ; Setup vars to use hex, strings, symbols & index 
+  SETUP.VAR %H %S %Y %I
+
+  ; setup the scrip variables to use hex symbols
+  radix HEX
+  
+GOSUB PRINT_HELPER " "
+GOSUB PRINT_HELPER "######################################################################"
+GOSUB PRINT_HELPER " "
+GOSUB PRINT_HELPER "                         DISABLE_DOG_SCRIPT                           "
+GOSUB PRINT_HELPER " "
+GOSUB PRINT_HELPER "######################################################################"
+GOSUB PRINT_HELPER " "
+
+GLOBAL &DOG_DISABLE_STATE_EXISTS
+&DOG_DISABLE_STATE_EXISTS=0
+
+sYmbol.ForEach "GOSUB EXIST_HELPER" *dog_disable_state 
+
+IF (&DOG_DISABLE_STATE_EXISTS==0x1)
+(
+  GOSUB PRINT_HELPER "--------------------------------------------------------------------"
+  GOSUB PRINT_HELPER "Disabling all watchdog features using new dog_disable_state enum"
+
+  sYmbol.ForEach "V * = 0x3F" *dog_disable_state
+  
+  GOSUB PRINT_HELPER "Done !!! "
+)
+ELSE 
+(
+  GOSUB PRINT_HELPER "--------------------------------------------------------------------"
+  GOSUB PRINT_HELPER "Disabling the hardware dog and 40sec startup grace timer in root-pd"
+
+  sYmbol.ForEach "V * = 1" *dog_hal_disable_for_bringup
+  GOSUB PRINT_HELPER "Done !!! "
+  
+  GOSUB PRINT_HELPER "--------------------------------------------------------------------"
+  GOSUB PRINT_HELPER "Disabling monitoring state of each PD in the system"
+
+  sYmbol.ForEach "V * = 1" *dog_virtual_disable
+  GOSUB PRINT_HELPER "Done !!! "
+
+  GOSUB PRINT_HELPER "--------------------------------------------------------------------"
+  GOSUB PRINT_HELPER "Disabling 40sec pd spawn grace timer in root"
+
+  sYmbol.ForEach "V * = 1" *dog_disable_pd_grace_timer
+  GOSUB PRINT_HELPER "Done !!! "
+  
+  GOSUB PRINT_HELPER "--------------------------------------------------------------------"
+  GOSUB PRINT_HELPER "Disabling the heartbeat monitoring"
+
+  sYmbol.ForEach "V * = 1" *dog_hb_disable
+  GOSUB PRINT_HELPER "Done !!! "  
+  
+  GOSUB PRINT_HELPER "--------------------------------------------------------------------"
+  GOSUB PRINT_HELPER "Disabling 40sec startup grace timer in user-pd"
+
+  sYmbol.ForEach "V * = 1" *dog_disable_user_startup_timer
+  GOSUB PRINT_HELPER "Done !!! "
+)
+
+ENDDO
+
+;============================================================================
+; PRINT SUBROUTINE
+;============================================================================
+PRINT_HELPER:
+  ENTRY &str
+  PRINT &str
+RETURN
+
+EXIST_HELPER:
+  ENTRY &var
+  IF sYmbol.EXIST(&var)
+  (
+    PRINT sYmbol.NAME(&var)
+    &DOG_DISABLE_STATE_EXISTS=1
+  )  
+  ELSE
+  (
+    PRINT "Using old method."  
+  )
+RETURN

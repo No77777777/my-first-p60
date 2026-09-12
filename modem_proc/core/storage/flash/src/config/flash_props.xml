@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?> 
+ <driver name="Flash">
+   <device id="DALDEVICEID_FLASH_DEVICE_1">
+   </device>
+   <device id="DALDEVICEID_FLASH_DEVICE_2">
+   </device>
+ </driver>

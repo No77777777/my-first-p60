@@ -1,0 +1,440 @@
+{
+	"HASH": {
+		"SHA1": {
+			"alg_mask": "UCLIB_SHA1",
+			"eng_entry": {
+				"SW":	"SHA1_CE_SW_init",
+				"HWIO": "SHA1_CE_HWIO_init",
+				"BAM":  "SHA1_CE_BAM_init",
+				"ARMV8": "SHA1_CE_ARMV8_init"
+			}
+		},
+		"SHA2_224": {
+			"alg_mask": "UCLIB_SHA2_224",
+			"eng_entry": {
+				"SW":	"SHA2_256_CE_SW_init",
+				"HWIO": "SHA2_256_CE_HWIO_init",
+				"BAM":  "SHA2_256_CE_BAM_init",
+				"ARMV8": "SHA2_256_CE_ARMV8_init"
+			}
+		},
+		"SHA2_256": {
+			"alg_mask": "UCLIB_SHA2_256",
+			"eng_entry": {
+				"SW":	"SHA2_256_CE_SW_init",
+				"HWIO": "SHA2_256_CE_HWIO_init",
+				"BAM":  "SHA2_256_CE_BAM_init",
+				"ARMV8": "SHA2_256_CE_ARMV8_init",
+				"TME_SEQ": "SHA2_256_CE_TME_SEQ_init"
+			}
+		},
+		"SHA2_384": {
+			"alg_mask": "UCLIB_SHA2_384",
+			"eng_entry": {
+				"SW":	"SHA2_384_CE_SW_init",
+				"HWIO": "SHA2_384_CE_HWIO_init",
+				"BAM":  "SHA2_384_CE_BAM_init",
+				"ARMV8": "",
+				"ARMV8_2": "SHA2_512_CE_ARMV8_init",
+				"TME_SEQ": "SHA2_384_CE_TME_SEQ_init"
+			}
+		},
+		"SHA2_512": {
+			"alg_mask": "UCLIB_SHA2_512",
+			"eng_entry": {
+				"SW":	"SHA2_512_CE_SW_init",
+				"HWIO": "SHA2_512_CE_HWIO_init",
+				"BAM":  "SHA2_512_CE_BAM_init",
+				"ARMV8": "",
+				"ARMV8_2": "SHA2_512_CE_ARMV8_init",
+				"TME_SEQ": "SHA2_512_CE_TME_SEQ_init"
+			}
+		},
+		"MD5": {
+			"alg_mask": "UCLIB_MD5",
+			"eng_entry": {
+				"SW":	"MD5_CE_SW_init",
+				"HWIO": "",
+				"BAM":  "",
+				"ARMV8": ""
+			}
+		},
+		"SM3": {
+			"alg_mask": "UCLIB_SM3",
+			"eng_entry": {
+				"SW":	"SM3_SW_init",
+				"HWIO": "",
+				"BAM":  "",
+				"ARMV8": ""
+			}
+		},
+		"RIPEMD_160": {
+			"alg_mask": "UCLIB_RIPEMD_160",
+			"eng_entry": {
+				"SW":"RIPEMD160_CMN_SW_init",
+				"HWIO": "",
+				"BAM":  "",
+				"ARMV8":""
+			}
+		}
+	},
+	"CIPHER": {
+		"AES": {
+			"CBC": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_CBC",
+				"eng_entry": {
+					"SW":	"AES_CBC_CTS_CE_SW_init",
+					"ARMV8": "AES_CBC_CTS_CE_ARMV8_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			},
+			"CBC_VA": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_CBC_VA",
+				"eng_entry": {
+					"BAM": "AES_CE_BAM_VA_init"
+				}
+			},
+			"CTS": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_CTS",
+				"eng_entry": {
+					"SW":	"AES_CBC_CTS_CE_SW_init",
+					"ARMV8": "AES_CBC_CTS_CE_ARMV8_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			},
+			"CTR": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_CTR",
+				"eng_entry": {
+					"SW":	"AES_CTR_CE_SW_init",
+					"ARMV8": "AES_CTR_CE_ARMV8_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			},
+			"CTR_VA": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_CTR_VA",
+				"eng_entry": {
+					"BAM": "AES_CE_BAM_VA_init"
+				}
+			},
+			"ECB": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_ECB",
+				"eng_entry": {
+					"SW":	"AES_ECB_CE_SW_init",
+					"ARMV8": "AES_ECB_CE_ARMV8_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			},
+			"XTS": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_XTS",
+				"eng_entry": {
+					"SW":	"AES_XTS_CE_SW_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			},
+			"CCM": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_CCM",
+				"eng_entry": {
+					"SW":	"AES_CCM_CE_SW_init",
+					"HWIO": "AES_CCM_CE_HWIO_init",
+					"BAM":  "AES_CCM_CE_BAM_init"
+				}
+			},
+			"GCM": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_GCM",
+				"eng_entry": {
+					"SW":	"AES_GCM_CE_SW_init",
+					"ARMV8": "AES_GCM_ARMV8_init"
+				}
+			},
+			"CFB": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_CFB",
+				"eng_entry": {
+					"SW": "AES_CFB_cmn_init",
+					"ARMV8": "AES_CFB_cmn_init"
+				}
+			},
+			"OFB": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_OFB",
+				"eng_entry": {
+					"SW": "AES_OFB_cmn_init",
+					"ARMV8": "AES_OFB_cmn_init"
+				}
+			}
+		},
+		"HC": {
+			"CBC": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_HC_CBC",
+				"eng_entry": {
+					"SW":	"AES_HC_SW_init",
+					"BAM":  "AES_HC_CE_BAM_init"
+				}
+			},
+			"CTS": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_HC_CTS",
+				"eng_entry": {
+					"SW":	"AES_HC_SW_init",
+					"HWIO": "AES_HC_CE_HWIO_init",
+					"BAM":  "AES_HC_CE_BAM_init"
+				}
+			},
+			"CTR": {
+				"alg_mask": "UCLIB_AES",
+				"mode_mask":"UCLIB_HC_CTR",
+				"eng_entry": {
+					"SW":	"AES_HC_SW_init",
+					"BAM":  "AES_HC_CE_BAM_init"
+				}
+			}
+		},
+		"DES": {
+			"CBC": {
+				"alg_mask": "UCLIB_DES",
+				"mode_mask":"UCLIB_CBC",
+				"eng_entry": {
+					"SW":	"DES_CBC_CE_SW_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			},
+			"ECB": {
+				"alg_mask": "UCLIB_DES",
+				"mode_mask":"UCLIB_ECB",
+				"eng_entry": {
+					"SW":	"DES_ECB_CE_SW_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			}
+		},
+		"2DES": {
+			"CBC": {
+				"alg_mask": "UCLIB_2DES",
+				"mode_mask":"UCLIB_CBC",
+				"eng_entry": {
+					"SW":	"DES_CBC_CE_SW_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			},
+			"ECB": {
+				"alg_mask": "UCLIB_2DES",
+				"mode_mask":"UCLIB_ECB",
+				"eng_entry": {
+					"SW":	"DES_ECB_CE_SW_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			}
+		},
+		"TDES": {
+			"CBC": {
+				"alg_mask": "UCLIB_3DES",
+				"mode_mask":"UCLIB_CBC",
+				"eng_entry": {
+					"SW":	"DES_CBC_CE_SW_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			},
+			"ECB": {
+				"alg_mask": "UCLIB_3DES",
+				"mode_mask":"UCLIB_ECB",
+				"eng_entry": {
+					"SW":	"DES_ECB_CE_SW_init",
+					"HWIO": "CIPHER_CMN_CE_HWIO_init",
+					"BAM":  "CIPHER_CMN_CE_BAM_init"
+				}
+			}
+		},
+		"STREAM": {
+			"ZUC": {
+				"alg_mask": "UCLIB_STREAM",
+				"mode_mask": "UCLIB_ZUC",
+				"eng_entry": {
+					"SW": "ZUCEEA3_SW_init"
+				}
+			},
+			"KASUMI": {
+				"alg_mask": "UCLIB_STREAM",
+				"mode_mask":"UCLIB_KASUMI",
+				"eng_entry": {
+					"SW": "F8_SW_init"
+				}
+			},
+			"SNOW3G": {
+				"alg_mask": "UCLIB_STREAM",
+				"mode_mask":"UCLIB_SNOW3G",
+				"eng_entry": {
+					"SW": "UEA2_SW_init"
+				}
+			}
+		},
+		"CHACHA20": {
+			"DEFAULT": {
+				"alg_mask": "UCLIB_CHACHA20",
+				"mode_mask": "UCLIB_CIPHER_MODE_DEFAULT",
+				"eng_entry": {
+					"SW": "CHACHA20_SW_init"
+				}
+			},
+      "AEAD_POLY1305": {
+				"alg_mask": "UCLIB_CHACHA20",
+				"mode_mask": "UCLIB_CHACHA20_POLY1305",
+				"eng_entry": {
+					"SW": "CHACHA20_POLY1305_SW_init"
+				}
+      }
+		},
+		"SM4": {
+			"CBC": {
+				"alg_mask": "UCLIB_SM4",
+				"mode_mask":"UCLIB_CBC",
+				"eng_entry": {
+					"SW": "SM4_CBC_CE_SW_init"
+				}
+			},
+			"ECB": {
+				"alg_mask": "UCLIB_SM4",
+				"mode_mask":"UCLIB_ECB",
+				"eng_entry": {
+					"SW": "SM4_ECB_CE_SW_init"
+				}
+			},
+			"CTR": {
+				"alg_mask": "UCLIB_SM4",
+				"mode_mask":"UCLIB_CTR",
+				"eng_entry": {
+					"SW": "SM4_CTR_CE_SW_init"
+				}
+			}
+		}
+	},
+	"KDF": {
+		"KBKDF_COUNTER" : {
+			"alg_mask": "UCLIB_KBKDF_COUNTER_MODE",
+			"eng_entry": {
+				"SW":	"KBKDF_counter_mode_init",
+				"BAM":	"KBKDF_counter_mode_init"
+			}
+		},
+		"KBKDF_FEEDBACK" : {
+			"alg_mask": "UCLIB_KBKDF_FEEDBACK_MODE",
+			"eng_entry": {
+				"SW":	"KBKDF_feedback_mode_init",
+				"BAM":	"KBKDF_feedback_mode_init"
+			}
+		},
+		"KBKDF_PIPELINE" : {
+			"alg_mask": "UCLIB_KBKDF_PIPELINE_MODE",
+			"eng_entry": {
+				"SW":	"KBKDF_pipeline_mode_init",
+				"BAM":	"KBKDF_pipeline_mode_init"
+			}
+		},
+		"PBKDF2": {
+			"alg_mask": "UCLIB_PBKDF2",
+			"eng_entry": {
+				"SW":	"PBKDF2_init",
+				"BAM":	"PBKDF2_init"
+			}
+		},
+		"HKDF": {
+			"alg_mask": "UCLIB_HKDF",
+			"eng_entry": {
+				"SW":	"HKDF_init",
+				"BAM":	"HKDF_init",
+				"HWIO":	"HKDF_init"
+			}
+		}
+	},
+	"MAC": {
+		"HMAC": {
+			"alg_mask": "UCLIB_MAC_HMAC",
+			"eng_entry": {
+				"SW":	"HMAC_SW_init",
+				"ARMV8":	"HMAC_SW_init",
+				"HWIO":	"HMAC_CE_init",
+				"BAM":	"HMAC_CE_init"
+			}
+		},
+		"CMAC": {
+			"alg_mask": "UCLIB_MAC_CMAC",
+			"eng_entry": {
+				"SW":	"CMAC_SW_init",
+				"ARMV8": "CMAC_SW_init",
+				"HWIO": "CMAC_CE_HWIO_init",
+				"BAM":  "CMAC_CE_BAM_init"
+			}
+		},
+		"ZUC": {
+			"alg_mask": "UCLIB_MAC_ZUC",
+			"eng_entry": {
+				"SW": "ZUCEIA3_SW_init"
+			}
+		},
+		"KASUMI": {
+			"alg_mask": "UCLIB_MAC_KASUMI",
+			"eng_entry": {
+				"SW": "F9_SW_init"
+			}
+		},
+		"SNOW3G": {
+			"alg_mask": "UCLIB_MAC_SNOW3G",
+			"eng_entry": {
+				"SW": "UIA2_SW_init"
+			}
+		},
+		"POLY1305": {
+			"alg_mask": "UCLIB_MAC_POLY1305",
+			"eng_entry": {
+				"SW": "POLY1305_SW_init"
+			}
+		}
+	},
+	"PKEY": {
+		"RSA": {
+			"alg_mask": "UCLIB_PKEY_RSA",
+			"eng_entry": {
+                "PKA":	"RSA_PKA_init"
+			}
+		},
+		"ECC": {
+			"alg_mask": "UCLIB_PKEY_EC",
+			"eng_entry": {
+				"PKA": "EC_PKA_init",
+				"TME_SEQ": "ECPKEY_TME_SEQ_init",
+				"TMECOM": "EC_TMECOM_init"
+			}
+		},
+		"SM2": {
+			"alg_mask": "UCLIB_PKEY_SM2",
+			"eng_entry": {
+				"SW":	"SM2_SW_init"
+			}
+		},
+		"CURVE25519": {
+			"alg_mask": "UCLIB_PKEY_CURVE25519",
+			"eng_entry": {
+				"SW":	"CURVE25519_SW_init"
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+#ifndef PS_MIP6_H
+#define PS_MIP6_H
+/*===========================================================================
+
+                              P S _ M I P 6 . H
+                   
+DESCRIPTION
+  The header file for MIP6 external/common declarations.
+
+EXTERNALIZED FUNCTIONS
+
+ Copyright (c)2007 by Qualcomm Technologies, Incorporated.  All Rights Reserved.
+===========================================================================*/
+/*===========================================================================
+
+                            EDIT HISTORY FOR FILE
+
+  $Header: //components/rel/data.mpss/3.5..2.1/protocols/mip/inc/ps_mip6.h#2 $
+  $Author: pwbldsvc $ $DateTime: 2019/10/22 02:53:17 $
+===========================================================================*/
+
+#include "datamodem_variation.h"
+#include "comdef.h"
+#include "customer.h"
+#if defined (FEATURE_DATA_PS) && defined (FEATURE_DATA_PS_IPV6)
+#endif /* FEATURE_DATA_PS && FEATURE_DATA_PS_IPV6*/
+#endif /* PS_MIP6_H */

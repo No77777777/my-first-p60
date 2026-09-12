@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="geran.0.0" type="1" />
+  <NvEfsFile name="read_pch_during_transfer_whitelist" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/geran/read_pch_during_transfer_whitelist" buildPath="modem_proc/geran/configs/efs_files/cu/read_pch_during_transfer_whitelist" />
+  <NvEfsFile name="g2l_blind_redir_after_csfb_control" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/geran/grr/g2l_blind_redir_after_csfb_control" buildPath="modem_proc/geran/configs/efs_files/cu/g2l_blind_redir_after_csfb_control" />
+  <NvEfsFile name="search_all_w_cell" id="70357" description="GERAN_EFS_SRCH_ALL_W_CELL" comment="without this NV, GERAN will not perform irat Reselection to the detected good RF WCDMA cells" category="GSM" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/gsm/gl1/search_all_w_cell" buildPath="modem_proc/geran/configs/efs_files/cu/search_all_w_cell" />
+</NvData>

@@ -1,0 +1,46 @@
+/*=============================================================================
+
+                                    qurt_tcm_text_user.lcs
+
+GENERAL DESCRIPTION
+
+EXTERNAL FUNCTIONS
+        None.
+
+INITIALIZATION AND SEQUENCING REQUIREMENTS
+        None.
+
+             Copyright (c) 2013  by Qualcomm Technologies, Inc.  All Rights Reserved.
+=============================================================================*/
+        *libqurt_island.a:qurt_anysignal_asm_island.o(.text)
+        *libqurt_island.a:qurt_cache_island.o(.text)
+        *libqurt_island.a:qurt_thread_island.o(.text)
+        *libqurt_island.a:qurt_int_island.o(.text)
+        *libqurt_island.a:qurt_mutex.o(.text)
+        *libqurt_island.a:qurt_pimutex_asm.o(.text)
+        *libqurt_island.a:qurt_rmutex_asm_island.o(.text)
+        *libqurt_island.a:qurt_sem.o(.text)
+        *libqurt_island.a:qurt_sclk_island.o(.text.qurt_sysclock_get_hw_ticks)
+        *libqurt_island.a:qurtos_sclk_island.o(.text.qurt_sclk_int_handler)
+        *libqurt_island.a:qurt_signal.o(.text)
+        *libqurt_main.a:qurt_cache.o(.text)
+        *libqurt_main.a:qurt_power_asm.o(.text)
+        *libqurt_main.a:qurt_barrier.o(.text)
+        *libqurt_main.a:qurt_cond.o(.text)
+        *libqurt_main.a:qurt_cycles_asm.o(.text) 
+        *libqurt_main.a:qurt_fastint.o(.text)
+        *libqurt_main.a:qurt_futex.o(.text)
+        *libqurt_main.a:qurt_thread_asm.o(.text)
+        *libqurt_main.a:qurt_int.o(.text)
+        *libqurt_main.a:qurt_memory_syscall.o(.text)
+        *libqurt_main.a:qurt_lifo_asm.o(.text)
+        *libqurt_main.a:qurt_pmu.o(.text)
+        *libqurt_main.a:qurt_ptrace.o(.text)
+        *libqurt_main.a:qurt_write.o(.text)
+        *libqurt_main.a:qurt_vtlb_asm.o(.text)
+        *libqurt_main.a:qurt_tlb.o(.text.qurt_tlb_entry_get)
+        *libqurt_main.a:qurt_tls.o(.text.qurt_tls_get_specific)
+        *libqurt_main.a:qurt_signal_64.o(.text.qurt_signal_64_set)
+        *libqurt_main.a:qurt_signal_64.o(.text.qurt_signal_64_clear)
+        *libqurt_main.a:qurt_signal_64.o(.text.qurt_signal_64_wait)
+        *libqurtkernel_main.a:qurtos_traps.o(.text)

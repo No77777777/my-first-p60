@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="NULL">
+ <include file="diag_early_log_cfg.h"/>
+   <device name="diag_early_log_config">
+    <props name="diag_early_log_control" type="DALPROP_ATTR_TYPE_UINT32">
+      DIAG_EARLY_LOGGING_DISABLED
+    </props>
+    <props name="diag_early_log_mask" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      diag_early_log_arr
+    </props>
+    <props name="diag_early_log_mask_size" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      diag_log_table_size_array
+    </props>
+    <props name="diag_early_event_mask" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      diag_early_event_arr
+    </props>
+    <props name="diag_early_event_mask_size" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      diag_event_table_size_array
+    </props>
+    <props name="diag_early_message_array" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      diag_early_msg_array
+    </props>
+    <props name="diag_early_message_array_size" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      diag_msg_table_size_array
+    </props>
+   </device>
+</driver>

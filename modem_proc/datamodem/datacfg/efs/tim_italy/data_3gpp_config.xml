@@ -1,0 +1,17 @@
+<data_3gpp_configuration>
+  <version>1.0</version>
+    <generic_config>
+      <ps_data_off_exempt_services> 
+        <global>
+          <ussi>NON_EXEMPT</ussi> 
+          <mmtel_voice>EXEMPT</mmtel_voice>
+          <mmtel_video>NON_EXEMPT</mmtel_video>
+          <ss_xcap>EXEMPT</ss_xcap>
+          <smsoip>EXEMPT</smsoip>
+          <bip>NON_EXEMPT</bip>
+          <omadm_over_ps>EXEMPT</omadm_over_ps>
+          <other>NON_EXEMPT</other>
+        </global>
+      </ps_data_off_exempt_services>
+    </generic_config>
+</data_3gpp_configuration>

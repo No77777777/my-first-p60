@@ -1,0 +1,156 @@
+<NvSource xmlns:xi="http://www.w3.org/2001/XInclude">
+	<!-- Includes -->
+	<!-- STATIC NV Masterfile created using: -->
+	<!-- RFC Revision        : V5.24.040,	last updated: July 29, 2019-->
+	<!-- TARGET NV Revision  : v1.0.4,	last updated: June 17, 2014 -->
+	<!-- ASIC NV Revision    : v1.0.102,	last updated: 09/01/17 -->
+	<!-- RF Card NV Master (WTR3925) Revision : v1.0.102,	last updated: 09/01/17 -->
+	<!-- RF Card NV Revision : ,	last updated:  -->
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G850_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G850_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G850_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G900_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G900_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G900_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G1800_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G1800_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G1800_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G1900_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G1900_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_GSM_G1900_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC0_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC0_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_COMMON_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC0_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC1_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC1_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC1_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC10_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC10_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_CDMA_BC10_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_COMMON.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B1_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B1_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_COMMON_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B1_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B2_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B2_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B2_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B4_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B4_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B4_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B5_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B5_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B5_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B8_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B8_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B8_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B19_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_WCDMA_B19_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_COMMON_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B1_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B1_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B1_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B1_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_COMMON_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B1_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B2_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B2_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B2_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B2_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B2_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B3_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B3_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B3_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B3_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B3_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B4_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B4_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B4_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B4_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B4_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B5_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B5_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B5_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B5_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B5_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B7_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B7_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B7_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B7_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B7_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B8_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B8_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B8_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B8_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B8_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B10_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B10_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B10_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B10_RX3.xml#xpointer(/NvSource/*)"/>	
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B10_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B12_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B12_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B12_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B12_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B12_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B13_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B13_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B13_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B13_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B13_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B14_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B14_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B14_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B14_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B14_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B17_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B17_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B17_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B17_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B17_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B25_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B25_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B25_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B25_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B25_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B26_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B26_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B26_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B26_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B26_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B29_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B29_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B29_RX2.xml#xpointer(/NvSource/*)"/>
+    <xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B29_RX3.xml#xpointer(/NvSource/*)"/>	
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B30_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B30_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B30_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B30_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B30_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B41_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B41_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B41_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B41_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B41_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B66_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B66_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B71_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_LTE_B71_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_NA_DLCA_QPA6560_COMMON.xml#xpointer(/NvSource/*)"/>
+	<NvItem id="572" name="NV_RF_NV_LOADED_DATE_I" mapping="direct" encoding="dec">20190826</NvItem>
+	<NvItemData id="28967" name="RFNV_RF_CARD_CONFIG_I" compressed="true" variableSize="true" index="0" subscriptionid="0">
+		<Member type="uint32" name="version" sizeOf="1">0</Member>
+		<Member type="uint32" name="hardware_id" sizeOf="1">563</Member>
+		<Member type="uint32" name="feature_set_id" sizeOf="1">0</Member>
+		<Member type="uint32" name="hardware_version" sizeOf="1">0</Member>
+		<Member type="uint32" name="reserved" sizeOf="999"/>
+	</NvItemData>
+	<NvItem id="1877" name="NV_RF_BC_CONFIG_I" mapping="direct" encoding="dec">1153484454676152711</NvItem>
+	<NvItem id="4548" name="NV_RF_BC_CONFIG_DIV_I" mapping="direct" encoding="dec">1153484454676152711</NvItem>
+	<NvItem id="6828" name="NV_LTE_BC_CONFIG_I" mapping="direct" encoding="dec">578713652484455135,0</NvItem>
+	<NvItem id="22131" name="RFNV_RF_BC_CONFIG_C2_I" mapping="direct" encoding="dec">0</NvItem>
+	<NvItem id="23387" name="RFNV_RF_BC_CONFIG_C3_I" mapping="direct" encoding="dec">0</NvItem>
+	<NvItem id="28775" name="RFNV_RF_BC_CONFIG_C4_I" mapping="direct" encoding="dec">0</NvItem>
+	<NvItem id="28776" name="RFNV_RF_BC_CONFIG_C5_I" mapping="direct" encoding="dec">0</NvItem>
+</NvSource>

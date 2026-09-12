@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- USCC Carrier configuration file for SRLTE with CHGWL
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/USCC/subsidized/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "56.1.6"
+>
+
+  <initial>
+
+    <mcc_list name="sxlte_mccs"> 310 311 312 330 </mcc_list>
+
+    <rat_capability base="none" >
+      <include> C H G W L </include>
+    </rat_capability>
+
+    <ue_mode_if> 1X_CSFB_PREF </ue_mode_if>
+
+    <feature single_sim="srlte"> dualmmode </feature>
+
+    <boolean_define name="cm:e911_urn_subcategory" initial="true" />
+
+    <boolean_set name="cm:e911_urn_subcategory">
+      <current_mcc_in list="sxlte_mccs" />
+    </boolean_set>
+
+  </initial>
+
+  <if>
+    <any_of>
+      <not> <have_location /> </not>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <svc_mode> FULL </svc_mode>
+
+  <boolean_set name="cm:e911_urn_subcategory">
+    <current_mcc_in list="sxlte_mccs" />
+  </boolean_set>
+
+  <if>
+    <location_mcc_in list="sxlte_mccs" />
+    <then> <ue_mode> 1X_CSFB_PREF </ue_mode> </then>
+    <else> <ue_mode> CSFB </ue_mode> </else>
+  </if>
+
+</policy>

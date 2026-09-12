@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="MMCP.0.0" type="1"/>
+<NvItemData name="Service Domain Preference" id="850" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="srv_domain" description="" comment="" sizeOf="1" type="uint16">2 </Member>
+</NvItemData>
+	<NvEfsItemData name="cs_domain_fallback" id="" description="" comment="" category="WMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/sms/cs_domain_fallback">
+		<Member name="cs_domain_fallback" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+</NvData>

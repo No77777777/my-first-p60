@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="data.0.0" type="1"/>
+<GroupFile name="mcfg_sw_gen_Gen_3GPP_DeleteROW.xml" description="" comment="" category="" version="data.0.0" mcfgAttributes="0x09" buildPath="modem_proc/datamodem/datacfg/xml/common/ROW/mcfg_sw_gen_Gen_3GPP_DeleteROW.xml"/>
+	<NvEfsFile name="profile_list" id="65884" description="List of profiles that must be enabled on the device" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/data/3gpp/lteps/profile_list" buildPath="modem_proc/datamodem/datacfg/efs/kddi/profile_list"/>
+	<NvEfsItemData name="ds_apn_switching" id="69679" description="To enable LTE attach apn switching" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/dsd/ds_apn_switching">
+		<Member name="ds_apn_switching" description="To enable LTE attach apn switching" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="ds_dsd_attach_profile.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_dsd_attach_profile.txt" buildPath="modem_proc/datamodem/datacfg/efs/kddi/ds_dsd_attach_profile.txt"/>
+	<NvEfsItemData name="tcp_ack_prio" id="67208" description="TCP ACK Priority" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/protocols/tcp_ack_prio">
+		<Member name="tcp_ack_priority" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="enable_pdn_throttling_per_rat" id="73591" description="Whether Per RAT PDN Throttling is Enabled" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/enable_pdn_throttling_per_rat">
+		<Member name="enable_pdn_throt_per_rat" description="Whether Per RAT PDN Throttling is Enabled" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="check_ehplmn_list" id="73590" description="Whether EHPLMN List shall be considered to determine Home/Roaming" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/check_ehplmn_list">
+		<Member name="check_ehplmn_list" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="allow_infinite_throt" id="67344" description="Allow infinite throttling" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/allow_infinite_throt">
+		<Member name="allow_infinite_throt" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ignore_data_settings" id="73589" description="NV to determine whether to ignore the Data Settings on UI" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/ignore_data_settings">
+		<Member name="boolean" description="NV to determine whether to ignore the Data Settings on UI" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="switch_apn_on_reject" id="72602" description="Whether UE should switch to the next Attach Profile upon Attach Reject" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/lteps/switch_apn_on_reject">
+		<Member name="switch_apn_on_reject" description="Whether UE should switch to the next Attach Profile upon Attach Reject" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="allow_def_lte_pdn_teardown" id="70260" description="Determines whether default LTE PDN can be torn down or not" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/lteps/allow_def_lte_pdn_teardown">
+		<Member name="allow_def_lte_pdn_teardown" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="global_throttling" id="71520" description="Enable/Disable PDP, PDN and service request throttling" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/global_throttling">
+		<Member name="version" description="MTPL power control" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="globa_throttling" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint16">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="enable_emergency_pdn_throttling" id="73966" description="enable emergency PDN throttling" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp/enable_emergency_pdn_throttling">
+		<Member name="enable_emergency_pdn_throttling" description="enable emergency PDN throttling" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+  <NvEfsItemData name="attach_action_type" id="74074" description="Decide UE detach or only disconnect attach PDN when LTE attach PDN list is updated by AP" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/attach_action_type">
+    <Member name="attach_action_type" description="" comment="" sizeOf="1" type="uint32">1 </Member>
+  </NvEfsItemData>  
+  <NvEfsItemData name="wlan_offload_config" id="70315" description="Determines the WLAN offload type" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/wlan_config/wlan_offload_config">
+        <Member name="wlan_offload_config" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rat_pref_for_non_ims_pdn" id="73815" description="Control whether RAT Pref Setting is enabled or disabled" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/wlan_config/rat_pref_for_non_ims_pdn">
+    <Member name="rat_pref_for_non_ims_pdn" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvEfsItemData>  
+  <NvEfsFile name="iwlan_s2b_config.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/iwlan_s2b_config.xml" buildPath="modem_proc/datamodem/datacfg/efs/kddi/iwlan_s2b_config.xml"/>
+  <NvEfsFile name="ds_andsf_config.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_andsf_config.txt" buildPath="modem_proc/datamodem/datacfg/efs/kddi/ds_andsf_config.txt"/>
+  <NvEfsFile name="default_andsf.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/default_andsf.xml" buildPath="modem_proc/datamodem/datacfg/efs/kddi/default_andsf.xml"/>
+  <NvEfsFile name="andsf.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/andsf.xml" buildPath="modem_proc/datamodem/datacfg/efs/kddi/andsf.xml"/>
+  <NvEfsFile name="Profile1" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile1" buildPath="modem_proc/datamodem/datacfg/efs/kddi/lte_profiles/profile1"/>
+	<NvEfsFile name="Profile2" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile2" buildPath="modem_proc/datamodem/datacfg/efs/kddi/lte_profiles/profile2"/>
+	<NvEfsFile name="Profile3" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile3" buildPath="modem_proc/datamodem/datacfg/efs/kddi/lte_profiles/profile3"/>
+	<NvEfsFile name="Profile4" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile4" buildPath="modem_proc/datamodem/datacfg/efs/kddi/lte_profiles/profile4"/>
+	<NvEfsFile name="Profile5" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile5" buildPath="modem_proc/datamodem/datacfg/efs/kddi/lte_profiles/Profile5"/>
+	<NvEfsFile name="pdn_throttling_config.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/data/epc/pdn_throttling_config.txt" buildPath="modem_proc/datamodem/datacfg/efs/kddi/pdn_throttling_config.txt"/>
+	<NvEfsItemData name="ser_req_throttle_behavior" id="69710" description="Specify behavior for service request throttling" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/ser_req_throttle_behavior">
+		<Member name="ds_3gpp_srv_req_throttle_behavior" description="Specify behavior for service request throttling" comment="" sizeOf="1" type="uint32">3 </Member>
+	</NvEfsItemData>
+  <NvItemData name="Ipv6 Enabled" id="1896" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="ipv6_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvEfsItemData name="lte_attach_pending" id="74227" description="enable/disable LTE attach pending feature" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/lteps/lte_attach_pending">
+		<Member name="lte_attach_pending" description="enable/disable LTE attach pending feature" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>	
+	<NvEfsItemData name="EmergencyAPNType" id="74090" description="Defines the APN Type on which Emergency call shall be made" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/dsmgr/emergency_apn_type">
+ 		<Member name="wwan_preferred" description="" comment="" sizeOf="1" type="uint8">1</Member>
+ 		<Member name="wwan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 		<Member name="iwlan_preferred" description="" comment="" sizeOf="1" type="uint8">2</Member>
+ 		<Member name="iwlan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 	</NvEfsItemData>
+	</NvData>

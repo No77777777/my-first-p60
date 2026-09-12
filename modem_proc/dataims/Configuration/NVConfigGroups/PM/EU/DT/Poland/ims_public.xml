@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+	<NvConfigurationData carrierIndex="7" version="0x08010702" type="1"/>
+	<NvEfsItemData name="qp_ims_reg_config_db" id="71527" description="configuration related to registration parameters " comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_reg_config_db">
+	    <Member name="Version" description="Version" comment="" sizeOf="1" type="uint8">4</Member>
+        <Member name="iRAT[0]" description="" comment="" sizeOf="1" type="uint16">16</Member>
+		<Member name="iAPNType_APNindex[0]" description="" comment="" sizeOf="1" type="uint8">17</Member>
+		<Member name="iIMSServiceInfo[0]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">5</Member>
+		<Member name="iAuth_SecType[0]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">136  </Member>
+		<Member name="iIPTypeInfo[0]" description="" comment="" sizeOf="1" type="uint8">80  </Member>
+        <Member name="iRATRegActionMask[0]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[0]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">5</Member>
+		<Member name="iRAT[1]" description="" comment="" sizeOf="1" type="uint16">8704 </Member>
+		<Member name="iAPNType_APNindex[1]" description="" comment="" sizeOf="1" type="uint8">17  </Member>
+		<Member name="iIMSServiceInfo[1]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iAuth_SecType[1]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">136  </Member>
+		<Member name="iIPTypeInfo[1]" description="" comment="" sizeOf="1" type="uint8">80  </Member>
+        <Member name="iRATRegActionMask[1]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[1]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iRAT[2]" description="" comment="" sizeOf="1" type="uint16">256  </Member>
+		<Member name="iAPNType_APNindex[2]" description="" comment="" sizeOf="1" type="uint8">17  </Member>
+		<Member name="iIMSServiceInfo[2]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">5</Member>
+		<Member name="iAuth_SecType[2]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">136  </Member>
+		<Member name="iIPTypeInfo[2]" description="" comment="" sizeOf="1" type="uint8">80  </Member>
+        <Member name="iRATRegActionMask[2]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[2]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">5</Member>
+		<Member name="iRAT[3]" description="" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iAPNType_APNindex[3]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIMSServiceInfo[3]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iAuth_SecType[3]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIPTypeInfo[3]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+        <Member name="iRATRegActionMask[3]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[3]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iRAT[4]" description="" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iAPNType_APNindex[4]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIMSServiceInfo[4]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iAuth_SecType[4]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIPTypeInfo[4]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+        <Member name="iRATRegActionMask[4]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[4]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iRAT[5]" description="" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iAPNType_APNindex[5]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIMSServiceInfo[5]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iAuth_SecType[5]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIPTypeInfo[5]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+        <Member name="iRATRegActionMask[5]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[5]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iRAT[6]" description="" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iAPNType_APNindex[6]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIMSServiceInfo[6]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iAuth_SecType[6]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIPTypeInfo[6]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+        <Member name="iRATRegActionMask[6]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[6]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iRAT[7]" description="" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iAPNType_APNindex[7]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIMSServiceInfo[7]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iAuth_SecType[7]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIPTypeInfo[7]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+        <Member name="iRATRegActionMask[7]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[7]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iRAT[8]" description="" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iAPNType_APNindex[8]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIMSServiceInfo[8]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iAuth_SecType[8]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iIPTypeInfo[8]" description="" comment="" sizeOf="1" type="uint8">0  </Member>
+        <Member name="iRATRegActionMask[8]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[8]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="iRAT[9]" description="" comment="" sizeOf="1" type="uint16">13072</Member>
+		<Member name="iAPNType_APNindex[9]" description="" comment="" sizeOf="1" type="uint8">48  </Member>
+		<Member name="iIMSServiceInfo[9]" description="Variable to store the different 16 IMS srv info" comment="" sizeOf="1" type="uint32">5</Member>
+		<Member name="iAuth_SecType[9]" description="IMS auth type and security type to use" comment="" sizeOf="1" type="uint8">136  </Member>
+		<Member name="iIPTypeInfo[9]" description="" comment="" sizeOf="1" type="uint8">32  </Member>
+        <Member name="iRATRegActionMask[9]" description="" comment="" sizeOf="1" type="uint16">0</Member>
+        <Member name="iIMSRoamServiceInfo[9]" description="Variable to store the different 16 IMS srv info in roaming" comment="" sizeOf="1" type="uint32">5</Member>
+		<Member name="iRATAPNFallback[0]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">20992  </Member>
+		<Member name="iServicePriorityWWAN[0]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[1]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">37376  </Member>
+		<Member name="iServicePriorityWWAN[1]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[2]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">53760 </Member>
+		<Member name="iServicePriorityWWAN[2]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[3]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iServicePriorityWWAN[3]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[4]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iServicePriorityWWAN[4]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[5]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iServicePriorityWWAN[5]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[6]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iServicePriorityWWAN[6]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[7]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iServicePriorityWWAN[7]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[8]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">0  </Member>
+        <Member name="iServicePriorityWWAN[8]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iRATAPNFallback[9]" description="First 4 bit RAT and rest 12 bit 4 APN FB" comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iServicePriorityWWAN[9]" description="On given rat apn all the allowed IMS srv " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="iAllowedIMSSrvOnWLAN" description="configuration related to registration parameters " comment="" sizeOf="1" type="uint16">0  </Member>
+		<Member name="bAddAllFTs" description="Whether all FTs needs to be added or not" comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iACSPriority" description="Store ACS priority " comment="" sizeOf="1" type="uint8">0  </Member>
+		<Member name="iISIMPriority" description="Store ISIM Priority" comment="" sizeOf="1" type="uint8">2  </Member>
+		<Member name="iNVPriority" description="NV Priority" comment="" sizeOf="1" type="uint8">0  </Member>
+        <Member name="iPCOPriority" description="Store PCO Priority" comment="" sizeOf="1" type="uint8">1  </Member>
+		<Member name="iIMSServiceStatus" description="Store the info about the each IMS service status" comment="" sizeOf="1" type="int32">132120583</Member>
+		<Member name="cAPNName[0]" description="APN Name" comment="" sizeOf="50" type="string">ims</Member>
+		<Member name="cAPNName[1]" description="APN Name" comment="" sizeOf="50" type="string"></Member>
+		<Member name="cAPNName[2]" description="APN Name" comment="" sizeOf="50" type="string"></Member>
+        <Member name="eEnableReregOn2G3G" description="NV item to controls reregistration should be allowed on 2G/3G or not." comment="" sizeOf="1" type="uint8">2</Member>
+        		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="671" type="string"></Member>
+
+      </NvEfsItemData>
+ </NvData>

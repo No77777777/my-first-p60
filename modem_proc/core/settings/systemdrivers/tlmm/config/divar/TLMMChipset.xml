@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="TLMM">
+  
+   <include file="TlmmDefs.h"/>
+   <include file="GPIOIFace.h"/>
+   <include file="PlatformInfoDefs.h"/>
+   <include file="ChipInfoDefs.h"/>
+   <include file="msmhwiobase.h"/>
+ 
+  <device id="DALDEVICEID_TLMM">
+    <props name="tlmm_total_gpio" type="DALPROP_ATTR_TYPE_UINT32">
+      156
+    </props>
+    <props name="IsRemotable" type="DALPROP_ATTR_TYPE_UINT32">
+      0x1
+    </props>
+    <props name="TLMMDefaultPlatformGroup" type="TLMMPlatformMapType" array="true">
+       {CHIPINFO_FAMILY_DIVAR,{DALPLATFORMINFO_TYPE_IDP,  1, 0, 0}, 0, 0, "/tlmm/idp_divar[1]"}
+    </props>
+    <props name="TlmmPlatformGroups" type="TLMMPlatformMapType" array="true">
+     {{CHIPINFO_FAMILY_DIVAR, {DALPLATFORMINFO_TYPE_QRD,         1, 0, 0}, 0, 0, "/tlmm/qrd_divar[0]"},
+     {CHIPINFO_FAMILY_DIVAR, {DALPLATFORMINFO_TYPE_IDP,         1, 0, 0}, 0, 0, "/tlmm/idp_divar[1]"}}
+    </props>
+  </device>
+</driver>

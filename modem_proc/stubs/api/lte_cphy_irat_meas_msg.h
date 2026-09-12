@@ -1,0 +1,4 @@
+#ifndef LTE_CPHY_IRAT_MEAS_MSG_H
+#define LTE_CPHY_IRAT_MEAS_MSG_H
+
+#endif

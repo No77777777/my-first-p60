@@ -1,0 +1,76 @@
+#-------------------------------------------------------------------------------
+# HDR MAC source file(s)
+#-------------------------------------------------------------------------------
+
+HDRMAC_SOURCES=\
+	hdramac.c	\
+	hdramacsm.c	\
+	hdrcmac.c	\
+	hdrcmacsm.c	\
+	hdrfmac.c	\
+	hdrfmacsm.c	\
+	hdrrmac.c	\
+	hdrlmac.c       \
+	hdrrmaclog.c    \
+	hdrrx.c		\
+	hdrtx.c		\
+	hdrrxstats.c	\
+	hdrphy.c
+
+#-------------------------------------------------------------------------------
+# HDR MAC include file(s) path
+#-------------------------------------------------------------------------------
+
+HDR_CINCPATH=\
+        $(COMMON)       \
+        $(ADC)          \
+        $(ADSP)         \
+        $(AVS)          \
+        $(CM)           \
+        $(BIO)          \
+        $(BOOT)         \
+        $(CLK)          \
+        $(CP)           \
+        $(DATA)         \
+        $(DEC)          \
+        $(DFM)          \
+        $(DIAG)         \
+        $(ENC)          \
+        $(FTM)          \
+        $(GPS)          \
+        $(HS)           \
+        $(HW)           \
+        $(MUX)          \
+        $(MDSP)         \
+        $(QDSP)         \
+        $(NV)           \
+        $(PM)           \
+        $(PLT)          \
+        $(RF)           \
+        $(SBI)          \
+        $(SIO)          \
+        $(SRCH)         \
+        $(TLMM)         \
+        $(TRAMP)        \
+        $(TRERM)        \
+        $(UASMS)        \
+        $(UI)           \
+        $(VBATT)        \
+        $(USB)
+
+#-----------------------------------------------------------------------------
+# HDR MAC object file(s)
+#-----------------------------------------------------------------------------
+
+HDRMAC_OBJS :=  $(addprefix $(TARGETDIR)/, $(HDRMAC_SOURCES:%.c=%.o))
+$(HDRMAC_OBJS): INCLUDES = $(addprefix -I, $(HDR_CINCPATH))
+
+HDRMAC_DEPS :=  $(addprefix $(TARGETDIR)/, $(HDRMAC_SOURCES:%.c=%.dep) )
+$(HDRMAC_DEPS): INCLUDES = $(addprefix -I, $(HDR_CINCPATH))
+
+#-----------------------------------------------------------------------------
+# HDR MAC source files search path
+#-----------------------------------------------------------------------------
+
+vpath %.c $(HDRMAC)/src
+

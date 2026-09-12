@@ -1,0 +1,43 @@
+#===============================================================================
+# GENERAL DESCRIPTION
+#     DevCfg Artifacts build script
+##
+# Copyright (c) 2011,2014-16, 2018, 2020 by Qualcomm Technologies Inc.
+# All Rights Reserved.
+# QUALCOMM Proprietary/GTDR
+#===================================================================================
+Import('env')
+import os, glob
+env = env.Clone()
+
+build_data = True
+build_service = True
+if 'USES_WLAN_PD' in env:
+    build_data = 'USES_CORE_PIC' not in env
+    build_service = 'USES_CORE_PIC' in env
+
+env.Replace(BUILDPATH = '${{DEVCFG_ROOT}}/build/{}'.format(env.subst('$BUILDPATH')))
+config = env.get('DEVCFG')
+
+print "Printing Config: ",  config.propsMemoryOptimise, config.structSize, config.tcsrSsocHwVersionAddr
+#Set CPPDEFINES for sources
+if config.propsMemoryOptimise == 'true':  
+   env.Append(CPPDEFINES = ['DEVCFG__PROPS_MEMORY_OPTIMISE'])
+if config.structSize == 'true':  
+   env.Append(CPPDEFINES = ['DEVCFG__STRUCT_SIZE'])
+env.Append(CPPDEFINES = ['DEVCFG_TCSR_SOC_HW_ADDR='+config.tcsrSsocHwVersionAddr])
+
+return_list = []
+#load data scons
+if os.path.isfile("data/SConscript") and build_service:
+    return_list += env.SConscript("data/SConscript", exports='env')
+
+#load manager scons
+if os.path.isfile("manager/SConscript") and build_service:
+    return_list += env.SConscript("manager/SConscript", exports='env')
+
+#load service scons
+if os.path.isfile("service/SConscript") and build_service:
+    return_list += env.SConscript("service/SConscript", exports='env')
+
+Return('return_list')

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="gps.0.0" type="1"/>
+<NvItemData name="CGPS Elevation Mask" id="4914" description="CGPS Elevation Mask Angle" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="cgps_elevation_mask" description="" comment="" sizeOf="1" type="int8">10 </Member>
+</NvItemData>
+<NvItemData name="CGPS SBAS Enabled" id="5594" description="CGPS SBAS Enable Control" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="cgps_sbas_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+</NvItemData>
+<NvItemData name="CGPS SBAS User Preference" id="5595" description="CGPS SBAS User Preference" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="cgps_sbas_user_preference" description="" comment="" sizeOf="1" type="uint8">15 </Member>
+</NvItemData>
+<NvItemData name="CGPS Dynamic Power Optimization Control" id="5596" description="CGPS DPO Control" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="cgps_dpo_control" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+</NvItemData>
+<NvItemData name="GNSS GLO Control" id="6760" description="GNSS GLO Control" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="gnss_glo_control" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+</NvItemData>
+<NvItemData name="GNSS Timed Output Mode Selection" id="6767" description="GNSS Timed Output Mode Selection" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="gnss_timed_output_mode_selection" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+</NvItemData>
+<NvItemData name="GNSS Timed Output Fixed Bias Offset" id="6768" description="GNSS Timed Output Fixed Bias Offset" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="gnss_timed_output_fixed_bias_offset" description="" comment="" sizeOf="1" type="int32">0 </Member>
+</NvItemData>
+<NvItemData name="GNSS MGP Error Recovery" id="6816" description="GNSS MGP Error Recovery" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="gnss_mgp_error_recovery" description="" comment="" sizeOf="1" type="int8">1 </Member>
+</NvItemData>
+<NvItemData name="GNSS OEM Feature Mask" id="7165" description="GNSS OEM Feature Mask" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+  <Member name="gnss_oem_feature_mask" description="" comment="" sizeOf="1" type="uint32">1 </Member>
+</NvItemData>
+<NvEfsItemData name="GNSS Config" id="70326" description="Configures the capabilities of the receiver" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/gps/cgps/me/gnss_config">
+  <Member name="gnss_config" description="" comment="" sizeOf="1" type="uint32">2311 </Member>
+</NvEfsItemData>
+<NvEfsItemData name="GNSS Meas Full Meas Block Control" id="73541" description="GNSS Meas Full Meas Block Control" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/gps/cgps/pe/gnss_nv_rpt_full_meas_blk">
+  <Member name="gnss_nv_rpt_full_meas_blk" description="" comment="" sizeOf="1" type="uint32">1260241118 </Member>
+</NvEfsItemData>
+<NvEfsItemData name="GNSS Measure QMI Reporting Control" id="73542" description="GNSS Measure QMI Reporting Control" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/gps/cgps/sm/gnss_meas_qmi_reporting_enable_control">
+  <Member name="gnss_meas_qmi_reporting_enable_control" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+</NvEfsItemData>
+<NvEfsItemData name="GNSS GPM Configuration" id="73568" description="GNSS GPM Configuration bitmask – enabled for 10Hz mode" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/gps/cgps/me/gnss_gpm_config1">
+  <Member name="gnss_gpm_config1" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+</NvEfsItemData>
+<NvEfsItemData name="GNSS Automotive configuration" id="73715" description="GNSS Automotive configuration" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/gps/cgps/me/gnss_automotive">
+  <Member name="gnss_automotive" description="" comment="" sizeOf="1" type="uint32">63 </Member>
+</NvEfsItemData>
+<NvEfsItemData name="Loc Supported Min interval" id="73800" description="Supported minimum interval – set to 100ms for 10Hz support" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/cgps/nv/item_files/loc/loc_supported_min_interval">
+  <Member name="loc_supported_min_interval" description="" comment="" sizeOf="1" type="uint32">100 </Member>
+</NvEfsItemData>
+<NvEfsItemData name="GNSS NHz configuration" id="73862" description="GNSS NHz configuration – set to automotive config" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/gps/cgps/sm/gnss_nhz_config">
+  <Member name="gnss_nhz_config" description="" comment="" sizeOf="1" type="uint32">3 </Member>
+</NvEfsItemData>
+<NvEfsItemData name="GNSS ME DR Sync Pulse Width (ms)" id="73898" description="GNSS ME DR Sync Pulse Width (ms)" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/cgps/nv/item_files/me/gnss_me_drsync_pulsewidth_config">
+  <Member name="gnss_me_drsync_pulsewidth_config" description="" comment="" sizeOf="1" type="uint32">10 </Member>
+</NvEfsItemData>
+<NvEfsItemData name="GNSS ME Multiband Config" id="74055" description="GNSS ME Multiband Config" comment="" category="GPS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/gps/cgps/me/gnss_multiband_config">
+  <Member name="gnss_multiband_config" description="" comment="" sizeOf="1" type="uint32">32 </Member>
+</NvEfsItemData>
+</NvData>

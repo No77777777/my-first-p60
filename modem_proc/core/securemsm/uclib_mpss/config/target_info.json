@@ -1,0 +1,61 @@
+{
+    "comment": [
+        "***********************************************************************************",
+        " PURPOSE:                                                                          ",
+        " Store target specific information                                                 ",
+        " - engines supported by a particular target.                                       ",
+        "   Possible values: SW, ARMV8, BAM, HWIO, PKA, HRNG                                ",
+        "                                                                                   ",
+        "***********************************************************************************"
+    ],
+    "engines_supported": {
+        "offtarget": {
+            "engines": ["SW"]
+        },
+        "sm8150": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "sm8250": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "saipan": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "lahaina": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "kamorta": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "divar": {
+            "engines": ["SW", "BAM"]
+        },
+        "agatti": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "makena": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "cedros": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "waipio": {
+            "engines":["SW", "BAM", "PKA", "TMECOM"]
+        },
+        "fillmore": {
+            "engines":["SW", "BAM", "PKA", "TMECOM"]
+        },
+        "chitwan": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "olympic": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "mannar": {
+            "engines": ["SW", "BAM", "PKA"]
+        },
+        "stub": {
+            "engines": ["SW", "BAM", "PKA"]
+        }
+    }
+}

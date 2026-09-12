@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="VAdc">
+  <device name="/vadc/pm600">
+    <props name="VADC_BSP" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      VAdcBsp
+    </props>
+  </device>
+    <device name="/vadc/pm855l">
+    <props name="VADC_BSP" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      VAdcBspPM855L
+    </props>
+  </device>
+</driver>
+

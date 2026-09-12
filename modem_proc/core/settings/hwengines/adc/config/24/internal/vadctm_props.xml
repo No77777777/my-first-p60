@@ -1,0 +1,8 @@
+<driver name="VAdcTM">
+  <device id="DALDEVICEID_VADCTM">
+    <props name="VADCTM_BSP" type=DALPROP_ATTR_TYPE_STRUCT_PTR>
+      VAdcTMBsp
+    </props>
+  </device>
+</driver>
+

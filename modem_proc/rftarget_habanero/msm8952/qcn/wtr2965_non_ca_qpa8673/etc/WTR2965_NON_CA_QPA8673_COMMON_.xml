@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR2965_NON_CA_QPA8673_COMMON_.xml -->
+	<NvItem id="27472" name="RFNV_COMMON_FBRX_SYSTEM_CONTROL_I" mapping="direct" encoding="dec">0</NvItem>
+</NvSource>

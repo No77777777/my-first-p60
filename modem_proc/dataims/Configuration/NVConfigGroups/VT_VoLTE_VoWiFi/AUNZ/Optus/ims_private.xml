@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+    <NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<NvEfsItemData name="ImsVoiceDynamicConfig" id="73842" description="Items to configure IMS VOICE parameters" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMSVoiceDynamicConfig">
+		<Member name="Version" description="Version control for IMS VOICE parameters" comment="" sizeOf="1" type="uint8">7</Member>
+		<Member name="audioFeatureTag" description="Value of the audio feature tag sent in IMS registration" comment="" sizeOf="128" type="string">audio</Member>
+		<Member name="sessionExpires" description="Min SE value for session timer hdr" comment="" sizeOf="1" type="uint16">3600</Member>
+		<Member name="minSessionExpires" description="Min SE value for session timer hdr" comment="" sizeOf="1" type="uint16">1800</Member>
+		<Member name="conferenceUri" description="Conference Server URI" comment="" sizeOf="128" type="string"></Member>
+		<Member name="silentRedialEnabled" description="Silent redial enabled for IMS calls" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="callerIdMode" description="Caller id mode to allow presentation/restriction" comment="" sizeOf="1" type="uint16">16</Member>
+		<Member name="ringingTimer" description="Device ringing timer in msecs for MT calls" comment="" sizeOf="1" type="uint32">45000</Member>
+		<Member name="ringBackTimer" description="Device ringback timer in msecs for MO calls" comment="" sizeOf="1" type="uint32">90000</Member>
+		<Member name="rtpLinkAlivenessTimer" description="RTP monitoring timer in secs" comment="" sizeOf="1" type="uint32">10</Member>
+		<Member name="viceEnabled" description="Enable subscription to dialog event package" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="errorCodeList" description="configure error code which need to silent redial for normal call" comment="" sizeOf="128" type="string"></Member>
+		<Member name="threePartyConfFactoryUri" description="3rd Party Conference Factory URI" comment="" sizeOf="128" type="string"></Member>
+    <Member name="fromPreferred" description="originating party identity determination from PAI or from header " comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="dlDTMFctrl" description=" DL DTMF CTRL" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="reliableResponseEnabled" description=" reliable Response Enable" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="qosReservationTimer" description="Used to set the QoS reservation time for voice calls" comment="" sizeOf="1" type="uint32">8000</Member>
+		<Member name="qosReservationTimerEPSonlyAttach" description="Used to set the QoS reservation time for voice calls which are EPS only attached" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint3840"></Member>
+	</NvEfsItemData>
+    <NvEfsItemData name="qp_ims_qos_precondition" id="74091" description="IMS NV items related to QOS and Preconditions" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_qos_precondition">
+         <Member name="version" description="" comment="" sizeOf="1" type="uint8">0</Member>
+         <Member name="Default_EPS_bearer_context_usage_restriction_policy_audio" description="ALLOWED(0- QosUnaware)/PROHIBITED(1 - QosAware) " comment="" sizeOf="1" type="uint8">1</Member>
+         <Member name="Default_EPS_bearer_context_usage_restriction_policy_video" description=" ALLOWED(0- QosUnaware)/PROHIBITED(1 - QosAware) " comment="" sizeOf="1" type="uint8">1</Member>
+         <Member name="Default_EPS_bearer_context_usage_restriction_policy_text" description=" ALLOWED(0- QosUnaware)/PROHIBITED(1 - QosAware) " comment="" sizeOf="1" type="uint8">1</Member>
+         <Member name="Precondition_Enabling_policy" description="Preconditions Enabled(1)/Disabled(0) " comment="" sizeOf="1" type="uint8">0</Member>
+         <Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint8152"> </Member>
+    </NvEfsItemData>
+	<NvEfsItemData name="ImsVideoDynamicConfig" id="73843" description="Items to configure IMS Video parameters" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMSVideoDynamicConfig">
+		<Member name="Version" description="Version control for IMS Video parameters" comment="" sizeOf="1" type="uint8">2</Member>
+		<Member name="videoFeatureTag" description="Value of the video feature tag sent in IMS registration" comment="" sizeOf="128" type="string"></Member>
+		<Member name="vt_quality_selector" description="Value of the VT quality selector at boot up" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="vtErrorCodeList" description="configure error code which need to silent redial for e911" comment="" sizeOf="128" type="string"></Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint6128"></Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ImsEmerDynamicConfig" id="73844" description="Items to configure IMS Emergency parameters" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMSEmerDynamicConfig">
+		<Member name="Version" description="Version control for IMS Emergency parameters" comment="" sizeOf="1" type="uint8">4</Member>
+		<Member name="e911CallSetupTimer" description="Value of the Emergency call setup timer on LTE" comment="" sizeOf="1" type="uint32">20000</Member>
+		<Member name="e911WlanCallSetupTimer" description="Value of the Emergency call setup timer on WLAN" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="e911SilentRedialEnabled" description="Silent redial enabled for E911 calls" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="e911CallConnectTimer" description="Value of the Emergency call connect timer after 18x on LTE" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="e911WlanCallConnectTimer" description="Value of the Emergency call connect timer after 18x on WLAN" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="e911ErrorCodeList" description="configure error code which need to silent redial for e911" comment="" sizeOf="128" type="string"></Member>
+		<Member name="emerQosReservationTimer" description="Used to set the QoS reservation time for E911 calls" comment="" sizeOf="1" type="uint32">8000</Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint6992"></Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ImsRtpDynamicConfig" id="73845" description="Items to configure RTP parameters" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMSRTPDynamicConfig">
+		<Member name="Version" description="Version control for IMS RTP parameters" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="speechStartPort" description="Value of the RTP port number start range for audio" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="speechStopPort" description="Value of the RTP port number stop range for audio" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="videoStartPort" description="Value of the RTP port number start range for video" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="videoStopPort" description="Value of the RTP port number stop range for video" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint8120"></Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ImsCodecDynamicConfig" id="73846" description="Items to configure IMS codec parameters" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMSCodecDynamicConfig">
+		<Member name="Version" description="Version control for IMS codec parameters" comment="" sizeOf="1" type="uint8">2</Member>
+		<Member name="amrWbOctetAlignedDynamicPt" description="Value of the Payload type number for AMR WB OA" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="amrWbBandWidthEfficientDynamicPt" description="Value of the Payload type number for AMR WB BE" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="amrOctetAlignedDynamicPt" description="Value of the Payload type number for AMR OA" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="amrBandWidthEfficientDynamicPt" description="Value of the Payload type number for AMR BE" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="dtmfWbDynamicPt" description="Value of the Payload type number for DTMF WB" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="dtmfNbDynamicPt" description="Value of the Payload type number for DTMF NB" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="amrModeSet" description="Value of the AMR Modeset to be used in SDP offer when set" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="amrWbModeSet" description="Value of the AMR WB Modeset to be used in SDP offer when set" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="amrWbDefaultMode" description="Value of the default AMR WB mode to be used when no mode is negotiated" comment="" sizeOf="1" type="uint16"></Member>
+		<Member name="amr_wb_enable" description="Enable HD Voice" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="scr_amr_enable" description="Enable DTX for AMR NB" comment="" sizeOf="1" type="uint8">1</Member>
+		<Member name="scr_amr_wb_enable" description="Enable DTX for AMR WB" comment="" sizeOf="1" type="uint8">1</Member>
+		<!-- this is starting of version 1 -->
+		<Member name="evs_prim_mode" description="EVS primary payload type used" comment="" sizeOf="1" type="int8">0</Member>
+		<Member name="default_evs_bit_rate" description="default EVS bitrate" comment="" sizeOf="1" type="int8">0</Member>
+		<Member name="default_evs_bw" description="default evs bw" comment="" sizeOf="1" type="int8">0</Member>
+		<!-- this is end of version 1 -->
+		<!-- this is starting of version 2 -->
+		<Member name="evs_ch_aw_recv_offset" description="evs_ch_aw_recv_offset" comment="" sizeOf="1" type="int8">0</Member>
+		<Member name="evs_7_2_kbps_enable" description="evs_7_2_kbps_enable" comment="" sizeOf="1" type="int8">1</Member>
+		<Member name="amr_modesetans" description="Enable AMR Modeset to be used in SDP Answer when open offer is selected" comment="" sizeOf="1" type="uint32">149</Member>
+		<Member name="amrwb_modesetans" description="Enable AMR WB Modeset to be used in SDP Answer when open offer is selected" comment="" sizeOf="1" type="uint32">0</Member>		
+		<!-- this is end of version 2 -->
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint7880"></Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ImsTestDynamicConfig" id="73847" description="Items to configure IMS Test parameters" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMSTestDynamicConfig">
+		<Member name="Version" description="Version control for IMS Test parameters" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="e911TestMode" description="Enable e911 test mode" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="conformanceTestEnabled" description="Enable conformance test mode" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint8168"></Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ImsWifiDynamicConfig" id="73848" description="Items to configure IMS Wifi parameters" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMSWifiDynamicConfig">
+		<Member name="Version" description="Version control for IMS Wifi parameters" comment="" sizeOf="1" type="uint8">10 </Member>
+		<Member name="hoHystTimerEpdgLte" description="" comment="" sizeOf="1" type="uint32">120</Member>
+		<Member name="hoHystTimerEpdg1x" description="" comment="" sizeOf="1" type="uint32"></Member>
+		<Member name="hoHystTimerEpdgWifi" description="" comment="" sizeOf="1" type="uint32">120</Member>
+		<Member name="hoEnabled" description="" comment="" sizeOf="1" type="uint8"></Member>
+		<Member name="hoToLteQualTh1" description="" comment="" sizeOf="1" type="int32"></Member>
+		<Member name="hoToLteQualTh2" description="" comment="" sizeOf="1" type="int32"></Member>
+		<Member name="hoToLteQualTh3" description="" comment="" sizeOf="1" type="int32"></Member>
+		<Member name="hoTo1xQualTh" description="" comment="" sizeOf="1" type="int32"></Member>
+		<Member name="hoTo1xQualThA" description="" comment="" sizeOf="1" type="int32"></Member>
+		<Member name="hoTo1xQualThB" description="" comment="" sizeOf="1" type="int32"></Member>
+		<Member name="hoRATMask" description="" comment="" sizeOf="1" type="uint32"></Member>
+		<Member name="hoHystTimerEpdg3gpp" description="" comment="" sizeOf="1" type="uint32">120</Member>
+    <Member name="hoHystTimerEpdg3gpp2" description="" comment="" sizeOf="1" type="uint32">120</Member>
+    <Member name="hoHystTimerEpdg1xRat" description="" comment="" sizeOf="1" type="uint32">120</Member>
+    <Member name="hoHystTimerEpdgLteVoipCallCellPref" description="" comment="" sizeOf="1" type="uint32">60</Member>
+    <Member name="hoHystTimerEpdgLteVoipCallWiFiPref" description="" comment="" sizeOf="1" type="uint32">60</Member>
+    <Member name="hoHystTimerEpdgLteVTCallCellPref" description="" comment="" sizeOf="1" type="uint32">20</Member>
+    <Member name="hoHystTimerEpdgLteVTCallWiFiPref" description="" comment="" sizeOf="1" type="uint32">20</Member>
+	<Member name="LTEDLRSRQSrcLow_IR92" description="" comment="" sizeOf="1" type="int8">-80</Member>
+	<Member name="LTEDLSNRSrcLow_IR92" description="" comment="" sizeOf="1" type="int8">95</Member>
+	<Member name="LTEDLRSRQTarget_IR92" description="" comment="" sizeOf="1" type="int8">-65</Member>
+	<Member name="LTEDLSNRTarget_IR92" description="" comment="" sizeOf="1" type="int8">110</Member>
+	<Member name="Wifi_RoveOut_IR92" description="" comment="" sizeOf="1" type="int8">-85</Member>
+	<Member name="Wifi_RoveIn_IR92" description="" comment="" sizeOf="1" type="int8">-65</Member>
+	<Member name="Wifi_Repoint_IR92" description="" comment="" sizeOf="1" type="int8">-75</Member>
+	<Member name="hoHystTimerEpdgWifiAllModes" description="" comment="" sizeOf="1" type="uint32"></Member>
+    <Member name="hoToLteQualTh4Rsrq" description="" comment="" sizeOf="1" type="int32"></Member>
+    <Member name="hoToLteQualTh5Rsrq" description="" comment="" sizeOf="1" type="int32"></Member>
+    <Member name="hoToLteQualTh6Rsrq" description="" comment="" sizeOf="1" type="int32"></Member>
+    <Member name="EmergencyPDNHandoverEnabled" description="" comment="" sizeOf="1" type="uint8"></Member>
+    <Member name="EmergencyPDNHandoverEnabledInRoaming" description="" comment="" sizeOf="1" type="uint8"></Member>
+    <Member name="hoToLteEmerQualTh1" description="" comment="" sizeOf="1" type="int32"></Member>
+    <Member name="hoToLteEmerQualTh2" description="" comment="" sizeOf="1" type="int32"></Member>
+    <Member name="hoToLteEmerQualTh3" description="" comment="" sizeOf="1" type="int32"></Member>
+    <Member name="Handover_5g_wifi_idle" description="" comment="Enable/Disable handovers between 5g and wifi in idle mode" sizeOf="1" type="uint8">1</Member>
+    <Member name="Handover_5g_wifi_incall" description="" comment="Enable/Disable handovers between 5g and wifi in connected mode" sizeOf="1" type="uint8">1</Member>
+    <Member name="hoHystTimerEpdgNR" description="Avoids coming back to NR from WIFI in IDLE mode immediately for cellular preferred modes" comment="" sizeOf="1" type="uint32"></Member>
+    <Member name="hoHystTimerEpdgNRVoipCallCellPref" description="Avoids coming back from WIFI to NR during voice call for cellular preferred modes" comment="" sizeOf="1" type="uint32"></Member>
+    <Member name="hoHystTimerEpdgNRVTCallCellPref" description="Avoids coming back from WIFI to NR during VT call for cellular preferred modes" comment="" sizeOf="1" type="uint32"></Member>
+    <Member name="Allow_Handover_WLAN_and_EPS_Roaming" description="Mask to disable handovers in roaming" comment="" sizeOf="1" type="uint8">1</Member>
+    <Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint7216"></Member>
+	</NvEfsItemData>
+</NvData>

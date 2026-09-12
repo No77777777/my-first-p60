@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+    <NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<NvEfsItemData name="RegistrationConfiguration" id="73837" description="IMS Registration Module Configuration Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/RegistrationConfiguration">
+	    <Member name="Version" description="Version" comment="" sizeOf="1" type="uint8">0 </Member> 		
+		<Member name="iRATHystersisTimer" description="Target delay timer for IRAT" comment="" sizeOf="1" type="uint16">0</Member>
+	    <Member name="retryBaseTime" description="Registration ReTry Base Time" comment="" sizeOf="1" type="uint16">120</Member>
+		<Member name="retryMaxTime" description="Registration ReTry Maximum Time" comment="" sizeOf="1" type="uint16">7200</Member>
+		<Member name="pcscfAddress" description="Registration Pre Configured Server Base Address" comment="" sizeOf="256" type="string"></Member>
+		<Member name="pcscfPort" description="Allows to configure the PSCSF Port" comment="" sizeOf="1" type="uint16">5060 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint6072"> </Member>
+	</NvEfsItemData>
+</NvData>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="mmcp.0.0" type="1"/>
+<NvItemData name="Analog Mode Preference" id="10" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="mode" description="" comment="" sizeOf="1" type="uint16">35 </Member>
+	</NvItemData>
+	<NvEfsItemData name="EMM efs items" id="73708" description="" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/emm_nas_nv_items">
+		<Member name="version" description="This NV item will be used by REG to take care of all future NV items." comment="" sizeOf="1" type="uint8">10 </Member>
+		<Member name="emm_plmn_block_on_rej_15_8" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="use_lte_disable_duration_timer" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="emm_plmn_block_on_rej_15_roaming" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="psm_local_detach_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="csfb_perform_reg" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="emm_fake_cell_attempt_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="force_esr_nondds" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="force_tau_nondds" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="redirection_policy_home" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="redirection_policy_roam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="emm_map_cause_12_to_13" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="set_sg_flag_on_lau" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint152"> </Member>
+	</NvEfsItemData>
+	<NvItemData name="Preferred Hybrid Mode" id="562" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hybrid_pref" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="1xEV Forward Statistics Summary" id="4228" description="boolean stating if SMS should be sent on access channel" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="channel_preference" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="1xEV AC MAC Capsule" id="4229" description="boolean stating if SMS should be sent on traffic channel" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_mo_on_traffic" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="SMS MO Retry Period" id="3532" description="MO SMS retry period in seconds" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_mo_retry_period" description="MO SMS retry period in seconds" comment="" sizeOf="1" type="int8">240 </Member>
+	</NvItemData>
+	<NvItemData name="SMS MO Retry Interval" id="3533" description="SMS MO retry interval in seconds" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_mo_retry_interval" description="SMS MO retry interval in seconds" comment="" sizeOf="1" type="uint8">5 </Member>
+	</NvItemData>
+	<NvEfsItemData name="sms_retry_limit" id="70222" description="Item to limit MO SMS retry over IMS transport. Default value = 1." comment="" category="SMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/sms/sms_retry_limit">
+		<Member name="sms_retry_limit" description="Item to limit MO SMS retry over IMS transport. Default value = 1." comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="e911_prioritize_cs" id="74329" description="Prioritise CS for E911  " comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/sd/e911_prioritize_cs">
+		<Member name="e911_prioritize_cs" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="sms_domain_pref" id="66472" description="SMS domain preference" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/sms_domain_pref">
+		<Member name="sys_sms_domain_pref_e_type" description="SMS domain preference" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ue_usage_setting" id="65777" description="UE usage setting" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/ue_usage_setting">
+		<Member name="ue_usage_setting" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="voice_domain_pref" id="66048" description="Voice Domain Preference" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/voice_domain_pref">
+		<Member name="sys_voice_domain_pref_e_type" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+	</NvEfsItemData>
+<NvEfsItemData name="volte_rej_mt_csfb" id="73731" description="send NW ESR with CSFB reject IE  " comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/volte_rej_mt_csfb">
+		<Member name="volte_rej_mt_csfb" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	</NvData>

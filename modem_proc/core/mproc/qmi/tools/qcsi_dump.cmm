@@ -1,0 +1,438 @@
+;=============================================================================
+;
+;                          QCSI DUMP
+;
+;  ---------------------------------------------------------------------------
+;  Copyright (c) 2021 Qualcomm Technologies, Inc.  
+;  All Rights Reserved.
+;  Qualcomm Technologies Proprietary and Confidential.
+;  ---------------------------------------------------------------------------
+;=============================================================================
+
+;=============================================================================
+;                         EDIT HISTORY FOR MODULE
+; 
+;  $Header: //source/qcom/qct/core/mproc/qmi/tools/qcsi_dump.cmm
+; 
+;  when       who     what, where, why
+;  --------   ---     ------------------------------------------------------
+; 
+;=============================================================================
+
+;=============================================================================
+; Constants
+;=============================================================================
+
+&VERSION="qcsi_dump.cmm, Version 1.0"
+
+; Default print clients to all service
+&SEARCH_SVC=0x0
+
+; Default, print to QCSI Area
+&OUTPUT_PATH=""
+
+; If provided, the script will use as the head pointer. Else it will search
+; the symbols.
+&SERVICE_LIST_HEAD=0x0
+
+; ============================================================================
+;
+; Function MAIN
+;
+; Description: MAIN()
+;
+; ============================================================================
+ENTRY &SEARCH_SVC_STR &OUTPUT_PATH &SERVICE_LIST_HEAD_STR
+
+MAIN:
+  gosub INITLOGAREA
+
+  if ("&SEARCH_SVC_STR"!="")
+  (
+    if ("&SEARCH_SVC_STR"=="ALL"||"&SEARCH_SVC_STR"=="all")
+    (
+      &SEARCH_SVC=0x0
+    )
+    else
+    (
+      if ("&SEARCH_SVC_STR"=="HELP"||"&SEARCH_SVC_STR"=="help")
+      (
+        gosub HELP
+        ENDDO
+      )
+      &SEARCH_SVC=&SEARCH_SVC_STR
+    )
+  )
+
+  if ("&OUTPUT_PATH"=="area"||"&OUTPUT_PATH"=="AREA")
+  (
+    &OUTPUT_PATH="" 
+  )
+
+  if ("&OUTPUT_PATH"!="")
+  (
+    OPEN  #4 "&OUTPUT_PATH" /CREATE
+    CLOSE #4
+    OPEN  #4 "&OUTPUT_PATH" /WRITE
+    GOSUB PRINT_LINE "Output File: &OUTPUT_PATH"
+  )
+
+  if ("&SERVICE_LIST_HEAD_STR"!="")
+  (
+    &SERVICE_LIST_HEAD=&SERVICE_LIST_HEAD_STR 
+  )
+
+  GOSUB PRINT_LINE "Running script qcsi_dump.cmm SEARCH_SVC=&SEARCH_SVC OUTPUT_PATH=&OUTPUT_PATH LIST_HEAD=&SERVICE_LIST_HEAD"
+  GOSUB PRINT_LINE "SERVICE PTR can be type casted to (qmi_csi_service_type *)"
+  GOSUB PRINT_LINE "CLIENT  PTR can be type casted to (qmi_csi_client_type *)"
+  GOSUB PRINT_LINE "XPORT PTR can be type casted to (qmi_csi_xport_type *)"
+  GOSUB PRINT_LINE ""
+
+  if (&SERVICE_LIST_HEAD!=0x0)
+  (
+    GOSUB PARSE_SERVICE_LIST &SERVICE_LIST_HEAD
+  )
+  else
+  (
+    if (y.count(service_list)>0)
+      symbol.foreach "gosub PARSE_QCSI_SERVICE_TBL * " service_list
+    else if (y.count(qcsi_service_list)>0)
+      symbol.foreach "gosub PARSE_QCSI_SERVICE_TBL * " qcsi_service_list
+  )
+
+
+  if ("&OUTPUT_PATH"!="")
+  (
+    CLOSE #4
+  )
+  
+  GOSUB PRINT_LINE "---------------------------------------"
+  GOSUB PRINT_LINE "    QCSI Report Generation Complete"
+  GOSUB PRINT_LINE "---------------------------------------"
+
+ENDDO
+
+; ============================================================================
+;
+; Function HELP
+;
+; Description: Print out help message
+;
+; ============================================================================
+
+HELP:
+  GOSUB PRINT_LINE "*********************************************************************"
+  GOSUB PRINT_LINE "*          &VERSION"
+  GOSUB PRINT_LINE "*********************************************************************"
+  GOSUB PRINT_LINE "* Script Usage: "
+  GOSUB PRINT_LINE "*   do qcsi_dump.cmm [service_id] [output_file]"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "*   OPTION service_id:"
+  GOSUB PRINT_LINE "*          all|ALL - print all services (Default)"
+  GOSUB PRINT_LINE "*          service_id - print the specified service ID only"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "*   OPTION output_file:"
+  GOSUB PRINT_LINE "*          Default (Not provided) Print to screen"
+  GOSUB PRINT_LINE "*          output_file - Print to the provided output file"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "* Example:"
+  GOSUB PRINT_LINE "*   do qcsi_dump 0xf"
+  GOSUB PRINT_LINE "*   do qcsi_dump all C:\Dropbox\qcsi_service_tbl.txt"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "* SERVICE PTR can inspected as (qmi_csi_service_type *)PTR"
+  GOSUB PRINT_LINE "* CLIENT  PTR can inspected as (qmi_csi_client_type *) PTR"
+  GOSUB PRINT_LINE "* XPORT   PTR can inspected as (qmi_csi_xport_type *)  PTR"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "*********************************************************************"
+RETURN
+; ============================================================================
+; End of HELP()
+; ============================================================================
+
+
+; ============================================================================
+;
+; Function INITLOGAREA
+;
+; Description: Init message output window and output some help message
+;
+; ============================================================================
+
+INITLOGAREA:
+
+ Area.Create QCSI 500 120
+ Area.Select QCSI
+ Area.Clear  QCSI
+ Area QCSI
+
+RETURN
+; ============================================================================
+; End of INITLOGAREA()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PARSE_QCSI_SERVICE_TBL
+;
+; Description: Parse QCSI Clients
+;
+; ============================================================================
+PARSE_QCSI_SERVICE_TBL:
+  ENTRY &sym
+
+  GOSUB PRINT_LINE "IMAGE=&sym"
+  GOSUB PRINT_LINE ""
+
+  if (y.exist(&sym))
+  (
+    &svc=v.value(&sym.head)
+    GOSUB PARSE_SERVICE_LIST &svc
+  )
+  else
+  (
+    GOSUB PRINT_LINE "Could not find &sym!"
+  )
+  GOSUB PRINT_LINE ""
+RETURN
+; ============================================================================
+; End of PARSE_QCSI_SERVICE_TBL()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PARSE_SERVICE_LIST
+;
+; Description: Parse QCSI Clients
+;
+; ============================================================================
+PARSE_SERVICE_LIST:
+  ENTRY &svc
+
+  while (&svc!=0x0)
+  (
+    GOSUB PARSE_SERVICE &svc
+    &svc=v.value(((qmi_csi_service_type *)&svc)->link.next)
+  )
+RETURN
+; ============================================================================
+; End of PARSE_QCSI_SERVICE_TBL()
+; ============================================================================
+
+
+
+; ============================================================================
+;
+; Function PARSE_SERVICE
+;
+; Description: Parse a service entry
+;
+; ============================================================================
+PARSE_SERVICE:
+  ENTRY &svc
+  &svc_obj=v.value(((qmi_csi_service_type *)&svc)->service_obj)
+  &handle=v.value(((qmi_csi_service_type *)&svc)->handle)
+  &clients=v.value(((qmi_csi_service_type *)&svc)->client_list.head)
+  &inst=v.value(((qmi_csi_service_type *)&svc)->idl_version)
+  &inst=&inst>>8
+  &svc_id=v.value(((qmi_idl_service_object_type)&svc_obj)->service_id)
+  &majvers=v.value(((qmi_idl_service_object_type)&svc_obj)->idl_version)
+  
+  if (&SEARCH_SVC!=0x0)
+  (
+    if (&SEARCH_SVC!=&svc_id)
+    (
+      RETURN
+    )
+  )
+
+  GOSUB PRINT_LINE "SERVICE: PTR=&svc, SVC_ID=&svc_id, MAJ_VERS=&majvers, &INSTANCE=&inst, HANDLE=&handle"
+
+  &xports=v.value(((qmi_csi_service_type *)&svc)->xports)
+  &num_xports=v.value(((qmi_csi_service_type *)&svc)->num_xports)
+  &idx=0x0
+  while (&idx<&num_xports)
+  (
+    &xport=v.value(((qmi_csi_xport_type **)&xports)[&idx])
+    GOSUB PARSE_XPORT &xport
+
+    &idx=&idx+1
+  )
+
+  &client=&clients
+  while (&client!=0x0)
+  (
+    GOSUB PARSE_CLIENT &client
+    &client=v.value(((qmi_csi_client_type *)&client)->local.next)
+  )
+  GOSUB PRINT_LINE ""
+RETURN
+; ============================================================================
+; End of PARSE_SERVICE()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PARSE_XPORT
+;
+; Description: Parse a xport of a service
+;
+; ============================================================================
+PARSE_XPORT:
+  ENTRY &xport
+
+  if (&xport!=0x0)
+  (
+    &addr_len=v.value(((qmi_csi_xport_type *)&xport)->addr_len);
+    &xp_handle=v.value(((qmi_csi_xport_type *)&xport)->handle);
+
+    ; XXX This is NOT a generic way to do. I am assuming the transport struct
+    ; Layout based on the addr_len (4 loopback, 8 IPC RTR)
+    if (&addr_len==0x4)
+    (
+      ; Loopback transport 
+      &rx_q_cnt=v.value(((struct qmi_csi_lb_xport_handle *)&xp_handle)->rx_q.count);
+      &back_xport=v.value(((struct qmi_csi_lb_xport_handle *)&xp_handle)->xport);
+      if (&back_xport!=&xport)
+      (
+        GOSUB PRINT_LINE "....XPORT: PTR=&xport ADDR_LEN=&addr_len HANDLE=&xp_handle HANDLE_VALIDATION_FAIL"
+      )
+      else
+      (
+        if (&rx_q_cnt!=0x0)
+        (
+          GOSUB PRINT_LINE "....XPORT: PTR=&xport ADDR_LEN=&addr_len HANDLE=&xp_handle RX_Q_COUNT=&rx_q_cnt"
+        )
+      )
+    )
+    else
+    (
+      if (&addr_len==0x8) 
+      (
+        ; Loopback transport 
+        &back_xport=v.value(((struct qmi_csi_xport_handle *)&xp_handle)->xport);
+        if (&back_xport!=&xport)
+        (
+          GOSUB PRINT_LINE "....XPORT: PTR=&xport ADDR_LEN=&addr_len HANDLE=&xp_handle HANDLE_VALIDATION_FAIL"
+        )
+        else
+        (
+          &rx_q_cnt=v.value(((struct qmi_csi_xport_handle *)&xp_handle)->rx_q.count);
+          &dest_cnt=v.value(((struct qmi_csi_xport_handle *)&xp_handle)->tx_q.count);
+          if (&rx_q_cnt!=0x0)
+          (
+            GOSUB PRINT_LINE "....XPORT: PTR=&xport ADDR_LEN=&addr_len HANDLE=&xp_handle RX_Q_COUNT=&rx_q_cnt DEST_CNT=&dest_cnt"
+          )
+          &dest=v.value(((struct qmi_csi_xport_handle *)&xp_handle)->tx_q.head);
+          while (&dest!=0x0)
+          (
+            &proc=v.value(((struct dest_s *)&dest)->addr.processor_id)
+            &port=v.value(((struct dest_s *)&dest)->addr.port_id)
+            ; Uncomment when this code is everywhere.
+            ;&busy=v.value(((struct dest_s *)&dest)->busy)
+            &busy="NOT_SUPP"
+            &bufs=v.value(((struct dest_s *)&dest)->bufs.count)
+            if (&bufs!=0x0)
+            (
+              GOSUB PRINT_LINE "........DEST: PTR=&dest ADDR=<&proc,&port> BUSY=&busy NUM_PENDING_BUFS=&bufs"
+            )
+            &dest=v.value(((struct dest_s *)&dest)->link.next)
+          )
+        )
+      )
+    )
+  )
+RETURN
+; ============================================================================
+; End of PARSE_XPORT()
+; ============================================================================
+
+
+; ============================================================================
+;
+; Function PARSE_CLIENT
+;
+; Description: Parse a client of a service
+;
+; ============================================================================
+PARSE_CLIENT:
+  ENTRY &client
+  &xport=v.value(((qmi_csi_client_type *)&client)->xport.xport)
+  &addr=v.value(((qmi_csi_client_type *)&client)->xport.addr)
+  &connhd=v.value(((qmi_csi_client_type *)&client)->connection_handle)
+  &num_inds=v.value(((qmi_csi_client_type *)&client)->next_ind_txn_id)-1
+  &txns=v.value(((qmi_csi_client_type *)&client)->txn_list.head)
+  &addr1=v.value(((uint32_t *)&addr)[0])
+  &addr2=v.value(((uint32_t *)&addr)[1])
+  &addr3=v.value(((uint32_t *)&addr)[2])
+  &addr4=v.value(((uint32_t *)&addr)[3])
+  &addr_len=v.value(((qmi_csi_xport_type *)&xport)->addr_len)
+
+  &addr_str="&addr1"
+  if (&addr_len>4)
+  (
+    &addr_str="&addr_str.&addr2"
+  )
+  if (&addr_len>8)
+  (
+    &addr_str="&addr_str.&addr3"
+  )
+  if (&addr_len>12)
+  (
+    &addr_str="&addr_str.&addr4"
+  )
+  &addr_str="<&addr_str>"
+  
+  GOSUB PRINT_LINE "....CLIENT: PTR=&client, CONN_HANDLE=&connhd, XPORT=&xport CLIENT_ADDR=&addr_str, NUM_INDS=&num_inds"
+
+  &txn=&txns
+  while (&txn!=0x0)
+  (
+    GOSUB PARSE_TXN &txn
+    &txn=v.value(((qmi_csi_txn_type *)&txn)->local.next)
+  )
+RETURN
+; ============================================================================
+; End of PARSE_CLIENT()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PARSE_TXN
+;
+; Description: Parse a pending transaction for a client
+;
+; ============================================================================
+PARSE_TXN:
+  ENTRY &txn
+  &thdl=v.value(((qmi_csi_txn_type *)&txn)->handle)
+  &txid=v.value(((qmi_csi_txn_type *)&txn)->txn_id)
+  &mid=v.value(((qmi_csi_txn_type *)&txn)->msg_id)
+  GOSUB PRINT_LINE "........TXN: HANDLE=&thdl, TXN ID=&txid, MSG ID=&mid"
+RETURN
+; ============================================================================
+; End of PARSE_TXN()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PRINT_LINE
+;
+; Description: Prints the provided line
+;
+; ============================================================================
+PRINT_LINE:
+  ENTRY &line
+  if ("&OUTPUT_PATH"=="")
+  (
+    print &line
+  )
+  else
+  (
+    WRITE #4 &line
+  )
+RETURN
+; ============================================================================
+; End of PRINT_LINE()
+; ============================================================================
+
+

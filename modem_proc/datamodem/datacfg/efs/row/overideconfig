@@ -1,0 +1,9 @@
+
+[QIPCALL:ImsVoiceConfig]
+
+#This config is required to enable 380 response validation as per
+#3GPP.
+
+*enableAlternateSrvRspCheck = 0
+
+

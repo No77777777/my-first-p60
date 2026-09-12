@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  CPU VDD Sleep Low Power Resource/Mode definitions
+
+  Copyright (c) 2016-2018 Qualcomm Technologies, Inc. (QTI).
+  All Rights Reserved.
+  Qualcomm Confidential and Proprietary.
+  Export of this technology or software is regulated by the U.S. Government.
+  Diversion contrary to U.S. law prohibited.
+-->
+
+<!--
+Format of Enter/Exit/Backoff latency fields:
+"<Fixed>,<Scaled>"
+Fixed - Unscaled value that is always added to each frequency table entry
+Scaled - Value that will be scaled at 1:1 ratio according to frequency table entries
+         and the initial base profile frequency given via ProfileFreq
+
+Bitwise attribute values (see sleep_mode_attribute enum for full description):
+  0x01 - Unused
+  0x02 - Multiple Entry
+  0x04 - Unused
+  0x08 - Unused
+  0x10 - LPRM is cacheable
+
+Order of LPRMs within the LPR should match any assumptions about order
+     in the node corresponding to the LPR
+-->
+
+<LPRDefinition>
+  <LPR Name="cpu_config" CoreMask="0xFFFFFFFF" InitFn="powerConfigLPR_initialize">
+    <!-- Full PC - Uses same "APCR long sequence" 
+         Mode is always rpmh assisted and is full cache flush & non-retention -->
+    <Mode 
+      Name="full_pc"
+      Dependency="cpu_vdd.full_pc + l2.noret + tcm.noret + rpm"
+      PowerSavings="-3072000000, 115"
+      EnterLat="100"
+      ExitLat="100"
+      Backoff="100"
+      EnterFn="powerConfigLPR_fullPCEnter"
+      Attributes="0x10"
+      Supported="TRUE"
+    >
+    </Mode>
+
+    <!-- L2 non-retention PC - same as 'full_pc' except TCM is kept in retention -->
+    <Mode 
+      Name="l2_pc"
+      Dependency="cpu_vdd.l2_pc + l2.noret + tcm.ret + rpm"
+      PowerSavings="-3072000000, 115"
+      EnterLat="100"
+      ExitLat="100"
+      Backoff="100"
+      EnterFn="powerConfigLPR_l2PCEnter"
+      Attributes="0x10"
+      Supported="TRUE"
+    >
+    </Mode>
+ 
+    <!-- APCR PLL low power mode - AKA "APCR long sequence" 
+         Mode can be standalone or rpmh assisted -->
+    <Mode
+         Name="apcr_pll_lpm"
+         Dependency="cpu_vdd.apcr_pll_lpm + !l2"
+         PowerSavings="-177600, 105"
+         EnterLat="80"
+         ExitLat="100"
+         Backoff="100"
+         EnterFn="powerConfigLPR_apcrLongEnter"
+         Attributes="0x10"
+         Supported="TRUE"
+    >
+    </Mode>
+
+    <!-- APCR PLL on low power mode - AKA "APCR short sequence"
+         Mode is never RPMh assisted (it's only standalone) -->
+    <Mode
+         Name="apcr"
+         Dependency="cpu_vdd.apcr + !rpm + !l2"
+         PowerSavings="-17107, 100"
+         EnterLat="47"
+         ExitLat="100"
+         Backoff="100"
+         EnterFn="powerConfigLPR_apcrShortEnter"
+         Attributes="0x10"
+         Supported="TRUE"
+    >
+    </Mode>
+  </LPR>
+
+  <!-- CPU VDD LPRM -->
+
+  <LPR Name="cpu_vdd" CoreMask="0xFFFFFFFF">
+    <Mode
+       Name="full_pc"
+       Dependency="cpu_config + wakeup"
+       Order="LAST"
+       PowerSavings="0,5"
+       EnterLat="314800"
+       ExitLat="590000"
+       Backoff="590000"
+       EnterFn="cpuVddLPR_fullPCEnter"
+       ExitFn="cpuVddLPR_exit"
+       ProfileExitFn="cpuVddLPR_fullPCProfileExit"
+       ProfileEnterFn="cpuVddLPR_profileEnter"
+       Attributes="0x00"
+       Supported="TRUE"
+    >
+    </Mode>
+    
+    <Mode
+       Name="l2_pc" 
+       Dependency="cpu_config + wakeup"
+       Order="LAST"
+       PowerSavings="0,5"
+       EnterLat="114800"
+       ExitLat="490000"
+       Backoff="490000"
+       EnterFn="cpuVddLPR_l2PCEnter"
+       ExitFn="cpuVddLPR_exit"
+       ProfileExitFn="cpuVddLPR_fullPCProfileExit"
+       ProfileEnterFn="cpuVddLPR_profileEnter"
+       Attributes="0x00"
+       Supported="TRUE"
+    >
+    </Mode>
+
+    <Mode
+       Name="apcr_pll_lpm"
+       Dependency="cpu_config + wakeup"
+       Order="LAST"
+       PowerSavings="0,3"
+       EnterLat="256"
+       ExitLat="5800"
+       Backoff="4000"
+       EnterFn="cpuVddLPR_apcrEnter"
+       ExitFn="cpuVddLPR_exit"
+       ProfileExitFn="cpuVddLPR_apcrProfileExit"
+       ProfileEnterFn="cpuVddLPR_profileEnter"
+       Attributes="0x10"
+       Supported="TRUE"
+    >
+    </Mode>
+
+    <Mode
+       Name="apcr"
+       Dependency="cpu_config + wakeup.qtimer"
+       Order="LAST"
+       PowerSavings="0,2"
+       EnterLat="80"
+       ExitLat="200"
+       Backoff="200"
+       EnterFn="cpuVddLPR_apcrEnter"
+       ExitFn="cpuVddLPR_exit"
+       ProfileExitFn="cpuVddLPR_apcrProfileExit"
+       ProfileEnterFn="cpuVddLPR_profileEnter"
+       Attributes="0x10"
+       Supported="TRUE"
+    >
+    </Mode>
+  </LPR>
+</LPRDefinition>

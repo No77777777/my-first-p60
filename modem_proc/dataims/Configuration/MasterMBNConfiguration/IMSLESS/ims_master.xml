@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">	
+	<NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<NvEfsItemData name="IMS_enable" id="67218" description="Enable or disable IMS task" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/IMS_enable">
+		<Member name="IMS_enable" description="Enable or disable IMS task" comment="" sizeOf="1" type="uint8">0</Member>
+	</NvEfsItemData>
+</NvData>

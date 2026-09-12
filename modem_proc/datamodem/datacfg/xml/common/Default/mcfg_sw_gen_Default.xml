@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="data.0.0" type="1"/>
+  <NvEfsFile name="bandpref" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/ds/atcop/strings/bandpref" buildPath="modem_proc/datamodem/datacfg/efs/default/bandpref"/>
+	<NvEfsFile name="mru" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/ds/atcop/strings/mru" buildPath="modem_proc/datamodem/datacfg/efs/default/mru"/>
+	<NvEfsFile name="mru_lte" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/ds/atcop/strings/mru_lte" buildPath="modem_proc/datamodem/datacfg/efs/default/mru_lte"/>
+	<GroupFile name="mcfg_sw_gen_Gen_3GPP.xml" description="" comment="" category="" version="data.0.0" mcfgAttributes="0x09" buildPath="modem_proc/datamodem/datacfg/xml/common/ROW/mcfg_sw_gen_Gen_3GPP.xml"/>
+	<NvItemData name="CSIM Support" id="6253" description="AT+CSIM support" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="csim_support" description="AT+CSIM support" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvEfsFile name="lpa_support" id="73849" description="LPA Support" comment="" category="UIM" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/nv/item_files/modem/uim/lpa/lpa_support" buildPath="modem_proc/uim/config/efs_files/hw_settings/lpa_support"/>
+
+	<NvEfsFile name="terminal_capability" id="none" description="" comment="" category="UIM" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/nv/item_files/modem/qmi/uim/terminal_capability" buildPath="modem_proc/uim/config/efs_files/hw_settings/terminal_capability"/>
+</NvData>

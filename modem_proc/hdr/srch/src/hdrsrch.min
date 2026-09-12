@@ -1,0 +1,88 @@
+#-------------------------------------------------------------------------------
+# HDR SRCH source file(s)
+#-------------------------------------------------------------------------------
+
+HDRSRCH_SOURCES=\
+    hdrsrch.c	        \
+    hdrsrchacq.c	\
+    hdrsrchcmd.c	\
+    hdrsrchdrv.c	\
+    hdrsrchfing.c	\
+    hdrsrchidle.c	\
+    hdrsrchmac.c	\
+    hdrsrchmon.c	\
+    hdrsrchmsg.c	\
+    hdrsrchlog.c	\
+    hdrsrchofs.c	\
+    hdrsrchreacq.c	\
+    hdrsrchsleep.c	\
+    hdrsrchst.c	        \
+    hdrsrchstate.c	\
+    hdrsrchsus.c	\
+    hdrsrchsync.c	\
+    hdrsrchtc.c	        \
+    hdrsrchutil.c	\
+    hdrts.c	        \
+    hdrsrchrf.c         \
+    hdrsrchschdgrp.c    \
+    hdrsrchbm.c         \
+    hdrsrchtimesync.c   \
+    hdrsrchltemeas.c
+
+#-------------------------------------------------------------------------------
+# HDR SRCH include file(s) path
+#-------------------------------------------------------------------------------
+
+HDR_CINCPATH=\
+        $(COMMON)       \
+        $(ADC)          \
+        $(ADSP)         \
+        $(AVS)          \
+        $(CM)           \
+        $(BIO)          \
+        $(BOOT)         \
+        $(CLK)          \
+        $(CP)           \
+        $(DATA)         \
+        $(DEC)          \
+        $(DFM)          \
+        $(DIAG)         \
+        $(ENC)          \
+        $(FTM)          \
+        $(GPS)          \
+        $(HS)           \
+        $(HW)           \
+        $(MUX)          \
+        $(MDSP)         \
+        $(QDSP)         \
+        $(NV)           \
+        $(PM)           \
+        $(PLT)          \
+        $(RF)           \
+        $(SBI)          \
+        $(SIO)          \
+        $(SRCH)         \
+        $(TLMM)         \
+        $(TRAMP)        \
+        $(TRERM)        \
+        $(UASMS)        \
+        $(UI)           \
+        $(VBATT)        \
+        $(USB)
+
+#-----------------------------------------------------------------------------
+# HDR SRCH object file(s)
+#-----------------------------------------------------------------------------
+
+HDRSRCH_OBJS :=  $(addprefix $(TARGETDIR)/, $(HDRSRCH_SOURCES:%.c=%.o) )
+$(HDRSRCH_OBJS): INCLUDES = $(addprefix -I, $(HDR_CINCPATH))
+
+HDRSRCH_DEPS :=  $(addprefix $(TARGETDIR)/, $(HDRSRCH_SOURCES:%.c=%.dep) )
+$(HDRSRCH_DEPS): INCLUDES = $(addprefix -I, $(HDR_CINCPATH))
+
+#-----------------------------------------------------------------------------
+# HDR SRCH source files search path
+#-----------------------------------------------------------------------------
+
+vpath %.c $(HDRSRCH)/src
+

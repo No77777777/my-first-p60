@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="1x.0.0" type="1"/>
+<NvEfsItemData name="rej_voice_page_for_volte" id="70360" description="Whether to reject MT voice page while VOLTE call is active" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/rej_voice_page_for_volte">
+		<Member name="rej_voice_page_for_volte" description="Whether to reject MT voice page while VOLTE call is active" comment="" sizeOf="1" type="uint8"> </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="rej_voice_page_for_volte_CDMA" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/rej_voice_page_for_volte_CDMA">
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32"> </Member>
+	</NvEfsItemData>
+	</NvData>

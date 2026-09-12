@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier configuration file for SRLTE with CH roaming 
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/Verizon/1xSRLTE/CH_roam/subsidized/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "53.1.18"
+>
+
+  <initial>
+
+    <!-- List of the MCCs in which SRLTE is allowed. Do NOT rename this list. -->
+    <mcc_list name="sxlte_mccs"> 310 311 312 </mcc_list>
+
+    <plmn_list name="sxlte_plmns" include="hplmn ehplmn">
+      311-480
+    </plmn_list>
+
+    <define_fullrat_config>
+      <ue_mode> CSFB </ue_mode>
+    </define_fullrat_config>
+
+    <boolean_define name="cm:rpm_enabled" initial="true" />
+
+    <boolean_define name="ue_mode_timer_running" initial="false" />
+
+    <define_timer name="hybr_oos" interval="1" units = "min" id = "101" />
+    <define_timer name="ue_mode_timer" interval="1" units="min" id="102" />
+
+    <rat_capability base="none">
+      <include> C H L </include>
+    </rat_capability>
+
+    <feature single_sim="srlte"> dualmmode </feature>
+
+    <ue_mode_if> 1X_CSFB_PREF </ue_mode_if>
+
+    <!-- Home RF band list 
+           CDMA bands (defined in sys_sband_e_type)    : BC0, BC1 and BC10
+           LTE bands (defined in sys_sband_lte_e_type) : 2 4 5 13
+        -->
+    <rf_band_list name="rf_bands_home">
+      <gw_bands base="none">
+        <include> 0 1 2 14 </include>
+      </gw_bands>
+      <lte_bands base="none">
+        <include> 1 3 4 12 </include>
+      </lte_bands>
+      <tds_bands base="none" />
+    </rf_band_list>
+
+    <rf_bands_if list="rf_bands_home" />
+
+  </initial>
+
+  <if>
+    <timer_expired name="ue_mode_timer" />
+    <then>
+      <expired_timer_handled name="ue_mode_timer" />
+      <boolean_set name="ue_mode_timer_running" value="false" />
+      <continue />
+    </then>
+  </if>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <svc_mode> FULL </svc_mode>
+
+  <if>
+    <boolean_test name="ue_mode_timer_running" />
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <if>
+    <any_of>
+      <all_of>
+        <network_selection_mode> AUTOMATIC </network_selection_mode>
+        <serving_plmn_in list="sxlte_plmns" />
+      </all_of>
+      <location_mcc_in list="sxlte_mccs" />
+    </any_of>
+    <then>
+      <ue_mode> 1X_CSFB_PREF </ue_mode>
+      <rf_bands list="rf_bands_home" />
+    </then>
+    <else>
+      <if>
+        <ue_mode_is> 1X_CSFB_PREF </ue_mode_is>
+        <then>
+          <timer_start name="ue_mode_timer" />
+          <boolean_set name="ue_mode_timer_running" value="true" />
+        </then>
+      </if>
+      <ue_mode> CSFB </ue_mode>
+      <rf_bands base="hardware" />
+    </else>
+  </if>
+
+</policy>

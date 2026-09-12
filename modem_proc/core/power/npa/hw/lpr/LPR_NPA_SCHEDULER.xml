@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  NPA Sleep Low Power Resource/Mode definitions
+
+  Copyright (c) 2015- 2019 Qualcomm Technologies, Inc. (QTI).
+  All Rights Reserved.
+  Qualcomm Technologies Confidential and Proprietary
+-->
+
+<!--
+Format of Enter/Exit/Backoff latency fields:
+"<Fixed>,<Scaled>"
+Fixed - Unscaled value that is always added to each frequency table entry
+Scaled - Value that will be scaled at 1:1 ratio according to frequency table entries
+         and the initial base profile frequency given via ProfileFreq
+
+
+Bitwise attribute values (see sleep_mode_attribute enum for full description):
+  0x01 - LPI
+  0x02 - Multiple Entry
+  0x04 - Unused
+  0x08 - No automatic latency tracking
+  0x10 - LPRM is cacheable
+-->
+
+<LPRDefinition>
+  <!-- The LPR defintion for NPA -->
+  <LPR Name="npa_scheduler" CoreMask="0xFFFFFFFF" ProfileFreq="499000">
+    <!-- Shutdown LPRM -->
+    <Mode
+      Name="fork"
+      Dependency=" wakeup.rpm"
+      Order="BEFORE DEP npa_scheduler.fork"
+      PowerSavings="-67392000, 350"
+      EnterLat="13000"
+      ExitLat="39000"
+      EnterFn="npa_scheduler_lpr_enter"
+      ExitFn="npa_scheduler_lpr_exit"
+      Backoff="39000">
+    </Mode> 
+  </LPR>
+</LPRDefinition>
+

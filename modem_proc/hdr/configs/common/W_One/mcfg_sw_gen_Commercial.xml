@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="hdr.0.0" type="1"/>
+<NvItemData name="HDR SCP Session Status" id="475" description="" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdrscp_session_status" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+	</NvItemData>
+	<NvItemData name="RoHC Feedback Decompressor" id="4964" description="Force AT Configuration to Rel 0/A/B" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="nv_hdrscp_force_at_config_type" description="List of configurations supported by the AT" comment="" sizeOf="1" type="uint16">4 </Member>
+	</NvItemData>
+	<NvEfsFile name="ehrpdnetworksetting" id="66033" description="eHRPD Network Setting" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/hdr/cp/scp/ehrpdnetworksetting" buildPath="modem_proc/hdr/configs/efs_files/wo/ehrpdnetworksetting"/>
+  <NvEfsFile name="hdr_acq_div_thresh1" id="67289" description="HDR acquistion diversity threshold 1" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/hdr/srch/hdr_acq_div_thresh1" buildPath="modem_proc/hdr/configs/efs_files/wo/hdr_acq_div_thresh1"/>
+	<NvEfsItemData name="hdr_acq_div_enable" id="67290" description="Whether HDR acquistion diversiy is enabled" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/hdr/srch/hdr_acq_div_enable">
+		<Member name="hdr_acq_div_enable" description="Whether HDR acquistion diversiy is enabled" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="hdr_acq_div_thresh0" id="67288" description="HDR acquistion diversity threshold 0" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/hdr/srch/hdr_acq_div_thresh0" buildPath="modem_proc/hdr/configs/efs_files/wo/hdr_acq_div_thresh0"/>
+<NvItemData name="HDR RX Diversity Control" id="818" description="" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdr_rx_diversity_ctrl" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="1xEV Access Attempt" id="4204" description="Force Rel0 Session Configuration" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdrscp_force_rel0_config" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="QTV RTP Text Samples" id="4528" description="This NV item controls if EMPA is supported" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdr_empa_supported" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	</NvData>

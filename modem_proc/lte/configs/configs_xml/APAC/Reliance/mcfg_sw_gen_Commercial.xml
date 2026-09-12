@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="lte.0.0" type="1"/>
+    <NvEfsItemData name="diff_fdd_tdd_fgi_enable" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/lte/rrc/cap/diff_fdd_tdd_fgi_enable">
+        <Member name="diff_fdd_tdd_fgi_enable" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    </NvEfsItemData>
+    <NvEfsFile name="conn_control_v2_enable" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/cep/conn_control_v2_enable" buildPath="modem_proc/lte/configs/efs_files/rel/conn_control_v2_enable"/>
+    <NvEfsFile name="band_priority_list_v2" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/csp/band_priority_list_v2" buildPath="modem_proc/lte/configs/efs_files/rel/band_priority_list_v2"/>
+    <NvEfsFile name="ignore_trm_prior_for_embms" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/ignore_trm_prior_for_embms" buildPath="modem_proc/lte/configs/efs_files/rel/ignore_trm_prior_for_embms"/>
+</NvData>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<driver name="NULL">
+<include file="DirConnGpioIntInterface.h"/>
+    <global_def>
+    <var_seq name="xo_shutdown" type="DALPROP_DATA_TYPE_STRING">/xo/cxo</var_seq>
+    </global_def>
+    <device name="DirConnGpioInt">
+    <props name="NUMBER_OF_DIRECT_CONNECT_INTERRUPTS" type="DALPROP_ATTR_TYPE_UINT32">
+    2
+    </props>
+    <props name="DIRECT_CONNECT_CONFIG_MAP" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+    InterruptConfigMap
+    </props>
+    <props name="XO_SHUTDOWN_RSRC" type="DALPROP_ATTR_TYPE_STRING_PTR">
+    xo_shutdown
+    </props>
+    </device>
+</driver>

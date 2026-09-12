@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<IWLAN_S2B_CONFIG>
+    <GENERIC_VARIANT>
+        <epdg_addr_info>
+            <fqdn>epdg.ims.mnc020.mcc334.pub.3gppnetwork.org</fqdn>
+            <dns_retries> 
+                <block_iwlan_for_dns_name_error>TRUE</block_iwlan_for_dns_name_error>
+            </dns_retries>
+        </epdg_addr_info>
+        <ikev2_info>
+            <esp_rekey_timer>
+                <soft_sec>1500</soft_sec>
+                <hard_sec>1800</hard_sec>
+            </esp_rekey_timer>
+            <ikev2_sa_rekey_timer>
+                <soft_sec>3000</soft_sec>
+                <hard_sec>3600</hard_sec>
+            </ikev2_sa_rekey_timer>
+            <ikev2_encr_algo_list>
+                <encr_algo value="12">
+                    <key_size>128</key_size>
+                </encr_algo>
+            </ikev2_encr_algo_list>
+            <ikev2_hash_algo_list>
+                <algo value="2"/>
+            </ikev2_hash_algo_list>
+            <ikev2_prf_algo_list>
+                <prf_algo value="2"/>
+            </ikev2_prf_algo_list>
+            <esp_encr_algo_list>
+                <encr_algo value="12">
+                    <key_size>128</key_size>
+                </encr_algo>
+            </esp_encr_algo_list>
+            <esp_auth_algo_list>
+                <algo value="2"/>
+            </esp_auth_algo_list>
+            <ikev2_dh_group_list>
+                <dh_group value="2"/>
+            </ikev2_dh_group_list>
+            <peer_id>
+                <id_type>ID_FQDN</id_type>
+                <mac_enabled>FALSE</mac_enabled>
+                <identifier/>
+            </peer_id>
+            <self_id>
+                <id_type>ID_RFC822_ADDR</id_type>
+                <mac_enabled>FALSE</mac_enabled>
+                <identifier/>
+            </self_id>
+        </ikev2_info>
+        <err_code_info>
+            <level_throttling_disabled>FALSE</level_throttling_disabled>
+            <pdn_throttling>
+                <throttling_series id="1">
+                    <throttling_values>
+                        <seconds>45</seconds>
+                        <seconds>45</seconds>
+                        <seconds>45</seconds>
+                        <seconds>7200</seconds>
+                    </throttling_values>
+                    <throttling_cause_codes>
+                        <cause_code>
+                            <start>9000</start> 
+                            <end>9002</end> 
+                        </cause_code>
+                    </throttling_cause_codes>
+                </throttling_series>
+            </pdn_throttling>            
+        </err_code_info>
+    </GENERIC_VARIANT>
+    <WP_VARIANT>
+        <ikev2_info>
+            <esp_auth_algo_list>
+                <algo value="1"/>
+                <algo value="2"/>
+            </esp_auth_algo_list>
+            <configured_ike_port>4500</configured_ike_port>
+        </ikev2_info>
+    </WP_VARIANT>
+</IWLAN_S2B_CONFIG>

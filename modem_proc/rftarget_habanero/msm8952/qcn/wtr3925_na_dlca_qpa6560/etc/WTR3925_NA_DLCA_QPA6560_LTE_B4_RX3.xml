@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR3925_NA_DLCA_QPA6560_LTE_B4_RX3.xml -->
+	<NvItem id="24840" name="RFNV_LTE_B4_C3_LNA_RANGE_RISE_FALL_I" mapping="direct" encoding="dec">-660,-700,-540,-580,-340,-380,-220,-260,-140,-180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+</NvSource>

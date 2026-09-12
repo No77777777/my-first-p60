@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="IPCInt">
+<!-- See DDIIPCInt.h for the enum these values come from. -->
+<include file="DDIIPCInt.h"/>
+
+
+  <device id="DALDEVICEID_IPCINT">
+     <props name="SourceProc" type="DALPROP_ATTR_TYPE_UINT32">
+       DALIPCINT_PROC_MDSPSW
+    </props> 
+    <props name="IPCINT_PHYSICAL_ADDRESS" type="DALPROP_ATTR_TYPE_UINT32"> 
+       0x4100000
+    </props> 
+    <props name="IPCINT_OFFSET" type="DALPROP_ATTR_TYPE_UINT32"> 
+       0x5000
+    </props> 
+    <props name="IsRemotable" type="DALPROP_ATTR_TYPE_UINT32">
+       0x1
+    </props> 
+  </device>
+</driver>
+

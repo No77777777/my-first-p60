@@ -1,0 +1,22 @@
+[QIPCALL:ImsVoiceSuppsConfig]
+
+#This config is required not to send out unsubscribe to NW
+#when conference call is end.
+
+*isUnsubcribeDisabled = 1
+
+[QIPCALL:ImsVideoConfig] 
+
+#This config is required to configure if VT capability can be impacted by mobile data. 
+
+*vtImpactedByDataSetting = 0  
+
+
+
+[Ut:UtConfiguration]
+
+*isIr92V10Enabled = 0
+
+*isDynamicMediaConfigEnabled = 0
+
+

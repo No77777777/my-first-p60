@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier Policy for CU
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/OpenMarket/7+5_mode/CU/test/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "75.3.21"
+>
+
+  <initial>
+
+    <mcc_list name="home_mccs">
+      404 460 310 001 262
+    </mcc_list>
+
+    <plmn_list name="ca_combo_networks">
+      460-01 460-06 460-09 262-830
+    </plmn_list>
+
+    <rat_capability base="none">
+      <include> G W L </include>
+    </rat_capability>
+
+    <rf_bands base="hardware" />
+
+    <ue_mode> CSFB </ue_mode>
+    <freq_list_if list="cpfl" />
+
+    <feature single_sim="normal"> dualmmode </feature>
+
+    <boolean_define name="cm:full_srv_req_in_emergency" initial="true" />
+
+    <boolean_set name="cm:full_srv_req_in_emergency">
+      <current_mcc_in list="home_mccs" />
+    </boolean_set>
+
+  </initial>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <svc_mode> FULL </svc_mode>
+  <rat_capability base="none">
+    <include> G W L </include>
+  </rat_capability>
+  <rf_bands base="hardware" />
+
+  <if>
+    <have_serving_system />
+    <then>
+      <if>
+        <serving_plmn_in list="ca_combo_networks" />
+        <then>
+          <ca_band_combos string="3AA-1A-0;3AA-1A-1;3A-1AA-0;3A-1AA-1;3AA-1AA-0;3AA-1AA-1;8AA-1A-0;8AA-1A-1;8AA-1A-2;8A-1AA-0;8A-1AA-1;8A-1AA-2;8AA-1AA-0;8AA-1AA-1;8AA-1AA-2;41A-1AA-0;8AA-3A-0;8AA-3A-1;8AA-3A-2;8AA-3A-3;8A-3AA-0;8A-3AA-1;8A-3AA-2;8A-3AA-3;8AA-3AA-0;8AA-3AA-1;8AA-3AA-2;8AA-3AA-3;41A-3AA-0;41A-3AA-1;3CA-0;3CC-0;3CA-1A-0;3C-1AA-0;8AA-3C-0;8A-3CA-0;8AA-3A-1A-0;8AA-3A-1A-1;8AA-3A-1A-2;8AA-3A-1A-3;8A-3AA-1A-0;8A-3AA-1A-1;8A-3AA-1A-2;8A-3AA-1A-3;8A-3A-1AA-0;8A-3A-1AA-1;8A-3A-1AA-2;8A-3A-1AA-3;" />
+        </then>
+        <else>
+         <ca_band_combos string="" />
+        </else>
+      </if>
+      <continue />
+    </then>
+  </if>
+
+  <boolean_set name="cm:full_srv_req_in_emergency">
+    <current_mcc_in list="home_mccs" />
+  </boolean_set>
+
+  <if>
+    <location_mcc_in list="home_mccs" />
+    <then> <freq_list list="cpfl" /> </then>
+    <else> <freq_list list="default" /> </else>
+  </if>
+
+</policy>

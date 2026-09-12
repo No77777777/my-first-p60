@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="mmcp.0.0" type="1"/>
+<NvItemData name="Network Selection Mode Preference" id="849" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="net_sel_mode" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+	</NvItemData>
+	<NvEfsFile name="carrier_policy.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/policyman/carrier_policy.xml" buildPath="modem_proc/mmcp/policyman/configurations/Carrier/Vodafone/carrier_policy.xml"/>
+	<NvItemData name="UMTS SMS Bearer Preference" id="909" description="" comment="" category="Display" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_gw_bearer_pref" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+	</NvItemData>
+	<NvEfsFile name="rat_acq_order" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/sd/rat_acq_order" buildPath="modem_proc/mmcp/config/EFS_files/vodafone/rat_acq_order"/>
+	<NvEfsItemData name="sync_ue_based_cw_with_cs" id="74182" description="" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/sync_ue_based_cw_with_cs">
+		<Member name="sync_ue_based_cw_with_cs" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="cw_ext_config_info" id="74339" description="" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/cw_ext_config_info">
+		<Member name="version" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="cw_mode" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="cw_sups_enable_opr_mask" description="" comment="" sizeOf="1" type="uint16">1 </Member>
+		<Member name="cw_nw_status" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint160"> </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="immediate_sups_sync_with_cs_req" id="74232" description="" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/immediate_sups_sync_with_cs_req">
+		<Member name="immediate_sups_sync_with_cs_req" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvItemData name="NAS Release Compliance" id="4722" description="Indicates the current Specs release supported by NAS." comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="nas_release_compliance" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+	</NvItemData>
+	<NvItemData name="Analog Mode Preference" id="10" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="mode" description="" comment="" sizeOf="1" type="uint16">31 </Member>
+	</NvItemData>
+	<NvItemData name="Preferred Hybrid Mode" id="562" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hybrid_pref" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvEfsItemData name="EMM efs items" id="73708" description="" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/emm_nas_nv_items">
+		<Member name="version" description="This NV item will be used by REG to take care of all future NV items." comment="" sizeOf="1" type="uint8">6 </Member>
+		<Member name="emm_plmn_block_on_rej_15_8" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="use_lte_disable_duration_timer" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="emm_plmn_block_on_rej_15_roaming" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="psm_local_detach_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="csfb_perform_reg" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="emm_fake_cell_attempt_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="force_esr_nondds" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="force_tau_nondds" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint184"> </Member>
+	</NvEfsItemData>
+	<NvItemData name="UMTS Cell Broadcast SMS Carrier Configuration" id="1016" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_gw_cb_config" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="UMTS Cell Broadcast SMS User Preference" id="1017" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_gw_cb_user_pref" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+	</NvItemData>
+	<NvEfsItemData name="nas_srvcc_support" id="67275" description="To enable/disable capability indication for SRVCC from EUTRAN to UTRAN" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/nas_srvcc_support">
+		<Member name="srvcc_support" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="lte_emerg_redial" id="73655" description="Enables CS to PS Silent Redial for emergency calls" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/lte_emerg_redial">
+		<Member name="version" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="redial_on_lte" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="cs_favoured_retry_count" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="reserved" description="Reserved" comment="" sizeOf="1" type="uint16">0 </Member>
+	</NvEfsItemData>
+	<NvItemData name="SMS MO Retry Period" id="3532" description="MO SMS retry period in seconds" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_mo_retry_period" description="MO SMS retry period in seconds" comment="" sizeOf="1" type="int8">135 </Member>
+	</NvItemData>
+	<NvItemData name="SMS MO Retry Interval" id="3533" description="SMS MO retry interval in seconds" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_mo_retry_interval" description="SMS MO retry interval in seconds" comment="" sizeOf="1" type="uint8">30 </Member>
+	</NvItemData>
+	<NvItemData name="1xEV Forward Statistics Summary" id="4228" description="boolean stating if SMS should be sent on access channel" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="channel_preference" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="1xEV AC MAC Capsule" id="4229" description="boolean stating if SMS should be sent on traffic channel" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_mo_on_traffic" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="MGRF Supported" id="5895" description="Indicates if Feature Managed Roaming is enabled" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="mgrf_supported" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="UMTS amr codec preference config" id="6850" description="This item specifies UMTS AMR CODEC user preferences for G  and  W RATs" comment="" category="GSM" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="umts_amr_codec_preference_config" description="This item specifies UMTS AMR CODEC user preferences for G  and  W RATs" comment="" sizeOf="1" type="uint8">15 </Member>
+	</NvItemData>
+	<NvEfsItemData name="sms_retry_limit" id="70222" description="Item to limit MO SMS retry over IMS transport. Default value = 1." comment="" category="SMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/sms/sms_retry_limit">
+		<Member name="sms_retry_limit" description="Item to limit MO SMS retry over IMS transport. Default value = 1." comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="sms_only" id="65776" description="SMS only registration" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/sms_only">
+		<Member name="sms_only" description="SMS only registration" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ue_usage_setting" id="65777" description="UE usage setting" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/ue_usage_setting">
+		<Member name="ue_usage_setting" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="sms_domain_pref" id="66472" description="SMS domain preference" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/sms_domain_pref">
+		<Member name="sys_sms_domain_pref_e_type" description="SMS domain preference" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="supplement_service_domain_pref" id="70239" description="PS supplementary service domain preference" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/supplement_service_domain_pref">
+		<Member name="sys_supp_srv_domain_pref_e_type" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="voice_domain_pref" id="66048" description="Voice Domain Preference" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/voice_domain_pref">
+		<Member name="sys_voice_domain_pref_e_type" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="mid_call_srvcc_info" id="71554" description="mid call srvcc setting info for 3rd party/QC IMS" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/mid_call_srvcc_info">
+		<Member name="version" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="ims_cache_expiry_duration" description="" comment="" sizeOf="1" type="uint32">5000 </Member>
+		<Member name="mid_call_support" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint16"> </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wifi_config" id="73545" description="This holds information regarding custom wifi configuarations" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/wifi_config">
+		<Member name="version" description="This holds information regarding custom wifi configuarations" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="is_wifi_only_mode_for_voice" description="This field set to TRUE indicates support of voice calls in wifi only mode. Default value is FALSE." comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="is_e911_over_wifi" description="If set to TRUE indicates support of emergency call and corresponding silent redial requirements over wifi. Default value is FALSE." comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="wifi_cs_scan_timer" description="This field indicates the time for which call would be attempted on CS domain. If the call does not get an ok_to_orig in the above mentioned time, call would be re-attempted on wifi. Default value for this timer is 5sec." comment="" sizeOf="1" type="uint8">40 </Member>
+		<Member name="reserved" description="Reserved" comment="" sizeOf="1" type="uint56">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="lte_nas_ignore_mt_csfb_during_volte_call" id="73544" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/lte_nas_ignore_mt_csfb_during_volte_call">
+		<Member name="lte_nas_ignore_mt_csfb_during_volte_call" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="ue_based_cw" id="73538" description="UE based call wating" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/ue_based_cw">
+		<Member name="use_ue_based_cw" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="is_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+<NvItemData name="Auto Redial Setting" id="75" description="" comment="" category="Display" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="enable" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="rings" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	</NvData>

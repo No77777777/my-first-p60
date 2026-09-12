@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="NULL">
+<include file="pm_dal_prop_ids.h"/>
+
+<device name="/modem/divar">
+<props name="PM_PAM_DATA" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+pm_pam_data
+</props>
+<props name="PM_TARGET_DATA" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+pm_target_data
+</props>
+</device>  
+
+</driver>

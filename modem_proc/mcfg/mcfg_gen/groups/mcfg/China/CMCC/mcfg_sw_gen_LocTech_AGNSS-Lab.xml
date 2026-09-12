@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="mcfg.0.0" type="1"/>
+<NvItemData name="Banner" id="71" description="" comment="" category="Display" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="letters" description="" comment="" sizeOf="13" type="string">LOCTEC_AGNSS</Member>
+	</NvItemData>
+	<NvEfsItemData name="mcfg_segload_config" id="72542" description="Bitmap to enable specific segment" comment="" category="MCFG" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/mcfg/mcfg_segload_config">
+		<Member name="version" description="" comment="" sizeOf="1" type="uint32">1 </Member>
+		<Member name="segment" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+	</NvEfsItemData>
+	</NvData>

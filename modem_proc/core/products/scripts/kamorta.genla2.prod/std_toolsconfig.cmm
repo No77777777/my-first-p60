@@ -1,0 +1,22 @@
+//============================================================================
+//  Name:                                                                     
+//    std_toolsconfig.cmm 
+//
+//  Description:                                                              
+//    None 
+//                                                                            
+// Copyright (c) 2026 by QUALCOMM Technologies, Incorporated.  All Rights Reserved.        
+//============================================================================
+//                                                                            
+// *** AUTO GENERATED FILE - DO NOT EDIT                                      
+//                                                                            
+// GENERATED: Tue Aug 11 20:44:38 2026 
+//============================================================================
+
+CD &MODEM_PROC_SCRIPTSDIR
+menu.reprogram ../../core/kernel/qurt/build/root_pd_img/qdsp6/kamorta.genla2.prod/install/modemv67W_1536/debugger/T32/qurt_model.men
+
+CD &MODEM_PROC_SCRIPTSDIR
+task.config ../../core/kernel/qurt/build/root_pd_img/qdsp6/kamorta.genla2.prod/install/modemv67W_1536/debugger/T32/qurt_model.t32
+
+ENDDO

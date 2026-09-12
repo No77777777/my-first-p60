@@ -1,0 +1,263 @@
+/*===========================================================================
+
+       HDRSRCRFTXD_SM.SMF - Transmit Diversity State Machine
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Copyright (c) 2009 - 2015
+                QUALCOMM Technologies, Incorporated. All Rights Reserved
+                Qualcomm Technologies, Proprietary
+
+  Export of this technology or software is regulated by the U.S. Government.
+  Diversion contrary to U.S. law prohibited.
+
+  All ideas, data and information contained in or disclosed by
+  this document are confidential and proprietary information of
+  QUALCOMM Technologies, Incorporated and all rights therein are expressly reserved.
+  By accepting this material the recipient agrees that this material
+  and the information contained therein are held in confidence and in
+  trust and will not be used, copied, reproduced in whole or in part,
+  nor its contents revealed in any manner to others without the express
+  written permission of QUALCOMM Technologies, Incorporated.
+
+===========================================================================*/
+
+/*===========================================================================
+
+                        EDIT HISTORY FOR MODULE
+
+This section contains comments describing changes made to the module.
+Notice that changes are listed in reverse chronological order.
+
+$Header: //components/dev/hdr.mpss/1.0/weixians.Nikel40_full_0730/srch/src/hdrsrchard_sm.smf#1 $ $DateTime: 2003/06/14 17:48:10 $ $Author: coresvc $
+
+when       who     what, where, why
+--------   ---     ----------------------------------------------------------
+10/14/16   vke     Fix to support mode grant in sleep state
+08/06/15   wsh     Report sleep mode while tuneaway, to get preferred config
+07/15/15   wsh     Fixed RxAGC collection stopped after QTA
+06/30/15   tnp     Update copyright info
+02/04/15   wsh     Added support 2->2a transition, removed PA on requirement
+01/29/20   wsh     Lowered AGC count required, Fixed dec timer for QTA
+10/09/14   wsh     Added support for DR-DSDS ASDiv
+03/05/14   wsh     Bug fixes for DSDS-ASDiv and DSDA-ASDiv support 
+01/15/14   wsh     Added DSDS ASDiv support
+12/18/13   wsh     Process timer expiration in inactive
+04/12/12   wsh     Initial Implementation
+=============================================================================*/
+
+/* It is standard process to run the STM description files through the C
+   preprocessor to allow for featurization.  Include the necessary header
+   files that contain the particular features needed.  */
+
+#include "hdr_variation.h"
+#include "target.h"
+#include "customer.h"
+
+/* MCS only has INACTIVE/RX/RXTX 3 states. However, we need to have
+   more states because we run different algorithms in access/traffic,
+   suspended states are also needed for access/traffic as we need to
+   preserve the stats in suspend. All non-TX states are grouped 
+   together as RX_STATE, if it has TRM lock, or as INACTIVE if not. */
+
+STATE_MACHINE HDRSRCHRFTXD_SM
+{
+  ENTRY           hdrsrchrftxd_init;
+  EXIT            NULL;
+  INITIAL_STATE   HDRSRCHRFTXD_INACTIVE_STATE;
+  START_ACTIVE    FALSE;
+
+  STATE HDRSRCHRFTXD_INACTIVE_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_inactive;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFTXD_RX_CMD                  hdrsrchrftxd_rx_tf;
+
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+
+  /* Sleep state is mostly equivalent to inactive state.
+     DSDA-ASDiv requires special handing for sleep/wakeup, hence
+     the addition of sleep state */
+  STATE HDRSRCHRFTXD_SLEEP_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_sleep;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFTXD_RX_CMD                  hdrsrchrftxd_rx_tf;
+      HDRSRCHRFTXD_DEACTIVATE_CMD          hdrsrchrftxd_deactivate_tf;
+
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_GRANT_MODE_CONFIG_CMD   hdrsrchrftxd_grant_mode_config_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+
+  STATE HDRSRCHRFTXD_RX_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_rx;
+    EXIT    hdrsrchrftxd_exit_rx;
+
+    INPUTS
+    {
+      HDRSRCHRFTXD_INACT_CMD               hdrsrchrftxd_inact_tf;
+      HDRSRCHRFTXD_SLEEP_CMD               hdrsrchrftxd_sleep_tf;
+      HDRSRCHRFTXD_DEACTIVATE_CMD          hdrsrchrftxd_deactivate_tf;
+      HDRSRCHRFTXD_SUSPEND_CMD             hdrsrchrftxd_suspend_tf;
+      HDRSRCHRFTXD_ACCESS_CMD              hdrsrchrftxd_access_tf;
+      HDRSRCHRFTXD_TRAFFIC_CMD             hdrsrchrftxd_traffic_tf;
+
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_GRANT_MODE_CONFIG_CMD   hdrsrchrftxd_grant_mode_config_tf;
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_MDSP_INFO_READY_CMD     hdrsrchrftxd_mdsp_info_ready_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+
+  STATE HDRSRCHRFTXD_RX_SUSP_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_rx_susp;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFTXD_END_TX_CMD              hdrsrchrftxd_end_tx_tf;
+      HDRSRCHRFTXD_DEACTIVATE_CMD          hdrsrchrftxd_deactivate_tf;
+      HDRSRCHRFTXD_RESUME_CMD              hdrsrchrftxd_resume_tf;
+      
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_GRANT_MODE_CONFIG_CMD   hdrsrchrftxd_grant_mode_config_tf;
+      HDRSRCHRFTXD_SET_CONFIG_CMD          hdrsrchrftxd_set_config_tf;
+
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_MDSP_INFO_READY_CMD     hdrsrchrftxd_mdsp_info_ready_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+
+  STATE HDRSRCHRFTXD_ACCESS_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_access;
+    EXIT    NULL;
+
+    INPUTS
+    {      
+      HDRSRCHRFTXD_END_TX_CMD              hdrsrchrftxd_end_tx_tf;
+      HDRSRCHRFTXD_DEACTIVATE_CMD          hdrsrchrftxd_deactivate_tf;
+      HDRSRCHRFTXD_SUSPEND_CMD             hdrsrchrftxd_suspend_tf;
+      HDRSRCHRFTXD_TRAFFIC_CMD             hdrsrchrftxd_traffic_tf;
+
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_GRANT_MODE_CONFIG_CMD   hdrsrchrftxd_grant_mode_config_tf;
+
+      HDRSRCHRFTXD_SET_CONFIG_CMD          hdrsrchrftxd_set_config_tf;
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_NEXT_ACC_SEQ_CMD        hdrsrchrftxd_next_acc_seq_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+
+  STATE HDRSRCHRFTXD_ACCESS_SUSP_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_access_susp;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFTXD_END_TX_CMD              hdrsrchrftxd_end_tx_tf;
+      HDRSRCHRFTXD_DEACTIVATE_CMD          hdrsrchrftxd_deactivate_tf;
+      HDRSRCHRFTXD_RESUME_CMD              hdrsrchrftxd_resume_tf;
+
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_GRANT_MODE_CONFIG_CMD   hdrsrchrftxd_grant_mode_config_tf;
+
+      HDRSRCHRFTXD_SET_CONFIG_CMD          hdrsrchrftxd_set_config_tf;
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_NEXT_ACC_SEQ_CMD        hdrsrchrftxd_next_acc_seq_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+
+  STATE HDRSRCHRFTXD_TRAFFIC_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_traffic;
+    EXIT    hdrsrchrftxd_exit_traffic;
+
+    INPUTS
+    {
+      HDRSRCHRFTXD_END_TX_CMD              hdrsrchrftxd_end_tx_tf;
+      HDRSRCHRFTXD_DEACTIVATE_CMD          hdrsrchrftxd_deactivate_tf;
+      HDRSRCHRFTXD_SUSPEND_CMD             hdrsrchrftxd_suspend_tf;
+      HDRSRCHRFTXD_TRAFFIC_CMD             hdrsrchrftxd_traffic_tf;
+      
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_GRANT_MODE_CONFIG_CMD   hdrsrchrftxd_grant_mode_config_tf;
+
+      HDRSRCHRFTXD_SET_CONFIG_CMD          hdrsrchrftxd_set_config_tf;
+      HDRSRCHRFTXD_DIV_GRANTED_CMD         hdrsrchrftxd_div_granted_tf;
+      HDRSRCHRFTXD_DIV_RELEASED_CMD        hdrsrchrftxd_div_released_tf;
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_MDSP_INFO_READY_CMD     hdrsrchrftxd_mdsp_info_ready_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+
+  STATE HDRSRCHRFTXD_TRAFFIC_SUSP_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_traffic_susp;
+    EXIT    hdrsrchrftxd_exit_traffic_susp;
+
+    INPUTS
+    {
+      HDRSRCHRFTXD_END_TX_CMD              hdrsrchrftxd_end_tx_tf;
+      HDRSRCHRFTXD_DEACTIVATE_CMD          hdrsrchrftxd_deactivate_tf;
+      HDRSRCHRFTXD_RESUME_CMD              hdrsrchrftxd_resume_tf;
+      
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_GRANT_MODE_CONFIG_CMD   hdrsrchrftxd_grant_mode_config_tf;
+      HDRSRCHRFTXD_SET_CONFIG_CMD          hdrsrchrftxd_set_config_tf;
+
+      HDRSRCHRFTXD_DIV_GRANTED_CMD         hdrsrchrftxd_div_granted_tf;
+      HDRSRCHRFTXD_DIV_RELEASED_CMD        hdrsrchrftxd_div_released_tf;
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_MDSP_INFO_READY_CMD     hdrsrchrftxd_mdsp_info_ready_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+  
+  /* QTA state is similiar to TC_SUSP state, except we do not report SLEEP
+     mode to TRM. Instead we remain in RXTX state. We process similiar set
+     of commands in QTA state, and resume cmd will bring us back to TC 
+     state */
+  STATE HDRSRCHRFTXD_QTA_STATE
+  {
+    ENTRY   hdrsrchrftxd_enter_qta;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHRFTXD_END_TX_CMD              hdrsrchrftxd_end_tx_tf;
+      HDRSRCHRFTXD_DEACTIVATE_CMD          hdrsrchrftxd_deactivate_tf;
+      HDRSRCHRFTXD_RESUME_CMD              hdrsrchrftxd_resume_tf;
+      
+      HDRSRCHRFTXD_GRANT_MODE_CMD          hdrsrchrftxd_grant_mode_tf;
+      HDRSRCHRFTXD_SET_CONFIG_CMD          hdrsrchrftxd_set_config_tf;
+
+      HDRSRCHRFTXD_DIV_GRANTED_CMD         hdrsrchrftxd_div_granted_tf;
+      HDRSRCHRFTXD_DIV_RELEASED_CMD        hdrsrchrftxd_div_released_tf;
+      HDRSRCHRFTXD_TIMER_EXPIRED_CMD       hdrsrchrftxd_timer_expired_tf;
+      HDRSRCHRFTXD_MDSP_INFO_READY_CMD     hdrsrchrftxd_mdsp_info_ready_tf;
+      HDRSRCHRFTXD_ANT_SWITCHED_CMD        hdrsrchrftxd_ant_switched_tf;
+    }
+  }
+}  /* STATE_MACHINE */
+

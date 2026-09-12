@@ -1,0 +1,4337 @@
+<RFCal_Data>
+	<!-- RFHWSW RELEASE ID =  -->
+	<!-- RF CHAR PARAM Revision = V1.0 -->
+	<!-- WCDMA B1 -->
+	<APTCharV3 rf_mode="9" device="0">
+		<APTTable channel="9750" pa_state="2" tx_purpose="0">
+			<APTRec pwr="27" vcc ="5500" icq ="32639" />
+			<APTRec pwr="24" vcc ="5500" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="5100" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4900" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="4650" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="4400" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="4150" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="4000" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3850" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="3600" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="3450" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="3250" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="2950" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="2750" icq ="32639" />
+			<APTRec pwr="8" vcc ="2600" icq ="32639" />
+		</APTTable>
+		<APTTable channel="9750" pa_state="1" tx_purpose="0">
+			<APTRec pwr="16" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2150" icq ="32639" />
+			<APTRec pwr="12" vcc ="2100" icq ="32639" />
+			<APTRec pwr="11" vcc ="2050" icq ="32639" />
+			<APTRec pwr="10" vcc ="2000" icq ="32639" />
+			<APTRec pwr="9" vcc ="1850" icq ="32639" />
+			<APTRec pwr="8" vcc ="1650" icq ="32639" />
+			<APTRec pwr="7" vcc ="1450" icq ="32639" />
+			<APTRec pwr="6" vcc ="1250" icq ="32639" />
+			<APTRec pwr="5" vcc ="1150" icq ="32639" />
+			<APTRec pwr="4" vcc ="1050" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="9750" pa_state="0" tx_purpose="0">
+			<APTRec pwr="5" vcc ="900" icq ="32639" />
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="3" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="0" vcc ="900" icq ="32639" />
+			<APTRec pwr="-4" vcc ="900" icq ="32639" />
+			<APTRec pwr="-6" vcc ="900" icq ="32639" />
+			<APTRec pwr="-8" vcc ="900" icq ="32639" />
+			<APTRec pwr="-10" vcc ="900" icq ="32639" />
+			<APTRec pwr="-12" vcc ="900" icq ="32639" />
+			<APTRec pwr="-14" vcc ="900" icq ="32639" />
+			<APTRec pwr="-16" vcc ="900" icq ="32639" />
+			<APTRec pwr="-40" vcc ="900" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- WCDMA B2 -->
+	<APTCharV3 rf_mode="16" device="0">
+		<APTTable channel="9482" pa_state="2" tx_purpose="0">
+			<APTRec pwr="27" vcc ="5500" icq ="32639" />
+			<APTRec pwr="24" vcc ="5500" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="5200" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4900" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="4600" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="4350" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="4050" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="3800" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3500" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="3350" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="3200" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="3000" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="2700" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="2400" icq ="32639" />
+			<APTRec pwr="8" vcc ="2300" icq ="32639" />
+		</APTTable>
+		<APTTable channel="9482" pa_state="1" tx_purpose="0">
+			<APTRec pwr="16" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="1950" icq ="32639" />
+			<APTRec pwr="10" vcc ="1900" icq ="32639" />
+			<APTRec pwr="9" vcc ="1850" icq ="32639" />
+			<APTRec pwr="8" vcc ="1650" icq ="32639" />
+			<APTRec pwr="7" vcc ="1450" icq ="32639" />
+			<APTRec pwr="6" vcc ="1250" icq ="32639" />
+			<APTRec pwr="5" vcc ="1100" icq ="32639" />
+			<APTRec pwr="4" vcc ="1050" icq ="32639" />
+			<APTRec pwr="3" vcc ="1050" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="9482" pa_state="0" tx_purpose="0">
+			<APTRec pwr="5" vcc ="900" icq ="32639" />
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="3" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-2" vcc ="900" icq ="32639" />
+			<APTRec pwr="-6" vcc ="900" icq ="32639" />
+			<APTRec pwr="-8" vcc ="900" icq ="32639" />
+			<APTRec pwr="-10" vcc ="900" icq ="32639" />
+			<APTRec pwr="-12" vcc ="900" icq ="32639" />
+			<APTRec pwr="-14" vcc ="900" icq ="32639" />
+			<APTRec pwr="-16" vcc ="900" icq ="32639" />
+			<APTRec pwr="-40" vcc ="900" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- WCDMA B3 -->
+	<APTCharV3 rf_mode="25" device="0">
+		<APTTable channel="1113" pa_state="2" tx_purpose="0">
+			<APTRec pwr="27" vcc ="5500" icq ="32896" />
+			<APTRec pwr="24" vcc ="5500" icq ="32896" />
+			<APTRec pwr="23" vcc ="5200" icq ="32896" />
+			<APTRec pwr="22" vcc ="4900" icq ="32896" />
+			<APTRec pwr="21" vcc ="4600" icq ="32896" />
+			<APTRec pwr="20" vcc ="4400" icq ="32896" />
+			<APTRec pwr="19" vcc ="4200" icq ="32896" />
+			<APTRec pwr="18" vcc ="4000" icq ="32896" />
+			<APTRec pwr="17" vcc ="3900" icq ="32896" />
+			<APTRec pwr="16" vcc ="3750" icq ="32896" />
+			<APTRec pwr="15" vcc ="3550" icq ="32896" />
+			<APTRec pwr="14" vcc ="3450" icq ="32896" />
+			<APTRec pwr="13" vcc ="3250" icq ="32896" />
+			<APTRec pwr="12" vcc ="3000" icq ="32896" />
+			<APTRec pwr="11" vcc ="2900" icq ="32896" />
+			<APTRec pwr="10" vcc ="2750" icq ="32896" />
+			<APTRec pwr="0" vcc ="2550" icq ="32896" />
+		</APTTable>
+		<APTTable channel="1113" pa_state="1" tx_purpose="0">
+			<APTRec pwr="15" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="1950" icq ="32639" />
+			<APTRec pwr="10" vcc ="1900" icq ="32639" />
+			<APTRec pwr="9" vcc ="1850" icq ="32639" />
+			<APTRec pwr="8" vcc ="1650" icq ="32639" />
+			<APTRec pwr="7" vcc ="1450" icq ="32639" />
+			<APTRec pwr="6" vcc ="1300" icq ="32639" />
+			<APTRec pwr="5" vcc ="1200" icq ="32639" />
+			<APTRec pwr="4" vcc ="1100" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="1113" pa_state="0" tx_purpose="0">
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="1.5" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-0.5" vcc ="900" icq ="32639" />
+			<APTRec pwr="-1.8" vcc ="900" icq ="32639" />
+			<APTRec pwr="-3" vcc ="900" icq ="32639" />
+			<APTRec pwr="-4.4" vcc ="900" icq ="32639" />
+			<APTRec pwr="-5.7" vcc ="900" icq ="32639" />
+			<APTRec pwr="-6.9" vcc ="900" icq ="32639" />
+			<APTRec pwr="-8.1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-9.5" vcc ="900" icq ="32639" />
+			<APTRec pwr="-40" vcc ="900" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- WCDMA B4 -->
+	<APTCharV3 rf_mode="28" device="0">
+		<APTTable channel="1471" pa_state="2" tx_purpose="0">
+			<APTRec pwr="27" vcc ="5100" icq ="32639" />
+			<APTRec pwr="24" vcc ="5100" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="4900" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4600" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="4350" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="4150" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="3950" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="3700" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3400" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="3150" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="2900" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="2700" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="2600" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="2450" icq ="32639" />
+			<APTRec pwr="8" vcc ="2450" icq ="32639" />
+		</APTTable>
+		<APTTable channel="1471" pa_state="1" tx_purpose="0">
+			<APTRec pwr="16" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="1900" icq ="32639" />
+			<APTRec pwr="10" vcc ="1850" icq ="32639" />
+			<APTRec pwr="9" vcc ="1700" icq ="32639" />
+			<APTRec pwr="8" vcc ="1550" icq ="32639" />
+			<APTRec pwr="7" vcc ="1350" icq ="32639" />
+			<APTRec pwr="6" vcc ="1150" icq ="32639" />
+			<APTRec pwr="5" vcc ="1150" icq ="32639" />
+			<APTRec pwr="4" vcc ="1050" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="1471" pa_state="0" tx_purpose="0">
+			<APTRec pwr="5.9" vcc ="900" icq ="32639" />
+			<APTRec pwr="4.8" vcc ="900" icq ="32639" />
+			<APTRec pwr="3.9" vcc ="900" icq ="32639" />
+			<APTRec pwr="3" vcc ="900" icq ="32639" />
+			<APTRec pwr="2.4" vcc ="900" icq ="32639" />
+			<APTRec pwr="1.5" vcc ="900" icq ="32639" />
+			<APTRec pwr="0.4" vcc ="900" icq ="32639" />
+			<APTRec pwr="-0.8" vcc ="900" icq ="32639" />
+			<APTRec pwr="-1.7" vcc ="900" icq ="32639" />
+			<APTRec pwr="-2.5" vcc ="900" icq ="32639" />
+			<APTRec pwr="-3.6" vcc ="900" icq ="32639" />
+			<APTRec pwr="-4.6" vcc ="900" icq ="32639" />
+			<APTRec pwr="-6.1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-7.3" vcc ="900" icq ="32639" />
+			<APTRec pwr="-8.6" vcc ="900" icq ="32639" />
+			<APTRec pwr="-30" vcc ="900" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- WCDMA B5 -->
+	<APTCharV3 rf_mode="22" device="0">
+		<APTTable channel="4175" pa_state="2" tx_purpose="0">
+			<APTRec pwr="27" vcc ="5100" icq ="32639" />
+			<APTRec pwr="24" vcc ="5100" icq ="32639" />
+			<APTRec pwr="23" vcc ="4850" icq ="32639" />
+			<APTRec pwr="22" vcc ="4550" icq ="32639" />
+			<APTRec pwr="21" vcc ="4250" icq ="32639" />
+			<APTRec pwr="20" vcc ="4000" icq ="32639" />
+			<APTRec pwr="19" vcc ="3950" icq ="32639" />
+			<APTRec pwr="18" vcc ="3750" icq ="32639" />
+			<APTRec pwr="17" vcc ="3400" icq ="32639" />
+			<APTRec pwr="16" vcc ="3100" icq ="32639" />
+			<APTRec pwr="15" vcc ="2800" icq ="32639" />
+			<APTRec pwr="14" vcc ="2500" icq ="32639" />
+			<APTRec pwr="13" vcc ="2200" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="1950" icq ="32639" />
+			<APTRec pwr="10" vcc ="1900" icq ="32639" />
+			<APTRec pwr="8" vcc ="1900" icq ="32639" />
+			<APTRec pwr="7" vcc ="1900" icq ="32639" />
+		</APTTable>
+		<APTTable channel="4175" pa_state="1" tx_purpose="0">
+			<APTRec pwr="16" vcc ="2200" icq ="32639" />
+			<APTRec pwr="15" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="1900" icq ="32639" />
+			<APTRec pwr="12" vcc ="1700" icq ="32639" />
+			<APTRec pwr="11" vcc ="1650" icq ="32639" />
+			<APTRec pwr="10" vcc ="1650" icq ="32639" />
+			<APTRec pwr="9" vcc ="1650" icq ="32639" />
+			<APTRec pwr="8" vcc ="1600" icq ="32639" />
+			<APTRec pwr="7" vcc ="1600" icq ="32639" />
+			<APTRec pwr="6" vcc ="1600" icq ="32639" />
+			<APTRec pwr="5" vcc ="1600" icq ="32639" />
+			<APTRec pwr="4" vcc ="1600" icq ="32639" />
+			<APTRec pwr="3" vcc ="1600" icq ="32639" />
+			<APTRec pwr="2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1350" icq ="32639" />
+			<APTRec pwr="0" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="4175" pa_state="0" tx_purpose="0">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2.2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1.4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0.1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1.4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-6" vcc ="900" icq ="32639" />
+			<APTRec pwr="-8" vcc ="900" icq ="32639" />
+			<APTRec pwr="-10" vcc ="900" icq ="32639" />
+			<APTRec pwr="-12" vcc ="900" icq ="32639" />
+			<APTRec pwr="-14" vcc ="900" icq ="32639" />
+			<APTRec pwr="-16" vcc ="900" icq ="32639" />
+			<APTRec pwr="-30" vcc ="900" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- WCDMA B8 -->
+	<APTCharV3 rf_mode="29" device="0">
+		<APTTable channel="2788" pa_state="2" tx_purpose="0">
+			<APTRec pwr="27" vcc ="5100" icq ="32896" />
+			<APTRec pwr="24" vcc ="5100" icq ="32896" />
+			<APTRec pwr="23" vcc ="4950" icq ="32896" />
+			<APTRec pwr="22" vcc ="4800" icq ="32896" />
+			<APTRec pwr="21" vcc ="4700" icq ="32896" />
+			<APTRec pwr="20" vcc ="4400" icq ="32896" />
+			<APTRec pwr="19" vcc ="4100" icq ="32896" />
+			<APTRec pwr="18" vcc ="3800" icq ="32896" />
+			<APTRec pwr="17" vcc ="3500" icq ="32896" />
+			<APTRec pwr="16" vcc ="3250" icq ="32896" />
+			<APTRec pwr="15" vcc ="3000" icq ="32896" />
+			<APTRec pwr="14" vcc ="2850" icq ="32896" />
+			<APTRec pwr="13" vcc ="2750" icq ="32896" />
+			<APTRec pwr="12" vcc ="2600" icq ="32896" />
+			<APTRec pwr="11" vcc ="2400" icq ="32896" />
+			<APTRec pwr="10" vcc ="2200" icq ="32896" />
+			<APTRec pwr="8" vcc ="2000" icq ="32896" />
+			<APTRec pwr="7" vcc ="2000" icq ="32896" />
+		</APTTable>
+		<APTTable channel="2788" pa_state="1" tx_purpose="0">
+			<APTRec pwr="14.4" vcc ="2100" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="1900" icq ="32639" />
+			<APTRec pwr="8.6" vcc ="1800" icq ="32639" />
+			<APTRec pwr="7.7" vcc ="1700" icq ="32639" />
+			<APTRec pwr="6.6" vcc ="1650" icq ="32639" />
+			<APTRec pwr="5.3" vcc ="1600" icq ="32639" />
+			<APTRec pwr="4.2" vcc ="1550" icq ="32639" />
+			<APTRec pwr="3.5" vcc ="1500" icq ="32639" />
+			<APTRec pwr="2.2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1.5" vcc ="1450" icq ="32639" />
+			<APTRec pwr="1" vcc ="1350" icq ="32639" />
+			<APTRec pwr="0" vcc ="1350" icq ="32639" />
+			<APTRec pwr="-3" vcc ="1300" icq ="32639" />
+			<APTRec pwr="-7" vcc ="1200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="2788" pa_state="0" tx_purpose="0">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2.2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1.4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0.1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1.4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-6" vcc ="900" icq ="32639" />
+			<APTRec pwr="-8" vcc ="900" icq ="32639" />
+			<APTRec pwr="-10" vcc ="900" icq ="32639" />
+			<APTRec pwr="-12" vcc ="900" icq ="32639" />
+			<APTRec pwr="-14" vcc ="900" icq ="32639" />
+			<APTRec pwr="-16" vcc ="900" icq ="32639" />
+			<APTRec pwr="-30" vcc ="900" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- WCDMA B9 -->
+	<APTCharV3 rf_mode="31" device="0">
+		<APTTable channel="8840" pa_state="2" tx_purpose="0">
+			<APTRec pwr="27" vcc ="5500" icq ="32879" />
+			<APTRec pwr="24" vcc ="5500" icq ="32879" />
+			<APTRec pwr="23" vcc ="5200" icq ="32879" />
+			<APTRec pwr="22" vcc ="4900" icq ="32879" />
+			<APTRec pwr="21" vcc ="4600" icq ="32879" />
+			<APTRec pwr="20" vcc ="4400" icq ="32879" />
+			<APTRec pwr="19" vcc ="4200" icq ="32879" />
+			<APTRec pwr="18" vcc ="4000" icq ="32879" />
+			<APTRec pwr="17" vcc ="3900" icq ="32879" />
+			<APTRec pwr="16" vcc ="3750" icq ="32879" />
+			<APTRec pwr="15" vcc ="3550" icq ="32879" />
+			<APTRec pwr="14" vcc ="3450" icq ="32879" />
+			<APTRec pwr="13" vcc ="3250" icq ="32879" />
+			<APTRec pwr="12" vcc ="3000" icq ="32879" />
+			<APTRec pwr="11" vcc ="2900" icq ="32879" />
+			<APTRec pwr="10" vcc ="2750" icq ="32879" />
+			<APTRec pwr="0" vcc ="2550" icq ="32879" />
+		</APTTable>
+		<APTTable channel="8840" pa_state="1" tx_purpose="0">
+			<APTRec pwr="15" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="1950" icq ="32639" />
+			<APTRec pwr="10" vcc ="1900" icq ="32639" />
+			<APTRec pwr="9" vcc ="1850" icq ="32639" />
+			<APTRec pwr="8" vcc ="1650" icq ="32639" />
+			<APTRec pwr="7" vcc ="1450" icq ="32639" />
+			<APTRec pwr="6" vcc ="1300" icq ="32639" />
+			<APTRec pwr="5" vcc ="1200" icq ="32639" />
+			<APTRec pwr="4" vcc ="1100" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="8840" pa_state="0" tx_purpose="0">
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="1.5" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-0.5" vcc ="900" icq ="32639" />
+			<APTRec pwr="-1.8" vcc ="900" icq ="32639" />
+			<APTRec pwr="-3" vcc ="900" icq ="32639" />
+			<APTRec pwr="-4.4" vcc ="900" icq ="32639" />
+			<APTRec pwr="-5.7" vcc ="900" icq ="32639" />
+			<APTRec pwr="-6.9" vcc ="900" icq ="32639" />
+			<APTRec pwr="-8.1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-9.5" vcc ="900" icq ="32639" />
+			<APTRec pwr="-40" vcc ="900" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- WCDMA B11 -->
+	<APTCharV3 rf_mode="40" device="0">
+		<APTTable channel="3537" pa_state="2" tx_purpose="0">
+			<APTRec pwr="25" vcc ="3400" icq ="32639" />
+			<APTRec pwr="24" vcc ="3400" icq ="32639" />
+			<APTRec pwr="23" vcc ="3400" icq ="32639" />
+			<APTRec pwr="22" vcc ="3400" icq ="32639" />
+			<APTRec pwr="21" vcc ="3300" icq ="32639" />
+			<APTRec pwr="20" vcc ="2900" icq ="32639" />
+			<APTRec pwr="19" vcc ="2700" icq ="32639" />
+			<APTRec pwr="18" vcc ="2500" icq ="32639" />
+			<APTRec pwr="17" vcc ="2400" icq ="32639" />
+			<APTRec pwr="16" vcc ="2300" icq ="32639" />
+			<APTRec pwr="15" vcc ="2100" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="1900" icq ="32639" />
+			<APTRec pwr="12" vcc ="1900" icq ="32639" />
+			<APTRec pwr="11" vcc ="1800" icq ="32639" />
+			<APTRec pwr="10" vcc ="1700" icq ="32639" />
+			<APTRec pwr="9" vcc ="1700" icq ="32639" />
+			<APTRec pwr="8" vcc ="1700" icq ="32639" />
+		</APTTable>
+		<APTTable channel="3537" pa_state="1" tx_purpose="0">
+			<APTRec pwr="16" vcc ="1600" icq ="32639" />
+			<APTRec pwr="15" vcc ="1600" icq ="32639" />
+			<APTRec pwr="14" vcc ="1600" icq ="32639" />
+			<APTRec pwr="13" vcc ="1600" icq ="32639" />
+			<APTRec pwr="12" vcc ="1600" icq ="32639" />
+			<APTRec pwr="11" vcc ="1500" icq ="32639" />
+			<APTRec pwr="10" vcc ="1500" icq ="32639" />
+			<APTRec pwr="9" vcc ="1500" icq ="32639" />
+			<APTRec pwr="8" vcc ="1500" icq ="32639" />
+			<APTRec pwr="7" vcc ="1500" icq ="32639" />
+			<APTRec pwr="6" vcc ="1400" icq ="32639" />
+			<APTRec pwr="5" vcc ="1400" icq ="32639" />
+			<APTRec pwr="4" vcc ="1400" icq ="32639" />
+			<APTRec pwr="3" vcc ="1300" icq ="32639" />
+			<APTRec pwr="2" vcc ="1300" icq ="32639" />
+			<APTRec pwr="1" vcc ="1300" icq ="32639" />
+			<APTRec pwr="0" vcc ="1300" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="3537" pa_state="0" tx_purpose="0">
+			<APTRec pwr="6" vcc ="800" icq ="32639" />
+			<APTRec pwr="4" vcc ="800" icq ="32639" />
+			<APTRec pwr="2" vcc ="800" icq ="32639" />
+			<APTRec pwr="1" vcc ="800" icq ="32639" />
+			<APTRec pwr="0" vcc ="800" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- CDMA BC0 -->
+	<APTCharV3 rf_mode="5" device="0">
+		<APTTable channel="358" pa_state="2" tx_purpose="0">
+			<APTRec pwr="27" vcc ="5100" icq ="32896" />
+			<APTRec pwr="24.5" vcc ="5100" icq ="32896" />
+			<APTRec pwr="23.4" vcc ="4800" icq ="32896" />
+			<APTRec pwr="22.4" vcc ="4500" icq ="32896" />
+			<APTRec pwr="21.3" vcc ="4200" icq ="32896" />
+			<APTRec pwr="20.2" vcc ="3900" icq ="32896" />
+			<APTRec pwr="18.8" vcc ="3600" icq ="32896" />
+			<APTRec pwr="17.8" vcc ="3400" icq ="32896" />
+			<APTRec pwr="16.8" vcc ="3200" icq ="32896" />
+			<APTRec pwr="15.8" vcc ="3200" icq ="32896" />
+			<APTRec pwr="15.2" vcc ="2862" icq ="32896" />
+			<APTRec pwr="13.8" vcc ="2578" icq ="32896" />
+			<APTRec pwr="12.7" vcc ="2387" icq ="32896" />
+			<APTRec pwr="12" vcc ="2287" icq ="32896" />
+			<APTRec pwr="11" vcc ="2287" icq ="32896" />
+			<APTRec pwr="10" vcc ="2287" icq ="32896" />
+		</APTTable>
+		<APTTable channel="358" pa_state="1" tx_purpose="0">
+			<APTRec pwr="12.1" vcc ="2200" icq ="32639" />
+			<APTRec pwr="11.3" vcc ="2131" icq ="32639" />
+			<APTRec pwr="9.6" vcc ="2050" icq ="32639" />
+			<APTRec pwr="8.5" vcc ="2000" icq ="32639" />
+			<APTRec pwr="7.4" vcc ="2000" icq ="32639" />
+			<APTRec pwr="6.3" vcc ="1880" icq ="32639" />
+			<APTRec pwr="5.3" vcc ="1800" icq ="32639" />
+			<APTRec pwr="4.1" vcc ="1727" icq ="32639" />
+			<APTRec pwr="3.1" vcc ="1600" icq ="32639" />
+			<APTRec pwr="1.4" vcc ="1600" icq ="32639" />
+			<APTRec pwr="1" vcc ="1600" icq ="32639" />
+			<APTRec pwr="0.7" vcc ="1600" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1600" icq ="32639" />
+			<APTRec pwr="-3.1" vcc ="1600" icq ="32639" />
+		</APTTable>
+		<APTTable channel="358" pa_state="0" tx_purpose="0">
+			<APTRec pwr="6.2" vcc ="800" icq ="32384" />
+			<APTRec pwr="5" vcc ="800" icq ="32384" />
+			<APTRec pwr="3.9" vcc ="800" icq ="32384" />
+			<APTRec pwr="3.2" vcc ="800" icq ="32384" />
+			<APTRec pwr="1.8" vcc ="800" icq ="32384" />
+			<APTRec pwr="1" vcc ="800" icq ="32384" />
+			<APTRec pwr="0" vcc ="800" icq ="32384" />
+			<APTRec pwr="-1" vcc ="800" icq ="32384" />
+			<APTRec pwr="-2" vcc ="800" icq ="32384" />
+			<APTRec pwr="-3" vcc ="800" icq ="32384" />
+			<APTRec pwr="-4" vcc ="800" icq ="32384" />
+			<APTRec pwr="-5" vcc ="800" icq ="32384" />
+			<APTRec pwr="-6" vcc ="800" icq ="32384" />
+			<APTRec pwr="-7" vcc ="800" icq ="32384" />
+			<APTRec pwr="-8" vcc ="800" icq ="32384" />
+			<APTRec pwr="-9" vcc ="800" icq ="32384" />
+			<APTRec pwr="-10" vcc ="800" icq ="32384" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B1 -->
+	<APTCharV3 rf_mode="34" device="0">
+		<APTTable channel="18450" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="5100" icq ="32639" />
+			<APTRec pwr="24" vcc ="5100" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="5100" icq ="32639" />
+			<APTRec pwr="22.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="21" vcc ="4800" icq ="32639" />
+			<APTRec pwr="20" vcc ="4600" icq ="32639" />
+			<APTRec pwr="19" vcc ="4300" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="4000" icq ="32639" />
+			<APTRec pwr="16.6" vcc ="3700" icq ="32639" />
+			<APTRec pwr="16" vcc ="3600" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3400" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="3100" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="2800" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="2600" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="2400" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="2300" icq ="32639" />
+			<APTRec pwr="9" vcc ="2250" icq ="32639" />
+			<APTRec pwr="8" vcc ="2200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="18450" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="12.9" vcc ="2200" icq ="32639" />
+			<APTRec pwr="11.6" vcc ="2200" icq ="32639" />
+			<APTRec pwr="11" vcc ="2200" icq ="32639" />
+			<APTRec pwr="10.3" vcc ="2170" icq ="32639" />
+			<APTRec pwr="9.4" vcc ="2148" icq ="32639" />
+			<APTRec pwr="8.2" vcc ="2136" icq ="32639" />
+			<APTRec pwr="7.2" vcc ="2106" icq ="32639" />
+			<APTRec pwr="6" vcc ="1850" icq ="32639" />
+			<APTRec pwr="5" vcc ="1600" icq ="32639" />
+			<APTRec pwr="4" vcc ="1480" icq ="32639" />
+			<APTRec pwr="3" vcc ="1400" icq ="32639" />
+			<APTRec pwr="2" vcc ="1400" icq ="32639" />
+			<APTRec pwr="1" vcc ="1350" icq ="32639" />
+			<APTRec pwr="0" vcc ="1300" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="18450" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="800" icq ="32639" />
+			<APTRec pwr="4" vcc ="800" icq ="32639" />
+			<APTRec pwr="2.9" vcc ="800" icq ="32639" />
+			<APTRec pwr="1.8" vcc ="800" icq ="32639" />
+			<APTRec pwr="0.7" vcc ="800" icq ="32639" />
+			<APTRec pwr="0" vcc ="800" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-12" vcc ="800" icq ="32639" />
+			<APTRec pwr="-14" vcc ="800" icq ="32639" />
+			<APTRec pwr="-16" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B2 -->
+	<APTCharV3 rf_mode="43" device="0">
+		<APTTable channel="19064" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="5100" icq ="32639" />
+			<APTRec pwr="24" vcc ="5100" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="5100" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4800" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="4500" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="4200" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="3900" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="3600" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3300" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="3000" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="2800" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="2500" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="2200" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="1900" icq ="32639" />
+			<APTRec pwr="9" vcc ="1800" icq ="32639" />
+			<APTRec pwr="8" vcc ="1600" icq ="32639" />
+		</APTTable>
+		<APTTable channel="19064" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2120" icq ="32639" />
+			<APTRec pwr="12" vcc ="1950" icq ="32639" />
+			<APTRec pwr="11" vcc ="1800" icq ="32639" />
+			<APTRec pwr="10" vcc ="1750" icq ="32639" />
+			<APTRec pwr="9" vcc ="1680" icq ="32639" />
+			<APTRec pwr="8" vcc ="1600" icq ="32639" />
+			<APTRec pwr="7" vcc ="1500" icq ="32639" />
+			<APTRec pwr="6" vcc ="1450" icq ="32639" />
+			<APTRec pwr="5" vcc ="1370" icq ="32639" />
+			<APTRec pwr="4" vcc ="1200" icq ="32639" />
+			<APTRec pwr="3" vcc ="1100" icq ="32639" />
+			<APTRec pwr="2" vcc ="1050" icq ="32639" />
+			<APTRec pwr="1" vcc ="990" icq ="32639" />
+		</APTTable>
+		<APTTable channel="19064" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="800" icq ="32639" />
+			<APTRec pwr="4" vcc ="800" icq ="32639" />
+			<APTRec pwr="3" vcc ="800" icq ="32639" />
+			<APTRec pwr="2" vcc ="800" icq ="32639" />
+			<APTRec pwr="1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-12" vcc ="800" icq ="32639" />
+			<APTRec pwr="-14" vcc ="800" icq ="32639" />
+			<APTRec pwr="-16" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B3 -->
+	<APTCharV3 rf_mode="44" device="0">
+		<APTTable channel="19897" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="4900" icq ="32639" />
+			<APTRec pwr="24" vcc ="4900" icq ="32639" />
+			<APTRec pwr="23" vcc ="4750" icq ="32639" />
+			<APTRec pwr="22" vcc ="4600" icq ="32639" />
+			<APTRec pwr="21" vcc ="4400" icq ="32639" />
+			<APTRec pwr="20" vcc ="4200" icq ="32639" />
+			<APTRec pwr="19" vcc ="4000" icq ="32639" />
+			<APTRec pwr="18" vcc ="3800" icq ="32639" />
+			<APTRec pwr="17" vcc ="3550" icq ="32639" />
+			<APTRec pwr="16" vcc ="3300" icq ="32639" />
+			<APTRec pwr="15" vcc ="3050" icq ="32639" />
+			<APTRec pwr="14" vcc ="2900" icq ="32639" />
+			<APTRec pwr="13" vcc ="2700" icq ="32639" />
+			<APTRec pwr="12" vcc ="2500" icq ="32639" />
+			<APTRec pwr="11" vcc ="2300" icq ="32639" />
+			<APTRec pwr="10" vcc ="2200" icq ="32639" />
+			<APTRec pwr="9" vcc ="2200" icq ="32639" />
+			<APTRec pwr="8" vcc ="2100" icq ="32639" />
+			<APTRec pwr="0" vcc ="2100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="19897" pa_state="6" tx_purpose="205">
+			<APTRec pwr="26" vcc ="4900" icq ="32639" />
+			<APTRec pwr="24" vcc ="4900" icq ="32639" />
+			<APTRec pwr="23" vcc ="4750" icq ="32639" />
+			<APTRec pwr="22" vcc ="4600" icq ="32639" />
+			<APTRec pwr="21" vcc ="4400" icq ="32639" />
+			<APTRec pwr="20" vcc ="4200" icq ="32639" />
+			<APTRec pwr="19" vcc ="4000" icq ="32639" />
+			<APTRec pwr="18" vcc ="3800" icq ="32639" />
+			<APTRec pwr="17" vcc ="3550" icq ="32639" />
+			<APTRec pwr="16" vcc ="3300" icq ="32639" />
+			<APTRec pwr="15" vcc ="3050" icq ="32639" />
+			<APTRec pwr="14" vcc ="2900" icq ="32639" />
+			<APTRec pwr="13" vcc ="2700" icq ="32639" />
+			<APTRec pwr="12" vcc ="2500" icq ="32639" />
+			<APTRec pwr="11" vcc ="2300" icq ="32639" />
+			<APTRec pwr="10" vcc ="2200" icq ="32639" />
+			<APTRec pwr="9" vcc ="2200" icq ="32639" />
+			<APTRec pwr="8" vcc ="2100" icq ="32639" />
+			<APTRec pwr="0" vcc ="2100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="19897" pa_state="1" tx_purpose="1">
+			<APTRec pwr="15" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2200" icq ="32639" />
+			<APTRec pwr="12" vcc ="2200" icq ="32639" />
+			<APTRec pwr="11.1" vcc ="2153" icq ="32639" />
+			<APTRec pwr="10" vcc ="2015" icq ="32639" />
+			<APTRec pwr="9" vcc ="2000" icq ="32639" />
+			<APTRec pwr="8.1" vcc ="1980" icq ="32639" />
+			<APTRec pwr="6.9" vcc ="1900" icq ="32639" />
+			<APTRec pwr="5.6" vcc ="1800" icq ="32639" />
+			<APTRec pwr="4.8" vcc ="1700" icq ="32639" />
+			<APTRec pwr="3.9" vcc ="1600" icq ="32639" />
+			<APTRec pwr="2.8" vcc ="1514" icq ="32639" />
+			<APTRec pwr="1.5" vcc ="1425" icq ="32639" />
+			<APTRec pwr="1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="0" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="19897" pa_state="5" tx_purpose="205">
+			<APTRec pwr="15" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2200" icq ="32639" />
+			<APTRec pwr="12" vcc ="2200" icq ="32639" />
+			<APTRec pwr="11.1" vcc ="2153" icq ="32639" />
+			<APTRec pwr="10" vcc ="2015" icq ="32639" />
+			<APTRec pwr="9" vcc ="2000" icq ="32639" />
+			<APTRec pwr="8.1" vcc ="1980" icq ="32639" />
+			<APTRec pwr="6.9" vcc ="1900" icq ="32639" />
+			<APTRec pwr="5.6" vcc ="1800" icq ="32639" />
+			<APTRec pwr="4.8" vcc ="1700" icq ="32639" />
+			<APTRec pwr="3.9" vcc ="1600" icq ="32639" />
+			<APTRec pwr="2.8" vcc ="1514" icq ="32639" />
+			<APTRec pwr="1.5" vcc ="1425" icq ="32639" />
+			<APTRec pwr="1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="0" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="19897" pa_state="0" tx_purpose="1">
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="850" icq ="32639" />
+			<APTRec pwr="0" vcc ="800" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="800" icq ="32639" />
+		</APTTable>
+		<APTTable channel="19897" pa_state="4" tx_purpose="205">
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="850" icq ="32639" />
+			<APTRec pwr="0" vcc ="800" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B4 -->
+	<APTCharV3 rf_mode="42" device="0">
+		<APTTable channel="20160" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="4900" icq ="32639" />
+			<APTRec pwr="24" vcc ="4900" icq ="32639" />
+			<APTRec pwr="23" vcc ="4900" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="4700" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4400" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="4100" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="4000" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="3800" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="3700" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3500" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="3300" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="3200" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="3000" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="2700" icq ="32639" />
+			<APTRec pwr="10" vcc ="2600" icq ="32639" />
+			<APTRec pwr="9" vcc ="2500" icq ="32639" />
+			<APTRec pwr="8" vcc ="2300" icq ="32639" />
+		</APTTable>
+		<APTTable channel="20160" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2124" icq ="32639" />
+			<APTRec pwr="12" vcc ="2100" icq ="32639" />
+			<APTRec pwr="11" vcc ="1900" icq ="32639" />
+			<APTRec pwr="10" vcc ="1890" icq ="32639" />
+			<APTRec pwr="9" vcc ="1850" icq ="32639" />
+			<APTRec pwr="8" vcc ="1800" icq ="32639" />
+			<APTRec pwr="7" vcc ="1762" icq ="32639" />
+			<APTRec pwr="6" vcc ="1743" icq ="32639" />
+			<APTRec pwr="5" vcc ="1675" icq ="32639" />
+			<APTRec pwr="4" vcc ="1650" icq ="32639" />
+			<APTRec pwr="3" vcc ="1600" icq ="32639" />
+			<APTRec pwr="2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1500" icq ="32639" />
+			<APTRec pwr="0" vcc ="1500" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1500" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1500" icq ="32639" />
+		</APTTable>
+		<APTTable channel="20160" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5.9" vcc ="900" icq ="32639" />
+			<APTRec pwr="4.8" vcc ="900" icq ="32639" />
+			<APTRec pwr="3.9" vcc ="900" icq ="32639" />
+			<APTRec pwr="3" vcc ="860" icq ="32639" />
+			<APTRec pwr="2" vcc ="850" icq ="32639" />
+			<APTRec pwr="1" vcc ="850" icq ="32639" />
+			<APTRec pwr="0" vcc ="840" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-30" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B5 -->
+	<APTCharV3 rf_mode="45" device="0">
+		<APTTable channel="20512" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="4700" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23" vcc ="4700" icq ="32639" />
+			<APTRec pwr="22" vcc ="4700" icq ="32639" />
+			<APTRec pwr="21.2" vcc ="4467" icq ="32639" />
+			<APTRec pwr="20.3" vcc ="4300" icq ="32639" />
+			<APTRec pwr="19.3" vcc ="4250" icq ="32639" />
+			<APTRec pwr="18.3" vcc ="4100" icq ="32639" />
+			<APTRec pwr="17.3" vcc ="4100" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="3950" icq ="32639" />
+			<APTRec pwr="15.4" vcc ="3700" icq ="32639" />
+			<APTRec pwr="14.1" vcc ="3500" icq ="32639" />
+			<APTRec pwr="12.8" vcc ="3500" icq ="32639" />
+			<APTRec pwr="12" vcc ="3450" icq ="32639" />
+			<APTRec pwr="11" vcc ="3350" icq ="32639" />
+			<APTRec pwr="10" vcc ="3300" icq ="32639" />
+			<APTRec pwr="9" vcc ="3200" icq ="32639" />
+			<APTRec pwr="8" vcc ="3200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="20512" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2000" icq ="32639" />
+			<APTRec pwr="15" vcc ="2000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11.3" vcc ="1975" icq ="32639" />
+			<APTRec pwr="10.3" vcc ="1965" icq ="32639" />
+			<APTRec pwr="9.3" vcc ="1953" icq ="32639" />
+			<APTRec pwr="8.2" vcc ="1900" icq ="32639" />
+			<APTRec pwr="7" vcc ="1895" icq ="32639" />
+			<APTRec pwr="5.9" vcc ="1866" icq ="32639" />
+			<APTRec pwr="4.9" vcc ="1700" icq ="32639" />
+			<APTRec pwr="4" vcc ="1600" icq ="32639" />
+			<APTRec pwr="3" vcc ="1550" icq ="32639" />
+			<APTRec pwr="2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1500" icq ="32639" />
+			<APTRec pwr="0" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="20512" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2.2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-12" vcc ="800" icq ="32639" />
+			<APTRec pwr="-14" vcc ="800" icq ="32639" />
+			<APTRec pwr="-16" vcc ="800" icq ="32639" />
+			<APTRec pwr="-30" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B7 -->
+	<APTCharV3 rf_mode="35" device="0">
+		<APTTable channel="21100" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="3900" icq ="32639" />
+			<APTRec pwr="24" vcc ="3900" icq ="32639" />
+			<APTRec pwr="23" vcc ="3900" icq ="32639" />
+			<APTRec pwr="22" vcc ="3700" icq ="32639" />
+			<APTRec pwr="21" vcc ="3500" icq ="32639" />
+			<APTRec pwr="20" vcc ="3300" icq ="32639" />
+			<APTRec pwr="19" vcc ="3100" icq ="32639" />
+			<APTRec pwr="18" vcc ="3000" icq ="32639" />
+			<APTRec pwr="17" vcc ="2896" icq ="32639" />
+			<APTRec pwr="16" vcc ="2600" icq ="32639" />
+			<APTRec pwr="15" vcc ="2400" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2016" icq ="32639" />
+			<APTRec pwr="12" vcc ="1800" icq ="32639" />
+			<APTRec pwr="11" vcc ="1500" icq ="32639" />
+			<APTRec pwr="10" vcc ="1200" icq ="32639" />
+			<APTRec pwr="9" vcc ="1100" icq ="32639" />
+			<APTRec pwr="8" vcc ="1100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="21100" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1555" icq ="32639" />
+			<APTRec pwr="12" vcc ="1300" icq ="32639" />
+			<APTRec pwr="11" vcc ="1100" icq ="32639" />
+			<APTRec pwr="10" vcc ="900" icq ="32639" />
+			<APTRec pwr="9" vcc ="900" icq ="32639" />
+			<APTRec pwr="8" vcc ="900" icq ="32639" />
+			<APTRec pwr="7" vcc ="900" icq ="32639" />
+			<APTRec pwr="6" vcc ="900" icq ="32639" />
+			<APTRec pwr="5" vcc ="900" icq ="32639" />
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="3" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="0" vcc ="900" icq ="32639" />
+			<APTRec pwr="-1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-10" vcc ="900" icq ="32639" />
+		</APTTable>
+		<APTTable channel="21100" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5.9" vcc ="700" icq ="30834" />
+			<APTRec pwr="4.4" vcc ="700" icq ="30834" />
+			<APTRec pwr="3.4" vcc ="700" icq ="30834" />
+			<APTRec pwr="3" vcc ="700" icq ="30834" />
+			<APTRec pwr="2" vcc ="700" icq ="30834" />
+			<APTRec pwr="1" vcc ="700" icq ="30834" />
+			<APTRec pwr="0" vcc ="700" icq ="30834" />
+			<APTRec pwr="-1" vcc ="700" icq ="30834" />
+			<APTRec pwr="-2" vcc ="700" icq ="30834" />
+			<APTRec pwr="-3" vcc ="700" icq ="30834" />
+			<APTRec pwr="-4" vcc ="700" icq ="30834" />
+			<APTRec pwr="-5" vcc ="700" icq ="30834" />
+			<APTRec pwr="-6" vcc ="700" icq ="30834" />
+			<APTRec pwr="-7" vcc ="700" icq ="30834" />
+			<APTRec pwr="-8" vcc ="700" icq ="30834" />
+			<APTRec pwr="-9" vcc ="700" icq ="30834" />
+			<APTRec pwr="-10" vcc ="700" icq ="30834" />
+			<APTRec pwr="-30" vcc ="700" icq ="30834" />
+		</APTTable>
+		<APTTable channel="21100" pa_state="6" tx_purpose="205">
+			<APTRec pwr="26" vcc ="3900" icq ="32639" />
+			<APTRec pwr="24" vcc ="3900" icq ="32639" />
+			<APTRec pwr="23" vcc ="3900" icq ="32639" />
+			<APTRec pwr="22" vcc ="3700" icq ="32639" />
+			<APTRec pwr="21" vcc ="3500" icq ="32639" />
+			<APTRec pwr="20" vcc ="3300" icq ="32639" />
+			<APTRec pwr="19" vcc ="3100" icq ="32639" />
+			<APTRec pwr="18" vcc ="3000" icq ="32639" />
+			<APTRec pwr="17" vcc ="2896" icq ="32639" />
+			<APTRec pwr="16" vcc ="2600" icq ="32639" />
+			<APTRec pwr="15" vcc ="2400" icq ="32639" />
+			<APTRec pwr="14" vcc ="2200" icq ="32639" />
+			<APTRec pwr="13" vcc ="2016" icq ="32639" />
+			<APTRec pwr="12" vcc ="1800" icq ="32639" />
+			<APTRec pwr="11" vcc ="1500" icq ="32639" />
+			<APTRec pwr="10" vcc ="1200" icq ="32639" />
+			<APTRec pwr="9" vcc ="1100" icq ="32639" />
+			<APTRec pwr="8" vcc ="1100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="21100" pa_state="5" tx_purpose="205">
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1555" icq ="32639" />
+			<APTRec pwr="12" vcc ="1300" icq ="32639" />
+			<APTRec pwr="11" vcc ="1100" icq ="32639" />
+			<APTRec pwr="10" vcc ="900" icq ="32639" />
+			<APTRec pwr="9" vcc ="900" icq ="32639" />
+			<APTRec pwr="8" vcc ="900" icq ="32639" />
+			<APTRec pwr="7" vcc ="900" icq ="32639" />
+			<APTRec pwr="6" vcc ="900" icq ="32639" />
+			<APTRec pwr="5" vcc ="900" icq ="32639" />
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="3" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="0" vcc ="900" icq ="32639" />
+			<APTRec pwr="-1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-10" vcc ="900" icq ="32639" />
+		</APTTable>
+		<APTTable channel="21100" pa_state="4" tx_purpose="205">
+			<APTRec pwr="5.9" vcc ="700" icq ="32639" />
+			<APTRec pwr="4.4" vcc ="700" icq ="32639" />
+			<APTRec pwr="3.4" vcc ="700" icq ="32639" />
+			<APTRec pwr="3" vcc ="700" icq ="32639" />
+			<APTRec pwr="2" vcc ="700" icq ="32639" />
+			<APTRec pwr="1" vcc ="700" icq ="32639" />
+			<APTRec pwr="0" vcc ="700" icq ="32639" />
+			<APTRec pwr="-1" vcc ="700" icq ="32639" />
+			<APTRec pwr="-2" vcc ="700" icq ="32639" />
+			<APTRec pwr="-3" vcc ="700" icq ="32639" />
+			<APTRec pwr="-4" vcc ="700" icq ="32639" />
+			<APTRec pwr="-5" vcc ="700" icq ="32639" />
+			<APTRec pwr="-6" vcc ="700" icq ="32639" />
+			<APTRec pwr="-7" vcc ="700" icq ="32639" />
+			<APTRec pwr="-8" vcc ="700" icq ="32639" />
+			<APTRec pwr="-9" vcc ="700" icq ="32639" />
+			<APTRec pwr="-10" vcc ="700" icq ="32639" />
+			<APTRec pwr="-30" vcc ="700" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B8 -->
+	<APTCharV3 rf_mode="47" device="0">
+		<APTTable channel="21625" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="4700" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23" vcc ="4700" icq ="32639" />
+			<APTRec pwr="22" vcc ="4686" icq ="32639" />
+			<APTRec pwr="21" vcc ="4536" icq ="32639" />
+			<APTRec pwr="20" vcc ="4355" icq ="32639" />
+			<APTRec pwr="19" vcc ="4200" icq ="32639" />
+			<APTRec pwr="18" vcc ="3900" icq ="32639" />
+			<APTRec pwr="17" vcc ="3600" icq ="32639" />
+			<APTRec pwr="16" vcc ="3300" icq ="32639" />
+			<APTRec pwr="15" vcc ="3000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2700" icq ="32639" />
+			<APTRec pwr="13" vcc ="2600" icq ="32639" />
+			<APTRec pwr="12" vcc ="2500" icq ="32639" />
+			<APTRec pwr="11" vcc ="2400" icq ="32639" />
+			<APTRec pwr="10" vcc ="2300" icq ="32639" />
+			<APTRec pwr="9" vcc ="2200" icq ="32639" />
+			<APTRec pwr="7" vcc ="2200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="21625" pa_state="1" tx_purpose="1">
+			<APTRec pwr="14.4" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="1990" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="1970" icq ="32639" />
+			<APTRec pwr="8.6" vcc ="1930" icq ="32639" />
+			<APTRec pwr="7.7" vcc ="1900" icq ="32639" />
+			<APTRec pwr="6.6" vcc ="1850" icq ="32639" />
+			<APTRec pwr="5.3" vcc ="1820" icq ="32639" />
+			<APTRec pwr="4.2" vcc ="1700" icq ="32639" />
+			<APTRec pwr="3.5" vcc ="1660" icq ="32639" />
+			<APTRec pwr="2.2" vcc ="1630" icq ="32639" />
+			<APTRec pwr="1.5" vcc ="1600" icq ="32639" />
+			<APTRec pwr="1" vcc ="1550" icq ="32639" />
+			<APTRec pwr="0" vcc ="1500" icq ="32639" />
+			<APTRec pwr="-3" vcc ="1500" icq ="32639" />
+			<APTRec pwr="-7" vcc ="1400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="21625" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="0" vcc ="850" icq ="32639" />
+			<APTRec pwr="-1" vcc ="840" icq ="32639" />
+			<APTRec pwr="-2" vcc ="820" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-12" vcc ="800" icq ="32639" />
+			<APTRec pwr="-14" vcc ="800" icq ="32639" />
+			<APTRec pwr="-16" vcc ="800" icq ="32639" />
+			<APTRec pwr="-30" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B11 -->
+	<APTCharV3 rf_mode="41" device="0">
+		<APTTable channel="22845" pa_state="2" tx_purpose="1">
+			<APTRec pwr="25" vcc ="3400" icq ="32639" />
+			<APTRec pwr="24" vcc ="3400" icq ="32639" />
+			<APTRec pwr="23" vcc ="3400" icq ="32639" />
+			<APTRec pwr="22" vcc ="3400" icq ="32639" />
+			<APTRec pwr="21" vcc ="3300" icq ="32639" />
+			<APTRec pwr="20" vcc ="2900" icq ="32639" />
+			<APTRec pwr="19" vcc ="2700" icq ="32639" />
+			<APTRec pwr="18" vcc ="2500" icq ="32639" />
+			<APTRec pwr="17" vcc ="2400" icq ="32639" />
+			<APTRec pwr="16" vcc ="2300" icq ="32639" />
+			<APTRec pwr="15" vcc ="2100" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="1900" icq ="32639" />
+			<APTRec pwr="12" vcc ="1900" icq ="32639" />
+			<APTRec pwr="11" vcc ="1800" icq ="32639" />
+			<APTRec pwr="10" vcc ="1700" icq ="32639" />
+			<APTRec pwr="9" vcc ="1700" icq ="32639" />
+			<APTRec pwr="8" vcc ="1700" icq ="32639" />
+		</APTTable>
+		<APTTable channel="22845" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="1600" icq ="32639" />
+			<APTRec pwr="15" vcc ="1600" icq ="32639" />
+			<APTRec pwr="14" vcc ="1600" icq ="32639" />
+			<APTRec pwr="13" vcc ="1600" icq ="32639" />
+			<APTRec pwr="12" vcc ="1600" icq ="32639" />
+			<APTRec pwr="11" vcc ="1500" icq ="32639" />
+			<APTRec pwr="10" vcc ="1500" icq ="32639" />
+			<APTRec pwr="9" vcc ="1500" icq ="32639" />
+			<APTRec pwr="8" vcc ="1500" icq ="32639" />
+			<APTRec pwr="7" vcc ="1500" icq ="32639" />
+			<APTRec pwr="6" vcc ="1400" icq ="32639" />
+			<APTRec pwr="5" vcc ="1400" icq ="32639" />
+			<APTRec pwr="4" vcc ="1400" icq ="32639" />
+			<APTRec pwr="3" vcc ="1300" icq ="32639" />
+			<APTRec pwr="2" vcc ="1300" icq ="32639" />
+			<APTRec pwr="1" vcc ="1300" icq ="32639" />
+			<APTRec pwr="0" vcc ="1300" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="22845" pa_state="0" tx_purpose="1">
+			<APTRec pwr="6" vcc ="800" icq ="32639" />
+			<APTRec pwr="4" vcc ="800" icq ="32639" />
+			<APTRec pwr="2" vcc ="800" icq ="32639" />
+			<APTRec pwr="1" vcc ="800" icq ="32639" />
+			<APTRec pwr="0" vcc ="800" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B18 -->
+	<APTCharV3 rf_mode="54" device="0">
+		<APTTable channel="23916" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="4700" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23" vcc ="4700" icq ="32639" />
+			<APTRec pwr="22" vcc ="4700" icq ="32639" />
+			<APTRec pwr="21" vcc ="4700" icq ="32639" />
+			<APTRec pwr="20" vcc ="4700" icq ="32639" />
+			<APTRec pwr="19" vcc ="4600" icq ="32639" />
+			<APTRec pwr="18" vcc ="4300" icq ="32639" />
+			<APTRec pwr="17" vcc ="4000" icq ="32639" />
+			<APTRec pwr="16" vcc ="3700" icq ="32639" />
+			<APTRec pwr="15" vcc ="3400" icq ="32639" />
+			<APTRec pwr="14" vcc ="3100" icq ="32639" />
+			<APTRec pwr="13" vcc ="2800" icq ="32639" />
+			<APTRec pwr="12" vcc ="2600" icq ="32639" />
+			<APTRec pwr="11" vcc ="2400" icq ="32639" />
+			<APTRec pwr="10" vcc ="2400" icq ="32639" />
+			<APTRec pwr="9" vcc ="2400" icq ="32639" />
+			<APTRec pwr="8" vcc ="2400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="23916" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2000" icq ="32639" />
+			<APTRec pwr="15" vcc ="2000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="1980" icq ="32639" />
+			<APTRec pwr="11" vcc ="1970" icq ="32639" />
+			<APTRec pwr="10" vcc ="1960" icq ="32639" />
+			<APTRec pwr="9" vcc ="1950" icq ="32639" />
+			<APTRec pwr="8" vcc ="1945" icq ="32639" />
+			<APTRec pwr="7" vcc ="1940" icq ="32639" />
+			<APTRec pwr="6" vcc ="1925" icq ="32639" />
+			<APTRec pwr="5" vcc ="1920" icq ="32639" />
+			<APTRec pwr="4" vcc ="1900" icq ="32639" />
+			<APTRec pwr="3" vcc ="1600" icq ="32639" />
+			<APTRec pwr="2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="0" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1650" icq ="32639" />
+		</APTTable>
+		<APTTable channel="23916" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2.2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="950" icq ="32639" />
+			<APTRec pwr="-1" vcc ="925" icq ="32639" />
+			<APTRec pwr="-2" vcc ="900" icq ="32639" />
+			<APTRec pwr="-3" vcc ="850" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-12" vcc ="800" icq ="32639" />
+			<APTRec pwr="-14" vcc ="800" icq ="32639" />
+			<APTRec pwr="-16" vcc ="800" icq ="32639" />
+			<APTRec pwr="-30" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B19 -->
+	<APTCharV3 rf_mode="55" device="0">
+		<APTTable channel="24066" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="4700" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23" vcc ="4700" icq ="32639" />
+			<APTRec pwr="22" vcc ="4400" icq ="32639" />
+			<APTRec pwr="21" vcc ="4100" icq ="32639" />
+			<APTRec pwr="20" vcc ="3800" icq ="32639" />
+			<APTRec pwr="19" vcc ="3500" icq ="32639" />
+			<APTRec pwr="18" vcc ="3400" icq ="32639" />
+			<APTRec pwr="17" vcc ="3100" icq ="32639" />
+			<APTRec pwr="16" vcc ="3400" icq ="32639" />
+			<APTRec pwr="15" vcc ="3100" icq ="32639" />
+			<APTRec pwr="14" vcc ="2800" icq ="32639" />
+			<APTRec pwr="13" vcc ="2600" icq ="32639" />
+			<APTRec pwr="12" vcc ="2400" icq ="32639" />
+			<APTRec pwr="11" vcc ="2300" icq ="32639" />
+			<APTRec pwr="10" vcc ="2300" icq ="32639" />
+			<APTRec pwr="9" vcc ="2200" icq ="32639" />
+			<APTRec pwr="8" vcc ="2200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="24066" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2000" icq ="32639" />
+			<APTRec pwr="15" vcc ="2000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="1800" icq ="32639" />
+			<APTRec pwr="10" vcc ="1800" icq ="32639" />
+			<APTRec pwr="9" vcc ="1700" icq ="32639" />
+			<APTRec pwr="8" vcc ="1700" icq ="32639" />
+			<APTRec pwr="7" vcc ="1700" icq ="32639" />
+			<APTRec pwr="6" vcc ="1600" icq ="32639" />
+			<APTRec pwr="5" vcc ="1600" icq ="32639" />
+			<APTRec pwr="4" vcc ="1500" icq ="32639" />
+			<APTRec pwr="3" vcc ="1500" icq ="32639" />
+			<APTRec pwr="2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="0" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="24066" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2.2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-12" vcc ="800" icq ="32639" />
+			<APTRec pwr="-14" vcc ="800" icq ="32639" />
+			<APTRec pwr="-16" vcc ="800" icq ="32639" />
+			<APTRec pwr="-30" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B20 -->
+	<APTCharV3 rf_mode="56" device="2">
+		<APTTable channel="24290" pa_state="2" tx_purpose="1">
+			<APTRec pwr="25" vcc ="4600" icq ="32639" />
+			<APTRec pwr="24" vcc ="4600" icq ="32639" />
+			<APTRec pwr="23" vcc ="4600" icq ="32639" />
+			<APTRec pwr="22" vcc ="4400" icq ="32639" />
+			<APTRec pwr="21" vcc ="4100" icq ="32639" />
+			<APTRec pwr="20" vcc ="3900" icq ="32639" />
+			<APTRec pwr="19" vcc ="3700" icq ="32639" />
+			<APTRec pwr="18" vcc ="3500" icq ="32639" />
+			<APTRec pwr="17" vcc ="3300" icq ="32639" />
+			<APTRec pwr="16" vcc ="3100" icq ="32639" />
+			<APTRec pwr="15" vcc ="2800" icq ="32639" />
+			<APTRec pwr="14" vcc ="2600" icq ="32639" />
+			<APTRec pwr="13" vcc ="2500" icq ="32639" />
+			<APTRec pwr="12" vcc ="2500" icq ="32639" />
+			<APTRec pwr="11" vcc ="2400" icq ="32639" />
+			<APTRec pwr="10" vcc ="2300" icq ="32639" />
+			<APTRec pwr="9" vcc ="2200" icq ="32639" />
+			<APTRec pwr="0" vcc ="2200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="24290" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2000" icq ="32639" />
+			<APTRec pwr="15" vcc ="2000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="1800" icq ="32639" />
+			<APTRec pwr="11" vcc ="1800" icq ="32639" />
+			<APTRec pwr="10" vcc ="1700" icq ="32639" />
+			<APTRec pwr="9" vcc ="1700" icq ="32639" />
+			<APTRec pwr="8" vcc ="1600" icq ="32639" />
+			<APTRec pwr="7" vcc ="1600" icq ="32639" />
+			<APTRec pwr="6" vcc ="1500" icq ="32639" />
+			<APTRec pwr="5" vcc ="1500" icq ="32639" />
+			<APTRec pwr="4" vcc ="1400" icq ="32639" />
+			<APTRec pwr="3" vcc ="1400" icq ="32639" />
+			<APTRec pwr="2" vcc ="1400" icq ="32639" />
+			<APTRec pwr="1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="0" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="24290" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3.9" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B21 -->
+	<APTCharV3 rf_mode="57" device="2">
+		<APTTable channel="24516" pa_state="2" tx_purpose="1">
+			<APTRec pwr="25" vcc ="3400" icq ="32639" />
+			<APTRec pwr="24" vcc ="3400" icq ="32639" />
+			<APTRec pwr="23" vcc ="3400" icq ="32639" />
+			<APTRec pwr="22" vcc ="3200" icq ="32639" />
+			<APTRec pwr="21" vcc ="3000" icq ="32639" />
+			<APTRec pwr="20" vcc ="2800" icq ="32639" />
+			<APTRec pwr="19" vcc ="2600" icq ="32639" />
+			<APTRec pwr="18" vcc ="2400" icq ="32639" />
+			<APTRec pwr="17" vcc ="2100" icq ="32639" />
+			<APTRec pwr="16" vcc ="1900" icq ="32639" />
+			<APTRec pwr="15" vcc ="1800" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1600" icq ="32639" />
+			<APTRec pwr="12" vcc ="1600" icq ="32639" />
+			<APTRec pwr="11" vcc ="1500" icq ="32639" />
+			<APTRec pwr="10" vcc ="1500" icq ="32639" />
+			<APTRec pwr="9" vcc ="1400" icq ="32639" />
+			<APTRec pwr="8" vcc ="1400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="24516" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="1600" icq ="32639" />
+			<APTRec pwr="15" vcc ="1600" icq ="32639" />
+			<APTRec pwr="14" vcc ="1600" icq ="32639" />
+			<APTRec pwr="13" vcc ="1600" icq ="32639" />
+			<APTRec pwr="12" vcc ="1600" icq ="32639" />
+			<APTRec pwr="11" vcc ="1600" icq ="32639" />
+			<APTRec pwr="10" vcc ="1600" icq ="32639" />
+			<APTRec pwr="9" vcc ="1500" icq ="32639" />
+			<APTRec pwr="8" vcc ="1500" icq ="32639" />
+			<APTRec pwr="7" vcc ="1400" icq ="32639" />
+			<APTRec pwr="6" vcc ="1400" icq ="32639" />
+			<APTRec pwr="5" vcc ="1400" icq ="32639" />
+			<APTRec pwr="4" vcc ="1300" icq ="32639" />
+			<APTRec pwr="3" vcc ="1300" icq ="32639" />
+			<APTRec pwr="2" vcc ="1300" icq ="32639" />
+			<APTRec pwr="1" vcc ="1300" icq ="32639" />
+			<APTRec pwr="0" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="24516" pa_state="0" tx_purpose="1">
+			<APTRec pwr="6" vcc ="800" icq ="32639" />
+			<APTRec pwr="5" vcc ="800" icq ="32639" />
+			<APTRec pwr="4" vcc ="800" icq ="32639" />
+			<APTRec pwr="3" vcc ="800" icq ="32639" />
+			<APTRec pwr="2" vcc ="800" icq ="32639" />
+			<APTRec pwr="1" vcc ="800" icq ="32639" />
+			<APTRec pwr="0" vcc ="800" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B26 -->
+	<APTCharV3 rf_mode="62" device="0">
+		<APTTable channel="26837" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="4700" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23" vcc ="4700" icq ="32639" />
+			<APTRec pwr="22" vcc ="4700" icq ="32639" />
+			<APTRec pwr="21" vcc ="4550" icq ="32639" />
+			<APTRec pwr="20.1" vcc ="4300" icq ="32639" />
+			<APTRec pwr="19.2" vcc ="4050" icq ="32639" />
+			<APTRec pwr="18.3" vcc ="3800" icq ="32639" />
+			<APTRec pwr="17.2" vcc ="3550" icq ="32639" />
+			<APTRec pwr="16.4" vcc ="3300" icq ="32639" />
+			<APTRec pwr="15.5" vcc ="3000" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="2700" icq ="32639" />
+			<APTRec pwr="12.9" vcc ="2500" icq ="32639" />
+			<APTRec pwr="12" vcc ="2450" icq ="32639" />
+			<APTRec pwr="11" vcc ="2400" icq ="32639" />
+			<APTRec pwr="10" vcc ="2300" icq ="32639" />
+			<APTRec pwr="9" vcc ="2250" icq ="32639" />
+			<APTRec pwr="8" vcc ="2200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="26837" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2000" icq ="32639" />
+			<APTRec pwr="15" vcc ="2000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12.1" vcc ="1980" icq ="32639" />
+			<APTRec pwr="10.8" vcc ="1935" icq ="32639" />
+			<APTRec pwr="10" vcc ="1930" icq ="32639" />
+			<APTRec pwr="9.1" vcc ="1811" icq ="32639" />
+			<APTRec pwr="8.1" vcc ="1800" icq ="32639" />
+			<APTRec pwr="6.9" vcc ="1777" icq ="32639" />
+			<APTRec pwr="5.7" vcc ="1740" icq ="32639" />
+			<APTRec pwr="4.7" vcc ="1685" icq ="32639" />
+			<APTRec pwr="4" vcc ="1630" icq ="32639" />
+			<APTRec pwr="3" vcc ="1620" icq ="32639" />
+			<APTRec pwr="2" vcc ="1600" icq ="32639" />
+			<APTRec pwr="1" vcc ="1550" icq ="32639" />
+			<APTRec pwr="0" vcc ="1500" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="26837" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-12" vcc ="800" icq ="32639" />
+			<APTRec pwr="-14" vcc ="800" icq ="32639" />
+			<APTRec pwr="-16" vcc ="800" icq ="32639" />
+			<APTRec pwr="-30" vcc ="800" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B27 -->
+	<APTCharV3 rf_mode="63" device="0">
+		<APTTable channel="27120" pa_state="2" tx_purpose="1">
+			<APTRec pwr="27" vcc ="4700" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23" vcc ="4700" icq ="32639" />
+			<APTRec pwr="22" vcc ="4700" icq ="32639" />
+			<APTRec pwr="21" vcc ="4500" icq ="32639" />
+			<APTRec pwr="20" vcc ="4300" icq ="32639" />
+			<APTRec pwr="19" vcc ="4000" icq ="32639" />
+			<APTRec pwr="18" vcc ="3800" icq ="32639" />
+			<APTRec pwr="17" vcc ="3600" icq ="32639" />
+			<APTRec pwr="16" vcc ="3300" icq ="32639" />
+			<APTRec pwr="15" vcc ="3000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2800" icq ="32639" />
+			<APTRec pwr="13" vcc ="2600" icq ="32639" />
+			<APTRec pwr="12" vcc ="2600" icq ="32639" />
+			<APTRec pwr="11" vcc ="2600" icq ="32639" />
+			<APTRec pwr="10" vcc ="2400" icq ="32639" />
+			<APTRec pwr="9" vcc ="2400" icq ="32639" />
+			<APTRec pwr="8" vcc ="2400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="27120" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2000" icq ="32639" />
+			<APTRec pwr="15" vcc ="2000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10" vcc ="2000" icq ="32639" />
+			<APTRec pwr="9" vcc ="2000" icq ="32639" />
+			<APTRec pwr="8" vcc ="2000" icq ="32639" />
+			<APTRec pwr="7" vcc ="2000" icq ="32639" />
+			<APTRec pwr="6" vcc ="1800" icq ="32639" />
+			<APTRec pwr="5" vcc ="1800" icq ="32639" />
+			<APTRec pwr="4" vcc ="1700" icq ="32639" />
+			<APTRec pwr="3" vcc ="1600" icq ="32639" />
+			<APTRec pwr="2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="0" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="27120" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2.2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-12" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-14" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-16" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-30" vcc ="1000" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B28 -->
+	<APTCharV3 rf_mode="64" device="2">
+		<APTTable channel="27306" pa_state="2" tx_purpose="1">
+			<APTRec pwr="27" vcc ="4700" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23.3" vcc ="4700" icq ="32639" />
+			<APTRec pwr="22.3" vcc ="4700" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4670" icq ="32639" />
+			<APTRec pwr="20.4" vcc ="4500" icq ="32639" />
+			<APTRec pwr="19.1" vcc ="4300" icq ="32639" />
+			<APTRec pwr="18.3" vcc ="4100" icq ="32639" />
+			<APTRec pwr="17.4" vcc ="3900" icq ="32639" />
+			<APTRec pwr="16.4" vcc ="3600" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3300" icq ="32639" />
+			<APTRec pwr="14.1" vcc ="3100" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="2800" icq ="32639" />
+			<APTRec pwr="12.5" vcc ="2700" icq ="32639" />
+			<APTRec pwr="11.8" vcc ="2500" icq ="32639" />
+			<APTRec pwr="11.1" vcc ="2300" icq ="32639" />
+			<APTRec pwr="10.2" vcc ="2200" icq ="32639" />
+			<APTRec pwr="9" vcc ="2100" icq ="32639" />
+			<APTRec pwr="8" vcc ="2100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="27306" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2000" icq ="32639" />
+			<APTRec pwr="15" vcc ="2000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="1990" icq ="32639" />
+			<APTRec pwr="11" vcc ="1970" icq ="32639" />
+			<APTRec pwr="10" vcc ="1950" icq ="32639" />
+			<APTRec pwr="9" vcc ="1940" icq ="32639" />
+			<APTRec pwr="8" vcc ="1920" icq ="32639" />
+			<APTRec pwr="7" vcc ="1900" icq ="32639" />
+			<APTRec pwr="6" vcc ="1850" icq ="32639" />
+			<APTRec pwr="5" vcc ="1750" icq ="32639" />
+			<APTRec pwr="4" vcc ="1600" icq ="32639" />
+			<APTRec pwr="3" vcc ="1550" icq ="32639" />
+			<APTRec pwr="2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="0" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1350" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1350" icq ="32639" />
+		</APTTable>
+		<APTTable channel="27306" pa_state="0" tx_purpose="1">
+			<APTRec pwr="6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4.8" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3.8" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="900" icq ="32639" />
+			<APTRec pwr="-1" vcc ="860" icq ="32639" />
+			<APTRec pwr="-2" vcc ="830" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10.8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-11.6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-30" vcc ="800" icq ="32639" />
+		</APTTable>
+		<APTTable channel="27523" pa_state="2" tx_purpose="1">
+			<APTRec pwr="27" vcc ="4700" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23.3" vcc ="4700" icq ="32639" />
+			<APTRec pwr="22.3" vcc ="4700" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4670" icq ="32639" />
+			<APTRec pwr="20.4" vcc ="4585" icq ="32639" />
+			<APTRec pwr="19.1" vcc ="4306" icq ="32639" />
+			<APTRec pwr="18.3" vcc ="4200" icq ="32639" />
+			<APTRec pwr="17.4" vcc ="4000" icq ="32639" />
+			<APTRec pwr="16.4" vcc ="3800" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3600" icq ="32639" />
+			<APTRec pwr="14.1" vcc ="3400" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="3200" icq ="32639" />
+			<APTRec pwr="12.5" vcc ="2900" icq ="32639" />
+			<APTRec pwr="11.8" vcc ="2700" icq ="32639" />
+			<APTRec pwr="11.1" vcc ="2500" icq ="32639" />
+			<APTRec pwr="10.2" vcc ="2400" icq ="32639" />
+			<APTRec pwr="9" vcc ="2200" icq ="32639" />
+			<APTRec pwr="8" vcc ="2200" icq ="32639" />
+		</APTTable>
+		<APTTable channel="27523" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2300" icq ="32639" />
+			<APTRec pwr="14" vcc ="2300" icq ="32639" />
+			<APTRec pwr="13" vcc ="2300" icq ="32639" />
+			<APTRec pwr="12" vcc ="2190" icq ="32639" />
+			<APTRec pwr="11" vcc ="2070" icq ="32639" />
+			<APTRec pwr="10" vcc ="2000" icq ="32639" />
+			<APTRec pwr="9" vcc ="1960" icq ="32639" />
+			<APTRec pwr="8" vcc ="1940" icq ="32639" />
+			<APTRec pwr="7" vcc ="1900" icq ="32639" />
+			<APTRec pwr="6" vcc ="1850" icq ="32639" />
+			<APTRec pwr="5" vcc ="1750" icq ="32639" />
+			<APTRec pwr="4" vcc ="1600" icq ="32639" />
+			<APTRec pwr="3" vcc ="1550" icq ="32639" />
+			<APTRec pwr="2" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="0" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1400" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1350" icq ="32639" />
+		</APTTable>
+		<APTTable channel="27523" pa_state="0" tx_purpose="1">
+			<APTRec pwr="6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4.9" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-7" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-8" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-9.1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10.1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-11.3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-12.1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-13.1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-30" vcc ="1000" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B34 -->
+	<APTCharV3 rf_mode="70" device="2">
+		<APTTable channel="36260" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="5000" icq ="32639" />
+			<APTRec pwr="24" vcc ="5000" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="4950" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4850" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="4600" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="4400" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="3950" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="3650" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="3400" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="3200" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="3200" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="3150" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="3100" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="2800" icq ="32639" />
+			<APTRec pwr="8" vcc ="2600" icq ="32639" />
+		</APTTable>
+		<APTTable channel="36260" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2100" icq ="32639" />
+			<APTRec pwr="14" vcc ="2100" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2100" icq ="32639" />
+			<APTRec pwr="11" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10" vcc ="1900" icq ="32639" />
+			<APTRec pwr="9" vcc ="1850" icq ="32639" />
+			<APTRec pwr="8" vcc ="1800" icq ="32639" />
+			<APTRec pwr="7" vcc ="1750" icq ="32639" />
+			<APTRec pwr="6" vcc ="1750" icq ="32639" />
+			<APTRec pwr="5" vcc ="1750" icq ="32639" />
+			<APTRec pwr="4" vcc ="1700" icq ="32639" />
+			<APTRec pwr="3" vcc ="1700" icq ="32639" />
+			<APTRec pwr="1" vcc ="1650" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1600" icq ="32639" />
+		</APTTable>
+		<APTTable channel="36260" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="800" icq ="32118" />
+			<APTRec pwr="4" vcc ="750" icq ="32118" />
+			<APTRec pwr="3" vcc ="750" icq ="32118" />
+			<APTRec pwr="2" vcc ="750" icq ="32118" />
+			<APTRec pwr="1" vcc ="750" icq ="32118" />
+			<APTRec pwr="0" vcc ="750" icq ="32118" />
+			<APTRec pwr="-4" vcc ="700" icq ="32118" />
+			<APTRec pwr="-6" vcc ="700" icq ="32118" />
+			<APTRec pwr="-8" vcc ="700" icq ="32118" />
+			<APTRec pwr="-10" vcc ="700" icq ="32118" />
+			<APTRec pwr="-12" vcc ="700" icq ="32118" />
+			<APTRec pwr="-14" vcc ="700" icq ="32118" />
+			<APTRec pwr="-16" vcc ="700" icq ="32118" />
+			<APTRec pwr="-40" vcc ="700" icq ="32118" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B34 -->
+	<APTCharV1 rf_mode="70" device="2">
+		<APTTable channel="36260" pa_state="2">
+			<APTRec pwr="26" bias ="2283672456" />
+			<APTRec pwr="24" bias ="2283672456" />
+			<APTRec pwr="22.9" bias ="2283672456" />
+			<APTRec pwr="21.6" bias ="2283672456" />
+			<APTRec pwr="20.6" bias ="2283672456" />
+			<APTRec pwr="19.5" bias ="2283672456" />
+			<APTRec pwr="18.1" bias ="2283672456" />
+			<APTRec pwr="16.5" bias ="2283672456" />
+			<APTRec pwr="15.3" bias ="2283672456" />
+			<APTRec pwr="14.3" bias ="2283672456" />
+			<APTRec pwr="13.3" bias ="2283672456" />
+			<APTRec pwr="12.3" bias ="2283672456" />
+			<APTRec pwr="10.9" bias ="2283672456" />
+			<APTRec pwr="9.5" bias ="2283672456" />
+			<APTRec pwr="8" bias ="2283672456" />
+		</APTTable>
+		<APTTable channel="36260" pa_state="1">
+			<APTRec pwr="16" bias ="2282752052" />
+			<APTRec pwr="14" bias ="2282752052" />
+			<APTRec pwr="13" bias ="2282752052" />
+			<APTRec pwr="12" bias ="2282752052" />
+			<APTRec pwr="11" bias ="2282752052" />
+			<APTRec pwr="10" bias ="2282752052" />
+			<APTRec pwr="9" bias ="2282752052" />
+			<APTRec pwr="8" bias ="2282752052" />
+			<APTRec pwr="7" bias ="2282752052" />
+			<APTRec pwr="6" bias ="2282752052" />
+			<APTRec pwr="5" bias ="2282752052" />
+			<APTRec pwr="4" bias ="2282752052" />
+			<APTRec pwr="3" bias ="2282752052" />
+			<APTRec pwr="1" bias ="2282752052" />
+			<APTRec pwr="-10" bias ="2282752052" />
+		</APTTable>
+		<APTTable channel="36260" pa_state="0">
+			<APTRec pwr="5" bias ="2215248672" />
+			<APTRec pwr="4" bias ="2215248672" />
+			<APTRec pwr="3" bias ="2215248672" />
+			<APTRec pwr="2" bias ="2215248672" />
+			<APTRec pwr="1" bias ="2215248672" />
+			<APTRec pwr="0" bias ="2215248672" />
+			<APTRec pwr="-4" bias ="2215248672" />
+			<APTRec pwr="-6" bias ="2215248672" />
+			<APTRec pwr="-8" bias ="2215248672" />
+			<APTRec pwr="-10" bias ="2215248672" />
+			<APTRec pwr="-12" bias ="2215248672" />
+			<APTRec pwr="-14" bias ="2215248672" />
+			<APTRec pwr="-16" bias ="2215248672" />
+			<APTRec pwr="-40" bias ="2215248672" />
+		</APTTable>
+	</APTCharV1>
+	<!-- LTE B38 -->
+	<APTCharV3 rf_mode="38" device="2">
+		<APTTable channel="37981" pa_state="2" tx_purpose="1">
+			<APTRec pwr="27" vcc ="3800" icq ="32639" />
+			<APTRec pwr="25.5" vcc ="3800" icq ="32639" />
+			<APTRec pwr="24.5" vcc ="3800" icq ="32639" />
+			<APTRec pwr="24" vcc ="3800" icq ="32639" />
+			<APTRec pwr="23" vcc ="3800" icq ="32639" />
+			<APTRec pwr="22" vcc ="3700" icq ="32639" />
+			<APTRec pwr="21" vcc ="3500" icq ="32639" />
+			<APTRec pwr="20" vcc ="3400" icq ="32639" />
+			<APTRec pwr="19" vcc ="3000" icq ="32639" />
+			<APTRec pwr="18" vcc ="2800" icq ="32639" />
+			<APTRec pwr="17" vcc ="2700" icq ="32639" />
+			<APTRec pwr="16" vcc ="2500" icq ="32639" />
+			<APTRec pwr="15" vcc ="2300" icq ="32639" />
+			<APTRec pwr="14" vcc ="2250" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10" vcc ="1800" icq ="32639" />
+			<APTRec pwr="9" vcc ="1800" icq ="32639" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="2" tx_purpose="5">
+			<APTRec pwr="27" vcc ="3800" icq ="32639" />
+			<APTRec pwr="25.5" vcc ="3800" icq ="32639" />
+			<APTRec pwr="24.5" vcc ="3800" icq ="32639" />
+			<APTRec pwr="24" vcc ="3800" icq ="32639" />
+			<APTRec pwr="23" vcc ="3800" icq ="32639" />
+			<APTRec pwr="22" vcc ="3700" icq ="32639" />
+			<APTRec pwr="21" vcc ="3500" icq ="32639" />
+			<APTRec pwr="20" vcc ="3400" icq ="32639" />
+			<APTRec pwr="19" vcc ="3000" icq ="32639" />
+			<APTRec pwr="18" vcc ="2800" icq ="32639" />
+			<APTRec pwr="17" vcc ="2700" icq ="32639" />
+			<APTRec pwr="16" vcc ="2500" icq ="32639" />
+			<APTRec pwr="15" vcc ="2300" icq ="32639" />
+			<APTRec pwr="14" vcc ="2250" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10" vcc ="1800" icq ="32639" />
+			<APTRec pwr="9" vcc ="1800" icq ="32639" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="1" tx_purpose="1">
+			<APTRec pwr="17" vcc ="1700" icq ="32639" />
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="15" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1600" icq ="32639" />
+			<APTRec pwr="12" vcc ="1530" icq ="32639" />
+			<APTRec pwr="11" vcc ="1250" icq ="32639" />
+			<APTRec pwr="10" vcc ="1000" icq ="32639" />
+			<APTRec pwr="9" vcc ="1000" icq ="32639" />
+			<APTRec pwr="8" vcc ="1000" icq ="32639" />
+			<APTRec pwr="7" vcc ="1000" icq ="32639" />
+			<APTRec pwr="6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="1" tx_purpose="5">
+			<APTRec pwr="17" vcc ="1700" icq ="32639" />
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="15" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1600" icq ="32639" />
+			<APTRec pwr="12" vcc ="1530" icq ="32639" />
+			<APTRec pwr="11" vcc ="1250" icq ="32639" />
+			<APTRec pwr="10" vcc ="1000" icq ="32639" />
+			<APTRec pwr="9" vcc ="1000" icq ="32639" />
+			<APTRec pwr="8" vcc ="1000" icq ="32639" />
+			<APTRec pwr="7" vcc ="1000" icq ="32639" />
+			<APTRec pwr="6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="0" tx_purpose="1">
+			<APTRec pwr="6" vcc ="700" icq ="31092" />
+			<APTRec pwr="5" vcc ="700" icq ="31092" />
+			<APTRec pwr="4" vcc ="700" icq ="31092" />
+			<APTRec pwr="3" vcc ="700" icq ="31092" />
+			<APTRec pwr="2" vcc ="700" icq ="31092" />
+			<APTRec pwr="1" vcc ="700" icq ="31092" />
+			<APTRec pwr="0" vcc ="700" icq ="31092" />
+			<APTRec pwr="-1" vcc ="700" icq ="31092" />
+			<APTRec pwr="-2" vcc ="700" icq ="31092" />
+			<APTRec pwr="-3" vcc ="700" icq ="31092" />
+			<APTRec pwr="-4" vcc ="700" icq ="31092" />
+			<APTRec pwr="-5" vcc ="700" icq ="31092" />
+			<APTRec pwr="-6" vcc ="700" icq ="31092" />
+			<APTRec pwr="-7" vcc ="700" icq ="31092" />
+			<APTRec pwr="-8" vcc ="700" icq ="31092" />
+			<APTRec pwr="-9" vcc ="700" icq ="31092" />
+			<APTRec pwr="-10" vcc ="700" icq ="31092" />
+			<APTRec pwr="-50" vcc ="700" icq ="31092" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="0" tx_purpose="5">
+			<APTRec pwr="6" vcc ="700" icq ="31092" />
+			<APTRec pwr="5" vcc ="700" icq ="31092" />
+			<APTRec pwr="4" vcc ="700" icq ="31092" />
+			<APTRec pwr="3" vcc ="700" icq ="31092" />
+			<APTRec pwr="2" vcc ="700" icq ="31092" />
+			<APTRec pwr="1" vcc ="700" icq ="31092" />
+			<APTRec pwr="0" vcc ="700" icq ="31092" />
+			<APTRec pwr="-1" vcc ="700" icq ="31092" />
+			<APTRec pwr="-2" vcc ="700" icq ="31092" />
+			<APTRec pwr="-3" vcc ="700" icq ="31092" />
+			<APTRec pwr="-4" vcc ="700" icq ="31092" />
+			<APTRec pwr="-5" vcc ="700" icq ="31092" />
+			<APTRec pwr="-6" vcc ="700" icq ="31092" />
+			<APTRec pwr="-7" vcc ="700" icq ="31092" />
+			<APTRec pwr="-8" vcc ="700" icq ="31092" />
+			<APTRec pwr="-9" vcc ="700" icq ="31092" />
+			<APTRec pwr="-10" vcc ="700" icq ="31092" />
+			<APTRec pwr="-50" vcc ="700" icq ="31092" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="6" tx_purpose="205">
+			<APTRec pwr="27" vcc ="3800" icq ="32639" />
+			<APTRec pwr="25.5" vcc ="3800" icq ="32639" />
+			<APTRec pwr="24.5" vcc ="3800" icq ="32639" />
+			<APTRec pwr="24" vcc ="3800" icq ="32639" />
+			<APTRec pwr="23" vcc ="3800" icq ="32639" />
+			<APTRec pwr="22" vcc ="3700" icq ="32639" />
+			<APTRec pwr="21" vcc ="3500" icq ="32639" />
+			<APTRec pwr="20" vcc ="3400" icq ="32639" />
+			<APTRec pwr="19" vcc ="3000" icq ="32639" />
+			<APTRec pwr="18" vcc ="2800" icq ="32639" />
+			<APTRec pwr="17" vcc ="2700" icq ="32639" />
+			<APTRec pwr="16" vcc ="2500" icq ="32639" />
+			<APTRec pwr="15" vcc ="2300" icq ="32639" />
+			<APTRec pwr="14" vcc ="2250" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10" vcc ="1800" icq ="32639" />
+			<APTRec pwr="9" vcc ="1800" icq ="32639" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="5" tx_purpose="205">
+			<APTRec pwr="17" vcc ="1700" icq ="32639" />
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="15" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1600" icq ="32639" />
+			<APTRec pwr="12" vcc ="1530" icq ="32639" />
+			<APTRec pwr="11" vcc ="1250" icq ="32639" />
+			<APTRec pwr="10" vcc ="1000" icq ="32639" />
+			<APTRec pwr="9" vcc ="1000" icq ="32639" />
+			<APTRec pwr="8" vcc ="1000" icq ="32639" />
+			<APTRec pwr="7" vcc ="1000" icq ="32639" />
+			<APTRec pwr="6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="4" tx_purpose="205">
+			<APTRec pwr="6" vcc ="700" icq ="31092" />
+			<APTRec pwr="5" vcc ="700" icq ="31092" />
+			<APTRec pwr="4" vcc ="700" icq ="31092" />
+			<APTRec pwr="3" vcc ="700" icq ="31092" />
+			<APTRec pwr="2" vcc ="700" icq ="31092" />
+			<APTRec pwr="1" vcc ="700" icq ="31092" />
+			<APTRec pwr="0" vcc ="700" icq ="31092" />
+			<APTRec pwr="-1" vcc ="700" icq ="31092" />
+			<APTRec pwr="-2" vcc ="700" icq ="31092" />
+			<APTRec pwr="-3" vcc ="700" icq ="31092" />
+			<APTRec pwr="-4" vcc ="700" icq ="31092" />
+			<APTRec pwr="-5" vcc ="700" icq ="31092" />
+			<APTRec pwr="-6" vcc ="700" icq ="31092" />
+			<APTRec pwr="-7" vcc ="700" icq ="31092" />
+			<APTRec pwr="-8" vcc ="700" icq ="31092" />
+			<APTRec pwr="-9" vcc ="700" icq ="31092" />
+			<APTRec pwr="-10" vcc ="700" icq ="31092" />
+			<APTRec pwr="-50" vcc ="700" icq ="31092" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B38 -->
+	<APTCharV1 rf_mode="38" device="2">
+		<APTTable channel="37981" pa_state="2">
+			<APTRec pwr="27" bias ="2348945112" />
+			<APTRec pwr="25.5" bias ="2348945112" />
+			<APTRec pwr="24.5" bias ="2348945112" />
+			<APTRec pwr="24" bias ="2348945112" />
+			<APTRec pwr="23" bias ="2348945112" />
+			<APTRec pwr="22" bias ="2348944912" />
+			<APTRec pwr="21" bias ="2348944712" />
+			<APTRec pwr="20" bias ="2348944512" />
+			<APTRec pwr="19" bias ="2348944312" />
+			<APTRec pwr="18" bias ="2348944112" />
+			<APTRec pwr="17" bias ="2348944012" />
+			<APTRec pwr="16" bias ="2348943812" />
+			<APTRec pwr="15" bias ="2348943612" />
+			<APTRec pwr="14" bias ="2348943512" />
+			<APTRec pwr="13" bias ="2348943412" />
+			<APTRec pwr="12" bias ="2348943312" />
+			<APTRec pwr="11" bias ="2348943212" />
+			<APTRec pwr="10" bias ="2348943112" />
+			<APTRec pwr="9" bias ="2348943112" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="1">
+			<APTRec pwr="17" bias ="2316043940" />
+			<APTRec pwr="16" bias ="2316043940" />
+			<APTRec pwr="15" bias ="2316043940" />
+			<APTRec pwr="14" bias ="2316043940" />
+			<APTRec pwr="13" bias ="2316043840" />
+			<APTRec pwr="12" bias ="2316043770" />
+			<APTRec pwr="11" bias ="2316043540" />
+			<APTRec pwr="10" bias ="2316043490" />
+			<APTRec pwr="9" bias ="2316043440" />
+			<APTRec pwr="8" bias ="2316043440" />
+			<APTRec pwr="7" bias ="2316043390" />
+			<APTRec pwr="6" bias ="2316043340" />
+			<APTRec pwr="5" bias ="2316043240" />
+			<APTRec pwr="4" bias ="2316043240" />
+			<APTRec pwr="3" bias ="2316043240" />
+			<APTRec pwr="2" bias ="2316043240" />
+			<APTRec pwr="1" bias ="2316043240" />
+			<APTRec pwr="-10" bias ="2316043240" />
+		</APTTable>
+		<APTTable channel="37981" pa_state="0">
+			<APTRec pwr="6" bias ="2282226564" />
+			<APTRec pwr="5" bias ="2282226564" />
+			<APTRec pwr="4" bias ="2282226564" />
+			<APTRec pwr="3" bias ="2282226564" />
+			<APTRec pwr="2" bias ="2282226564" />
+			<APTRec pwr="1" bias ="2282226564" />
+			<APTRec pwr="0" bias ="2282226564" />
+			<APTRec pwr="-1" bias ="2282226564" />
+			<APTRec pwr="-2" bias ="2282226564" />
+			<APTRec pwr="-3" bias ="2282226464" />
+			<APTRec pwr="-4" bias ="2282226464" />
+			<APTRec pwr="-5" bias ="2282226464" />
+			<APTRec pwr="-6" bias ="2282226464" />
+			<APTRec pwr="-7" bias ="2282226464" />
+			<APTRec pwr="-8" bias ="2282226464" />
+			<APTRec pwr="-9" bias ="2282226464" />
+			<APTRec pwr="-10" bias ="2282226464" />
+			<APTRec pwr="-50" bias ="2282226464" />
+		</APTTable>
+	</APTCharV1>
+	<!-- LTE B39 -->
+	<APTCharV3 rf_mode="74" device="2" product_rev="0" product_id="291" manuf_id="535">
+		<APTTable channel="38450" pa_state="2" tx_purpose="1">
+			<APTRec pwr="26" vcc ="4900" icq ="32639" />
+			<APTRec pwr="24" vcc ="4900" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="4900" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4900" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="4900" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="4900" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="4900" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="4900" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="4900" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="4900" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="4900" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="8" vcc ="4900" icq ="32639" />
+		</APTTable>
+		<APTTable channel="38450" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="2100" icq ="32639" />
+			<APTRec pwr="14" vcc ="2100" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2100" icq ="32639" />
+			<APTRec pwr="11" vcc ="2100" icq ="32639" />
+			<APTRec pwr="10" vcc ="2100" icq ="32639" />
+			<APTRec pwr="9" vcc ="2100" icq ="32639" />
+			<APTRec pwr="8" vcc ="2100" icq ="32639" />
+			<APTRec pwr="7" vcc ="2100" icq ="32639" />
+			<APTRec pwr="6" vcc ="2100" icq ="32639" />
+			<APTRec pwr="5" vcc ="2100" icq ="32639" />
+			<APTRec pwr="4" vcc ="2100" icq ="32639" />
+			<APTRec pwr="3" vcc ="2100" icq ="32639" />
+			<APTRec pwr="1" vcc ="2100" icq ="32639" />
+			<APTRec pwr="-10" vcc ="2100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="38450" pa_state="0" tx_purpose="1">
+			<APTRec pwr="5" vcc ="800" icq ="32118" />
+			<APTRec pwr="4" vcc ="800" icq ="32118" />
+			<APTRec pwr="3" vcc ="800" icq ="32118" />
+			<APTRec pwr="2" vcc ="700" icq ="32118" />
+			<APTRec pwr="1" vcc ="700" icq ="32118" />
+			<APTRec pwr="0" vcc ="700" icq ="32118" />
+			<APTRec pwr="-4" vcc ="700" icq ="32118" />
+			<APTRec pwr="-6" vcc ="700" icq ="32118" />
+			<APTRec pwr="-8" vcc ="700" icq ="32118" />
+			<APTRec pwr="-10" vcc ="700" icq ="32118" />
+			<APTRec pwr="-12" vcc ="700" icq ="32118" />
+			<APTRec pwr="-14" vcc ="700" icq ="32118" />
+			<APTRec pwr="-16" vcc ="700" icq ="32118" />
+			<APTRec pwr="-40" vcc ="700" icq ="32118" />
+		</APTTable>
+		<APTTable channel="38450" pa_state="6" tx_purpose="205">
+			<APTRec pwr="26" vcc ="4900" icq ="32639" />
+			<APTRec pwr="24" vcc ="4900" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="4900" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="4900" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="4900" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="4900" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="4900" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="4900" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="4900" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="4900" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="4900" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="8" vcc ="4900" icq ="32639" />
+		</APTTable>
+		<APTTable channel="38450" pa_state="5" tx_purpose="205">
+			<APTRec pwr="16" vcc ="2100" icq ="32639" />
+			<APTRec pwr="14" vcc ="2100" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="2100" icq ="32639" />
+			<APTRec pwr="11" vcc ="2100" icq ="32639" />
+			<APTRec pwr="10" vcc ="2100" icq ="32639" />
+			<APTRec pwr="9" vcc ="2100" icq ="32639" />
+			<APTRec pwr="8" vcc ="2100" icq ="32639" />
+			<APTRec pwr="7" vcc ="2100" icq ="32639" />
+			<APTRec pwr="6" vcc ="2100" icq ="32639" />
+			<APTRec pwr="5" vcc ="2100" icq ="32639" />
+			<APTRec pwr="4" vcc ="2100" icq ="32639" />
+			<APTRec pwr="3" vcc ="2100" icq ="32639" />
+			<APTRec pwr="1" vcc ="2100" icq ="32639" />
+			<APTRec pwr="-10" vcc ="2100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="38450" pa_state="4" tx_purpose="205">
+			<APTRec pwr="5" vcc ="800" icq ="32639" />
+			<APTRec pwr="4" vcc ="800" icq ="32639" />
+			<APTRec pwr="3" vcc ="800" icq ="32639" />
+			<APTRec pwr="2" vcc ="700" icq ="32639" />
+			<APTRec pwr="1" vcc ="700" icq ="32639" />
+			<APTRec pwr="0" vcc ="700" icq ="32639" />
+			<APTRec pwr="-4" vcc ="700" icq ="32639" />
+			<APTRec pwr="-6" vcc ="700" icq ="32639" />
+			<APTRec pwr="-8" vcc ="700" icq ="32639" />
+			<APTRec pwr="-10" vcc ="700" icq ="32639" />
+			<APTRec pwr="-12" vcc ="700" icq ="32639" />
+			<APTRec pwr="-14" vcc ="700" icq ="32639" />
+			<APTRec pwr="-16" vcc ="700" icq ="32639" />
+			<APTRec pwr="-40" vcc ="700" icq ="32639" />
+		</APTTable>
+		
+	</APTCharV3>
+	<!-- LTE B39 -->
+	<APTCharV4 rf_mode="74" device="2" product_rev="0" product_id="291" manuf_id="535">
+		<APTTable channel="38425" pa_state="2">
+			<APTRec pwr="26" bias ="2333610788" />
+			<APTRec pwr="24" bias ="2333610788" />
+			<APTRec pwr="22.9" bias ="2333610788" />
+			<APTRec pwr="21.6" bias ="2333610788" />
+			<APTRec pwr="20.6" bias ="2333610788" />
+			<APTRec pwr="19.5" bias ="2333610788" />
+			<APTRec pwr="18.1" bias ="2333610788" />
+			<APTRec pwr="16.5" bias ="2333610788" />
+			<APTRec pwr="15.3" bias ="2333610788" />
+			<APTRec pwr="14.3" bias ="2333610788" />
+			<APTRec pwr="13.3" bias ="2333610788" />
+			<APTRec pwr="12.3" bias ="2333610788" />
+			<APTRec pwr="10.9" bias ="2333610788" />
+			<APTRec pwr="9.5" bias ="2333610788" />
+			<APTRec pwr="8" bias ="2333610788" />
+		</APTTable>
+		<APTTable channel="38425" pa_state="1">
+			<APTRec pwr="16" bias ="2349795380" />
+			<APTRec pwr="14" bias ="2349795380" />
+			<APTRec pwr="13" bias ="2349795380" />
+			<APTRec pwr="12" bias ="2349795380" />
+			<APTRec pwr="11" bias ="2349795380" />
+			<APTRec pwr="10" bias ="2349795380" />
+			<APTRec pwr="9" bias ="2349795380" />
+			<APTRec pwr="8" bias ="2349795380" />
+			<APTRec pwr="7" bias ="2349795380" />
+			<APTRec pwr="6" bias ="2349795380" />
+			<APTRec pwr="5" bias ="2349795380" />
+			<APTRec pwr="4" bias ="2349795380" />
+			<APTRec pwr="3" bias ="2349795380" />
+			<APTRec pwr="1" bias ="2349795380" />
+			<APTRec pwr="-10" bias ="2349795380" />
+		</APTTable>
+		<APTTable channel="38425" pa_state="0">
+			<APTRec pwr="5" bias ="2215248672" />
+			<APTRec pwr="4" bias ="2215248672" />
+			<APTRec pwr="3" bias ="2215248672" />
+			<APTRec pwr="2" bias ="2215248672" />
+			<APTRec pwr="1" bias ="2215248672" />
+			<APTRec pwr="0" bias ="2215248672" />
+			<APTRec pwr="-4" bias ="2215248672" />
+			<APTRec pwr="-6" bias ="2215248672" />
+			<APTRec pwr="-8" bias ="2215248672" />
+			<APTRec pwr="-10" bias ="2215248672" />
+			<APTRec pwr="-12" bias ="2215248672" />
+			<APTRec pwr="-14" bias ="2215248672" />
+			<APTRec pwr="-16" bias ="2215248672" />
+			<APTRec pwr="-40" bias ="2215248672" />
+		</APTTable>
+	</APTCharV4>
+    <!-- TDSCDMA B34 -->
+	<APTCharV3 rf_mode="90" device="2">
+	
+	     <APTTable channel="10088" pa_state="2" tx_purpose="0">
+			<APTRec pwr="26" vcc ="5000" icq ="32639" />
+			<APTRec pwr="24" vcc ="5000" icq ="32639" />
+			<APTRec pwr="22.9" vcc ="5000" icq ="32639" />
+			<APTRec pwr="21.6" vcc ="5000" icq ="32639" />
+			<APTRec pwr="20.6" vcc ="5000" icq ="32639" />
+			<APTRec pwr="19.5" vcc ="5000" icq ="32639" />
+			<APTRec pwr="18.1" vcc ="5000" icq ="32639" />
+			<APTRec pwr="16.5" vcc ="5000" icq ="32639" />
+			<APTRec pwr="15.3" vcc ="5000" icq ="32639" />
+			<APTRec pwr="14.3" vcc ="5000" icq ="32639" />
+			<APTRec pwr="13.3" vcc ="5000" icq ="32639" />
+			<APTRec pwr="12.3" vcc ="5000" icq ="32639" />
+			<APTRec pwr="10.9" vcc ="5000" icq ="32639" />
+			<APTRec pwr="9.5" vcc ="5000" icq ="32639" />
+			<APTRec pwr="8" vcc ="5000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="10088" pa_state="1" tx_purpose="0">
+			<APTRec pwr="27" vcc ="4500" icq ="32639" />
+			<APTRec pwr="24" vcc ="4500" icq ="32639" />
+			<APTRec pwr="23" vcc ="4400" icq ="32639" />
+			<APTRec pwr="22" vcc ="4300" icq ="32639" />
+			<APTRec pwr="21" vcc ="4000" icq ="32639" />
+			<APTRec pwr="20" vcc ="3700" icq ="32639" />
+			<APTRec pwr="19" vcc ="3400" icq ="32639" />
+			<APTRec pwr="18" vcc ="3100" icq ="32639" />
+			<APTRec pwr="17" vcc ="2800" icq ="32639" />
+			<APTRec pwr="16" vcc ="2500" icq ="32639" />
+			<APTRec pwr="15" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="2000" icq ="32639" />
+			<APTRec pwr="13" vcc ="2000" icq ="32639" />
+			<APTRec pwr="12" vcc ="2000" icq ="32639" />
+			<APTRec pwr="11" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10" vcc ="2000" icq ="32639" />
+			<APTRec pwr="9" vcc ="2000" icq ="32639" />
+			<APTRec pwr="6" vcc ="2000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="10088" pa_state="0" tx_purpose="0">
+			<APTRec pwr="16" vcc ="2200" icq ="32639" />
+			<APTRec pwr="14" vcc ="1900" icq ="32639" />
+			<APTRec pwr="13" vcc ="1750" icq ="32639" />
+			<APTRec pwr="12" vcc ="1700" icq ="32639" />
+			<APTRec pwr="11" vcc ="1600" icq ="32639" />
+			<APTRec pwr="10" vcc ="1500" icq ="32639" />
+			<APTRec pwr="9" vcc ="1500" icq ="32639" />
+			<APTRec pwr="8" vcc ="1500" icq ="32639" />
+			<APTRec pwr="7" vcc ="1500" icq ="32639" />
+			<APTRec pwr="6" vcc ="1500" icq ="32639" />
+			<APTRec pwr="5" vcc ="1500" icq ="32639" />
+			<APTRec pwr="4" vcc ="1500" icq ="32639" />
+			<APTRec pwr="3" vcc ="1500" icq ="32639" />
+			<APTRec pwr="1" vcc ="1500" icq ="32639" />
+			<APTRec pwr="-40" vcc ="1500" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- TDSCDMA B34 -->
+	    <APTCharV1 rf_mode="90" device="2">	
+	
+	   <APTTable channel="10088" pa_state="2">
+			<APTRec pwr="26" bias ="2283672456" />
+			<APTRec pwr="24" bias ="2283672456" />
+			<APTRec pwr="22.9" bias ="2283672456" />
+			<APTRec pwr="21.6" bias ="2283672456" />
+			<APTRec pwr="20.6" bias ="2283672456" />
+			<APTRec pwr="19.5" bias ="2283672456" />
+			<APTRec pwr="18.1" bias ="2283672456" />
+			<APTRec pwr="16.5" bias ="2283672456" />
+			<APTRec pwr="15.3" bias ="2283672456" />
+			<APTRec pwr="14.3" bias ="2283672456" />
+			<APTRec pwr="13.3" bias ="2283672456" />
+			<APTRec pwr="12.3" bias ="2283672456" />
+			<APTRec pwr="10.9" bias ="2283672456" />
+			<APTRec pwr="9.5" bias ="2283672456" />
+			<APTRec pwr="8" bias ="2283672456" />
+		</APTTable>
+		<APTTable channel="10088" pa_state="1">
+			<APTRec pwr="27" bias ="2317357460" />
+			<APTRec pwr="24" bias ="2317357460" />
+			<APTRec pwr="23" bias ="2317357360" />
+			<APTRec pwr="22" bias ="2317357260" />
+			<APTRec pwr="21" bias ="2317356960" />
+			<APTRec pwr="20" bias ="2317356660" />
+			<APTRec pwr="19" bias ="2317356360" />
+			<APTRec pwr="18" bias ="2317356060" />
+			<APTRec pwr="17" bias ="2317355760" />
+			<APTRec pwr="16" bias ="2317355460" />
+			<APTRec pwr="15" bias ="2317355160" />
+			<APTRec pwr="14" bias ="2317354960" />
+			<APTRec pwr="13" bias ="2317354960" />
+			<APTRec pwr="12" bias ="2317354960" />
+			<APTRec pwr="11" bias ="2317354960" />
+			<APTRec pwr="10" bias ="2317354960" />
+			<APTRec pwr="9" bias ="2317354960" />
+			<APTRec pwr="6" bias ="2317354960" />
+		</APTTable>
+		<APTTable channel="10088" pa_state="0">
+			<APTRec pwr="16" bias ="2299463832" />
+			<APTRec pwr="14" bias ="2299463532" />
+			<APTRec pwr="13" bias ="2299463382" />
+			<APTRec pwr="12" bias ="2299463332" />
+			<APTRec pwr="11" bias ="2299463232" />
+			<APTRec pwr="10" bias ="2299463132" />
+			<APTRec pwr="9" bias ="2299463132" />
+			<APTRec pwr="8" bias ="2299463132" />
+			<APTRec pwr="7" bias ="2299463132" />
+			<APTRec pwr="6" bias ="2299463132" />
+			<APTRec pwr="5" bias ="2299463132" />
+			<APTRec pwr="4" bias ="2299463132" />
+			<APTRec pwr="3" bias ="2299463132" />
+			<APTRec pwr="1" bias ="2299463132" />
+			<APTRec pwr="-40" bias ="2299463132" />
+		</APTTable>
+	</APTCharV1>
+	<!-- TDSCDMA B39 -->
+	<APTCharV3 rf_mode="91" device="2">
+		<APTTable channel="9544" pa_state="2" tx_purpose="0">
+			<APTRec pwr="31" vcc ="5400" icq ="32639" />
+			<APTRec pwr="30" vcc ="5400" icq ="32639" />
+			<APTRec pwr="29" vcc ="5400" icq ="32639" />
+			<APTRec pwr="28" vcc ="5400" icq ="32639" />
+			<APTRec pwr="26" vcc ="5400" icq ="32639" />
+			<APTRec pwr="23" vcc ="5400" icq ="32639" />
+			<APTRec pwr="21" vcc ="5400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="9544" pa_state="1" tx_purpose="0">
+			<APTRec pwr="27" vcc ="4500" icq ="32639" />
+			<APTRec pwr="24" vcc ="4500" icq ="32639" />
+			<APTRec pwr="23" vcc ="4500" icq ="32639" />
+			<APTRec pwr="22" vcc ="4400" icq ="32639" />
+			<APTRec pwr="21" vcc ="4400" icq ="32639" />
+			<APTRec pwr="20" vcc ="4300" icq ="32639" />
+			<APTRec pwr="19" vcc ="4200" icq ="32639" />
+			<APTRec pwr="18" vcc ="3900" icq ="32639" />
+			<APTRec pwr="17" vcc ="3600" icq ="32639" />
+			<APTRec pwr="16" vcc ="3300" icq ="32639" />
+			<APTRec pwr="15" vcc ="3000" icq ="32639" />
+			<APTRec pwr="14" vcc ="2700" icq ="32639" />
+			<APTRec pwr="13" vcc ="2600" icq ="32639" />
+			<APTRec pwr="12" vcc ="2500" icq ="32639" />
+			<APTRec pwr="11" vcc ="2400" icq ="32639" />
+			<APTRec pwr="10" vcc ="2300" icq ="32639" />
+			<APTRec pwr="0" vcc ="2300" icq ="32639" />
+		</APTTable>
+		<APTTable channel="9544" pa_state="0" tx_purpose="0">
+			<APTRec pwr="15" vcc ="2700" icq ="32639" />
+			<APTRec pwr="14" vcc ="2400" icq ="32639" />
+			<APTRec pwr="13" vcc ="2100" icq ="32639" />
+			<APTRec pwr="12" vcc ="1800" icq ="32639" />
+			<APTRec pwr="11" vcc ="1600" icq ="32639" />
+			<APTRec pwr="10" vcc ="1400" icq ="32639" />
+			<APTRec pwr="9" vcc ="1400" icq ="32639" />
+			<APTRec pwr="8" vcc ="1300" icq ="32639" />
+			<APTRec pwr="7" vcc ="1200" icq ="32639" />
+			<APTRec pwr="6" vcc ="1200" icq ="32639" />
+			<APTRec pwr="5" vcc ="1200" icq ="32639" />
+			<APTRec pwr="4" vcc ="1200" icq ="32639" />
+			<APTRec pwr="3" vcc ="1200" icq ="32639" />
+			<APTRec pwr="2" vcc ="1200" icq ="32639" />
+			<APTRec pwr="1" vcc ="1200" icq ="32639" />
+			<APTRec pwr="0" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1200" icq ="32639" />
+			<APTRec pwr="-40" vcc ="1200" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- TDSCDMA B39 -->
+	<APTCharV1 rf_mode="91" device="2">
+		<APTTable channel="9544" pa_state="2">
+			<APTRec pwr="31" bias ="2317358360" />
+			<APTRec pwr="30" bias ="2317358360" />
+			<APTRec pwr="29" bias ="2317358360" />
+			<APTRec pwr="28" bias ="2317358360" />
+			<APTRec pwr="26" bias ="2317358360" />
+			<APTRec pwr="23" bias ="2317358360" />
+			<APTRec pwr="21" bias ="2317358360" />
+		</APTTable>
+		<APTTable channel="9544" pa_state="1">
+			<APTRec pwr="27" bias ="2317357460" />
+			<APTRec pwr="24" bias ="2317357460" />
+			<APTRec pwr="23" bias ="2317357460" />
+			<APTRec pwr="22" bias ="2317357360" />
+			<APTRec pwr="21" bias ="2317357360" />
+			<APTRec pwr="20" bias ="2317357260" />
+			<APTRec pwr="19" bias ="2317357160" />
+			<APTRec pwr="18" bias ="2317356860" />
+			<APTRec pwr="17" bias ="2317356560" />
+			<APTRec pwr="16" bias ="2317356260" />
+			<APTRec pwr="15" bias ="2317355960" />
+			<APTRec pwr="14" bias ="2317355660" />
+			<APTRec pwr="13" bias ="2317355560" />
+			<APTRec pwr="12" bias ="2317355460" />
+			<APTRec pwr="11" bias ="2317355360" />
+			<APTRec pwr="10" bias ="2317355260" />
+			<APTRec pwr="0" bias ="2317355260" />
+		</APTTable>
+		<APTTable channel="9544" pa_state="0">
+			<APTRec pwr="15" bias ="2299464332" />
+			<APTRec pwr="14" bias ="2299464032" />
+			<APTRec pwr="13" bias ="2299463732" />
+			<APTRec pwr="12" bias ="2299463432" />
+			<APTRec pwr="11" bias ="2299463232" />
+			<APTRec pwr="10" bias ="2299463032" />
+			<APTRec pwr="9" bias ="2299463032" />
+			<APTRec pwr="8" bias ="2299462932" />
+			<APTRec pwr="7" bias ="2299462832" />
+			<APTRec pwr="6" bias ="2299462832" />
+			<APTRec pwr="5" bias ="2299462832" />
+			<APTRec pwr="4" bias ="2299462832" />
+			<APTRec pwr="3" bias ="2299462832" />
+			<APTRec pwr="2" bias ="2299462832" />
+			<APTRec pwr="1" bias ="2299462832" />
+			<APTRec pwr="0" bias ="2299462832" />
+			<APTRec pwr="-1" bias ="2299462832" />
+			<APTRec pwr="-40" bias ="2299462832" />
+		</APTTable>
+	</APTCharV1>
+	<!-- LTE B40 -->
+	<APTCharV3 rf_mode="39" device="2">
+		<APTTable channel="39084" pa_state="2" tx_purpose="1">
+			<APTRec pwr="32" vcc ="5000" icq ="32639" />
+			<APTRec pwr="26" vcc ="5000" icq ="32639" />
+			<APTRec pwr="25" vcc ="5000" icq ="32639" />
+			<APTRec pwr="24" vcc ="5000" icq ="32639" />
+			<APTRec pwr="23" vcc ="4850" icq ="32639" />
+			<APTRec pwr="22" vcc ="4600" icq ="32639" />
+			<APTRec pwr="21" vcc ="4600" icq ="32639" />
+			<APTRec pwr="20" vcc ="4300" icq ="32639" />
+			<APTRec pwr="19" vcc ="4000" icq ="32639" />
+			<APTRec pwr="18" vcc ="3700" icq ="32639" />
+			<APTRec pwr="17" vcc ="3350" icq ="32639" />
+			<APTRec pwr="16" vcc ="3100" icq ="32639" />
+			<APTRec pwr="15" vcc ="2800" icq ="32639" />
+			<APTRec pwr="14" vcc ="2500" icq ="32639" />
+			<APTRec pwr="13" vcc ="2250" icq ="32639" />
+			<APTRec pwr="12" vcc ="2200" icq ="32639" />
+			<APTRec pwr="11" vcc ="2200" icq ="32639" />
+			<APTRec pwr="10" vcc ="2100" icq ="32639" />
+			<APTRec pwr="9" vcc ="2100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="39084" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="15" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1500" icq ="32639" />
+			<APTRec pwr="12" vcc ="1300" icq ="32639" />
+			<APTRec pwr="11" vcc ="1150" icq ="32639" />
+			<APTRec pwr="10" vcc ="1100" icq ="32639" />
+			<APTRec pwr="9" vcc ="950" icq ="32639" />
+			<APTRec pwr="8" vcc ="850" icq ="32639" />
+			<APTRec pwr="7" vcc ="850" icq ="32639" />
+			<APTRec pwr="6" vcc ="850" icq ="32639" />
+			<APTRec pwr="5" vcc ="850" icq ="32639" />
+			<APTRec pwr="4" vcc ="850" icq ="32639" />
+			<APTRec pwr="3" vcc ="850" icq ="32639" />
+			<APTRec pwr="2" vcc ="850" icq ="32639" />
+			<APTRec pwr="1" vcc ="850" icq ="32639" />
+			<APTRec pwr="0" vcc ="850" icq ="32639" />
+			<APTRec pwr="-10" vcc ="850" icq ="32639" />
+		</APTTable>
+		<APTTable channel="39084" pa_state="0" tx_purpose="1">
+			<APTRec pwr="6" vcc ="950" icq ="31096" />
+			<APTRec pwr="5" vcc ="900" icq ="31096" />
+			<APTRec pwr="4" vcc ="900" icq ="31096" />
+			<APTRec pwr="3" vcc ="900" icq ="31096" />
+			<APTRec pwr="2" vcc ="900" icq ="31096" />
+			<APTRec pwr="1" vcc ="900" icq ="31096" />
+			<APTRec pwr="0" vcc ="900" icq ="31096" />
+			<APTRec pwr="-1" vcc ="900" icq ="31096" />
+			<APTRec pwr="-2" vcc ="900" icq ="31096" />
+			<APTRec pwr="-3" vcc ="900" icq ="31096" />
+			<APTRec pwr="-4" vcc ="900" icq ="31096" />
+			<APTRec pwr="-5" vcc ="900" icq ="31096" />
+			<APTRec pwr="-6" vcc ="900" icq ="31096" />
+			<APTRec pwr="-7" vcc ="900" icq ="31096" />
+			<APTRec pwr="-8" vcc ="900" icq ="31096" />
+			<APTRec pwr="-9" vcc ="900" icq ="31096" />
+			<APTRec pwr="-10" vcc ="900" icq ="31096" />
+			<APTRec pwr="-40" vcc ="900" icq ="31096" />
+		</APTTable>
+		<APTTable channel="39084" pa_state="6" tx_purpose="205">
+			<APTRec pwr="32" vcc ="5000" icq ="32639" />
+			<APTRec pwr="26" vcc ="5000" icq ="32639" />
+			<APTRec pwr="25" vcc ="5000" icq ="32639" />
+			<APTRec pwr="24" vcc ="5000" icq ="32639" />
+			<APTRec pwr="23" vcc ="5000" icq ="32639" />
+			<APTRec pwr="22" vcc ="4850" icq ="32639" />
+			<APTRec pwr="21" vcc ="4600" icq ="32639" />
+			<APTRec pwr="20" vcc ="4300" icq ="32639" />
+			<APTRec pwr="19" vcc ="4000" icq ="32639" />
+			<APTRec pwr="18" vcc ="3700" icq ="32639" />
+			<APTRec pwr="17" vcc ="3400" icq ="32639" />
+			<APTRec pwr="16" vcc ="3100" icq ="32639" />
+			<APTRec pwr="15" vcc ="2800" icq ="32639" />
+			<APTRec pwr="14" vcc ="2500" icq ="32639" />
+			<APTRec pwr="13" vcc ="2400" icq ="32639" />
+			<APTRec pwr="12" vcc ="2300" icq ="32639" />
+			<APTRec pwr="11" vcc ="2200" icq ="32639" />
+			<APTRec pwr="10" vcc ="2100" icq ="32639" />
+			<APTRec pwr="9" vcc ="2100" icq ="32639" />
+		</APTTable>
+		<APTTable channel="39084" pa_state="5" tx_purpose="205">
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="15" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1500" icq ="32639" />
+			<APTRec pwr="12" vcc ="1300" icq ="32639" />
+			<APTRec pwr="11" vcc ="1150" icq ="32639" />
+			<APTRec pwr="10" vcc ="1000" icq ="32639" />
+			<APTRec pwr="9" vcc ="950" icq ="32639" />
+			<APTRec pwr="8" vcc ="900" icq ="32639" />
+			<APTRec pwr="7" vcc ="900" icq ="32639" />
+			<APTRec pwr="6" vcc ="900" icq ="32639" />
+			<APTRec pwr="5" vcc ="900" icq ="32639" />
+			<APTRec pwr="4" vcc ="900" icq ="32639" />
+			<APTRec pwr="3" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="0" vcc ="900" icq ="32639" />
+			<APTRec pwr="-10" vcc ="900" icq ="32639" />
+		</APTTable>
+		<APTTable channel="39084" pa_state="4" tx_purpose="205">
+			<APTRec pwr="6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="0" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="1300" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B40 -->
+	<APTCharV1 rf_mode="39" device="2">
+		<APTTable channel="39084" pa_state="2">
+			<APTRec pwr="32" bias ="2348946312" />
+			<APTRec pwr="26" bias ="2348946312" />
+			<APTRec pwr="25" bias ="2348946312" />
+			<APTRec pwr="24" bias ="2349339528" />
+			<APTRec pwr="23" bias ="2349339528" />
+			<APTRec pwr="22" bias ="2349339378" />
+			<APTRec pwr="21" bias ="2349339128" />
+			<APTRec pwr="20" bias ="2349338828" />
+			<APTRec pwr="19" bias ="2349338528" />
+			<APTRec pwr="18" bias ="2349338228" />
+			<APTRec pwr="17" bias ="2349337928" />
+			<APTRec pwr="16" bias ="2349337628" />
+			<APTRec pwr="15" bias ="2349337328" />
+			<APTRec pwr="14" bias ="2349337028" />
+			<APTRec pwr="13" bias ="2349336928" />
+			<APTRec pwr="12" bias ="2349336828" />
+			<APTRec pwr="11" bias ="2349336728" />
+			<APTRec pwr="10" bias ="2349336628" />
+			<APTRec pwr="9" bias ="2349336628" />
+		</APTTable>
+		<APTTable channel="39084" pa_state="1">
+			<APTRec pwr="16" bias ="2349598372" />
+			<APTRec pwr="15" bias ="2349598372" />
+			<APTRec pwr="14" bias ="2349598372" />
+			<APTRec pwr="13" bias ="2349598172" />
+			<APTRec pwr="12" bias ="2349597972" />
+			<APTRec pwr="11" bias ="2349597822" />
+			<APTRec pwr="10" bias ="2349597672" />
+			<APTRec pwr="9" bias ="2349597622" />
+			<APTRec pwr="8" bias ="2349597572" />
+			<APTRec pwr="7" bias ="2349597572" />
+			<APTRec pwr="6" bias ="2349597572" />
+			<APTRec pwr="5" bias ="2349597572" />
+			<APTRec pwr="4" bias ="2349597572" />
+			<APTRec pwr="3" bias ="2349597572" />
+			<APTRec pwr="2" bias ="2349597572" />
+			<APTRec pwr="1" bias ="2349597572" />
+			<APTRec pwr="0" bias ="2349597572" />
+			<APTRec pwr="-10" bias ="2349597572" />
+		</APTTable>
+		<APTTable channel="39084" pa_state="0">
+			<APTRec pwr="6" bias ="2265449448" />
+			<APTRec pwr="5" bias ="2265449448" />
+			<APTRec pwr="4" bias ="2265449448" />
+			<APTRec pwr="3" bias ="2265449448" />
+			<APTRec pwr="2" bias ="2265449448" />
+			<APTRec pwr="1" bias ="2265449448" />
+			<APTRec pwr="0" bias ="2265449448" />
+			<APTRec pwr="-1" bias ="2265449448" />
+			<APTRec pwr="-2" bias ="2265449448" />
+			<APTRec pwr="-3" bias ="2265449248" />
+			<APTRec pwr="-4" bias ="2265449248" />
+			<APTRec pwr="-5" bias ="2265449248" />
+			<APTRec pwr="-6" bias ="2265449248" />
+			<APTRec pwr="-7" bias ="2265449248" />
+			<APTRec pwr="-8" bias ="2265449248" />
+			<APTRec pwr="-9" bias ="2265449248" />
+			<APTRec pwr="-10" bias ="2265449248" />
+			<APTRec pwr="-40" bias ="2265449248" />
+		</APTTable>
+	</APTCharV1>
+	<!-- LTE B41 -->
+	<APTCharV3 rf_mode="76" device="2">
+		<APTTable channel="40681" pa_state="2" tx_purpose="1">
+			<APTRec pwr="32" vcc ="5200" icq ="32896" />
+			<APTRec pwr="26" vcc ="5200" icq ="32896" />
+			<APTRec pwr="25" vcc ="5200" icq ="32896" />
+			<APTRec pwr="24" vcc ="5200" icq ="32896" />
+			<APTRec pwr="23" vcc ="5200" icq ="32896" />
+			<APTRec pwr="22" vcc ="5100" icq ="32896" />
+			<APTRec pwr="21" vcc ="4800" icq ="32896" />
+			<APTRec pwr="20" vcc ="4500" icq ="32896" />
+			<APTRec pwr="19" vcc ="4300" icq ="32896" />
+			<APTRec pwr="18" vcc ="3900" icq ="32896" />
+			<APTRec pwr="17" vcc ="3650" icq ="32896" />
+			<APTRec pwr="16" vcc ="3200" icq ="32896" />
+			<APTRec pwr="15" vcc ="2900" icq ="32896" />
+			<APTRec pwr="14" vcc ="2700" icq ="32896" />
+			<APTRec pwr="13" vcc ="2400" icq ="32896" />
+			<APTRec pwr="12" vcc ="2200" icq ="32896" />
+			<APTRec pwr="11" vcc ="2000" icq ="32896" />
+			<APTRec pwr="10" vcc ="2000" icq ="32896" />
+			<APTRec pwr="9" vcc ="2000" icq ="32896" />
+		</APTTable>
+		<APTTable channel="40681" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="1800" icq ="32639" />
+			<APTRec pwr="15" vcc ="1800" icq ="32639" />
+			<APTRec pwr="14" vcc ="1800" icq ="32639" />
+			<APTRec pwr="13" vcc ="1500" icq ="32639" />
+			<APTRec pwr="12" vcc ="1400" icq ="32639" />
+			<APTRec pwr="11" vcc ="1250" icq ="32639" />
+			<APTRec pwr="10" vcc ="1100" icq ="32639" />
+			<APTRec pwr="9" vcc ="950" icq ="32639" />
+			<APTRec pwr="8" vcc ="850" icq ="32639" />
+			<APTRec pwr="7" vcc ="850" icq ="32639" />
+			<APTRec pwr="6" vcc ="850" icq ="32639" />
+			<APTRec pwr="5" vcc ="850" icq ="32639" />
+			<APTRec pwr="4" vcc ="850" icq ="32639" />
+			<APTRec pwr="3" vcc ="850" icq ="32639" />
+			<APTRec pwr="2" vcc ="850" icq ="32639" />
+			<APTRec pwr="1" vcc ="850" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1800" icq ="32639" />
+		</APTTable>
+		<APTTable channel="40681" pa_state="0" tx_purpose="1">
+			<APTRec pwr="6" vcc ="700" icq ="31092" />
+			<APTRec pwr="5" vcc ="700" icq ="31092" />
+			<APTRec pwr="4" vcc ="700" icq ="31092" />
+			<APTRec pwr="3" vcc ="700" icq ="31092" />
+			<APTRec pwr="2" vcc ="700" icq ="31092" />
+			<APTRec pwr="1" vcc ="700" icq ="31092" />
+			<APTRec pwr="0" vcc ="700" icq ="31092" />
+			<APTRec pwr="-1" vcc ="700" icq ="31092" />
+			<APTRec pwr="-2" vcc ="700" icq ="31092" />
+			<APTRec pwr="-3" vcc ="700" icq ="31092" />
+			<APTRec pwr="-4" vcc ="700" icq ="31092" />
+			<APTRec pwr="-5" vcc ="700" icq ="31092" />
+			<APTRec pwr="-6" vcc ="700" icq ="31092" />
+			<APTRec pwr="-7" vcc ="700" icq ="31092" />
+			<APTRec pwr="-8" vcc ="700" icq ="31092" />
+			<APTRec pwr="-40" vcc ="700" icq ="31092" />
+		</APTTable>
+		<APTTable channel="40681" pa_state="6" tx_purpose="205">
+		    <APTRec pwr="32" vcc ="5200" icq ="32639" />
+			<APTRec pwr="26" vcc ="5200" icq ="32639" />
+			<APTRec pwr="25" vcc ="5200" icq ="32639" />
+			<APTRec pwr="24" vcc ="5200" icq ="32639" />
+			<APTRec pwr="23" vcc ="5200" icq ="32639" />
+			<APTRec pwr="22" vcc ="5100" icq ="32639" />
+			<APTRec pwr="21" vcc ="4800" icq ="32639" />
+			<APTRec pwr="20" vcc ="4500" icq ="32639" />
+			<APTRec pwr="19" vcc ="4300" icq ="32639" />
+			<APTRec pwr="18" vcc ="3900" icq ="32639" />
+			<APTRec pwr="17" vcc ="3650" icq ="32639" />
+			<APTRec pwr="16" vcc ="3200" icq ="32639" />
+			<APTRec pwr="15" vcc ="2900" icq ="32639" />
+			<APTRec pwr="14" vcc ="2700" icq ="32639" />
+			<APTRec pwr="13" vcc ="2400" icq ="32639" />
+			<APTRec pwr="12" vcc ="2200" icq ="32639" />
+			<APTRec pwr="11" vcc ="2000" icq ="32639" />
+			<APTRec pwr="10" vcc ="2000" icq ="32639" />
+			<APTRec pwr="9" vcc ="2000" icq ="32639" />
+		</APTTable>
+		<APTTable channel="40681" pa_state="5" tx_purpose="205">
+			<APTRec pwr="16" vcc ="1800" icq ="32639" />
+			<APTRec pwr="15" vcc ="1800" icq ="32639" />
+			<APTRec pwr="14" vcc ="1800" icq ="32639" />
+			<APTRec pwr="13" vcc ="1500" icq ="32639" />
+			<APTRec pwr="12" vcc ="1400" icq ="32639" />
+			<APTRec pwr="11" vcc ="1100" icq ="32639" />
+			<APTRec pwr="10" vcc ="1050" icq ="32639" />
+			<APTRec pwr="9" vcc ="1000" icq ="32639" />
+			<APTRec pwr="8" vcc ="1000" icq ="32639" />
+			<APTRec pwr="7" vcc ="1000" icq ="32639" />
+			<APTRec pwr="6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1800" icq ="32639" />
+		</APTTable>
+		<APTTable channel="40681" pa_state="4" tx_purpose="205">
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="900" icq ="32639" />
+			<APTRec pwr="2" vcc ="900" icq ="32639" />
+			<APTRec pwr="1" vcc ="900" icq ="32639" />
+			<APTRec pwr="0" vcc ="800" icq ="32639" />
+			<APTRec pwr="-1" vcc ="800" icq ="32639" />
+			<APTRec pwr="-2" vcc ="800" icq ="32639" />
+			<APTRec pwr="-3" vcc ="800" icq ="32639" />
+			<APTRec pwr="-4" vcc ="800" icq ="32639" />
+			<APTRec pwr="-5" vcc ="800" icq ="32639" />
+			<APTRec pwr="-6" vcc ="800" icq ="32639" />
+			<APTRec pwr="-7" vcc ="800" icq ="32639" />
+			<APTRec pwr="-8" vcc ="800" icq ="32639" />
+			<APTRec pwr="-9" vcc ="800" icq ="32639" />
+			<APTRec pwr="-10" vcc ="800" icq ="32639" />
+			<APTRec pwr="-40" vcc ="800" icq ="32639" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="2" tx_purpose="1">
+			<APTRec pwr="32" vcc ="5200" icq ="32639" />
+			<APTRec pwr="25.5" vcc ="5100" icq ="32639" />
+			<APTRec pwr="24.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23" vcc ="4500" icq ="32639" />
+			<APTRec pwr="22" vcc ="4400" icq ="32639" />
+			<APTRec pwr="21" vcc ="4400" icq ="32639" />
+			<APTRec pwr="20" vcc ="4400" icq ="32639" />
+			<APTRec pwr="19" vcc ="4400" icq ="32639" />
+			<APTRec pwr="18" vcc ="4400" icq ="32639" />
+			<APTRec pwr="17" vcc ="4400" icq ="32639" />
+			<APTRec pwr="16" vcc ="4400" icq ="32639" />
+			<APTRec pwr="15" vcc ="4400" icq ="32639" />
+			<APTRec pwr="14" vcc ="4400" icq ="32639" />
+			<APTRec pwr="13" vcc ="4400" icq ="32639" />
+			<APTRec pwr="12" vcc ="4400" icq ="32639" />
+			<APTRec pwr="11" vcc ="4400" icq ="32639" />
+			<APTRec pwr="10" vcc ="4400" icq ="32639" />
+			<APTRec pwr="8" vcc ="4400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="2" tx_purpose="5">
+			<APTRec pwr="32" vcc ="5200" icq ="32639" />
+			<APTRec pwr="25.5" vcc ="5100" icq ="32639" />
+			<APTRec pwr="24.5" vcc ="4900" icq ="32639" />
+			<APTRec pwr="24" vcc ="4700" icq ="32639" />
+			<APTRec pwr="23" vcc ="4500" icq ="32639" />
+			<APTRec pwr="22" vcc ="4400" icq ="32639" />
+			<APTRec pwr="21" vcc ="4400" icq ="32639" />
+			<APTRec pwr="20" vcc ="4400" icq ="32639" />
+			<APTRec pwr="19" vcc ="4400" icq ="32639" />
+			<APTRec pwr="18" vcc ="4400" icq ="32639" />
+			<APTRec pwr="17" vcc ="4400" icq ="32639" />
+			<APTRec pwr="16" vcc ="4400" icq ="32639" />
+			<APTRec pwr="15" vcc ="4400" icq ="32639" />
+			<APTRec pwr="14" vcc ="4400" icq ="32639" />
+			<APTRec pwr="13" vcc ="4400" icq ="32639" />
+			<APTRec pwr="12" vcc ="4400" icq ="32639" />
+			<APTRec pwr="11" vcc ="4400" icq ="32639" />
+			<APTRec pwr="10" vcc ="4400" icq ="32639" />
+			<APTRec pwr="8" vcc ="4400" icq ="32639" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="1" tx_purpose="1">
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="15" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1700" icq ="32639" />
+			<APTRec pwr="12" vcc ="1700" icq ="32639" />
+			<APTRec pwr="11" vcc ="1700" icq ="32639" />
+			<APTRec pwr="9" vcc ="1700" icq ="32639" />
+			<APTRec pwr="8" vcc ="1700" icq ="32639" />
+			<APTRec pwr="7" vcc ="1700" icq ="32639" />
+			<APTRec pwr="6" vcc ="1700" icq ="32639" />
+			<APTRec pwr="5" vcc ="1700" icq ="32639" />
+			<APTRec pwr="4" vcc ="1700" icq ="32639" />
+			<APTRec pwr="3" vcc ="1700" icq ="32639" />
+			<APTRec pwr="2" vcc ="1700" icq ="32639" />
+			<APTRec pwr="1" vcc ="1700" icq ="32639" />
+			<APTRec pwr="0" vcc ="1700" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1700" icq ="32639" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="1" tx_purpose="5">
+			<APTRec pwr="16" vcc ="1700" icq ="32639" />
+			<APTRec pwr="15" vcc ="1700" icq ="32639" />
+			<APTRec pwr="14" vcc ="1700" icq ="32639" />
+			<APTRec pwr="13" vcc ="1700" icq ="32639" />
+			<APTRec pwr="12" vcc ="1700" icq ="32639" />
+			<APTRec pwr="11" vcc ="1700" icq ="32639" />
+			<APTRec pwr="9" vcc ="1700" icq ="32639" />
+			<APTRec pwr="8" vcc ="1700" icq ="32639" />
+			<APTRec pwr="7" vcc ="1700" icq ="32639" />
+			<APTRec pwr="6" vcc ="1700" icq ="32639" />
+			<APTRec pwr="5" vcc ="1700" icq ="32639" />
+			<APTRec pwr="4" vcc ="1700" icq ="32639" />
+			<APTRec pwr="3" vcc ="1700" icq ="32639" />
+			<APTRec pwr="2" vcc ="1700" icq ="32639" />
+			<APTRec pwr="1" vcc ="1700" icq ="32639" />
+			<APTRec pwr="0" vcc ="1700" icq ="32639" />
+			<APTRec pwr="-10" vcc ="1700" icq ="32639" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="0" tx_purpose="1">
+			<APTRec pwr="6" vcc ="700" icq ="30838" />
+			<APTRec pwr="5" vcc ="700" icq ="30838" />
+			<APTRec pwr="4" vcc ="700" icq ="30838" />
+			<APTRec pwr="3" vcc ="700" icq ="30838" />
+			<APTRec pwr="2" vcc ="700" icq ="30838" />
+			<APTRec pwr="1" vcc ="700" icq ="30838" />
+			<APTRec pwr="-0.2" vcc ="700" icq ="30838" />
+			<APTRec pwr="-1.2" vcc ="700" icq ="30838" />
+			<APTRec pwr="-2.4" vcc ="700" icq ="30838" />
+			<APTRec pwr="-3.6" vcc ="700" icq ="30838" />
+			<APTRec pwr="-5" vcc ="700" icq ="30838" />
+			<APTRec pwr="-6" vcc ="700" icq ="30838" />
+			<APTRec pwr="-7" vcc ="700" icq ="30838" />
+			<APTRec pwr="-40" vcc ="700" icq ="30838" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="0" tx_purpose="5">
+			<APTRec pwr="6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="3" vcc ="1000" icq ="32639" />
+			<APTRec pwr="2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="1" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-0.2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-1.2" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-2.4" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-3.6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-5" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-6" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-7" vcc ="1000" icq ="32639" />
+			<APTRec pwr="-40" vcc ="1000" icq ="32639" />
+		</APTTable>
+	</APTCharV3>
+	<!-- LTE B41 -->
+	<APTCharV1 rf_mode="76" device="2">
+		<APTTable channel="40681" pa_state="2">
+			<APTRec pwr="32" bias ="2281837648" />
+			<APTRec pwr="25.5" bias ="2281837448" />
+			<APTRec pwr="24.5" bias ="2281837248" />
+			<APTRec pwr="24" bias ="2281837648" />
+			<APTRec pwr="23" bias ="2281837648" />
+			<APTRec pwr="22" bias ="2281837348" />
+			<APTRec pwr="21" bias ="2281837048" />
+			<APTRec pwr="20" bias ="2281836748" />
+			<APTRec pwr="19" bias ="2281836448" />
+			<APTRec pwr="18" bias ="2281836148" />
+			<APTRec pwr="17" bias ="2281835848" />
+			<APTRec pwr="16" bias ="2281835548" />
+			<APTRec pwr="15" bias ="2281835248" />
+			<APTRec pwr="14" bias ="2281834948" />
+			<APTRec pwr="13" bias ="2281834648" />
+			<APTRec pwr="12" bias ="2281834648" />
+			<APTRec pwr="11" bias ="2281834448" />
+			<APTRec pwr="10" bias ="2281834448" />
+			<APTRec pwr="9" bias ="2281834448" />
+		</APTTable>
+		<APTTable channel="40681" pa_state="1">
+			<APTRec pwr="16" bias ="2316044040" />
+			<APTRec pwr="15" bias ="2316044040" />
+			<APTRec pwr="14" bias ="2316044040" />
+			<APTRec pwr="13" bias ="2316043740" />
+			<APTRec pwr="12" bias ="2316043640" />
+			<APTRec pwr="11" bias ="2316043340" />
+			<APTRec pwr="10" bias ="2316043290" />
+			<APTRec pwr="9" bias ="2316043240" />
+			<APTRec pwr="8" bias ="2316043240" />
+			<APTRec pwr="7" bias ="2316043240" />
+			<APTRec pwr="6" bias ="2316043240" />
+			<APTRec pwr="5" bias ="2316043240" />
+			<APTRec pwr="4" bias ="2316043240" />
+			<APTRec pwr="3" bias ="2316043140" />
+			<APTRec pwr="2" bias ="2316043140" />
+			<APTRec pwr="1" bias ="2316043140" />
+			<APTRec pwr="-10" bias ="2316044040" />
+		</APTTable>
+		<APTTable channel="40681" pa_state="0">
+			<APTRec pwr="6" bias ="2265711592" />
+			<APTRec pwr="5" bias ="2265711592" />
+			<APTRec pwr="4" bias ="2265711592" />
+			<APTRec pwr="3" bias ="2265711492" />
+			<APTRec pwr="2" bias ="2265711492" />
+			<APTRec pwr="1" bias ="2265711492" />
+			<APTRec pwr="0" bias ="2265711392" />
+			<APTRec pwr="-1" bias ="2265711392" />
+			<APTRec pwr="-2" bias ="2265711392" />
+			<APTRec pwr="-3" bias ="2265711392" />
+			<APTRec pwr="-4" bias ="2265711392" />
+			<APTRec pwr="-5" bias ="2265711392" />
+			<APTRec pwr="-6" bias ="2265711392" />
+			<APTRec pwr="-7" bias ="2265711392" />
+			<APTRec pwr="-8" bias ="2265711392" />
+			<APTRec pwr="-40" bias ="2265711592" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="2">
+			<APTRec pwr="32" bias ="2298549328" />
+			<APTRec pwr="25.5" bias ="2298549228" />
+			<APTRec pwr="24.5" bias ="2298549028" />
+			<APTRec pwr="24" bias ="2281968220" />
+			<APTRec pwr="23" bias ="2281968020" />
+			<APTRec pwr="22" bias ="2281967920" />
+			<APTRec pwr="21" bias ="2281967920" />
+			<APTRec pwr="20" bias ="2281967920" />
+			<APTRec pwr="19" bias ="2281967920" />
+			<APTRec pwr="18" bias ="2281967920" />
+			<APTRec pwr="17" bias ="2281967920" />
+			<APTRec pwr="16" bias ="2281967920" />
+			<APTRec pwr="15" bias ="2281967920" />
+			<APTRec pwr="14" bias ="2281967920" />
+			<APTRec pwr="13" bias ="2281967920" />
+			<APTRec pwr="12" bias ="2281967920" />
+			<APTRec pwr="11" bias ="2281967920" />
+			<APTRec pwr="10" bias ="2281967920" />
+			<APTRec pwr="8" bias ="2281967920" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="1">
+			<APTRec pwr="16" bias ="2349336228" />
+			<APTRec pwr="15" bias ="2349336228" />
+			<APTRec pwr="14" bias ="2349336228" />
+			<APTRec pwr="13" bias ="2349336228" />
+			<APTRec pwr="12" bias ="2349336228" />
+			<APTRec pwr="11" bias ="2349336228" />
+			<APTRec pwr="9" bias ="2349336228" />
+			<APTRec pwr="8" bias ="2349336228" />
+			<APTRec pwr="7" bias ="2349336228" />
+			<APTRec pwr="6" bias ="2349336228" />
+			<APTRec pwr="5" bias ="2349336228" />
+			<APTRec pwr="4" bias ="2349336228" />
+			<APTRec pwr="3" bias ="2349336228" />
+			<APTRec pwr="2" bias ="2349336228" />
+			<APTRec pwr="1" bias ="2349336228" />
+			<APTRec pwr="0" bias ="2349336228" />
+			<APTRec pwr="-10" bias ="2349336228" />
+		</APTTable>
+		<APTTable channel="41300" pa_state="0">
+			<APTRec pwr="6" bias ="2282357736" />
+			<APTRec pwr="5" bias ="2282357736" />
+			<APTRec pwr="4" bias ="2282357736" />
+			<APTRec pwr="3" bias ="2282357736" />
+			<APTRec pwr="2" bias ="2282357736" />
+			<APTRec pwr="1" bias ="2282357736" />
+			<APTRec pwr="-0.2" bias ="2282357736" />
+			<APTRec pwr="-1.2" bias ="2282357736" />
+			<APTRec pwr="-2.4" bias ="2282357736" />
+			<APTRec pwr="-3.6" bias ="2282357736" />
+			<APTRec pwr="-5" bias ="2282357736" />
+			<APTRec pwr="-6" bias ="2282357736" />
+			<APTRec pwr="-7" bias ="2282357736" />
+			<APTRec pwr="-40" bias ="2282357736" />
+		</APTTable>
+	</APTCharV1>
+	<!-- RxGain Char: GSM 850 -->
+	<RxGainTable rf_mode="18" chain="0" instance="0">
+		<RxGainChar channel="128">
+			<RxGain lna="0" gain="141.136" />
+			<RxGain lna="1" gain="129.256" />
+			<RxGain lna="2" gain="116.81" />
+			<RxGain lna="3" gain="104.826" />
+		</RxGainChar>
+		<RxGainChar channel="145">
+			<RxGain lna="0" gain="141.545" />
+			<RxGain lna="1" gain="129.436" />
+			<RxGain lna="2" gain="116.789" />
+			<RxGain lna="3" gain="104.711" />
+		</RxGainChar>
+		<RxGainChar channel="163">
+			<RxGain lna="0" gain="142.516" />
+			<RxGain lna="1" gain="130.176" />
+			<RxGain lna="2" gain="117.536" />
+			<RxGain lna="3" gain="105.282" />
+		</RxGainChar>
+		<RxGainChar channel="180">
+			<RxGain lna="0" gain="141.523" />
+			<RxGain lna="1" gain="129.496" />
+			<RxGain lna="2" gain="116.996" />
+			<RxGain lna="3" gain="105.14" />
+		</RxGainChar>
+		<RxGainChar channel="198">
+			<RxGain lna="0" gain="141.175" />
+			<RxGain lna="1" gain="129.354" />
+			<RxGain lna="2" gain="116.628" />
+			<RxGain lna="3" gain="105.06" />
+		</RxGainChar>
+		<RxGainChar channel="215">
+			<RxGain lna="0" gain="141.923" />
+			<RxGain lna="1" gain="129.75" />
+			<RxGain lna="2" gain="116.91" />
+			<RxGain lna="3" gain="104.822" />
+		</RxGainChar>
+		<RxGainChar channel="233">
+			<RxGain lna="0" gain="141.809" />
+			<RxGain lna="1" gain="129.821" />
+			<RxGain lna="2" gain="117.153" />
+			<RxGain lna="3" gain="104.912" />
+		</RxGainChar>
+		<RxGainChar channel="251">
+			<RxGain lna="0" gain="140.705" />
+			<RxGain lna="1" gain="128.682" />
+			<RxGain lna="2" gain="116.111" />
+			<RxGain lna="3" gain="104.165" />
+		</RxGainChar>
+	</RxGainTable>
+	<RxGainTable rf_mode="18" chain="1" instance="0">
+		<RxGainChar channel="128">
+			<RxGain lna="0" gain="142.988" />
+			<RxGain lna="1" gain="131.23" />
+			<RxGain lna="2" gain="119.157" />
+			<RxGain lna="3" gain="106.907" />
+		</RxGainChar>
+		<RxGainChar channel="145">
+			<RxGain lna="0" gain="143.004" />
+			<RxGain lna="1" gain="131.105" />
+			<RxGain lna="2" gain="119.013" />
+			<RxGain lna="3" gain="107.124" />
+		</RxGainChar>
+		<RxGainChar channel="163">
+			<RxGain lna="0" gain="143.448" />
+			<RxGain lna="1" gain="131.266" />
+			<RxGain lna="2" gain="119.051" />
+			<RxGain lna="3" gain="106.857" />
+		</RxGainChar>
+		<RxGainChar channel="180">
+			<RxGain lna="0" gain="143.444" />
+			<RxGain lna="1" gain="131.52" />
+			<RxGain lna="2" gain="119.112" />
+			<RxGain lna="3" gain="106.643" />
+		</RxGainChar>
+		<RxGainChar channel="198">
+			<RxGain lna="0" gain="143.012" />
+			<RxGain lna="1" gain="131.331" />
+			<RxGain lna="2" gain="118.985" />
+			<RxGain lna="3" gain="106.97" />
+		</RxGainChar>
+		<RxGainChar channel="215">
+			<RxGain lna="0" gain="142.533" />
+			<RxGain lna="1" gain="130.564" />
+			<RxGain lna="2" gain="118.467" />
+			<RxGain lna="3" gain="106.902" />
+		</RxGainChar>
+		<RxGainChar channel="233">
+			<RxGain lna="0" gain="142.323" />
+			<RxGain lna="1" gain="130.504" />
+			<RxGain lna="2" gain="118.343" />
+			<RxGain lna="3" gain="106.393" />
+		</RxGainChar>
+		<RxGainChar channel="251">
+			<RxGain lna="0" gain="142.598" />
+			<RxGain lna="1" gain="130.66" />
+			<RxGain lna="2" gain="118.359" />
+			<RxGain lna="3" gain="106.01" />
+		</RxGainChar>
+	</RxGainTable>
+	<!-- RxGain Char: GSM 900 -->
+	<RxGainTable rf_mode="10" chain="0" instance="0">
+		<RxGainChar channel="1">
+			<RxGain lna="0" gain="141.588" />
+			<RxGain lna="1" gain="129.683" />
+			<RxGain lna="2" gain="117.587" />
+			<RxGain lna="3" gain="105.624" />
+		</RxGainChar>
+		<RxGainChar channel="31">
+			<RxGain lna="0" gain="141.664" />
+			<RxGain lna="1" gain="129.765" />
+			<RxGain lna="2" gain="117.949" />
+			<RxGain lna="3" gain="105.654" />
+		</RxGainChar>
+		<RxGainChar channel="62">
+			<RxGain lna="0" gain="141.932" />
+			<RxGain lna="1" gain="129.802" />
+			<RxGain lna="2" gain="117.756" />
+			<RxGain lna="3" gain="105.408" />
+		</RxGainChar>
+		<RxGainChar channel="92">
+			<RxGain lna="0" gain="141.621" />
+			<RxGain lna="1" gain="129.693" />
+			<RxGain lna="2" gain="117.637" />
+			<RxGain lna="3" gain="105.457" />
+		</RxGainChar>
+		<RxGainChar channel="124">
+			<RxGain lna="0" gain="141.818" />
+			<RxGain lna="1" gain="129.683" />
+			<RxGain lna="2" gain="117.484" />
+			<RxGain lna="3" gain="104.908" />
+		</RxGainChar>
+		<RxGainChar channel="975">
+			<RxGain lna="0" gain="140.807" />
+			<RxGain lna="1" gain="129.074" />
+			<RxGain lna="2" gain="116.909" />
+			<RxGain lna="3" gain="104.892" />
+		</RxGainChar>
+		<RxGainChar channel="1000">
+			<RxGain lna="0" gain="141.59" />
+			<RxGain lna="1" gain="129.418" />
+			<RxGain lna="2" gain="117.539" />
+			<RxGain lna="3" gain="105.53" />
+		</RxGainChar>
+		<RxGainChar channel="1023">
+			<RxGain lna="0" gain="141.633" />
+			<RxGain lna="1" gain="129.82" />
+			<RxGain lna="2" gain="117.639" />
+			<RxGain lna="3" gain="105.503" />
+		</RxGainChar>
+	</RxGainTable>
+	<RxGainTable rf_mode="10" chain="1" instance="0">
+		<RxGainChar channel="1">
+			<RxGain lna="0" gain="142.669" />
+			<RxGain lna="1" gain="130.711" />
+			<RxGain lna="2" gain="118.178" />
+			<RxGain lna="3" gain="106.32" />
+		</RxGainChar>
+		<RxGainChar channel="31">
+			<RxGain lna="0" gain="143.045" />
+			<RxGain lna="1" gain="131.093" />
+			<RxGain lna="2" gain="118.736" />
+			<RxGain lna="3" gain="106.425" />
+		</RxGainChar>
+		<RxGainChar channel="62">
+			<RxGain lna="0" gain="143.075" />
+			<RxGain lna="1" gain="130.959" />
+			<RxGain lna="2" gain="118.371" />
+			<RxGain lna="3" gain="105.937" />
+		</RxGainChar>
+		<RxGainChar channel="92">
+			<RxGain lna="0" gain="142.783" />
+			<RxGain lna="1" gain="130.82" />
+			<RxGain lna="2" gain="118.448" />
+			<RxGain lna="3" gain="106.49" />
+		</RxGainChar>
+		<RxGainChar channel="124">
+			<RxGain lna="0" gain="142.97" />
+			<RxGain lna="1" gain="130.812" />
+			<RxGain lna="2" gain="118.145" />
+			<RxGain lna="3" gain="105.467" />
+		</RxGainChar>
+		<RxGainChar channel="975">
+			<RxGain lna="0" gain="142.125" />
+			<RxGain lna="1" gain="130.401" />
+			<RxGain lna="2" gain="117.768" />
+			<RxGain lna="3" gain="105.993" />
+		</RxGainChar>
+		<RxGainChar channel="1000">
+			<RxGain lna="0" gain="143.451" />
+			<RxGain lna="1" gain="131.129" />
+			<RxGain lna="2" gain="118.464" />
+			<RxGain lna="3" gain="106.004" />
+		</RxGainChar>
+		<RxGainChar channel="1023">
+			<RxGain lna="0" gain="142.614" />
+			<RxGain lna="1" gain="130.775" />
+			<RxGain lna="2" gain="118.144" />
+			<RxGain lna="3" gain="106.084" />
+		</RxGainChar>
+	</RxGainTable>
+	<!-- RxGain Char: GSM 1800 -->
+	<RxGainTable rf_mode="11" chain="0" instance="0">
+		<RxGainChar channel="512">
+			<RxGain lna="0" gain="140.993" />
+			<RxGain lna="1" gain="127.932" />
+			<RxGain lna="2" gain="117.461" />
+			<RxGain lna="3" gain="104.895" />
+		</RxGainChar>
+		<RxGainChar channel="537">
+			<RxGain lna="0" gain="141.409" />
+			<RxGain lna="1" gain="128.374" />
+			<RxGain lna="2" gain="117.653" />
+			<RxGain lna="3" gain="104.769" />
+		</RxGainChar>
+		<RxGainChar channel="562">
+			<RxGain lna="0" gain="142.048" />
+			<RxGain lna="1" gain="129.156" />
+			<RxGain lna="2" gain="118.224" />
+			<RxGain lna="3" gain="105.361" />
+		</RxGainChar>
+		<RxGainChar channel="587">
+			<RxGain lna="0" gain="142.343" />
+			<RxGain lna="1" gain="129.275" />
+			<RxGain lna="2" gain="118.73" />
+			<RxGain lna="3" gain="105.944" />
+		</RxGainChar>
+		<RxGainChar channel="612">
+			<RxGain lna="0" gain="141.96" />
+			<RxGain lna="1" gain="129.331" />
+			<RxGain lna="2" gain="118.905" />
+			<RxGain lna="3" gain="106.201" />
+		</RxGainChar>
+		<RxGainChar channel="637">
+			<RxGain lna="0" gain="141.778" />
+			<RxGain lna="1" gain="128.801" />
+			<RxGain lna="2" gain="118.334" />
+			<RxGain lna="3" gain="105.979" />
+		</RxGainChar>
+		<RxGainChar channel="662">
+			<RxGain lna="0" gain="141.75" />
+			<RxGain lna="1" gain="128.744" />
+			<RxGain lna="2" gain="118.223" />
+			<RxGain lna="3" gain="105.318" />
+		</RxGainChar>
+		<RxGainChar channel="687">
+			<RxGain lna="0" gain="141.997" />
+			<RxGain lna="1" gain="128.837" />
+			<RxGain lna="2" gain="118.13" />
+			<RxGain lna="3" gain="105.266" />
+		</RxGainChar>
+		<RxGainChar channel="712">
+			<RxGain lna="0" gain="142.283" />
+			<RxGain lna="1" gain="129.148" />
+			<RxGain lna="2" gain="118.491" />
+			<RxGain lna="3" gain="105.507" />
+		</RxGainChar>
+		<RxGainChar channel="737">
+			<RxGain lna="0" gain="142.333" />
+			<RxGain lna="1" gain="129.418" />
+			<RxGain lna="2" gain="118.98" />
+			<RxGain lna="3" gain="106.147" />
+		</RxGainChar>
+		<RxGainChar channel="762">
+			<RxGain lna="0" gain="142.267" />
+			<RxGain lna="1" gain="129.289" />
+			<RxGain lna="2" gain="119.143" />
+			<RxGain lna="3" gain="106.811" />
+		</RxGainChar>
+		<RxGainChar channel="787">
+			<RxGain lna="0" gain="141.644" />
+			<RxGain lna="1" gain="128.886" />
+			<RxGain lna="2" gain="118.872" />
+			<RxGain lna="3" gain="106.354" />
+		</RxGainChar>
+		<RxGainChar channel="812">
+			<RxGain lna="0" gain="141.449" />
+			<RxGain lna="1" gain="128.441" />
+			<RxGain lna="2" gain="118.168" />
+			<RxGain lna="3" gain="105.715" />
+		</RxGainChar>
+		<RxGainChar channel="837">
+			<RxGain lna="0" gain="141.759" />
+			<RxGain lna="1" gain="128.791" />
+			<RxGain lna="2" gain="118.351" />
+			<RxGain lna="3" gain="105.374" />
+		</RxGainChar>
+		<RxGainChar channel="862">
+			<RxGain lna="0" gain="141.969" />
+			<RxGain lna="1" gain="129.037" />
+			<RxGain lna="2" gain="118.646" />
+			<RxGain lna="3" gain="105.908" />
+		</RxGainChar>
+		<RxGainChar channel="885">
+			<RxGain lna="0" gain="141.587" />
+			<RxGain lna="1" gain="128.591" />
+			<RxGain lna="2" gain="118.52" />
+			<RxGain lna="3" gain="106.075" />
+		</RxGainChar>
+	</RxGainTable>
+	<RxGainTable rf_mode="11" chain="1" instance="0">
+		<RxGainChar channel="512">
+			<RxGain lna="0" gain="140.932" />
+			<RxGain lna="1" gain="127.899" />
+			<RxGain lna="2" gain="116.257" />
+			<RxGain lna="3" gain="103.461" />
+		</RxGainChar>
+		<RxGainChar channel="537">
+			<RxGain lna="0" gain="141.971" />
+			<RxGain lna="1" gain="129.187" />
+			<RxGain lna="2" gain="117.689" />
+			<RxGain lna="3" gain="104.865" />
+		</RxGainChar>
+		<RxGainChar channel="562">
+			<RxGain lna="0" gain="142.013" />
+			<RxGain lna="1" gain="129.436" />
+			<RxGain lna="2" gain="117.908" />
+			<RxGain lna="3" gain="105.331" />
+		</RxGainChar>
+		<RxGainChar channel="587">
+			<RxGain lna="0" gain="141.872" />
+			<RxGain lna="1" gain="128.847" />
+			<RxGain lna="2" gain="117.438" />
+			<RxGain lna="3" gain="104.713" />
+		</RxGainChar>
+		<RxGainChar channel="612">
+			<RxGain lna="0" gain="141.702" />
+			<RxGain lna="1" gain="129.064" />
+			<RxGain lna="2" gain="117.443" />
+			<RxGain lna="3" gain="104.496" />
+		</RxGainChar>
+		<RxGainChar channel="637">
+			<RxGain lna="0" gain="142.176" />
+			<RxGain lna="1" gain="129.177" />
+			<RxGain lna="2" gain="117.537" />
+			<RxGain lna="3" gain="104.857" />
+		</RxGainChar>
+		<RxGainChar channel="662">
+			<RxGain lna="0" gain="142.497" />
+			<RxGain lna="1" gain="129.631" />
+			<RxGain lna="2" gain="118.188" />
+			<RxGain lna="3" gain="105.076" />
+		</RxGainChar>
+		<RxGainChar channel="687">
+			<RxGain lna="0" gain="142.789" />
+			<RxGain lna="1" gain="129.903" />
+			<RxGain lna="2" gain="118.589" />
+			<RxGain lna="3" gain="105.719" />
+		</RxGainChar>
+		<RxGainChar channel="712">
+			<RxGain lna="0" gain="142.709" />
+			<RxGain lna="1" gain="130.006" />
+			<RxGain lna="2" gain="118.843" />
+			<RxGain lna="3" gain="106.071" />
+		</RxGainChar>
+		<RxGainChar channel="737">
+			<RxGain lna="0" gain="142.528" />
+			<RxGain lna="1" gain="129.865" />
+			<RxGain lna="2" gain="118.857" />
+			<RxGain lna="3" gain="106.215" />
+		</RxGainChar>
+		<RxGainChar channel="762">
+			<RxGain lna="0" gain="142.631" />
+			<RxGain lna="1" gain="129.769" />
+			<RxGain lna="2" gain="118.683" />
+			<RxGain lna="3" gain="106.24" />
+		</RxGainChar>
+		<RxGainChar channel="787">
+			<RxGain lna="0" gain="142.351" />
+			<RxGain lna="1" gain="129.638" />
+			<RxGain lna="2" gain="118.584" />
+			<RxGain lna="3" gain="105.749" />
+		</RxGainChar>
+		<RxGainChar channel="812">
+			<RxGain lna="0" gain="142.284" />
+			<RxGain lna="1" gain="129.417" />
+			<RxGain lna="2" gain="118.243" />
+			<RxGain lna="3" gain="105.524" />
+		</RxGainChar>
+		<RxGainChar channel="837">
+			<RxGain lna="0" gain="142.084" />
+			<RxGain lna="1" gain="129.268" />
+			<RxGain lna="2" gain="118.134" />
+			<RxGain lna="3" gain="105.03" />
+		</RxGainChar>
+		<RxGainChar channel="862">
+			<RxGain lna="0" gain="141.693" />
+			<RxGain lna="1" gain="128.959" />
+			<RxGain lna="2" gain="117.803" />
+			<RxGain lna="3" gain="104.898" />
+		</RxGainChar>
+		<RxGainChar channel="885">
+			<RxGain lna="0" gain="141.567" />
+			<RxGain lna="1" gain="128.723" />
+			<RxGain lna="2" gain="117.762" />
+			<RxGain lna="3" gain="104.963" />
+		</RxGainChar>
+	</RxGainTable>
+	<!-- RxGain Char: GSM 1900 -->
+	<RxGainTable rf_mode="12" chain="0" instance="0">
+		<RxGainChar channel="512">
+			<RxGain lna="0" gain="140.218" />
+			<RxGain lna="1" gain="128.143" />
+			<RxGain lna="2" gain="116.514" />
+			<RxGain lna="3" gain="104.868" />
+		</RxGainChar>
+		<RxGainChar channel="532">
+			<RxGain lna="0" gain="141.257" />
+			<RxGain lna="1" gain="128.962" />
+			<RxGain lna="2" gain="117.318" />
+			<RxGain lna="3" gain="105.523" />
+		</RxGainChar>
+		<RxGainChar channel="552">
+			<RxGain lna="0" gain="141.439" />
+			<RxGain lna="1" gain="129.514" />
+			<RxGain lna="2" gain="117.821" />
+			<RxGain lna="3" gain="105.983" />
+		</RxGainChar>
+		<RxGainChar channel="572">
+			<RxGain lna="0" gain="141.347" />
+			<RxGain lna="1" gain="129.319" />
+			<RxGain lna="2" gain="117.741" />
+			<RxGain lna="3" gain="106.457" />
+		</RxGainChar>
+		<RxGainChar channel="592">
+			<RxGain lna="0" gain="141.121" />
+			<RxGain lna="1" gain="129.187" />
+			<RxGain lna="2" gain="117.644" />
+			<RxGain lna="3" gain="106.081" />
+		</RxGainChar>
+		<RxGainChar channel="612">
+			<RxGain lna="0" gain="141.571" />
+			<RxGain lna="1" gain="129.416" />
+			<RxGain lna="2" gain="117.759" />
+			<RxGain lna="3" gain="106.178" />
+		</RxGainChar>
+		<RxGainChar channel="632">
+			<RxGain lna="0" gain="141.91" />
+			<RxGain lna="1" gain="129.632" />
+			<RxGain lna="2" gain="117.871" />
+			<RxGain lna="3" gain="106.199" />
+		</RxGainChar>
+		<RxGainChar channel="652">
+			<RxGain lna="0" gain="141.804" />
+			<RxGain lna="1" gain="129.76" />
+			<RxGain lna="2" gain="118.215" />
+			<RxGain lna="3" gain="106.283" />
+		</RxGainChar>
+		<RxGainChar channel="672">
+			<RxGain lna="0" gain="141.989" />
+			<RxGain lna="1" gain="129.778" />
+			<RxGain lna="2" gain="118.1" />
+			<RxGain lna="3" gain="106.391" />
+		</RxGainChar>
+		<RxGainChar channel="692">
+			<RxGain lna="0" gain="141.815" />
+			<RxGain lna="1" gain="129.768" />
+			<RxGain lna="2" gain="118.102" />
+			<RxGain lna="3" gain="106.745" />
+		</RxGainChar>
+		<RxGainChar channel="712">
+			<RxGain lna="0" gain="141.729" />
+			<RxGain lna="1" gain="129.592" />
+			<RxGain lna="2" gain="118.025" />
+			<RxGain lna="3" gain="106.449" />
+		</RxGainChar>
+		<RxGainChar channel="732">
+			<RxGain lna="0" gain="141.603" />
+			<RxGain lna="1" gain="129.618" />
+			<RxGain lna="2" gain="117.828" />
+			<RxGain lna="3" gain="106.33" />
+		</RxGainChar>
+		<RxGainChar channel="752">
+			<RxGain lna="0" gain="141.332" />
+			<RxGain lna="1" gain="129.278" />
+			<RxGain lna="2" gain="117.657" />
+			<RxGain lna="3" gain="105.978" />
+		</RxGainChar>
+		<RxGainChar channel="772">
+			<RxGain lna="0" gain="141.317" />
+			<RxGain lna="1" gain="129.41" />
+			<RxGain lna="2" gain="117.504" />
+			<RxGain lna="3" gain="105.824" />
+		</RxGainChar>
+		<RxGainChar channel="792">
+			<RxGain lna="0" gain="141.529" />
+			<RxGain lna="1" gain="129.354" />
+			<RxGain lna="2" gain="117.538" />
+			<RxGain lna="3" gain="105.935" />
+		</RxGainChar>
+		<RxGainChar channel="810">
+			<RxGain lna="0" gain="141.152" />
+			<RxGain lna="1" gain="129.167" />
+			<RxGain lna="2" gain="117.595" />
+			<RxGain lna="3" gain="105.846" />
+		</RxGainChar>
+	</RxGainTable>
+	<RxGainTable rf_mode="12" chain="1" instance="0">
+		<RxGainChar channel="512">
+			<RxGain lna="0" gain="141.614" />
+			<RxGain lna="1" gain="129.613" />
+			<RxGain lna="2" gain="116.868" />
+			<RxGain lna="3" gain="104.615" />
+		</RxGainChar>
+		<RxGainChar channel="532">
+			<RxGain lna="0" gain="141.983" />
+			<RxGain lna="1" gain="129.744" />
+			<RxGain lna="2" gain="117.008" />
+			<RxGain lna="3" gain="104.735" />
+		</RxGainChar>
+		<RxGainChar channel="552">
+			<RxGain lna="0" gain="141.86" />
+			<RxGain lna="1" gain="129.987" />
+			<RxGain lna="2" gain="117.001" />
+			<RxGain lna="3" gain="104.55" />
+		</RxGainChar>
+		<RxGainChar channel="572">
+			<RxGain lna="0" gain="141.916" />
+			<RxGain lna="1" gain="129.859" />
+			<RxGain lna="2" gain="116.806" />
+			<RxGain lna="3" gain="104.725" />
+		</RxGainChar>
+		<RxGainChar channel="592">
+			<RxGain lna="0" gain="142.021" />
+			<RxGain lna="1" gain="129.979" />
+			<RxGain lna="2" gain="117.093" />
+			<RxGain lna="3" gain="104.662" />
+		</RxGainChar>
+		<RxGainChar channel="612">
+			<RxGain lna="0" gain="142.527" />
+			<RxGain lna="1" gain="130.386" />
+			<RxGain lna="2" gain="117.486" />
+			<RxGain lna="3" gain="105.171" />
+		</RxGainChar>
+		<RxGainChar channel="632">
+			<RxGain lna="0" gain="142.795" />
+			<RxGain lna="1" gain="130.592" />
+			<RxGain lna="2" gain="117.748" />
+			<RxGain lna="3" gain="105.552" />
+		</RxGainChar>
+		<RxGainChar channel="652">
+			<RxGain lna="0" gain="142.477" />
+			<RxGain lna="1" gain="130.566" />
+			<RxGain lna="2" gain="118.011" />
+			<RxGain lna="3" gain="105.673" />
+		</RxGainChar>
+		<RxGainChar channel="672">
+			<RxGain lna="0" gain="142.404" />
+			<RxGain lna="1" gain="130.339" />
+			<RxGain lna="2" gain="117.633" />
+			<RxGain lna="3" gain="105.584" />
+		</RxGainChar>
+		<RxGainChar channel="692">
+			<RxGain lna="0" gain="142.214" />
+			<RxGain lna="1" gain="130.264" />
+			<RxGain lna="2" gain="117.415" />
+			<RxGain lna="3" gain="105.618" />
+		</RxGainChar>
+		<RxGainChar channel="712">
+			<RxGain lna="0" gain="142.125" />
+			<RxGain lna="1" gain="130.055" />
+			<RxGain lna="2" gain="117.282" />
+			<RxGain lna="3" gain="105.136" />
+		</RxGainChar>
+		<RxGainChar channel="732">
+			<RxGain lna="0" gain="142.025" />
+			<RxGain lna="1" gain="130.095" />
+			<RxGain lna="2" gain="117.099" />
+			<RxGain lna="3" gain="104.978" />
+		</RxGainChar>
+		<RxGainChar channel="752">
+			<RxGain lna="0" gain="141.859" />
+			<RxGain lna="1" gain="129.935" />
+			<RxGain lna="2" gain="117.121" />
+			<RxGain lna="3" gain="104.874" />
+		</RxGainChar>
+		<RxGainChar channel="772">
+			<RxGain lna="0" gain="141.815" />
+			<RxGain lna="1" gain="130.068" />
+			<RxGain lna="2" gain="117.113" />
+			<RxGain lna="3" gain="105.024" />
+		</RxGainChar>
+		<RxGainChar channel="792">
+			<RxGain lna="0" gain="142.324" />
+			<RxGain lna="1" gain="130.325" />
+			<RxGain lna="2" gain="117.503" />
+			<RxGain lna="3" gain="105.561" />
+		</RxGainChar>
+		<RxGainChar channel="810">
+			<RxGain lna="0" gain="142.03" />
+			<RxGain lna="1" gain="130.175" />
+			<RxGain lna="2" gain="117.629" />
+			<RxGain lna="3" gain="105.555" />
+		</RxGainChar>
+	</RxGainTable>
+	<!-- GSM TX DA Char: GSM 900 -->
+	<GSMDaCharTable rf_mode="10" chain="0" TxNVContainer="0" instance="0">
+		<GSMChanModPa channel="37" mod="0" pa="0">
+			<GSMRgiPwr rgi="0" pwr="5.1"/>
+			<GSMRgiPwr rgi="1" pwr="6.4"/>
+			<GSMRgiPwr rgi="2" pwr="8"/>
+			<GSMRgiPwr rgi="3" pwr="9.2"/>
+			<GSMRgiPwr rgi="4" pwr="10.6"/>
+			<GSMRgiPwr rgi="5" pwr="11.8"/>
+			<GSMRgiPwr rgi="6" pwr="12.6"/>
+			<GSMRgiPwr rgi="7" pwr="14.1"/>
+			<GSMRgiPwr rgi="8" pwr="15.5"/>
+			<GSMRgiPwr rgi="9" pwr="16.9"/>
+			<GSMRgiPwr rgi="10" pwr="18.1"/>
+			<GSMRgiPwr rgi="11" pwr="19.3"/>
+			<GSMRgiPwr rgi="12" pwr="20.3"/>
+			<GSMRgiPwr rgi="13" pwr="21.6"/>
+			<GSMRgiPwr rgi="14" pwr="22.8"/>
+			<GSMRgiPwr rgi="15" pwr="23.9"/>
+			<GSMRgiPwr rgi="16" pwr="24.9"/>
+			<GSMRgiPwr rgi="17" pwr="25.4"/>
+			<GSMRgiPwr rgi="18" pwr="26.4"/>
+			<GSMRgiPwr rgi="19" pwr="27.4"/>
+			<GSMRgiPwr rgi="20" pwr="28.2"/>
+			<GSMRgiPwr rgi="21" pwr="29.1"/>
+			<GSMRgiPwr rgi="22" pwr="29.9"/>
+			<GSMRgiPwr rgi="23" pwr="30.8"/>
+			<GSMRgiPwr rgi="24" pwr="31.5"/>
+			<GSMRgiPwr rgi="25" pwr="31.9"/>
+			<GSMRgiPwr rgi="26" pwr="32.2"/>
+			<GSMRgiPwr rgi="27" pwr="32.4"/>
+			<GSMRgiPwr rgi="28" pwr="32.5"/>
+			<GSMRgiPwr rgi="29" pwr="32.5"/>
+			<GSMRgiPwr rgi="30" pwr="32.5"/>
+			<GSMRgiPwr rgi="31" pwr="32.6"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="37" mod="0" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-8.7"/>
+			<GSMRgiPwr rgi="1" pwr="-7.4"/>
+			<GSMRgiPwr rgi="2" pwr="-5.8"/>
+			<GSMRgiPwr rgi="3" pwr="-4.6"/>
+			<GSMRgiPwr rgi="4" pwr="-3.1"/>
+			<GSMRgiPwr rgi="5" pwr="-1.8"/>
+			<GSMRgiPwr rgi="6" pwr="-1"/>
+			<GSMRgiPwr rgi="7" pwr="0.5"/>
+			<GSMRgiPwr rgi="8" pwr="1.9"/>
+			<GSMRgiPwr rgi="9" pwr="3.3"/>
+			<GSMRgiPwr rgi="10" pwr="4.5"/>
+			<GSMRgiPwr rgi="11" pwr="5.8"/>
+			<GSMRgiPwr rgi="12" pwr="6.9"/>
+			<GSMRgiPwr rgi="13" pwr="8.3"/>
+			<GSMRgiPwr rgi="14" pwr="9.7"/>
+			<GSMRgiPwr rgi="15" pwr="11"/>
+			<GSMRgiPwr rgi="16" pwr="12.3"/>
+			<GSMRgiPwr rgi="17" pwr="13"/>
+			<GSMRgiPwr rgi="18" pwr="14.5"/>
+			<GSMRgiPwr rgi="19" pwr="15.9"/>
+			<GSMRgiPwr rgi="20" pwr="17.1"/>
+			<GSMRgiPwr rgi="21" pwr="18.5"/>
+			<GSMRgiPwr rgi="22" pwr="19.8"/>
+			<GSMRgiPwr rgi="23" pwr="21.5"/>
+			<GSMRgiPwr rgi="24" pwr="23.2"/>
+			<GSMRgiPwr rgi="25" pwr="24.5"/>
+			<GSMRgiPwr rgi="26" pwr="25.9"/>
+			<GSMRgiPwr rgi="27" pwr="27.2"/>
+			<GSMRgiPwr rgi="28" pwr="28"/>
+			<GSMRgiPwr rgi="29" pwr="28.5"/>
+			<GSMRgiPwr rgi="30" pwr="28.9"/>
+			<GSMRgiPwr rgi="31" pwr="29.1"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="124" mod="0" pa="0">
+			<GSMRgiPwr rgi="0" pwr="4.7"/>
+			<GSMRgiPwr rgi="1" pwr="6"/>
+			<GSMRgiPwr rgi="2" pwr="7.6"/>
+			<GSMRgiPwr rgi="3" pwr="8.8"/>
+			<GSMRgiPwr rgi="4" pwr="10.2"/>
+			<GSMRgiPwr rgi="5" pwr="11.5"/>
+			<GSMRgiPwr rgi="6" pwr="12.2"/>
+			<GSMRgiPwr rgi="7" pwr="13.7"/>
+			<GSMRgiPwr rgi="8" pwr="15.2"/>
+			<GSMRgiPwr rgi="9" pwr="16.5"/>
+			<GSMRgiPwr rgi="10" pwr="17.7"/>
+			<GSMRgiPwr rgi="11" pwr="18.9"/>
+			<GSMRgiPwr rgi="12" pwr="20"/>
+			<GSMRgiPwr rgi="13" pwr="21.3"/>
+			<GSMRgiPwr rgi="14" pwr="22.5"/>
+			<GSMRgiPwr rgi="15" pwr="23.6"/>
+			<GSMRgiPwr rgi="16" pwr="24.6"/>
+			<GSMRgiPwr rgi="17" pwr="25.1"/>
+			<GSMRgiPwr rgi="18" pwr="26.1"/>
+			<GSMRgiPwr rgi="19" pwr="27.1"/>
+			<GSMRgiPwr rgi="20" pwr="28"/>
+			<GSMRgiPwr rgi="21" pwr="28.8"/>
+			<GSMRgiPwr rgi="22" pwr="29.7"/>
+			<GSMRgiPwr rgi="23" pwr="30.6"/>
+			<GSMRgiPwr rgi="24" pwr="31.3"/>
+			<GSMRgiPwr rgi="25" pwr="31.8"/>
+			<GSMRgiPwr rgi="26" pwr="32.1"/>
+			<GSMRgiPwr rgi="27" pwr="32.3"/>
+			<GSMRgiPwr rgi="28" pwr="32.4"/>
+			<GSMRgiPwr rgi="29" pwr="32.4"/>
+			<GSMRgiPwr rgi="30" pwr="32.4"/>
+			<GSMRgiPwr rgi="31" pwr="32.4"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="124" mod="0" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-8.9"/>
+			<GSMRgiPwr rgi="1" pwr="-7.6"/>
+			<GSMRgiPwr rgi="2" pwr="-6"/>
+			<GSMRgiPwr rgi="3" pwr="-4.7"/>
+			<GSMRgiPwr rgi="4" pwr="-3.3"/>
+			<GSMRgiPwr rgi="5" pwr="-2"/>
+			<GSMRgiPwr rgi="6" pwr="-1.2"/>
+			<GSMRgiPwr rgi="7" pwr="0.3"/>
+			<GSMRgiPwr rgi="8" pwr="1.8"/>
+			<GSMRgiPwr rgi="9" pwr="3.2"/>
+			<GSMRgiPwr rgi="10" pwr="4.4"/>
+			<GSMRgiPwr rgi="11" pwr="5.7"/>
+			<GSMRgiPwr rgi="12" pwr="6.8"/>
+			<GSMRgiPwr rgi="13" pwr="8.2"/>
+			<GSMRgiPwr rgi="14" pwr="9.6"/>
+			<GSMRgiPwr rgi="15" pwr="10.8"/>
+			<GSMRgiPwr rgi="16" pwr="12.2"/>
+			<GSMRgiPwr rgi="17" pwr="12.9"/>
+			<GSMRgiPwr rgi="18" pwr="14.3"/>
+			<GSMRgiPwr rgi="19" pwr="15.7"/>
+			<GSMRgiPwr rgi="20" pwr="17"/>
+			<GSMRgiPwr rgi="21" pwr="18.3"/>
+			<GSMRgiPwr rgi="22" pwr="19.7"/>
+			<GSMRgiPwr rgi="23" pwr="21.4"/>
+			<GSMRgiPwr rgi="24" pwr="23"/>
+			<GSMRgiPwr rgi="25" pwr="24.4"/>
+			<GSMRgiPwr rgi="26" pwr="25.7"/>
+			<GSMRgiPwr rgi="27" pwr="27"/>
+			<GSMRgiPwr rgi="28" pwr="27.8"/>
+			<GSMRgiPwr rgi="29" pwr="28.3"/>
+			<GSMRgiPwr rgi="30" pwr="28.7"/>
+			<GSMRgiPwr rgi="31" pwr="29"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="975" mod="0" pa="0">
+			<GSMRgiPwr rgi="0" pwr="5.6"/>
+			<GSMRgiPwr rgi="1" pwr="6.9"/>
+			<GSMRgiPwr rgi="2" pwr="8.4"/>
+			<GSMRgiPwr rgi="3" pwr="9.7"/>
+			<GSMRgiPwr rgi="4" pwr="11.1"/>
+			<GSMRgiPwr rgi="5" pwr="12.3"/>
+			<GSMRgiPwr rgi="6" pwr="13.1"/>
+			<GSMRgiPwr rgi="7" pwr="14.6"/>
+			<GSMRgiPwr rgi="8" pwr="16"/>
+			<GSMRgiPwr rgi="9" pwr="17.3"/>
+			<GSMRgiPwr rgi="10" pwr="18.5"/>
+			<GSMRgiPwr rgi="11" pwr="19.7"/>
+			<GSMRgiPwr rgi="12" pwr="20.8"/>
+			<GSMRgiPwr rgi="13" pwr="22"/>
+			<GSMRgiPwr rgi="14" pwr="23.2"/>
+			<GSMRgiPwr rgi="15" pwr="24.2"/>
+			<GSMRgiPwr rgi="16" pwr="25.3"/>
+			<GSMRgiPwr rgi="17" pwr="25.8"/>
+			<GSMRgiPwr rgi="18" pwr="26.8"/>
+			<GSMRgiPwr rgi="19" pwr="27.8"/>
+			<GSMRgiPwr rgi="20" pwr="28.6"/>
+			<GSMRgiPwr rgi="21" pwr="29.5"/>
+			<GSMRgiPwr rgi="22" pwr="30.3"/>
+			<GSMRgiPwr rgi="23" pwr="31.2"/>
+			<GSMRgiPwr rgi="24" pwr="31.8"/>
+			<GSMRgiPwr rgi="25" pwr="32.2"/>
+			<GSMRgiPwr rgi="26" pwr="32.5"/>
+			<GSMRgiPwr rgi="27" pwr="32.6"/>
+			<GSMRgiPwr rgi="28" pwr="32.7"/>
+			<GSMRgiPwr rgi="29" pwr="32.8"/>
+			<GSMRgiPwr rgi="30" pwr="32.8"/>
+			<GSMRgiPwr rgi="31" pwr="32.8"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="975" mod="0" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-8.4"/>
+			<GSMRgiPwr rgi="1" pwr="-7.2"/>
+			<GSMRgiPwr rgi="2" pwr="-5.6"/>
+			<GSMRgiPwr rgi="3" pwr="-4.3"/>
+			<GSMRgiPwr rgi="4" pwr="-2.9"/>
+			<GSMRgiPwr rgi="5" pwr="-1.6"/>
+			<GSMRgiPwr rgi="6" pwr="-0.8"/>
+			<GSMRgiPwr rgi="7" pwr="0.7"/>
+			<GSMRgiPwr rgi="8" pwr="2.2"/>
+			<GSMRgiPwr rgi="9" pwr="3.6"/>
+			<GSMRgiPwr rgi="10" pwr="4.8"/>
+			<GSMRgiPwr rgi="11" pwr="6.1"/>
+			<GSMRgiPwr rgi="12" pwr="7.1"/>
+			<GSMRgiPwr rgi="13" pwr="8.5"/>
+			<GSMRgiPwr rgi="14" pwr="9.9"/>
+			<GSMRgiPwr rgi="15" pwr="11.2"/>
+			<GSMRgiPwr rgi="16" pwr="12.5"/>
+			<GSMRgiPwr rgi="17" pwr="13.2"/>
+			<GSMRgiPwr rgi="18" pwr="14.7"/>
+			<GSMRgiPwr rgi="19" pwr="16.1"/>
+			<GSMRgiPwr rgi="20" pwr="17.3"/>
+			<GSMRgiPwr rgi="21" pwr="18.7"/>
+			<GSMRgiPwr rgi="22" pwr="20"/>
+			<GSMRgiPwr rgi="23" pwr="21.7"/>
+			<GSMRgiPwr rgi="24" pwr="23.3"/>
+			<GSMRgiPwr rgi="25" pwr="24.7"/>
+			<GSMRgiPwr rgi="26" pwr="26"/>
+			<GSMRgiPwr rgi="27" pwr="27.3"/>
+			<GSMRgiPwr rgi="28" pwr="28.3"/>
+			<GSMRgiPwr rgi="29" pwr="28.8"/>
+			<GSMRgiPwr rgi="30" pwr="29.2"/>
+			<GSMRgiPwr rgi="31" pwr="29.4"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="37" mod="1" pa="0">
+			<GSMRgiPwr rgi="0" pwr="0.3"/>
+			<GSMRgiPwr rgi="1" pwr="1.7"/>
+			<GSMRgiPwr rgi="2" pwr="3.3"/>
+			<GSMRgiPwr rgi="3" pwr="4.6"/>
+			<GSMRgiPwr rgi="4" pwr="6"/>
+			<GSMRgiPwr rgi="5" pwr="7.2"/>
+			<GSMRgiPwr rgi="6" pwr="8"/>
+			<GSMRgiPwr rgi="7" pwr="9.5"/>
+			<GSMRgiPwr rgi="8" pwr="11"/>
+			<GSMRgiPwr rgi="9" pwr="12.4"/>
+			<GSMRgiPwr rgi="10" pwr="13.6"/>
+			<GSMRgiPwr rgi="11" pwr="15"/>
+			<GSMRgiPwr rgi="12" pwr="16.1"/>
+			<GSMRgiPwr rgi="13" pwr="17.5"/>
+			<GSMRgiPwr rgi="14" pwr="18.9"/>
+			<GSMRgiPwr rgi="15" pwr="20.1"/>
+			<GSMRgiPwr rgi="16" pwr="21.5"/>
+			<GSMRgiPwr rgi="17" pwr="22.7"/>
+			<GSMRgiPwr rgi="18" pwr="23.9"/>
+			<GSMRgiPwr rgi="19" pwr="24.1"/>
+			<GSMRgiPwr rgi="20" pwr="25.1"/>
+			<GSMRgiPwr rgi="21" pwr="26.1"/>
+			<GSMRgiPwr rgi="22" pwr="27.2"/>
+			<GSMRgiPwr rgi="23" pwr="28.4"/>
+			<GSMRgiPwr rgi="24" pwr="29.6"/>
+			<GSMRgiPwr rgi="25" pwr="30.4"/>
+			<GSMRgiPwr rgi="26" pwr="31.2"/>
+			<GSMRgiPwr rgi="27" pwr="31.7"/>
+			<GSMRgiPwr rgi="28" pwr="32.1"/>
+			<GSMRgiPwr rgi="29" pwr="32.3"/>
+			<GSMRgiPwr rgi="30" pwr="32.4"/>
+			<GSMRgiPwr rgi="31" pwr="32.5"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="37" mod="1" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-13.1"/>
+			<GSMRgiPwr rgi="1" pwr="-11.9"/>
+			<GSMRgiPwr rgi="2" pwr="-10.4"/>
+			<GSMRgiPwr rgi="3" pwr="-9.1"/>
+			<GSMRgiPwr rgi="4" pwr="-7.7"/>
+			<GSMRgiPwr rgi="5" pwr="-6.3"/>
+			<GSMRgiPwr rgi="6" pwr="-5.6"/>
+			<GSMRgiPwr rgi="7" pwr="-4"/>
+			<GSMRgiPwr rgi="8" pwr="-2.6"/>
+			<GSMRgiPwr rgi="9" pwr="-1.2"/>
+			<GSMRgiPwr rgi="10" pwr="0"/>
+			<GSMRgiPwr rgi="11" pwr="1.3"/>
+			<GSMRgiPwr rgi="12" pwr="2.3"/>
+			<GSMRgiPwr rgi="13" pwr="3.7"/>
+			<GSMRgiPwr rgi="14" pwr="5"/>
+			<GSMRgiPwr rgi="15" pwr="6.2"/>
+			<GSMRgiPwr rgi="16" pwr="7.6"/>
+			<GSMRgiPwr rgi="17" pwr="8.9"/>
+			<GSMRgiPwr rgi="18" pwr="10.2"/>
+			<GSMRgiPwr rgi="19" pwr="10.5"/>
+			<GSMRgiPwr rgi="20" pwr="11.6"/>
+			<GSMRgiPwr rgi="21" pwr="12.9"/>
+			<GSMRgiPwr rgi="22" pwr="14.2"/>
+			<GSMRgiPwr rgi="23" pwr="15.9"/>
+			<GSMRgiPwr rgi="24" pwr="17.6"/>
+			<GSMRgiPwr rgi="25" pwr="19.1"/>
+			<GSMRgiPwr rgi="26" pwr="20.5"/>
+			<GSMRgiPwr rgi="27" pwr="22.1"/>
+			<GSMRgiPwr rgi="28" pwr="23.4"/>
+			<GSMRgiPwr rgi="29" pwr="24.5"/>
+			<GSMRgiPwr rgi="30" pwr="25.6"/>
+			<GSMRgiPwr rgi="31" pwr="26.6"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="124" mod="1" pa="0">
+			<GSMRgiPwr rgi="0" pwr="-0.1"/>
+			<GSMRgiPwr rgi="1" pwr="1.3"/>
+			<GSMRgiPwr rgi="2" pwr="2.9"/>
+			<GSMRgiPwr rgi="3" pwr="4.2"/>
+			<GSMRgiPwr rgi="4" pwr="5.6"/>
+			<GSMRgiPwr rgi="5" pwr="6.9"/>
+			<GSMRgiPwr rgi="6" pwr="7.7"/>
+			<GSMRgiPwr rgi="7" pwr="9.2"/>
+			<GSMRgiPwr rgi="8" pwr="10.7"/>
+			<GSMRgiPwr rgi="9" pwr="12.1"/>
+			<GSMRgiPwr rgi="10" pwr="13.3"/>
+			<GSMRgiPwr rgi="11" pwr="14.6"/>
+			<GSMRgiPwr rgi="12" pwr="15.7"/>
+			<GSMRgiPwr rgi="13" pwr="17.2"/>
+			<GSMRgiPwr rgi="14" pwr="18.5"/>
+			<GSMRgiPwr rgi="15" pwr="19.7"/>
+			<GSMRgiPwr rgi="16" pwr="21.1"/>
+			<GSMRgiPwr rgi="17" pwr="22.4"/>
+			<GSMRgiPwr rgi="18" pwr="23.5"/>
+			<GSMRgiPwr rgi="19" pwr="23.8"/>
+			<GSMRgiPwr rgi="20" pwr="24.8"/>
+			<GSMRgiPwr rgi="21" pwr="25.8"/>
+			<GSMRgiPwr rgi="22" pwr="26.9"/>
+			<GSMRgiPwr rgi="23" pwr="28.2"/>
+			<GSMRgiPwr rgi="24" pwr="29.3"/>
+			<GSMRgiPwr rgi="25" pwr="30.2"/>
+			<GSMRgiPwr rgi="26" pwr="31"/>
+			<GSMRgiPwr rgi="27" pwr="31.6"/>
+			<GSMRgiPwr rgi="28" pwr="32"/>
+			<GSMRgiPwr rgi="29" pwr="32.2"/>
+			<GSMRgiPwr rgi="30" pwr="32.4"/>
+			<GSMRgiPwr rgi="31" pwr="32.4"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="124" mod="1" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-13.3"/>
+			<GSMRgiPwr rgi="1" pwr="-12.2"/>
+			<GSMRgiPwr rgi="2" pwr="-10.5"/>
+			<GSMRgiPwr rgi="3" pwr="-9.3"/>
+			<GSMRgiPwr rgi="4" pwr="-7.8"/>
+			<GSMRgiPwr rgi="5" pwr="-6.6"/>
+			<GSMRgiPwr rgi="6" pwr="-5.8"/>
+			<GSMRgiPwr rgi="7" pwr="-4.2"/>
+			<GSMRgiPwr rgi="8" pwr="-2.7"/>
+			<GSMRgiPwr rgi="9" pwr="-1.4"/>
+			<GSMRgiPwr rgi="10" pwr="-0.2"/>
+			<GSMRgiPwr rgi="11" pwr="1.1"/>
+			<GSMRgiPwr rgi="12" pwr="2.2"/>
+			<GSMRgiPwr rgi="13" pwr="3.5"/>
+			<GSMRgiPwr rgi="14" pwr="4.9"/>
+			<GSMRgiPwr rgi="15" pwr="6"/>
+			<GSMRgiPwr rgi="16" pwr="7.4"/>
+			<GSMRgiPwr rgi="17" pwr="8.7"/>
+			<GSMRgiPwr rgi="18" pwr="10"/>
+			<GSMRgiPwr rgi="19" pwr="10.3"/>
+			<GSMRgiPwr rgi="20" pwr="11.4"/>
+			<GSMRgiPwr rgi="21" pwr="12.7"/>
+			<GSMRgiPwr rgi="22" pwr="14"/>
+			<GSMRgiPwr rgi="23" pwr="15.7"/>
+			<GSMRgiPwr rgi="24" pwr="17.4"/>
+			<GSMRgiPwr rgi="25" pwr="18.9"/>
+			<GSMRgiPwr rgi="26" pwr="20.3"/>
+			<GSMRgiPwr rgi="27" pwr="21.9"/>
+			<GSMRgiPwr rgi="28" pwr="23.2"/>
+			<GSMRgiPwr rgi="29" pwr="24.4"/>
+			<GSMRgiPwr rgi="30" pwr="25.4"/>
+			<GSMRgiPwr rgi="31" pwr="26.4"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="975" mod="1" pa="0">
+			<GSMRgiPwr rgi="0" pwr="0.7"/>
+			<GSMRgiPwr rgi="1" pwr="2.1"/>
+			<GSMRgiPwr rgi="2" pwr="3.7"/>
+			<GSMRgiPwr rgi="3" pwr="5"/>
+			<GSMRgiPwr rgi="4" pwr="6.4"/>
+			<GSMRgiPwr rgi="5" pwr="7.7"/>
+			<GSMRgiPwr rgi="6" pwr="8.5"/>
+			<GSMRgiPwr rgi="7" pwr="10"/>
+			<GSMRgiPwr rgi="8" pwr="11.4"/>
+			<GSMRgiPwr rgi="9" pwr="12.8"/>
+			<GSMRgiPwr rgi="10" pwr="14.1"/>
+			<GSMRgiPwr rgi="11" pwr="15.4"/>
+			<GSMRgiPwr rgi="12" pwr="16.5"/>
+			<GSMRgiPwr rgi="13" pwr="17.9"/>
+			<GSMRgiPwr rgi="14" pwr="19.3"/>
+			<GSMRgiPwr rgi="15" pwr="20.4"/>
+			<GSMRgiPwr rgi="16" pwr="21.9"/>
+			<GSMRgiPwr rgi="17" pwr="23.1"/>
+			<GSMRgiPwr rgi="18" pwr="24.3"/>
+			<GSMRgiPwr rgi="19" pwr="24.5"/>
+			<GSMRgiPwr rgi="20" pwr="25.5"/>
+			<GSMRgiPwr rgi="21" pwr="26.5"/>
+			<GSMRgiPwr rgi="22" pwr="27.6"/>
+			<GSMRgiPwr rgi="23" pwr="28.8"/>
+			<GSMRgiPwr rgi="24" pwr="29.9"/>
+			<GSMRgiPwr rgi="25" pwr="30.7"/>
+			<GSMRgiPwr rgi="26" pwr="31.4"/>
+			<GSMRgiPwr rgi="27" pwr="32"/>
+			<GSMRgiPwr rgi="28" pwr="32.3"/>
+			<GSMRgiPwr rgi="29" pwr="32.4"/>
+			<GSMRgiPwr rgi="30" pwr="32.6"/>
+			<GSMRgiPwr rgi="31" pwr="32.6"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="975" mod="1" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-12.8"/>
+			<GSMRgiPwr rgi="1" pwr="-11.7"/>
+			<GSMRgiPwr rgi="2" pwr="-10.1"/>
+			<GSMRgiPwr rgi="3" pwr="-8.8"/>
+			<GSMRgiPwr rgi="4" pwr="-7.4"/>
+			<GSMRgiPwr rgi="5" pwr="-6.1"/>
+			<GSMRgiPwr rgi="6" pwr="-5.3"/>
+			<GSMRgiPwr rgi="7" pwr="-3.8"/>
+			<GSMRgiPwr rgi="8" pwr="-2.4"/>
+			<GSMRgiPwr rgi="9" pwr="-1"/>
+			<GSMRgiPwr rgi="10" pwr="0.2"/>
+			<GSMRgiPwr rgi="11" pwr="1.5"/>
+			<GSMRgiPwr rgi="12" pwr="2.6"/>
+			<GSMRgiPwr rgi="13" pwr="3.9"/>
+			<GSMRgiPwr rgi="14" pwr="5.2"/>
+			<GSMRgiPwr rgi="15" pwr="6.4"/>
+			<GSMRgiPwr rgi="16" pwr="7.8"/>
+			<GSMRgiPwr rgi="17" pwr="9.1"/>
+			<GSMRgiPwr rgi="18" pwr="10.4"/>
+			<GSMRgiPwr rgi="19" pwr="10.7"/>
+			<GSMRgiPwr rgi="20" pwr="11.8"/>
+			<GSMRgiPwr rgi="21" pwr="13.1"/>
+			<GSMRgiPwr rgi="22" pwr="14.4"/>
+			<GSMRgiPwr rgi="23" pwr="16.1"/>
+			<GSMRgiPwr rgi="24" pwr="17.8"/>
+			<GSMRgiPwr rgi="25" pwr="19.2"/>
+			<GSMRgiPwr rgi="26" pwr="20.7"/>
+			<GSMRgiPwr rgi="27" pwr="22.2"/>
+			<GSMRgiPwr rgi="28" pwr="23.6"/>
+			<GSMRgiPwr rgi="29" pwr="24.7"/>
+			<GSMRgiPwr rgi="30" pwr="25.8"/>
+			<GSMRgiPwr rgi="31" pwr="26.8"/>
+		</GSMChanModPa>
+	</GSMDaCharTable>
+	<!-- GSM TX DA Char: GSM 1800 -->
+	<GSMDaCharTable rf_mode="11" chain="0" TxNVContainer="0" instance="0">
+		<GSMChanModPa channel="512" mod="0" pa="0">
+			<GSMRgiPwr rgi="0" pwr="-1.8"/>
+			<GSMRgiPwr rgi="1" pwr="-0.2"/>
+			<GSMRgiPwr rgi="2" pwr="1.4"/>
+			<GSMRgiPwr rgi="3" pwr="3.2"/>
+			<GSMRgiPwr rgi="4" pwr="4.6"/>
+			<GSMRgiPwr rgi="5" pwr="5.8"/>
+			<GSMRgiPwr rgi="6" pwr="7.2"/>
+			<GSMRgiPwr rgi="7" pwr="8.6"/>
+			<GSMRgiPwr rgi="8" pwr="10"/>
+			<GSMRgiPwr rgi="9" pwr="11.4"/>
+			<GSMRgiPwr rgi="10" pwr="13"/>
+			<GSMRgiPwr rgi="11" pwr="14.6"/>
+			<GSMRgiPwr rgi="12" pwr="16.2"/>
+			<GSMRgiPwr rgi="13" pwr="17.9"/>
+			<GSMRgiPwr rgi="14" pwr="19.8"/>
+			<GSMRgiPwr rgi="15" pwr="21.3"/>
+			<GSMRgiPwr rgi="16" pwr="22.7"/>
+			<GSMRgiPwr rgi="17" pwr="22.7"/>
+			<GSMRgiPwr rgi="18" pwr="24.4"/>
+			<GSMRgiPwr rgi="19" pwr="26"/>
+			<GSMRgiPwr rgi="20" pwr="27.4"/>
+			<GSMRgiPwr rgi="21" pwr="28.5"/>
+			<GSMRgiPwr rgi="22" pwr="29.5"/>
+			<GSMRgiPwr rgi="23" pwr="30"/>
+			<GSMRgiPwr rgi="24" pwr="30.4"/>
+			<GSMRgiPwr rgi="25" pwr="30.7"/>
+			<GSMRgiPwr rgi="26" pwr="30.9"/>
+			<GSMRgiPwr rgi="27" pwr="31.1"/>
+			<GSMRgiPwr rgi="28" pwr="31.2"/>
+			<GSMRgiPwr rgi="29" pwr="31.2"/>
+			<GSMRgiPwr rgi="30" pwr="31.3"/>
+			<GSMRgiPwr rgi="31" pwr="31.3"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="512" mod="0" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-9.8"/>
+			<GSMRgiPwr rgi="1" pwr="-8.4"/>
+			<GSMRgiPwr rgi="2" pwr="-6.8"/>
+			<GSMRgiPwr rgi="3" pwr="-5.1"/>
+			<GSMRgiPwr rgi="4" pwr="-3.7"/>
+			<GSMRgiPwr rgi="5" pwr="-2.5"/>
+			<GSMRgiPwr rgi="6" pwr="-1.1"/>
+			<GSMRgiPwr rgi="7" pwr="0.2"/>
+			<GSMRgiPwr rgi="8" pwr="1.5"/>
+			<GSMRgiPwr rgi="9" pwr="2.8"/>
+			<GSMRgiPwr rgi="10" pwr="4.1"/>
+			<GSMRgiPwr rgi="11" pwr="5.5"/>
+			<GSMRgiPwr rgi="12" pwr="6.8"/>
+			<GSMRgiPwr rgi="13" pwr="8.2"/>
+			<GSMRgiPwr rgi="14" pwr="9.8"/>
+			<GSMRgiPwr rgi="15" pwr="11.2"/>
+			<GSMRgiPwr rgi="16" pwr="12.7"/>
+			<GSMRgiPwr rgi="17" pwr="13"/>
+			<GSMRgiPwr rgi="18" pwr="14.8"/>
+			<GSMRgiPwr rgi="19" pwr="16.9"/>
+			<GSMRgiPwr rgi="20" pwr="18.9"/>
+			<GSMRgiPwr rgi="21" pwr="20.8"/>
+			<GSMRgiPwr rgi="22" pwr="23"/>
+			<GSMRgiPwr rgi="23" pwr="25.1"/>
+			<GSMRgiPwr rgi="24" pwr="28.6"/>
+			<GSMRgiPwr rgi="25" pwr="28.6"/>
+			<GSMRgiPwr rgi="26" pwr="28.7"/>
+			<GSMRgiPwr rgi="27" pwr="28.9"/>
+			<GSMRgiPwr rgi="28" pwr="29.2"/>
+			<GSMRgiPwr rgi="29" pwr="29.1"/>
+			<GSMRgiPwr rgi="30" pwr="29.4"/>
+			<GSMRgiPwr rgi="31" pwr="29.5"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="700" mod="0" pa="0">
+			<GSMRgiPwr rgi="0" pwr="-1.8"/>
+			<GSMRgiPwr rgi="1" pwr="-0.2"/>
+			<GSMRgiPwr rgi="2" pwr="1.4"/>
+			<GSMRgiPwr rgi="3" pwr="3.2"/>
+			<GSMRgiPwr rgi="4" pwr="4.7"/>
+			<GSMRgiPwr rgi="5" pwr="5.8"/>
+			<GSMRgiPwr rgi="6" pwr="7.2"/>
+			<GSMRgiPwr rgi="7" pwr="8.7"/>
+			<GSMRgiPwr rgi="8" pwr="10.1"/>
+			<GSMRgiPwr rgi="9" pwr="11.5"/>
+			<GSMRgiPwr rgi="10" pwr="13.1"/>
+			<GSMRgiPwr rgi="11" pwr="14.7"/>
+			<GSMRgiPwr rgi="12" pwr="16.1"/>
+			<GSMRgiPwr rgi="13" pwr="17.6"/>
+			<GSMRgiPwr rgi="14" pwr="19.6"/>
+			<GSMRgiPwr rgi="15" pwr="21.2"/>
+			<GSMRgiPwr rgi="16" pwr="22.7"/>
+			<GSMRgiPwr rgi="17" pwr="23"/>
+			<GSMRgiPwr rgi="18" pwr="24.8"/>
+			<GSMRgiPwr rgi="19" pwr="26.4"/>
+			<GSMRgiPwr rgi="20" pwr="27.9"/>
+			<GSMRgiPwr rgi="21" pwr="29"/>
+			<GSMRgiPwr rgi="22" pwr="29.8"/>
+			<GSMRgiPwr rgi="23" pwr="30.3"/>
+			<GSMRgiPwr rgi="24" pwr="30.6"/>
+			<GSMRgiPwr rgi="25" pwr="30.9"/>
+			<GSMRgiPwr rgi="26" pwr="31.1"/>
+			<GSMRgiPwr rgi="27" pwr="31.2"/>
+			<GSMRgiPwr rgi="28" pwr="31.3"/>
+			<GSMRgiPwr rgi="29" pwr="31.3"/>
+			<GSMRgiPwr rgi="30" pwr="31.4"/>
+			<GSMRgiPwr rgi="31" pwr="31.4"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="700" mod="0" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-9.2"/>
+			<GSMRgiPwr rgi="1" pwr="-7.8"/>
+			<GSMRgiPwr rgi="2" pwr="-6.2"/>
+			<GSMRgiPwr rgi="3" pwr="-4.5"/>
+			<GSMRgiPwr rgi="4" pwr="-3"/>
+			<GSMRgiPwr rgi="5" pwr="-1.7"/>
+			<GSMRgiPwr rgi="6" pwr="-0.3"/>
+			<GSMRgiPwr rgi="7" pwr="1"/>
+			<GSMRgiPwr rgi="8" pwr="2.3"/>
+			<GSMRgiPwr rgi="9" pwr="3.6"/>
+			<GSMRgiPwr rgi="10" pwr="4.9"/>
+			<GSMRgiPwr rgi="11" pwr="6.3"/>
+			<GSMRgiPwr rgi="12" pwr="7.7"/>
+			<GSMRgiPwr rgi="13" pwr="9.1"/>
+			<GSMRgiPwr rgi="14" pwr="10.8"/>
+			<GSMRgiPwr rgi="15" pwr="12.2"/>
+			<GSMRgiPwr rgi="16" pwr="13.8"/>
+			<GSMRgiPwr rgi="17" pwr="14.1"/>
+			<GSMRgiPwr rgi="18" pwr="16.1"/>
+			<GSMRgiPwr rgi="19" pwr="18.3"/>
+			<GSMRgiPwr rgi="20" pwr="20.5"/>
+			<GSMRgiPwr rgi="21" pwr="22.7"/>
+			<GSMRgiPwr rgi="22" pwr="26.2"/>
+			<GSMRgiPwr rgi="23" pwr="26.8"/>
+			<GSMRgiPwr rgi="24" pwr="27.2"/>
+			<GSMRgiPwr rgi="25" pwr="27.3"/>
+			<GSMRgiPwr rgi="26" pwr="27.4"/>
+			<GSMRgiPwr rgi="27" pwr="27.7"/>
+			<GSMRgiPwr rgi="28" pwr="28"/>
+			<GSMRgiPwr rgi="29" pwr="28"/>
+			<GSMRgiPwr rgi="30" pwr="28.3"/>
+			<GSMRgiPwr rgi="31" pwr="28.6"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="885" mod="0" pa="0">
+			<GSMRgiPwr rgi="0" pwr="-1.8"/>
+			<GSMRgiPwr rgi="1" pwr="-0.2"/>
+			<GSMRgiPwr rgi="2" pwr="1.4"/>
+			<GSMRgiPwr rgi="3" pwr="3.2"/>
+			<GSMRgiPwr rgi="4" pwr="4.7"/>
+			<GSMRgiPwr rgi="5" pwr="5.9"/>
+			<GSMRgiPwr rgi="6" pwr="7.3"/>
+			<GSMRgiPwr rgi="7" pwr="8.7"/>
+			<GSMRgiPwr rgi="8" pwr="10.1"/>
+			<GSMRgiPwr rgi="9" pwr="11.6"/>
+			<GSMRgiPwr rgi="10" pwr="13.2"/>
+			<GSMRgiPwr rgi="11" pwr="14.8"/>
+			<GSMRgiPwr rgi="12" pwr="16.4"/>
+			<GSMRgiPwr rgi="13" pwr="18.2"/>
+			<GSMRgiPwr rgi="14" pwr="20.3"/>
+			<GSMRgiPwr rgi="15" pwr="21.9"/>
+			<GSMRgiPwr rgi="16" pwr="23.4"/>
+			<GSMRgiPwr rgi="17" pwr="23.4"/>
+			<GSMRgiPwr rgi="18" pwr="25.2"/>
+			<GSMRgiPwr rgi="19" pwr="26.9"/>
+			<GSMRgiPwr rgi="20" pwr="28.2"/>
+			<GSMRgiPwr rgi="21" pwr="29.3"/>
+			<GSMRgiPwr rgi="22" pwr="30"/>
+			<GSMRgiPwr rgi="23" pwr="30.4"/>
+			<GSMRgiPwr rgi="24" pwr="30.7"/>
+			<GSMRgiPwr rgi="25" pwr="30.9"/>
+			<GSMRgiPwr rgi="26" pwr="31"/>
+			<GSMRgiPwr rgi="27" pwr="31.2"/>
+			<GSMRgiPwr rgi="28" pwr="31.3"/>
+			<GSMRgiPwr rgi="29" pwr="31.2"/>
+			<GSMRgiPwr rgi="30" pwr="31.3"/>
+			<GSMRgiPwr rgi="31" pwr="31.3"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="885" mod="0" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-9.2"/>
+			<GSMRgiPwr rgi="1" pwr="-7.8"/>
+			<GSMRgiPwr rgi="2" pwr="-6.2"/>
+			<GSMRgiPwr rgi="3" pwr="-4.5"/>
+			<GSMRgiPwr rgi="4" pwr="-3"/>
+			<GSMRgiPwr rgi="5" pwr="-1.6"/>
+			<GSMRgiPwr rgi="6" pwr="-0.2"/>
+			<GSMRgiPwr rgi="7" pwr="1.2"/>
+			<GSMRgiPwr rgi="8" pwr="2.5"/>
+			<GSMRgiPwr rgi="9" pwr="3.8"/>
+			<GSMRgiPwr rgi="10" pwr="5.2"/>
+			<GSMRgiPwr rgi="11" pwr="6.6"/>
+			<GSMRgiPwr rgi="12" pwr="7.9"/>
+			<GSMRgiPwr rgi="13" pwr="9.3"/>
+			<GSMRgiPwr rgi="14" pwr="11.1"/>
+			<GSMRgiPwr rgi="15" pwr="12.6"/>
+			<GSMRgiPwr rgi="16" pwr="14.2"/>
+			<GSMRgiPwr rgi="17" pwr="14.5"/>
+			<GSMRgiPwr rgi="18" pwr="16.6"/>
+			<GSMRgiPwr rgi="19" pwr="18.8"/>
+			<GSMRgiPwr rgi="20" pwr="21.2"/>
+			<GSMRgiPwr rgi="21" pwr="23.3"/>
+			<GSMRgiPwr rgi="22" pwr="25"/>
+			<GSMRgiPwr rgi="23" pwr="25.6"/>
+			<GSMRgiPwr rgi="24" pwr="26"/>
+			<GSMRgiPwr rgi="25" pwr="26.3"/>
+			<GSMRgiPwr rgi="26" pwr="26.4"/>
+			<GSMRgiPwr rgi="27" pwr="26.6"/>
+			<GSMRgiPwr rgi="28" pwr="26.8"/>
+			<GSMRgiPwr rgi="29" pwr="26.5"/>
+			<GSMRgiPwr rgi="30" pwr="26.8"/>
+			<GSMRgiPwr rgi="31" pwr="27.1"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="512" mod="1" pa="0">
+			<GSMRgiPwr rgi="0" pwr="-0.4"/>
+			<GSMRgiPwr rgi="1" pwr="0.9"/>
+			<GSMRgiPwr rgi="2" pwr="2"/>
+			<GSMRgiPwr rgi="3" pwr="3.4"/>
+			<GSMRgiPwr rgi="4" pwr="4.8"/>
+			<GSMRgiPwr rgi="5" pwr="5.9"/>
+			<GSMRgiPwr rgi="6" pwr="7.2"/>
+			<GSMRgiPwr rgi="7" pwr="8.6"/>
+			<GSMRgiPwr rgi="8" pwr="9.9"/>
+			<GSMRgiPwr rgi="9" pwr="11.2"/>
+			<GSMRgiPwr rgi="10" pwr="12.5"/>
+			<GSMRgiPwr rgi="11" pwr="13.7"/>
+			<GSMRgiPwr rgi="12" pwr="14.9"/>
+			<GSMRgiPwr rgi="13" pwr="16.2"/>
+			<GSMRgiPwr rgi="14" pwr="17.3"/>
+			<GSMRgiPwr rgi="15" pwr="18.4"/>
+			<GSMRgiPwr rgi="16" pwr="19.6"/>
+			<GSMRgiPwr rgi="17" pwr="20.6"/>
+			<GSMRgiPwr rgi="18" pwr="20.7"/>
+			<GSMRgiPwr rgi="19" pwr="22.1"/>
+			<GSMRgiPwr rgi="20" pwr="23.2"/>
+			<GSMRgiPwr rgi="21" pwr="24.4"/>
+			<GSMRgiPwr rgi="22" pwr="25.5"/>
+			<GSMRgiPwr rgi="23" pwr="26.5"/>
+			<GSMRgiPwr rgi="24" pwr="27.6"/>
+			<GSMRgiPwr rgi="25" pwr="28.6"/>
+			<GSMRgiPwr rgi="26" pwr="29.4"/>
+			<GSMRgiPwr rgi="27" pwr="30"/>
+			<GSMRgiPwr rgi="28" pwr="30.4"/>
+			<GSMRgiPwr rgi="29" pwr="30.7"/>
+			<GSMRgiPwr rgi="30" pwr="30.8"/>
+			<GSMRgiPwr rgi="31" pwr="31"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="512" mod="1" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-13.9"/>
+			<GSMRgiPwr rgi="1" pwr="-12.8"/>
+			<GSMRgiPwr rgi="2" pwr="-11.7"/>
+			<GSMRgiPwr rgi="3" pwr="-10.3"/>
+			<GSMRgiPwr rgi="4" pwr="-8.9"/>
+			<GSMRgiPwr rgi="5" pwr="-7.7"/>
+			<GSMRgiPwr rgi="6" pwr="-6.3"/>
+			<GSMRgiPwr rgi="7" pwr="-4.8"/>
+			<GSMRgiPwr rgi="8" pwr="-3.5"/>
+			<GSMRgiPwr rgi="9" pwr="-2.3"/>
+			<GSMRgiPwr rgi="10" pwr="-1"/>
+			<GSMRgiPwr rgi="11" pwr="0.2"/>
+			<GSMRgiPwr rgi="12" pwr="1.4"/>
+			<GSMRgiPwr rgi="13" pwr="2.6"/>
+			<GSMRgiPwr rgi="14" pwr="3.5"/>
+			<GSMRgiPwr rgi="15" pwr="4.6"/>
+			<GSMRgiPwr rgi="16" pwr="5.8"/>
+			<GSMRgiPwr rgi="17" pwr="6.8"/>
+			<GSMRgiPwr rgi="18" pwr="7.1"/>
+			<GSMRgiPwr rgi="19" pwr="8.6"/>
+			<GSMRgiPwr rgi="20" pwr="9.8"/>
+			<GSMRgiPwr rgi="21" pwr="11"/>
+			<GSMRgiPwr rgi="22" pwr="12.2"/>
+			<GSMRgiPwr rgi="23" pwr="13.3"/>
+			<GSMRgiPwr rgi="24" pwr="14.4"/>
+			<GSMRgiPwr rgi="25" pwr="15.5"/>
+			<GSMRgiPwr rgi="26" pwr="16.4"/>
+			<GSMRgiPwr rgi="27" pwr="17.5"/>
+			<GSMRgiPwr rgi="28" pwr="18.8"/>
+			<GSMRgiPwr rgi="29" pwr="19.8"/>
+			<GSMRgiPwr rgi="30" pwr="20.6"/>
+			<GSMRgiPwr rgi="31" pwr="21.6"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="700" mod="1" pa="0">
+			<GSMRgiPwr rgi="0" pwr="0"/>
+			<GSMRgiPwr rgi="1" pwr="1.3"/>
+			<GSMRgiPwr rgi="2" pwr="2.4"/>
+			<GSMRgiPwr rgi="3" pwr="3.8"/>
+			<GSMRgiPwr rgi="4" pwr="5.3"/>
+			<GSMRgiPwr rgi="5" pwr="6.4"/>
+			<GSMRgiPwr rgi="6" pwr="7.6"/>
+			<GSMRgiPwr rgi="7" pwr="9.1"/>
+			<GSMRgiPwr rgi="8" pwr="10.3"/>
+			<GSMRgiPwr rgi="9" pwr="11.6"/>
+			<GSMRgiPwr rgi="10" pwr="13"/>
+			<GSMRgiPwr rgi="11" pwr="14.2"/>
+			<GSMRgiPwr rgi="12" pwr="15.4"/>
+			<GSMRgiPwr rgi="13" pwr="16.6"/>
+			<GSMRgiPwr rgi="14" pwr="17.7"/>
+			<GSMRgiPwr rgi="15" pwr="18.8"/>
+			<GSMRgiPwr rgi="16" pwr="20"/>
+			<GSMRgiPwr rgi="17" pwr="21.1"/>
+			<GSMRgiPwr rgi="18" pwr="21.4"/>
+			<GSMRgiPwr rgi="19" pwr="22.8"/>
+			<GSMRgiPwr rgi="20" pwr="23.9"/>
+			<GSMRgiPwr rgi="21" pwr="25.1"/>
+			<GSMRgiPwr rgi="22" pwr="26.2"/>
+			<GSMRgiPwr rgi="23" pwr="27.2"/>
+			<GSMRgiPwr rgi="24" pwr="28.2"/>
+			<GSMRgiPwr rgi="25" pwr="29.2"/>
+			<GSMRgiPwr rgi="26" pwr="29.9"/>
+			<GSMRgiPwr rgi="27" pwr="30.3"/>
+			<GSMRgiPwr rgi="28" pwr="30.6"/>
+			<GSMRgiPwr rgi="29" pwr="30.8"/>
+			<GSMRgiPwr rgi="30" pwr="31"/>
+			<GSMRgiPwr rgi="31" pwr="31.1"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="700" mod="1" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-14.6"/>
+			<GSMRgiPwr rgi="1" pwr="-13.5"/>
+			<GSMRgiPwr rgi="2" pwr="-12.5"/>
+			<GSMRgiPwr rgi="3" pwr="-11.1"/>
+			<GSMRgiPwr rgi="4" pwr="-9.6"/>
+			<GSMRgiPwr rgi="5" pwr="-8.5"/>
+			<GSMRgiPwr rgi="6" pwr="-7"/>
+			<GSMRgiPwr rgi="7" pwr="-5.5"/>
+			<GSMRgiPwr rgi="8" pwr="-4.2"/>
+			<GSMRgiPwr rgi="9" pwr="-3"/>
+			<GSMRgiPwr rgi="10" pwr="-1.7"/>
+			<GSMRgiPwr rgi="11" pwr="-0.5"/>
+			<GSMRgiPwr rgi="12" pwr="0.7"/>
+			<GSMRgiPwr rgi="13" pwr="1.9"/>
+			<GSMRgiPwr rgi="14" pwr="3"/>
+			<GSMRgiPwr rgi="15" pwr="4.1"/>
+			<GSMRgiPwr rgi="16" pwr="5.2"/>
+			<GSMRgiPwr rgi="17" pwr="6.3"/>
+			<GSMRgiPwr rgi="18" pwr="6.6"/>
+			<GSMRgiPwr rgi="19" pwr="7.9"/>
+			<GSMRgiPwr rgi="20" pwr="9.1"/>
+			<GSMRgiPwr rgi="21" pwr="10.2"/>
+			<GSMRgiPwr rgi="22" pwr="11.4"/>
+			<GSMRgiPwr rgi="23" pwr="12.4"/>
+			<GSMRgiPwr rgi="24" pwr="13.5"/>
+			<GSMRgiPwr rgi="25" pwr="14.8"/>
+			<GSMRgiPwr rgi="26" pwr="15.8"/>
+			<GSMRgiPwr rgi="27" pwr="16.9"/>
+			<GSMRgiPwr rgi="28" pwr="18.1"/>
+			<GSMRgiPwr rgi="29" pwr="19.2"/>
+			<GSMRgiPwr rgi="30" pwr="19.9"/>
+			<GSMRgiPwr rgi="31" pwr="20.9"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="885" mod="1" pa="0">
+			<GSMRgiPwr rgi="0" pwr="0.3"/>
+			<GSMRgiPwr rgi="1" pwr="1.6"/>
+			<GSMRgiPwr rgi="2" pwr="2.8"/>
+			<GSMRgiPwr rgi="3" pwr="4.2"/>
+			<GSMRgiPwr rgi="4" pwr="5.6"/>
+			<GSMRgiPwr rgi="5" pwr="6.7"/>
+			<GSMRgiPwr rgi="6" pwr="8"/>
+			<GSMRgiPwr rgi="7" pwr="9.4"/>
+			<GSMRgiPwr rgi="8" pwr="10.7"/>
+			<GSMRgiPwr rgi="9" pwr="12"/>
+			<GSMRgiPwr rgi="10" pwr="13.4"/>
+			<GSMRgiPwr rgi="11" pwr="14.6"/>
+			<GSMRgiPwr rgi="12" pwr="15.9"/>
+			<GSMRgiPwr rgi="13" pwr="17.2"/>
+			<GSMRgiPwr rgi="14" pwr="18.4"/>
+			<GSMRgiPwr rgi="15" pwr="19.5"/>
+			<GSMRgiPwr rgi="16" pwr="20.7"/>
+			<GSMRgiPwr rgi="17" pwr="21.7"/>
+			<GSMRgiPwr rgi="18" pwr="21.9"/>
+			<GSMRgiPwr rgi="19" pwr="23.4"/>
+			<GSMRgiPwr rgi="20" pwr="24.5"/>
+			<GSMRgiPwr rgi="21" pwr="25.7"/>
+			<GSMRgiPwr rgi="22" pwr="26.8"/>
+			<GSMRgiPwr rgi="23" pwr="27.8"/>
+			<GSMRgiPwr rgi="24" pwr="28.7"/>
+			<GSMRgiPwr rgi="25" pwr="29.6"/>
+			<GSMRgiPwr rgi="26" pwr="30.1"/>
+			<GSMRgiPwr rgi="27" pwr="30.4"/>
+			<GSMRgiPwr rgi="28" pwr="30.7"/>
+			<GSMRgiPwr rgi="29" pwr="30.9"/>
+			<GSMRgiPwr rgi="30" pwr="31"/>
+			<GSMRgiPwr rgi="31" pwr="31.1"/>
+		</GSMChanModPa>
+		<GSMChanModPa channel="885" mod="1" pa="1">
+			<GSMRgiPwr rgi="0" pwr="-15.5"/>
+			<GSMRgiPwr rgi="1" pwr="-14.3"/>
+			<GSMRgiPwr rgi="2" pwr="-13.3"/>
+			<GSMRgiPwr rgi="3" pwr="-11.8"/>
+			<GSMRgiPwr rgi="4" pwr="-10.4"/>
+			<GSMRgiPwr rgi="5" pwr="-9.3"/>
+			<GSMRgiPwr rgi="6" pwr="-7.7"/>
+			<GSMRgiPwr rgi="7" pwr="-6.3"/>
+			<GSMRgiPwr rgi="8" pwr="-5"/>
+			<GSMRgiPwr rgi="9" pwr="-3.7"/>
+			<GSMRgiPwr rgi="10" pwr="-2.4"/>
+			<GSMRgiPwr rgi="11" pwr="-1.2"/>
+			<GSMRgiPwr rgi="12" pwr="0"/>
+			<GSMRgiPwr rgi="13" pwr="1.2"/>
+			<GSMRgiPwr rgi="14" pwr="2.2"/>
+			<GSMRgiPwr rgi="15" pwr="3.4"/>
+			<GSMRgiPwr rgi="16" pwr="4.5"/>
+			<GSMRgiPwr rgi="17" pwr="5.6"/>
+			<GSMRgiPwr rgi="18" pwr="5.9"/>
+			<GSMRgiPwr rgi="19" pwr="7.2"/>
+			<GSMRgiPwr rgi="20" pwr="8.3"/>
+			<GSMRgiPwr rgi="21" pwr="9.5"/>
+			<GSMRgiPwr rgi="22" pwr="10.6"/>
+			<GSMRgiPwr rgi="23" pwr="11.7"/>
+			<GSMRgiPwr rgi="24" pwr="12.9"/>
+			<GSMRgiPwr rgi="25" pwr="14.2"/>
+			<GSMRgiPwr rgi="26" pwr="15.4"/>
+			<GSMRgiPwr rgi="27" pwr="16.5"/>
+			<GSMRgiPwr rgi="28" pwr="17.6"/>
+			<GSMRgiPwr rgi="29" pwr="18.6"/>
+			<GSMRgiPwr rgi="30" pwr="19.2"/>
+			<GSMRgiPwr rgi="31" pwr="20.1"/>
+		</GSMChanModPa>
+	</GSMDaCharTable>
+</RFCal_Data>

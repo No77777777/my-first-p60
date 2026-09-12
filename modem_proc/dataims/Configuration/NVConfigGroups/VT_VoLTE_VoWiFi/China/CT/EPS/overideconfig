@@ -1,0 +1,11 @@
+[QIPCALL:ImsVoiceQoSConfig]
+
+#This config is required to enable MBR check for audio bearer. 
+
+*qosMbrAudioCheckReqEnabled = 1
+
+[QIPCALL:ImsVoiceConfig]
+
+*accept2ndCallWithSamePAI = 0
+
+

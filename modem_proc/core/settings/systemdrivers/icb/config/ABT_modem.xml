@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="NULL">
+<!-- =========================================================================== -->
+<!--  -->
+<!--  FILE:         ABT_modem_8998.xml -->
+<!--  -->
+<!--  DESCRIPTION:  This file contains the DAL XML properties for the AHB -->
+<!--                Timeout Driver. -->
+<!--  -->
+<!-- =========================================================================== -->
+<!--  -->
+<!--                              Edit History -->
+<!--  -->
+<!--  $Header: //components/rel/core.mpss/10.0/settings/systemdrivers/icb/config/ABT_modem.xml#1 $ -->
+<!--  $DateTime: 2019/04/24 00:03:26 $ -->
+<!--  $Author: pwbldsvc $ -->
+<!--  $Change: 18983508 $  -->
+<!--  -->
+<!--  when         who     what, where, why -->
+<!--  ==========   ==-     ======================================================- -->
+<!--  2017/02/17   bc      Copied from MSM8998 -->
+<!--  2016/02/04   bc      Copied from 9x35 -->
+<!--  2013/07/26   pm      Created -->
+<!--  -->
+<!-- =========================================================================== -->
+<!--              Copyright (c) 2016-2017 QUALCOMM Technolgies, Incorporated. -->
+<!--                     All Rights Reserved. -->
+<!--                   QUALCOMM Proprietary/GTDR -->
+<!-- =========================================================================== -->
+
+
+   <global_def>
+        
+   </global_def>
+   <device name="/dev/ABTimeout">
+     <props name="ABT_Propdata" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+        ABT_propdata
+     </props> 
+   </device>   
+</driver>

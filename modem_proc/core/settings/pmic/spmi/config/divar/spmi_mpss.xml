@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="Spmi">
+<!--
+ * @brief: Configuration file for the SPMI driver
+ * 
+ * Copyright (c) 2018 by Qualcomm Technologies Incorporated. All Rights Reserved.
+ * 
+ * $DateTime:$
+ * $Header:$
+ * $Change:$
+-->
+
+    <device name="DALDEVICEID_SPMI_DEVICE">
+        <!-- User configurable props -->
+        <props name="owner" type="DALPROP_ATTR_TYPE_UINT32">
+            2
+        </props>
+        <props name="spmi_devices" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+           spmiInfo
+        </props>
+        
+    </device>
+</driver>

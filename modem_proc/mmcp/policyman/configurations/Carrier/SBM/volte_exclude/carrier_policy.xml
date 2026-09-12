@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier policy XML for SBM with  SRLTE roaming and excluding LTE B41 for VOLTE calls.
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/SBM/volte_exclude/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $" 
+        enabled     = "true"
+        schema_ver  = "1"
+        policy_ver  = "115.1.5"
+>
+  <initial>
+
+    <mcc_list name="pm:exclude_bands_mccs"> 440 441 </mcc_list>
+
+    <mcc_list name="usa_mccs"> 310 311 312 </mcc_list>
+    <plmn_list name="sxlte_plmns"> 311-880 312-190 310-120 311-870 311-490 </plmn_list>
+
+    <boolean_define name="full_rat_at_powerup" initial="true" />
+    <boolean_define name="full_rat_from_acqfail" initial="true" />
+
+    <rf_band_list name="rf_bands_home">
+      <gw_bands base="hardware" />
+      <lte_bands base="hardware" >
+        <exclude_for_volte> 41 </exclude_for_volte>
+      </lte_bands> 
+      <tds_bands base="hardware" />
+    </rf_band_list>
+
+    <define_fullrat_config timer_secs = "1800" scan_fail_cnt = "0">
+      <ue_mode> CSFB </ue_mode>
+      <rat_capability base="none">
+        <include> C H G W L </include>
+      </rat_capability>
+      <rf_bands base="hardware" />
+    </define_fullrat_config>
+
+    <device_configuration num_sims = "1" max_active = "1">
+      <config primary="C H G W L T" />
+    </device_configuration>
+
+    <rat_capability base="none" >
+      <include> G W L </include>
+    </rat_capability>
+      
+    <rf_bands_if list="rf_bands_home" />
+
+    <feature single_sim="srlte"> dualmmode </feature>
+    <ue_mode_if> CSFB </ue_mode_if>
+
+    <mcc_list name="ca_combo_mccs"> 440 441 </mcc_list>
+
+  </initial>
+
+  <!-- Determine Full RAT at power up -->
+  <if>
+    <all_of>
+      <boolean_test name="full_rat_at_powerup" />
+      <enforce_full_rat />
+    </all_of>
+    <then>
+      <boolean_set name="full_rat_at_powerup" value="false" />
+      <fullrat_enter />
+    </then>
+  </if>
+
+  <!-- Determine Full RAT after ONLINE -->
+  <if>
+    <all_of>
+      <boolean_test name="full_rat_from_acqfail" />
+      <phone_operating_mode> ONLINE </phone_operating_mode>
+      <time_in_lpm> 1800 </time_in_lpm>
+      <oos_scan_cnt test=">=" value="1" />
+    </all_of>
+    <then>
+      <boolean_set name="full_rat_from_acqfail" value="false" />
+      <fullrat_enter />
+    </then>
+  </if>
+
+  <!-- Set the boolean and wait if UE is not ONLINE  -->
+  <if>
+    <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+    <then>
+      <boolean_set name="full_rat_from_acqfail" value="true" />
+      <stop />
+    </then>
+  </if>
+
+  <!-- Wait if location is unknown  -->
+  <if>
+    <not> <have_location /> </not>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <svc_mode> FULL </svc_mode>
+  <boolean_set name="full_rat_at_powerup" value="false" />
+  <boolean_set name="full_rat_from_acqfail" value="false" />
+
+  <if>
+    <location_mcc_in list="ca_combo_mccs" />
+    <then>
+      <ca_band_combos string="41CA-3;41CA-2;41CA-1;41CA-0;41A-28AA-0;41A-3AA-0;41AA-3A-0;28AA-11A-0;28A-11AA-0;28AA-3A-0;28A-3AA-0;28AA-1A-1;28AA-1A-0;28A-1AA-1;28A-1AA-0;11AA-8A-0;11A-8AA-0;11AA-3A-0;11A-3AA-0;11AA-1A-0;11A-1AA-0;8AA-3A-3;8AA-3A-2;8AA-3A-1;8AA-3A-0;8A-3AA-3;8A-3AA-2;8A-3AA-1;8A-3AA-0;8AA-1A-2;8AA-1A-1;8AA-1A-0;8A-1AA-2;8A-1AA-1;8A-1AA-0;3AA-1A-0;3A-1AA-0;" />
+      <continue />
+    </then>
+    <else>
+      <ca_band_combos string="" />
+      <continue />
+    </else>
+  </if>
+
+  <!-- Determine configuration based on location -->
+  <select>
+
+    <case>
+      <location_mcc_in list="pm:exclude_bands_mccs" />
+      <actions>
+        <rf_bands list="rf_bands_home" />
+        <ue_mode> CSFB </ue_mode>
+        <rat_capability base="none">
+          <include> G W L </include>
+        </rat_capability>
+      </actions>
+    </case>
+
+    <case>
+      <serving_plmn_in list="sxlte_plmns" />
+      <actions>
+        <rf_bands base="hardware" />
+        <ue_mode> 1X_CSFB_PREF </ue_mode>
+        <rat_capability base="none">
+          <include> C H G W L </include>
+        </rat_capability>
+      </actions>
+    </case>
+
+    <case>
+      <location_mcc_in list="usa_mccs" />
+      <actions>
+        <rf_bands base="hardware" />
+        <ue_mode> CSFB </ue_mode>
+        <rat_capability base="none">
+          <include> C H G W L </include>
+        </rat_capability>
+      </actions>
+    </case>
+
+    <case>
+      <true />
+      <actions>
+        <rf_bands base="hardware" />
+        <ue_mode> CSFB </ue_mode>
+        <rat_capability base="none">
+          <include> G W L </include>
+        </rat_capability>
+      </actions>
+    </case>
+
+  </select>
+
+</policy>

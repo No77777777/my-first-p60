@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier Policy for Verizon Voice Domain Configuration 
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/Verizon/voice_domain/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "30.1.3"
+>
+
+  <initial>
+
+    <boolean_define name="cm:rpm_enabled" initial="true" />
+
+  </initial>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <if>
+    <location_mcc_in> 310 311 312 313 314 315 316 330 </location_mcc_in>
+    <then>
+      <voice_domain_pref mandatory="true"> IMS_PREF </voice_domain_pref>
+    </then>
+    <else>
+      <voice_domain_pref mandatory="false"> CS_PREF </voice_domain_pref>
+    </else>
+  </if>
+
+</policy>

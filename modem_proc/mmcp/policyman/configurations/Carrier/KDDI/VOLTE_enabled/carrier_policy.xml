@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier policy XML for KDDI (VOLTE_enabled) with LTE in Home and G/W/L in Roam. VoLTE is not always assumed ON for this XML.
+       Power up and LPM is in Full RAT mode.
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/KDDI/VOLTE_enabled/carrier_policy.xml#2 $
+-->
+
+<policy name        = "generic"
+        changelist  = "$Change: 37680113 $"
+        policy_ver  = "45.1.23"
+>
+
+  <initial>
+
+    <mcc_list name="pm:volte_only_mccs"> 440 441 </mcc_list>
+
+    <mcc_list name="japan_mccs"> 440 441 </mcc_list>
+
+    <mcc_list name="china_mccs"> 460 </mcc_list>
+
+    <boolean_define name="mmcp:e911_volte" initial="true" />
+    <boolean_define name="pm:allow_tds_on_this_sub" initial="true" />
+
+    <define_fullrat_config>
+      <select>
+
+        <case>
+          <not> <volte_enabled /> </not>
+          <then>
+            <rat_capability base="none">
+              <include> C H G W L T </include>
+            </rat_capability>
+            <call_mode> NORMAL </call_mode>
+            <rf_bands base="hardware" />
+          </then>
+        </case>
+
+        <case>
+          <sim_type> CSIM </sim_type>
+          <then>
+            <rat_capability base="none">
+              <include> C H G W L </include>
+            </rat_capability>
+            <call_mode> NORMAL </call_mode>
+            <rf_bands base="hardware" />
+          </then>
+        </case>
+
+        <case>
+          <true />
+          <then>
+            <rat_capability base="none">
+              <include> G W L T </include>
+            </rat_capability>
+            <call_mode> NORMAL </call_mode>
+            <rf_bands base="hardware" />
+          </then>
+        </case>
+
+      </select>
+    </define_fullrat_config>
+
+    <rf_band_list name="rf_bands_home">
+      <gw_bands base="none" />
+      <lte_bands base="none">
+        <include> 0 2 10 17 25 27 40 41 </include>
+      </lte_bands> 
+      <tds_bands base="none" />
+    </rf_band_list>
+
+    <rf_band_list name="rf_bands_roam">
+      <!-- GSM Band mapping: GSM bands are
+              B7->GSM_DCS_1800->Bit-7,
+              B8->GSM_EGSM_900->Bit-8
+              B9->GSM_PGSM_900->Bit-9.
+              B19->GSM_850 -> Bit-19,
+              B21->GSM_PCS_1900-> Bit-21
+                   WCDMA Band mapping: WCDMA bands are
+              B22-> SYS_SBAND_WCDMA_I_IMT_2000
+              B23-> SYS_SBAND_WCDMA_II_PCS_1900
+              B25-> SYS_SBAND_WCDMA_IV_1700
+              B26-> SYS_SBAND_WCDMA_V_850
+           Refer: sys_sband_e_type in sys.h
+      -->
+      <gw_bands base="none">
+        <include> 7 8 9 19 21 22 23 25 26 </include>
+      </gw_bands> 
+      <lte_bands base="none">
+        <include> 0 2 3 4 6 11 12 16 19 27 37 40 </include>
+      </lte_bands> 
+      <tds_bands base="none" />
+    </rf_band_list>
+    
+    <rf_bands base="hardware" />
+
+    <ue_mode> NORMAL </ue_mode>
+
+    <rat_capability base="none">
+      <include> G W L </include>
+    </rat_capability>
+
+    <feature single_sim="normal"> dualmmode </feature>
+
+    <svc_mode> FULL_RAT </svc_mode>
+
+  </initial>
+
+  <if>
+    <phone_operating_mode> SLEEP </phone_operating_mode>
+    <then>
+      <rat_capability base="none">
+        <include> G W L </include>
+      </rat_capability>
+      <svc_mode> FULL_RAT </svc_mode>
+      <call_mode> NORMAL </call_mode>
+      <rf_bands base="hardware" />
+    </then>
+  </if>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+      <volte_enabled state="undef" />
+    </any_of>
+    <then> 
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <svc_mode> FULL </svc_mode>
+
+  <if>
+    <location_mcc_in list="japan_mccs" />
+    <then> 
+	  <ca_band_combos string="42C-41C-3A-1AA;42C-41C-3AA-1A;42A-41C-3A-1AA;42A-41C-3AA-1A;42C-41A-3A-1AA;42C-41A-3AA-1A;42C-41C-1AA;42A-41C-1AA;42C-41A-1AA;42A-41A-1AA;42C-41C-3AA;42A-41C-3AA;42C-41A-3AA;42A-41A-3AA;41C-3A-1AA;41C-3AA-1A;41A-3A-1AA;41A-3AA-1A;42C-3A-1AA;42C-3AA-1A;42A-3A-1AA;42A-3AA-1A;42CA-41C;42C-41CA;42CC-41C;42C-41CC;42AA-41C;42A-41CA;42A-41CC;42CA-41A;42CC-41A;42C-41AA;42AA-41A;42A-41AA;42C-18A-3A-1AA;42C-18A-3AA-1A;42C-18AA-3A-1A;42C-18A-1AA;42C-18AA-1A;42A-18A-1AA;42A-18AA-1A;42C-18A-3AA;42C-18AA-3A;42A-18A-3AA;42A-18AA-3A;18A-3A-1AA;18A-3AA-1A;18AA-3A-1A;18AA-3A-1AA;18AA-3AA-1A;26AA-3A-1A;26A-3AA-1A;26A-3A-1AA;26AA-3A-1AA;28A-3A-1AA;28A-3AA-1A;28AA-3A-1A;28AA-3A-1AA;28AA-3AA-1A;41C-1AA;41A-1AA;42C-1AA;42A-1AA;41C-3AA;41A-3AA;42C-3AA;42A-3AA;3AA-1A;3A-1AA;41CA;41CC;42CA;42CC;28AA-18A-1A;28A-18AA-1A;28A-18A-1AA;28A-18AA-1AA;28AA-18A-1AA;28AA-18A;28A-18AA;18AA-1A;18A-1AA;18AA-1AA;26AA-1A;26A-1AA;26AA-1AA;28AA-1A;28A-1AA;28AA-1AA;18A-3AA;18AA-3A;18AA-3AA;26A-3AA;26AA-3A;28A-3AA;28AA-3A;28AA-3AA;18A-11A-1AA;18A-11AA-1A;18AA-11A-1A;11A-1AA;11AA-1A;18AA-11A;18A-11AA;42A-41A-3A-1AA;42A-41A-3AA-1A;42A-18A-3A-1AA;42A-18A-3AA-1A;42A-18AA-3A-1A;42C-18AA;42A-18AA;" />
+      <continue />
+    </then>
+    <else>
+      <ca_band_combos string="" />
+      <continue />
+    </else>    
+  </if>
+  
+  <if>
+    <volte_enabled />
+    <then>
+
+      <select>
+        <case>
+          <location_mcc_in list="japan_mccs" />
+          <then>
+            <rat_capability base="none">
+              <include> L </include>
+            </rat_capability>
+            <call_mode> VOLTE </call_mode>
+            <rf_bands list="rf_bands_home" />
+          </then>
+        </case>
+
+        <case>
+          <all_of>
+            <location_mcc_in list="china_mccs" />
+            <sim_type> CSIM </sim_type>
+          </all_of>
+          <then>
+            <rat_capability base="none">
+              <include> C H G W L </include>
+            </rat_capability>
+            <call_mode> NORMAL </call_mode>
+            <rf_bands list="rf_bands_roam" />
+          </then>
+        </case>
+
+        <case>
+          <location_mcc_in list="china_mccs" />
+          <then>
+            <rat_capability base="none">
+              <include> G W L T </include>
+            </rat_capability>
+            <call_mode> NORMAL </call_mode>
+            <rf_bands list="rf_bands_roam" />
+          </then>
+        </case>
+
+        <case>
+          <true />
+          <then>
+            <rat_capability base="none">
+              <include> C H G W L </include>
+            </rat_capability>
+            <call_mode> NORMAL </call_mode>
+            <rf_bands list="rf_bands_roam" />
+          </then>
+        </case>
+      </select>
+
+    </then>
+    <else>
+
+      <select>
+        <case>
+          <location_mcc_in list="japan_mccs" />
+          <then>
+            <rat_capability base="none">
+              <include> C H L </include>
+            </rat_capability>
+            <call_mode> NORMAL </call_mode>
+            <rf_bands list="rf_bands_home" />
+          </then>
+        </case>
+
+        <case>
+          <true />
+          <then>
+            <rat_capability base="none">
+              <include> C H G W L T </include>
+            </rat_capability>
+            <call_mode> NORMAL </call_mode>
+            <rf_bands list="rf_bands_roam" />
+          </then>
+        </case>
+      </select>
+
+    </else>
+  </if>
+
+</policy>

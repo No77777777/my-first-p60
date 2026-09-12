@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="data.0.0" type="1"/>
+  <GroupFile name="mcfg_sw_gen_Gen_3GPP_DeleteROW.xml" description="" comment="" category="" version="data.0.0" mcfgAttributes="0x09" buildPath="modem_proc/datamodem/datacfg/xml/common/ROW/mcfg_sw_gen_Gen_3GPP_DeleteROW.xml"/>
+<NvEfsItemData name="ds_3gpp_mtu" id="65814" description="3GPP Maximum Transmission Unit" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp/ds_3gpp_mtu">
+    <Member name="ds_3gpp_mtu" description="3GPP Maximum Transmission Unit" comment="" sizeOf="1" type="uint16">1430 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rpm_params" id="67204" description="RPm parameter  struct" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp/rpm_params">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">60 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">30 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">60 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">30 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rpm_suppported_sim" id="67205" description="SIM supporting RPM" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp/rpm_suppported_sim">
+    <Member name="Unidentified" description="" comment="" sizeOf="60" type="uint8">3 1 0 4 1 0 3 1 0 1 8 0 3 1 0 5 6 0 3 1 0 6 5 0 3 1 0 1 7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="ser_req_throttle_behavior" id="69710" description="Specify behavior for service request throttling" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/ser_req_throttle_behavior">
+    <Member name="ds_3gpp_srv_req_throttle_behavior" description="Specify behavior for service request throttling" comment="" sizeOf="1" type="uint32">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="ip6_default_mtu" id="69749" description="Default IPv6 MTU" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/datamodem/protocols/ip6_default_mtu">
+    <Member name="ip6_default_mtu" description="Default IPv6 MTU" comment="" sizeOf="1" type="uint16">2000 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wlan_offload_config" id="70315" description="Determines the WLAN offload type" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/wlan_config/wlan_offload_config">
+    <Member name="wlan_offload_config" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+  </NvEfsItemData>  
+  <NvEfsItemData name="umts_nw_initiated_qos_support" id="70331" description="Enable - Disable UMTS Network initiated QOS Support" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/umts_nw_initiated_qos_support">
+    <Member name="umts_nw_initiated_qos_support" description="Enable - Disable UMTS Network initiated QOS Support" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="call_orig_allowed_before_ps_attach" id="70332" description="Call origination is allowed before ps attach" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/call_orig_allowed_before_ps_attach">
+    <Member name="call_orig_allowed_before_ps_attach" description="Call origination is allowed before ps attach" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="ds_3gpp_redial_for_no_cause" id="72564" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/ds_3gpp_redial_for_no_cause">
+    <Member name="ds_3gpp_redial_for_no_cause" description="Redial for no cause code" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="L_to_W_qos_continuity" id="72579" description="QoS continuity between L to W and W to L" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/L_to_W_qos_continuity">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wlan_3g_ip_continuity_enabled" id="73657" description="WLAN 3G IP Continuity Enabled" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/dsmgr/wlan_3g_ip_continuity_enabled">
+    <Member name="wlan_3g_ip_continuity" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wfc_applicable_for_non_ims_pdn" id="74106" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/wlan_config/wfc_applicable_for_non_ims_pdn">
+    <Member name="wfc_applicable_for_non_ims_pdn" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wwan_to_iwlan_ho_disallowed_on_internet_pdn" id="74116" description="Determine WWAN to IWLAN handoff is disallowed or not on INTERNET PDN" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/wwan_to_iwlan_ho_disallowed_on_internet_pdn">
+    <Member name="wwan_to_iwlan_ho_disallowed_on_internet_pdn" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>  
+  <NvEfsItemData name="disable_mtu_request" id="74033" description="Whether send MTU PCO in PDN connectivity request" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/disable_mtu_request">
+    <Member name="disable_mtu_request" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsFile name="ds_dsd_attach_profile.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_dsd_attach_profile.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/ds_dsd_attach_profile.txt"/>
+  <NvEfsFile name="pdn_throttling_config.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/data/epc/pdn_throttling_config.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/pdn_throttling_config.txt"/>
+  <NvEfsFile name="srv_req_throt_config.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/3gpp/throttling/srv_req_throt_config.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/srv_req_throt_config.txt"/>
+  <NvEfsFile name="apn_reject_name.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/data/3gpp/ps/apn_reject/apn_reject_name.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/volte/apn_reject_name.txt"/>
+  <NvEfsFile name="iwlan_s2b_config.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/iwlan_s2b_config.xml" buildPath="modem_proc/datamodem/datacfg/efs/att/FirstNet/iwlan_s2b_config.xml"/>
+  <NvEfsFile name="default_andsf.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/default_andsf.xml" buildPath="modem_proc/datamodem/datacfg/efs/att/FirstNet/Guam_CNMI/default_andsf.xml"/>
+  <NvEfsFile name="andsf.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/andsf.xml" buildPath="modem_proc/datamodem/datacfg/efs/att/FirstNet/Guam_CNMI/andsf.xml"/>
+  <NvEfsFile name="ds_andsf_config.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_andsf_config.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/ds_andsf_config.txt"/>
+  <NvEfsFile name="threshold1.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/threshold1.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/threshold1.txt"/>
+  <NvEfsFile name="threshold2.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/threshold2.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/threshold2.txt"/>
+  <NvEfsFile name="threshold3.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/threshold3.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/threshold3.txt"/>
+  <NvEfsFile name="threshold4.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/threshold4.txt" buildPath="modem_proc/datamodem/datacfg/efs/att/threshold4.txt"/>
+  <NvEfsFile name="Profile1" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile1" buildPath="modem_proc/datamodem/datacfg/efs/att/FirstNet/Profile1"/>
+  <NvEfsFile name="Profile2" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile2" buildPath="modem_proc/datamodem/datacfg/efs/att/volte/profile2"/>
+  <NvEfsFile name="Profile3" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile3" buildPath="modem_proc/datamodem/datacfg/efs/att/volte/profile3"/>
+  <NvEfsFile name="Profile4" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile4" buildPath="modem_proc/datamodem/datacfg/efs/att/FirstNet/Guam_CNMI/Profile4"/>
+  <NvItemData name="Ipv6 Enabled" id="1896" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ipv6_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvEfsItemData name="EmergencyAPNType" id="74090" description="Defines the APN Type on which Emergency call shall be made" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/dsmgr/emergency_apn_type">
+    <Member name="wwan_preferred" description="" comment="" sizeOf="1" type="uint8">1</Member>
+    <Member name="wwan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+    <Member name="iwlan_preferred" description="" comment="" sizeOf="1" type="uint8">1</Member>
+    <Member name="iwlan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+  </NvEfsItemData>
+
+</NvData>

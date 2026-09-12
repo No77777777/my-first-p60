@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR3925_ROW_DLCA_QPA6560_LTE_B8_RX0.xml -->
+    <NvItemData id="28920" name="RFNV_LTE_B8_RX_STATIC_DATA_I" compressed="false" variableSize="true" index="0" subscriptionid="0">
+		<Member type="uint16" name="version" sizeOf="1">0</Member>
+		<Member type="uint16" name="num_of_element" sizeOf="1">6</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">203</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" name="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="uint8" name="nv_container" sizeOf="1">0</Member>
+				<Member type="uint8" name="reserved" sizeOf="1">0</Member>
+				<Member type="uint8" name="switch_point_type" sizeOf="1">0</Member>
+				<Member type="RFNV_LTE_RX_SWITCH_POINT_DATA_TYPE" name="switch_point_array" sizeOf="7">
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-740</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-780</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-600</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-640</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-400</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-440</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-280</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-320</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-200</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-240</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">203</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" name="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="uint8" name="nv_container" sizeOf="1">1</Member>
+				<Member type="uint8" name="reserved" sizeOf="1">0</Member>
+				<Member type="uint8" name="switch_point_type" sizeOf="1">0</Member>
+				<Member type="RFNV_LTE_RX_SWITCH_POINT_DATA_TYPE" name="switch_point_array" sizeOf="7">
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-740</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-780</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-600</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-640</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-400</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-440</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-280</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-320</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-200</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-240</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">203</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" name="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="uint8" name="nv_container" sizeOf="1">2</Member>
+				<Member type="uint8" name="reserved" sizeOf="1">0</Member>
+				<Member type="uint8" name="switch_point_type" sizeOf="1">0</Member>
+				<Member type="RFNV_LTE_RX_SWITCH_POINT_DATA_TYPE" name="switch_point_array" sizeOf="7">
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-740</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-780</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-600</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-640</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-400</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-440</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-280</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-320</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-200</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-240</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">203</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" name="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="uint8" name="nv_container" sizeOf="1">3</Member>
+				<Member type="uint8" name="reserved" sizeOf="1">0</Member>
+				<Member type="uint8" name="switch_point_type" sizeOf="1">0</Member>
+				<Member type="RFNV_LTE_RX_SWITCH_POINT_DATA_TYPE" name="switch_point_array" sizeOf="7">
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-740</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-780</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-600</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-640</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-400</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-440</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-280</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-320</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-200</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-240</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">203</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" name="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="uint8" name="nv_container" sizeOf="1">0</Member>
+				<Member type="uint8" name="reserved" sizeOf="1">0</Member>
+				<Member type="uint8" name="switch_point_type" sizeOf="1">1</Member>
+				<Member type="RFNV_LTE_RX_SWITCH_POINT_DATA_TYPE" name="switch_point_array" sizeOf="7">
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-740</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-780</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-600</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-640</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-400</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-440</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-280</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-320</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-200</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-240</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">203</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" name="QMSL_LTE_RX_SWITCH_POINT_CONTAINER_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="uint8" name="nv_container" sizeOf="1">1</Member>
+				<Member type="uint8" name="reserved" sizeOf="1">0</Member>
+				<Member type="uint8" name="switch_point_type" sizeOf="1">1</Member>
+				<Member type="RFNV_LTE_RX_SWITCH_POINT_DATA_TYPE" name="switch_point_array" sizeOf="7">
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-740</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-780</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-600</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-640</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-400</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-440</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-280</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-320</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">-200</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">-240</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint8" name="type" sizeOf="1">0</Member>
+						<Member type="int16" name="rise_or_backoff" sizeOf="1">0</Member>
+						<Member type="int16" name="fall_or_hyst" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+	</NvItemData>
+</NvSource>

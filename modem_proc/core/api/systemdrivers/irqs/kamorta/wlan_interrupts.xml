@@ -1,0 +1,32 @@
+<!-- Interrupt XML Definitions -->
+<!-- Chip: SDM4xx (Kamorta) -->
+<!-- Subsystem: Modem Subsystem -->
+<!-- Generated from IP Catalog on May 19, 2019 at 10:03 p.m. -->
+
+<interrupt>
+  <irq num="396" trigger="level" polarity="high" /> <!-- wcss_mss_wmac1_intr[0] -->
+  <irq num="397" trigger="level" polarity="high" /> <!-- wcss_mss_wmac1_intr[1] -->
+  <irq num="398" trigger="level" polarity="high" /> <!-- wcss_mss_wmac1_intr[2] -->
+  <irq num="399" trigger="level" polarity="high" /> <!-- wcss_mss_wmac1_intr[3] -->
+  <irq num="400" trigger="level" polarity="high" /> <!-- wcss_mss_wmac1_intr[4] -->
+  <irq num="401" trigger="level" polarity="high" /> <!-- wcss_mss_wmac1_intr[5] -->
+  <irq num="408" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[0] -->
+  <irq num="409" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[1] -->
+  <irq num="410" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[2] -->
+  <irq num="411" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[3] -->
+  <irq num="412" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[4] -->
+  <irq num="413" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[5] -->
+  <irq num="414" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[6] -->
+  <irq num="415" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[7] -->
+  <irq num="416" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[8] -->
+  <irq num="417" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[9] -->
+  <irq num="467" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[10] -->
+  <irq num="468" trigger="level" polarity="high" /> <!-- wcss_mss_ce_intr[11] -->
+  <irq num="469" trigger="level" polarity="high" /> <!-- wcss_mss_err_intr -->
+  <irq num="470" trigger="level" polarity="high" /> <!-- wcss_mss_status_intr -->
+  <irq num="471" trigger="level" polarity="high" /> <!-- wcss_mssq6_wakeup_intr -->
+  <irq num="472" trigger="level" polarity="high" /> <!-- wcss_mssq6_wdog_bite -->
+  <irq num="473" trigger="level" polarity="high" /> <!-- wcss_sr_mssq6_wakeup_intr -->
+
+</interrupt>
+

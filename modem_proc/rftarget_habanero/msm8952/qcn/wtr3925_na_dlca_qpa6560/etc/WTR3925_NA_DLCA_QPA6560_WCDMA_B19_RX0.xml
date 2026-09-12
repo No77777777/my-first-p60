@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR3925_NA_DLCA_QPA6560_WCDMA_B19_RX0.xml -->
+	<NvItemData id="28346" name="RFNV_WCDMA_BC19_RX_STATIC_DATA_V2_I" mapping="direct" encoding="dec">
+		<Member name="Variant_Data_Marker" sizeOf="1" type="Variant_Marker">
+			<Struct>
+				<Member name="version" sizeOf="1" type="uint16">0</Member>
+				<Member name="num_of_element" sizeOf="1" type="uint16">18</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">0</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,48,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,8,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-82,118,238,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-122,78,198,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,-12,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,-52,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">0</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,48,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,8,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-82,118,238,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-122,78,198,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,-12,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,-52,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">2</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">0</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,48,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,8,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">2</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-82,118,238,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-122,78,198,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">2</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,-12,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,-52,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">3</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">0</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,48,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,8,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">3</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-82,118,238,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-122,78,198,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">3</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,-12,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,-52,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">4</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">0</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,48,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,8,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">4</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-82,118,238,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-122,78,198,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">4</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,-12,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,-52,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">5</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">0</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,48,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,8,188,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">5</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">0</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-82,118,238,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-122,78,198,511,511</Member>
+			</Struct>
+		</Member>
+		<Member name="DataType_Header" sizeOf="1" type="uint16">120</Member>
+		<Member name="rfnv_data_type_lna_swpts_v2" sizeOf="1" type="rfnv_data_type_lna_swpts_v2">
+			<Struct>
+				<Member type="uint8" sizeOf="1" name="chain_id">5</Member>
+				<Member type="uint8" sizeOf="1" name="carr_id">1</Member>
+				<Member type="uint8" sizeOf="1" name="hs_config">1</Member>
+				<Member type="int16" sizeOf="5" name="lna_rise">-282,-12,228,511,511</Member>
+				<Member type="int16" sizeOf="5" name="lna_fall">-322,-52,188,511,511</Member>
+			</Struct>
+		</Member>
+
+	</NvItemData>
+</NvSource>

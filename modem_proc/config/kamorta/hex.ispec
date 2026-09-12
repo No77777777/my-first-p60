@@ -1,0 +1,69 @@
+#
+#  This file contains the list of things to go into the island.
+#  Each line consists of LIBRARY-NAME OBJECT-NAME SECTION-NAME
+#   where an asterisk (*) represents a wildcard.
+#  Note that section names are not yet supported by the
+#   tools, but will be in the future.
+#
+*libc.a abs.o .text
+*libc.a cimag.o .text
+*libc.a cimagf.o .text
+*libc.a cimagl.o .text
+*libc.a creal.o .text
+*libc.a crealf.o .text
+*libc.a creall.o .text
+*libc.a div.o .text
+*libc.a fmemcpy.o .text
+*libc.a hypot.o .text
+*libc.a ldexp.o .text
+*libc.a ldexpf.o .text
+*libc.a ldexpl.o .text
+*libc.a ldiv.o .text
+*libc.a memcpy.o .text
+*libc.a memmove.o .text
+*libc.a memset.o .text
+*libc.a rmemcpy.o .text
+*libc.a sqrt.o .text
+*libc.a sqrtf.o .text
+*libc.a sqrtl.o .text
+*libc.a strlcpy.o .text
+*libc.a xdint.o .text
+*libc.a xdnorm.o .text
+*libc.a xdscale.o .text
+*libc.a xdtest.o .text
+*libc.a xdunscal.o .text
+*libc.a xfcbuild.o .text
+*libc.a xfdnorm.o .text
+*libc.a xfdscale.o .text
+*libc.a xfdtest.o .text
+*libc.a xfdunsca.o .text
+*libc.a xfhypot.o .text
+*libc.a xfiles.o .data         
+*libc.a xfvalues.o .data
+*libc.a xhypot.o .text
+*libc.a xlcbuild.o .text
+*libc.a xldint.o .text
+*libc.a xldscale.o .text
+*libc.a xldtest.o .text
+*libc.a xldunsca.o .text
+*libc.a xlhypot.o .text
+*libc.a xlitob.o .text
+*libc.a xlprec.o .text
+*libc.a xlvalues.o .data
+*libc.a xvacopy.o .text
+*libc.a xvalues.o .data
+*libqcc.a hexagon_dfaddsub.o .text
+*libqcc.a hexagon_dfdiv.o .text
+*libqcc.a hexagon_dfmul.o .text
+*libqcc.a hexagon_dfsqrt.o .text
+*libqcc.a hexagon_memcpy_forward_vp4cp4n2.o .text
+*libqcc.a memcpy_likely_aligned.o .text
+*libqcc.a qdsp_divdi3.o .text
+*libqcc.a qdsp_divsi3.o .text
+*libqcc.a qdsp_sfdiv_opt.o .text
+*libqcc.a qdsp_sfsqrt_opt.o .text
+*libqcc.a qdsp_udivdi3.o .text
+*libqcc.a qdsp_udivsi3.o .text
+*libqcc.a qdsp_umoddi3.o .text
+*libqcc.a qdsp_umodsi3.o .text
+*libqcc.a common_entry_exit_abi2.o *

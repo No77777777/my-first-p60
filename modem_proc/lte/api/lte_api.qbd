@@ -1,0 +1,25 @@
+#include <api.qbd>
+
+// Depends on LTEIncl being True.  This is a HACK so that MCS-Only builds
+// will compile.
+if( $(lte_config) && $(LuaIncluded) == True && $(Tool) != gcc )
+{
+  #include <toolchains.qbd>
+  #include <lua_iface.qbd>
+  rule lte_api_msg_preproc : umid_iface_preproc_msg
+  {
+    Input = lte_cphy_msg.h;
+    Output PREPROCESS = gen/$(Decorator)/lte_cphy_msg.i; /**/
+  }
+
+  rule lte_api_lua_iface_gen : lua_iface_gen
+  {
+    Import  UMID     = gen/$(Decorator)/$(ProjectName).lua_iface_umids;
+  }
+
+  rule lte_api_umid : umid_compile
+  {
+    Input  Headers  = lte_cphy_msg.h;
+    Output UMID     = gen/$(Decorator)/$(ProjectName).lua_iface_umids;
+  }
+}

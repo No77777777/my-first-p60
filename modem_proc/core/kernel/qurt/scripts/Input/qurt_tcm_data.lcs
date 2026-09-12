@@ -1,0 +1,44 @@
+/*=============================================================================
+
+                                    qurt_tcm_data.lcs
+
+GENERAL DESCRIPTION
+
+EXTERNAL FUNCTIONS
+        None.
+
+INITIALIZATION AND SEQUENCING REQUIREMENTS
+        None.
+
+             Copyright (c) 2013  by Qualcomm Technologies, Inc.  All Rights Reserved.
+=============================================================================*/
+	*cust_config.o(.data.tcm.ukernel.island)
+	*cust_config.o(.data.tcm.ukernel.main)
+	*cust_config.o(.bss.tcm.ukernel.main)
+	*config.lib(.data.tcm.ukernel.island)
+	*config.lib(.data.tcm.ukernel.main)
+	*config.lib(.bss.tcm.ukernel.main)
+	*libqurtkernel_island.a:qurtkernel_island.o(.data.tcm.ukernel.island)
+	*libqurtkernel_island.a:vectors_island.o(.data.tcm.ukernel.island)
+	*libqurtkernel_island.a:switch_btwt_island.o(.data.tcm.ukernel.island)
+    *libqurtkernel_island.a:scheduler_btwt_256_island.o(.data.tcm.ukernel.island)
+	*libqurtkernel_island.a:interrupt_asm_island.o(.data.tcm.ukernel.island)
+	*libqurtkernel_island.a:interrupt_island.o(.data.tcm.ukernel.island)
+    *libqurtkernel_island.a:int_handler_btwt.o(.data.tcm.ukernel.island)
+    *libqurtkernel_island.a:int_handler_btwt.o(.data.tcm.ukernel.main)
+	*libqurtkernel_island.a:traptab_gen_island.o(.data.tcm.ukernel.island)
+    *libqurtkernel_island.a:scheduler_btwt_256.o(.data.tcm.ukernel.island)
+	*libqurtkernel_island.a:scheduler_256_island.o(.data.tcm.ukernel.island)
+	*libqurtkernel_island.a:trace_island.o(.data.tcm.ukernel.island)
+	*libqurtkernel_island.a:switch_island.o(.data.tcm.ukernel.island)
+	*libqurtkernel_island.a:scheduler_asm_256_island.o(.data.tcm.ukernel.island)
+	*libqurtkernel_main.a:traptab_gen.o(.data.tcm.ukernel.main)
+    *libqurtkernel_main.a:scheduler_256.o(.data.tcm.ukernel.main)
+    *libqurtkernel_main.a:scheduler_btwt_256.o(.data.tcm.ukernel.main)
+    *libqurtkernel_main.a:scheduler_asm_256.o(.data.tcm.ukernel.main)
+	*libqurtkernel_main.a:init.o(.data.tcm.ukernel.island)
+    *libqurtkernel_main.a:init.o(.data.tcm.ukernel.main)
+    *libqurtkernel_main.a:futex.o(.data.tcm.ukernel.main)
+	*libqurtkernel_main.a:interrupt.o(.data.tcm.ukernel.main)
+	*libqurtkernel_main.a:vectors.o(.data.tcm.ukernel.main)
+    *libqurtkernel_island.a:safe_wrapper.o(.data.tcm.ukernel.island)

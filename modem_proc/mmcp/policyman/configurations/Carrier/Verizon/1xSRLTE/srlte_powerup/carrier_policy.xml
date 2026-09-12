@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier policy file for SRLTE with CHGWL roaming
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/Verizon/1xSRLTE/srlte_powerup/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "85.1.9"
+>
+
+  <initial>
+
+    <!-- List of the MCCs in which SRLTE is allowed. Do NOT rename this list. -->
+    <mcc_list name="sxlte_mccs"> 310 311 312 </mcc_list>
+
+    <plmn_list name="sxlte_plmns" include="hplmn ehplmn">
+      311-480 330-120
+    </plmn_list>
+
+    <define_timer name = "hybr_oos" interval = "1" units = "min" id = "101" />
+
+    <rat_capability base="none">
+      <include> C H G W L </include>
+    </rat_capability>
+
+    <feature single_sim="srlte"> dualmmode </feature>
+
+    <ue_mode_if> 1X_CSFB_PREF </ue_mode_if>
+
+    <rf_bands base="hardware" />
+
+    <boolean_define name="cm:rpm_enabled" initial="true" />
+
+    <boolean_define name="cm:pwr_up_in_srlte" initial="false" />
+    <boolean_set name="cm:pwr_up_in_srlte">
+      <not> <volte_enabled /> </not>
+    </boolean_set>
+
+  </initial>
+
+  <boolean_set name="cm:pwr_up_in_srlte">
+    <not> <volte_enabled /> </not>
+  </boolean_set>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <svc_mode> FULL </svc_mode>
+
+  <if>
+    <any_of>
+      <all_of>
+        <network_selection_mode> AUTOMATIC </network_selection_mode>
+        <serving_plmn_in list="sxlte_plmns" />
+      </all_of>
+      <location_mcc_in list="sxlte_mccs" />
+    </any_of>
+    <then> <ue_mode> 1X_CSFB_PREF </ue_mode> </then>
+    <else> <ue_mode> CSFB </ue_mode> </else>
+  </if>
+
+</policy>

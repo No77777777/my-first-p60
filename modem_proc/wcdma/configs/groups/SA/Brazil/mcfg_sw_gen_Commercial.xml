@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1"/>
+<NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="WCDMA RX Diversity Control" id="3851" description="Controls WCDMA Receive Diversity settings" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_rx_diversity_ctrl" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+	</NvItemData>
+	<NvItemData name="Sparse AGC Power Control" id="4118" description="HSDPA category" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hsdpa_cat" description="HSDPA category" comment="" sizeOf="1" type="uint8">24 </Member>
+	</NvItemData>
+	<NvEfsItemData name="w_idle_mode_opt" id="69733" description="WCDMA_Idle_mode_optimizations" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/idle/w_idle_mode_opt">
+		<Member name="version" description="NV version" comment="" sizeOf="1" type="uint8">5 </Member>
+		<Member name="Parallel_Reacq_Disabled" description="WCDMA_Idle_mode_optimizations" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="Offline_PICH_Disabled" description="Offline_PICH (Enable/Disable)" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="Neighbor_srch_opt_Disabled" description="Neighbor_Search_Opt (Enable/Disable)" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="Offline_FullSrch_Disabled" description="Offline_FullSearch (Enable/Disable)" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="Inter_freq_offfline_pn_disabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="RF_Wakeup_Opt_On" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="Reacq_Less_Pich_disabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="Panic_Srch_Opts_Disabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint32"> </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wcdma_cir_enh" id="73503" description="WCDMA CIR enhancement NV" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/cme/wcdma_cir_enh">
+		<Member name="cirInterpEnable" description="WCDMA CIR enhancement NV" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="oneTapCirAlpha" description="CIR filter coefficients" comment="" sizeOf="1" type="int8">255 </Member>
+		<Member name="enableDopplerEstimation" description="Force Doppler estimation ON/OFF" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="doppler" description="CIR filter coefficients" comment="" sizeOf="1" type="uint16">30 </Member>
+		<Member name="cirCleanThresh" description="" comment="" sizeOf="1" type="uint8"> </Member>
+		<Member name="sigmaScale" description="Force Doppler estimation ON/OFF" comment="" sizeOf="1" type="int16">65535 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wl1_qta_rota" id="72562" description="NV item to allow TX during ROTA" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/l1/wl1_qta_rota">
+		<Member name="wcdma_qta_rota" description="" comment="" sizeOf="1" type="uint8">5 </Member>
+	</NvEfsItemData>
+<NvItemData name="WCDMA Equalizer Control" id="3852" description="WCDMA Equalizer on/off, Rake/Eq/best selection demod control" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_equalizer_ctrl" description="" comment="" sizeOf="1" type="uint8">51 </Member>
+	</NvItemData>
+	<NvItemData name="WCDMA RRC Version" id="3649" description="Describes the RRC spec version" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_rrc_version" description="" comment="" sizeOf="1" type="uint8">4 </Member>
+	</NvItemData>
+	<NvItemData name="1xEV Reverse Activity Bits Information" id="4210" description="Describes the hsupa category supported in UE (limited by h/w support)" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_hsupa_category" description="Describes the hsupa category supported in UE (limited by h/w support)" comment="" sizeOf="1" type="uint8">6 </Member>
+	</NvItemData>
+<NvItemData name="WCDMA CS Voice Over HSPA Enabled" id="6878" description="Indicates whether CSoHSPA is enabled or not" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_cs_voice_over_hspa_enabled" description="Indicates whether CSoHSPA is enabled or not" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	</NvData>

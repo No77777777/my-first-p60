@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="NULL">
+
+  <device name="/core/hwengines/bam">
+  <props name="bam_tgt_config" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+         bam_tgt_config
+  </props>
+  </device>
+</driver>
+
+

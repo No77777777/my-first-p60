@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR3925_ROW_DLCA_QPA6560_LTE_B4_RX1.xml -->
+	<NvItem id="20128" name="RFNV_LTE_B4_C1_LNA_RANGE_RISE_FALL_I" mapping="direct" encoding="dec">-660,-700,-540,-580,-340,-380,-220,-260,-140,-180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="27530" name="RFNV_LTE_B4_INTRA_CA_C1_LNA_RANGE_RISE_FALL_I" mapping="direct" encoding="dec">-680,-720,-540,-580,-340,-380,-220,-260,-140,-180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+</NvSource>

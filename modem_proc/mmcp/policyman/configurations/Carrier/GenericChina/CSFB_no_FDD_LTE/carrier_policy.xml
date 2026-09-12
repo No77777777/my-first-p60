@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier Policy for CSFB configuration with no LTE FDD bands
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/GenericChina/CSFB_no_FDD_LTE/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "15.2.9"
+>
+
+  <initial>
+
+    <mcc_list name="no_fdd_mccs">
+      460
+    </mcc_list>
+
+    <rf_band_list name="no_fdd_lte">
+      <gw_bands base="hardware" />
+      <!-- LTE Band: 38, 39, 40, 41, 42, 43 are mapped to Band Bits: 37, 38, 39, 40, 41, 42
+                    respectively.
+                    Refer: sys_sband_lte_e_type in sys.h
+      -->
+      <lte_bands base="none" >
+        <include> 37 38 39 40 41 42 </include>
+      </lte_bands> 
+      <tds_bands base="hardware" />
+    </rf_band_list>
+
+    <rat_capability base="none">
+      <include> G W L T </include>
+    </rat_capability>
+
+    <rf_bands_if list="no_fdd_lte" />
+
+    <feature single_sim="srlte"> dualmmode </feature>
+
+  </initial>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <if>
+    <location_mcc_in list="no_fdd_mccs" />
+    <then>
+      <rf_bands list="no_fdd_lte" />
+    </then>
+    <else>
+      <rf_bands base="hardware" />
+    </else>
+  </if>
+
+</policy>

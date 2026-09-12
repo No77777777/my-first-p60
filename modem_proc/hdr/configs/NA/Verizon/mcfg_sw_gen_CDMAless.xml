@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="hdr.0.0" type="1"/>
+<NvItemData name="1xEV Receive ATI List" id="4231" description="Changeable NV item used for enabling test features in HDR L1 SW" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hdrsrch_dbg_msk" description="The debug mask used for the HDR searcher" comment="" sizeOf="1" type="uint64">0 </Member>
+		<Member name="hdrmac_dbg_msk" description="The debug mask used for HDR MAC" comment="" sizeOf="1" type="uint64">1 </Member>
+	</NvItemData>
+	</NvData>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 7+5 mode Device configuration file for CMCC subsidized devices
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/DevConfig/7+5_mode/1x+L/device_config.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "2029.1.13"
+>
+
+  <initial>
+
+    <device_configuration num_sims="2" max_active_voice="1" max_active_data="1">
+      <config primary="C H G W L T" secondary="G W" />
+      <config primary="C H G W" secondary="G W L T" />
+      <config primary="G W" secondary="C H G W L T" />
+      <config primary="G W L T" secondary="C H G W" />
+      <e911_config primary="C H G W L T" secondary="G W" />
+      <e911_config primary="G W" secondary="C H G W L T" />
+    </device_configuration>
+
+    <plmn_list name= "cmcc_imsi" ns="global">
+      460-00 460-02 460-04 460-07 460-08
+    </plmn_list>
+
+    <mcc_list name="ct_mccs" ns="global">
+      455 460
+    </mcc_list>
+
+    <boolean_define name="cm:reject_dds_change" ns="global" initial="false" />
+    <boolean_define name="cm:reject_1xdata" ns="global" initial="true" />
+    <boolean_define name="cm:start_ps_sub" ns="global" initial="false" />
+
+  </initial>
+
+  <boolean_set name="cm:reject_1xdata">
+    <any_of>
+      <imsi_plmn_in subs="this" list="cmcc_imsi" />
+      <imsi_plmn_in subs="other" list="cmcc_imsi" />
+    </any_of>
+  </boolean_set>
+
+  <boolean_set name="cm:reject_dds_change">
+    <any_of>
+
+      <all_of>
+        <is_subs_dds subs="this" />
+        <imsi_plmn_in subs="this" list="cmcc_imsi" />
+        <imsi_mcc_in subs="other" session="1x" list="ct_mccs" />
+      </all_of>
+
+      <all_of>
+        <is_subs_dds subs="other" />
+        <imsi_plmn_in subs="other" list="cmcc_imsi" />
+        <imsi_mcc_in subs="this" session="1x" list="ct_mccs" />
+      </all_of>
+
+    </any_of>
+  </boolean_set>
+
+  <boolean_set name="cm:start_ps_sub">
+    <any_of>
+      <imsi_plmn_in subs="this" list="cmcc_imsi" />
+      <imsi_plmn_in subs="other" list="cmcc_imsi" />
+    </any_of>
+  </boolean_set>
+
+  <select>
+
+    <case>
+      <all_of>
+        <imsi_plmn_in subs="this" list="cmcc_imsi" />
+        <not> <imsi_plmn_in subs="other" list="cmcc_imsi" /> </not>
+      </all_of>
+      <then>
+        <select_config index="3" />
+      </then>
+    </case>
+
+    <case>
+      <all_of>
+        <not> <imsi_plmn_in subs="this" list="cmcc_imsi" /> </not>
+        <imsi_plmn_in subs="other" list="cmcc_imsi" />
+      </all_of>
+      <then>
+        <select_config index="1" />
+      </then>
+    </case>
+
+    <case>
+      <true />
+      <then>
+        <select_config index="-1" />
+      </then>
+    </case>
+  </select>
+
+</policy>

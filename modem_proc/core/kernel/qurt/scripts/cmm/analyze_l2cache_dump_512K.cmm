@@ -1,0 +1,171 @@
+;=============================================================================
+;
+;                                    analyze_l2cache_dump_512K.cmm
+;
+; GENERAL DESCRIPTION
+;
+; EXTERNAL FUNCTIONS
+;        None.
+;
+; INITIALIZATION AND SEQUENCING REQUIREMENTS
+;        None.
+;
+;             Copyright (c) 2013  by Qualcomm Technologies, Inc.  All Rights Reserved.
+;=============================================================================
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; 
+; 
+; This script formats and dumps L2 cache as well as the 
+; physical memory contents. 
+; This script is to parse L2 dumps with the following configuration:
+; - Hexagon v61 arch L2 cache
+; - 1MB TCM (lower address range)
+; - 512KB L2 cache (upper address range)
+; - The L2 tag information is collected using L2tagr instruction
+; - There are 1024 sets, 8 ways and each way is 64 bytes
+; - L2 cache is disabled before collecting the dumps
+;
+; Usage:
+; do analyze_l2cache_dump_512K.cmm <output_dir>
+; 
+; Output:
+; <output_dir>/l2cache_dump.txt: L2 contents at runtime
+; <output_dir>/l2cache_mem.txt: Memory contents for the corresponding addresses
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+LOCAL &dump_dir
+ENTRY &dump_dir
+
+IF ("&dump_dir"=="")
+(
+  print %ERROR "Must specify dump directory"
+  ENDDO
+)
+
+IF (!Y.EXIST(QURTK_l2tcm_tag))
+(
+  print %ERROR "l2 cache dump not found - exiting"
+  ENDDO
+)
+
+; d.save.binary &dump_dir/QURTK_l2tcm_tag.bin y.range(QURTK_l2tcm_tag)
+; d.save.binary &dump_dir/QURTK_l2tcm_data.bin y.range(QURTK_l2tcm_data)
+
+LOCAL &num_sets &num_ways
+&num_ways_addr=v.value(&QURTK_l2cache_dumpways)
+&num_sets_addr=v.value(&QURTK_l2cache_dumpsets)
+&num_ways=data.long(D:&num_ways_addr)
+&num_sets=data.long(D:&num_sets_addr)
+
+LOCAL &dumpfile &memfile
+&dumpfile="&dump_dir/l2cache_dump.txt"
+&memfile="&dump_dir/l2cache_mem.txt"
+OPEN #1 &dumpfile /Create
+OPEN #2 &memfile /Create
+
+LOCAL &set
+&set_loop=0
+WHILE (&set_loop<&num_sets)
+(
+  &set=&num_sets-1.-&set_loop
+  LOCAL &way
+  &way_loop=0.
+  
+  WHILE (&way_loop<&num_ways)
+  (
+    &way=&num_ways-1.-&way_loop
+    &tag_index=((&set*&num_ways)+&way)*4.
+    &QURTK_l2tcm_tag_addr=v.value(&QURTK_l2tcm_tag)
+    &tag_addr=data.long(D:&QURTK_l2tcm_tag_addr)
+    &tag_addr=&tag_addr+&tag_index
+    &tag=data.long(D:&tag_addr)
+    print "set " &set " way " &way " tag_addr: " &tag_addr " &tag " &tag
+    LOCAL &addr
+    ; Rs is the input to l2tagr & Rd is the output of l2tagr
+    ; PA[35:15 ]= Rd[28:8]
+    ; PA[14:6] = Rs [16:8]
+    ; PA[5:0] = 000000
+    ; for V66H, L2 is 2048MB, which makes set size to 12bits. 17:6 is the set; 28:10 in Rd is bit 35:17 in addr(28:10 in tag val).
+    ; 28:8: 0x1fffff00 
+    ; 14:6: 9bits set 512 512*8*64 256Kb  1024<1536<2048KB:  1536*1024/8/64=3072 : 4096 -> 2^12(17:6)
+    ;&addr=((&tag)&(0x1FFFFC00))*128.+(((&set))*64.)
+    &addr=(((&tag)&(0x1FFFFE00))<<7.)+((&set&0x3ff)<<6.)
+
+    ;LOCAL &valid
+    ;&valid=((&tag)&(0x2))/2.
+    LOCAL &valid_upper
+    LOCAL &valid_lower
+    ; Indicates whether the lower 32 bytes are valid
+    &valid_lower=((&tag)&(32.))/32.
+    ; Indicates whether the upper 32 bytes are valid
+    &valid_upper=((&tag)&(64.))/64.
+
+    WRITE #1 %CONT format.decimal(3.,&set) ":" format.decimal(1.,&way) " " format.hex(8.,&tag) " " format.hex(9.,&addr)
+    WRITE #2 %CONT format.decimal(3.,&set) ":" format.decimal(1.,&way) " " format.hex(8.,&tag) " " format.hex(9.,&addr)
+
+    
+    LOCAL &i
+    LOCAL &data_array_offset
+    ; The data corresponding to the addr found above, is calculated below
+    ; Offset[20] = 1
+    ; Offset[19] = 0
+    ; Offset[18] = PA[15] 
+    ; Offset[17:15] = way (3 bits)
+    ; Offset[14:8] = PA[14:8] = Rs[16:10]
+    ; Offset[7:6] = PA[7:6] = Rs[9:8]
+    ; offset[6:0] = PA[6:0] 
+    ; We need to add the offset calulated above and then subtract 1MB
+    ; The subtraction is done as L2 cache was disabled during L2 dump collection.
+    ; This would mean that the whole 1.5MB was configured as TCM at the time
+    ; time of dump collection. If L2 was enabled, then there wouldn't be a 
+    ; a need to subtract 1MB after adding the offset.
+    &data_array_offset=(((&addr&0x7FC0)>>2.)|(&way<<13.)|(0x10000))<<2.
+    ;&data_array_offset=(((&addr)&(0xFFC7))|((&way)*(0x10000)))<<2.
+    ;print "addr " &addr " data_array_offset " &data_array_offset 
+      
+    IF (&valid_lower!=0)
+    (
+      &i=0.
+      WHILE (&i<8.)
+      (      
+        &data_addr=v.value(&QURTK_l2tcm_data)+&data_array_offset
+        ;print "data_addr " &data_addr
+        &data_val=data.long(D:&data_addr)
+        WRITE #1 %CONT " " format.hex(8.,&data_val)
+        WRITE #2 %CONT " " format.hex(8.,d.long(A:(&addr+&i*4.)))
+        &data_array_offset=&data_array_offset+4.        
+        &i=&i+1.
+      )
+    )
+    IF (&valid_upper!=0)
+    (
+      &i=8.
+      WHILE (&i<16.)
+      (      
+        &data_addr=v.value(&QURTK_l2tcm_data)+&data_array_offset
+        ;print "data_val " &data_val
+        &data_val=data.long(D:&data_addr)
+        WRITE #1 %CONT " " format.hex(8.,&data_val)
+        WRITE #2 %CONT " " format.hex(8.,d.long(A:(&addr+&i*4.)))
+        &data_array_offset=&data_array_offset+4.
+        &i=&i+1.
+      )
+    )
+
+    WRITE #1 ""
+    WRITE #2 ""
+
+    &way_loop=&way_loop+1.
+  )
+
+  &set_loop=&set_loop+1.
+)
+
+CLOSE #1
+CLOSE #2
+
+PRINT "Output saved to &dumpfile and &memfile"
+
+WAIT 1.s

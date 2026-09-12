@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1"/>
+<NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvEfsItemData name="wcdma_rrc_feature" id="65693" description="To enable/disable RRC feature" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_feature">
+		<Member name="WCDMA_RRC_FEATURE" description="" comment="" sizeOf="1" type="uint16">29 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wcdma_rrc_wtol_cm_support" id="67256" description="to enable  or disable the wtol CM code support." comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_wtol_cm_support">
+		<Member name="WCDMA_RRC_W2L_CM_SUPPORT" description="to enable  or disable the wtol CM code support." comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	</NvData>

@@ -1,0 +1,448 @@
+;=============================================================================
+;
+;                          QCCI DUMP
+;
+;  ---------------------------------------------------------------------------
+;  Copyright (c) 2021 Qualcomm Technologies, Inc.  
+;  All Rights Reserved.
+;  Qualcomm Technologies Proprietary and Confidential.
+;  ---------------------------------------------------------------------------
+;=============================================================================
+
+;=============================================================================
+;                         EDIT HISTORY FOR MODULE
+; 
+;  $Header: //source/qcom/qct/core/mproc/qmi/tools/qcci_script.cmm
+; 
+;  when       who     what, where, why
+;  --------   ---     ------------------------------------------------------
+; 
+;=============================================================================
+
+;=============================================================================
+; Constants
+;=============================================================================
+
+&VERSION="qcci_dump.cmm, Version 1.0"
+&QCCI_TBL_SIZE=0x10
+
+; Default, print to QCCI Area
+&OUTPUT_PATH=""
+
+; Default refrain from dumping the transactions
+&TXN_DUMP=0x0
+
+; Default print clients to all service
+&SEARCH_SVC=0x0
+
+; ============================================================================
+;
+; Function MAIN
+;
+; Description: MAIN()
+;
+; ============================================================================
+ENTRY &SEARCH_SVC_STR &TXN_DUMP_STR &OUTPUT_PATH
+
+MAIN:
+  gosub INITLOGAREA
+
+  if ("&SEARCH_SVC_STR"!="")
+  (
+    if ("&SEARCH_SVC_STR"=="ALL"||"&SEARCH_SVC_STR"=="all")
+    (
+      &SEARCH_SVC=0x0
+    )
+    else
+    (
+      if ("&SEARCH_SVC_STR"=="HELP"||"&SEARCH_SVC_STR"=="help")
+      (
+        gosub HELP
+        ENDDO
+      )
+      &SEARCH_SVC=&SEARCH_SVC_STR
+    )
+  )
+
+  if ("&TXN_DUMP_STR"!="")
+  (
+    if ("&TXN_DUMP_STR"=="0x0"||"&TXN_DUMP_STR"=="1")
+    (
+      &TXN_DUMP=0x1
+    )
+    
+    &TXN_DUMP=&TXN_DUMP_STR
+  )
+
+  if ("&OUTPUT_PATH"!="")
+  (
+    OPEN  #4 "&OUTPUT_PATH" /CREATE
+    CLOSE #4
+    OPEN  #4 "&OUTPUT_PATH" /WRITE
+    GOSUB PRINT_LINE "Output File: &OUTPUT_PATH"
+  )
+  
+  GOSUB PRINT_LINE "Running script qcci_dump.cmm SEARCH_SVC=&SEARCH_SVC TXN_DUMP_STR=&TXN_DUMP_STR OUTPUT_PATH=&OUTPUT_PATH"
+  GOSUB PRINT_LINE "CLIENT PTR can be type casted to (qmi_cci_client_type *)"
+  GOSUB PRINT_LINE ""
+  
+
+  symbol.foreach "gosub PARSE_QCCI_CLIENT_TBL * " qcci_client_tbl
+  
+  GOSUB PRINT_LINE "---------------------------------------"
+  GOSUB PRINT_LINE "    QCCI Report Generation Complete"
+  GOSUB PRINT_LINE "---------------------------------------"
+
+ENDDO
+; ============================================================================
+
+; ============================================================================
+;
+; Function HELP
+;
+; Description: Print out help message
+;
+; ============================================================================
+
+HELP:
+  GOSUB PRINT_LINE "*********************************************************************"
+  GOSUB PRINT_LINE "*          &VERSION"
+  GOSUB PRINT_LINE "*********************************************************************"
+  GOSUB PRINT_LINE "* Script Usage: "
+  GOSUB PRINT_LINE "*   do qcci_dump.cmm [service_id] [dump_txn_list] [output_file]"
+  GOSUB PRINT_LINE "*  OPTION service_id:"
+  GOSUB PRINT_LINE "*       all - print all services  (Default)"
+  GOSUB PRINT_LINE "*       or specific service ID (See example)"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "*  OPTION dump_txn_list:"
+  GOSUB PRINT_LINE "*         0 - Do not dump the transaction list (Default)"
+  GOSUB PRINT_LINE "*         1 - Dump the transaction list"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "*  OPTION output_file:"
+  GOSUB PRINT_LINE "*         Default: Print to screen"
+  GOSUB PRINT_LINE "*         Privided file: Print to file"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "* Example:"
+  GOSUB PRINT_LINE "*   do qcci_dump 0xf 1"
+  GOSUB PRINT_LINE "*   do qcci_dump all 0 C:\Dropbox\qcci_client_tbl.txt"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "* PTR pointer can inspected as (qmi_cci_client_type *)PTR"
+  GOSUB PRINT_LINE "*"
+  GOSUB PRINT_LINE "*********************************************************************"
+RETURN
+; ============================================================================
+; End of HELP()
+; ============================================================================
+
+
+; ============================================================================
+;
+; Function INITLOGAREA
+;
+; Description: Init message output window and output some help message
+;
+; ============================================================================
+
+INITLOGAREA:
+
+ Area.Create QCCI 500 120
+ Area.Select QCCI
+ Area.Clear  QCCI
+ Area QCCI
+
+RETURN
+; ============================================================================
+; End of INITLOGAREA()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PARSE_QCCI_CLIENT_TBL
+;
+; Description: Parse QCCI Clients
+;
+; ============================================================================
+PARSE_QCCI_CLIENT_TBL:
+  ENTRY &sym
+
+  GOSUB PRINT_LINE "SYMBOL=&sym"
+  GOSUB PRINT_LINE ""
+
+  if (y.exist(&sym))
+  (
+    &idx=0
+    while (&idx<&QCCI_TBL_SIZE)
+    (
+      &client=v.value(&sym[&idx].head)
+      while (&client!=0x0)
+      (
+        ; TODO Add support to QCCI before notify_cb was added.
+        ; We would need to check another value perhaps.
+        &client_info_size=v.value(sizeof(((qmi_cci_client_type *)0x0)->info))
+        if (&client_info_size>0xC)
+        (
+          GOSUB PARSE_NEW_CLIENT &client 
+        )
+        else
+        (
+          GOSUB PARSE_CLIENT &client
+        )
+        &client=v.value(((qmi_cci_client_type *)&client)->priv.link.next)
+      )
+      &idx=&idx+1
+    )
+  )
+  else
+  (
+    GOSUB PRINT_LINE "Could not find &sym!"
+  )
+
+  GOSUB PRINT_LINE ""
+  
+RETURN
+; ============================================================================
+; End of PARSE_QCCI_CLIENT_TBL()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PARSE_NEW_CLIENT
+;
+; Description: Parse a client entry
+;
+; ============================================================================
+PARSE_NEW_CLIENT:
+  ENTRY &client
+
+  &handle=v.value(((qmi_cci_client_type *)&client)->priv.clid)
+  &svc_obj=v.value(((qmi_cci_client_type *)&client)->service_obj)
+  &svc_id=v.value(((qmi_idl_service_object_type)&svc_obj)->service_id)
+  &category=v.value(((qmi_cci_client_type *)&client)->category)
+
+  if (&SEARCH_SVC!=0x0)
+  (
+    if (&svc_id!=&SEARCH_SVC)
+    (
+      RETURN
+    )
+  )
+
+  &txn_list_count=0x0
+  &tx_list_count=0x0
+  &tot_txns=0x0
+  &addr_str=""
+  if (&category==0x2)
+  (
+    &addr_ptr=v.value(((qmi_cci_client_type *)&client)->info.client.server_addr)
+    &addr_len=v.value(((qmi_cci_client_type *)&client)->xport.head->addr_len)
+    &addr1=v.value(((uint32_t *)&addr_ptr)[0])
+    &addr2=v.value(((uint32_t *)&addr_ptr)[1])
+    &addr3=v.value(((uint32_t *)&addr_ptr)[2])
+    &addr4=v.value(((uint32_t *)&addr_ptr)[3])
+    &addr_str="&addr1"
+    if (&addr_len>4)
+    (
+      &addr_str="&addr_str.&addr2"
+    )
+    if (&addr_len>8)
+    (
+      &addr_str="&addr_str.&addr3"
+    )
+    if (&addr_len>12)
+    (
+      &addr_str="&addr_str.&addr4"
+    )
+    &txn_list_count=v.value(((qmi_cci_client_type *)&client)->info.client.txn_list.count)
+    &tx_list_count=v.value(((qmi_cci_client_type *)&client)->info.client.tx_q.count)
+    &tot_txns=v.value(((qmi_cci_client_type *)&client)->info.client.next_txn_id)-1
+    &addr_str="<&addr_str>"
+    GOSUB PRINT_LINE "PTR=&client, TYPE=CONNECTED_CLIENT, SVC_ID=&svc_id, HANDLE=&handle, SVC_ADDR=&addr_str, TOTAL_TXNS=&tot_txns, TOTAL_PENDING_TXNS=&txn_list_count, TOTAL_TX_PENDING_TXNS=&tx_list_count"
+    if (&TXN_DUMP!=0x0)
+    (
+      &txn=v.value(((qmi_cci_client_type *)&client)->info.client.txn_list.head)
+      while (&txn!=0x0)
+      (
+        GOSUB PARSE_TXN &txn
+        &txn=v.value(((qmi_cci_txn_type *)&txn)->link.next)
+      )
+    )
+  )
+  else
+  (
+    if (&category==0x1)
+    (
+      GOSUB PRINT_LINE "PTR=&client, TYPE=DORMANT_CLIENT, SVC_ID=&svc_id, HANDLE=&handle"
+    )
+    else
+    (
+      &notify_cb=v.value(((qmi_cci_client_type *)&client)->info.notifier.notify_cb)
+      &ext_signal=v.value(((qmi_cci_client_type *)&client)->info.notifier.ext_signal)
+      GOSUB PRINT_LINE "PTR=&client, TYPE=NOTIFIER_CLIENT, SVC_ID=&svc_id, HANDLE=&handle NOTIFY_CB=&notify_cb EXT_SIGNAL=&ext_signal"
+    )
+  )
+RETURN
+; ============================================================================
+; End of PARSE_CLIENT()
+; ============================================================================
+
+
+
+; ============================================================================
+;
+; Function PARSE_CLIENT
+;
+; Description: Parse a client entry
+;
+; ============================================================================
+PARSE_CLIENT:
+  ENTRY &client
+
+  &handle=v.value(((qmi_cci_client_type *)&client)->priv.clid)
+  &svc_obj=v.value(((qmi_cci_client_type *)&client)->service_obj)
+  &svc_id=v.value(((qmi_idl_service_object_type)&svc_obj)->service_id)
+  &ext_sig=v.value(((qmi_cci_client_type *)&client)->ext_signal)
+
+  if (&SEARCH_SVC!=0x0)
+  (
+    if (&svc_id!=&SEARCH_SVC)
+    (
+      RETURN
+    )
+  )
+
+  &type="NOTIFIER"
+  &txn_list_count=0x0
+  &tx_list_count=0x0
+  &tot_txns=0x0
+  &addr_str=""
+  if (&ext_sig==0x0)
+  (
+    &type="CONNECTED_CLIENT"
+    &server_addr_valid=v.value(((qmi_cci_client_type *)&client)->server_addr_valid)
+    if (&server_addr_valid!=0x0)
+    (
+      &addr_ptr=v.value(((qmi_cci_client_type *)&client)->server_addr)
+
+      &xp_size=v.value(sizeof(((qmi_cci_client_type *)&client)->xport))
+      &list_size=v.value(sizeof(((qmi_cci_client_type *)&client)->txn_list))
+      &addr_len=0x0
+      if (&xp_size>&list_size)
+      (
+        ; Old client structure with xport as an array
+        &addr_len=v.value(((qmi_cci_client_type *)&client)->xport->addr_len)
+      )
+      else
+      (
+        ; New client structure with xport as a list
+        &addr_len=v.value(((qmi_cci_client_type *)&client)->xport.head->addr_len)
+      )
+      &addr1=v.value(((uint32_t *)&addr_ptr)[0])
+      &addr2=v.value(((uint32_t *)&addr_ptr)[1])
+      &addr3=v.value(((uint32_t *)&addr_ptr)[2])
+      &addr4=v.value(((uint32_t *)&addr_ptr)[3])
+      &addr_str="&addr1"
+      if (&addr_len>4)
+      (
+        &addr_str="&addr_str.&addr2"
+      )
+      if (&addr_len>8)
+      (
+        &addr_str="&addr_str.&addr3"
+      )
+      if (&addr_len>12)
+      (
+        &addr_str="&addr_str.&addr4"
+      )
+      &txn_list_count=v.value(((qmi_cci_client_type *)&client)->txn_list.count)
+      &tx_list_count=v.value(((qmi_cci_client_type *)&client)->tx_q.count)
+      &tot_txns=v.value(((qmi_cci_client_type *)&client)->next_txn_id)-1
+
+      &addr_str="<&addr_str>"
+      GOSUB PRINT_LINE "PTR=&client, TYPE=CONNECTED_CLIENT, SVC_ID=&svc_id, HANDLE=&handle, SVC_ADDR=&addr_str, TOTAL_TXNS=&tot_txns, TOTAL_PENDING_TXNS=&txn_list_count, TOTAL_TX_PENDING_TXNS=&tx_list_count"
+      if (&TXN_DUMP!=0x0)
+      (
+        &txn=v.value(((qmi_cci_client_type *)&client)->txn_list.head)
+        while (&txn!=0x0)
+        (
+          GOSUB PARSE_TXN &txn
+          &txn=v.value(((qmi_cci_txn_type *)&txn)->link.next)
+        )
+      )
+    )
+    else
+    (
+      GOSUB PRINT_LINE "PTR=&client, TYPE=DORMANT_CLIENT, SVC_ID=&svc_id, HANDLE=&handle"
+    )
+  )
+  else
+  (
+    GOSUB PRINT_LINE "PTR=&client, TYPE=NOTIFIER_CLIENT, SVC_ID=&svc_id, HANDLE=&handle"
+  )
+  
+RETURN
+; ============================================================================
+; End of PARSE_CLIENT()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PARSE_TXN
+;
+; Description: Parse a pending transaction of a client
+;
+; ============================================================================
+PARSE_TXN:
+  ENTRY &txn
+
+  &txn_id=v.value(((qmi_cci_txn_type *)&txn)->txn_id)
+  &msg_id=v.value(((qmi_cci_txn_type *)&txn)->msg_id)
+  &type=v.value(((qmi_cci_txn_type *)&txn)->type)
+  &type_str="UNKNOWN"
+  ; OLD: sync_msg,sync_raw,async_msg,async_raw = 0,1,2,3
+  ; NEW: sync,async=1,2 msg,raw=4,8 => sync_msg,sync_raw,async_msg,async_raw = 5,9,6,a
+  if (&type==0x0||&type==0x5)
+  (
+    &type_str="SYNC_MSG" 
+  )
+  if (&type==0x1||&type==0x9)
+  (
+    &type_str="SYNC_RAW"
+  )
+  if (&type==0x2||&type==0x6)
+  (
+    &type_str="ASYNC_MSG"
+  )
+  if (&type==0x3||&type==0xa)
+  (
+    &type_str="ASYNC_RAW" 
+  )
+  GOSUB PRINT_LINE "    PTR=&txn ID=&txn_id, MSG=&msg_id, TYPE=&type_str"
+  
+RETURN
+; ============================================================================
+; End of PARSE_TXN()
+; ============================================================================
+
+; ============================================================================
+;
+; Function PRINT_LINE
+;
+; Description: Prints the provided line
+;
+; ============================================================================
+PRINT_LINE:
+  ENTRY &line
+  if ("&OUTPUT_PATH"=="")
+  (
+    print &line
+  )
+  else
+  (
+    WRITE #4 &line
+  )
+  
+RETURN
+; ============================================================================
+; End of PRINT_LINE()
+; ============================================================================
+

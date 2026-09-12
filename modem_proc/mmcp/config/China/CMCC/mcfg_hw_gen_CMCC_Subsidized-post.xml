@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="mmcp.0.0" type="1"/>
+<NvItemData name="Dual Standby Config Items" id="6876" description="Dual Standby Preferences" comment="" category="System" mcfgAttributes="0x09" mcfgVariant="1">
+		<Member name="dedicated_voice_subs" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="dedicated_data_subs" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="active_subs" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="priority_subs" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="dual_standby_pref" description="" comment="" sizeOf="1" type="uint8">5 </Member>
+	</NvItemData>
+	<NvEfsItemData name="3417_ext_mt_enabled" id="" description="" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/3417_ext_mt_enabled">
+		<Member name="3417_ext_mt_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="scan_scope_rule" id="73502" description="Scope of ACQ DB Scan" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/scan_scope_rule">
+		<Member name="scan_scope_rule" description="Scope of ACQ DB Scan" comment="" sizeOf="1" type="uint8">62 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="device_mode" id="70266" description="Indicate whether the device mode is single sim, dual sim, etc" comment="" category="MMode" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/device_mode">
+		<Member name="device_mode" description="Indicate whether the device mode is single sim, dual sim, etc" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="device_config.xml" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/policyman/device_config.xml" buildPath="modem_proc/mmcp/policyman/configurations/DevConfig/7+7_mode/L+L/device_config.xml"/>
+	<NvEfsFile name="post.xml" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/policyman/post.xml" buildPath="modem_proc/mmcp/policyman/configurations/Carrier/OpenMarket/7+5_mode/CMCC/post/post.xml"/>
+	</NvData>

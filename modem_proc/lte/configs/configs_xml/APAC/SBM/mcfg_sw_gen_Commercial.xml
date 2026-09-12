@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="lte.0.0" type="1"/>
+    <NvEfsItemData name="Enable R12 SSAC in L-RRC Connected mode" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/lte/rrc/cep/r12_ssac_in_conn">
+        <Member name="Enable R12 SSAC in L-RRC Connected mode" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    </NvEfsItemData>
+    <NvEfsFile name="neigh_cell_si_acq_feature" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/cap/neigh_cell_si_acq_feature" buildPath="modem_proc/lte/configs/efs_files/sbm/neigh_cell_si_acq_feature"/>
+    <NvEfsFile name="diff_fdd_tdd_fgi_enable" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/cap/diff_fdd_tdd_fgi_enable" buildPath="modem_proc/lte/configs/efs_files/sbm/diff_fdd_tdd_fgi_enable"/>
+    <NvEfsFile name="band_priority_list" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/csp/band_priority_list" buildPath="modem_proc/lte/configs/efs_files/sbm/band_priority_list"/>
+    <NvEfsFile name="fgi" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/cap/fgi" buildPath="modem_proc/lte/configs/efs_files/sbm/fgi"/>
+    <NvEfsFile name="fgi_r10" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/cap/fgi_r10" buildPath="modem_proc/lte/configs/efs_files/sbm/fgi_r10"/>
+    <NvEfsFile name="fgi_tdd" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/cap/fgi_tdd" buildPath="modem_proc/lte/configs/efs_files/sbm/fgi_tdd"/>
+    <NvEfsFile name="fgi_tdd_rel10" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/cap/fgi_tdd_rel10" buildPath="modem_proc/lte/configs/efs_files/sbm/fgi_tdd_rel10"/>
+    <NvEfsFile name="disable_cap_ies" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/cap/disable_cap_ies" buildPath="modem_proc/lte/configs/efs_files/sbm/disable_cap_ies"/>
+    <NvEfsFile name="PC2_WHITELIST" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/lte/rrc/PC2_WHITELIST.xml" buildPath="modem_proc/lte/configs/efs_files/sbm/PC2_WHITELIST.xml"/>
+</NvData>

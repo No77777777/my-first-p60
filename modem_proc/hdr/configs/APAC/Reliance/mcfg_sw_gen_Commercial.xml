@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="hdr.0.0" type="1"/>
+<NvEfsItemData name="hdr_acq_div_enable" id="67290" description="Whether HDR acquistion diversiy is enabled" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/hdr/srch/hdr_acq_div_enable">
+		<Member name="hdr_acq_div_enable" description="Whether HDR acquistion diversiy is enabled" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="hdr_acq_div_thresh0" id="67288" description="HDR acquistion diversity threshold 0" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/hdr/srch/hdr_acq_div_thresh0" buildPath="modem_proc/hdr/configs/efs_files/rel/hdr_acq_div_thresh0"/>
+	<NvEfsItemData name="hdr_dtx_cfg" id="70349" description="NV to enable and disable sDTX, lDTX,nDTX,etc." comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/hdr/mac/hdr_dtx_cfg">
+		<Member name="hdr_dtx_cfg" description="NV to enable and disable sDTX, lDTX,nDTX,etc." comment="" sizeOf="1" type="uint16">0 </Member>
+	</NvEfsItemData>
+  <NvEfsFile name="hdr_acq_div_thresh1" id="67289" description="HDR acquistion diversity threshold 1" comment="" category="HDR" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/hdr/srch/hdr_acq_div_thresh1" buildPath="modem_proc/hdr/configs/efs_files/rel/hdr_acq_div_thresh1"/>
+	</NvData>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="1.0">
+	<NvConfigurationData carrierIndex="0" version="" type="1"/>
+    <NvEfsItemData name="ims_sip_config" id="73834" description="IMS SIP Configuration Parameter" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/ims_sip_config">
+        <Member name="version" description="" comment="" sizeOf="1" type="uint8">0</Member>
+        <Member name="Timer_T1" description="SIP timer T1" comment="" sizeOf="1" type="uint32">2000</Member>
+        <Member name="Timer_T2" description="SIP timer T2" comment="" sizeOf="1" type="uint32">16000</Member>
+        <Member name="Timer_T4" description="SIP timer T4" comment="" sizeOf="1" type="uint32">17000</Member>
+        <Member name="Timer_TA" description="INVITE request retransmit interval, for UDP Only" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_TB" description="INVITE transaction timeout timer" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_TC" description="Proxy invite transaction timeout" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_TD" description="wait time for sip response retransmits" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_TE" description="Non-INVITE request retransmit interval, for UDP Only" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_TF" description="Non invite transaction timeout timer" comment="" sizeOf="1" type="uint32">0</Member>
+        <Member name="Timer_TG" description="INVITE response retransmit interval" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_TH" description="Wait Time for ACK receipt" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_TI" description="Wait Time for ACK retransmits" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_TJ" description="wait time for non-invite request retransmits" comment="" sizeOf="1" type="uint32">0</Member>
+        <Member name="Timer_TK" description="Wait time for response retransmits" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="Timer_CallSetup" description="" comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="IsKeepAliveEnabled" description="To determine if nat keepalive is enabled" comment="" sizeOf="1" type="uint8"></Member>
+        <Member name="MCCCountryCode" description="Stored MCC country code" comment="" sizeOf="10" type="string"></Member>
+        <Member name="WifiRegTimestamp" description="Wifi Registration Timestamp for PLANI" comment="" sizeOf="50" type="string"></Member>       
+        <Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="902" type="string"></Member>
+    </NvEfsItemData>
+</NvData>

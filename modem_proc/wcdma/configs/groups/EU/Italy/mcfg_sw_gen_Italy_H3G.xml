@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1" />
+  <NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvEfsItemData name="wl1_nb_rejection_nv" id="72549" description="NB rejection WL1 feature can be controlled by customer with this change" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/l1/wl1_nb_rejection_nv">
+    <Member name="enabled" description=" boolean enabled;" comment="wl1_nb_rejection_nv" sizeOf="1" type="uint8">1</Member>
+    <Member name="rotatorFreq" description="rotatorFreq" comment="rotator frequency to be programmed to RXFE_NB_CSR_FREQ_OFFSET_NB0" sizeOf="1" type="uint32">400</Member>
+    <Member name="accumBpg" description="accumBpg" comment="num of bpgs to accumulate for NBEE" sizeOf="1" type="uint8">16</Member>
+    <Member name="threshold1" description="DSDS concurrency NV" comment="threshold1 - XXX" sizeOf="1" type="int8">5</Member>
+    <Member name="threshold2" description="threshold2" comment="threshold2 - XXX" sizeOf="1" type="int8">10</Member>
+  </NvEfsItemData>
+</NvData>

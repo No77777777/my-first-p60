@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier policy XML for SBM with SRLTE roaming and excluding LTE B41 for VOLTE calls.
+ Based on SBM Requirement OTR-PLMN-200001.
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/SBM/carrier_policy.xml#1 $
+-->
+<policy name        = "SBM Subsidized"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "108.1.14"
+>
+  <initial>
+
+    <mcc_list name="pm:exclude_bands_mccs"> 440 441 </mcc_list>
+    <mcc_list name="ca_combo_mccs"> 440 441 </mcc_list>
+
+    <!--
+     SYS_SBAND_WCDMA_I_IMT_2000 = 22,
+     SYS_SBAND_WCDMA_VIII_900 = 49
+    -->
+    <rf_band_list name="rf_bands_home">
+      <gw_bands base="none">
+        <include> 22 49 </include>
+      </gw_bands>
+      <lte_bands base="none">
+        <include> 0 2 7 10 27 40 41 </include>
+        <exclude_for_volte> 41 </exclude_for_volte>
+      </lte_bands>
+      <tds_bands base="none" />
+    </rf_band_list>
+
+    <!--
+      SYS_SBAND_WCDMA_I_IMT_2000 = 22,
+      SYS_SBAND_WCDMA_II_PCS_1900 = 23,
+      SYS_SBAND_WCDMA_IV_1700 = 25,
+      SYS_SBAND_WCDMA_V_850 = 26,
+      SYS_SBAND_WCDMA_VIII_900 = 49,
+      SYS_SBAND_GSM_EGSM_900 = 8,
+      SYS_SBAND_GSM_PGSM_900 = 9,
+      SYS_SBAND_GSM_RGSM_900 = 20
+    -->
+    <rf_band_list name="rf_bands_roam">
+      <gw_bands base="none">
+        <include> 7 8 9 19 21 22 23 25 26 49 </include>
+      </gw_bands>
+      <lte_bands base="none">
+        <include> 0 1 2 3 4 6 7 11 16 24 27 37 38 39 40 41 </include>
+      </lte_bands>
+      <tds_bands base="none" />
+    </rf_band_list>
+
+    <define_fullrat_config timer_secs = "1800" scan_fail_cnt = "0">
+      <rf_bands base="hardware" />
+      <rat_capability base="none">
+        <include> G W L </include>
+      </rat_capability>
+      </define_fullrat_config>
+
+    <rat_capability_if base="none">
+      <include> L W </include>
+    </rat_capability_if>
+
+    <rf_bands_if list="rf_bands_home" />
+    <feature single_sim="normal"> dualmmode </feature>
+    <ue_mode> CSFB </ue_mode>
+
+  </initial>
+
+  <!-- Wait for online or if location is unknown  -->
+  <if>
+    <any_of>
+    <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+    <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <svc_mode> FULL </svc_mode>
+
+  <if>
+    <location_mcc_in list="ca_combo_mccs" />
+    <then>
+      <ca_band_combos string="41CA-3;41CA-2;41CA-1;41CA-0;41A-28AA-0;41A-3AA-0;41AA-3A-0;28AA-11A-0;28A-11AA-0;28AA-3A-0;28A-3AA-0;28AA-1A-1;28AA-1A-0;28A-1AA-1;28A-1AA-0;11AA-8A-0;11A-8AA-0;11AA-3A-0;11A-3AA-0;11AA-1A-0;11A-1AA-0;8AA-3A-3;8AA-3A-2;8AA-3A-1;8AA-3A-0;8A-3AA-3;8A-3AA-2;8A-3AA-1;8A-3AA-0;8AA-1A-2;8AA-1A-1;8AA-1A-0;8A-1AA-2;8A-1AA-1;8A-1AA-0;3AA-1A-0;3A-1AA-0;" />
+      <continue />
+    </then>
+    <else>
+      <ca_band_combos string="" />
+      <continue />
+    </else>
+  </if>
+
+  <!-- Determine configuration based on location -->
+  <select>
+
+    <case>
+      <location_mcc_in list="pm:exclude_bands_mccs" />
+      <actions>
+        <rf_bands list="rf_bands_home" />
+        <rat_capability base="none">
+          <include> L W </include>
+        </rat_capability>
+      </actions>
+    </case>
+
+    <case>
+      <true />
+      <actions>
+        <rf_bands list="rf_bands_roam" />
+        <rat_capability base="none">
+          <include> G W L </include>
+        </rat_capability>
+      </actions>
+    </case>
+
+  </select>
+
+</policy>

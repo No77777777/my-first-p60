@@ -1,0 +1,186 @@
+#ifndef MMGSDI_EONS_NITZ_H
+#define MMGSDI_EONS_NITZ_H
+/*===========================================================================
+
+
+                  M M G S D I   E O N S   S S   E V E N T   A N D   N I T Z
+                                      H E A D E R
+
+
+===========================================================================*/
+
+/*===========================================================================
+                        COPYRIGHT INFORMATION
+
+Copyright (c) 2013 - 2016 QUALCOMM Technologies, Inc (QTI) and its licensors.
+All Rights Reserved.  QUALCOMM Technologies Proprietary.
+Export of this technology or software
+is regulated by the U.S. Government. Diversion contrary to U.S. law prohibited.
+
+                        EDIT HISTORY FOR MODULE
+
+This section contains comments describing changes made to the module.
+Notice that changes are listed in reverse chronological order.
+
+$Header: //components/rel/uim.mpss/6.1.0/mmgsdi/src/mmgsdi_eons_nitz.h#2 $$ $DateTime: 2019/10/30 06:56:05 $
+
+when       who     what, where, why
+--------   ---     -----------------------------------------------------------
+05/24/16   bcho    EONS F3 reduction
+11/06/15   bcho    Reduction in size of rplmn_info.txt
+12/03/14   bcho    featurize support to use stored rplmn name across operators
+08/27/14   tl      Introduce network related SIM Lock slot policies
+12/19/13   yt      Support for new CM SS event interface
+12/05/13   bcho    Re-run the EONS algorithm when PLMNID/LAC/RAT is changed
+10/21/13   vdc     Create RPLMN info text file when EONS algo enters NITZ step
+10/03/13   vdc     Improvements in NITZ storage in EFS
+07/15/13   vs      EONS updates to support single baseband SGLTE
+
+=============================================================================*/
+
+/*=============================================================================
+
+                     INCLUDE FILES FOR MODULE
+
+=============================================================================*/
+
+#include "comdef.h"
+#include "cm.h"
+#include "mmgsdi.h"
+#include "mmgsdi_eons.h"
+
+
+/*=============================================================================
+
+                       FUNCTION PROTOTYPES
+
+=============================================================================*/
+/*==========================================================================
+FUNCTION MMGSDI_EONS_GET_NITZ_ONS
+
+DESCRIPTION
+  Function to get operator name string from NITZ data
+
+DEPENDENCIES
+  None
+
+RETURN VALUE
+  BOOLEAN: TRUE OR FALSE
+
+SIDE EFFECTS
+  None
+==========================================================================*/
+boolean mmgsdi_eons_get_nitz_ons(
+  mmgsdi_eons_call_stack_enum_type    stack_type,
+  mmgsdi_session_type_enum_type       session_type,
+  mmgsdi_eons_info_type             * eons_info_ptr,
+  mmgsdi_plmn_info_type             * plmn_info_ptr,
+  mmgsdi_plmn_id_type                 hplmn_id
+);
+
+/*===========================================================================
+FUNCTION MMGSDI_EONS_FREE_NITZ_DATA_PTRS
+
+DESCRIPTION
+  Function to free data in RPLMN pointers
+
+DEPENDENCIES
+  None
+
+RETURN VALUE
+  None
+
+SIDE EFFECTS
+  None
+===========================================================================*/
+void mmgsdi_eons_free_nitz_data_ptrs(
+  mmgsdi_eons_nitz_data_type  * nitz_info_ptr
+);
+
+/*===========================================================================
+  FUNCTION MMGSDI_EONS_MATCH_RPLMN_NAME_WITH_NITZ_NAME
+
+DESCRIPTION
+  Function to determine if EONS algo needs to be run and event needs to be sent
+  for a call stack
+
+DEPENDENCIES
+  None
+
+RETURN VALUE
+  Boolean TRUE if RPLMN name matches NITZ name and FALSE if not
+
+SIDE EFFECTS
+  None
+===========================================================================*/
+boolean mmgsdi_eons_match_rplmn_name_with_nitz_name(
+  const mmgsdi_eons_per_stack_rplmn_info_type  * rplmn_info_ptr,
+  const mmgsdi_eons_nitz_data_type             * nitz_info_ptr
+);
+
+/*===========================================================================
+  FUNCTION MMGSDI_EONS_NITZ_UPDATE_RPLMN_IDENTIFIERS
+
+DESCRIPTION
+  Function to copy RPLMN identifiers
+
+DEPENDENCIES
+  None
+
+RETURN VALUE
+  Boolean indicating whether RPLMN identifiers were updated
+
+SIDE EFFECTS
+  None
+===========================================================================*/
+void mmgsdi_eons_nitz_update_rplmn_identifiers(
+  mmgsdi_eons_info_type   * eons_info_ptr,
+  boolean                 * first_stack_rplmn_updated_ptr,
+  boolean                 * sec_stack_rplmn_updated_ptr,
+  boolean                 * fs_plmn_id_lac_rat_changed_ptr,
+  boolean                 * ss_plmn_id_lac_rat_changed_ptr
+);
+
+/*===========================================================================
+  FUNCTION MMGSDI_EONS_NITZ_CHECK_RUN_ALGO_SEND_EVT_NEEDED
+
+DESCRIPTION
+  Function to determine if EONS algo needs to be run and event needs to be sent
+  for a call stack
+
+DEPENDENCIES
+  None
+
+RETURN VALUE
+  None
+
+SIDE EFFECTS
+  None
+===========================================================================*/
+void mmgsdi_eons_nitz_check_run_algo_send_evt_needed(
+  const mmgsdi_eons_per_stack_ss_data_type * ss_info_ptr,
+  boolean                                    rplmn_updated,
+  mmgsdi_eons_per_stack_rplmn_info_type    * rplmn_info_ptr,
+  boolean                                  * run_algo_ptr,
+  boolean                                  * send_evt_ptr
+);
+
+/*==========================================================================
+FUNCTION MMGSDI_EONS_STORE_AND_FREE_NITZ_INFO
+
+DESCRIPTION
+  Function to write cached NITZ info to rplmn_info.txt on reception of
+  TASK_OFFLINE/TASK_STOP and free it.
+
+DEPENDENCIES
+  None
+
+RETURN VALUE
+  MMGSDI_RETURN_ENUM_TYPE
+
+SIDE EFFECTS
+  None
+==========================================================================*/
+mmgsdi_return_enum_type mmgsdi_eons_store_and_free_nitz_info (void);
+
+#endif /* MMGSDI_EONS_NITZ_H */

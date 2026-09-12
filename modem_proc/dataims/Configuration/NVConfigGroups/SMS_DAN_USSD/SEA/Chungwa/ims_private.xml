@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="" type="1"/>		
+	<NvEfsItemData name="DANPrivateSettings" id="73838" description="DAN needed" comment="" category="VOIP" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/DANPrivateSettings">
+	     <Member name="version" description="Version" comment="" sizeOf="1" type="uint8">0 </Member> 
+    	<Member name="danNeeded" description="DAN needed in software for rembmembering to send DAN" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint8176"> </Member>
+    </NvEfsItemData>
+</NvData>

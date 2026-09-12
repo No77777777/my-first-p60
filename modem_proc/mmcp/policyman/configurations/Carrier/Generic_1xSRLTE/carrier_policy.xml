@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier configuration file for SRLTE with CHGWL roaming 
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/Generic_1xSRLTE/carrier_policy.xml#1 $
+-->
+
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "84.1.6"
+>
+
+  <initial>
+
+    <mcc_list name="sxlte_mccs"> 310 311 312 </mcc_list>
+
+    <define_timer name = "hybr_oos" interval = "1" units = "min" id = "101" />
+
+    <rat_capability base="none">
+      <include> C H G W L </include>
+    </rat_capability>
+
+    <rf_bands base="hardware" />
+
+    <ue_mode_if> 1X_CSFB_PREF </ue_mode_if>
+
+    <feature single_sim="srlte"> dualmmode </feature>
+
+  </initial>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <if>
+    <location_mcc_in list="sxlte_mccs" />
+    <then>
+      <ue_mode> 1X_CSFB_PREF </ue_mode>
+    </then>
+    <else>
+      <ue_mode> CSFB </ue_mode>
+    </else>
+  </if>
+
+</policy>

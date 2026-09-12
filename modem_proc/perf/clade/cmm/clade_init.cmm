@@ -1,0 +1,65 @@
+//============================================================================
+//  Name:                                                                     
+//    clade_init.cmm 
+//
+//  Description:                                                              
+//    Makes T32 CLADE Aware, which allows the programmer to debug code located in the
+//    CLADE compressed region
+//                                                                            
+// Copyright (c) 2016 by Qualcomm Technologies, Incorporated.  All Rights Reserved.        
+//
+//
+//
+//
+//                      EDIT HISTORY FOR FILE
+//  This section contains comments describing changes made to the module.
+//  Notice that changes are listed in reverse chronological order.
+//
+// when       who     		what, where, why
+// --------   ---     		---------------------------------------------------------
+// 05/27/2016 raholr      Initial creation
+//
+//  Usage:
+//      do clade_init.cmm
+//
+//  Dependencies
+//  None
+//
+
+&SCRIPT_DIR=OS.PPD()
+&MODEM_PROC_BUILDMS="&SCRIPT_DIR"+"/../../../build/ms"
+
+&CLADE_REGION_HIGH_NAME="__clade_region_high_pd0_start__"
+&CLADE_REGION_LOW_NAME="__clade_region_low_pd0_start__"
+&CLADE_COMP_NAME="__clade_comp_pd0_start__"
+&CLADE_EXCHIGH_NAME="__clade_exception_high_pd0_start__"
+&CLADE_EXCLOW_LARGE_NAME="__clade_exception_low_large_pd0_start__"
+&CLADE_EXCLOW_SMALL_NAME="__clade_exception_low_small_pd0_start__"
+&CLADE_DICT_START_NAME="__clade_dict_pd0_start__"
+&CLADE_DICT_END_NAME="__clade_dict_pd0_end__"
+
+IF ((!SYMBOL.EXIST(&CLADE_REGION_HIGH_NAME))||(!SYMBOL.EXIST(&CLADE_REGION_LOW_NAME))||(!SYMBOL.EXIST(&CLADE_COMP_NAME))||(!SYMBOL.EXIST(&CLADE_EXCHIGH_NAME))||(!SYMBOL.EXIST(&CLADE_EXCLOW_LARGE_NAME))||(!SYMBOL.EXIST(&CLADE_EXCLOW_SMALL_NAME)))
+(
+   PRINT "NOTE: Missing CLADE symbols in ELF. T32 not CLADE Aware"
+   ENDDO
+)
+
+IF (!OS.FILE(&MODEM_PROC_BUILDMS/clade_dict.bin))
+(
+  PRINT "WARNING: CLADE Dictionary &MODEM_PROC_BUILDMS/clade_dict.bin not found! T32 not CLADE Aware"
+  ENDDO
+)
+
+&clade_region_high_addr=TRANS.PHYSICAL(SYMBOL.BEGIN(&CLADE_REGION_HIGH_NAME))
+&clade_region_low_addr=TRANS.PHYSICAL(SYMBOL.BEGIN(&CLADE_REGION_LOW_NAME))
+&clade_comp_addr=TRANS.PHYSICAL(SYMBOL.BEGIN(&CLADE_COMP_NAME))
+&clade_exc_high_addr=TRANS.PHYSICAL(SYMBOL.BEGIN(&CLADE_EXCHIGH_NAME))
+&clade_exc_low_large_addr=TRANS.PHYSICAL(SYMBOL.BEGIN(&CLADE_EXCLOW_LARGE_NAME))
+&clade_exc_low_small_addr=TRANS.PHYSICAL(SYMBOL.BEGIN(&CLADE_EXCLOW_SMALL_NAME))
+
+sys.o CLADEDICT &MODEM_PROC_BUILDMS/clade_dict.bin
+sys.o CLADEPARAM &clade_region_high_addr &clade_region_low_addr &clade_comp_addr &clade_exc_high_addr &clade_exc_low_large_addr &clade_exc_low_small_addr
+
+sys.o CLADE ON
+PRINT "T32 is now CLADE Aware"
+ENDDO

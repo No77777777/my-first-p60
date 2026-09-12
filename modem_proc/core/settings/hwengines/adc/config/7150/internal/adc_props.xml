@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="Adc">
+
+  <device id="DALDEVICEID_ADC">
+    <props name="ADC_BSP" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      AdcBsp
+    </props>
+  </device>
+</driver>
+

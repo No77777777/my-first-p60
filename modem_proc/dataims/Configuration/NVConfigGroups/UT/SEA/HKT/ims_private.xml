@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+    <NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<NvEfsItemData name="XCAPPrivateConfigItem" id="73853" description="IMS XCAP Configuration Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_xcap_private_config_item">
+	    <Member name="Version" description="Version" comment="" sizeOf="1" type="uint8">0</Member> 		
+		<Member name="cIMSRegisteredURI" description="IMS Registered PAURI" comment="" sizeOf="256" type="string"></Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future Versions" comment="" sizeOf="767" type="uint8"></Member>
+	</NvEfsItemData>
+</NvData>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="data.0.0" type="1"/>
+  <GroupFile name="mcfg_sw_gen_Gen_3GPP_DeleteROW.xml" description="" comment="" category="" version="data.0.0" mcfgAttributes="0x09" buildPath="modem_proc/datamodem/datacfg/xml/common/ROW/mcfg_sw_gen_Gen_3GPP_DeleteROW.xml"/>
+<NvEfsItemData name="profile_pdn_type_override" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/lteps/profile_pdn_type_override">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvItemData name="QNC Enabled Flag" id="240" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="data_qnc_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvItemData name="Data Service Option Set" id="241" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="data_so_set" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+  </NvItemData>
+  <NvItemData name="Primary DNS Server" id="423" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="primary_dns" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+  </NvItemData>
+  <NvItemData name="Secondary DNS Server" id="424" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="secondary_dns" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+  </NvItemData>
+  <NvItemData name="Data SCRM Enabled" id="429" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="data_scrm_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="Data Throttle Enabled" id="450" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="data_trtl_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services QC Mobile IP" id="459" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ds_qcmip" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+  </NvItemData>
+    <NvItemData name="Data Services Mobile IP Registration Retries" id="460" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ds_mip_retries" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP Registration Retries Initial Interval" id="461" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ds_mip_retry_int" description="" comment="" sizeOf="1" type="uint8">4 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP Registration Expiration Attempt Reregistration" id="462" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ds_mip_pre_re_rrq_time" description="" comment="" sizeOf="1" type="uint8">30 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP Number Profiles" id="463" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x1D" mcfgVariant="1">
+    <Member name="ds_mip_num_prof" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP Currently Active Profiles" id="464" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x1D" mcfgVariant="1">
+    <Member name="ds_mip_active_prof" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP MN Home Agent Timebase Difference" id="494" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+    <Member name="index" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="time_delta" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP RFC2002bis MN Home Agent Authenticator Calculation" id="546" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ds_mip_2002bis_mn_ha_auth" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP RRQ IF Traffic" id="707" description="" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ds_mip_rrq_if_tfrk" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP Enable Profile" id="714" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x1D" mcfgVariant="1">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP DMU PKO ID" id="854" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+    <Member name="index" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="pkoid" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP DMU MN Authentication" id="889" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+    <Member name="index" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="mn_auth" description="" comment="" sizeOf="3" type="uint8"></Member>
+  </NvItemData>
+  <NvItemData name="PZID Hysterisis Activation Timer" id="928" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="hysterisis_activation_timer" description="" comment="" sizeOf="1" type="uint16">30 </Member>
+  </NvItemData>
+  <NvItemData name="PZID Hysterisis Timer" id="929" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="hysterisis_timer" description="" comment="" sizeOf="1" type="uint16">60 </Member>
+  </NvItemData>
+  <NvItemData name="Data Services Mobile IP QC Handdown" id="1193" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x1D" mcfgVariant="1">
+    <Member name="ds_mip_qc_handdown_to_1x_opt" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="Ipv6 Enabled" id="1896" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ipv6_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="Authentication Require Password Encryption" id="1907" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="auth_require_password_encryption" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvItemData name="DS Mobile IP Deregistration Retries" id="4396" description="The number of Mobile IP Registration Retries attempted" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ds_mip_dereg_retries" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvItemData name="eHRPD Authentication Mode" id="6862" description="In eHRPD to decide whether authentication to be done on USIM or S/W" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="Mode" description="In eHRPD to decide whether authentication to be done on USIM or S/W" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvEfsItemData name="ehrpd_partial_context" id="65953" description="eHRPD partial context info" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/ehrpd_partial_context">
+    <Member name="pcmt_val_ehrpd" description="eHRPD Partial Context Maintenance Timer value" comment="" sizeOf="1" type="uint32">120 </Member>
+    <Member name="pcmt_val_irat" description="iRAT Partial Context Maintenance Timer value" comment="" sizeOf="1" type="uint32">3600 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="mpit_enabled" id="66035" description="Enable Max PPP Inactivity Timer" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/mpit_enabled">
+    <Member name="mpit_enabled" description="Enable/Disable MPIT" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="ehrpd_to_hrpd_fallback" id="67200" description="Fallback to HRPD Upon eHRPD LCP/AUTH Failures" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/ehrpd_to_hrpd_fallback">
+    <Member name="enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="propose_ehrpd_after_irat" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="is_roaming_ehrpd_disabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="max_hard_fallback_count" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="max_soft_fallback_count" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+    <Member name="back_to_ehrpd_timer" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="tcp_ack_prio" id="67208" description="TCP ACK Priority" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/protocols/tcp_ack_prio">
+    <Member name="tcp_ack_priority" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="mip_fail_do_sess_close" id="67270" description="do session close after MIP Authentication fails(when cause err 67)" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/mip_fail_do_sess_close">
+    <Member name="do_session_close" description="do session close after MIP Authentication fails(when cause err 67)" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="max_fb_pdn_failure_count" id="67292" description="Max fallback PDN failure count" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/max_fb_pdn_failure_count">
+    <Member name="max_fb_pdn_failure_count" description="Max fallback PDN failure count" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="ignore_last_pdn_ia_timer" id="67304" description="Ignore the last PDN inactivity timer, default FALSE" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/ignore_last_pdn_ia_timer">
+    <Member name="to_ignore" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="3gpp2_back_pressure_removal" id="69739" description="C2K Data specific TCP Dynamic back pressure removal params " comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/3gpp2_back_pressure_removal">
+    <Member name="enabled" description="C2K Data specific TCP Dynamic back pressure removal params " comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="timer_value" description="Timer in secs to maintain dynamic back pressure removal duration. " comment="" sizeOf="1" type="uint32">1000 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wlan_offload_config" id="70315" description="Determines the WLAN offload type" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/wlan_config/wlan_offload_config">
+    <Member name="wlan_offload_config" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="otasn_feature_support" id="74112" description="Whether or not delay OTASN PDN teardown on CM refresh" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/dsmgr/otasn_feature_support">
+    <Member name="otasn_feature_support" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>  
+  <NvEfsItemData name="1x_to_LTE_handup_enabled" id="73616" description="Enable 1x to LTE handup " comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/1x_to_LTE_handup_enabled">
+    <Member name="1x_to_LTE_handup_enabled" description="Enable 1x to LTE handup " comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsFile name="socks_call_prof_num" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/pdp_profiles/consl_profiles/socks_call_prof_num" buildPath="modem_proc/datamodem/datacfg/efs/sprint/socks_call_prof_num"/>
+  <NvEfsFile name="rmnet_call_prof_num" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/pdp_profiles/consl_profiles/rmnet_call_prof_num" buildPath="modem_proc/datamodem/datacfg/efs/sprint/rmnet_call_prof_num"/>
+  <NvEfsFile name="fallback_pdn_list.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/eHRPD/fallback_pdn_list.txt" buildPath="modem_proc/datamodem/datacfg/efs/sprint/fallback_pdn_list.txt"/>
+  <NvEfsFile name="iwlan_s2b_config.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/iwlan_s2b_config.xml" buildPath="modem_proc/datamodem/datacfg/efs/sprint/iwlan_s2b_config.xml"/>
+  <NvEfsFile name="ds_andsf_config.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_andsf_config.txt" buildPath="modem_proc/datamodem/datacfg/efs/sprint/ds_andsf_config.txt"/>
+  <NvEfsFile name="default_andsf.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/default_andsf.xml" buildPath="modem_proc/datamodem/datacfg/efs/sprint/default_andsf.xml"/>
+  <NvEfsFile name="andsf.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/andsf.xml" buildPath="modem_proc/datamodem/datacfg/efs/sprint/andsf.xml"/>
+  <NvEfsFile name="data_3gpp_dynamic_config.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/3gpp/data_3gpp_dynamic_config.xml" buildPath="modem_proc/datamodem/datacfg/efs/sprint/data_3gpp_dynamic_config.xml"/>
+  <NvEfsFile name="ds_dsd_attach_profile.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_dsd_attach_profile.txt" buildPath="modem_proc/datamodem/datacfg/efs/sprint/ds_dsd_attach_profile.txt"/>
+  <NvEfsFile name="Profile0" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile0" buildPath="modem_proc/datamodem/datacfg/efs/sprint/3gpp2_profiles/Profile0"/>
+  <NvEfsFile name="Profile100" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile100" buildPath="modem_proc/datamodem/datacfg/efs/sprint/3gpp2_profiles/Profile100"/>
+  <NvEfsFile name="Profile101" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile101" buildPath="modem_proc/datamodem/datacfg/efs/sprint/3gpp2_profiles/Profile101"/>
+  <NvEfsFile name="Profile1" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile1" buildPath="modem_proc/datamodem/datacfg/efs/sprint/3gpp_profiles/Profile1"/>
+  <NvEfsFile name="Profile2" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile2" buildPath="modem_proc/datamodem/datacfg/efs/sprint/3gpp_profiles/Profile2"/>
+  <NvEfsFile name="Profile3" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile3" buildPath="modem_proc/datamodem/datacfg/efs/sprint/3gpp_profiles/Profile3"/>
+  <NvEfsFile name="Profile4" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile4" buildPath="modem_proc/datamodem/datacfg/efs/sprint/3gpp_profiles/Profile4"/>
+  <NvEfsFile name="Profile5" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile5" buildPath="modem_proc/datamodem/datacfg/efs/sprint/3gpp_profiles/Profile5"/>
+	<NvEfsItemData name="EmergencyAPNType" id="74090" description="Defines the APN Type on which Emergency call shall be made" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/dsmgr/emergency_apn_type">
+ 		<Member name="wwan_preferred" description="" comment="" sizeOf="1" type="uint8">1</Member>
+ 		<Member name="wwan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 		<Member name="iwlan_preferred" description="" comment="" sizeOf="1" type="uint8">2</Member>
+ 		<Member name="iwlan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 	</NvEfsItemData>
+</NvData>

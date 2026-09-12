@@ -1,0 +1,5 @@
+[QIPCALL:ImsMediaProfileConfig]
+
+#This config is required to audio codec profile list.
+
+*AudioProfile1 = "AMR_1_104;AMR_4_110;AMR_0_102;AMR_2_108"

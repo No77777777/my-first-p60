@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="1.0">
+   <NvConfigurationData carrierIndex="0" version="" type="1"/>
+   <NvEfsItemData name="qp_ims_cap_discovery_config" id="73831" description="IMS Presence related Config Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_cap_discovery_config">
+        <Member name="version" description="Version number" comment="" sizeOf="1" type="uint8">0</Member>
+        <Member name="publishTimer" description="Expires header value for the PUBLISH request when the device is IMS registered on an LTE network (in seconds)." comment="" sizeOf="1" type="uint32">1200</Member>
+        <Member name="publishExtendedTimer" description="Expires header value for the PUBLISH request when the device is on an eHRPD network(in seconds)." comment="" sizeOf="1" type="uint32">86400</Member>
+        <Member name="publishSrcThrottleTimer" description="Timer in seconds that determines the minimal interval between each PUBLISH request; the device must wait until this timer expires before it sends next PUBLISH request." comment="" sizeOf="1" type="uint32">60</Member>
+        <Member name="publishErrRecoveryTimer" description="Publish error recovery timer in seconds." comment="" sizeOf="1" type="uint32"></Member>
+        <Member name="listSubscriptionExpiry" description="Expires header value for the list SUBSCRIBE request when performing capability polling for more than one contact number (in seconds)." comment="" sizeOf="1" type="uint32">30</Member>
+        <Member name="capabilityCacheExpiry" description="How long (in seconds) cached capability information of a particular contact is still valid before it is updated by Capability Polling " comment="" sizeOf="1" type="uint32">7776000</Member>
+        <Member name="availabilityCacheExpiry" description="How long (in seconds) cached availability information of a particular contact is considered still valid before new Availability Fetch need to be sent." comment="" sizeOf="1" type="uint32">60</Member>
+        <Member name="capabilityPollInterval" description="Time interval in seconds between each Capability Polling." comment="" sizeOf="1" type="uint32">604800</Member>
+        <Member name="maxEntriesInListSubscribe" description="Maximum number of contacts that can be included in a list subscribe request." comment="" sizeOf="1" type="uint32">500</Member>
+        <Member name="isCapDiscoveryEnabled" description="On and Off value that determines whether capability/availability discovery is enabled (0 – Off, 1 – On)." comment="" sizeOf="1" type="uint8">1</Member>
+        <Member name="isGzipEnabled" description="Gzip enablerment: 0 - disabled, 1 - enabled." comment="" sizeOf="1" type="uint8">0</Member>
+        <Member name="userAgent" description="User Agent" comment="" sizeOf="128" type="string"></Member>
+        <Member name="lastPublishETag" description="Not used or set by OEM; used internally by the Presence Enabler for persistent storage of the last eTag string in the server's 200 OK response to the PUBLISH request." comment="" sizeOf="128" type="string"></Member>
+        <Member name="lastPublishRespTime" description="Not used or set by OEM; used internally by the Presence Enabler for persistent storage of the last time 200OK response to PUBLISH request was received." comment="" sizeOf="1" type="uint32">0</Member>
+        <Member name="lastPublishExpiry" description="Not used or set by OEM; used internally by the Presence Enabler for persistent storage of the value of the Expires header in the 200 OK response to last PUBLISH request." comment="" sizeOf="1" type="uint32">0</Member>
+        <Member name="reserved" description="Bytes reserved for future versions" comment="" sizeOf="721" type="uint8"></Member>
+   </NvEfsItemData>
+   <NvEfsItemData name="qp_ims_rcs_client_config" id="73832" description="IMS RCS Client related Config Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_rcs_client_config">
+        <Member name="version" description="Version number" comment="" sizeOf="1" type="uint8">0</Member>
+        <Member name="autoConfigUserAgent" description="" comment="" sizeOf="128" type="string"></Member>
+        <Member name="xdmClientUserAgent" description="" comment="" sizeOf="128" type="string"></Member>
+        <Member name="clientVendor" description="Client vendor" comment="" sizeOf="16" type="string"></Member>
+        <Member name="clientVersion" description="Client version" comment="" sizeOf="16" type="string"></Member>
+        <Member name="terminalVendor" description="Terminal vendor" comment="" sizeOf="16" type="string"></Member>
+        <Member name="terminalModel" description="Terminal model" comment="" sizeOf="16" type="string"></Member>
+        <Member name="terminalSwVersion" description="Terminal software version" comment="" sizeOf="16" type="string"></Member>
+        <Member name="reserved" description="Bytes reserved for future versions" comment="" sizeOf="687" type="uint8"></Member>
+    </NvEfsItemData>
+</NvData>

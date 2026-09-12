@@ -1,0 +1,7 @@
+[MEDIA:MediaCommon]
+
+#This config is required to enable HST specific configuration design scheme under LAB MBN
+
+*HstVolteMosOverride = 1  
+
+

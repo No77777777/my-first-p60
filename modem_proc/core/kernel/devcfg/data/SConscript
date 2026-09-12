@@ -1,0 +1,69 @@
+#===============================================================================
+# GENERAL DESCRIPTION
+#     DevCfg Artifacts build script
+##
+# Copyright (c) 2011,2014,2016,2018,2020 by Qualcomm Technologies Incorporated.
+# All Rights Reserved.
+# QUALCOMM Proprietary/GTDR
+#===================================================================================
+Import('env')
+import os, glob
+env = env.Clone()
+
+env.Append(BUILDPATH = '/data')
+env.VariantDir('${BUILDPATH}', "src", duplicate=0) 
+env.Tool('devcfgHwInfo_builder', toolpath = ['${DEVCFG_SCRIPTS}'])
+
+#-------------------------------------------------------------------------------
+# Devcfg Image dependent parameters
+#-------------------------------------------------------------------------------
+config = env.get('DEVCFG')
+
+#-------------------------------------------------------------------------------
+# Build Devcfg Artifacts
+#-------------------------------------------------------------------------------
+return_list = []
+
+# Get devcfg xml_tag-list
+if 'DEVCFG_BLOB_ID' not in env:
+    devcfg_xml_tag_list = config.devcfgXMLTagList
+else:
+    devcfg_xml_tag_list = set(config.devcfgXMLTagList) & set([env["DEVCFG_BLOB_ID"]])
+
+# Create one master xml file per xml_tag
+for xml_tag in devcfg_xml_tag_list:
+    thisblob = ""
+    for b in config.blobs:
+        if b["id"] == xml_tag:
+            thisblob = b
+    if thisblob == "":
+        raise ValueError("ERROR : DEVCFG blob is not configured for {0}. Please review {1}".format(xml_tag, env.subst("${IMAGE_CONFIG_XML}")))
+        exit()
+    if int(thisblob['type'])==2:
+        env.Replace(DEVCFG_FIXED_ADDR = "0xA0000000")
+
+    (devcfgLib, masterxml) = env.buildDevcfgData(xml_tag)
+
+    if int(thisblob['type'])==0:
+        if 'DEVCFG_STANDALONE' in env:
+            return_list += devcfgLib
+        else:
+            env.AddOEMLibrary(config.devcfgImgBuildTag, devcfgLib)
+    elif int(thisblob['type'])==1 or int(thisblob['type'])==2:
+        if int(thisblob['type'])==1:
+            env.Replace(LINKOBJGRP = "-T {0}/devcfg.lcs -whole-archive -strip-all -strip-debug --start-group $SOURCES.posix --end-group".format(Dir('.').srcnode().abspath))
+        else:
+            fixedAddrStr = hex(int(env.subst("${DEVCFG_FIXED_ADDR}"),16)-16)
+            if fixedAddrStr[-1] == "L":
+                fixedAddrStr = fixedAddrStr[:-1]
+            env.Replace(LINKOBJGRP = "-T {0}/devcfg.lcs --section-start .devcfg_meta_data={1} -whole-archive -strip-all -strip-debug --start-group $SOURCES.posix --end-group".format(Dir('.').srcnode().abspath, fixedAddrStr))
+        dataelf = env.Program(devcfgLib)
+        databin = env.Command("${{BUILDPATH}}/{0}/{1}".format(thisblob['id'],'devcfg.bin'), dataelf, "python ${DEVCFG_ROOT}/scripts/trim_bin.py -i $SOURCE -o $TARGET -s .devcfg_meta_data -e .devcfg_structures")
+    
+
+#create blob table
+#call builder to compile meta blob info
+devcfgBlobSrc = env.devcfgBlobTableBuilder(["${{BUILDPATH}}/{}".format('devcfgblobtable.c')], [env.subst("${IMAGE_CONFIG_XML}")])
+return_list += env.AddObject(config.devcfgImgBuildTag,devcfgBlobSrc)
+
+Return('return_list')

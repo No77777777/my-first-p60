@@ -1,0 +1,687 @@
+{
+  "version" : "1.0",
+  "environment" : [
+    "HEXAGON_ROOT",
+    "ARMTOOLS"
+  ],
+  "tools" : [
+    {
+      "name" : "python",
+      "version" : "2.7.5"
+    }
+  ],
+  "variant_info" : {
+    "kamorta.genla2.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genla2.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genla2.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.genla2md.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genla2md.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genla2md.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.gen3kla2.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gen3kla2.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gen3kla2.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.gen3kla2md.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gen3kla2md.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gen3kla2md.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.gen.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gen.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gen.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.gen.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gen.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gen.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.genw3k.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genw3k.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genw3k.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.genw3k.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genw3k.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genw3k.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.gps.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gps.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gps.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.gps.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gps.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gps.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.genmd.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genmd.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genmd.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.genmd3k.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genmd3k.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.genmd3k.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.genmd.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genmd.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genmd.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.genmd3k.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genmd3k.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genmd3k.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.gennm.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gennm.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.gennm.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.gennm.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gennm.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gennm.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.lwg.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.lwg.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.lwg.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.lwg2k.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.lwg2k.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.lwg2k.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.lwgla2.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.lwgla2.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.lwgla2.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "kamorta.lwg2kla2.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.lwg2kla2.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh kamorta.lwg2kla2.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.genla2md.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genla2md.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genla2md.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.gen3kla2md.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gen3kla2md.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gen3kla2md.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.lwg2k.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.lwg2k.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.lwg2k.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.lwg.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.lwg.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.lwg.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.lwgla2.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.lwgla2.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.lwgla2.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.lwg2kla2.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.lwg2kla2.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.lwg2kla2.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.genla2.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genla2.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.genla2.prod -c"
+            }
+          ]
+        }
+      ]
+    },
+    "divar.gen3kla2.prod" : {
+      "commands" : [
+        {
+          "build" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gen3kla2.prod"
+            }
+          ]
+        },
+        {
+          "clean" : [
+            {
+              "path" : "modem_proc/build/ms"
+            },
+            {
+              "command" : "./build.sh divar.gen3kla2.prod -c"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

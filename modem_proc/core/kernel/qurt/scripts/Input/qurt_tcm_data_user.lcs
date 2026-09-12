@@ -1,0 +1,16 @@
+/*=============================================================================
+
+                                    qurt_tcm_data_user.lcs
+
+GENERAL DESCRIPTION
+
+EXTERNAL FUNCTIONS
+        None.
+
+INITIALIZATION AND SEQUENCING REQUIREMENTS
+        None.
+
+             Copyright (c) 2013  by Qualcomm Technologies, Inc.  All Rights Reserved.
+=============================================================================*/
+	*config.lib(.bss.tcm.qurtos.island)
+	*config.lib(.bss.tcm.qurtos.main)

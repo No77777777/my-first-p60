@@ -1,0 +1,2410 @@
+-- ASN1START
+
+LPPe-PDU-Definitions DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+
+IMPORTS GNSS-ID, GNSS-SignalID, GNSS-SignalIDs, GNSS-SystemTime, SV-ID,
+ECID-SignalMeasurementInformation, CellGlobalIdGERAN, CellGlobalIdEUTRA-AndUTRA,
+OTDOA-ReferenceCellInfo, OTDOA-NeighbourCellInfoElement, maxFreqLayers, ARFCN-ValueEUTRA,
+Ellipsoid-Point, EllipsoidPointWithAltitude, EllipsoidPointWithAltitudeAndUncertaintyEllipsoid,
+NetworkTime, GNSS-ID-Bitmap, ARFCN-ValueUTRA, ARFCN-ValueEUTRA-v9a0, Velocity FROM LPP-PDU-Definitions;
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-MessageExtension ::= SEQUENCE {
+	lppeCompatibilityLevel			OMA-LPPe-LPPeCompatibilityLevel,
+	lppeVersion						OMA-LPPe-LPPeVersion,
+	lppeMode						OMA-LPPe-LPPeMode,
+	messageExtensionBody			OMA-LPPe-MessageExtensionBody,
+	...
+}
+
+OMA-LPPe-LPPeCompatibilityLevel ::= INTEGER (0..15)
+
+OMA-LPPe-LPPeVersion ::= SEQUENCE {
+	majorVersion		INTEGER(0..255),	
+	minorVersion		INTEGER(0..255)
+}
+
+OMA-LPPe-LPPeMode ::= ENUMERATED {
+	normal,
+	reversed,
+	...
+}
+
+
+OMA-LPPe-MessageExtensionBody ::= CHOICE {
+		requestCapabilities			OMA-LPPe-RequestCapabilities, 	
+									--Shall only be used in the EPDU in LPP RequestCapabilities
+		provideCapabilities			OMA-LPPe-ProvideCapabilities,	
+									--Shall only be used in the EPDU in LPP ProvideCapabilities
+		requestAssistanceData		OMA-LPPe-RequestAssistanceData,	
+									--Shall only be used in the EPDU in LPP RequestAssistanceData
+		provideAssistanceData		OMA-LPPe-ProvideAssistanceData, 
+									--Shall only be used in the EPDU in LPP ProvideAssistanceData
+		requestLocationInformation	OMA-LPPe-RequestLocationInformation, 
+									--Shall only be used in the EPDU in LPP RequestLocationInformation
+		provideLocationInformation	OMA-LPPe-ProvideLocationInformation, 
+									--Shall only be used in the EPDU in LPP ProvideLocationInformation
+		error						OMA-LPPe-Error, --Shall only be used in the EPDU in LPP Error
+		abort						OMA-LPPe-Abort, --Shall only be used in the EPDU in LPP Abort
+		...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-RequestCapabilities ::= SEQUENCE {
+	commonIEsRequestCapabilities			OMA-LPPe-CommonIEsRequestCapabilities	OPTIONAL,
+	agnss-RequestCapabilities				OMA-LPPe-AGNSS-RequestCapabilities		OPTIONAL,
+	otdoa-RequestCapabilities				OMA-LPPe-OTDOA-RequestCapabilities		OPTIONAL,
+	eotd-RequestCapabilities					OMA-LPPe-EOTD-RequestCapabilities		OPTIONAL,
+	otdoa-utra-RequestCapabilities			OMA-LPPe-OTDOA-UTRA-RequestCapabilities	OPTIONAL,
+	ecid-lte-RequestCapabilities				OMA-LPPe-ECID-LTE-RequestCapabilities	OPTIONAL,
+	ecid-gsm-RequestCapabilities				OMA-LPPe-ECID-GSM-RequestCapabilities	OPTIONAL,
+	ecid-utra-RequestCapabilities			OMA-LPPe-ECID-UTRA-RequestCapabilities	OPTIONAL,
+	wlan-ap-RequestCapabilities				OMA-LPPe-WLAN-AP-RequestCapabilities	OPTIONAL,
+	ecid-wimax-RequestCapabilities			OMA-LPPe-ECID-WiMax-RequestCapabilities	OPTIONAL,
+	sensor-RequestCapabilities				OMA-LPPe-Sensor-RequestCapabilities		OPTIONAL,
+	srn-RequestCapabilities					OMA-LPPe-SRN-RequestCapabilities			OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ProvideCapabilities::= SEQUENCE {
+	commonIEsProvideCapabilities				OMA-LPPe-CommonIEsProvideCapabilities		OPTIONAL,
+	agnss-ProvideCapabilities				OMA-LPPe-AGNSS-ProvideCapabilities			OPTIONAL,
+	otdoa-ProvideCapabilities				OMA-LPPe-OTDOA-ProvideCapabilities			OPTIONAL,
+	eotd-ProvideCapabilities					OMA-LPPe-EOTD-ProvideCapabilities			OPTIONAL,
+	otdoa-utra-ProvideCapabilities			OMA-LPPe-OTDOA-UTRA-ProvideCapabilities		OPTIONAL,
+	ecid-lte-ProvideCapabilities				OMA-LPPe-ECID-LTE-ProvideCapabilities		OPTIONAL,
+	ecid-gsm-ProvideCapabilities				OMA-LPPe-ECID-GSM-ProvideCapabilities		OPTIONAL,
+	ecid-utra-ProvideCapabilities			OMA-LPPe-ECID-UTRA-ProvideCapabilities		OPTIONAL,
+	wlan-ap-ProvideCapabilities				OMA-LPPe-WLAN-AP-ProvideCapabilities			OPTIONAL,
+	ecid-wimax-ProvideCapabilities			OMA-LPPe-ECID-WiMax-ProvideCapabilities		OPTIONAL,
+	sensor-ProvideCapabilities				OMA-LPPe-Sensor-ProvideCapabilities			OPTIONAL,
+	srn-ProvideCapabilities					OMA-LPPe-SRN-ProvideCapabilities				OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-RequestAssistanceData ::= SEQUENCE {
+	commonIEsRequestAssistanceData			OMA-LPPe-CommonIEsRequestAssistanceData		OPTIONAL,
+	agnss-RequestAssistanceData				OMA-LPPe-AGNSS-RequestAssistanceData			OPTIONAL,
+	otdoa-RequestAssistanceData				OMA-LPPe-OTDOA-RequestAssistanceData			OPTIONAL,
+	eotd-RequestAssistanceData				OMA-LPPe-EOTD-RequestAssistanceData			OPTIONAL,
+	otdoa-utra-RequestAssistanceData			OMA-LPPe-OTDOA-UTRA-RequestAssistanceData	OPTIONAL,
+	ecid-lte-RequestAssistanceData			OMA-LPPe-ECID-LTE-RequestAssistanceData		OPTIONAL,
+	ecid-gsm-RequestAssistanceData			OMA-LPPe-ECID-GSM-RequestAssistanceData		OPTIONAL,
+	ecid-utra-RequestAssistanceData			OMA-LPPe-ECID-UTRA-RequestAssistanceData		OPTIONAL,
+	wlan-ap-RequestAssistanceData			OMA-LPPe-WLAN-AP-RequestAssistanceData		OPTIONAL,
+	sensor-RequestAssistanceData				OMA-LPPe-Sensor-RequestAssistanceData		OPTIONAL,
+	srn-RequestAssistanceData				OMA-LPPe-SRN-RequestAssistanceData			OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ProvideAssistanceData ::= SEQUENCE {
+	commonIEsProvideAssistanceData			OMA-LPPe-CommonIEsProvideAssistanceData		OPTIONAL,
+	agnss-ProvideAssistanceData				OMA-LPPe-AGNSS-ProvideAssistanceData			OPTIONAL,
+	otdoa-ProvideAssistanceData				OMA-LPPe-OTDOA-ProvideAssistanceData			OPTIONAL,
+	eotd-ProvideAssistanceData				OMA-LPPe-EOTD-ProvideAssistanceData			OPTIONAL,
+	otdoa-utra-ProvideAssistanceData			OMA-LPPe-OTDOA-UTRA-ProvideAssistanceData	OPTIONAL,
+	ecid-lte-ProvideAssistanceData			OMA-LPPe-ECID-LTE-ProvideAssistanceData		OPTIONAL,
+	ecid-gsm-ProvideAssistanceData			OMA-LPPe-ECID-GSM-ProvideAssistanceData		OPTIONAL,
+	ecid-utra-ProvideAssistanceData			OMA-LPPe-ECID-UTRA-ProvideAssistanceData		OPTIONAL,
+	wlan-ap-ProvideAssistanceData			OMA-LPPe-WLAN-AP-ProvideAssistanceData		OPTIONAL,
+	sensor-ProvideAssistanceData				OMA-LPPe-Sensor-ProvideAssistanceData		OPTIONAL,
+	srn-ProvideAssistanceData				OMA-LPPe-SRN-ProvideAssistanceData			OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-RequestLocationInformation ::= SEQUENCE {
+	commonIEsRequestLocationInformation		OMA-LPPe-CommonIEsRequestLocationInformation	OPTIONAL,
+	agnss-RequestLocationInformation			OMA-LPPe-AGNSS-RequestLocationInformation		OPTIONAL,
+	otdoa-RequestLocationInformation			OMA-LPPe-OTDOA-RequestLocationInformation 		OPTIONAL,
+	eotd-RequestLocationInformation			OMA-LPPe-EOTD-RequestLocationInformation			OPTIONAL,
+	otdoa-utra-RequestLocationInformation	OMA-LPPe-OTDOA-UTRA-RequestLocationInformation	OPTIONAL,
+	ecid-lte-RequestLocationInformation		OMA-LPPe-ECID-LTE-RequestLocationInformation		OPTIONAL,
+	ecid-gsm-RequestLocationInformation		OMA-LPPe-ECID-GSM-RequestLocationInformation		OPTIONAL,
+	ecid-utra-RequestLocationInformation		OMA-LPPe-ECID-UTRA-RequestLocationInformation	OPTIONAL,
+	wlan-ap-RequestLocationInformation		OMA-LPPe-WLAN-AP-RequestLocationInformation		OPTIONAL,
+	ecid-wimax-RequestLocationInformation	OMA-LPPe-ECID-WiMax-RequestLocationInformation	OPTIONAL,
+	sensor-RequestLocationInformation		OMA-LPPe-Sensor-RequestLocationInformation		OPTIONAL,
+	srn-RequestLocationInformation			OMA-LPPe-SRN-RequestLocationInformation			OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ProvideLocationInformation ::= SEQUENCE {
+	commonIEsProvideLocationInformation		OMA-LPPe-CommonIEsProvideLocationInformation	OPTIONAL,
+	agnss-ProvideLocationInformation			OMA-LPPe-AGNSS-ProvideLocationInformation		OPTIONAL,
+	otdoa-ProvideLocationInformation			OMA-LPPe-OTDOA-ProvideLocationInformation 		OPTIONAL,
+	eotd-ProvideLocationInformation			OMA-LPPe-EOTD-ProvideLocationInformation			OPTIONAL,
+	otdoa-utra-ProvideLocationInformation	OMA-LPPe-OTDOA-UTRA-ProvideLocationInformation	OPTIONAL,
+	ecid-lte-ProvideLocationInformation		OMA-LPPe-ECID-LTE-ProvideLocationInformation		OPTIONAL,
+	ecid-gsm-ProvideLocationInformation		OMA-LPPe-ECID-GSM-ProvideLocationInformation		OPTIONAL,
+	ecid-utra-ProvideLocationInformation		OMA-LPPe-ECID-UTRA-ProvideLocationInformation	OPTIONAL,
+	wlan-ap-ProvideLocationInformastion		OMA-LPPe-WLAN-AP-ProvideLocationInformation		OPTIONAL,
+	ecid-wimax-ProvideLocationInformastion	OMA-LPPe-ECID-WiMax-ProvideLocationInformation	OPTIONAL,
+	sensor-ProvideLocationInformation		OMA-LPPe-Sensor-ProvideLocationInformation		OPTIONAL,
+	srn-ProvideLocationInformation			OMA-LPPe-SRN-ProvideLocationInformation			OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Abort ::= SEQUENCE {
+	commonIEsAbort		OMA-LPPe-CommonIEsAbort		OPTIONAL,
+	agnssAbort			OMA-LPPe-AGNSS-Abort			OPTIONAL,
+	...
+}
+
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Error ::= SEQUENCE {
+	commonIEsError		OMA-LPPe-CommonIEsError		OPTIONAL,
+	...
+}
+
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AssistanceContainerID ::= SEQUENCE {
+	containerID			INTEGER (0..65535),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CharArray ::= VisibleString(FROM ("a".."z" | "A".."Z" | "0".."9" | ".-"))(SIZE (1..31))
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CivicLocation ::= SEQUENCE {
+	countryCode					OCTET STRING (SIZE (2)),
+	civicAddressElementList		OMA-LPPe-CivicAddressElementList,
+	...
+}
+
+OMA-LPPe-CivicAddressElementList ::= SEQUENCE (SIZE (1..128)) OF OMA-LPPe-CivicAddressElement
+
+OMA-LPPe-CivicAddressElement ::= SEQUENCE {
+	caType		INTEGER(0..511),
+	caValue		OCTET STRING (SIZE (1..256)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Duration ::= SEQUENCE {
+	duration		INTEGER (1..63),
+	durationLSB		INTEGER (1..89)	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-FixedAccessTypes ::= BIT STRING {	cable		(0), 
+											dsl			(1),
+											lan			(2),
+											pstn		(3),
+											other		(4)	} (SIZE(1..16))	
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-HighAccuracy3Dposition ::= SEQUENCE {
+	latitude				INTEGER(-2147483648..2147483647),
+	longitude				INTEGER(-2147483648..2147483647),
+	cep						INTEGER(0..255)						OPTIONAL, 	--Cond NoEllipse
+	uncertainty-semimajor	INTEGER(0..255)						OPTIONAL, 	--Cond NoCEP
+	uncertainty-semiminor	INTEGER(0..255)						OPTIONAL, 	--Cond NoCEP
+	offset-angle			INTEGER(0..179)						OPTIONAL, 	--Cond NoCEP
+	confidenceHorizontal	INTEGER(0..99)						OPTIONAL,
+	altitude				INTEGER(-64000..1280000),
+	uncertainty-altitude	INTEGER(0..255),
+	confidenceVertical		INTEGER(0..99)						OPTIONAL,
+	...,
+	extUncertRange			BOOLEAN								OPTIONAL
+}
+
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-HighAccuracy3Dvelocity ::= SEQUENCE {
+	enu-origin					OMA-LPPe-HighAccuracy3Dposition		OPTIONAL,
+	east-component				INTEGER(0..511),
+	negative-sign-east			NULL								OPTIONAL,	--Cond West
+	north-component				INTEGER(0..511),
+	negative-sign-north			NULL								OPTIONAL,	--Cond South
+	up-component				INTEGER(0..511),	
+	negative-sign-up			NULL								OPTIONAL,	--Cond Down
+	cep							INTEGER(0..255)						OPTIONAL,	--Cond NoEllipse
+	uncertainty-semimajor		INTEGER(0..255)						OPTIONAL,	--Cond NoCEP,
+	uncertainty-semiminor		INTEGER(0..255)						OPTIONAL,	--Cond NoCEP,
+	offset-angle				INTEGER(0..179)						OPTIONAL,	--Cond NoCEP,
+	confidenceHorizontal		INTEGER(0..99)						OPTIONAL,
+	uncertainty-up-component	INTEGER(0..255),
+	confidenceUp				INTEGER(0..99)						OPTIONAL,	
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-LocationInformationContainerID ::= SEQUENCE {
+	containerID			INTEGER (0..65535),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-LocationInformationContainer ::= SEQUENCE {
+	vendorOrOperatorID						OMA-LPPe-VendorOrOperatorID,
+	locationInformationContainerDataList	OMA-LPPe-LocationInformationContainerDataList,
+	...
+}
+
+OMA-LPPe-LocationInformationContainerDataList ::= SEQUENCE 													(SIZE(1..maxLocationInformationContainerDataList)) OF OMA-LPPe-LocationInformationContainerData
+
+OMA-LPPe-LocationInformationContainerData ::= SEQUENCE {
+	containerID			OMA-LPPe-LocationInformationContainerID,
+	containerData		OCTET STRING,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-LocationInformationContainerRequest ::= SEQUENCE {
+	vendorOrOperatorID							OMA-LPPe-VendorOrOperatorID,
+	locationInformationContainerRequestList		OMA-LPPe-LocationInformationContainerRequestList,
+	...
+}
+
+OMA-LPPe-LocationInformationContainerRequestList ::= SEQUENCE 
+												(SIZE (1.. maxLocationInformationContainerDataList)) OF 
+														OMA-LPPe-LocationInformationContainerRequestItem
+
+maxLocationInformationContainerDataList	INTEGER ::= 10
+
+OMA-LPPe-LocationInformationContainerRequestItem ::= SEQUENCE {
+	containerID				OMA-LPPe-LocationInformationContainerID,
+	additionalInformation	OCTET STRING						OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-MapDataReference ::= SEQUENCE {
+	dataID					OMA-LPPe-AssistanceContainerID,
+	mapReference			OCTET STRING (SIZE (1..64)),
+	mapSize					INTEGER (1..5000)		OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Orientation ::= CHOICE {
+	eulerAngles		SEQUENCE {
+						alpha	INTEGER (0..359),
+						beta 	INTEGER (0..180),
+						gamma	INTEGER (0..359),
+						...
+						},
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ReferencePoint ::= SEQUENCE {
+	referencePointUniqueID				OMA-LPPe-ReferencePointUniqueID		OPTIONAL,
+	referencePointGeographicLocation	CHOICE {
+		location3D								EllipsoidPointWithAltitude,
+		location3DwithUncertainty				EllipsoidPointWithAltitudeAndUncertaintyEllipsoid,
+		locationwithhighaccuracy				OMA-LPPe-HighAccuracy3Dposition,
+		...
+		}																			OPTIONAL,
+	referencePointCivicLocation			OMA-LPPe-CivicLocation						OPTIONAL,
+	referencePointFloorLevel			INTEGER (-20..235)							OPTIONAL,
+	relatedReferencePoints				SEQUENCE (SIZE (1..8)) OF 
+											OMA-LPPe-ReferencePointRelationship		OPTIONAL,
+	mapDataInformation					OMA-LPPe-MapDataInformation					OPTIONAL,
+	...
+}
+
+OMA-LPPe-MapDataInformation ::= SEQUENCE (SIZE (1..16)) OF OMA-LPPe-MapDataReferenceElement
+
+OMA-LPPe-MapDataReferenceElement ::= SEQUENCE {
+	mapDataUrl		CHOICE {
+		mapDataUrl					OMA-LPPe-Uri,
+		mapDataRef					OMA-LPPe-MapDataReference
+	},
+	mapProvider		CHOICE {
+		sameAsRefPointProvider		NULL,
+		notSameAsRefPointProvider	OMA-LPPe-VendorOrOperatorID,
+		...
+	}																			OPTIONAL,
+	mapAssociation	CHOICE {
+		referencePointUniqueID		NULL,
+		otherID						VisibleString (SIZE (1..64)),
+		mapOffset					OMA-LPPe-RelativeLocation,
+		origin						NULL,
+		...
+	},
+	mapHorizontalOrientation				INTEGER (0..359)					OPTIONAL,
+	...
+}
+
+OMA-LPPe-ReferencePointRelationship ::= SEQUENCE {
+	referencePointUniqueID		OMA-LPPe-ReferencePointUniqueID,
+	relativeLocation			OMA-LPPe-RelativeLocation,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ReferencePointUniqueID ::= SEQUENCE {
+	providerID			OMA-LPPe-VendorOrOperatorID,
+	providerAssignedID	OCTET STRING,
+	version				INTEGER (1..64),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-RelativeLocation ::= SEQUENCE {
+	units					ENUMERATED {cm,dm, m10, ...}						OPTIONAL, 
+	arc-second-units		ENUMERATED {as0-0003, as0-003, as0-03, as0-3, ...}	OPTIONAL,
+	relativeNorth			INTEGER (-524288..524287),
+	relativeEast			INTEGER (-524288..524287),
+	relativeAltitude		OMA-LPPe-RelativeAltitude							OPTIONAL,
+	horizontalUncertainty	OMA-LPPe-HorizontalUncertaintyAndConfidence			OPTIONAL,
+	...
+}
+
+OMA-LPPe-HorizontalUncertaintyAndConfidence ::= SEQUENCE {
+	uncShape 	CHOICE {
+						circle			INTEGER (0..127),
+						ellipse			SEQUENCE {
+							semimajor		INTEGER (0..127),
+							semiminor		INTEGER (0..127),
+							offsetAngle		INTEGER (0..179)
+						},
+						...
+	},
+	confidence INTEGER (0..99) OPTIONAL,
+	...
+}
+
+OMA-LPPe-RelativeAltitude ::= SEQUENCE {
+	geodeticRelativeAltitude	OMA-LPPe-GeodeticRelativeAltitude	OPTIONAL,
+	civicRelativeAltitude		OMA-LPPe-CivicRelativeAltitude		OPTIONAL,
+	...
+}
+
+OMA-LPPe-GeodeticRelativeAltitude ::= SEQUENCE {
+	geodetic-height-depth		INTEGER	(-32768..32767),
+	geodetic-uncertainty-and-confidence OMA-LPPe-GeodeticUncertaintyAndConfidence	OPTIONAL,
+	...
+}
+
+OMA-LPPe-GeodeticUncertaintyAndConfidence ::= SEQUENCE {
+	uncertainty		INTEGER (0..127),
+	confidence		INTEGER (0..99)			OPTIONAL,
+	...
+}
+
+OMA-LPPe-CivicRelativeAltitude ::= SEQUENCE {
+	civic-floors		INTEGER	(-255..256),
+	civic-uncertainty-and-confidence    OMA-LPPe-CivicUncertaintyAndConfidence OPTIONAL,
+	...
+}
+
+OMA-LPPe-CivicUncertaintyAndConfidence ::= SEQUENCE {
+uncertainty		INTEGER (0..127),
+confidence		INTEGER (0..99)			OPTIONAL,
+...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Session-ID ::= SEQUENCE {
+	provider-ID			OMA-LPPe-VendorOrOperatorID,
+	server-ID			OCTET STRING (SIZE(4)),
+	session-ID			OCTET STRING (SIZE(4)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Uri ::= VisibleString (FROM ( "a".."z" | "A".."Z" | "0".."9" | ":" | "/" | "?" | "#" | "[" | "]" | "@" | "!" | "$" | "&" | "'" | "(" | ")" | "*" | "+" | "," | ";" | "=" | "-" | "." | "_" | "~" | "%"  ))
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ValidityArea ::= SEQUENCE {
+	regionSizeInv			INTEGER (1..255),
+	areaWidth				INTEGER (2..9180)		OPTIONAL,
+	codedLatOfNWCorner		INTEGER (0..4589),
+	codedLonOfNWCorner	 	INTEGER (0..9179),
+	rleList					OMA-LPPe-RleList		OPTIONAL, 
+	...
+}
+
+OMA-LPPe-RleList ::= SEQUENCE (SIZE(1..65535)) OF INTEGER (0..255)
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ValidityPeriod ::= SEQUENCE {
+	beginTime		GNSS-SystemTime,
+	beginTimeAlt	INTEGER (0..2881)	OPTIONAL,
+	duration		INTEGER (1..2881),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-VendorOrOperatorID ::= CHOICE {
+	standard-VendorOrOperatorID			INTEGER(1..1024),
+	nonStandard-VendorOrOperatorID		OMA-LPPe-NonStandard-VendorOrOperatorID,
+	...
+}
+
+
+OMA-LPPe-NonStandard-VendorOrOperatorID ::= SEQUENCE {
+	encodedID					INTEGER(0..65535),
+	visibleIdentification		OMA-LPPe-CharArray	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WirelessAccessTypes ::= BIT STRING {	gsm			(0), 
+												utra		(1),
+												lte			(2),
+												wimax		(3),
+												wifi		(4),
+												other		(5) } (SIZE(1..16))
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-ID ::= SEQUENCE {
+	apMacAddress			BIT STRING ( SIZE (48) ),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-Type ::= ENUMERATED {	
+	ieee802-11a,
+	ieee802-11b,
+	ieee802-11g,
+	ieee802-11n,
+	...,
+	ieee802-11ac,
+	ieee802-11ad
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-Type-List ::= BIT STRING {	
+	ieee802-11a (0),
+	ieee802-11b (1),
+	ieee802-11g (2),
+	ieee802-11n (3),
+	ieee802-11ac (4),
+	ieee802-11ad (5)} (SIZE (1..16))
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CommonIEsRequestCapabilities ::= SEQUENCE {
+	iP-Address-RequestCapabilities				OMA-LPPe-IP-Address-RequestCapabilities		OPTIONAL,
+	assistanceContainerSupportReq 				OMA-LPPe-AssistanceContainerSupportReq 		OPTIONAL,
+	locationInformationContainerSupportReq		OMA-LPPe-LocationInformationContainerSupportReq																									OPTIONAL,
+	relativeLocationChange-RequestCapabilities	OMA-LPPe-RelativeLocationChange-RequestCapabilities																							OPTIONAL,
+	highAccuracyFormatCapabilitiesReq			OMA-LPPe-HighAccuracyFormatCapabilitiesReq	OPTIONAL,
+	segmentedAssistanceData-ReqCapabilities		OMA-LPPe-SegmentedAssistanceData-ReqCapabilities																								OPTIONAL,
+	referencePointCapabilitiesReq				OMA-LPPe-ReferencePointCapabilitiesReq		OPTIONAL,
+	scheduledLocation-RequestCapabilities		OMA-LPPe-ScheduledLocation-RequestCapabilities 																									OPTIONAL,
+	accessCapabilitiesReq						OMA-LPPe-AccessCapabilitiesReq				OPTIONAL,
+	segmentedLocationInformation-ReqCapabilities		
+												OMA-LPPe-SegmentedLocationInformation-ReqCapabilities
+																							OPTIONAL,
+	...
+}
+
+OMA-LPPe-IP-Address-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+OMA-LPPe-AssistanceContainerSupportReq ::= SEQUENCE {
+	vendorOrOperatorIDList						OMA-LPPe-VendorOrOperatorIDList				OPTIONAL,
+	...
+}
+
+OMA-LPPe-LocationInformationContainerSupportReq ::= SEQUENCE {
+	vendorOrOperatorIDList						OMA-LPPe-VendorOrOperatorIDList				OPTIONAL,
+	...
+}
+
+OMA-LPPe-VendorOrOperatorIDList ::= SEQUENCE (SIZE(1..maxVendorOrOperatorIDList)) OF 
+																			OMA-LPPe-VendorOrOperatorID
+
+maxVendorOrOperatorIDList	INTEGER ::= 32
+
+OMA-LPPe-RelativeLocationChange-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+OMA-LPPe-HighAccuracyFormatCapabilitiesReq ::= SEQUENCE {
+	...
+}
+OMA-LPPe-SegmentedAssistanceData-ReqCapabilities ::= SEQUENCE {
+	...
+}
+
+OMA-LPPe-ReferencePointCapabilitiesReq ::= SEQUENCE {
+	referencePointProviderSupportListReq   SEQUENCE (SIZE (1..128)) OF	
+												OMA-LPPe-VendorOrOperatorID				OPTIONAL,
+	...
+}
+
+OMA-LPPe-ScheduledLocation-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+OMA-LPPe-AccessCapabilitiesReq ::= SEQUENCE {
+	...
+}
+
+OMA-LPPe-SegmentedLocationInformation-ReqCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CommonIEsProvideCapabilities ::= SEQUENCE {
+	iP-Address-Capabilities					OMA-LPPe-IP-Address-Capabilities				OPTIONAL,
+	assistanceContainerSupport				OMA-LPPe-AssistanceContainerSupport				OPTIONAL,
+	locationInformationContainerSupport		OMA-LPPe-LocationInformationContainerSupport	OPTIONAL,
+	relativeLocationChange-Capabilities		OMA-LPPe-RelativeLocationChange-Capabilities	OPTIONAL,
+	highAccuracyFormatCapabilities			OMA-LPPe-HighAccuracyFormatCapabilities 		OPTIONAL,
+	segmentedAssistanceData-ProvideCapabs	OMA-LPPe-SegmentedAssistanceData-ProvideCapabs	OPTIONAL,
+	referencePointCapabilities				OMA-LPPe-ReferencePointCapabilities				OPTIONAL,
+	scheduledLocation-Capabilities			OMA-LPPe-ScheduledLocation-Capabilities			OPTIONAL,
+	accessCapabilities						OMA-LPPe-AccessCapabilities						OPTIONAL, 
+	segmentedLocationInformation-ProvideCapabs																									OMA-LPPe-SegmentedLocationInformation-ProvideCapabs																									OPTIONAL,
+	...
+}
+
+OMA-LPPe-IP-Address-Capabilities ::= SEQUENCE {
+	iP-Address-support		BIT STRING {	iPv4		(0), 
+											iPv6		(1),
+											nat			(2)	} (SIZE(1..8))		OPTIONAL,
+	...
+}
+
+
+OMA-LPPe-AssistanceContainerSupport ::= SEQUENCE (SIZE(1..maxVendorOrOperatorIDList)) OF
+ 													OMA-LPPe-VendorOrOperatorAssistanceContainerList
+
+
+OMA-LPPe-VendorOrOperatorAssistanceContainerList ::= SEQUENCE {
+	vendorOrOperatorID			OMA-LPPe-VendorOrOperatorID,
+	assistanceContainerList		OMA-LPPe-AssistanceContainerList,
+	...
+}
+
+OMA-LPPe-AssistanceContainerList ::= SEQUENCE (SIZE(1.. maxAssistanceContainerList))OF																						OMA-LPPe-AssistanceContainerID
+
+maxAssistanceContainerList INTEGER ::= 16
+
+OMA-LPPe-LocationInformationContainerSupport ::= SEQUENCE (SIZE(1..maxVendorOrOperatorIDList)) OF
+ 											OMA-LPPe-VendorOrOperatorLocationInformationContainerList
+
+OMA-LPPe-VendorOrOperatorLocationInformationContainerList ::= SEQUENCE {
+	vendorOrOperatorID					OMA-LPPe-VendorOrOperatorID,
+	locationInformationContainerList	OMA-LPPe-LocationInformationContainerList,
+	...
+}
+
+OMA-LPPe-LocationInformationContainerList ::= SEQUENCE (SIZE(1..maxLocationInformationContainerList))OF																OMA-LPPe-LocationInformationContainerID
+
+maxLocationInformationContainerList	INTEGER ::= 64
+OMA-LPPe-RelativeLocationChange-Capabilities ::= SEQUENCE {
+	numberOfChanges		INTEGER (1..5)			OPTIONAL,
+	...
+}
+
+OMA-LPPe-HighAccuracyFormatCapabilities ::= BIT STRING {	hAposition(0),
+															hAvelocity(1) } (SIZE(1..8))
+
+OMA-LPPe-SegmentedAssistanceData-ProvideCapabs ::= SEQUENCE {
+	maxSegments		INTEGER (2..4096)		OPTIONAL,
+	maxSize			INTEGER	(1..5000)		OPTIONAL,
+	minSize			INTEGER (1..5000)		OPTIONAL,
+	resume			NULL					OPTIONAL,
+	...
+}
+
+OMA-LPPe-ReferencePointCapabilities ::= SEQUENCE {
+	relativeLocationReportingSupport	BIT STRING { 	geo				(0),
+														civic			(1),
+														otherProviders	(2)  } (SIZE (1..8)),
+	referencePointProviderSupportList  	SEQUENCE (SIZE (1..128)) OF
+									 		OMA-LPPe-ReferencePointProviderSupportElement	OPTIONAL,
+	...
+}
+
+OMA-LPPe-ReferencePointProviderSupportElement ::= SEQUENCE {
+	referencePointProvider			OMA-LPPe-VendorOrOperatorID,
+	mapDataSupport					SEQUENCE {
+										mapDataFormat		OCTET STRING		OPTIONAL,
+										...
+										}		OPTIONAL,
+	...
+}
+
+OMA-LPPe-ScheduledLocation-Capabilities ::= SEQUENCE {
+	minimumWindow			INTEGER (1..1024)		OPTIONAL,
+	gnssTimeReference		GNSS-ID-Bitmap			OPTIONAL,
+	networkTimeReference	ENUMERATED {serving,
+										servingOrNonServing,
+										... }		OPTIONAL,
+	...
+}
+
+OMA-LPPe-AccessCapabilities ::= SEQUENCE {
+	accessTypeUnknown			NULL							OPTIONAL,
+	fixedAccessTypes			OMA-LPPe-FixedAccessTypes		OPTIONAL,
+	wirelessAccessTypes			OMA-LPPe-WirelessAccessTypes	OPTIONAL,
+	...
+}
+
+OMA-LPPe-SegmentedLocationInformation-ProvideCapabs ::= SEQUENCE {
+	maxSegments		INTEGER (2..4096)		OPTIONAL,
+	maxSize			INTEGER	(1..5000)		OPTIONAL,
+	minSize			INTEGER (1..5000)		OPTIONAL,
+	resume			NULL					OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CommonIEsRequestAssistanceData ::= SEQUENCE  {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CommonIEsProvideAssistanceData ::= SEQUENCE  {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CommonIEsRequestLocationInformation ::= SEQUENCE  {
+	iP-Address-Request					OMA-LPPe-IP-Address-Request							OPTIONAL,
+	locationInformationContainerRequest	OMA-LPPe-LocationInformationContainerRequest 		OPTIONAL,
+	requestPeriodicLocInfoWithUpdate	OMA-LPPe-RequestPeriodicLocInfoWithUpdate			OPTIONAL,
+															--Cond RequestPeriodicLocInfoWithUpdate
+	relativeLocationChange-Request		OMA-LPPe-RelativeLocationChange-Request				OPTIONAL,
+	localPositionRequest				OMA-LPPe-LocalPositionRequest						OPTIONAL,
+	scheduledLocation-Request			OMA-LPPe-ScheduledLocation-Request					OPTIONAL,
+	accessTypeRequest					OMA-LPPe-AccessTypeRequest							OPTIONAL,
+	segmentedLIpreference				ENUMERATED {useBasic, useResume, ...}				OPTIONAL,
+	segmentedLIResume					OMA-LPPe-SegmentedLIResume							OPTIONAL,
+															--Cond segmentedTransferResume	
+	...
+}
+
+OMA-LPPe-IP-Address-Request ::= SEQUENCE {
+	...
+}
+
+OMA-LPPe-RequestPeriodicLocInfoWithUpdate ::= SEQUENCE {
+	session-ID					OCTET STRING (SIZE(4)),
+	typeOfLocInfoRequest		OMA-LPPe-TypeOfLocInfoRequest,
+	...
+}
+
+OMA-LPPe-TypeOfLocInfoRequest ::= ENUMERATED {
+	initialRequest,
+	updateAndContinueIfUpdateFails,
+	updateAndAbortIfUpdateFails,
+	...
+}
+
+OMA-LPPe-RelativeLocationChange-Request ::= SEQUENCE {
+	numberOfChanges		INTEGER (1..5)			OPTIONAL,
+	...
+}
+
+OMA-LPPe-LocalPositionRequest ::= SEQUENCE {
+	typeOfRequest					ENUMERATED { localOptional, localMandatory, localOnly, ... },
+	referencePointReq				SEQUENCE (SIZE (1..8)) OF 
+											OMA-LPPe-ReferencePointUniqueID			OPTIONAL,
+	...
+}
+
+OMA-LPPe-ScheduledLocation-Request ::= SEQUENCE {
+	gnssTime			GNSS-SystemTime			OPTIONAL,		--Cond AtLeastOne
+	networkTime			NetworkTime				OPTIONAL,		--Cond AtLeastOne
+	relativeTime		INTEGER (1..1024)		OPTIONAL,		--Cond AtLeastOne
+	windowSize			INTEGER (1..1024)		OPTIONAL,
+	...
+}
+
+OMA-LPPe-AccessTypeRequest ::= SEQUENCE {
+	...
+}
+
+OMA-LPPe-SegmentedLIResume ::= SEQUENCE {
+	segmentedLI-session-ID		INTEGER (1..256),
+	next-segment-number			INTEGER (1..4096)}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CommonIEsProvideLocationInformation ::= SEQUENCE {
+	highAccuracy3Dposition				OMA-LPPe-HighAccuracy3Dposition 			OPTIONAL,
+																--Cond HighAccuracy
+	localPosition						OMA-LPPe-LocalPosition						OPTIONAL,
+	highAccuracy3Dvelocity				OMA-LPPe-HighAccuracy3Dvelocity 			OPTIONAL,
+																--Cond HighAccuracy
+	iP-Address-List						OMA-LPPe-IP-Address-List					OPTIONAL,
+	locationInformationContainer		OMA-LPPe-LocationInformationContainer 		OPTIONAL,
+	providePeriodicLocInfoWithUpdate	OMA-LPPe-ProvidePeriodicLocInfowithUpdate	OPTIONAL,  
+																 --Cond ProvidePeriodicLocInfoWithUpdate
+	relativeLocationChangeList			OMA-LPPe-RelativeLocationChangeList			OPTIONAL,
+	scheduledLocation					OMA-LPPe-ScheduledLocation					OPTIONAL,
+																--Cond ScheduledLocationRequested
+	accessTypes							OMA-LPPe-AccessTypes						OPTIONAL,
+	segmentedLITransfer					OMA-LPPe-SegmentedLITransfer				OPTIONAL,
+																--Cond segmentedTransferWithResume
+	locationInformationTimeStamp		OMA-LPPe-TimeStamp							OPTIONAL,
+	...,
+	locationSource						OMA-LPPe-LocationSource						OPTIONAL
+																--Cond LocationSource
+}
+
+OMA-LPPe-LocalPosition ::= SEQUENCE {
+	referencePoint				OMA-LPPe-ReferencePointUniqueID,
+	subjectLocation				OMA-LPPe-RelativeLocation						OPTIONAL,
+	...
+}
+
+OMA-LPPe-IP-Address-List ::= SEQUENCE (SIZE (1..maxIPAddress)) OF OMA-LPPe-IP-Address
+
+maxIPAddress INTEGER ::= 5
+
+OMA-LPPe-IP-Address ::= SEQUENCE {
+	local-IP-Address	CHOICE	{
+		iPv4	BIT STRING (SIZE(32)),
+		iPv6	BIT STRING (SIZE(128)),
+		...
+		},
+	bearer		OMA-LPPe-Bearer,
+	nat			BOOLEAN				OPTIONAL,
+	...
+}
+
+OMA-LPPe-Bearer ::= ENUMERATED {
+	unknown,
+	gsm,
+	utran,
+	lte,
+	wlan,
+	wimax,
+	dsl,
+	pktcable,
+	other,
+	...
+}
+
+OMA-LPPe-ProvidePeriodicLocInfowithUpdate ::= SEQUENCE {
+	session-ID					OCTET STRING (SIZE(4)),
+	typeOfLocInfoProvide		OMA-LPPe-TypeOfLocInfoProvide,
+	...
+}
+
+OMA-LPPe-TypeOfLocInfoProvide ::= ENUMERATED {
+	responseToInitialRequest,
+	providePeriodicLocInfo,
+	responseToServerUpdateRequest,
+	targetUpdate,
+	...
+}
+
+OMA-LPPe-RelativeLocationChangeList ::= SEQUENCE (SIZE (1..maxRelativeLocation)) OF 
+																		OMA-LPPe-RelativeLocationChange
+
+OMA-LPPe-RelativeLocationChange ::= SEQUENCE {
+	relativeTime				INTEGER (0..65535)		OPTIONAL,
+	transactionID				INTEGER (0..255)		OPTIONAL,
+	relativeLocation			OMA-LPPe-RelativeLocation,
+	...
+}
+
+maxRelativeLocation		INTEGER ::= 5
+
+OMA-LPPe-ScheduledLocation ::= SEQUENCE {
+	disposition		ENUMERATED {withinWindow,
+								outsideWindowOrNoWindow,
+								notSupportedDueToNoCapability,
+								notSupportedDueToNoTimeReference,
+								notSupportedDueToConflictWithAnotherRequest,
+								notSupportedForOtherReasons,
+								... },
+	actualWindow	SEQUENCE {
+		start		INTEGER (-512..511),
+		duration	INTEGER	(0..2047)
+	}										OPTIONAL,
+	...
+}
+
+OMA-LPPe-AccessTypes ::= SEQUENCE {
+	accessTypeUnknown			NULL							OPTIONAL,
+	fixedAccessTypes			OMA-LPPe-FixedAccessTypes		OPTIONAL,
+	wirelessAccessTypes			OMA-LPPe-WirelessAccessTypes	OPTIONAL,
+	...
+}
+
+OMA-LPPe-SegmentedLITransfer ::= SEQUENCE {
+	segmentedLI-session-ID			INTEGER (1..256),
+	segment-number		INTEGER (1..4096),
+	...
+}
+
+OMA-LPPe-TimeStamp ::= CHOICE {
+	gnssTime			GNSS-SystemTime,
+	networkTime			NetworkTime,
+	relativeTime		INTEGER (0..1024),
+	...
+}
+
+OMA-LPPe-LocationSource ::= SEQUENCE {
+	agnss				NULL	OPTIONAL,
+	otdoa				NULL	OPTIONAL,
+	eotd				NULL	OPTIONAL,
+	otdoaUTRA			NULL	OPTIONAL,
+	ecidLTE				NULL	OPTIONAL,
+	ecidGSM				NULL	OPTIONAL,
+	ecidUTRA			NULL	OPTIONAL,
+	wlanAP				NULL	OPTIONAL,
+	srn					NULL	OPTIONAL,
+	sensors				NULL	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CommonIEsAbort ::= SEQUENCE {
+	abortCause ENUMERATED	{periodicADsessionStop, 
+						periodicADprocedureNotSupported, 
+						periodicADprocedureNotAccepted, 
+						periodicLocInfoSessionStop, 
+						periodicLocInfoProcedureNotSupported, 
+						periodicLocInfoProcedureNotAccepted, 
+						... 
+						}										OPTIONAL,
+	periodicSessionIDtoAbort	OCTET STRING (SIZE(4)) 			OPTIONAL, 	--Cond periodicWithUpdate
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-CommonIEsError ::= SEQUENCE {	
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-ProvideLocationInformation ::= SEQUENCE {	
+	highAccuracyReferenceTime	GNSS-SystemTime 		OPTIONAL, --Cond HighAccuracy
+	highAccuracyMeasurements		OMA-LPPe-AGNSS-HAgnssProvide				OPTIONAL,
+	ionosphereMeasurements		OMA-LPPe-AGNSS-IonosphereMeasurements 	OPTIONAL,
+	localSurfaceMeasurements		OMA-LPPe-AGNSS-LocalSurfaceMeasurements OPTIONAL,
+	error						OMA-LPPe-AGNSS-Error 					OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-HAgnssProvide ::= CHOICE {
+	controlParameters	SEQUENCE {
+		duration				OMA-LPPe-Duration,
+		rate					INTEGER(1..64),
+		antennaDescription 		OMA-LPPe-AGNSS-AntennaDescription		OPTIONAL, --Cond HAantenna
+		...
+	},
+	measurements	SEQUENCE {
+		position		EllipsoidPointWithAltitudeAndUncertaintyEllipsoid 	OPTIONAL, 
+																					--Cond NotForbidden
+		referenceTime	GNSS-SystemTime, 
+		localPressure	SEQUENCE {
+							pressure				INTEGER(-1024..1023),
+							pressureUncertainty		INTEGER(0..127),
+							...
+						} OPTIONAL, --Cond HApressure
+		antennaOrientation		OMA-LPPe-Orientation	OPTIONAL, --Cond HAantOrientation
+		signalMeasurements		SEQUENCE (SIZE(1..16)) OF OMA-LPPe-AGNSS-HAgnssMeasurementElement,
+		...
+		},
+	...
+}
+
+OMA-LPPe-AGNSS-HAgnssMeasurementElement::= SEQUENCE {
+	gnss-ID					GNSS-ID,
+	haGNSSperSignalList 	SEQUENCE (SIZE(1..8)) OF OMA-LPPe-HAgnssPerSignalElement,
+	...
+}
+
+OMA-LPPe-HAgnssPerSignalElement ::= SEQUENCE {
+	signal-ID				GNSS-SignalID,
+	haGNSSperSVlist 		SEQUENCE (SIZE(1..64)) OF OMA-LPPe-HAgnssPerSVelement,
+	...
+}
+
+
+OMA-LPPe-HAgnssPerSVelement ::= SEQUENCE {
+	svID 				SV-ID,
+	integerCodePhase 	INTEGER (0..255)	OPTIONAL, --Cond IfAvailable
+	codePhase 			INTEGER (0..14989622),
+	codePhaseRMSError 	INTEGER (0..63),
+	multipathDetection	ENUMERATED	{low,
+									 moderate,
+									 high,
+									 notMeasured,
+									 ...},
+	cnr					INTEGER(0..255),	
+	adr 				INTEGER (0..536870911),
+	adrRMSerror			INTEGER (0..127),
+	lockIndicator		BOOLEAN,
+	...
+}
+
+-- ASN1STOP
+
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-IonosphereMeasurements ::= SEQUENCE {
+	gnssTime				GNSS-SystemTime,
+	position				EllipsoidPointWithAltitudeAndUncertaintyEllipsoid,
+	tecPerSV				OMA-LPPe-AGNSS-TECPerSV				OPTIONAL,		--Cond TecPerSV
+	tecAtZenith			OMA-LPPe-AGNSS-TECAtZenith			OPTIONAL,		--Cond ZenithTec
+	...
+}
+
+OMA-LPPe-AGNSS-TECPerSV ::= SEQUENCE (SIZE(1..64)) OF OMA-LPPe-AGNSS-TECPerSVElement
+
+OMA-LPPe-AGNSS-TECPerSVElement ::= SEQUENCE {
+	azimuth			INTEGER(0..359),
+	elevation		INTEGER(0..90),
+	tecValue			INTEGER(0..511),
+	tecUncertainty	INTEGER(0..63),
+	...
+}
+
+OMA-LPPe-AGNSS-TECAtZenith ::= SEQUENCE {
+	tecValueAtZenith				INTEGER(0..511),
+	tecUncertaintyAtZenith		INTEGER(0..63), 
+	...
+}
+
+-- ASN1STOP
+
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-LocalSurfaceMeasurements ::= SEQUENCE {
+	gnssTime				GNSS-SystemTime,
+	position				EllipsoidPointWithAltitudeAndUncertaintyEllipsoid,
+	pressure				INTEGER(-1024..1023),
+	pressureUncertainty		INTEGER(0..127),
+	temperatureMeasurement	SEQUENCE {
+								temperature				INTEGER(-64..63)	OPTIONAL,
+								temperatureUncertainty	INTEGER(0..7)		OPTIONAL,
+								...
+								} OPTIONAL, --Cond TemperatureAvailable
+	...
+}
+
+-- ASN1STOP
+
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-Error ::= CHOICE {
+	agnss-locationServerErrorCauses		OMA-LPPe-AGNSS-LocationServerErrorCauses,
+	agnss-targetDeviceErrorCauses		OMA-LPPe-AGNSS-TargetDeviceErrorCauses,
+	...
+}
+
+-- ASN1STOP
+
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-LocationServerErrorCauses ::= SEQUENCE {
+	 waIonoErrorCauses	ENUMERATED {	undefined,
+										waIonoNotSupportedByServer,
+										waIonoNotSupportedInTargetArea,
+										waIonoNotSupportedForAnyRequestedGNSS,
+										...} OPTIONAL,
+	 ccpErrorCauses 	ENUMERATED {	undefined,
+										ccpNotSupportedByServer, 
+										ccpNotSupportedInTargetArea,
+										ccpNotSupportedForAnyRequestedSignal,
+										ccpQorCannotBeMet, 
+										ccpUnableToModifyControlParameters,
+										ccpMultiReferenceStationNotSupported,
+										ccpNeighborListNotSupported,
+										ccpSupportAreaAssistanceNotSupported,
+										...} OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-TargetDeviceErrorCauses ::= SEQUENCE {
+	highAccuracyErrorCauses 			ENUMERATED {	undefined,
+														highAccuracyMethodNotSupported,
+														...} OPTIONAL,
+	ionosphereMeasurementErrorCauses	ENUMERATED	{	undefined,
+														ionosphereMeasurementsNotSupported,
+													 	ionosphereMeasurementsNotAvailable,
+														...}	OPTIONAL,
+	environmentObservationErrorCauses 	ENUMERATED	{	undefined,
+														surfaceMeasurementsNotSupported,
+													 	surfaceMeasurementsNotAvailable,
+														...}	OPTIONAL,
+	haGNSSerrorCauses					ENUMERATED {	undefined,
+														haGNSSnotSupportedByTarget,
+														haGNSSunavailableForAllRequestedSignals,
+														haGNSSantennaInformationNotSupported,
+														haGNSSantennaInformationNotAvailable,
+														haGNSSpressureInformationNotSupported,
+														haGNSSpressureInformationNotAvailable,
+														haGNSSunableToModifyControlParameters,
+														...} OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-AntennaDescription ::= SEQUENCE {
+	antennaDescription		CHOICE {
+								igsAntennaName 		OMA-LPPe-CharArray,
+								proprietaryName		OMA-LPPe-CharArray,
+								...
+								},
+	antennaSetupID			INTEGER(0..255)			OPTIONAL,
+	antennaSerialNumber		OMA-LPPe-CharArray 		OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-RequestLocationInformation ::= SEQUENCE {
+	positioningInstructions		OMA-LPPe-AGNSS-PositioningInstructions 		OPTIONAL,
+	ionosphereMeasurementsReq	BIT STRING	{tecPerSV(0),
+											 zenithTEC(1) }(SIZE(1..8))		OPTIONAL,
+	localSurfaceMeasurementReq	OMA-LPPe-AGNSS-LocalSurfaceMeasurementReq 	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-PositioningInstructions ::= SEQUENCE {	
+	highAccuracyMethodRequested		BOOLEAN,
+	haGNSSreq				OMA-LPPe-AGNSS-HAgnssRequestControlParameters	OPTIONAL, --Cond HAgnssReq
+	...,
+	extUncertRange				BOOLEAN	OPTIONAL
+}
+
+-- ASN1STOP
+-- ASN1START
+
+OMA-LPPe-AGNSS-LocalSurfaceMeasurementReq ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-HAgnssRequestControlParameters ::= SEQUENCE {
+	duration					OMA-LPPe-Duration	OPTIONAL, 	--Cond FirstOrModify
+	rate						INTEGER(1..63)		OPTIONAL,	--Cond FirstOrModify
+	antennaInformationReq		ENUMERATED {antennaDescriptionOnly, 
+											antennaDescriptionAndOrientation,
+											...} 	OPTIONAL,
+	pressureInformationReq		BOOLEAN,						--Cond FirstOrModify
+	signalReqList				SEQUENCE (SIZE(1..16)) OF 
+										OMA-LPPe-AGNSS-HAgnssSignalReqElement 	OPTIONAL, --Cond First
+	...
+}
+
+OMA-LPPe-AGNSS-HAgnssSignalReqElement ::= SEQUENCE {
+	gnssID		GNSS-ID,
+	signals		GNSS-SignalIDs,
+	...
+}
+
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-ProvideCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-RequestCapabilities ::= SEQUENCE {
+	assistanceDataSupportListReq				NULL	OPTIONAL,
+	environmentObservationSupportListReq		NULL	OPTIONAL,
+	haGNSSsupportReq							NULL	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AGNSS-Abort::= SEQUENCE {
+	targetDeviceAbortCauses		SEQUENCE {
+		ccpAbort 	ENUMERATED  {	undefined, 
+									ccpNotSupported, 
+									ccpNotSupportedForProvidedSignals, 
+									... } 	   OPTIONAL,
+		waIonoAbort	ENUMERATED  {	undefined, 
+									waIonoNotSupported, 
+									waIonoNotSupportedForProvidedGNSSs, 
+									... } OPTIONAL,
+		...
+		} OPTIONAL, 
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-ProvideLocationInformation ::= SEQUENCE {	
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-RequestLocationInformation ::= SEQUENCE {
+		assistanceAvailability					BOOLEAN,
+		...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-ProvideCapabilities ::= SEQUENCE {
+	eNodeB-AD-sup				SEQUENCE { ... }				OPTIONAL,
+	home-eNodeB-AD-sup			SEQUENCE { ... }				OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-EOTD-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-EOTD-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-EOTD-ProvideLocationInformation ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-EOTD-RequestLocationInformation ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-EOTD-ProvideCapabilities ::= SEQUENCE {
+	eotdSupport	BIT STRING{ ueBased(0), ueAssisted(1) },
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-EOTD-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-UTRA-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-UTRA-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-UTRA-ProvideLocationInformation ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-UTRA-RequestLocationInformation ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-UTRA-ProvideCapabilities ::= SEQUENCE {
+	ueBasedSupported	BOOLEAN,
+	ueAssistedSupported	BOOLEAN,
+	ipdlSupported		BOOLEAN,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-OTDOA-UTRA-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-LTE-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-LTE-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-LTE-ProvideLocationInformation ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-LTE-RequestLocationInformation ::= SEQUENCE {
+	requestedMeasurements	BIT STRING { 	rsrp		(0),
+											rsrq		(1),
+											ueRxTx		(2),
+											non-serving	(3),
+											historic	(4)	} (SIZE(1..8)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-LTE-ProvideCapabilities ::= SEQUENCE {
+	ecid-lte-MeasSupported	BIT STRING 	{rsrp		(0),
+										rsrq		(1),
+										ueRxTx		(2),
+										non-serving	(3),
+										historic	(4)	} (SIZE(1..8)),
+	ecid-lte-eNodeB-ADSupported	BIT STRING	{bslist				(0),
+											 bslocation			(1),
+											 transmit-power		(2),
+											 antennaPortConfig	(3),
+											 antenna-gain		(4),
+											 beam-width			(5),
+											 transmit-direction	(6), 
+											 frequency-accuracy	(7),
+											 non-serving 		(8) } (SIZE(1..16)),
+	ecid-utra-HeNB-ADSupported	BIT STRING	{bslist					(0),
+											 bslocation				(1),
+											 locationreliability	(2),
+											 transmit-power			(3),
+											 antennaPortConfig		(4), 
+											 frequency-accuracy		(5),
+											 coveragearea			(6),
+											 non-serving 			(7) } (SIZE(1..16)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-LTE-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-GSM-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+
+OMA-LPPe-ECID-GSM-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-GSM-ProvideLocationInformation ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-GSM-RequestLocationInformation ::= SEQUENCE {
+	requestedMeasurements	BIT STRING { 	rxLevel		(0),
+											tA			(1),
+											nMR-GERAN	(2),
+											non-serving	(3),
+											historic	(4)	} (SIZE(1..8)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-GSM-ProvideCapabilities ::= SEQUENCE {
+	ecid-gsm-MeasSupported	BIT STRING { 	rxLevel		(0),
+											tA			(1),
+											nMR-GERAN	(2),
+											non-serving	(3),
+											historic	(4)	} (SIZE(1..8)),
+	ecid-gsm-ADSupported	BIT STRING	{ bslist				(0),
+										  bslocation			(1),
+										  transmit-power		(2),
+										  antenna-gain			(3),
+										  beam-width			(4),
+										  transmit-direction	(5),
+										  frequency-accuracy	(6),
+										  non-serving 			(7) } (SIZE(1..16)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-GSM-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-UTRA-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-UTRA-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-UTRA-ProvideLocationInformation ::= SEQUENCE {	
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-UTRA-RequestLocationInformation ::= SEQUENCE {
+	requestedMeasurements		BIT STRING {	measuredResultsList			(0),
+												tdd-timingAdvance			(1),
+												mRL-utra-CarrierRSSI		(2),
+												mRL-FDD-cpich-Ec-N0			(3),
+												mRL-FDD-cpich-RSCP			(4),
+												mRL-FDD-pathloss			(5),
+												mRL-TDD-primaryCCPCH-RSCP	(6),
+												mRL-TDD-pathloss			(7),
+												non-serving 				(8),
+												historic 					(9) } (SIZE(1..16)),
+		...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-UTRA-ProvideCapabilities ::= SEQUENCE {
+	ecid-utra-MeasSupported	BIT STRING {	measuredResultsList				(0),
+												tdd-timingAdvance			(1),
+												mRL-utra-CarrierRSSI		(2),
+												mRL-FDD-cpich-Ec-N0			(3),
+												mRL-FDD-cpich-RSCP			(4),
+												mRL-FDD-pathloss			(5),
+												mRL-TDD-primaryCCPCH-RSCP	(6),
+												mRL-TDD-pathloss			(7),   
+												non-serving 				(8),
+												historic 					(9) } (SIZE(1..16)),
+	ecid-utra-nodeB-ADSupported	BIT STRING	{ bslist				(0),
+											  bslocation			(1),
+											  transmit-power		(2),
+											  antenna-gain			(3),
+											  beam-width			(4),
+											  transmit-direction	(5), 
+											  frequency-accuracy	(6),
+											  non-serving 			(7) } (SIZE(1..16)),
+	ecid-utra-HNB-ADSupported	BIT STRING	{ bslist				(0),
+											  bslocation			(1),
+											  locationreliability	(2),
+											  transmit-power		(3), 
+											  frequency-accuracy	(4),
+											  coveragearea			(5),
+											  non-serving 			(6) } (SIZE(1..16)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-UTRA-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-ProvideLocationInformation ::= SEQUENCE {	
+	wlan-AP-CombinedLocationInformation	SEQUENCE (SIZE (1..maxWLANAPSize)) OF 
+												OMA-LPPe-WLAN-AP-LocationInformationList	OPTIONAL,
+	wlan-AP-Error						OMA-LPPe-WLAN-AP-Error								OPTIONAL,
+	...
+}
+
+OMA-LPPe-WLAN-AP-LocationInformationList ::= SEQUENCE {
+	wlan-AP-LocationInformation			OMA-LPPe-WLAN-AP-LocationInformation,
+	relativeTimeStamp					INTEGER (0..65535) 	OPTIONAL,
+	servingFlag  						BOOLEAN, 
+	...
+}
+
+maxWLANAPSize	INTEGER ::= 64
+
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-LocationInformation ::= SEQUENCE { 
+	apMACAddress			OMA-LPPe-WLAN-AP-ID,
+	apSSID					OCTET STRING (SIZE (1..32))		OPTIONAL,
+	apSignaltoNoise			INTEGER(-127..128)				OPTIONAL,
+	apDeviceType			OMA-LPPe-WLAN-AP-Type			OPTIONAL,
+	apPHYtype				OMA-LPPe-WLAN-AP-PHY-Type		OPTIONAL,
+	apSignalStrength		INTEGER(-127..128)				OPTIONAL,
+	apChannelFrequency		INTEGER(0..256)					OPTIONAL,
+	apRoundTripDelay		OMA-LPPe-WLAN-RTD				OPTIONAL,
+	ueTransmitPower			INTEGER(-127..128)				OPTIONAL,
+	ueAntennaGain			INTEGER (-127..128)				OPTIONAL,
+	apReportedLocation		OMA-LPPe-WLAN-ReportedLocation	OPTIONAL,
+	...,
+	apTransmitPower			INTEGER (-127..128)	OPTIONAL,
+	apAntennaGain			INTEGER (-127..128) OPTIONAL,
+	ueSignaltoNoise			INTEGER (-127..128) OPTIONAL,
+	ueSignalStrength		INTEGER (-127..128) OPTIONAL,
+	apSignalStrengthDelta	INTEGER	(0..1) OPTIONAL, -- Cond APSSDelta
+	ueSignalStrengthDelta	INTEGER	(0..1) OPTIONAL, -- Cond UESSDelta
+	apSignaltoNoiseDelta	INTEGER	(0..1) OPTIONAL, -- Cond APSNDelta
+	ueSignaltoNoiseDelta	INTEGER	(0..1) OPTIONAL, -- Cond UESNDelta
+	operatingClass			INTEGER (0..255) OPTIONAL,
+	ueMacAddress				BIT STRING (SIZE (48)) OPTIONAL
+}
+
+OMA-LPPe-WLAN-AP-PHY-Type ::= ENUMERATED { 	unknown, any, fhss, dsss, irbaseband, ofdm, hrdsss, erp,
+											ht, ihv, ... }
+
+OMA-LPPe-WLAN-RTD ::= SEQUENCE { 
+ 	rTDValue     INTEGER(0..16777215), 
+ 	rTDUnits     OMA-LPPe-WLAN-RTDUnits,
+ 	rTDAccuracy  INTEGER(0..255)		OPTIONAL,
+ 	...
+}
+
+OMA-LPPe-WLAN-RTDUnits ::= ENUMERATED {
+ 	microseconds,
+	hundredsofnanoseconds,
+	tensofnanoseconds,
+	nanoseconds,
+	tenthsofnanoseconds,
+	...
+}
+
+OMA-LPPe-WLAN-ReportedLocation ::= SEQUENCE { 
+
+	locationDataLCI					OMA-LPPe-WLAN-LocationDataLCI			OPTIONAL,
+	...
+}
+
+
+OMA-LPPe-WLAN-LocationDataLCI ::= SEQUENCE {
+	latitudeResolution		BIT STRING (SIZE (6)),
+	latitude				BIT STRING (SIZE (34)),
+	longitudeResolution		BIT STRING (SIZE (6)),
+	longitude				BIT STRING (SIZE (34)),
+	altitudeType			BIT STRING (SIZE (4)),
+	altitudeResolution		BIT STRING (SIZE (6)),
+	altitude				BIT STRING (SIZE (30)),
+	datum					BIT STRING (SIZE (8)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-RequestLocationInformation ::= SEQUENCE {
+	requestedMeasurements	BIT STRING {	
+											apSSID		(0),
+											apSN		(1),
+											apDevType	(2),
+											apPhyType	(3),
+											apRSSI		(4),
+											apChanFreq	(5),
+											apRTD		(6),
+											ueTP		(7),
+											ueAG		(8),
+											apRepLoc	(9),
+											non-serving	(10),
+											historic	(11),
+											apTP		(12),
+											apAG		(13),
+											ueSN		(14),
+											ueRSSI		(15)} (SIZE(1..16)),
+	... ,
+	additionalRequestedMeasurements	BIT STRING {
+											oc			(0),
+											ueMacAddr	(1)} (SIZE(1..16)) OPTIONAL
+}
+
+-- ASN1STOP
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-ProvideCapabilities ::= SEQUENCE {
+	wlan-ecid-MeasSupported	BIT STRING	{	
+											apSSID		(0),
+											apSN		(1),
+											apDevType	(2),
+											apPhyType	(3),
+											apRSSI		(4),
+											apChanFreq	(5),
+											apRTD		(6),
+											ueTP		(7),
+											ueAG		(8),
+											apRepLoc	(9),
+											non-serving	(10),
+											historic	(11),
+											apTP		(12),
+											apAG		(13),
+											ueSN		(14),
+											ueRSSI		(15)}	(SIZE(1..16)),
+	wlan-types-Supported	 	OMA-LPPe-WLAN-AP-Type-List		OPTIONAL,
+	ap-Capability				OMA-LPPe-WLAN-AP-Capability		OPTIONAL,
+	wlan-ap-ADSupported	BIT STRING	{aplist					(0),
+									 aplocation				(1),
+									 locationreliability	(2),
+									 transmit-power			(3),
+									 antenna-gain			(4),
+									 coveragearea			(5),
+									 non-serving 			(6) } (SIZE(1..16)),
+	...,
+	additional-wlan-ecid-MeasSupported	BIT STRING {
+											oc			(0),
+											ueMacAddr	(1)} (SIZE(1..16)) OPTIONAL
+
+}
+
+OMA-LPPe-WLAN-AP-Capability ::= SEQUENCE {
+	apMACAddress			OMA-LPPe-WLAN-AP-ID,
+	apTypes					OMA-LPPe-WLAN-AP-Type-List,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-Error ::= CHOICE {
+	locationServerErrorCauses		OMA-LPPe-WLAN-AP-LocationServerErrorCauses,
+	targetDeviceErrorCauses			OMA-LPPe-WLAN-AP-TargetDeviceErrorCauses,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-LocationServerErrorCauses ::= SEQUENCE {
+	cause								ENUMERATED	{undefined,
+													requestedADNotAvailable,
+													notAllrequestedADAvailable,
+													...
+													},
+	apMandatoryDataUnavailable			NULL		OPTIONAL,
+	apLocationsUnavailable				NULL		OPTIONAL,
+	apLocationReliabilityUnavailable	NULL		OPTIONAL,
+	apTransmitPowerUnavailable			NULL		OPTIONAL,
+	apAntennaGainUnavailable			NULL		OPTIONAL,
+	apCoverageAreaUnavailable			NULL		OPTIONAL,
+	nonservingADUnavailable				NULL		OPTIONAL,
+	...,
+	apTPNotAvailable						NULL		OPTIONAL,
+	apAGNotAvailable						NULL		OPTIONAL,
+	ueSNNotAvailable						NULL		OPTIONAL,
+	ueRSSINotAvailable						NULL		OPTIONAL,
+	ocNotAvailable							NULL		OPTIONAL
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-WLAN-AP-TargetDeviceErrorCauses ::= SEQUENCE {
+	cause									ENUMERATED {undefined,
+														requestedMeasurementsNotAvailable,
+														notAllrequestedMeasurementsPossible,
+														...
+														},
+	apSSIDnotAvailable						NULL		OPTIONAL,
+	apSNMeasurementNotPossible				NULL		OPTIONAL,
+	apDevTypeNotAvailable					NULL		OPTIONAL,
+	apPhyTypeNotAvailable					NULL		OPTIONAL,
+	apRSSIMeasurementNotPossible			NULL		OPTIONAL,
+	apChanFreqNotAvailable					NULL		OPTIONAL,
+	apRTDMeasurementNotPossible				NULL		OPTIONAL,
+	ueTPNotAvailable						NULL		OPTIONAL,
+	ueAGNotAvailable						NULL		OPTIONAL,
+	apRecLocNotAvailable					NULL		OPTIONAL,
+	non-servingMeasurementsNotAvailable	NULL		OPTIONAL,
+	historicMeasurementsNotAvailable		NULL		OPTIONAL,
+	...,
+	apTPNotAvailable						NULL		OPTIONAL,
+	apAGNotAvailable						NULL		OPTIONAL,
+	ueSNNotAvailable						NULL		OPTIONAL,
+	ueRSSINotAvailable					NULL		OPTIONAL,
+	ocNotAvailable						NULL		OPTIONAL,
+	ueMACAddressNotAvailable				NULL		OPTIONAL
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-WiMax-ProvideLocationInformation ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-WiMax-RequestLocationInformation ::= SEQUENCE {
+	requestedMeasurements	BIT STRING { 	rTD				(0),
+											rTDstd			(1),
+											nMR				(2),
+											nMRrelDelay		(3),
+											nMRrelDelaystd	(4),
+											nMRrSSI			(5),
+											nMRrSSIstd		(6),
+											nMRbSTxPower	(7),
+											nMRcINR			(8),
+											nMRcINRstd		(9),
+											nMRbSLocation	(10),
+											non-serving		(11),
+											historic		(12) } (SIZE(1..16)),
+		...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-WiMax-ProvideCapabilities ::= SEQUENCE {
+	ecid-wimax-MeasSupported	BIT STRING { 	rTD				(0),
+												rTDstd			(1),
+												nMR				(2),
+												nMRrelDelay		(3),
+												nMRrelDelaystd	(4),
+												nMRrSSI			(5),
+												nMRrSSIstd		(6),
+												nMRbSTxPower	(7),
+												nMRcINR			(8),
+												nMRcINRstd		(9),
+												nMRbSLocation	(10),
+												non-serving		(11),
+												historic		(12) } (SIZE(1..16)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-ECID-WiMax-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Sensor-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Sensor-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Sensor-ProvideLocationInformation ::= SEQUENCE {
+	motionStateList			OMA-LPPe-Sensor-MotionStateList 	OPTIONAL,
+	sensorError				OMA-LPPe-Sensor-Error				OPTIONAL,
+	...,
+	atmosphericPressure		OMA-LPPe-AtmosphericPressure		OPTIONAL
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+
+OMA-LPPe-Sensor-MotionStateList ::= SEQUENCE (SIZE(1..8)) OF OMA-LPPe-Sensor-MotionStateElement
+
+OMA-LPPe-Sensor-MotionStateElement ::= SEQUENCE {
+	primaryMotionState 		ENUMERATED{
+								unknown,
+								stationary,
+								pedestrian,
+								running,
+								cycling,
+								car,
+								train,
+								aeroplane,
+								boat,
+								fidgeting,
+								...
+								},
+	confidence 				INTEGER(0..99),
+	secondaryMotionState	BIT STRING { 
+								stationary 	(0),
+								pedestrian 	(1),
+								running 	(2),
+								cycling		(3),
+								car			(4),
+								train		(5),
+								aeroplane	(6),
+								boat		(7),
+								fidgeting	(8) } (SIZE(1..16))	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+
+OMA-LPPe-AtmosphericPressure ::= SEQUENCE {
+	pressureMeasurement				OMA-LPPe-PressureMeasurement,
+	pressureStats					PressureStats		OPTIONAL,
+	calibrationPoints				CalibrationPoints	OPTIONAL, 
+    ...}
+
+
+PressureStats ::= SEQUENCE {
+	sensorMeanPressure		INTEGER		(30000..115000),
+	sensorStddevPressure	INTEGER		(0..2000) 		OPTIONAL,
+	duration				INTEGER		(5..40),
+...}
+
+CalibrationPoints ::= SEQUENCE (SIZE (1..10)) OF SEQUENCE {
+	pressure		OMA-LPPe-PressureMeasurement,
+	time			UTCTime,
+	location		EllipsoidPointWithAltitudeAndUncertaintyEllipsoid,
+	motionState		OMA-LPPe-Sensor-MotionStateList		OPTIONAL,
+	velocity		Velocity							OPTIONAL,
+	locationSource	OMA-LPPe-LocationSource				OPTIONAL,
+	...
+}
+
+
+-- ASN1STOP
+
+-- ASN1START
+
+
+OMA-LPPe-PressureMeasurement ::= SEQUENCE {
+	sensorMeasurement				INTEGER (30000..115000),
+	adjustment						INTEGER (-5000..5000)			OPTIONAL,
+	uncertainty						SEQUENCE {
+									range		INTEGER (0..1000),
+									confidence	INTEGER (1..100)
+									}								OPTIONAL,
+	temperature						INTEGER (-100..150)				OPTIONAL, 
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Sensor-RequestLocationInformation ::= SEQUENCE {
+	motionStateReq			OMA-LPPe-Sensor-MotionStateRequest	OPTIONAL, --Cond MotionSateReq
+	...,
+	atmosphericPressureReq	OMA-LPPe-AtmosphericPressureRequest	OPTIONAL --Cond AtmosphericPressureReq
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Sensor-MotionStateRequest ::= SEQUENCE {
+	secondaryMotionStateRequest		NULL	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-AtmosphericPressureRequest ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Sensor-ProvideCapabilities ::= SEQUENCE {
+	motionStateSupport					NULL		OPTIONAL, --Cond MotionStateSupport
+	secondarySupport					NULL		OPTIONAL, --Cond SecondarySupport
+	...,
+	atmosphericPressureADSupport			NULL		OPTIONAL, --Cond AtmosphericPressureADSupport
+	atmosphericPressureSupport			NULL		OPTIONAL  --Cond AtmosphericPressureSupport
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-Sensor-RequestCapabilities ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+
+OMA-LPPe-Sensor-Error ::= CHOICE {
+	targetError			OMA-LPPe-Sensor-TargetError,
+	...
+}
+
+OMA-LPPe-Sensor-TargetError ::= SEQUENCE {
+	motionStateError	ENUMERATED { primaryMotionStateNotAvailable,
+									 primaryMotionStateNotSupported,
+									 ... } 	OPTIONAL,
+	secondaryMotionStateError	ENUMERATED { secondaryMotionStateNotAvailable,
+									  	 	 secondaryMotionStateNotSupported,
+									 ... } 	OPTIONAL,
+	...,
+	atmosphericPressureError	ENUMERATED {pressureNotAvailable, pressureNotSupported,
+									...}		OPTIONAL
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-ProvideAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-RequestAssistanceData ::= SEQUENCE {
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-ProvideLocationInformation ::= SEQUENCE {
+	srnMeasurementList		SEQUENCE (SIZE (1..64)) OF OMA-LPPe-SRN-MeasurementElement	OPTIONAL,
+	srnError				OMA-LPPe-SRN-Error											OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-MeasurementElement ::= SEQUENCE {
+	srnID				OMA-LPPe-SRN-SRNid,	
+	srnCategory			OMA-LPPe-SRN-Category				OPTIONAL, --Cond IfKnown
+	srnGroupID			OMA-LPPe-SRN-SRNgroupUniqueID		OPTIONAL, --Cond IfKnown
+	measurementList		SEQUENCE (SIZE (1..64)) OF OMA-LPPe-SRN-srnMeasurementElement	OPTIONAL,
+	...
+}
+
+OMA-LPPe-SRN-srnMeasurementElement ::= SEQUENCE {
+	relativeTimeStamp	INTEGER(0..1000)		OPTIONAL,	--Cond IfNotFirst
+	rssi 				INTEGER(-128..127)		OPTIONAL,
+	rtd					OMA-LPPe-WLAN-RTD		OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-RequestLocationInformation ::= SEQUENCE {
+	requestInfo 	SEQUENCE (SIZE (1..16)) OF OMA-LPPe-SRN-ReqLocInfo-Category,
+	...
+}
+
+OMA-LPPe-SRN-ReqLocInfo-Category ::= SEQUENCE {
+	category				OMA-LPPe-SRN-Category,
+	multipleMeasurements	ENUMERATED{ forbidden(0), 
+										allowed(1),
+										requested(2), ... }					OPTIONAL, 
+	allowedMeasurements 	OMA-LPPe-SRN-MeasurementMask					OPTIONAL, 
+	historicMeasurementsRequested	NULL									OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-ProvideCapabilities ::= SEQUENCE {
+	capabilitiesPerSRNCategory		SEQUENCE (SIZE (1..16)) OF 
+												OMA-LPPe-SRN-ProvideCapabilitiesElement	OPTIONAL,
+	...
+}
+
+OMA-LPPe-SRN-ProvideCapabilitiesElement::= SEQUENCE {
+	srnCategory						OMA-LPPe-SRN-Category,
+	supportedMeasurements			OMA-LPPe-SRN-MeasurementMask						OPTIONAL,
+	supportedAssistanceData			BIT STRING {
+										srnGroup (0),
+										antennaPattern (1) } (SIZE(1..16)),
+	historicMeasurementsSupported	NULL	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-RequestCapabilities ::= SEQUENCE { 
+	capabilitiesRequestedFor	SEQUENCE (SIZE (1..16)) OF OMA-LPPe-SRN-Category		OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-Error ::= CHOICE {
+	srnLocationServerErrorCauses	OMA-LPPe-SRN-LocationServerErrorCauses,
+	srnTargetDeviceErrorCauses		OMA-LPPe-SRN-TargetDeviceErrorCauses,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-LocationServerErrorCauses ::= SEQUENCE {
+	groupErrors			ENUMERATED{ 	undefined,
+										someGroupOrCategoryOrSRNidUnknownOrUnsupported,
+										allGroupAndCategoryOrSRNidUnknownOrUnsupported,
+										noSRNgroupsNearby,
+										...} 												OPTIONAL,
+	groupUpdateErrors	ENUMERATED { 	undefined,
+										allSRNgroupIDsUnknown,
+										allSRNgroupIDsknownButSomeSRNgroupVersionsUnknown,
+										allSRNgroupIDsknownAndAllSRNgroupVersionsUnknown,
+										someSRNgroupIDsUnknown,
+										someSRNgroupVersionsUnknownAndAllSRNGroupVersionsUnknown,
+										someSRNgroupIDsAndSomeSRNgroupVersionsUnknown,
+										inTheGroupInformationDoesNotMatchWithGroupID,
+										...} 												OPTIONAL,
+	srnAntennaErrors 	ENUMERATED { 	undefined,
+									 	someAntennaPatternIDsUnknown,
+									 	allAntennaPatternIDsUnknown,
+									 	... } 												OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-TargetDeviceErrorCauses ::= SEQUENCE {
+	srnErrorsPerCategory		SEQUENCE (SIZE (1..16)) OF OMA-LPPe-SRN-TargetDeviceError,
+	...
+}
+
+OMA-LPPe-SRN-TargetDeviceError ::= SEQUENCE {
+	category		OMA-LPPe-SRN-Category,
+	srnErrors		ENUMERATED{	undefined,
+								requestedMeasurementsNotAvailable,
+								notAllrequestedMeasurementsPossible,
+								categoryNotSupported,
+						    	 ...},
+	rssiNotAvailable					NULL	OPTIONAL,
+	rtdNotAvailable						NULL	OPTIONAL,
+	multipleSetsNotAvailable			NULL	OPTIONAL,
+	historicMeasurementsNotAvailable	NULL	OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-SRNgroupUniqueID ::= SEQUENCE {
+	providerID			OMA-LPPe-VendorOrOperatorID,
+	providerAssignedID	OCTET STRING,
+	srnDataVersion		INTEGER (0..4294967295)			OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-SRNtype ::= SEQUENCE {
+	srnCategory				OMA-LPPe-SRN-Category,
+	srnERP					INTEGER(-300..500)									OPTIONAL,
+	srnAntennaInfo			SEQUENCE {
+									antennaPatternID		INTEGER(0..65535),
+									switchingPatternID		INTEGER(0..65535)				OPTIONAL,
+									...
+									}											OPTIONAL,
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-Category ::= SEQUENCE {
+	srnTechnologyType		OMA-LPPe-SRN-Technologies,
+	srnVendorInformation	SEQUENCE {
+									vendor			OMA-LPPe-VendorOrOperatorID,
+									vendorInfo		OCTET STRING			OPTIONAL,
+									...
+									}										OPTIONAL,	--Cond other
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-SRNid ::= SEQUENCE {
+	srn-id		CHOICE {
+							mac			BIT STRING(SIZE(48)),
+							nfc			SEQUENCE {
+												manufacturer			BIT STRING(SIZE(8)),
+												uniqueNumber			BIT STRING(SIZE(48)),
+												...
+												},
+							mobileCode	SEQUENCE {
+												registryID 				BIT STRING(SIZE(12)),
+												remainingPart			OCTET STRING(SIZE(1..16)),
+												resolutionIdentifier	OCTET STRING(SIZE(1..18)),
+												...
+												},
+							other		OCTET STRING,
+							...
+						},
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-Technologies ::= SEQUENCE {
+	srnTechnologies 	ENUMERATED{ bt, btle, nfc, mobileCode, other, ... },
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+OMA-LPPe-SRN-MeasurementMask ::= SEQUENCE {
+	srnMeasurements			BIT STRING {	rssi(0),
+											rtd (1) } (SIZE(1..16)),
+	...
+}
+
+-- ASN1STOP
+
+-- ASN1START
+
+END
+
+-- ASN1STOP

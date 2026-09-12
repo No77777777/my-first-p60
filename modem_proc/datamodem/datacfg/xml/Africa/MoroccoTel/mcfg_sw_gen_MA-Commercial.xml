@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData>
+  <NvConfigurationData carrierIndex="32" version="0x06011F43" type="1"/>
+  <GroupFile name="mcfg_sw_gen_Gen_3GPP_DeleteROW.xml" description="" comment="" category="" version="data.0.0" mcfgAttributes="0x09" buildPath="modem_proc/datamodem/datacfg/xml/common/ROW/mcfg_sw_gen_Gen_3GPP_DeleteROW.xml"/>
+  <NvEfsItemData name="wlan_offload_config" id="70315" description="Determines the WLAN offload type" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/wlan_config/wlan_offload_config">
+    <Member name="wlan_offload_config" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+  </NvEfsItemData>
+  <NvEfsFile name="ds_dsd_attach_profile.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_dsd_attach_profile.txt" buildPath="modem_proc/datamodem/datacfg/efs/maroctelecom_morocco/ds_dsd_attach_profile.txt"/>
+  <NvEfsFile name="iwlan_s2b_config.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/iwlan_s2b_config.xml" buildPath="modem_proc/datamodem/datacfg/efs/maroctelecom_morocco/iwlan_s2b_config.xml"/>
+  <NvEfsFile name="default_andsf.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/default_andsf.xml" buildPath="modem_proc/datamodem/datacfg/efs/maroctelecom_morocco/default_andsf.xml"/>
+  <NvEfsFile name="andsf.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/andsf.xml" buildPath="modem_proc/datamodem/datacfg/efs/maroctelecom_morocco/andsf.xml"/>
+  <NvEfsFile name="ds_andsf_config.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_andsf_config.txt" buildPath="modem_proc/datamodem/datacfg/efs/maroctelecom_morocco/ds_andsf_config.txt"/>
+  <NvEfsFile name="Profile1" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile1" buildPath="modem_proc/datamodem/datacfg/efs/maroctelecom_morocco/Profile1"/>
+  <NvEfsFile name="Profile2" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile2" buildPath="modem_proc/datamodem/datacfg/efs/maroctelecom_morocco/Profile2"/>
+	<NvEfsItemData name="EmergencyAPNType" id="74090" description="Defines the APN Type on which Emergency call shall be made" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/dsmgr/emergency_apn_type">
+ 		<Member name="wwan_preferred" description="" comment="" sizeOf="1" type="uint8">1</Member>
+ 		<Member name="wwan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 		<Member name="iwlan_preferred" description="" comment="" sizeOf="1" type="uint8">2</Member>
+ 		<Member name="iwlan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 	</NvEfsItemData>
+</NvData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="NULL">
+
+  <device name="/dev/mcfg/hw_default_config">
+    <props name="CONFIG" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      mcfg_cust_data_hw 
+    </props>
+    <props name="CONFIG_SIZE" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+      mcfg_cust_data_hw_size
+    </props>
+  </device>
+</driver>
+

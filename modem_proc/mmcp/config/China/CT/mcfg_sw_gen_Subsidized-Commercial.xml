@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="mmcp.0.0" type="1"/>
+<NvItemData name="1xEV Forward Statistics Summary" id="4228" description="boolean stating if SMS should be sent on access channel" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="channel_preference" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvEfsItemData name="t3411_value_during_mmtel_call" id="74434" description="set T3411 value during mmtel call" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/t3411_value_during_mmtel_call">
+		<Member name="t3411_value_during_mmtel_call" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="radio_cap_enquiry_timer_expiry_ignore" id="74314" description="" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/radio_cap_enquiry_timer_expiry_ignore">
+		<Member name="radio_cap_enquiry_timer_expiry_ignore" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="conn_mode_manual_search" id="72528" description="Connected Mode Manual Search" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/conn_mode_manual_search">
+		<Member name="conn_mode_manual_search" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvItemData name="SD Configurable Items" id="3635" description="Various configurable SD values." comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">3 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">25 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">60 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">180 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">5 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">1 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">180 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">3600 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">130 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">3600 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">130 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">14 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">36 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">4 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">1 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">5200 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">3000 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">2200 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">3 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">253 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">900 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">180 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">300 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">300 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+	</NvItemData>
+	<NvEfsFile name="lte_nas_estimate_dl_count_from_sqn" id="" description="" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/nas/lte_nas_estimate_dl_count_from_sqn" buildPath="modem_proc/mmcp/config/EFS_files/ct/lte_nas_estimate_dl_count_from_sqn"/>
+	<NvEfsItemData name="EMM efs items" id="73708" description="" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/emm_nas_nv_items">
+		<Member name="version" description="This NV item will be used by REG to take care of all future NV items." comment="" sizeOf="1" type="uint8">7 </Member>
+		<Member name="emm_plmn_block_on_rej_15_8" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="use_lte_disable_duration_timer" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="emm_plmn_block_on_rej_15_roaming" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="psm_local_detach_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="csfb_perform_reg" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="emm_fake_cell_attempt_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="force_esr_nondds" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="force_tau_nondds" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint184"> </Member>
+	</NvEfsItemData>
+	<NvItemData name="HS Based Plus Dial Setting" id="4960" description="enabled with table override, enabled without tbl override, disabled" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hs_based_plus_dial_setting" description="Support can be enabled with ovr, enabled with no ovr or disabled" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="Analog Mode Preference" id="10" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="mode" description="" comment="" sizeOf="1" type="uint16">4 </Member>
+	</NvItemData>
+	<NvItemData name="Band Class Preference" id="441" description="" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="band" description="" comment="" sizeOf="1" type="uint16">903 </Member>
+	</NvItemData>
+	<NvItemData name="Expand Band Preference 16 To 32 Bits" id="946" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="band_pref_16_31" description="" comment="" sizeOf="1" type="uint16">1279 </Member>
+	</NvItemData>
+	<NvEfsItemData name="emergency_call_1x_scan_first" id="73825" description="Used to control scan pattern when no subscription available" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/sd/emergency_call_1x_scan_first">
+		<Member name="emergency_call_1x_scan_first" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvItemData name="EVRC Voice Service Options" id="285" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x39" mcfgVariant="1">
+		<Member name="nam" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="evrc_capability_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="home_page_voice_so" description="" comment="" sizeOf="1" type="uint16">3 </Member>
+		<Member name="home_orig_voice_so" description="" comment="" sizeOf="1" type="uint16">3 </Member>
+		<Member name="roam_orig_voice_so" description="" comment="" sizeOf="1" type="uint16">3 </Member>
+	</NvItemData>
+	<NvItemData name="Preferred Hybrid Mode" id="562" description="" comment="" category="System" subscription_mask="0x02" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hybrid_pref" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="SMS MO Retry Period" id="3532" description="MO SMS retry period in seconds" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_mo_retry_period" description="MO SMS retry period in seconds" comment="" sizeOf="1" type="int8">135 </Member>
+	</NvItemData>
+	<NvItemData name="SMS MO Retry Interval" id="3533" description="SMS MO retry interval in seconds" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_mo_retry_interval" description="SMS MO retry interval in seconds" comment="" sizeOf="1" type="uint8">30 </Member>
+	</NvItemData>
+	<NvEfsItemData name="operator_name" id="70302" description="Operator Name for enabling QRD features" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/operator_name">
+		<Member name="operator_name" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="reg_nv_items" id="72509" description="This NV item will be used by REG to take care of all future NV items." comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/reg_nv_items">
+		<Member name="version" description="This NV item will be used by REG to take care of all future NV items." comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="is_hplmn_has_to_be_selected" description="Thsi field will tell, if HPLMN is to be selected or not" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="is_roaming_on_in_eplmn" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="1" type="uint192"> </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="rat_acq_order" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/sd/rat_acq_order" buildPath="modem_proc/mmcp/config/EFS_files/ct/rat_acq_order.tot"/>
+	<NvEfsFile name="device_config.xml" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" targetPath="/policyman/device_config.xml" buildPath="modem_proc/mmcp/policyman/configurations/DevConfig/7+1_mode/DSDS/device_config.xml"/>
+	<NvEfsFile name="carrier_policy.xml" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/policyman/carrier_policy.xml" buildPath="modem_proc/mmcp/policyman/configurations/Carrier/CT/1xSRLTE/subsidized/carrier_policy.xml"/>
+	<NvEfsFile name="restrictions.xml_Subscription01" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x06" mcfgVariant="2" targetPath="/policyman/restrictions.xml_Subscription01" buildPath="modem_proc/mmcp/policyman/configurations/Restrictions/china_dsdx/restrictions.xml"/>
+	<NvEfsFile name="sdssscr_timers" id="65819" description="System Determination items" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/mmode/sd/sdssscr_timers" buildPath="modem_proc/mmcp/config/EFS_files/ct/sdssscr_timers"/>
+	<NvEfsItemData name="voice_domain_pref" id="66048" description="Voice Domain Preference" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/voice_domain_pref">
+		<Member name="sys_voice_domain_pref_e_type" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="lte_nas_temp_fplmn_backoff_time" id="65591" description="" comment="" category="LTE" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/lte_nas_temp_fplmn_backoff_time">
+		<Member name="backoff_timer_value" description="" comment="" sizeOf="1" type="int32">0 </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="map_cause_17_to_cause_18" id="" description="" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/nas/map_cause_17_to_cause_18" buildPath="modem_proc/mmcp/config/EFS_files/ct/map_cause_17_to_cause_18"/>
+	<NvEfsItemData name="sxlte_timers" id="72538" description="Timer values used for SXLTE" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/sxlte_timers">
+		<Member name="returntocsfb" description="Timer values used for SXLTE" comment="" sizeOf="1" type="uint16">300 </Member>
+		<Member name="waitrrcidle" description="Wait timer value for switching to CSFB , if RRC is in connected Mode" comment="" sizeOf="1" type="uint16">10 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="supportfordualrxues" id="72539" description="SupportForDualRxUEs in SRLTE mode" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/supportfordualrxues">
+		<Member name="SupportForDualRxUEs" description="SupportForDualRxUEs in SRLTE mode" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="msim_standby_esr_support" id="72614" description="This binary(0/1) config decides if ESR should be done in Multi-SIM" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/msim_standby_esr_support">
+		<Member name="is_esr_supported" description="This binary(0/1) config decides if ESR should be done in Multi-SIM" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="bst_tbl" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/sd/bst_tbl" buildPath="modem_proc/mmcp/config/EFS_files/ct/bst_tbl"/>
+	<NvEfsItemData name="c2k_switch_2_srlte" id="73561" description="Control CM support to switch to SRLTE mode on CSFB capable 1x system" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/c2k_switch_2_srlte">
+		<Member name="is_c2k_modeswitch2srlte" description="Control CM support to switch to SRLTE mode on CSFB capable 1x system" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="mt_detach_abnormal_handling" id="None" description="MT abnormal handling" comment="" category="NAS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/nas/mt_detach_abnormal_handling">
+		<Member name="mt_detach_abnormal_handling" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsFile name="global_mode_csg" id="72541" description="Disable bsr during global csg" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/mmode/global_mode_csg" buildPath="modem_proc/mmcp/config/EFS_files/ct/global_mode_csg"/>
+	<NvEfsFile name="mmode_1xsxlte_optimization" id="73596" description="optimization flag for mmode 1xsxlte" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/mmode/mmode_1xsxlte_optimization" buildPath="modem_proc/mmcp/config/EFS_files/ct/mmode_1xsxlte_optimization"/>
+	<NvEfsFile name="get_net_auto_mode" id="71524" description="Manual PLMN Search/Selection In Auto Mode" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/mmode/get_net_auto_mode" buildPath="modem_proc/mmcp/config/EFS_files/ct/get_net_auto_mode"/>
+	
+	<NvEfsFile name="ehplmn" id="none" description="" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/nas/ehplmn" buildPath="modem_proc/mmcp/config/EFS_files/ct/ehplmn"/>
+	
+	<NvEfsFile name="ehplmn1" id="none" description="" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/nv/item_files/modem/nas/ehplmn1" buildPath="modem_proc/mmcp/config/EFS_files/ct/ehplmn1"/>
+    <NvItemData name="SMS Service Option" id="4366" description="MO SMS Call Service Option for 1x SMS" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_so" description="MO SMS Call Service Option for 1x SMS" comment="" sizeOf="1" type="uint32">6 </Member>
+	</NvItemData>
+	<NvItemData name="Force UE SGSNR GSM R99 Version" id="1030" description="" comment="" category="GPRS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="force_ue_sgsnr_r99" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+	</NvItemData>
+	<NvItemData name="Force UE MSCR GSM R99 Version" id="1031" description="" comment="" category="GPRS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="force_ue_mscr_r99" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+	</NvItemData>
+	</NvData>

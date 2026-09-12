@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1" />
+  <NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvEfsItemData name="rrc_req_lte_for_truncated_ca" id="73936" description="TRUNCATED or FULL CA combos to reduce LTE capability container size" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_req_lte_for_truncated_ca">
+    <Member name="rrc_req_lte_for_truncated_ca" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rrc_req_lte_for_truncated_ca_on_mcc_list" id="73937" description="NV carries MCCs list" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_req_lte_for_truncated_ca_on_mcc_list">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">454 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+  </NvEfsItemData>
+</NvData>

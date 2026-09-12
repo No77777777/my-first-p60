@@ -1,0 +1,117 @@
+ADD 
+MENU 
+( 
+	POPUP "[:CORRELATE]&CoreBSP Scripts" 
+	( 
+	POPUP "[:PSTEP]&dal" 
+	( 
+		MENUITEM "[:FLASH]&DAL Log " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/dal/sys/scripts/DALLog.cmm 
+		)
+	)
+	POPUP "[:PSTEP]&Kernel" 
+	( 
+		MENUITEM "[:ACONFIG]&QuRT Menu " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			menu.reprogram ../../core/kernel/qurt/build/root_pd_img/qdsp6/kamorta.genla2.prod/install/modemv67W_1536/debugger/T32/qurt_model.men 
+		)
+		MENUITEM "[:ACONFIG]&QuRT Extension " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			task.config ../../core/kernel/qurt/build/root_pd_img/qdsp6/kamorta.genla2.prod/install/modemv67W_1536/debugger/T32/qurt_model.t32 
+		)
+	)
+	POPUP "[:PSTEP]&products" 
+	( 
+		MENUITEM "[:FLASH]&Halt MPSS at Warmboot " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/std_cti_mpss_wrapper.cmm WARMBOOTWAKE
+		)
+		MENUITEM "[:FLASH]&Start Trace ETB " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/start_tracing_ETB.cmm 
+		)
+		MENUITEM "[:FLASH]&Send CTI-BREAK to all cores " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/std_cti_mpss_wrapper.cmm SENDCTIBREAKTOALLCORES
+		)
+		MENUITEM "[:FLASH]&Send CTI-GO to all cores " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/std_cti_mpss_wrapper.cmm SENDCTIGOTOALLCORES
+		)
+		MENUITEM "[:FLASH]&Start Trace TPIU " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/start_tracing_TPIU.cmm 
+		)
+		MENUITEM "[:FLASH]&Wake and attach MPSS " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/std_cti_mpss_wrapper.cmm WAKEPROCESSOR
+		)
+		MENUITEM "[:FLASH]&Inject crash on MPSS " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/std_cti_mpss_wrapper.cmm CRASHPROCESSOR
+		)
+		MENUITEM "[:FLASH]&Wake and halt MPSS " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/std_cti_mpss_wrapper.cmm HALTPROCESSOR
+		)
+		MENUITEM "[:FLASH]&Setup other cores to break on this core " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/products/scripts/std_cti_mpss_wrapper.cmm SETCOREASCTIMASTER
+		)
+	)
+	POPUP "[:PSTEP]&SystemDrivers" 
+	( 
+		MENUITEM "[:FLASH]&PMIC Dump " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/pmic/pm/scripts/PMICDump.cmm 
+		)
+		MENUITEM "[:FLASH]&Clocks " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/systemdrivers/clock/scripts/Clock.cmm kamorta
+		)
+		MENUITEM "[:FLASH]&PMIC Peek/Poke " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/pmic/pm/scripts/PMICPeek.cmm 
+		)
+		MENUITEM "[:FLASH]&VCS " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/systemdrivers/vcs/scripts/VCS.cmm 
+		)
+		MENUITEM "[:CHIP]&HWIO " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			per.view ../../core/systemdrivers/hwio/scripts/kamorta/hwioreg.per 
+		)
+	)
+	POPUP "[:PSTEP]&Power" 
+	( 
+		MENUITEM "[:FLASH]&ULog Dump " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/services/diag/diagbuffer/scripts/ULogDump.cmm 
+		)
+		MENUITEM "[:FLASH]&uSleep Dump " 
+		( 
+			CD &MODEM_PROC_SCRIPTSDIR
+			cd.do ../../core/power/uSleep/scripts/uSleepDump.cmm 
+		)
+	)
+	) 
+)

@@ -1,0 +1,2213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR3925_NA_DLCA_QPA6560_LTE_B1_TX0.xml -->
+	<NvItem id="25532" name="RFNV_LTE_B1_TX_XPT_DELAY_I" mapping="direct" encoding="dec">1,18599,18599,18599,18599,18599,18599,18599,18599,18599,18599,18599,18599,18599,18599,18599,18599,1510,1510,1510,1510,1510,1510,1510,1510,1510,1510,1510,1510,1510,1510,1510,1510,1210,1210,1210,1210,1210,1210,1210,1210,1210,1210,1210,1210,1210,1210,1210,1210,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600</NvItem>
+	<NvItem id="6720" name="NV_LTE_B1_TX_CAL_CHAN_I" mapping="direct" encoding="dec">18001,18038,18076,18114,18152,18190,18228,18266,18300,18342,18380,18418,18456,18494,18532,18570</NvItem>
+	<NvItem id="6710" name="NV_LTE_B1_MAX_TX_POWER_I" mapping="direct" encoding="dec">23</NvItem>
+	<NvItem id="6716" name="NV_LTE_B1_TX_LIN_VS_TEMP_I" mapping="direct" encoding="dec">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="6721" name="NV_LTE_B1_TX_LIMIT_VS_TEMP_I" mapping="direct" encoding="dec">0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="6722" name="NV_LTE_B1_MPR_BASED_PA_SWITCHPOINTS_SHIFT_I" mapping="direct" encoding="dec">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="6723" name="NV_LTE_B1_TX_MPR_BACKOFF_I" mapping="direct" encoding="dec">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="6724" name="NV_LTE_B1_TX_DIGITAL_GAIN_COMP_I" mapping="direct" encoding="dec">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="6725" name="NV_LTE_B1_TX_AGC_OFFSET_I" mapping="direct" encoding="dec">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="24158" name="RFNV_LTE_B1_TX_EPT_DPD_CONFIG_PARAMS_I" mapping="direct" encoding="dec">0,0,1,1,0,0,0,860,420,2047,2047,0,0,0,0,0,240,40,20,80,20,1,1,860,0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="26732" name="RFNV_LTE_C0_B1_TX_XPT_DPD_SCALING_I" mapping="byteStream" encoding="hex">00 00 01 00 71 00 89 04 00 00 ad 04 00 00 bc 03 00 00 fc 03 00 00 00 04 00 00 e8 03 00 00 c6 03 00 00 d2 03 00 00 9d 03 00 00 fb 03 00 00 56 04 00 00 a5 04 00 00 d6 04 00 00 ae 04 00 00 1a 04 00 00 e8 03 00 00</NvItem>
+	<NvItem id="24932" name="RFNV_LTE_B1_MIN_TX_POWER_DB10_I" mapping="direct" encoding="dec">1,-440</NvItem>
+	<NvItem id="26651" name="RFNV_LTE_C0_B1_FBRX_GAIN_SWITCH_POINT_I" mapping="direct" encoding="dec">4,-270,-80,-80,300,0,0,0,0,0,0</NvItem>
+	<NvItem id="28049" name="RFNV_LTE_C0_B1_PA_STATIC_Z_I" mapping="direct" encoding="dec">2,3,0,0,0,0,0,0,2,1,0,0,0,0,0,0,4000,10,105,300,0,0,0,0,0,45,135,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-7,0,0,0,0,0,0,0,3,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-5,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,17,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,13,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,13,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,21,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,19,0,0,0,0,0,0,0,17,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,21,0,0,0,0,0,0,0,19,0,0,0,0,0,0,0,19,0,0,0,0,0,0,0,19,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,23,0,0,0,0,0,0,-20,-21,0,0,0,0,0,0,0,-19,0,0,0,0,0,0,0,-15,0,0,0,0,0,0,0,-13,0,0,0,0,0,0,0,-14,0,0,0,0,0,0,0,-14,0,0,0,0,0,0,0,-15,0,0,0,0,0,0,0,-15,0,0,0,0,0,0,0,-16,0,0,0,0,0,0,0,-15,0,0,0,0,0,0,0,-15,0,0,0,0,0,0,0,-16,0,0,0,0,0,0,0,-17,0,0,0,0,0,0,0,-18,0,0,0,0,0,0,0,-19,0,0,0,0,0,0,0,-21,0,0,0,0,0,0,0,-16,0,0,0,0,0,0,0,-15,0,0,0,0,0,0,0,-12,0,0,0,0,0,0,0,-9,0,0,0,0,0,0,0,-9,0,0,0,0,0,0,0,-9,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,-11,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,-11,0,0,0,0,0,0,0,-13,0,0,0,0,0,0,0,-14,0,0,0,0,0,0,0,-15,0,0,0,0,0,0,0,-16,0,0,0,0,0,0,0,-13,0,0,0,0,0,0,0,-11,0,0,0,0,0,0,0,-8,0,0,0,0,0,0,0,-5,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-5,0,0,0,0,0,0,0,-6,0,0,0,0,0,0,0,-5,0,0,0,0,0,0,0,-6,0,0,0,0,0,0,0,-5,0,0,0,0,0,0,0,-5,0,0,0,0,0,0,0,-6,0,0,0,0,0,0,0,-7,0,0,0,0,0,0,0,-9,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,-11,0,0,0,0,0,0,0,-11,0,0,0,0,0,0,0,-7,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-5,0,0,0,0,0,0,0,-6,0,0,0,0,0,0,0,-7,0,0,0,0,0,0,0,-5,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-3,0,0,0,0,0,0,0,-4,0,0,0,0,0,0,0,-2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,10,0,
+0,0,0,0,0,0,10,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,13,0,0,0,0,0,0,0,13,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,13,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</NvItem>
+	<NvItem id="28170" name="RFNV_LTE_C0_B1_FBRX_MODE_VS_GAIN_VS_TEMP_VS_FREQ_Z_I" mapping="direct" encoding="dec">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,-11,-12,-11,-11,-12,-13,-13,-12,-11,-10,-8,-8,-6,-4,-2,-9,-11,-11,-10,-10,-11,-12,-12,-11,-11,-10,-7,-7,-5,-3,-1,-8,-8,-8,-7,-8,-9,-10,-10,-9,-8,-7,-5,-4,-2,0,0,-5,-6,-5,-5,-5,-6,-6,-7,-6,-5,-4,-2,-1,0,2,3,-1,-4,-3,-3,-3,-4,-3,-5,-4,-2,-2,0,1,2,5,6,1,-1,0,-1,0,-1,-1,-2,-1,0,0,2,4,5,7,8,3,1,1,1,1,0,0,0,1,2,2,5,5,7,10,11,5,3,3,3,3,1,3,1,3,3,4,6,7,10,12,13,-9,-10,-9,-11,-10,-11,-12,-12,-12,-10,-10,-7,-7,-4,-2,-1,-9,-9,-9,-10,-10,-11,-11,-11,-11,-9,-9,-6,-6,-3,-1,-1,-6,-7,-7,-7,-7,-8,-8,-9,-9,-7,-6,-4,-3,-1,0,1,-4,-5,-5,-5,-5,-6,-6,-7,-6,-5,-4,-2,-1,0,3,4,-2,-3,-2,-2,-3,-3,-4,-4,-4,-2,-1,0,1,3,5,6,0,0,0,0,0,-1,-1,-1,-2,0,0,2,3,5,8,9,2,1,1,1,1,0,0,0,0,1,2,4,5,8,10,11,4,3,3,2,2,2,2,2,2,3,4,6,6,10,12,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-2,-3,-3,-3,-3,-5,-4,-6,-5,-3,-3,-1,0,3,5,6,-2,-3,-3,-3,-3,-5,-4,-6,-5,-3,-3,-1,0,2,5,6,-3,-4,-3,-4,-4,-5,-4,-6,-5,-3,-3,-1,0,2,5,6,-3,-4,-3,-4,-4,-5,-5,-6,-5,-4,-3,-1,0,2,4,5,-3,-4,-4,-4,-4,-5,-6,-6,-6,-4,-3,-1,0,1,4,5,-3,-4,-4,-4,-4,-6,-6,-7,-6,-4,-3,-1,0,1,4,5,-4,-5,-5,-5,-5,-6,-6,-7,-6,-5,-4,-2,-1,1,3,5,-4,-5,-5,-6,-5,-7,-7,-7,-7,-5,-4,-3,-1,0,2,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-9,-10,-9,-9,-11,-11,-11,-12,-12,-10,-10,-7,-6,-4,-2,-1,-8,-10,-9,-9,-10,-11,-11,-11,-11,-10,-9,-7,-6,-4,-1,-1,-7,-7,-7,-7,-7,-8,-8,-9,-9,-7,-7,-4,-3,-2,0,0,-4,-5,-4,-5,-4,-5,-6,-6,-6,-4,-4,-2,-1,0,3,4,-1,-2,-2,-2,-2,-3,-3,-4,-3,-1,-1,0,1,3,5,7,1,0,0,0,0,-1,0,-1,-1,0,1,4,3,5,7,9,2,2,2,1,1,1,1,0,0,2,3,6,6,8,10,11,4,4,4,3,3,3,3,2,2,4,4,8,8,10,12,13,-9,-10,-10,-10,-10,-11,-12,-12,-12,-10,-9,-7,-6,-4,-1,-1,-8,-10,-9,-9,-9,-10,-11,-11,-12,-10,-8,-7,-5,-3,-1,0,-6,-7,-6,-7,-7,-8,-8,-9,-9,-6,-6,-4,-3,-1,1,1,-4,-5,-4,-5,-5,-6,-6,-7,-6,-4,-4,-2,0,0,3,4,-2,-2,-2,-2,-3,-4,-4,-4,-3,-2,-1,0,1,3,5,6,0,0,0,0,0,-1,-1,-2,-1,0,0,2,3,5,7,8,2,1,1,1,1,0,0,0,0,1,2,4,5,8,10,11,4,3,3,2,3,2,1,1,1,3,3,6,7,9,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-2,-2,-1,-2,-3,-3,-4,-4,-4,-2,-1,0,0,3,5,7,-2,-2,-2,-3,-3,-3,-4,-4,-4,-2,-1,0,0,3,5,7,-2,-2,-2,-3,-3,-4,-4,-5,-4,-2,-2,0,1,2,5,7,-2,-2,-2,-3,-3,-4,-4,-5,-5,-3,-2,0,0,2,5,6,-2,-3,-3,-3,-3,-5,-5,-6,-5,-3,-3,0,0,2,5,6,-3,-4,-3,-4,-4,-5,-5,-6,-5,-4,-3,-1,0,1,4,6,-3,-4,-4,-4,-4,-6,-6,-6,-6,-4,-3,-1,0,1,4,6,-3,-4,-4,-5,-4,-6,-6,-6,-6,-4,-4,-1,0,1,4,5</NvItem>
+    <NvItem id="28493" name="RFNV_LTE_C0_B1_FBRX_DROOP_FIR_FILTER_COEFF_Z_I" mapping="byteStream" encoding="hex">00 00 03 00 7b 00 0d 00 06 0c c6 fe 0a 00 17 05 f9 ff b1 fc e0 ff 4c f8 04 00 0a 03 43 00 71 15 4a 00 ff 1d 04 00 56 14 b5 ff 66 02 b1 ff 6a f9 fb ff 48 fe 33 00 49 02 ed ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7b 00 03 00 03 0c ea f7 ab ff 05 04 b9 00 e1 13 b4 00 b6 1b 13 00 9b 16 79 ff cb 08 55 ff dc fb ab ff 91 f7 21 00 62 fc 4e 00 9b 03 14 00 db 04 c9 ff de fc 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7b 00 02 00 07 0c dc fc d6 ff 4c 03 79 00 97 05 d3 ff 35 fc 6e ff 80 f4 fb ff 01 fe d2 00 5a 15 dd 00 ea 24 f5 ff 5e 1b 1c ff 2e 00 55 ff 3d f0 45 00 8b 05 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</NvItem>
+    <NvItemData id="28883" name="RFNV_LTE_B1_TX_STATIC_DATA_I" subscriptionid="0" variableSize="true" index="0" compressed="true">
+  <Member type="uint16" name="version" sizeOf="1">0</Member>
+  <Member type="uint16" name="num_of_element" sizeOf="1">1</Member>
+  <Member type="DataType_Header" name="datatype" sizeOf="1">
+   <Struct>
+    <Member type="uint16" name="datatype" sizeOf="1">151</Member>
+   </Struct>
+  </Member>
+  <Member type="RFNV_DATA_TYPE_LTE_AMPR" name="RFNV_DATA_TYPE_LTE_AMPR" sizeOf="1">
+   <Struct>
+    <Member type="uint8" name="nv_container_index" sizeOf="1">0</Member>
+    <Member type="uint8" name="power_class" sizeOf="1">3</Member>
+    <Member type="uint32" name="ns_number" sizeOf="1">5</Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{0}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">18100</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">18100</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">15</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">32</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">-1</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">-1</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">23</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">1</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">100</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">-1</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">-1</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">50</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{1}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{2}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{3}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{4}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{5}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{6}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{7}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{8}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{9}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{10}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{11}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{12}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{13}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{14}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{15}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{16}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{17}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{18}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{19}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{20}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{21}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{22}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{23}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{24}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{25}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{26}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{27}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{28}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{29}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{30}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{31}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{32}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{33}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{34}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{35}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{36}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{37}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{38}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{39}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{40}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{41}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{42}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{43}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{44}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{45}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{46}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{47}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{48}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{49}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{50}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{51}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{52}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{53}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{54}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{55}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{56}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{57}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{58}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{59}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{60}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{61}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{62}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{63}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{64}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{65}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{66}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{67}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{68}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{69}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{70}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{71}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{72}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{73}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{74}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{75}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{76}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{77}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{78}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{79}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{80}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{81}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{82}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{83}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{84}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{85}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{86}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{87}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{88}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{89}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{90}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{91}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{92}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{93}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{94}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{95}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{96}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{97}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{98}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table{99}" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+    <Member type="RFNV_LTE_AMPR_TABLE_TYPE" name="ampr_table" sizeOf="1">
+     <Struct>
+      <Member type="int32" name="tx_earfcn_min" sizeOf="1">0</Member>
+      <Member type="int32" name="tx_earfcn_max" sizeOf="1">0</Member>
+      <Member type="uint32" name="modulation_type_mask" sizeOf="1">0</Member>
+      <Member type="uint32" name="bandwidth_mask" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_min" sizeOf="1">0</Member>
+      <Member type="int16" name="mpr_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_start_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_block_max" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_min" sizeOf="1">0</Member>
+      <Member type="int16" name="rb_end_max" sizeOf="1">0</Member>
+      <Member type="int16" name="ampr_db10" sizeOf="1">0</Member>
+     </Struct>
+    </Member>
+   </Struct>
+  </Member>
+ </NvItemData>
+</NvSource>

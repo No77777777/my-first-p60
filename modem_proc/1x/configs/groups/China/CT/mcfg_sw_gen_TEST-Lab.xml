@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="1x.0.0" type="1"/>
+<NvEfsItemData name="zz2_2_sel_parms" id="66042" description="Configure chain selection parameters for ZZ2_2 feature" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/1x/zz2_2_sel_parms">
+		<Member name="agc_sens" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="ecio_sens" description="EcIo Sensitivity Coefficient" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="ecio_max_diff" description="EcIo Max Difference" comment="" sizeOf="1" type="uint8">8 </Member>
+		<Member name="agc_ecio_weight" description="AGC VS EcIo Weighting" comment="" sizeOf="1" type="uint8">30 </Member>
+		<Member name="conditions" description="AGC Sensitivity Coefficient" comment="" sizeOf="1" type="int32">4294967295 </Member>
+	</NvEfsItemData>
+<NvItemData name="Mobile CAI Revision Number" id="6" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="mob_cai_rev" description="" comment="" sizeOf="1" type="uint8">6 </Member>
+	</NvItemData>
+	<NvItemData name="IS2000 CAI Radio Configuration RC Preference" id="405" description="" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="field" description="" comment="" sizeOf="1" type="uint16">3 </Member>
+	</NvItemData>
+	<NvItemData name="CDMA Receive Diversity Control" id="1018" description="" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cdma_rx_diversity_ctrl" description="" comment="" sizeOf="1" type="uint16">27793 </Member>
+	</NvItemData>
+	<NvItemData name="Sync Channel Traffic Message" id="4102" description="Enables or Disables 4GV NB Voice SO" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cdma_so68_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	</NvData>

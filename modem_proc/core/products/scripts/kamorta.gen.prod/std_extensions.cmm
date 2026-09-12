@@ -1,0 +1,32 @@
+//============================================================================
+//  Name:                                                                     
+//    std_extensions.cmm 
+//
+//  Description:                                                              
+//    None 
+//                                                                            
+// Copyright (c) 2026 by QUALCOMM Technologies, Incorporated.  All Rights Reserved.        
+//============================================================================
+//                                                                            
+// *** AUTO GENERATED FILE - DO NOT EDIT                                      
+//                                                                            
+// GENERATED: Mon Jul 20 11:32:29 2026 
+//============================================================================
+
+
+GLOBAL &CURRENT_ABS_BUILD_ROOT
+GLOBAL &CURRENT_BUILDROOT
+GLOBAL &CURRENT_CBSP_ROOT
+GLOBAL &CURRENT_SCRIPTSDIR
+GLOBAL &CURRENT_BUILDMSDIR
+
+
+
+&CURRENT_ABS_BUILD_ROOT="/media/dasaiqiao/dvt/P60/a16/VENDOR/AMSS/MPSS.HA.1.1/modem_proc"
+&CURRENT_BUILDROOT=os.ppd()+"/../../../.."+"/.."
+&CURRENT_CBSP_ROOT=os.ppd()+"/../../.."
+&CURRENT_SCRIPTSDIR=os.ppd()
+&CURRENT_BUILDMSDIR=os.ppd()+"/../../../../root_pd_img/build/ms"
+
+
+ENDDO

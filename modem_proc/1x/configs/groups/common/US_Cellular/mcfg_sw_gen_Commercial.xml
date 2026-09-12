@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="1x.0.0" type="1"/>
+<NvEfsItemData name="zz2_2_sel_parms" id="66042" description="Configure chain selection parameters for ZZ2_2 feature" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/1x/zz2_2_sel_parms">
+		<Member name="agc_sens" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="ecio_sens" description="EcIo Sensitivity Coefficient" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="ecio_max_diff" description="EcIo Max Difference" comment="" sizeOf="1" type="uint8">8 </Member>
+		<Member name="agc_ecio_weight" description="AGC VS EcIo Weighting" comment="" sizeOf="1" type="uint8">30 </Member>
+		<Member name="conditions" description="AGC Sensitivity Coefficient" comment="" sizeOf="1" type="int32">4294967295 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="zz2_2_thresh" id="66043" description="1x ZZ2_2 Threshold" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/1x/zz2_2_thresh">
+		<Member name="chan_est_thresh_mod" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+		<Member name="agc_bad_thresh" description="" comment="" sizeOf="1" type="int8">156 </Member>
+		<Member name="ecio_bad_thresh" description="" comment="" sizeOf="1" type="int16">65408 </Member>
+		<Member name="agc_good_thresh" description="" comment="" sizeOf="1" type="int8">161 </Member>
+		<Member name="ecio_good_thresh" description="" comment="" sizeOf="1" type="int16">65416 </Member>
+		<Member name="reserved" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="acq_pri_timers" id="72608" description="1x acq priority inversion timers" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/1x/acq_pri_timers">
+		<Member name="en_mask" description="1x acq priority inversion timers" comment="" sizeOf="1" type="uint8">1 </Member>
+		<Member name="acq_low_pri_timer" description="The acq timer to req TRM with low priority" comment="" sizeOf="1" type="uint16">100 </Member>
+		<Member name="acq_high_pri_timer" description="The acq timer to req TRM with high priority" comment="" sizeOf="1" type="uint16">900 </Member>
+	</NvEfsItemData>
+<NvItemData name="Slot Cycle Index" id="5" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="slot_cycle_index" description="" comment="" sizeOf="1" type="uint8">2 </Member>
+	</NvItemData>
+	<NvItemData name="Mobile CAI Revision Number" id="6" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="mob_cai_rev" description="" comment="" sizeOf="1" type="uint8">6 </Member>
+	</NvItemData>
+	<NvItemData name="CDMA Receive Diversity Control" id="1018" description="" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cdma_rx_diversity_ctrl" description="" comment="" sizeOf="1" type="uint16">27793 </Member>
+	</NvItemData>
+	<NvItemData name="Sync Channel Traffic Message" id="4102" description="Enables or Disables 4GV NB Voice SO" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cdma_so68_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="1xEV Tx Partial RLP" id="4227" description="maximum message length" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="sms_max_payload_length" description="" comment="" sizeOf="1" type="uint32">250 </Member>
+	</NvItemData>
+	<NvItemData name="CDMA So73 Enabled" id="7166" description="Enables or Disables EVRC NW Voice SO" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cdma_so73_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvEfsItemData name="1xadvanced_capability" id="65881" description="1xadvanced capability status indicator" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/1xadvanced_capability">
+		<Member name="status" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="so73_cop0_supported" id="65634" description="" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/so73_cop0_supported">
+		<Member name="so73_cop0_supported" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="1xcsfb_t_max_no_c2k_param" id="67266" description="1xCSFB C2K Param TMO" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/1xcsfb_t_max_no_c2k_param">
+		<Member name="1xcsfb_t_max_no_c2k_param" description="1xcsfb_t_max_no_c2k_param" comment="" sizeOf="1" type="uint16">5000 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="1xcsfb_t_max_no_voice" id="67267" description="1x CSFB max no voice Timeout" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/1xcsfb_t_max_no_voice">
+		<Member name="1xcsfb_t_max_no_voice" description="1x CSFB max no voice Timeout" comment="" sizeOf="1" type="uint32">90 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="1xcsfb_n_max_reg_retry_cnt" id="67268" description="1x CSFB Max Registration Retry Count" comment="" category="CDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/cdma/1xcp/1xcsfb_n_max_reg_retry_cnt">
+		<Member name="1xcsfb_n_max_reg_retry_cnt" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+	</NvEfsItemData>
+	</NvData>

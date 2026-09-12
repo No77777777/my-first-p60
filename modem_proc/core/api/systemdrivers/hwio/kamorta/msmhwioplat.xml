@@ -1,0 +1,135 @@
+<!--
+==============================================================================
+
+  @file msmhwioplat.xml
+  @brief Auto-generated QuRT HWIO memsection XML file.
+
+  ============================================================================
+
+  Copyright (c) 2020 Qualcomm Technologies Incorporated.
+  All Rights Reserved.
+  Qualcomm Confidential and Proprietary
+
+  Export of this technology or software is regulated by the U.S. Government.
+  Diversion contrary to U.S. law prohibited.
+
+  All ideas, data and information contained in or disclosed by
+  this document are confidential and proprietary information of
+  Qualcomm Technologies Incorporated and all rights therein are expressly reserved.
+  By accepting this material the recipient agrees that this material
+  and the information contained therein are held in confidence and in
+  trust and will not be used, copied, reproduced in whole or in part,
+  nor its contents revealed in any manner to others without the express
+  written permission of Qualcomm Technologies Incorporated.
+  ============================================================================
+
+  $Header: $
+  $DateTime: $
+  $Author: $
+
+==============================================================================
+-->
+
+  <memsection virt_addr="0xa0000000" phys_addr="0x00100000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- BOOT_ROM_BASE -->
+  <memsection virt_addr="0xa0100000" phys_addr="0x00300000" size="0x00100000" direct="false" attach="rw" cache_policy="device" user_mode="true" />  <!-- CORE_TOP_CSR_BASE -->
+  <memsection virt_addr="0xa0200000" phys_addr="0x00400000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- TLMM_BASE (1 of 6) -->
+  <memsection virt_addr="0xa0300000" phys_addr="0x00500000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- TLMM_BASE (2 of 6) -->
+  <memsection virt_addr="0xa0400000" phys_addr="0x00600000" size="0x00400000" direct="false" attach="rw" cache_policy="device"  />  <!-- TLMM_BASE (3 of 6) -->
+  <memsection virt_addr="0xa0800000" phys_addr="0x00a00000" size="0x00400000" direct="false" attach="rw" cache_policy="device"  />  <!-- TLMM_BASE (4 of 6) -->
+  <memsection virt_addr="0xa0c00000" phys_addr="0x00e00000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- TLMM_BASE (5 of 6) -->
+  <memsection virt_addr="0xa0d00000" phys_addr="0x00f00000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- TLMM_BASE (6 of 6) -->
+  <memsection virt_addr="0xa0e00000" phys_addr="0x01400000" size="0x00100000" direct="false" attach="rw" cache_policy="device" tlb_lock="boot" glob="1" />  <!-- CLK_CTL_BASE (1 of 2) -->
+  <memsection virt_addr="0xa0f00000" phys_addr="0x01500000" size="0x00100000" direct="false" attach="rw" cache_policy="device" tlb_lock="boot" glob="1" />  <!-- CLK_CTL_BASE (2 of 2) -->
+  <memsection virt_addr="0xa1274000" phys_addr="0x01874000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- QM_MPU_CFG_QM_MPU_WRAPPER_BASE (1 of 2) -->
+  <memsection virt_addr="0xa1275000" phys_addr="0x01875000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- QM_MPU_CFG_QM_MPU_WRAPPER_BASE (2 of 2) -->
+  <memsection virt_addr="0xa1378000" phys_addr="0x01878000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- CNOC_MS_MPU_CFG_BASE (1 of 3) -->
+  <memsection virt_addr="0xa1379000" phys_addr="0x01879000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- CNOC_MS_MPU_CFG_BASE (2 of 3) -->
+  <memsection virt_addr="0xa137a000" phys_addr="0x0187a000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- CNOC_MS_MPU_CFG_BASE (3 of 3) -->
+  <memsection virt_addr="0xa147c000" phys_addr="0x0187c000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- CNOC_SNOC_MS_MPU_CFG_BASE (1 of 2) -->
+  <memsection virt_addr="0xa147d000" phys_addr="0x0187d000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- CNOC_SNOC_MS_MPU_CFG_BASE (2 of 2) -->
+  <memsection virt_addr="0xa157e000" phys_addr="0x0187e000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- MDSP_MPU_CFG_MPU32Q2N7S1V0_16_CL36M35L12_AHB_BASE (1 of 2) -->
+  <memsection virt_addr="0xa157f000" phys_addr="0x0187f000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- MDSP_MPU_CFG_MPU32Q2N7S1V0_16_CL36M35L12_AHB_BASE (2 of 2) -->
+  <memsection virt_addr="0xa1680000" phys_addr="0x01880000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- SYSTEM_NOC_BASE (1 of 7) -->
+  <memsection virt_addr="0xa16c0000" phys_addr="0x018c0000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- SYSTEM_NOC_BASE (2 of 7) -->
+  <memsection virt_addr="0xa16d0000" phys_addr="0x018d0000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- SYSTEM_NOC_BASE (3 of 7) -->
+  <memsection virt_addr="0xa16d4000" phys_addr="0x018d4000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- SYSTEM_NOC_BASE (4 of 7) -->
+  <memsection virt_addr="0xa16d8000" phys_addr="0x018d8000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- SYSTEM_NOC_BASE (5 of 7) -->
+  <memsection virt_addr="0xa16dc000" phys_addr="0x018dc000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- SYSTEM_NOC_BASE (6 of 7) -->
+  <memsection virt_addr="0xa16dd000" phys_addr="0x018dd000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- SYSTEM_NOC_BASE (7 of 7) -->
+  <memsection virt_addr="0xa1700000" phys_addr="0x01900000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- CONFIG_NOC_BASE (1 of 4) -->
+  <memsection virt_addr="0xa1704000" phys_addr="0x01904000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- CONFIG_NOC_BASE (2 of 4) -->
+  <memsection virt_addr="0xa1708000" phys_addr="0x01908000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- CONFIG_NOC_BASE (3 of 4) -->
+  <memsection virt_addr="0xa1709000" phys_addr="0x01909000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- CONFIG_NOC_BASE (4 of 4) -->
+  <memsection virt_addr="0xa1880000" phys_addr="0x01980000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- PKA_WRAPPER_BASE (1 of 6) -->
+  <memsection virt_addr="0xa18c0000" phys_addr="0x019c0000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- PKA_WRAPPER_BASE (2 of 6) -->
+  <memsection virt_addr="0xa18d0000" phys_addr="0x019d0000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- PKA_WRAPPER_BASE (3 of 6) -->
+  <memsection virt_addr="0xa18e0000" phys_addr="0x019e0000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- PKA_WRAPPER_BASE (4 of 6) -->
+  <memsection virt_addr="0xa18f0000" phys_addr="0x019f0000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- PKA_WRAPPER_BASE (5 of 6) -->
+  <memsection virt_addr="0xa18f1000" phys_addr="0x019f1000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- PKA_WRAPPER_BASE (6 of 6) -->
+  <memsection virt_addr="0xa1900000" phys_addr="0x01b00000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- CRYPTO0_CRYPTO_TOP_BASE -->
+  <memsection virt_addr="0xa1a40000" phys_addr="0x01b40000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- SECURITY_CONTROL_BASE -->
+  <memsection virt_addr="0xa1b50000" phys_addr="0x01b50000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- PRNG_CFG_PRNG_TOP_BASE -->
+  <memsection virt_addr="0xa1c60000" phys_addr="0x01b60000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- RAMBLUR_PIMEM_BASE (1 of 2) -->
+  <memsection virt_addr="0xa1c64000" phys_addr="0x01b64000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- RAMBLUR_PIMEM_BASE (2 of 2) -->
+  <memsection virt_addr="0xa1dd0000" phys_addr="0x01bd0000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- OCIMEM_WRAPPER_CSR_BASE (1 of 3) -->
+  <memsection virt_addr="0xa1dd4000" phys_addr="0x01bd4000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- OCIMEM_WRAPPER_CSR_BASE (2 of 3) -->
+  <memsection virt_addr="0xa1dd5000" phys_addr="0x01bd5000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- OCIMEM_WRAPPER_CSR_BASE (3 of 3) -->
+  <memsection virt_addr="0xa1ee0000" phys_addr="0x01be0000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- QC_DCC_KAMORTA_12KB4LL_BASE -->
+  <memsection virt_addr="0xa1f00000" phys_addr="0x01c00000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (1 of 9) -->
+  <memsection virt_addr="0xa2000000" phys_addr="0x01d00000" size="0x01000000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (2 of 9) -->
+  <memsection virt_addr="0xa3000000" phys_addr="0x02d00000" size="0x01000000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (3 of 9) -->
+  <memsection virt_addr="0xa4000000" phys_addr="0x03d00000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (4 of 9) -->
+  <memsection virt_addr="0xa4100000" phys_addr="0x03e00000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (5 of 9) -->
+  <memsection virt_addr="0xa4200000" phys_addr="0x03f00000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (6 of 9) -->
+  <memsection virt_addr="0xa4240000" phys_addr="0x03f40000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (7 of 9) -->
+  <memsection virt_addr="0xa4280000" phys_addr="0x03f80000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (8 of 9) -->
+  <memsection virt_addr="0xa4290000" phys_addr="0x03f90000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- PMIC_ARB_BASE (9 of 9) -->
+  <memsection virt_addr="0xa4300000" phys_addr="0x04400000" size="0x00040000" direct="false" attach="rw" cache_policy="device" user_mode="true" />  <!-- MAPSS_BASE -->
+  <memsection virt_addr="0xa4440000" phys_addr="0x04440000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- HWKM_MASTER_CFG_KEYMANAGER_MASTER_REGS_BASE (1 of 2) -->
+  <memsection virt_addr="0xa4450000" phys_addr="0x04450000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- HWKM_MASTER_CFG_KEYMANAGER_MASTER_REGS_BASE (2 of 2) -->
+  <memsection virt_addr="0xa457d000" phys_addr="0x0447d000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- DDR_SS_BASE (1 of 7) -->
+  <memsection virt_addr="0xa457e000" phys_addr="0x0447e000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- DDR_SS_BASE (2 of 7) -->
+  <memsection virt_addr="0xa457f000" phys_addr="0x0447f000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- DDR_SS_BASE (3 of 7) -->
+  <memsection virt_addr="0xa4580000" phys_addr="0x04480000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- DDR_SS_BASE (4 of 7) -->
+  <memsection virt_addr="0xa45c0000" phys_addr="0x044c0000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- DDR_SS_BASE (5 of 7) -->
+  <memsection virt_addr="0xa4600000" phys_addr="0x04500000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- DDR_SS_BASE (6 of 7) -->
+  <memsection virt_addr="0xa4610000" phys_addr="0x04510000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- DDR_SS_BASE (7 of 7) -->
+  <memsection virt_addr="0xa47f0000" phys_addr="0x045f0000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- RPM_SS_MSG_RAM_START_ADDRESS_BASE (1 of 4) -->
+  <memsection virt_addr="0xa47f4000" phys_addr="0x045f4000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- RPM_SS_MSG_RAM_START_ADDRESS_BASE (2 of 4) -->
+  <memsection virt_addr="0xa47f5000" phys_addr="0x045f5000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- RPM_SS_MSG_RAM_START_ADDRESS_BASE (3 of 4) -->
+  <memsection virt_addr="0xa47f6000" phys_addr="0x045f6000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- RPM_SS_MSG_RAM_START_ADDRESS_BASE (4 of 4) -->
+  <memsection virt_addr="0xa4800000" phys_addr="0x04600000" size="0x00100000" direct="false" attach="rw" cache_policy="device" user_mode="true" />  <!-- RPM_BASE -->
+  <memsection virt_addr="0xa4940000" phys_addr="0x04740000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- PERIPH_SS_SDC1_SDCC5_TOP_BASE (1 of 2) -->
+  <memsection virt_addr="0xa4950000" phys_addr="0x04750000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- PERIPH_SS_SDC1_SDCC5_TOP_BASE (2 of 2) -->
+  <memsection virt_addr="0xa4a00000" phys_addr="0x04800000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- UFS_MEM_UFS_REGS_BASE (1 of 2) -->
+  <memsection virt_addr="0xa4a10000" phys_addr="0x04810000" size="0x00010000" direct="false" attach="rw" cache_policy="device"  />  <!-- UFS_MEM_UFS_REGS_BASE (2 of 2) -->
+  <memsection virt_addr="0xa4b40000" phys_addr="0x04840000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- QPIC_QPIC_XPU3_BASE -->
+  <memsection virt_addr="0xa4c00000" phys_addr="0x04a00000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- QUPV3_0_QUPV3_ID_3_BASE (1 of 7) -->
+  <memsection virt_addr="0xa4c40000" phys_addr="0x04a40000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- QUPV3_0_QUPV3_ID_3_BASE (2 of 7) -->
+  <memsection virt_addr="0xa4c80000" phys_addr="0x04a80000" size="0x00040000" direct="false" attach="rw" cache_policy="device"  />  <!-- QUPV3_0_QUPV3_ID_3_BASE (3 of 7) -->
+  <memsection virt_addr="0xa4cc0000" phys_addr="0x04ac0000" size="0x00004000" direct="false" attach="rw" cache_policy="device"  />  <!-- QUPV3_0_QUPV3_ID_3_BASE (4 of 7) -->
+  <memsection virt_addr="0xa4cc4000" phys_addr="0x04ac4000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- QUPV3_0_QUPV3_ID_3_BASE (5 of 7) -->
+  <memsection virt_addr="0xa4cc5000" phys_addr="0x04ac5000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- QUPV3_0_QUPV3_ID_3_BASE (6 of 7) -->
+  <memsection virt_addr="0xa4cc6000" phys_addr="0x04ac6000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- QUPV3_0_QUPV3_ID_3_BASE (7 of 7) -->
+  <memsection virt_addr="0xa4d00000" phys_addr="0x05800000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- IPA_0_IPA_WRAPPER_BASE -->
+  <memsection virt_addr="0xa4ea0000" phys_addr="0x065a0000" size="0x00001000" direct="false" attach="rw" cache_policy="uncached"  />  <!-- MSS_L2_CFG_BASE -->
+  <memsection virt_addr="0xa4f00000" phys_addr="0x08000000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- QDSS_SOC_DBG_BASE (1 of 8) -->
+  <memsection virt_addr="0xa5000000" phys_addr="0x08100000" size="0x01000000" direct="false" attach="rw" cache_policy="device"  />  <!-- QDSS_SOC_DBG_BASE (2 of 8) -->
+  <memsection virt_addr="0xa6000000" phys_addr="0x09100000" size="0x00400000" direct="false" attach="rw" cache_policy="device"  />  <!-- QDSS_SOC_DBG_BASE (3 of 8) -->
+  <memsection virt_addr="0xa6400000" phys_addr="0x09500000" size="0x00400000" direct="false" attach="rw" cache_policy="device"  />  <!-- QDSS_SOC_DBG_BASE (4 of 8) -->
+  <memsection virt_addr="0xa6800000" phys_addr="0x09900000" size="0x00400000" direct="false" attach="rw" cache_policy="device"  />  <!-- QDSS_SOC_DBG_BASE (5 of 8) -->
+  <memsection virt_addr="0xa6c00000" phys_addr="0x09d00000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- QDSS_SOC_DBG_BASE (6 of 8) -->
+  <memsection virt_addr="0xa6d00000" phys_addr="0x09e00000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- QDSS_SOC_DBG_BASE (7 of 8) -->
+  <memsection virt_addr="0xa6e00000" phys_addr="0x09f00000" size="0x00100000" direct="false" attach="rw" cache_policy="device"  />  <!-- QDSS_SOC_DBG_BASE (8 of 8) -->
+  <memsection virt_addr="0xa6f00000" phys_addr="0x0c000000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- SNOC_MSSNAV_MS_MPU_CFG_BASE (1 of 2) -->
+  <memsection virt_addr="0xa6f01000" phys_addr="0x0c001000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- SNOC_MSSNAV_MS_MPU_CFG_BASE (2 of 2) -->
+  <memsection virt_addr="0xa7002000" phys_addr="0x0c002000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- SNOC_A2NOC_MS_MPU_CFG_BASE (1 of 2) -->
+  <memsection virt_addr="0xa7003000" phys_addr="0x0c003000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- SNOC_A2NOC_MS_MPU_CFG_BASE (2 of 2) -->
+  <memsection virt_addr="0xa7106000" phys_addr="0x0c006000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- SNOC_BOOTIMEM_SS_MPU_CFG_BASE (1 of 2) -->
+  <memsection virt_addr="0xa7107000" phys_addr="0x0c007000" size="0x00001000" direct="false" attach="rw" cache_policy="device"  />  <!-- SNOC_BOOTIMEM_SS_MPU_CFG_BASE (2 of 2) -->
+  <memsection virt_addr="0xa7200000" phys_addr="0x0c800000" size="0x00100000" direct="false" attach="rw" cache_policy="device" user_mode="true" />  <!-- WCSS_WRAPPER_BASE (1 of 5) -->
+  <memsection virt_addr="0xa7300000" phys_addr="0x0c900000" size="0x00100000" direct="false" attach="rw" cache_policy="device" user_mode="true" />  <!-- WCSS_WRAPPER_BASE (2 of 5) -->
+  <memsection virt_addr="0xa7400000" phys_addr="0x0ca00000" size="0x00400000" direct="false" attach="rw" cache_policy="device" user_mode="true" />  <!-- WCSS_WRAPPER_BASE (3 of 5) -->
+  <memsection virt_addr="0xa7800000" phys_addr="0x0ce00000" size="0x00100000" direct="false" attach="rw" cache_policy="device" user_mode="true" />  <!-- WCSS_WRAPPER_BASE (4 of 5) -->
+  <memsection virt_addr="0xa7900000" phys_addr="0x0cf00000" size="0x00100000" direct="false" attach="rw" cache_policy="device" user_mode="true" />  <!-- WCSS_WRAPPER_BASE (5 of 5) -->
+

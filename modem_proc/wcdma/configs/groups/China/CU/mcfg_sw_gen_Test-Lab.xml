@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1" />
+  <NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvEfsItemData name="wcdma_rrc_feature" id="65693" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_feature">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rrc_cell_bar_upon_rach_failure_nv" id="74056" description="set this to TRUE to enable the feature" comment="/nv/item_files/conf/wcdma_rrc_external.conf" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_cell_bar_upon_rach_failure_nv">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1</Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rrc_cell_bar_duration_secs_nv" id="74057" description="set this to 1200 (i.e 20mins)" comment="/nv/item_files/conf/wcdma_rrc_external.conf" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_cell_bar_duration_secs_nv">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint16">1200</Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wl1_force_sc_capability" id="74092" description="With NV disabled, L1 will always return DC_CAPABILITY as TRUE. L1 will never touch this value.  Also, with enabled, This workaround will only kick in when HS validation will fail due to wrong config from network. There is no other way to advertise SC capability. We already tested this in lab" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/l1/dl/wl1_force_sc_capability">
+    <Member name="bit:0 - Enable wl1_force_sc_capability; bit:1-7 - timer value of wl1_force_sc_capability; " description="" comment="" sizeOf="1" type="uint8">41</Member>
+    <Member name="reserved" description="" comment="" sizeOf="1" type="uint16">0</Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rrc_wtol_redirect_after_srvcc_nv" id="74181" description="Fast return to LTE after SRVCC" comment="internal CR 2292402" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_wtol_redirect_after_srvcc_nv">
+    <Member name="rrc_wtol_redirect_after_srvcc_nv" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wl1_srch_use_neg_freq_hypo_nv" id="74097" description="NV is to enable/disable algorithm of using different frequency hypothesis for W ACQ" comment="/nv/item_files/conf/wl1_srch_use_neg_freq_hypo_nv" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/l1/srch/wl1_srch_use_neg_freq_hypo_nv">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1</Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rrc_pseudo_meas_info" id="74197" description="To enable or disable Pseudo meas FR" comment="internal CR 2336822" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_pseudo_meas_info">
+    <Member name="feature_enabled" description="" comment="" sizeOf="1" type="uint8">1</Member>
+    <Member name="timer_t1" description="" comment="" sizeOf="1" type="uint16">60</Member>
+    <Member name="timer_t2" description="" comment="" sizeOf="1" type="uint16">180</Member>
+    <Member name="timer_t3" description="" comment="" sizeOf="1" type="uint16">540</Member>
+    <Member name="freq_L_srch_t1" description="" comment="" sizeOf="1" type="uint8">10</Member>
+    <Member name="freq_L_srch_t2" description="" comment="" sizeOf="1" type="uint8">20</Member>
+    <Member name="freq_L_srch_t3" description="" comment="" sizeOf="1" type="uint8">40</Member>
+    <Member name="freq_L_srch_t4" description="" comment="" sizeOf="1" type="uint8">60</Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rrc_pseudo_meas_triggers_info" id="74199" description="To run elevator exit or low throughput algorithm" comment="internal CR 2336822" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_pseudo_meas_triggers_info">
+    <Member name="triggers_for_pseudo_meas" description="" comment="" sizeOf="1" type="uint16">1</Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="rrc_delay_return_to_lte_nv" id="74319" description="Delay FRLTE/WtoL RESEL in case of abnormal CSFB call failure" comment="internal CR 2641078" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/rrc_delay_return_to_lte_nv">
+    <Member name="nv_enabled" description="" comment="" sizeOf="1" type="uint8">1</Member>
+    <Member name="timer_val" description="" comment="" sizeOf="1" type="uint16">60</Member>
+  </NvEfsItemData>
+</NvData>

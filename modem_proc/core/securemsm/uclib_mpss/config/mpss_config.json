@@ -1,0 +1,295 @@
+{
+    "comment" : [
+        "***********************************************************************************",
+        " This file stores all features supported by an image. It will be used to determine ",
+        " the contents of 'sources_aarch32.cfg', 'sources_aarch64.cfg' as well as the config",
+        " files (cfg.c and cfg.h)                                                           ",
+        " Each image that uses uclib, needs to have its own json config file as this.       ",
+        " This file needs to be updated only when a new feature has been added to an image. ",
+        "                                                                                   ",
+        " There are few nodes in the beginning of this JSON data structure - 'image-name',  ",
+        " 'heap-lite-required', 'default-prng-cb', 'default-engines' etc. to store some     ",
+        " specific information.                                                             ",
+        " From there onwards the nodes are organized in hierarchial way that represent the  ",
+        " algorithm, mode, engine, key-size combinations supported by the image.            ",
+        " The hierarchy is as follows:                                                      ",
+        "     category-level-node (HASH, CIPHER, MAC)                                       ",
+        "       algorithm-node    (SHA2_256, AES, TDES, HMAC)                               ",
+        "         mode-node       (CCM, XTS etc.)                                           ",
+        "           engine-node   (SW, HWIO, ARMV8, BAM)                                    ",
+        "             key-size    (128, 192, 256 - for AES algorithm only)                  ",
+        "                                                                                   ",
+        "***********************************************************************************"
+    ],
+    "image-name": "MODEM",
+    "heap-lite-required": false,
+    "uclib-debug-build": false,
+    "compiler-config": {},
+    "linker-config": {},
+    "default-prng-cb": {
+        "DEFAULT_get_prng_data_cb" : "get_prng_data_sw"
+    },
+    "default-engines": {
+        "DEFAULT_HASH_ENGINE"     : "UCLIB_CE_SW",
+        "DEFAULT_CIPHER_ENGINE"   : "UCLIB_CE_SW",
+        "DEFAULT_PKEY_ENGINE"     : "UCLIB_CE_SW",
+        "DEFAULT_KDF_ENGINE"      : "UCLIB_CE_SW",
+        "DEFAULT_MAC_ENGINE"      : "UCLIB_CE_SW"
+    },
+    "offtarget-engine-interface-vs-implementation-mapping": {
+        "SW": "SW",
+        "ARMV8": "SW",
+        "BAM": "SW",
+        "HWIO": "SW"
+    },
+    "supported-categories": ["HASH", "CIPHER", "KDF", "MAC", "PKEY"],
+    "HASH": {
+        "SHA1": {
+            "dspq6_32": ["SW" ,"BAM"],
+            "dspq6_64": []
+        },
+        "SHA2_256": {
+            "dspq6_32": ["SW" ,"BAM"],
+            "dspq6_64": []
+        },
+        "SHA2_224": {
+            "dspq6_32": ["SW" ,"BAM"],
+            "dspq6_64": []
+        },
+        "SHA2_384": {
+            "dspq6_32": ["SW" ,"BAM"],
+            "dspq6_64": []
+        },
+        "SHA2_512": {
+            "dspq6_32": ["SW" ,"BAM"],
+            "dspq6_64": []
+        },
+        "MD5": {
+            "dspq6_32": ["SW"],
+            "dspq6_64": ["SW"]
+        },
+        "SM3": {
+            "dspq6_32": [],
+            "dspq6_64": []
+        }
+    },
+    "CIPHER": {
+        "AES": {
+            "ECB": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "192", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {}
+            },
+            "CBC": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "192", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {}
+            },
+             "CTS": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "192", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128", "192", "256"]}
+                }
+            },
+             "CTR": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "192", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {}
+            },
+            "XTS": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "192", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128", "192", "256"]}
+                }
+            },
+            "CCM": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["256"]}
+                }
+            },
+            "GCM": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "192", "256"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128", "192", "256"]}
+                }
+            }
+        },
+        "HC": {
+            "CBC": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "192", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128", "256"]}
+                }
+            },
+            "CTS": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128", "256"]}
+                }
+            },
+            "CTR": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128", "192", "256"]},
+                    "BAM":     {"key-size": ["128", "256"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128", "256"]}
+                }
+            }
+        },
+      "STREAM": {
+           "KASUMI": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128"]}
+            }
+          },
+          "ZUC": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128"]}
+            }
+          },
+          "SNOW3G": {
+                "dspq6_32": {
+                    "SW":     {"key-size": ["128"]}
+                },
+                "dspq6_64": {
+                    "SW":     {"key-size": ["128"]}
+            }
+          }
+        },
+        "DES": {
+            "ECB": {
+                "dspq6_32": ["SW","BAM"],
+                "dspq6_64": []
+            },
+            "CBC": {
+                "dspq6_32": ["SW","BAM"],
+                "dspq6_64": []
+            }
+        },
+        "2DES": {
+            "ECB": {
+                "dspq6_32": ["SW"],
+                "dspq6_64": []
+            },
+            "CBC": {
+                "dspq6_32": ["SW"],
+                "dspq6_64": []
+            }
+        },
+        "TDES": {
+            "ECB": {
+                "dspq6_32": ["SW","BAM"],
+                "dspq6_64": []
+            },
+            "CBC": {
+                "dspq6_32": ["SW","BAM"],
+                "dspq6_64": []
+            }
+        },
+        "CHACHA20": {
+            "AEAD_POLY1305": {
+                "dspq6_32": ["SW"],
+                "dspq6_64": []
+            }
+        }
+    },
+    "RAND": {
+        "PRNG": {
+            "dspq6_32": ["SW", "HWIO","HRNG"],
+            "dspq6_64": ["SW", "HWIO","HRNG"]
+        }
+    },
+    "PKEY": {
+        "RSA": {
+            "dspq6_32": [],
+            "dspq6_64": []
+        },
+        "ECC": {
+            "dspq6_32": ["PKA"],
+            "dspq6_64": ["PKA"]
+        },
+        "SM2": {
+            "dspq6_32": [],
+            "dspq6_64": []
+        },
+        "CURVE25519": {
+            "dspq6_32": ["SW"],
+            "dspq6_64": ["SW"]
+        }
+    },
+    "KDF": {
+        "KBKDF_COUNTER" : {
+            "dspq6_32": ["BAM"],
+            "dspq6_64": []
+        },
+        "KBKDF_FEEDBACK" : {
+            "dspq6_32": [],
+            "dspq6_64": []
+        },
+        "KBKDF_PIPELINE" : {
+            "dspq6_32": [],
+            "dspq6_64": []
+        },
+        "PBKDF2": {
+            "dspq6_32": ["BAM"],
+            "dspq6_64": []
+        },
+        "HKDF": {
+            "dspq6_32": ["SW","BAM"],
+            "dspq6_64": []
+        }
+    },
+    "MAC": {
+        "CMAC": {
+            "dspq6_32": ["SW","BAM"],
+            "dspq6_64": []
+        },
+        "HMAC": {
+            "dspq6_32": ["SW","BAM"],
+            "dspq6_64": []
+        },
+        "ZUC": {
+            "dspq6_32": ["SW"],
+            "dspq6_64": ["SW"]
+        },
+        "KASUMI": {
+            "dspq6_32": ["SW"],
+            "dspq6_64": ["SW"]
+        },
+        "SNOW3G": {
+            "dspq6_32": ["SW"],
+            "dspq6_64": ["SW"]
+        }
+    }
+}

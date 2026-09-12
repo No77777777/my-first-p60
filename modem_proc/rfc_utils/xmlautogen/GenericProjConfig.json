@@ -1,0 +1,12 @@
+﻿{
+    "ProjectName": "",
+    "CodeGenConfiguration": {
+		"SkipGps" : true,
+        "MasterTemplateVersionNumber": 1
+    },
+    "ValidatorConfiguration": {
+        "XmlSchemaVersionNumber": 1
+    },    
+    "RunCodeGen": true,
+    "RunXmlValidation": true
+}

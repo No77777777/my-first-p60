@@ -1,0 +1,263 @@
+/*===========================================================================
+
+       SIMPLE_SMGROUP.SMF - A simple one-state machine group example
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Copyright (c) 2006-2015
+                QUALCOMM Technologies, Incorporated. All Rights Reserved
+                Qualcomm Technologies Proprietary
+
+  Export of this technology or software is regulated by the U.S. Government.
+  Diversion contrary to U.S. law prohibited.
+
+  All ideas, data and information contained in or disclosed by
+  this document are confidential and proprietary information of
+  QUALCOMM Technologies, Incorporated and all rights therein are expressly reserved.
+  By accepting this material the recipient agrees that this material
+  and the information contained therein are held in confidence and in
+  trust and will not be used, copied, reproduced in whole or in part,
+  nor its contents revealed in any manner to others without the express
+  written permission of QUALCOMM Technologies, Incorporated.
+
+===========================================================================*/
+
+/*===========================================================================
+
+                        EDIT HISTORY FOR MODULE
+
+This section contains comments describing changes made to the module.
+Notice that changes are listed in reverse chronological order.
+
+$Header$ $DateTime$ $Author$
+
+when       who     what, where, why
+--------   ---     ----------------------------------------------------------
+06/30/15   tnp     Update copyright info 
+03/16/15   vke     Added new cmd and transfer function for triggering 
+                   rpush in afc
+06/09/14   ljl     Added HDRSRCH_AFC_ENABLE_RGS_REPORT_CMD.
+09/27/12   ljl     Added HDRSRCHAFC_UPDATE_RGS_CMD.
+09/12/11   smd     Moved FORCE_R_TRK_CMD to open loop state.
+05/27/10   sd/vlc  Added HDRSRCHAFC_FAST_ACQ_CMD in inactive state for
+                   Fast Acq.
+04/26/10   lyl     Added HDRSRCHAFC_FORCE_R_TRK_CMD in inactive state.
+06/19/09   grl     Split the AFC state machine into its own SMF file.
+05/18/09   ljl     Updated for firmware MSGR interface.
+04/02/09   wsh     Disabled FEATURE_XO temporarily
+06/18/07   rkc     Add hdrsrchafc_exit_open_loop to handle EXIT of
+                   HDRSRCHAFC_OPEN_LOOP_STATE
+03/23/07   ljl     cancled TCXOMgr requests made before deactivate or stop 
+                   command was executed. 
+01/30/07   jyw     Modified the XO featurization.
+01/19/07   jyw     Added XO tracking state.
+09/25/06   ljl     Initial revision
+=============================================================================*/
+
+/* It is standard process to run the STM description files through the C
+   preprocessor to allow for featurization.  Include the necessary header
+   files that contain the particular features needed.  */
+#include "hdr_variation.h"
+#include "target.h"
+#include "customer.h"
+
+STATE_MACHINE HDRSRCHAFC_SM
+{
+
+  ENTRY           NULL;
+  EXIT            NULL;
+  INITIAL_STATE   HDRSRCHAFC_INACTIVE_STATE;
+  START_ACTIVE    TRUE;
+
+  STATE HDRSRCHAFC_INACTIVE_STATE
+  {
+    ENTRY   hdrsrchafc_enter_inactive;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_cancel_pending_req_tf;
+      HDRSRCHAFC_OPEN_LOOP_CMD          hdrsrchafc_request_ol_tf;
+      HDRSRCHAFC_FAST_ACQ_CMD           hdrsrchafc_st_fast_acq_tf;
+      HDRSRCHAFC_GRANT_CMD              hdrsrchafc_st_grant_tf;
+      HDRSRCHAFC_DENY_CMD               hdrsrchafc_st_deny_tf;
+      HDRSRCHAFC_SET_CHAN_CMD           hdrsrchafc_st_set_chan_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;
+
+    }
+  }
+
+  STATE HDRSRCHAFC_OPEN_LOOP_STATE
+  {
+    ENTRY   hdrsrchafc_enter_open_loop;
+    EXIT    hdrsrchafc_exit_open_loop;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_ol_deactivate_tf;
+      HDRSRCHAFC_CLOSE_LOOP_CMD         hdrsrchafc_ol_to_cl_tf;
+      HDRSRCHAFC_START_ACQ_CMD          hdrsrchafc_ol_start_acq_tf;
+      HDRSRCHAFC_CHANGE_RESTR_CMD       hdrsrchafc_change_restriction_tf;
+      HDRSRCHAFC_SET_CHAN_CMD           hdrsrchafc_ol_set_chan_tf;
+      HDRSRCHAFC_FORCE_R_TRK_CMD        hdrsrchafc_force_rot_trk_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;
+
+    }
+  }
+
+  STATE HDRSRCHAFC_V_ACQ_STATE
+  {
+    ENTRY   hdrsrchafc_enter_v_acq;
+    EXIT    NULL;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_deactivate_fll_tf;
+      HDRSRCHAFC_OPEN_LOOP_CMD          hdrsrchafc_acq_to_ol_tf;
+      HDRSRCHAFC_CHANGE_RESTR_CMD       hdrsrchafc_v_change_restriction_tf;
+      HDRSRCHAFC_ACQ_RSP_CMD            hdrsrchafc_v_acq_rsp_tf;
+      HDRSRCHAFC_TIMER_CMD              hdrsrchafc_acq_timer_expire_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;        
+        
+    }
+  }
+
+  STATE HDRSRCHAFC_R_ACQ_STATE
+  {
+    ENTRY   hdrsrchafc_enter_r_acq;
+    EXIT    NULL;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_deactivate_fll_tf;
+      HDRSRCHAFC_OPEN_LOOP_CMD          hdrsrchafc_acq_to_ol_tf;
+      HDRSRCHAFC_CHANGE_RESTR_CMD       hdrsrchafc_r_change_restriction_tf;
+      HDRSRCHAFC_ACQ_RSP_CMD            hdrsrchafc_r_acq_rsp_tf;
+      HDRSRCHAFC_TIMER_CMD              hdrsrchafc_acq_timer_expire_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;      
+      
+    }
+  }
+
+  STATE HDRSRCHAFC_R_LOOP_STATE
+  {
+    ENTRY   hdrsrchafc_enter_r_loop;
+    EXIT    NULL;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_deactivate_fll_tf;
+      HDRSRCHAFC_OPEN_LOOP_CMD          hdrsrchafc_acq_to_ol_tf;
+      HDRSRCHAFC_TIMER_CMD              hdrsrchafc_r_loop_timer_expire_tf;
+      HDRSRCHAFC_CHANGE_RESTR_CMD       hdrsrchafc_r_change_restriction_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;      
+      
+    }
+  }
+
+#ifdef FEATURE_XO
+  STATE HDRSRCHAFC_XO_TRK_STATE
+  {
+    ENTRY   hdrsrchafc_enter_xo_trk;
+    EXIT    NULL;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_deactivate_fll_tf;
+      HDRSRCHAFC_STOP_CMD               hdrsrchafc_stop_fll_trk_tf;
+      HDRSRCHAFC_TIMER_CMD              hdrsrchafc_xo_trk_timer_expire_tf;
+      HDRSRCHAFC_START_ACQ_CMD          hdrsrchafc_trk_start_acq_tf;
+      HDRSRCHAFC_CHANGE_RESTR_CMD       hdrsrchafc_xo_trk_change_restriction_tf;
+      HDRSRCHAFC_SET_CHAN_CMD           hdrsrchafc_cl_set_chan_tf;
+      HDRSRCHAFC_RPUSH_CMD              hdrsrchafc_rpush_tf;
+      HDRSRCHAFC_UPDATE_RGS_CMD         hdrsrchafc_update_rgs_tf;
+      HDRSRCH_AFC_ENABLE_RGS_REPORT_CMD hdrsrchafc_enable_rgs_report_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;
+
+    }
+  }
+#endif /* FEATURE_XO */
+
+  STATE HDRSRCHAFC_V_TRK_STATE
+  {
+    ENTRY   hdrsrchafc_enter_v_trk;
+    EXIT    NULL;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_deactivate_fll_tf;
+      HDRSRCHAFC_STOP_CMD               hdrsrchafc_stop_fll_trk_tf;
+      HDRSRCHAFC_TIMER_CMD              hdrsrchafc_v_trk_timer_expire_tf;
+      HDRSRCHAFC_START_ACQ_CMD          hdrsrchafc_trk_start_acq_tf;
+      HDRSRCHAFC_CHANGE_RESTR_CMD       hdrsrchafc_v_change_restriction_tf;
+      HDRSRCHAFC_SET_CHAN_CMD           hdrsrchafc_cl_set_chan_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;      
+      
+    }
+  }
+
+  STATE HDRSRCHAFC_RV_TRK_STATE
+  {
+    ENTRY   hdrsrchafc_enter_rv_trk;
+    EXIT    NULL;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_deactivate_fll_tf;
+      HDRSRCHAFC_STOP_CMD               hdrsrchafc_stop_fll_trk_tf;
+      HDRSRCHAFC_TIMER_CMD              hdrsrchafc_rv_trk_timer_expire_tf;
+      HDRSRCHAFC_CHANGE_RESTR_CMD       hdrsrchafc_rv_trk_change_restriction_tf;
+      HDRSRCHAFC_START_ACQ_CMD          hdrsrchafc_trk_start_acq_tf;
+      HDRSRCHAFC_SET_CHAN_CMD           hdrsrchafc_cl_set_chan_tf;
+      HDRSRCHAFC_RPUSH_CMD              hdrsrchafc_rpush_tf;
+      HDRSRCHAFC_UPDATE_RGS_CMD         hdrsrchafc_update_rgs_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;
+
+    }
+  }
+
+  STATE HDRSRCHAFC_OFS_STATE
+  {
+    ENTRY   hdrsrchafc_enter_ofs;
+    EXIT    NULL;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_ol_deactivate_tf;
+      HDRSRCHAFC_STOP_CMD               hdrsrchafc_ofs_release_tcxo_tf;
+      HDRSRCHAFC_RELEASE_CMD            hdrsrchafc_ofs_release_tcxo_tf;
+      HDRSRCHAFC_CHANGE_RESTR_CMD       hdrsrchafc_change_restriction_tf;
+      HDRSRCHAFC_SET_CHAN_CMD           hdrsrchafc_ol_set_chan_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;      
+      
+    }
+  }
+
+  STATE HDRSRCHAFC_STOPPED_STATE
+  {
+    ENTRY   hdrsrchafc_enter_stopped;
+    EXIT    NULL;
+
+    INPUTS
+    {
+
+      HDRSRCHAFC_DEACTIVATE_CMD         hdrsrchafc_deactivate_tf;
+      HDRSRCHAFC_STOP_CMD               hdrsrchafc_cancel_pending_req_tf;
+      HDRSRCHAFC_OPEN_LOOP_CMD          hdrsrchafc_request_ol_tf;
+      HDRSRCHAFC_CONTINUE_TRK_CMD       hdrsrchafc_request_continue_tracking_tf;
+      HDRSRCHAFC_GRANT_CMD              hdrsrchafc_grant_tf;
+      HDRSRCHAFC_DENY_CMD               hdrsrchafc_deny_tf;
+      HDRSRCHAFC_TRIGGER_RPUSH_CMD      hdrsrchafc_trigger_rpush_tf;      
+      
+    }
+  }
+
+}  /* STATE_MACHINE */
+

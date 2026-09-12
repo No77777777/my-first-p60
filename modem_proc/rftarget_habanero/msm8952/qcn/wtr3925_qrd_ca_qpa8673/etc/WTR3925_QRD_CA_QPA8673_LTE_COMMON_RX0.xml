@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR3925_QRD_CA_QPA8673_LTE_COMMON_RX0.xml -->
+	<NvItem id="23759" name="RFNV_LTE_C0_SPURS_TABLE_I" mapping="direct" encoding="dec">0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15</NvItem>
+	<NvItem id="23760" name="RFNV_LTE_C1_SPURS_TABLE_I" mapping="direct" encoding="dec">0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15</NvItem>
+	<NvItem id="27224" name="RFNV_LTE_C2_SPURS_TABLE_I" mapping="direct" encoding="dec">0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15</NvItem>
+	<NvItem id="27225" name="RFNV_LTE_C3_SPURS_TABLE_I" mapping="direct" encoding="dec">0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15,0,15</NvItem>
+	<NvItemData id="28874" name="RFNV_LTE_CA_BW_CLASS_COMBO_I" compressed="true" variableSize="true" index="0" subscriptionid="0">
+		<Member type="uint16" name="version" sizeOf="1">0</Member>
+		<Member type="uint16" name="num_of_element" sizeOf="1">42</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">1</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">1</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">39</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">41</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">39</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">41</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">39</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">39</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">40</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">40</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">41</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">41</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">38</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">38</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">1</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">5</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">1</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">5</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">1</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">8</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">1</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">8</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">8</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">8</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">5</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">5</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">8</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">7</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">8</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">7</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">2</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">28</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">2</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">28</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">7</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">3</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">7</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">7</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">28</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">7</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">28</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">137</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_DL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">7</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">3</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+		<Member type="DataType_Header" name="datatype" sizeOf="1">
+			<Struct>
+				<Member type="uint16" name="datatype" sizeOf="1">138</Member>
+			</Struct>
+		</Member>
+		<Member type="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" name="QMSL_LTE_UL_CA_BW_COMBO_DATA_TYPE" sizeOf="1">
+			<Struct>
+				<Member type="QMSL_LTE_BW_COMBO_DATA_TYPE" name="bwclasscombo" sizeOf="6">
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">7</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">1</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+					<Struct>
+						<Member type="uint16" name="band" sizeOf="1">0</Member>
+						<Member type="uint8" name="bw_class" sizeOf="1">0</Member>
+					</Struct>
+				</Member>
+			</Struct>
+		</Member>
+	</NvItemData>
+</NvSource>

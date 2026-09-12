@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Restriction for SMART/TNT/SUN Card devices 
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Restrictions/smart_tnt_sun/restrictions.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        schema_ver  = "1"
+        policy_ver  = "4002.5.0"
+>
+  <initial>
+    <actions>
+
+      <!-- Initially subs is CS only -->
+      <service_domain> CS </service_domain>
+
+    </actions>
+  </initial>
+
+  <!-- Rule# 1 -->
+  <!-- SIMLOCK is enabled and subscription is an SMART/TNT/SUN card enable CS+PS -->
+  <if precond="none">
+    <cond>
+      <simlock_enabled />
+    </cond>
+    <then> <service_domain> CSPS </service_domain> </then>
+    <else> <service_domain> CS </service_domain> </else>
+  </if>
+
+</policy>

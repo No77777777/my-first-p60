@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier policy XML for HKT
+$Header: $
+-->
+<policy name        = "HKT"
+        changelist  = "$Change: 14971833 $"
+        policy_ver  = "121.1.0"
+>
+  <initial>
+
+    <mcc_list name="home_mcc"> 454 </mcc_list>
+
+
+    <rf_band_list name="rf_bands_home">
+      <gw_bands base="none">
+        <include> 7 8 22 49 </include>
+      </gw_bands>
+      <lte_bands base="none">
+        <include> 0 2 6 7 </include>
+      </lte_bands>
+      <tds_bands base="none" />
+    </rf_band_list>
+
+    <define_fullrat_config>
+      <rf_bands base="hardware" />
+    </define_fullrat_config>
+
+    <rat_capability_if base="none">
+      <include> L W G </include>
+    </rat_capability_if>
+
+    <rf_bands_if list="rf_bands_home" />
+	
+    <ue_mode_if> CSFB </ue_mode_if> 
+
+  </initial>
+
+  <if>
+    <any_of>
+      <not> <phone_operating_mode> ONLINE </phone_operating_mode> </not>
+      <not> <have_location /> </not>
+    </any_of>
+    <then>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Beyond this point, the device is ONLINE and has a location. -->
+  <svc_mode> FULL </svc_mode>
+
+  <!-- Determine configuration based on location -->
+  <select>
+
+    <case>
+      <location_mcc_in list="home_mcc" />
+      <actions>
+        <rf_bands list="rf_bands_home" />
+      </actions>
+    </case>
+
+    <case>
+      <true />
+      <actions>
+        <rf_bands base="hardware" />
+      </actions>
+    </case>
+
+  </select>
+
+</policy>

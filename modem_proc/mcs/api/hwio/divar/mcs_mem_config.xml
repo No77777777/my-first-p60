@@ -1,0 +1,41 @@
+<!--
+#=============================================================================
+#
+# MCS Memory Configuration XML data for MPSS
+#
+# Copyright (c) 2021 Qualcomm Technologies Incorporated.
+# All Rights Reserved.
+# Qualcomm Confidential and Proprietary
+
+# Export of this technology or software is regulated by the U.S. Government.
+# Diversion contrary to U.S. law prohibited.
+
+# All ideas, data and information contained in or disclosed by
+# this document are confidential and proprietary information of
+# Qualcomm Technologies Incorporated and all rights therein are expressly reserved.
+# By accepting this material the recipient agrees that this material
+# and the information contained therein are held in confidence and in
+# trust and will not be used, copied, reproduced in whole or in part,
+# nor its contents revealed in any manner to others without the express
+# written permission of Qualcomm Technologies Incorporated.
+#
+#=============================================================================
+-->
+
+<!-- MSS_TOP: These HWIO mappings are done manually as they need
+              special handling: tlb_lock must be "1" for
+              performance, and a small piece (mempool page0) must
+              be mapped as WB cached.
+              Note the virtual address should not be changed
+              without coordinating with msmhwiobase.h and the FW
+              team.
+-->
+  <memsection   
+    tlb_lock="1"
+    glob="1"
+    direct="false" 
+    attach="RW" 
+    virt_addr="0xEC000000"
+    phys_addr="0x06000000"
+    size="0x00400000"
+    cache_policy="device" />

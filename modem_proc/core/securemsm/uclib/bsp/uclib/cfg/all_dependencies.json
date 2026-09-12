@@ -1,0 +1,1212 @@
+{
+    "comment": [
+        "***********************************************************************************",
+        " PURPOSE:                                                                          ",
+        " This file stores all the UCLIB source files in a hierarchial format and will be   ",
+        " used to generate the file 'sources_aarch32.cfg', 'sources_aarch64.cfg' as well as ",
+        " to generate config files (cfg.c and cfg.h)                                        ",
+        " This file needs to be updated only when a new source file has been added to UCLIB.",
+        "                                                                                   ",
+        " In short, in JSON format {} stores key:value pairs, [] stores an array            ",
+        " In JSON format files we cannot insert comments in between so all the comments need",
+        " to be added on the top here.                                                      ",
+        " To learn more about JSON data format please visit www.json.org                    ",
+        "                                                                                   ",
+        " FORMAT:                                                                           ",
+        " The nodes in the beginning of the JSON data structure - 'include-files', 'macros' ",
+        " and 'rsa-config' are used for generating cfg.c an cfg.h files                     ",
+        " The node 'heap-lite' is a special case.                                           ",
+        "                                                                                   ",
+        " From there onwards the nodes are organized in heirchial way where each node can   ",
+        " have 3 sub-nodes called 'common', '64-bit' and '32-bit' to store its dependencies ",
+        " for different architectures.                                                      ",
+        " The node heirarchy is as below:                                                   ",
+        "   top-level       (to store sources common to whole uclib e.g. uclib_env.c)       ",
+        "     category-level-node (HASH, CIPHER, MAC)                                       ",
+        "       algorithm-node    (SHA2_256, AES, TDES, HMAC)                               ",
+        "         mode-node       (CCM, XTS etc.)                                           ",
+        "           engine-node   (SW, HWIO, ARMV8, BAM, TME_SEQ, ARMV8_2)                  ",
+        "                                                                                   ",
+        "***********************************************************************************"
+    ],
+    "include-files": [
+        "uclib_engine.h",
+        "uclib_env.h",
+        "uclib_rand.h",
+        "uclib_hash.h",
+        "uclib_pkey.h",
+        "uclib_mac.h",
+        "uclib_cipher.h",
+        "uclib_kdf.h",
+        "rand.h",
+        "hash.h",
+        "pkey.h",
+        "mac.h",
+        "cipher.h",
+        "kdf.h",
+        "uclib_util.h",
+        "heap_lite.h",
+        "env.h"
+    ],
+    "rsa-config": {
+        "RSA_PUBEXP_F4": "(0x10001L)",
+        "RSA_DEFAULT_KEY_BITS": "(1024)",
+        "RSA_MINIMUM_HASH_LEN": "(16)"
+    },
+    "macros": {
+        "CFG_ALG_MASK(alg)": "(((alg) & 0xFFFF) << 16)",
+        "CFG_MODE_MASK(md)": "(((md) & 0xFF) << 8)",
+        "CFG_ENG_MASK(eng)": "((eng) & 0xF)",
+        "HASH_IS_ALG_VALID(alg)": "(alg < UCLIB_HASH_MAX_ALG_COUNT)",
+        "ENG_IS_ENGINE_VALID(eng)": "(eng < UCLIB_ENGINE_MAX_COUNT)",
+        "CIPHER_IS_ALG_VALID(alg)": "(alg < UCLIB_CIPHER_MAX_ALG_COUNT)",
+        "CIPHER_IS_MODE_VALID(md)": "(md < UCLIB_CIPHER_MAX_MODE_COUNT)",
+        "PKEY_IS_ALG_VALID(alg)": "(alg < UCLIB_PKEY_MAX_ALG_COUNT)",
+        "KDF_IS_ALG_VALID(alg)": "(alg > UCLIB_KDF_ALG_INVALID && alg < UCLIB_KDF_MAX_ALG_COUNT)",
+        "MAC_IS_ALG_VALID(alg)": "(alg < UCLIB_MAC_MAX_ALG_COUNT)"
+    },
+    "heap-lite": [
+        "${BUILDPATH}/heap/heap_lite.c"
+    ],
+    "logging": [
+        "${BUILDPATH}/env/uclib_log.c"
+    ],
+    "common": [
+        "${BUILDPATH}/env/uclib_env.c",
+        "${BUILDPATH}/util/util_blkbuf.c",
+        "${BUILDPATH}/util/util.c"
+    ],
+    "64-bit": [
+        "<build_path>/cfg64.c"
+    ],
+    "32-bit": [
+        "<build_path>/cfg32.c"
+    ],
+    "engine": {
+        "HWIO": [
+            "${BUILDPATH}/engine/hal/ce_hal.c",
+            "${BUILDPATH}/engine/hal/ce_hwio.c"
+        ],
+        "BAM": [
+            "${BUILDPATH}/engine/hal/ce_hal.c",
+            "${BUILDPATH}/engine/hal/ce_bam.c"
+        ]
+    },
+    "openssl": {
+        "common": [
+
+        ],
+        "64-bit": [
+
+        ],
+        "32-bit": [
+
+        ]
+    },
+    "HASH": {
+        "common": [
+            "${BUILDPATH}/crypto/hash/uclib_hash.c"
+        ],
+        "SHA1": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha1/sha1_sw.c"
+                ],
+                "64-bit": [],
+                "32-bit": []
+            },
+            "ARMV8": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha1/sha1_armv8.c"
+                ],
+                "64-bit": [
+                    "# ${BUILDPATH}/engine/hash/asm/armv8/sha1_sw_64.s",
+                    "${BUILDPATH}/engine/hash/asm/armv8/sha1_armv8_asm.s"
+                ],
+                "32-bit": []
+            },
+            "HWIO": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_hwio_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha1/sha1_hwio.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_bam_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha1/sha1_bam.c"
+                ]
+            }
+        },
+        "SHA2_224": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_sw.c"
+                ],
+                "64-bit": [],
+                "32-bit": []
+            },
+            "ARMV8": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_armv8.c"
+                ],
+                "64-bit": [
+                    "# ${BUILDPATH}/engine/hash/asm/armv8/sha2256_sw_asm.s",
+                    "${BUILDPATH}/engine/hash/asm/armv8/sha2256_armv8_asm.s"
+                ],
+                "32-bit": []
+            },
+            "HWIO": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_hwio_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_hwio.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_bam_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_bam.c"
+                ]
+            }
+        },
+        "SHA2_256": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_sw.c"
+                ],
+                "64-bit": [],
+                "32-bit": []
+            },
+            "ARMV8": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_armv8.c"
+                ],
+                "64-bit": [
+                    "# ${BUILDPATH}/engine/hash/asm/armv8/sha2256_sw_asm.s",
+                    "${BUILDPATH}/engine/hash/asm/armv8/sha2256_armv8_asm.s"
+                ],
+                "32-bit": []
+            },
+            "HWIO": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_hwio_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_hwio.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_bam_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_bam.c"
+                ]
+            },
+            "TME_SEQ": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_tme_seq_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-256/sha2256_tme_seq.c"
+                ]
+            }
+        },
+        "SHA2_384": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-384/sha2384_sw.c"
+                ]
+            },
+            "ARMV8_2": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-512/sha2512_armv8.c"
+                ],
+                "64-bit": [
+                    "${BUILDPATH}/engine/hash/asm/armv8/sha512-armv8.s"
+                ],
+                "32-bit": []
+            },
+            "HWIO": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_hwio_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-384/sha2384_hwio.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_bam_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-384/sha2384_bam.c"
+                ]
+            },
+            "TME_SEQ": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_tme_seq_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-384/sha2384_tme_seq.c"
+                ]
+            }
+        },
+        "SHA2_512": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha2512_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-512/sha2512_sw.c"
+                ],
+                "32-bit": []
+            },
+            "ARMV8_2": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-512/sha2512_armv8.c"
+                ],
+                "64-bit": [
+                    "${BUILDPATH}/engine/hash/asm/armv8/sha512-armv8.s"
+                ],
+                "32-bit": []
+            },
+            "HWIO": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_hwio_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-512/sha2512_hwio.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_hw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha_bam_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-512/sha2512_bam.c"
+                ]
+            },
+            "TME_SEQ": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/sha_tme_seq_cmn.c",
+                    "${BUILDPATH}/engine/hash/sha2-512/sha2512_tme_seq.c"
+                ]
+            }
+        },
+        "MD5": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/hash/md5/md5_sw.c",
+                    "${BUILDPATH}/engine/hash/md5/md5_sw_cmn.c"
+                ]
+            }
+        },
+        "SM3": {
+            "SW": {
+              "common": [
+                    "${BUILDPATH}/engine/hash/hash_sw_cmn.c",
+                    "${BUILDPATH}/engine/hash/sm3/sm3_sw.c",
+                    "${BUILDPATH}/external/openssl/crypto/sm3/sm3.c"
+              ]
+            }
+        },
+        "RIPEMD_160": {
+            "SW": {
+              "common": [
+                    "${BUILDPATH}/engine/hash/ripemd-160/ripemd160_sw.c",
+                    "${BUILDPATH}/engine/hash/ripemd-160/ripemd160.c"
+              ]
+            }
+        }
+    },
+    "CIPHER": {
+        "common": [
+            "${BUILDPATH}/crypto/cipher/uclib_cipher.c",
+            "${BUILDPATH}/engine/cipher/cipher_cmn.c",
+            "${BUILDPATH}/engine/cipher/cipher_util.c"
+        ],
+        "AES": {
+            "common": [],
+            "ECB": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/ecb/aes_ecb_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/ecb/aes_ecb_armv8.c"
+                    ],
+                    "64-bit": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/asm/armv8/aes-64.S"
+                    ]
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            },
+            "CBC": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/cbc/aes_cbc_cts_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/cbc/aes_cbc_cts_armv8.c"
+                    ],
+                    "64-bit": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/asm/armv8/aes-64.S"
+                    ]
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            },
+            "CBC_VA": {
+                "BAM": {
+                    "64-bit": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_va_bam.c"
+                    ]
+                }
+            },
+            "CTS": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/cbc/aes_cbc_cts_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/cbc/aes_cbc_cts_armv8.c"
+                    ],
+                    "64-bit": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/asm/armv8/aes-64.S"
+                    ]
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            },
+            "CTR": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/ctr/aes_ctr_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/ctr/aes_ctr_armv8.c"
+                    ],
+                    "64-bit": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/asm/armv8/aes-64.S"
+                    ]
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            },
+            "CTR_VA": {
+                "BAM": {
+                    "64-bit": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_va_bam.c"
+                    ]
+                }
+            },
+            "XTS": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/xts/aes_xts_sw.c"
+                    ]
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            },
+            "CCM": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/ccm/ccm_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/ccm/aes_ccm_sw.c"
+                    ]
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/ccm/ccm_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/ccm/aes_ccm_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/ccm/ccm_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/ccm/aes_ccm_bam.c"
+                    ]
+                }
+            },
+            "GCM": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/gcm/gcm_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/gcm/aes_gcm_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/gcm/gf128mul.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [
+
+                    ],
+                    "64-bit": [
+                        "${BUILDPATH}/external/openssl/crypto/armcap.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/gcm/armv8/aes_gcm_armv8.c",
+                        "${BUILDPATH}/external/openssl/crypto/modes/gcm128.c",
+                        "${BUILDPATH}/external/openssl/crypto/modes/ghashv8-armx.S"
+                    ]
+                }
+            },
+            "CFB": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/cfb/aes_cfb_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/cfb/aes_cfb_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [
+                    ],
+                    "64-bit": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/cfb/aes_cfb_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/cfb/aes_cfb_armv8.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/asm/armv8/aes-64.S"
+                    ]
+                }
+            },
+            "OFB": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/ofb/aes_ofb_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/ofb/aes_ofb_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [
+                    ],
+                    "64-bit": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/ofb/aes_ofb_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/ofb/aes_ofb_armv8.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/asm/armv8/aes-64.S"
+                    ]
+                }
+            }
+        },
+        "HC": {
+            "CBC": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/hashCipher/aes_hc_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/hashCipher/aes_hc_bam.c"
+                    ]
+                }
+            },
+            "CTS": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/hashCipher/aes_hc_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/hashCipher/aes_hc_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/hashCipher/aes_hc_bam.c"
+                    ]
+                }
+            },
+            "CTR": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/aes/aes_sw_cmn.c",
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/aes/hashCipher/aes_hc_sw.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/hashCipher/aes_hc_bam.c"
+                    ]
+                }
+            }
+        },
+        "STREAM": {
+            "common": [
+                "${BUILDPATH}/engine/cipher/sw/stream/cipher_stream_cmn.c",
+                "${BUILDPATH}/util/util_bitbuf.c"
+            ],
+            "KASUMI": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/stream/kasumi/kasumi.c",
+                        "${BUILDPATH}/engine/cipher/sw/stream/kasumi/f8_sw.c"
+                    ]
+                }
+            },
+            "ZUC": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/stream/zuc/zuc.c",
+                        "${BUILDPATH}/engine/cipher/sw/stream/zuc/eea3_sw.c"
+                    ]
+                }
+            },
+            "SNOW3G": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/stream/snow3g/snow3g.c",
+                        "${BUILDPATH}/engine/cipher/sw/stream/snow3g/uea2_sw.c"
+                    ]
+                }
+            }
+        },
+        "CHACHA20": {
+            "common": [
+                "${BUILDPATH}/engine/cipher/sw/chacha20/chacha20.c"
+            ],
+            "DEFAULT": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/chacha20/chacha20_sw.c"
+                    ]
+                }
+            },
+            "AEAD_POLY1305": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/chacha20/chacha20_poly1305.c",
+                        "${BUILDPATH}/engine/mac/poly1305/poly1305.c"
+                    ]
+                }
+            }
+        },
+        "DES": {
+            "ECB": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/ecb/des_ecb_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/des_sw_cmn.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            },
+            "CBC": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/cbc/des_cbc_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/des_sw_cmn.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            }
+        },
+        "2DES": {
+            "ECB": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/ecb/des_ecb_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/des_sw_cmn.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            },
+            "CBC": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/cbc/des_cbc_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/des_sw_cmn.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            }
+        },
+        "TDES": {
+            "ECB": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/ecb/des_ecb_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/des_sw_cmn.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            },
+            "CBC": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/cbc/des_cbc_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/des/des_sw_cmn.c"
+                    ]
+                },
+                "ARMV8": {
+                    "common": [],
+                    "64-bit": []
+                },
+                "HWIO": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hwio.c"
+                    ]
+                },
+                "BAM": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_hw.c",
+                        "${BUILDPATH}/engine/cipher/hw/ce5x/cipher_cmn_bam.c"
+                    ]
+                }
+            }
+        },
+        "SM4": {
+            "ECB": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/sm4/ecb/sm4_ecb_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/sm4/sm4_sw_cmn.c"
+                    ]
+                }
+            },
+            "CBC": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/sm4/cbc/sm4_cbc_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/sm4/sm4_sw_cmn.c"
+                    ]
+                }
+            },
+            "CTR": {
+                "SW": {
+                    "common": [
+                        "${BUILDPATH}/engine/cipher/sw/cipher_cmn_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/sm4/ctr/sm4_ctr_sw.c",
+                        "${BUILDPATH}/engine/cipher/sw/sm4/sm4_sw_cmn.c"
+                    ]
+                }
+            }
+        }
+    },
+    "RAND": {
+        "common": [
+            "${BUILDPATH}/crypto/rand/uclib_rand.c"
+        ],
+        "PRNG": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/rand/rand_sw.c"
+                ]
+            },
+            "HRNG": {
+                "common": [
+                    "${BUILDPATH}/engine/rand/rand_hw.c"
+                ]
+            }
+        }
+    },
+    "PKEY": {
+        "common": [
+            "${BUILDPATH}/crypto/pkey/uclib_pkey.c"
+        ],
+        "RSA": {
+            "SW": {
+                "common": [
+                    "# ${BUILDPATH}/engine/pkey/rsa/rsa_sw_ce.c",
+                    "# ${BUILDPATH}/engine/pkey/rsa/rsa_padding.c"
+                ]
+            },
+            "PKA": {
+              "common": [
+                    "${BUILDPATH}/engine/pkey/rsa/rsa_pka.c",
+                    "${BUILDPATH}/engine/pkey/rsa/rsa_padding.c",
+                    "${BUILDPATH}/engine/pka/pka.c",
+                    "${BUILDPATH}/engine/pka/elppka.c"
+              ]
+            },
+            "TMECOM": {
+                "common": [
+                    "${BUILDPATH}/engine/pkey/ec/tmecom/ec_tmecom.c"
+                ]
+            }
+        },
+        "ECC": {
+            "SW": {
+                "common": [
+                    "# ${BUILDPATH}/engine/pkey/ec/ecpkey_sw.c",
+                    "# ${BUILDPATH}/engine/pkey/ec/ec.c",
+                    "# ${BUILDPATH}/engine/pkey/ec/ec_curves.c"
+                ]
+            },
+            "PKA": {
+              "common": [
+                    "${BUILDPATH}/engine/pkey/ec/pka/ec_pka.c",
+                    "${BUILDPATH}/engine/pka/pka.c",
+                    "${BUILDPATH}/engine/pka/elppka.c"
+              ]
+            },
+            "TME_SEQ": {
+                "common": [
+                    "${BUILDPATH}/engine/pkey/ec/ecpkey_tme_seq.c"
+                ]
+            },
+            "TMECOM": {
+                "common": [
+                    "${BUILDPATH}/engine/pkey/ec/tmecom/ec_tmecom.c"
+		]
+            }
+        },
+        "SM2": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/pkey/sm2/sm2_sw.c",
+                    "${BUILDPATH}/engine/pkey/sm2/sm2_cipher.c",
+                    "${BUILDPATH}/engine/pkey/sm2/sm2_dsa.c",
+                    "${BUILDPATH}/engine/pkey/sm2/sm2_keap.c",
+                    "${BUILDPATH}/engine/pkey/sm2/sm2_sw.c",
+                    "${BUILDPATH}/engine/pkey/sm2/sm2_utils.c"
+                ]
+            }
+        },
+        "CURVE25519": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/pkey/curve25519/curve25519.c"
+                ]
+            }
+        }
+    },
+    "MAC": {
+        "common": [
+            "${BUILDPATH}/crypto/mac/uclib_mac.c"
+        ],
+        "HMAC": {
+            "common": [],
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/mac/hmac/hmac_sw.c"
+                ]
+            },
+            "ARMV8": {
+                "common": [
+                    "${BUILDPATH}/engine/mac/hmac/hmac_sw.c"
+                ]
+            },
+            "HWIO": {
+                "common": [
+                    "${BUILDPATH}/engine/mac/hmac/hmac_ce.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/mac/hmac/hmac_ce.c"
+                ]
+            }
+        },
+        "CMAC": {
+            "common": [],
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/mac/cmac/cmac_sw.c"
+                ]
+            },
+            "ARMV8": {
+                "common": [
+                    "${BUILDPATH}/engine/mac/cmac/cmac_sw.c"
+                ]
+            },
+            "HWIO": {
+                "common": [
+                    "${BUILDPATH}/engine/mac/cmac/cmac_ce.c",
+                    "${BUILDPATH}/engine/mac/cmac/cmac_ce_hwio.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/mac/cmac/cmac_ce.c",
+                    "${BUILDPATH}/engine/mac/cmac/cmac_ce_bam.c"
+                ]
+            }
+        },
+        "ZUC": {
+            "common": [],
+            "SW": {
+                "common": [
+                   "${BUILDPATH}/engine/mac/EIA3/EIA3.c"
+                ]
+            }
+        },
+        "KASUMI": {
+            "common": [],
+            "SW": {
+                "common": [
+                   "${BUILDPATH}/engine/mac/f9/f9_sw.c"
+                ]
+            }
+        },
+        "SNOW3G": {
+            "common": [],
+            "SW": {
+                "common": [
+                   "${BUILDPATH}/engine/mac/uia2/uia2_sw.c"
+                ]
+            }
+        },
+        "POLY1305": {
+            "common": [],
+            "SW": {
+                "common": [
+                   "${BUILDPATH}/engine/mac/poly1305/poly1305.c",
+                   "${BUILDPATH}/engine/mac/poly1305/poly1305_sw.c"
+                ]
+            }
+        }
+    },
+    "KDF": {
+        "common": [
+            "${BUILDPATH}/crypto/kdf/uclib_kdf.c"
+        ],
+        "KBKDF_COUNTER": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_common.c",
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_counter_mode.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_common.c",
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_counter_mode.c"
+                ]
+            }
+        },
+        "KBKDF_FEEDBACK": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_common.c",
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_feedback_mode.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_common.c",
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_feedback_mode.c"
+                ]
+            }
+        },
+        "KBKDF_PIPELINE": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_common.c",
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_pipeline_mode.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_common.c",
+                    "${BUILDPATH}/engine/kdf/kbkdf/kbkdf_pipeline_mode.c"
+                ]
+            }
+        },
+        "PBKDF2": {
+            "SW": {
+                "common": [
+                    "${BUILDPATH}/engine/kdf/pbkdf/pbkdf2.c"
+                ]
+            },
+            "BAM": {
+                "common": [
+                    "${BUILDPATH}/engine/kdf/pbkdf/pbkdf2.c"
+                ]
+            }
+        },
+        "HKDF": {
+            "common": [
+                "${BUILDPATH}/engine/kdf/hkdf/hkdf.c"
+            ],
+            "SW": {
+            },
+            "BAM": {
+            },
+            "HWIO": {
+            }
+        }
+    },
+    "TESTS": {
+        "heap": [
+            "# ${BUILDPATH}/test/heap/heaptest.c"
+        ],
+        "selftest": [
+            "${BUILDPATH}/selftest/src/selftest.c"
+        ],
+        "HASH": {
+            "SHA1": [
+                "# ${BUILDPATH}/test/hash/sha1test.c"
+            ],
+            "SHA2": [
+                "# ${BUILDPATH}/test/hash/sha2test.c"
+            ],
+            "MD5": [
+                "# ${BUILDPATH}/test/hash/mdtest.c"
+            ]
+        },
+        "CIPHER": {
+            "AES": {
+                "common": [
+                    "# ${BUILDPATH}/test/cipher/aestest.c"
+                ],
+                "ECB": [
+                    "# ${BUILDPATH}/test/cipher/ecbtest.c"
+                ],
+                "CTS": [
+                    "# ${BUILDPATH}/test/cipher/ctstest.c"
+                ],
+                "CTR": [
+                    "# ${BUILDPATH}/test/cipher/ctrtest.c"
+                ],
+                "CCM": [
+                    "# ${BUILDPATH}/test/cipher/ccmtest.c"
+                ],
+                "GCM": [
+                    "# ${BUILDPATH}/test/cipher/gcmtest.c"
+                ]
+            },
+            "HC": [
+                "# ${BUILDPATH}/test/cipher/aes_hc_test.c"
+            ],
+            "DES": [
+                "# ${BUILDPATH}/test/cipher/destest.c"
+            ],
+            "TDES": [
+                "# ${BUILDPATH}/test/cipher/destest.c"
+            ]
+        },
+        "RAND": {
+            "PRNG": [
+                "# ${BUILDPATH}/test/rand/prngtest.c"
+            ]
+        },
+        "PKEY": {
+            "RSA": [
+                ""
+            ],
+            "ECC": [
+                ""
+            ]
+        },
+        "MAC": {
+            "HMAC": [
+                "# ${BUILDPATH}/test/mac/hmactest.c"
+            ],
+            "CMAC": [
+                "# ${BUILDPATH}/test/mac/cmactest.c"
+            ]
+        },
+        "KDF": {
+            "KBKDF": [
+                "# ${BUILDPATH}/test/kdf/kbkdf_test.c"
+            ],
+            "PBKDF2": [
+                "# ${BUILDPATH}/test/kdf/pbkdf_test.c"
+            ]
+        }
+    }
+}
+

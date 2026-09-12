@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="data.0.0" type="1"/>
+  <NvEfsItemData name="IWLAN_platform_config" id="73803" description="IWLAN Platform Config" comment="" category="data" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/data/wlan_config/iwlan_platform_config">
+    <Member name="is_disabled" description="IWLAN is disabled" comment="" sizeOf="1" type="uint8">1</Member>
+  </NvEfsItemData>
+  <NvItemData name="Disable CM Call Type" id="5280" description="" comment="" category="System" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="disable_cm_call_type" description="" comment="" sizeOf="1" type="uint64">2 </Member>
+  </NvItemData>
+</NvData>

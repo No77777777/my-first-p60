@@ -1,0 +1,38 @@
+<devcfg>
+    <blobs>              
+        <blob id="kamorta_xml"
+              name="DALPROP_PropsInfo_id_kamorta_wlan_pd"
+              type="ram" /> 
+        <blob id="agatti_xml"
+              name="DALPROP_PropsInfo_id_agatti_wlan_pd"
+              type="ram" />        
+    </blobs>
+
+    <blob_mappings>
+        <mapping     id="kamorta_xml"   stage="0"    soc_id="36866"/>
+        <mapping     id="agatti_xml"   stage="0"    soc_id="36867"/>
+    </blob_mappings>
+    
+    <loadlist>
+            <!-- first item must be of type="soc" [and second item type="platform" if present] -->
+            <item type="soc"/>
+    </loadlist>
+    
+    <image>
+        <target_img                 value="core_root"/>
+        <devcfg_target_build_id     value="DAL_DEVCFG_WLAN_PD_IMG"/>
+        <dal_config_target_id       value="0x0"/>
+        <tcsr_soc_hw_version        addr="0x003C8000"   direct="false" />
+        <multiCfg                   value="true"/>
+        <memory>
+            <props_memory_optimisation  value="true"/>
+            <size_of_struct             value="true"/>
+            <hw_version_specific_props  value="true"/>
+        </memory>
+        <devcfg_artifacts>
+            <!-- Selectively compile in DevCfg artifacts generated -->
+            <src_only       value="false" />
+            <cfg_only       value="true" />
+        </devcfg_artifacts>
+    </image>
+</devcfg>

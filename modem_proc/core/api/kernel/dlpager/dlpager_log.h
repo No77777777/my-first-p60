@@ -1,0 +1,129 @@
+#pragma once
+/*====*====*====*====*====*====*====*====*====*====*====*====*====*====*====*
+
+               DL PAGER TOP LEVEL HEADER FILE
+
+GENERAL DESCRIPTION
+
+  Copyright (c) 2010 Qualcomm Technologies Incorporated.
+  All Rights Reserved. QUALCOMM Proprietary and Confidential.
+*====*====*====*====*====*====*====*====*====*====*====*====*====*====*====*/
+
+
+/*===========================================================================
+
+            EDIT HISTORY FOR MODULE
+
+$Header: //components/rel/core.mpss/10.0/api/kernel/dlpager/dlpager_log.h#1 $ $DateTime: 2019/04/24 00:03:26 $ $Author: pwbldsvc $
+===========================================================================*/
+
+#define DLPAGER_LOG_VERSION 2
+#define DLPAGER_LOG_VERBOSE_LEVEL 1
+
+#if DLPAGER_LOG_VERBOSE_LEVEL > 0
+#define DLPAGER_TASKLOG_WRITE_L1( ev, a1, a2 ) dlpager_tasklog_write( ev, a1, a2 )
+#else
+#define DLPAGER_TASKLOG_WRITE_L1( ev, a1, a2 )
+#endif
+#if DLPAGER_LOG_VERBOSE_LEVEL > 1
+#define DLPAGER_TASKLOG_WRITE_L2( ev, a1, a2 ) dlpager_tasklog_write( ev, a1, a2 )
+#else
+#define DLPAGER_TASKLOG_WRITE_L2( ev, a1, a2 )
+#endif
+#if DLPAGER_LOG_VERBOSE_LEVEL > 2
+#define DLPAGER_TASKLOG_WRITE_L3( ev, a1, a2 ) dlpager_tasklog_write( ev, a1, a2 )
+#else
+#define DLPAGER_TASKLOG_WRITE_L3( ev, a1, a2 )
+#endif
+#if DLPAGER_LOG_VERBOSE_LEVEL > 3
+#define DLPAGER_TASKLOG_WRITE_L4( ev, a1, a2 ) dlpager_tasklog_write( ev, a1, a2 )
+#else
+#define DLPAGER_TASKLOG_WRITE_L4( ev, a1, a2 )
+#endif
+
+#if DLPAGER_LOG_VERBOSE_LEVEL > 0
+typedef enum
+{
+   DLP_LOG_END,
+   DLP_LOG_FAULT,
+   DLP_LOG_MISS_X_AT_UNMAPPED_CLEAN,
+   DLP_LOG_MISS_R_AT_UNMAPPED_CLEAN,
+   DLP_LOG_MISS_W_AT_UNMAPPED_CLEAN,
+   
+   DLP_LOG_MISS_R_AT_UNMAPPED_BSS,
+   DLP_LOG_MISS_W_AT_UNMAPPED_BSS,
+   
+   DLP_LOG_MISS_X_AT_UNMAPPED_CLEAN_DECOMPRESSING,
+   DLP_LOG_MISS_R_AT_UNMAPPED_CLEAN_DECOMPRESSING,
+   DLP_LOG_MISS_W_AT_UNMAPPED_CLEAN_DECOMPRESSING,
+   DLP_LOG_DECOMPRESSION_COMPLETE_AT_UNMAPPED_CLEAN_DECOMPRESSING,
+
+   DLP_LOG_MISS_R_AT_UNMAPPED_DIRTY_DECOMPRESSING,
+   DLP_LOG_MISS_W_AT_UNMAPPED_DIRTY_DECOMPRESSING,
+   DLP_LOG_DECOMPRESSION_COMPLETE_AT_UNMAPPED_DIRTY_DECOMPRESSING,
+
+   DLP_LOG_MISS_R_AT_UNMAPPED_DIRTY_COMPRESSING_ALLOCATED,
+   DLP_LOG_MISS_W_AT_UNMAPPED_DIRTY_COMPRESSING_ALLOCATED,
+   DLP_LOG_COMPRESSION_COMPLETE_AT_UNMAPPED_DIRTY_COMPRESSING_ALLOCATED,
+   DLP_LOG_SOFT_CLEAN_FAILED_AT_UNMAPPED_DIRTY_COMPRESSING_ALLOCATED,
+
+   DLP_LOG_MISS_R_AT_UNMAPPED_CLEAN_ALLOCATED,
+   DLP_LOG_MISS_W_AT_UNMAPPED_CLEAN_ALLOCATED,
+   DLP_LOG_EVICT_PAGE_AT_UNMAPPED_CLEAN_ALLOCATED,
+
+   DLP_LOG_MISS_R_AT_UNMAPPED_HARD_CLEAN_COMPRESSING,
+   DLP_LOG_MISS_W_AT_UNMAPPED_HARD_CLEAN_COMPRESSING,
+   DLP_LOG_COMPRESSION_COMPLETE_AT_UNMAPPED_HARD_CLEAN_COMPRESSING,
+
+   DLP_LOG_MISS_X_AT_MAPPED_CLEAN,
+   DLP_LOG_MISS_R_AT_MAPPED_CLEAN,
+   DLP_LOG_MISS_W_AT_MAPPED_CLEAN,
+   DLP_LOG_EVICT_PAGE_AT_MAPPED_CLEAN,
+
+   DLP_LOG_MISS_R_AT_MAPPED_DIRTY,
+   DLP_LOG_MISS_W_AT_MAPPED_DIRTY,
+   DLP_LOG_SOFT_CLEAN_PAGE_AT_MAPPED_DIRTY,
+   DLP_LOG_HARD_CLEAN_PAGE_AT_MAPPED_DIRTY,
+
+   DLP_LOG_MISS_R_AT_MAPPED_DIRTY_COMPRESSING,
+   DLP_LOG_MISS_W_AT_MAPPED_DIRTY_COMPRESSING,
+   DLP_LOG_COMPRESSION_COMPLETE_AT_MAPPED_DIRTY_COMPRESSING,
+
+   DLP_LOG_TLBX,
+   DLP_LOG_TLBR,
+   DLP_LOG_TLBW,
+   DLP_LOG_BSS_TLBW,
+   DLP_LOG_EVICT,
+   DLP_LOG_WAITLIST,
+   DLP_REMOVE_CLK_VOTE,
+   DLP_FIRST_CLK_VOTE,
+   DLP_MAX_CLK_VOTE,
+   DLP_RESTART_TIMER,
+   DLP_LOG_TASK_RESUME,
+   DLP_LOG_MAX_CLK_VOTE_REQ,
+   DLP_LOG_MAX_CLK_VOTE_RSP,
+   DLP_LOG_MAX_CLK_VOTING,
+   DLP_LOG_MAX_CLK_VOTED,
+   DLP_LOG_Q6ZIP_SW_DECOMPRESSED,  /**< Decompression completed by Q6Zip SW */
+   DLP_LOG_Q6ZIP_SW_COMPRESSED,    /**< Compresssion completed by Q6Zip SW */
+   DLP_LOG_Q6ZIP_IPA_DECOMPRESSED, /**< Decompression completed by Q6Zip IPA */
+   DLP_LOG_Q6ZIP_IPA_COMPRESSED,   /**< Compression completed by Q6Zip IPA */
+   
+   DLP_LOG_MISS_R_AT_MAPPED_CLEAN_COMPRESSING,
+   DLP_LOG_MISS_W_AT_MAPPED_CLEAN_COMPRESSING,
+   DLP_LOG_COMPRESSION_COMPLETE_AT_MAPPED_CLEAN_COMPRESSING,
+   DLP_LOG_SOFT_CLEAN_FAILED_AT_MAPPED_CLEAN_COMPRESSING,
+   
+   DLP_LOG_MISS_R_AT_MAPPED_CLEAN_BSS,
+   DLP_LOG_MISS_W_AT_MAPPED_CLEAN_BSS,
+   DLP_LOG_EVICT_PAGE_AT_MAPPED_CLEAN_BSS,
+   
+} dlpager_tasklog_event_t;
+
+/*===========================================================================
+
+             FUNCTION DEFINITIONS
+
+===========================================================================*/
+void dlpager_tasklog_write( dlpager_tasklog_event_t wLogEvent, unsigned wArg1, unsigned wArg2 );
+#endif /* #if DLPAGER_LOG_VERBOSE_LEVEL > 0 */

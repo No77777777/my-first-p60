@@ -1,0 +1,50 @@
+#ifndef _WMS_QSH_EXT_H_
+#define _WMS_QSH_EXT_H_
+
+#include <customer.h>
+#include "comdef.h"
+#include "qsh.h"
+
+/*===========================================================================
+
+                        MACROS DEFINITION
+
+===========================================================================*/
+#define WMS_QSH_MAJOR_VER 1
+#define WMS_QSH_MINOR_VER 1
+
+/******************************************************************************
+**  QSH EVENTS
+******************************************************************************/
+
+typedef enum {
+  WMS_QSH_EVENT_SMS_FAIL_RP_UNASSIGNED_NUMBER = 0,
+  WMS_QSH_EVENT_SMS_FAIL_RP_CALL_BARRED,
+  WMS_QSH_EVENT_SMS_FAIL_RP_SM_REJECTED,
+  WMS_QSH_EVENT_SMS_FAIL_RP_UNIDENTIFIED_SUBSCRIBER,
+  WMS_QSH_EVENT_SMS_FAIL_RP_UNKNOWN_SUBSCRIBER,
+  WMS_QSH_EVENT_SMS_FAIL_RP_INVALID_MANDATORY_INFORMATION,
+  WMS_QSH_EVENT_TR1M_OR_TR2M_TIMEOUT,
+  WMS_QSH_EVENT_RADIO_UNAVAILABLE,
+  WMS_QSH_EVENT_NO_RESPONSE_FROM_NETWORK,
+  WMS_QSH_EVENT_RADIO_LINK_ENDED_FOR_SUBMIT_REPORT,
+  WMS_QSH_EVENT_SMS_FAIL_AFTER_RETRY,  
+  WMS_QSH_EVENT_SMS_FAIL_ERR_AS_ID,  
+  WMS_QSH_EVENT_SMS_FAIL_GENERAL_ERROR,
+  WMS_QSH_EVENT_SMS_FAIL_1X_AND_VOICE_NOT_ALLOWED,
+  WMS_QSH_EVENT_SMS_FAIL_NO_TRANSPORT,
+  WMS_QSH_EVENT_SMS_FAIL_PHONE_NOT_READY,
+  WMS_QSH_EVENT_SMS_FAIL_NETWORK_NOT_READY,
+  WMS_QSH_EVENT_CMD_QUEUE_FULL,
+  WMS_QSH_EVENT_FIELD_DEBUG_ANY_FAILURE,
+  WMS_QSH_EVENT_3GPP_SIM_INIT_START,
+  WMS_QSH_EVENT_3GPP2_SIM_INIT_START,
+  WMS_QSH_EVENT_3GPP_SIM_INIT_END,
+  WMS_QSH_EVENT_3GPP2_SIM_INIT_END,
+  WMS_QSH_EVENT_MAX
+}wms_qsh_event_e;
+
+
+#endif /* _WMS_QSH_EXT_H_ */
+
+

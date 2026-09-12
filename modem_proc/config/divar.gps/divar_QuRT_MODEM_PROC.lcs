@@ -1,0 +1,701 @@
+/*
+ * Modem linker script
+ *
+ * vim: set ft=ld ts=2 sw=2 et ai nosi:
+ *
+ * Notes:
+ * - binutils 2.14 has a bug where ASSERT() must have a sink. __assert_sink__
+ *   is used as a dummy value.
+ *
+ * - readelf -l doesn't print all the sections in TCM_CODE/DATA segments
+ *   properly?
+ */
+
+/*
+ * ============================================================================
+ * Start of configurable parameters
+ * ============================================================================
+ */
+
+/*
+ * Image base address (virtual and physical).
+ * This must match the default setup regions in cust_config.xml.
+ * It must also match the .start address in the linker command line.
+ */
+__image_addr_base__ = 0xC0B00000;
+
+/*
+ * Image base address phsyical. Used by minidump
+ * 
+ */
+__image_addr_PA_base__ = 0x4AB00000;
+
+/*
+ * Starting virtual address range of TCM-mapped code and data.
+ * This includes static TCM as well as overlays.
+ */
+__tcm_va_base__ = 0x6400000;
+
+/*
+ * Base physical address of TCM.
+ * Static code/data always starts here.
+ * Must match the definitions in modem_fw_memmap.h.
+ */
+__tcm_pa_base__ = 0x6400000;
+
+/*
+ * Total size of usable TCM, not including L2 cache.
+ * This must match the TCM pool definitions in cust_config.xml, and also the
+ * size in modem_fw_memmap.h.
+ */
+__tcm_max_size__ = 0x00100000;
+
+/*
+ *Max size Budgeted for CLADE V1 High Priority
+ *in static TCM
+ */
+__tcm_static_clade_high_prio_exception_max_size__ = 4096;
+
+
+/*
+ * Reserved space for FW in static TCM.
+ * This must be kept the same between FW and SW builds.
+ */
+__tcm_static_fw_text_reserved__ = 56K;
+__tcm_static_fw_data_reserved__ = 63K;
+
+/*
+ * Maximum size of code/data loaded into TCM at startup.
+ *
+ * This must match the page sizes allocated in cust_config.xml, and must be a
+ * multiple of 4K.
+ */
+__tcm_static_max_size__ = 256K;
+
+/* Total size of XLTE overlay section*/
+__tcm_xlte_sw_overlay_max_size__ = 48K;
+/*
+ * Amount of static TCM to reserve.
+ *
+ * This is the 4K-multiple amount of space to block off in static TCM
+ */
+__tcm_static_reserved__ = 0;
+
+/*
+ * Start address for error fatal messages.
+ * This address will be modified post-link to be adjacent to other sections.
+ */
+__ro_fatal_start__ = 0xCF800000;
+
+
+/*
+ * Size of TCM to reserve for dynamic allocation
+ */
+__tcm_dynamic_size__ = 0;
+
+/*
+ * Virtual alignement for the TCM when mapped in the middle of the text.
+ */
+__tcm_align_boundary__  = 0x00010000;
+
+/*
+ * Alignment for the TCM code/data overlay section
+ */
+__tcm_overlay_align__ = 16K;
+
+/*
+ * Size of cache line.
+ * We don't expect this to change, but this makes its usage clear.
+ */
+__cache_line_size__ = 64;
+
+/*
+ * Start address for code and data to be run through Q6Zip.
+ * This address will be modified post-link to be adjacent to other sections.
+ */
+__uncompressed_VA_start__ = 0xd0000000;
+
+/*
+ * Starting address of sections to be compressed.
+ * Linker will compress the regions
+ * and place them at the end of the elf file
+ */
+__uncompressed_VA_high_start__ = 0xD8000000;
+
+
+/*
+ * ============================================================================
+ * End of configurable parameters
+ * ============================================================================
+ */
+
+OUTPUT_FORMAT (
+  "elf32-littlehexagon",
+  "elf32-bighexagon",
+  "elf32-littlehexagon"
+)
+
+OUTPUT_ARCH (hexagon)
+
+ENTRY (start)
+
+PHDRS
+{
+  /*
+   * Some SW tools assume the first segment is for debug info. Don't move INIT
+   */
+  INIT                        PT_LOAD;
+
+  tcm_static                  PT_LOAD;
+  ukernel_island   PT_LOAD;
+  island_data   PT_LOAD;
+  island_rodata   PT_LOAD;
+  island_text   PT_LOAD;
+  ukernel_main   PT_LOAD;
+
+  TCM_OVERLAY_TEXT            PT_LOAD;
+  TCM_OVERLAY_DATA            PT_LOAD;
+
+  text_fw                     PT_LOAD;
+  text_sw                     PT_LOAD;
+  DATA_L1WT_L2WT              PT_LOAD;
+  DATA_L1WB_L2UC              PT_LOAD;
+  data_uncached               PT_LOAD;
+
+
+  CONST                       PT_LOAD;
+  DATA                        PT_LOAD;
+  BSS_OVERLAY                 PT_LOAD;
+  BSS                         PT_LOAD;
+  sdata                       PT_LOAD;
+
+  fatal_msg                   PT_LOAD;
+  dynamicReclaim                PT_LOAD;
+  last_sections                 PT_LOAD;
+
+  qsr_string                  PT_LOAD;
+  qsr_4_0_msg                 PT_LOAD;  
+}
+
+SECTIONS
+{
+
+  /* start of dynamic reclaiming section. */
+  . = __uncompressed_VA_start__ + 0x04000000;
+  . = ALIGN(4K);
+  __dynrec_reserve_range_start__ = .;
+  /*INCLUDE dynrec_rfc.lst*/  /* switch_1 to turn on/off dynamic reclaiming feature on RFC module. */
+  __dynrec_reserve_range_end = .;
+  . = ALIGN(4K);
+  /* end of dynamic reclaiming section. */
+
+  /*
+   * Qshrink section
+   *
+   * Ensure that it is placed after ro_fatal and Q6Zip in VA and PA space.
+   */
+  QSR_STRING      : { *(QSR_STR.fmt.rodata*) } :qsr_string
+
+  . = __image_addr_base__;
+
+  /*
+   * Sections defined in the default linker script.
+   * View the default linker script by passing --verbose to ld
+   *
+   * Read-only sections, merged into text segment:
+   */
+  .interp         : { *(.interp) }
+  .dynamic        : { *(.dynamic) }
+  .hash           : { *(.hash) }
+  .dynsym         : { *(.dynsym) }
+  .dynstr         : { *(.dynstr) }
+  .gnu.version    : { *(.gnu.version) }
+  .gnu.version_d  : { *(.gnu.version_d) }
+  .gnu.version_r  : { *(.gnu.version_r) }
+
+  .rel.dyn        :
+    {
+      *(.rel.init)
+      *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+      *(.rel.fini)
+      *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+      *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+      *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+      *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+      *(.rel.ctors)
+      *(.rel.dtors)
+      *(.rel.got)
+      *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+      *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+      *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+      *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+      *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+    }
+
+  .rela.dyn       :
+    {
+      *(.rela.init)
+      *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+      *(.rela.fini)
+      *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+      *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+      *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+      *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+      *(.rela.ctors)
+      *(.rela.dtors)
+      *(.rela.got)
+      *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+      *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+      *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+      *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+      *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+      *(.rela.start)
+      *(.rela.gcc_except_table)
+      *(.rela.eh_frame)
+    }
+
+  .rel.plt        : { *(.rel.plt) }
+  .rela.plt       : { *(.rela.plt) }
+
+  /*
+   * Code starts
+   */
+  . = ALIGN (DEFINED (TEXTALIGN) ? (TEXTALIGN * 1K) : 4096);
+
+  .BOOTUP         : {} :INIT
+
+  .start          :
+    {
+      __MMU_region_start_name_qurt_A0_1_R_1_W_0_X_1_U_0_lock_1 = .;
+
+      KEEP (*(.start))
+
+      . = ALIGN(8);
+    } =0x00c0007f
+
+    /*
+     * Static TCM
+     * Already aligned in tcm_static.lcs
+     */
+     . = ALIGN(1M);
+  INCLUDE tcm_static.lcs
+
+  /* QURT_ISLAND_UKERNEL */ 
+  . = ALIGN(4K);
+  .data.island : {
+    /* ISLAND_DATA */
+  } : island_data
+  /* ISLAND_RW_SECTIONS */
+  . = ALIGN(4K);
+  .rodata.island : {
+    /* ISLAND_RODATA */
+  } : island_rodata
+  . = ALIGN(64);
+  . = MAX(., (ADDR(.rodata.island)+0xFFF) & (-0x1000));
+  . = ALIGN(4K);
+  .text.island : {
+    /* ISLAND_TEXT */
+  } : island_text 
+  /* ISLAND_RO_SECTIONS */
+  .end.island : { . = ALIGN(4K); } : island_text
+
+    .CODE               : {}
+   .ugap: {
+   . = ALIGN(4K);
+    } : ukernel_main
+  /* QURT_MAIN_UKERNEL */  /* Defines .ukernel.main section */
+  . = ALIGN(4K);  
+    .init               : { KEEP(*(.init)) } =0x00c0206c
+    .plt                : { *(.plt) }
+
+    . = ALIGN(64K);
+
+  __MMU_region_unmapped_align_padding_start_tcm = .;
+
+
+
+  . = ALIGN(0x10000);
+
+
+  /*
+   * Executable code (RX)
+   */
+  __MMU_region_start_name_text1_A0_1_R_1_W_0_X_1_lock_1 = .;
+
+  .text_fw        :
+    {
+      *modem_proc/fw*:(.text  .text.* .gnu.linkonce.t.*)
+    } :text_fw=0x00c0007f
+
+  . = ALIGN (4K);
+
+  .text_sw        :
+    {
+      *modem_proc/lte*:(.text  .text.* .gnu.linkonce.t.*)
+      *modem_proc/hdr*:(.text  .text.* .gnu.linkonce.t.*)
+
+      [a-z]*(.text .stub .text.* .gnu.linkonce.t.*)
+      *(.task_text)
+      *(.wrap.func)
+      *(.uncompressible.text .uncompressible.text.*)
+      *(.qsh_mdump_fn .qsh_mdump_fn.*)
+      *(.text.hot .text.hot.* .gnu.linkonce.t.hot.*)
+      *(.text .stub .text.* .gnu.linkonce.t.*)
+
+      /* .gnu.warning sections are handled specially by elf32.em. */
+      *(.gnu.warning)
+    } :text_sw =0x00c0007f
+
+  .fini           : { KEEP (*(.fini)) } =0x00c0007f
+
+  . = ALIGN(256K);
+
+  PROVIDE (__etext = .);
+  PROVIDE (_etext = .);
+  PROVIDE (etext = .);
+
+  /*
+   * Data (RW)
+   *
+   * A2 requires that this start at a 256K boundary. See CR 774061
+   */
+  . = ALIGN(256K);
+
+    /*
+     * Uncached data
+     */
+    .data_l1wt_l2wt :
+    {
+      __MMU_region_start_name_data.l1wt.l2wt_A0_1_R_1_W_1_X_0_CCCC_5_lock_1 = .;
+
+      *(.data_l1wt_l2wt .data_l1wt_l2wt.*)
+
+      . += 4096;
+    } :DATA_L1WT_L2WT =0
+
+  . = ALIGN (16K);
+
+    .data_l1wb_l2uc     :
+      {
+        __MMU_region_start_name_data.l1wb.l2uc_R_1_W_1_X_0_CCCC_0_lock_1 = .;
+        *(.data_l1wb_l2uc .data_l1wb_l2uc.*)
+        . += 4096;
+      } :DATA_L1WB_L2UC =0
+    . = ALIGN(256K);
+
+  .data_uncached  :
+    {
+      __MMU_region_start_name_data.uncached_A0_1_R_1_W_1_X_0_CCCC_6_lock_1 = .;
+
+      *(.data.uncached.first)
+      *(.data.uncached.*)
+      *(.data_uncached .data_uncached.*)
+        KEEP(*(.keep_uncached))
+      . += 4096;
+    } :data_uncached =0
+
+  . = ALIGN(256K);
+
+  __MMU_region_start_name_data_A0_1_R_1_W_1_X_0_lock_1 = .;
+
+  /*
+   * Constants start
+   */
+  . = ALIGN (DEFINED (RODATAALIGN)? (RODATAALIGN * 1K) : 4096);
+
+  .CONST          : {} :CONST
+  .rodata.diag    : { *(.rodata.diag .rodata.diag.*) }
+
+  .rodata         :
+    {
+      *(.rodata.hot .rodata.hot.* .gnu.linkonce.r.hot.*)
+
+      /* F3 messages */
+      *(.qsr.*)
+      *(.fatal.file.rodata .fatal.file.rodata.*)
+      *(.rodata.QSR_F3_MSG*)
+
+      *(.rodata .rodata.* .gnu.linkonce.r.*)
+    }
+    .pool.space: {*(.pool.space)}
+
+  .rodata1        : { *(.rodata1) }
+  .sdata2         : { *(.sdata2 .sdata2.* .gnu.linkonce.s2.*) }
+  .sbss2          : { *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*) }
+  .eh_frame_hdr   : { *(.eh_frame_hdr) }
+
+  /*
+   * Adjust the address for the data segment. We want to adjust up to the same
+   * address within the page on the next page up.
+   */
+  . = ALIGN (4096) + (. & (4096 - 1));
+  . = ALIGN (DEFINED (DATAALIGN)? (DATAALIGN * 1K) : 4096);
+
+  .DATA           : {} :DATA
+
+  /*
+   * Ensure the __preinit_array_start label is properly aligned. We could
+   * instead move the label definition inside the section, but the linker
+   * would then create the section even if it turns out to be empty, which is
+   * not pretty.
+   */
+  . = ALIGN (64);
+
+  PROVIDE (__preinit_array_start = .);
+  .preinit_array  : { *(.preinit_array) }
+  PROVIDE (__preinit_array_end = .);
+
+  PROVIDE (__init_array_start = .);
+  .init_array     : { *(.init_array) }
+  PROVIDE (__init_array_end = .);
+
+  PROVIDE (__fini_array_start = .);
+  .fini_array     : { *(.fini_array) }
+  PROVIDE (__fini_array_end = .);
+
+  .data           :
+    {
+      *libqurtkernel.a:(.data* .sdata*)
+      *cust_config.o(.data .sdata*)
+      *(QURTK.FUTEX.data)
+      *(QURTK.CONTEXTS.data)
+      *(QURTK.TRACEBUFFER.data)
+
+      *(.data.hot .data.hot.* .gnu.linkonce.d.hot.*)
+      *(.data .data.* .gnu.linkonce.d.*)
+      SORT(CONSTRUCTORS)
+      *(.overlay.mem_dump)
+    }
+
+  .divar_DEVCFG_DATA : { *(.divar_DEVCFG_DATA) }
+
+  .data1          : { *(.data1) }
+  .tdata          : { *(.tdata .tdata.* .gnu.linkonce.td.*) }
+  .tbss           : { *(.tbss .tbss.* .gnu.linkonce.tb.*) *(.tcommon) }
+  .eh_frame       : { KEEP (*(.eh_frame)) }
+  .gcc_except_table : { *(.gcc_except_table .gcc_except_table.*) }
+
+  .ctors          :
+    {
+      /*
+       * GCC uses crtbegin.o to find the start of the constructors, so we make
+       * sure it is first. Because this is a wildcard, it doesn't matter if
+       * the user does not actually link against crtbegin.o; the linker won't
+       * look for a file to match a wildcard. The wildcard also means that it
+       * doesn't matter which directory crtbegin.o is in.
+       */
+      KEEP (*crtbegin*.o(.ctors))
+
+      /*
+       * We don't want to include the .ctor section from from the crtend.o
+       * file until after the sorted ctors. The .ctor section from the crtend
+       * file contains the end of ctors marker and it must be last.
+       */
+      KEEP (*(EXCLUDE_FILE (*crtend*.o fini.o) .ctors))
+      KEEP (*(SORT(.ctors.*)))
+      KEEP (*(.ctors))
+    }
+
+  .dtors          :
+    {
+      KEEP (*crtbegin*.o(.dtors))
+      KEEP (*(EXCLUDE_FILE (*crtend*.o fini.o) .dtors))
+      KEEP (*(SORT(.dtors.*)))
+      KEEP (*(.dtors))
+    }
+
+  .jcr            : { KEEP (*(.jcr)) }
+  .got            : { *(.got.plt) *(.got) }
+
+  _edata = .;
+  PROVIDE (edata = .);
+
+  . = ALIGN (4K);
+
+
+
+  /*
+   * BSS overlay: shared memory regions
+   */
+  INCLUDE bss_overlay.lcs
+  . = ALIGN (256K);
+
+  .bss            :
+    {
+      /*
+      * Include both .bss.overlay and .bss
+      */
+      __bss_start = .;
+      __kernel_bss_start = .;
+      *libqurtkernel.a:(.bss)
+      *cust_config.o(.bss)
+      /* Autostack data structures in BSS */
+      __bss_stack_start__ = .;
+      *(.bss.stack_*)
+      __bss_stack_end__ = .;
+      __kernel_bss_end = .;
+
+      *libqurtkernel.a:(*COMMON .scommon.* .sbss*)
+      *cust_config.o(*COMMON .scommon.* .sbss*)
+      *(.bss.hot .bss.hot.* .gnu.linkonce.b.hot.*)
+      *(.bss .bss.* .gnu.linkonce.b.*)
+      *(.dynbss)
+      *(COMMON)
+
+      . = ALIGN(4K);
+      __dlpager_heap_start__ = .;
+      __dlpager_heap_end__ = .;
+
+      /*
+       * Align here to ensure that the .bss section occupies space up to _end.
+       * Align after .bss to ensure correct alignment even if the .bss section
+       * disappears because there are no input sections.
+       */
+      . = ALIGN (1M);
+    } :BSS
+
+  _end = .;
+
+  . = ALIGN (0x1000);
+
+  .SDATA          : {} :sdata
+
+  .sdata          :
+    {
+      __default_sda_base__ = .;
+      PROVIDE (_SDA_BASE_ = __default_sda_base__);
+
+      *(.sdata.1 .sdata.1.* .gnu.linkonce.s.1.*)
+      *(.sbss.1 .sbss.1.* .gnu.linkonce.sb.1.*)
+      *(.scommon.1 .scommon.1.*)
+      *(.sdata.2 .sdata.2.* .gnu.linkonce.s.2.*)
+      *(.sbss.2 .sbss.2.* .gnu.linkonce.sb.2.*)
+      *(.scommon.2 .scommon.2.*)
+      *(.sbss.4 .sbss.4.* .gnu.linkonce.sb.4.*)
+      *(.scommon.4 .scommon.4.*)
+      *(.sdata.4 .sdata.4.* .gnu.linkonce.s.4.*)
+      *(.lita .lita.* .gnu.linkonce.la.*)
+      *(.lit4 .lit4.* .gnu.linkonce.l4.*)
+      *(.lit8 .lit8.* .gnu.linkonce.l8.*)
+      *(.sdata.8 .sdata.8.* .gnu.linkonce.s.8.*)
+      *(.sbss.8 .sbss.8.* .gnu.linkonce.sb.8.*)
+      *(.scommon.8 .scommon.8.*)
+      *(.sdata.hot .sdata.hot.* .gnu.linkonce.s.hot.*)
+      *(.sdata .sdata.* .gnu.linkonce.s.*)
+
+      /*
+       * Merge .sbss into .sdata.
+       *
+       * This should hopefully guarantee that the section preceding ro_fatal
+       * is non-empty.
+       *
+       * Any section after an empty section will have the same starting
+       * address as the empty section. This breaks ELF manipulator's
+       * restriction of single-section segments, since it believes that the
+       * empty section is overlapping with the section it's trying to
+       * manipulate.
+       *
+       * ELF manipulator is used to zlib compress the ro_fatal section.
+       */
+      PROVIDE (__sbss_start = .);
+      PROVIDE (___sbss_start = .);
+
+      *(.sbss.hot .sbss.hot.* .gnu.linkonce.sb.hot.*)
+      *(.sbss .sbss.* .gnu.linkonce.sb.*)
+      *(.scommon .scommon.*)
+      *(.dynsbss)
+
+      . = ALIGN (64);
+
+      PROVIDE (__sbss_end = .);
+      PROVIDE (___sbss_end = .);
+    }
+
+  . = ALIGN(0x1000);
+  
+  PROVIDE (end = .);
+
+    /* 2015-09-3 swapnil: enabled FW overlay mem dump  */
+    /* 2016-07-26 rahol: section VA is no longer overlaid with the compressed region
+        since compressed region has dynamic TLBs*/
+
+    . = __ro_fatal_start__;
+    ro_fatal            :
+      {
+        *(fatal.struct.rodata fatal.struct.rodata. fatal.struct.rodata.*)
+        *(fatal.fmt.rodata fatal.fmt.rodata. fatal.fmt.rodata.*)
+      } :fatal_msg
+
+    INCLUDE ../../config/default/qshrink_MODEM_PROC.lcs
+
+  /* ro_fatal's VA will be moved after the CLADE compressed sections VAs and
+   * FW overlay mem dump will start at the same VA as .clade.comp
+   * This will ensure that there will be no excess padding created between
+   * ro_fatal and clade compressed sections
+  */
+  
+  /* Stabs debugging sections.  */
+  .stab          0 : { *(.stab) }
+  .stabstr       0 : { *(.stabstr) }
+  .stab.excl     0 : { *(.stab.excl) }
+  .stab.exclstr  0 : { *(.stab.exclstr) }
+  .stab.index    0 : { *(.stab.index) }
+  .stab.indexstr 0 : { *(.stab.indexstr) }
+  .comment       0 : { *(.comment) }
+  .note.qc.cov      0 : { *(.note.qc.cov) }
+
+  /*
+   * DWARF debug sections.
+   *
+   * Symbols in the DWARF debugging sections are relative to the beginning
+   * of the section so we begin them at 0.
+   */
+
+  /* DWARF 1 */
+  .debug          0 : { *(.debug) }
+  .line           0 : { *(.line) }
+
+  /* GNU DWARF 1 extensions */
+  .debug_srcinfo  0 : { *(.debug_srcinfo) }
+  .debug_sfnames  0 : { *(.debug_sfnames) }
+
+  /* DWARF 1.1 and DWARF 2 */
+  .debug_aranges  0 : { *(.debug_aranges) }
+  .debug_pubnames 0 : { *(.debug_pubnames) }
+
+  /* DWARF 2 */
+  .debug_info     0 : { *(.debug_info .gnu.linkonce.wi.*) }
+  .debug_abbrev   0 : { *(.debug_abbrev) }
+  .debug_line     0 : { *(.debug_line) }
+  .debug_frame    0 : { *(.debug_frame) }
+  .debug_str      0 : { *(.debug_str) }
+  .debug_loc      0 : { *(.debug_loc) }
+  .debug_macinfo  0 : { *(.debug_macinfo) }
+
+  /* SGI/MIPS DWARF 2 extensions */
+  .debug_weaknames 0 : { *(.debug_weaknames) }
+  .debug_funcnames 0 : { *(.debug_funcnames) }
+  .debug_typenames 0 : { *(.debug_typenames) }
+  .debug_varnames  0 : { *(.debug_varnames) }
+
+  /* DWARF 2.1 */
+  .debug_ranges   0 : { *(.debug_ranges) }
+
+  /* DWARF 3 */
+  .debug_pubtypes 0 : { *(.debug_pubtypes) }
+
+  /*
+   * Group all remaining sections here, and generate an error if there are
+   * any. To debug which sections are unrecognized, comment out the following
+   * lines and use qdsp6-objdump -h on the resulting image to look for them,
+   * or look at the .map file to see what has been placed here.
+   */
+  __unrecognized_start__ = .;
+  .unrecognized : { *(*) }
+  __unrecognized_end__ = .;
+
+  __assert_sink__ = ASSERT(
+    __unrecognized_end__ == __unrecognized_start__,
+    "Unrecognized sections - see linker script"
+  );
+}

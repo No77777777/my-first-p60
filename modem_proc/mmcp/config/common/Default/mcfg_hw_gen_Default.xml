@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+	<NvConfigurationData carrierIndex="0" version="MMCP.0.0" type="1"/>	
+	<NvItemData name="Disable CM Call Type" id="5280" description="Identifies disabled call types on target" comment="" category="System" mcfgAttributes="0x09" mcfgVariant="1">
+		<Member name="disable_cm_call_type" description="" comment="" sizeOf="1" type="uint64">2 </Member>
+	</NvItemData>
+	<NvEfsItemData name="special_scan_mcc_list" id="74698" description="Special Scan MCC List" comment="" category="MMode" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/mmode/sd/special_scan_mcc_list">
+		<Member name="mcc[0]" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+		<Member name="mcc[1]" description="" comment="" sizeOf="1" type="uint32">450 </Member>
+		<Member name="mcc[2]" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+		<Member name="mcc[3]" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+		<Member name="mcc[4]" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+	</NvEfsItemData>
+</NvData>

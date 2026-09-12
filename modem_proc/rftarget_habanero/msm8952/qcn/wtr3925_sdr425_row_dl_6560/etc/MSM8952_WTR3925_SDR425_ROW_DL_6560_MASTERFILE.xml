@@ -1,0 +1,181 @@
+<NvSource xmlns:xi="http://www.w3.org/2001/XInclude">
+	<!-- Includes -->
+	<!-- STATIC NV Masterfile created using: -->
+	<!-- RFC Revision        : V5.24.040,	last updated: July 29, 2019-->
+	<!-- TARGET NV Revision  : v1.0.4,	last updated: June 17, 2014 -->
+	<!-- ASIC NV Revision    : v1.0.102,	last updated: 09/01/17 -->
+	<!-- RF Card NV Master (WTR3925) Revision : v1.0.102,	last updated: 09/01/17 -->
+	<!-- RF Card NV Revision : ,	last updated:  -->
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G850_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G850_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G850_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G900_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G900_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G900_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G1800_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G1800_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G1800_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G1900_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G1900_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_GSM_G1900_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_CDMA_BC0_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_CDMA_BC0_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_CDMA_COMMON_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_CDMA_BC0_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_COMMON.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B1_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B1_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_COMMON_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B1_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B2_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B2_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B2_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B3_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B3_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B3_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B4_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B4_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B4_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B5_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B5_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B5_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B8_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B8_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B8_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B11_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B11_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B11_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B9_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B19_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_WCDMA_B19_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_COMMON_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B1_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B1_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B1_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B1_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_COMMON_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B1_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B2_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B2_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B2_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B2_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B2_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B3_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B3_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B3_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B3_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B3_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B4_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B4_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B4_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B4_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B4_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B5_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B5_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B5_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B5_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B5_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B7_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B7_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B7_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B7_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B7_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B8_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B8_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B8_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B8_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B8_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B11_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B11_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B11_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B11_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B11_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B18_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B18_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B18_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B18_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B18_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B19_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B19_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B19_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B19_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B19_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B20_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B20_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B20_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B20_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B20_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B21_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B21_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B21_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B21_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B21_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B26_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B26_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B26_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B26_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B26_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B27_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B27_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B27_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B27_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B27_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B28_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B28_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B28_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B28_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B28_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B29_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B29_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B29_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B29_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B32_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B34_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B34_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B34_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B34_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B34_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B38_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B38_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B38_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B38_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B38_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B39_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B39_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B39_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B39_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B39_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B40_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B40_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B40_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B40_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B40_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B41_RX2.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B41_RX3.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B41_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B41_RX1.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_LTE_B41_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_TDSCDMA_COMMON_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_TDSCDMA_B34_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_TDSCDMA_B39_TX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_TDSCDMA_B34_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_TDSCDMA_B39_RX0.xml#xpointer(/NvSource/*)"/>
+	<xi:include href="WTR3925_SDR425_ROW_DL_6560_COMMON.xml#xpointer(/NvSource/*)"/>
+	<NvItem id="572" name="NV_RF_NV_LOADED_DATE_I" mapping="direct" encoding="dec">20190826</NvItem>
+	<NvItemData id="28967" name="RFNV_RF_CARD_CONFIG_I" compressed="true" variableSize="true" index="0" subscriptionid="0">
+		<Member type="uint32" name="version" sizeOf="1">0</Member>
+		<Member type="uint32" name="hardware_id" sizeOf="1">565</Member>
+		<Member type="uint32" name="feature_set_id" sizeOf="1">0</Member>
+		<Member type="uint32" name="hardware_version" sizeOf="1">0</Member>
+		<Member type="uint32" name="reserved" sizeOf="999"/>
+	</NvItemData>
+	<NvItem id="1877" name="NV_RF_BC_CONFIG_I" mapping="direct" encoding="dec">3460453363914113411</NvItem>
+	<NvItem id="4548" name="NV_RF_BC_CONFIG_DIV_I" mapping="direct" encoding="dec">3460453363914113411</NvItem>
+	<NvItem id="6828" name="NV_LTE_BC_CONFIG_I" mapping="direct" encoding="dec">2072827004127,0</NvItem>
+	<NvItem id="22131" name="RFNV_RF_BC_CONFIG_C2_I" mapping="direct" encoding="dec">0</NvItem>
+	<NvItem id="23387" name="RFNV_RF_BC_CONFIG_C3_I" mapping="direct" encoding="dec">0</NvItem>
+	<NvItem id="28775" name="RFNV_RF_BC_CONFIG_C4_I" mapping="direct" encoding="dec">0</NvItem>
+	<NvItem id="28776" name="RFNV_RF_BC_CONFIG_C5_I" mapping="direct" encoding="dec">0</NvItem>
+	<NvItem id="22605" name="RFNV_TDSCDMA_BC_CONFIG_I" mapping="direct" encoding="dec">33</NvItem>
+	<NvItem id="24203" name="RFNV_TDSCDMA_BC_CONFIG_DIV_I" mapping="direct" encoding="dec">33</NvItem>
+</NvSource>

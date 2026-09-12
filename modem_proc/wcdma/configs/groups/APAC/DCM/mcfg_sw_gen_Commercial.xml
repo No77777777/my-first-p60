@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1"/>
+<NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="WCDMA RX Diversity Control" id="3851" description="Controls WCDMA Receive Diversity settings" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_rx_diversity_ctrl" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+	</NvItemData>
+	<NvItemData name="Sparse AGC Power Control" id="4118" description="HSDPA category" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hsdpa_cat" description="HSDPA category" comment="" sizeOf="1" type="uint8">24 </Member>
+	</NvItemData>
+	<NvEfsItemData name="wl1_ul_cm_enable" id="67226" description="To enable or Disable CM Workaround for Nikel" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/cm/wl1_ul_cm_enable">
+		<Member name="NIKEL_UL_CM_WORKAROUND" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wcdma_ppac_support" id="67305" description="If the NV is enabled PPAC will be supported" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_ppac_support">
+		<Member name="wcdma_ppac_support" description="If the NV is enabled PPAC will be supported" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+<NvItemData name="1xEV Reverse Activity Bits Information" id="4210" description="Describes the hsupa category supported in UE (limited by h/w support)" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_hsupa_category" description="Describes the hsupa category supported in UE (limited by h/w support)" comment="" sizeOf="1" type="uint8">6 </Member>
+	</NvItemData>
+	<NvItemData name="CPU Based Flow Control" id="4261" description="CPU based flow control for throttling data rates for HSPA and apps" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cpu_based_flow_control" description="Set to TRUE as a default" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="WCDMA Equalizer Control" id="3852" description="WCDMA Equalizer on/off, Rake/Eq/best selection demod control" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_equalizer_ctrl" description="" comment="" sizeOf="1" type="uint8">19 </Member>
+	</NvItemData>
+	</NvData>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+	<NvConfigurationData carrierIndex="0" version="" type="1"/>		
+	<GroupFile name="ims_private.xml" description="Private Group MBN configuration XML for VoLTE VT VoWiFi" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/VT_VoLTE_VoWiFi/EU/H3G/SE/ims_private.xml"/>
+	<GroupFile name="ims_private.xml" description="Private Group MBN configuration XML for DPL" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/DPL/EU/H3G/SE/ims_private.xml"/>
+	<GroupFile name="ims_private.xml" description="Private Group MBN configuration XML for SIP" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/SIP/EU/H3G/SE/ims_private.xml"/>
+	<GroupFile name="ims_private.xml" description="Private Group MBN configuration XML for RCS" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/RCS/EU/H3G/SE/ims_private.xml"/>
+	<GroupFile name="ims_private.xml" description="Private Group MBN configuration XML for SMS_DAN_USSD" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/SMS_DAN_USSD/EU/H3G/SE/ims_private.xml"/>
+	<GroupFile name="ims_private.xml" description="Private Group MBN configuration XML for UT" comment="" category="IMS" mcfgAttributes="0x19" buildPath="modem_proc/dataims/Configuration/NVConfigGroups/UT/EU/H3G/SE/ims_private.xml"/>
+</NvData>

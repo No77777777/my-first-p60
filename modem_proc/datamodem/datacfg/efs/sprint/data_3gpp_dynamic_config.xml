@@ -1,0 +1,14 @@
+<data_3gpp_dynamic_configuration>
+  <version>1.0</version>
+    <generic_config>
+      <Domestic_Roaming_PLMN_list>
+        <MCC-MNC>310-***</MCC-MNC>
+        <MCC-MNC>311-***</MCC-MNC>
+        <MCC-MNC>312-***</MCC-MNC>
+        <MCC-MNC>313-***</MCC-MNC>
+        <MCC-MNC>314-***</MCC-MNC>
+        <MCC-MNC>315-***</MCC-MNC>
+        <MCC-MNC>316-***</MCC-MNC>
+      </Domestic_Roaming_PLMN_list>
+    </generic_config>
+</data_3gpp_dynamic_configuration>

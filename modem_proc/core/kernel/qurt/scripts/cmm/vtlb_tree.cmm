@@ -1,0 +1,411 @@
+;==============================================================================
+; @file vtlb_tree.cmm
+; @author anandj
+; @detail Script to print whole/portion of VTLB tree for specified ASID,
+;         VADDR and MASK. Use --help for more
+; @usage do vtlb_tree.cmm 0:0xDEADBEEF
+; Copyright (c) 2019 by Qualcomm Technologies, Inc.  All Rights Reserved.
+;==============================================================================
+area.create vtlb_tree 80. 2048.
+area.select vtlb_tree
+area.view vtlb_tree
+
+;==============================================================================
+; Argument
+;==============================================================================
+entry &argument
+
+;==============================================================================
+; Constants
+;-=============================================================================
+global &ASID_MIN
+&ASID_MIN=0.
+
+global &ASID_MAX
+&ASID_MAX=127.
+
+global &ASID_DFLT
+&ASID_DFLT=0
+
+global &VTLB_TREE_COUNT
+&VTLB_TREE_COUNT=8192.
+
+global &VTLB_TREE_SIZE
+&VTLB_TREE_SIZE=&VTLB_TREE_COUNT*2.
+
+global &VTLB_MAX_ENTRIES
+&VTLB_MAX_ENTRIES=2048.
+
+global &MASK_DFLT
+&MASK_DFLT=0xFFFFF000
+
+;==============================================================================
+; Locals
+;-=============================================================================
+local &asid
+local &expected_vpage
+local &actual_vpage
+local &L1_idx
+local &L2_idx
+local &L3_idx
+local &L4_idx
+local &L5_idx
+local &asid
+local &entry_idx
+local &entry
+local &mask
+local &tlb_str
+local &vaddr
+local &value
+local &vpage
+local &vpage_8
+local &vpage_4a
+local &vpage_4b
+local &vpage_4c
+var.newlocal unsigned short * \t32_qurtk_vtlb_tree
+var.newlocal unsigned long long * \t32_qurtk_vtlb_entries
+
+;==============================================================================
+; main()
+;-=============================================================================
+var.assign \t32_qurtk_vtlb_tree=&QURTK_vtlb_tree
+var.assign \t32_qurtk_vtlb_entries=&QURTK_vtlb_entries
+
+; Default ASID unless specified in arguments
+&asid=&ASID_DFLT
+&mask=&MASK_DFLT
+&vaddr=0x00000000
+
+if ("&argument"=="")
+(
+    &vpage=0
+)
+else
+(
+    print "Arguments = &argument"
+
+    if (string.compare("&argument","--help"))
+    (
+        print "Usage:"
+        print "do vtlb_tree.cmm [ASID:][VADDR][&MASK]"
+        print
+        print "Print VTLB lookup tree/path for given (optional) ASID and VADDR."
+        print "If ASID is absent, it is assumed to be zero. If VADDR is absent,"
+        print "entire lookup tree for ASID zero is emitted"
+        print
+        print "ASID should be in range [0..." format.decimal(3,&ASID_MAX) "]"
+        print
+        print "Options:"
+        print "    --help Help"
+        enddo
+    )
+
+    if (string.count("&argument", ":")>1.)
+    (
+        print %error "error: Only one ASID separator ':' expected. Use --help for more"
+        enddo
+    )
+
+    if (string.count("&argument", "&")>1.)
+    (
+        print %error "error: Only one MASK separator '&' expected. Use --help for more"
+        enddo
+    )
+
+    if (string.find("&argument",":"))
+    (
+        if (string.find("&argument","&"))
+        (
+            &asid=string.split(string.split("&argument","&",0),":",0)
+            &vaddr=string.split(string.split("&argument","&",0),":",-1)
+            &mask=string.split("&argument","&",-1)
+        )
+        else
+        (
+            &asid=string.split("&argument",":",0)
+            &vaddr=string.split("&argument",":",-1)
+        )
+
+        if (&asid>&ASID_MAX)
+        (
+            print %error "error: ASID " format.hex(2,&asid) " invalid! Expected range [0..." format.decimal(3,&ASID_MAX) "]"
+            enddo
+        )
+    )
+    else if (string.find("&argument","&"))
+    (
+        ; Extract VADDR and MASK
+        &vaddr=string.split("&argument","&",0)
+        &mask=string.split("&argument","&",-1)
+    )
+    else
+    (
+        &vaddr=&argument
+    )
+
+    if (string.trim("&vaddr")=="")
+    (
+        &vaddr=0x00000000
+    )
+
+    &vpage=&vaddr>>12.
+    &mask=&mask>>12.
+)
+
+&vpage_8=&vpage>>12.
+&vpage_4a=(&vpage>>8.)&0xF
+&vpage_4b=(&vpage>>4.)&0xF
+&vpage_4c=&vpage&0xF
+
+print "ASID = " format.hex(2,&asid) ", VPAGE = " format.hex(5,&vpage) ", VPAGE_MASK =" format.hex(5,&mask)
+
+; L0
+&value=var.value(\t32_qurtk_vtlb_tree[&asid])
+if ((&value&1)!=1)
+(
+    print "+ L0[" format.decimal(3,&asid) "] " format.hex(4,&value)
+
+    ; L1
+    &L1_idx=&value*4.
+    &L1_max_idx=&L1_idx+256.
+
+    ; If VPAGE was specified, prune output to that sub-tree only
+    if ((&vaddr!=0x00000000)&&(((&mask>>12.)&0xFF)!=0))
+    (
+        &L1_idx=&L1_idx+&vpage_8
+        &L1_max_idx=&L1_idx+1.
+    )
+
+    while (&L1_idx<&L1_max_idx)
+    (
+        &value=var.value(\t32_qurtk_vtlb_tree[&L1_idx])
+        print "|   +- L1[" format.decimal(4,&L1_idx) "] "
+
+        if ((&value&1)!=1)
+        (
+            print %continue format.hex(4,&value)
+
+            ; L2
+            &L2_idx=&value*4.
+            &L2_max_idx=&L2_idx+16.
+
+            if ((&vaddr!=0x00000000)&&(((&mask>>8.)&0xF)!=0))
+            (
+                &L2_idx=&L2_idx+&vpage_4a
+                &L2_max_idx=&L2_idx+1
+            )
+
+            while (&L2_idx<&L2_max_idx)
+            (
+                &value=var.value(\t32_qurtk_vtlb_tree[&L2_idx])
+                print "|   |   +- L2[" format.decimal(4,&L2_idx) "] "
+
+                if ((&value&1)!=1)
+                (
+                    print %continue format.hex(4,&value)
+
+                    ; L3
+                    &L3_idx=&value*4.
+                    &L3_max_idx=&L3_idx+16.
+
+                    if ((&vaddr!=0x00000000)&&(((&mask>>4.)&0xF)!=0))
+                    (
+                        &L3_idx=&L3_idx+&vpage_4b
+                        &L3_max_idx=&L3_idx+1
+                    )
+
+                    while (&L3_idx<&L3_max_idx)
+                    (
+                        &value=var.value(\t32_qurtk_vtlb_tree[&L3_idx])
+                        print "|   |   |   +- L3[" format.decimal(4,&L3_idx) "] "
+
+                        if ((&value&1)!=1)
+                        (
+                            print %continue format.hex(4,&value)
+
+                            ; L4
+                            &L4_idx=&value*4.
+                            &L4_max_idx=&L4_idx+16.
+
+                            if ((&vaddr!=0x00000000)&&((&mask&0xF)!=0))
+                            (
+                                &L4_idx=&L4_idx+&vpage_4c
+                                &L4_max_idx=&L4_idx+1
+                            )
+
+                            while (&L4_idx<&L4_max_idx)
+                            (
+                                &value=var.value(\t32_qurtk_vtlb_tree[&L4_idx])
+                                print "|   |   |   |   +- L4[" format.decimal(4,&L4_idx) "] "
+
+                                if ((&value&1)!=1)
+                                (
+                                    ; @todo anandj Error! We are at the lowest level for 8,4,4,4 decode
+                                    ; print "                + L4[" format.decimal(4,&L4_idx) "] " format.hex(4,&value)
+                                    print %continue format.hex(4,&value)
+                                    print %error "error: L4 doesnt lead to VTLB entry!"
+                                    enddo
+                                )
+                                else
+                                (
+                                    &entry_idx=&value>>1
+                                    if (&entry_idx>15.)
+                                    (
+                                        print %continue "VTLB[" format.hex(4,&entry_idx) "]"
+
+                                        gosub tlb_entry_print var.value(\t32_qurtk_vtlb_entries[&entry_idx])
+                                    )
+                                    else
+                                    (
+                                        print %continue "NULL"
+                                    )
+                                )
+
+                                &L4_idx=&L4_idx+1
+                            )
+                        )
+                        else
+                        (
+                            &entry_idx=&value>>1
+                            if (&entry_idx>15.)
+                            (
+                                print %continue "VTLB[" format.hex(4,&entry_idx) "]"
+                                gosub tlb_entry_print var.value(\t32_qurtk_vtlb_entries[&entry_idx])
+                            )
+                            else
+                            (
+                                print %continue "NULL"
+                            )
+                        )
+
+                        &L3_idx=&L3_idx+1.
+                    )
+                )
+                else
+                (
+                    &entry_idx=&value>>1
+                    if (&entry_idx>15.)
+                    (
+                        print %continue "VTLB[" format.hex(4,&entry_idx) "]"
+                        gosub tlb_entry_print var.value(\t32_qurtk_vtlb_entries[&entry_idx])
+                    )
+                    else
+                    (
+                        print %continue "NULL"
+                    )
+                )
+
+                &L2_idx=&L2_idx+1.
+            )
+        )
+        else
+        (
+            &entry_idx=&value>>1
+            if (&entry_idx>15.)
+            (
+                print % continue "VTLB[" format.hex(4,&entry_idx) "]"
+                gosub tlb_entry_print var.value(\t32_qurtk_vtlb_entries[&entry_idx])
+            )
+            else
+            (
+                print %continue "NULL"
+            )
+
+        )
+        &L1_idx=&L1_idx+1.
+    )
+)
+&asid=&asid+1.
+
+enddo
+
+tlb_entry_print:
+    entry &tlb_entry
+
+    local &ppage
+    local &ppage0
+    local &ppage10
+    local &ppage20
+    local &ppage30
+    local &ppage40
+    local &ppage50
+    local &s
+    local &size
+    local &size_rounded
+    local &size_suffix
+    local &vpage
+
+    &ppage=(&tlb_entry>>1)&0x7FFFFF
+    &ppage0=&ppage&0x1
+    &ppage10=&ppage&0x3
+    &ppage20=&ppage&0x7
+    &ppage30=&ppage&0xF
+    &ppage40=&ppage&0x1F
+    &ppage50=&ppage&0x3F
+
+    &size=0.
+
+    &s=(&tlb_entry&0x1)
+    if (&s==1)
+    (
+        &paddr_begin=&ppage<<12.
+        &size=4.*1024.
+    )
+    if ((&s==0)&&(&ppage0==1))
+    (
+        &paddr_begin=((&ppage&0xFFFFE)<<12.)
+        &size=16.*1024.
+    )
+    if ((&s==0)&&(&ppage10==2.))
+    (
+        &paddr_begin=((&ppage&0xFFFFC)<<12.)
+        &size=64.*1024.
+    )
+    if ((&s==0)&&(&ppage20==4.))
+    (
+        &paddr_begin=((&ppage&0xFFFF8)<<12.)
+        &size=256.*1024.
+    )
+    if ((&s==0)&&(&ppage30==8))
+    (
+        &paddr_begin=((&ppage&0xFFFF0)<<12.)
+        &size=1.*1024.*1024.
+    )
+    if ((&s==0)&&(&ppage40==0x10))
+    (
+        &paddr_begin=((&ppage&0xFFFE0)<<12.)
+        &size=4.*1024.*1024.
+    )
+    if ((&s==0)&&(&ppage50==0x20))
+    (
+        &paddr_begin=((&ppage&0xFFFC0)<<12.)
+        &size=16.*1024.*1024.
+    )
+
+    gosub stringize_size &size
+    entry &size_rounded &size_suffix
+
+    &vpage=(&tlb_entry>>32.)&0xFFFFF
+    print %continue " " format.hex(5,&vpage) " " format.decimal(3,&size_rounded) &size_suffix
+    return
+
+;==============================================================================
+; @brief Stringize a size (units of bytes) quantity
+; @return Size rounded to nearest K (Kilo) or M (Mega) and a suffix
+;==============================================================================
+stringize_size:
+    entry &size
+    local &suffix
+
+    &suffix="K"
+    if (&size>=1.*1024.*1024.)
+    (
+        &size=&size/(1024.*1024.)
+        &suffix="M"
+    )
+    else if (&size>=1.*1024.)
+    (
+        &size=&size/1024.
+        &suffix="K"
+    )
+    return &size "&suffix"

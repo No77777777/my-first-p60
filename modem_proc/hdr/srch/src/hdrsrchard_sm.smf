@@ -1,0 +1,137 @@
+/*===========================================================================
+
+       HDRSRCHARD_SM.SMF - Adaptive Receive Diversity State Machine
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Copyright (c) 2009 - 2015
+                QUALCOMM Technologies, Incorporated. All Rights Reserved
+                Qualcomm Technologies, Proprietary
+
+  Export of this technology or software is regulated by the U.S. Government.
+  Diversion contrary to U.S. law prohibited.
+
+  All ideas, data and information contained in or disclosed by
+  this document are confidential and proprietary information of
+  QUALCOMM Technologies, Incorporated and all rights therein are expressly reserved.
+  By accepting this material the recipient agrees that this material
+  and the information contained therein are held in confidence and in
+  trust and will not be used, copied, reproduced in whole or in part,
+  nor its contents revealed in any manner to others without the express
+  written permission of QUALCOMM Technologies, Incorporated.
+
+===========================================================================*/
+
+/*===========================================================================
+
+                        EDIT HISTORY FOR MODULE
+
+This section contains comments describing changes made to the module.
+Notice that changes are listed in reverse chronological order.
+
+$Header$ $DateTime$ $Author$
+
+when       who     what, where, why
+--------   ---     ----------------------------------------------------------
+06/30/15   tnp     Update copyright info
+06/27/14   wsh     ARD/ASDiv incorrectly switching in RTAP mode 
+08/07/12   wsh     Fixed crash due to ARD enabled in IDLE
+05/25/12   wsh     Moved ARD logic into it's own state machine
+=============================================================================*/
+
+/* It is standard process to run the STM description files through the C
+   preprocessor to allow for featurization.  Include the necessary header
+   files that contain the particular features needed.  */
+#include "hdr_variation.h"
+#include "target.h"
+#include "customer.h"
+
+STATE_MACHINE HDRSRCHARD_SM
+{
+
+  ENTRY           hdrsrchard_init;
+  EXIT            NULL;
+  INITIAL_STATE   HDRSRCHARD_INACTIVE_STATE;
+  START_ACTIVE    FALSE;
+
+  STATE HDRSRCHARD_INACTIVE_STATE
+  {
+    ENTRY   hdrsrchard_enter_inactive;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHARD_ACTIVATE_CMD              hdrsrchard_activate_tf;
+    }
+  }
+
+  STATE HDRSRCHARD_FL_ACTIVE_STATE
+  {
+    ENTRY   hdrsrchard_enter_fl_active;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHARD_DEACTIVATE_CMD            hdrsrchard_deactivate_tf;
+      HDRSRCHARD_SET_TAP_CMD               hdrsrchard_set_tap_tf;
+      HDRSRCHARD_SUSPEND_CMD               hdrsrchard_suspend_tf;
+      HDRSRCHARD_TIMER_EXP_CMD             hdrsrchard_timer_exp_tf;
+    }
+  }
+
+  STATE HDRSRCHARD_FL_INACTIVE_DRC_LOW_STATE
+  {
+    ENTRY   hdrsrchard_enter_fl_inactive_drc_low;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHARD_DEACTIVATE_CMD            hdrsrchard_deactivate_tf;
+      HDRSRCHARD_SET_TAP_CMD               hdrsrchard_set_tap_tf;
+      HDRSRCHARD_SUSPEND_CMD               hdrsrchard_suspend_tf;
+      HDRSRCHARD_FL_ACTIVITY_CMD           hdrsrchard_fl_activity_tf;
+      HDRSRCHARD_DRC_CHANGED_CMD           hdrsrchard_drc_changed_tf;
+    }
+  }
+
+  STATE HDRSRCHARD_FL_INACTIVE_DRC_HIGH_STATE
+  {
+    ENTRY   hdrsrchard_enter_fl_inactive_drc_high;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHARD_DEACTIVATE_CMD            hdrsrchard_deactivate_tf;
+      HDRSRCHARD_SET_TAP_CMD               hdrsrchard_set_tap_tf;
+      HDRSRCHARD_SUSPEND_CMD               hdrsrchard_suspend_tf;
+      HDRSRCHARD_FL_ACTIVITY_CMD           hdrsrchard_fl_activity_tf;
+      HDRSRCHARD_DRC_CHANGED_CMD           hdrsrchard_drc_changed_tf;
+    }
+  }
+
+  STATE HDRSRCHARD_SUSPENDED_STATE
+  {
+    ENTRY   hdrsrchard_enter_suspended;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHARD_DEACTIVATE_CMD            hdrsrchard_deactivate_tf;
+      HDRSRCHARD_SET_TAP_CMD               hdrsrchard_set_tap_tf;
+      HDRSRCHARD_RESUME_CMD                hdrsrchard_resume_tf;
+    }
+  }
+
+  STATE HDRSRCHARD_TAP_STATE
+  {
+    ENTRY   hdrsrchard_enter_tap;
+    EXIT    NULL;
+
+    INPUTS
+    {
+      HDRSRCHARD_DEACTIVATE_CMD            hdrsrchard_deactivate_tf;
+      HDRSRCHARD_SET_TAP_CMD               hdrsrchard_set_tap_tf;
+      HDRSRCHARD_SUSPEND_CMD               hdrsrchard_suspend_tf;
+      HDRSRCHARD_RESUME_CMD                hdrsrchard_resume_tf;
+    }
+  }
+}  /* STATE_MACHINE */

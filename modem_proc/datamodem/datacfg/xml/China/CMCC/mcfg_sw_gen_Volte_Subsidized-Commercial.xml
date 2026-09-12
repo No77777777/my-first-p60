@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="data.0.0" type="1"/>
+  <GroupFile name="mcfg_sw_gen_Gen_3GPP_DeleteROW.xml" description="" comment="" category="" version="data.0.0" mcfgAttributes="0x09" buildPath="modem_proc/datamodem/datacfg/xml/common/ROW/mcfg_sw_gen_Gen_3GPP_DeleteROW.xml"/>
+  <NvItemData name="Ipv6 Enabled" id="1896" description="" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ipv6_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="eHRPD Authentication Mode" id="6862" description="In eHRPD to decide whether authentication to be done on USIM or S/W" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="Mode" description="In eHRPD to decide whether authentication to be done on USIM or S/W" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvEfsItemData name="tput_opt_params" id="66051" description="Configurable parameters for throughput optimization" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/common/tput_opt_params">
+    <Member name="back_pressure_removal" description="Configurable parameters for TCP throughput optimization" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="um_wm_params_valid" description="Flag to indicate whether WM params in EFS are valid " comment="" sizeOf="1" type="uint8">0 </Member>
+    <Member name="ul_wm_high_level" description="UL WM high level" comment="" sizeOf="1" type="uint32">0 </Member>
+    <Member name="ul_wm_low_level" description="UL WM low level" comment="" sizeOf="1" type="uint32">0 </Member>
+    <Member name="ul_wm_dne_level" description="UL WM DNE level" comment="" sizeOf="1" type="uint32">0 </Member>
+    <Member name="dl_wm_high_level" description="DL WM high level" comment="" sizeOf="1" type="uint32">0 </Member>
+    <Member name="dl_wm_low_level" description="DL WM low level" comment="" sizeOf="1" type="uint32">0 </Member>
+    <Member name="dl_wm_dne_level" description="DL WM DNE level" comment="" sizeOf="1" type="uint32">0 </Member>
+    <Member name="tx_timestamp_timer_val" description="Tx timestamp item duration" comment="" sizeOf="1" type="uint32">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="tcp_ack_prio" id="67208" description="TCP ACK Priority" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/protocols/tcp_ack_prio">
+    <Member name="tcp_ack_priority" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="internal_auth" id="67291" description="1 = credentials from NV, 0 = credentials passed from client" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp2/internal_auth">
+    <Member name="internal_auth" description="1 = credentials from NV, 0 = credentials passed from client" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="dual_ip_fallback" id="72604" description="Stores fallback IP type and Feature enable/disable information" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/dual_ip_fallback">
+    <Member name="fallback_enabled" description="Stores fallback IP type and Feature enable/disable information" comment="" sizeOf="1" type="uint8">1 </Member>
+    <Member name="fallback_ip_type" description="Enum storing fallback IP type" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="disable_apn_matching" id="73529" description="Disable APN name matching" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/lteps/disable_apn_matching">
+    <Member name="disable_apn_matching" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="suppress_gsm_on_srvcc_csfb" id="73682" description="Suppress notification of GSM once SRVCC or CSFB call ends" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/dsmgr/suppress_gsm_on_srvcc_csfb">
+    <Member name="suppress_gsm_on_srvcc_csfb" description="Suppress notification of GSM once call ends until RAU/TAU" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="low_latency_capability" id="74019" description="Enable/disable low latency capability per module" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/appsrv/low_latency_capability">
+    <Member name="low_latency_capability" description="Enable/disable low latency capability per module" comment="" sizeOf="1" type="uint32">4294967295 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="efnas_failure_def_retry_timer_per_rat" id="74053" description="control the EFNAS failure default retry timer value per rat" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/ps/efnas_failure_def_retry_timer_per_rat">
+		<Member name="def_retry_lte_timer" description="" comment="" sizeOf="1" type="uint32">12 </Member>
+		<Member name="def_retry_umts_timer" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+  </NvEfsItemData>  
+  <NvEfsFile name="atcop_cops_auto_mode.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/ds/atcop/atcop_cops_auto_mode.txt" buildPath="modem_proc/datamodem/datacfg/efs/cmcc/lab/atcop_cops_auto_mode.txt"/>
+  <NvEfsFile name="ds_dsd_attach_profile.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/ds_dsd_attach_profile.txt" buildPath="modem_proc/datamodem/datacfg/efs/cmcc/ds_dsd_attach_profile.txt"/>
+  <NvEfsFile name="ds_lowlatency_capability.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/llm/ds_lowlatency_capability.txt" buildPath="modem_proc/datamodem/datacfg/efs/common/china/ds_lowlatency_capability.txt"/>
+  <NvEfsFile name="ds_lowlatency_config.txt" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/data/llm/ds_lowlatency_config.txt" buildPath="modem_proc/datamodem/datacfg/efs/common/china/ds_lowlatency_config.txt"/>
+  <NvEfsFile name="Profile1" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile1" buildPath="modem_proc/datamodem/datacfg/efs/cmcc/Profile1"/>
+  <NvEfsFile name="Profile2" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile2" buildPath="modem_proc/datamodem/datacfg/efs/cmcc/Profile2"/>
+  <NvEfsFile name="Profile3" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile3" buildPath="modem_proc/datamodem/datacfg/efs/cmcc/Profile3"/>
+  <NvEfsFile name="Profile4" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile4" buildPath="modem_proc/datamodem/datacfg/efs/cmcc/Profile4"/>
+  <NvEfsFile name="Profile5" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" targetPath="/Data_Profiles/Profile5" buildPath="modem_proc/datamodem/datacfg/efs/cmcc/Profile5"/>
+	<NvEfsItemData name="EmergencyAPNType" id="74090" description="Defines the APN Type on which Emergency call shall be made" comment="" category="" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/modem/data/3gpp/dsmgr/emergency_apn_type">
+ 		<Member name="wwan_preferred" description="" comment="" sizeOf="1" type="uint8">1</Member>
+ 		<Member name="wwan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 		<Member name="iwlan_preferred" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 		<Member name="iwlan_secondary" description="" comment="" sizeOf="1" type="uint8">0</Member>
+ 	</NvEfsItemData>
+  <NvEfsItemData name="low_latency_ul_flow_opt_enable" id="74195" description="Enable/disable 5 tuple based filter approach" comment="" category="Data" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/data/appsrv/low_latency_ul_flow_opt_enable">
+    <Member name="low_latency_ul_flow_opt_enable" description="Enable/disable 5 tuple based filter approach" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData> 	
+</NvData>

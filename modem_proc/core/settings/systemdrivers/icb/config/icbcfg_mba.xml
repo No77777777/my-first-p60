@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<driver name="NULL">
+<!-- =========================================================================== -->
+<!--  -->
+<!--  FILE:         icbcfg_mba.xml -->
+<!--  -->
+<!--  DESCRIPTION:  This file contains the DAL XML properties for the ICB -->
+<!--                Configuration Driver. -->
+<!--  -->
+<!-- =========================================================================== -->
+<!--  -->
+<!--                              Edit History -->
+<!--  -->
+<!--  $Header: //components/dev/boot.bf/3.0/seansw.boot.bf.3.0.icb_bimc_base_addr/boot_images/core/buses/icb/config/icbcfg_boot_8916.xml#1 $ -->
+<!--  $DateTime: 2014/02/20 13:22:14 $ -->
+<!--  $Author: coresvc $ -->
+<!--  $Change: 5315802 $  -->
+<!--  -->
+<!--  when         who    what, where, why -->
+<!--  ==========   ==-    ======================================================- -->
+<!--  2017/02/15   sds    Created for 845 -->
+<!--  -->
+<!-- =========================================================================== -->
+<!--              Copyright (c) 2017 Qualcomm Technologies Incorporated. -->
+<!--                     All Rights Reserved. -->
+<!--                   QUALCOMM Proprietary/GTDR -->
+<!-- =========================================================================== -->
+
+
+   <global_def>
+        
+   </global_def>
+   <device name="/dev/icbcfg/mba">
+     <props name="icb_config_data" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+        icbcfg_boot_prop
+     </props> 
+   </device>   
+</driver>

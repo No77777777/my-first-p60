@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="gps.v2x.1" type="1"/>
+  <NvItemData name="CGPS Minimum GPS Week Number" id="6264" description="GPS Minimum Week Number" comment="" category="GPS" mcfgAttributes="0x09" mcfgVariant="1">
+    <Member name="cgps_minimum_gps_week_number" description="GPS Minimum Week Number" comment="" sizeOf="1" type="uint32">1950 </Member>
+  </NvItemData>
+  <NvEfsItemData name="CGPS Automatic Minimum GPS Week Number" id="none" description="Automatic GPS Minimum Week Number" comment="" category="Unknown" mcfgAttributes="0x09"  mcfgVariant="2" fullpathname="/cgps/nv/item_files/me/auto_min_gps_week">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint32">0 </Member>
+  </NvEfsItemData>
+</NvData>

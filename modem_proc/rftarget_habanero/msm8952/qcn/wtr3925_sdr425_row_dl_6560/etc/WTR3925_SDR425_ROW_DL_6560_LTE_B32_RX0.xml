@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NvSource>
+<!-- WTR3925_ROW_DLCA_QPA6560_LTE_B32_RX0.xml -->
+	<NvItem id="28547" name="RFNV_LTE_B32_RX_STATIC_DATA_I" mapping="byteStream" encoding="hex">00 00 04 00 7d 00 06 f4 01 90 01 40 01 b4 00 64 00 28 00 00 00 00 00 1c fd f4 fc a8 fd 80 fd 70 fe 48 fe e8 fe c0 fe 38 ff 10 ff 00 00 00 00 00 00 00 00 00 00 00 00 7d 00 06 f4 01 90 01 40 01 b4 00 64 00 28 00 00 00 00 00 1c fd f4 fc a8 fd 80 fd 70 fe 48 fe e8 fe c0 fe 38 ff 10 ff 00 00 00 00 00 00 00 00 00 00 00 00 7d 00 06 f4 01 90 01 40 01 b4 00 64 00 28 00 00 00 00 00 1c fd f4 fc a8 fd 80 fd 70 fe 48 fe e8 fe c0 fe 38 ff 10 ff 00 00 00 00 00 00 00 00 00 00 00 00 7d 00 06 f4 01 90 01 40 01 b4 00 64 00 28 00 00 00 00 00 1c fd f4 fc a8 fd 80 fd 70 fe 48 fe e8 fe c0 fe 38 ff 10 ff 00 00 00 00 00 00 00 00 00 00 00 00</NvItem>
+</NvSource>

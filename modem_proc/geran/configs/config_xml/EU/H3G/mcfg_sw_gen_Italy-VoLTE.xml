@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="geran.0.0" type="1" />
+  <NvItemData name="GSM A5 Algorithms Supported" id="553" description="" comment="" category="GSM" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="gsm_a5_algorithms_supported" description="0x0C corresponds 12 in decimal" comment="" sizeOf="1" type="uint8">12 </Member>
+  </NvItemData>
+  <NvItemData name="GPRS GEA Algorithms Supported" id="4432" description="GPRS GEA Algorithm Supported Bitmap" comment="" category="GPRS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+	<Member name="gprs_gea_algorithms_supported" description="GPRS GEA Algorithm Supported Bitmap" comment="" sizeOf="1" type="uint8">14 </Member>
+  </NvItemData>
+</NvData>

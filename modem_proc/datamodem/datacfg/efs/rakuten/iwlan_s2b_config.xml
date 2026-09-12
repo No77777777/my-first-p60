@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<IWLAN_S2B_CONFIG>
+    <GENERIC_VARIANT>
+        <epdg_addr_info>
+            <fqdn>vowifi.rm-n.jp</fqdn>
+            <natt_info>
+                <keep_alive_timer_sec>20</keep_alive_timer_sec>
+            </natt_info>
+            <pcscf_attr>
+                <v4_attr_type_val>16384</v4_attr_type_val>
+                <v6_attr_type_val>16390</v6_attr_type_val>
+            </pcscf_attr>
+        </epdg_addr_info>
+        <ikev2_info>
+            <self_id>
+                <id_type>ID_RFC822_ADDR</id_type>
+                <mac_enabled>FALSE</mac_enabled>
+            </self_id>
+            <peer_id>
+                <id_type>ID_FQDN</id_type>
+            </peer_id>
+            <ikev2_sa_rekey_timer>
+                <soft_sec>63000</soft_sec>
+                <hard_sec>64800</hard_sec>
+            </ikev2_sa_rekey_timer>
+            <esp_rekey_timer>
+                <soft_sec>30600</soft_sec>
+                <hard_sec>32400</hard_sec>
+            </esp_rekey_timer>
+            <ikev2_encr_algo_list>
+                <encr_algo value="12">
+					          <key_size>128</key_size>
+                    <key_size>256</key_size>
+                </encr_algo>
+            </ikev2_encr_algo_list>
+            <ikev2_hash_algo_list>
+                <algo value="2"/>
+                <algo value="5"/>
+                <algo value="12"/>
+            </ikev2_hash_algo_list>
+            <ikev2_prf_algo_list>
+                <prf_algo value="2"/>
+                <prf_algo value="4"/>
+                <prf_algo value="5"/>
+            </ikev2_prf_algo_list>
+            <ikev2_dh_group_list>
+                <dh_group value="2"/>
+                <dh_group value="5"/>
+                <dh_group value="14"/>
+            </ikev2_dh_group_list>
+            <esp_encr_algo_list>
+                <encr_algo value="12">
+					          <key_size>128</key_size>
+                    <key_size>256</key_size>
+                </encr_algo>
+            </esp_encr_algo_list>
+            <esp_auth_algo_list>
+                <algo value="2"/>
+                <algo value="5"/>
+                <algo value="12"/>
+            </esp_auth_algo_list>
+            <fragmentation>
+                <enabled>TRUE</enabled>
+            </fragmentation>
+        </ikev2_info>
+    </GENERIC_VARIANT>
+    <WP_VARIANT>
+        <ikev2_info>
+            <esp_auth_algo_list>
+                <algo value="2"/>
+                <algo value="12"/>
+            </esp_auth_algo_list>
+            <configured_ike_port>4500</configured_ike_port>
+        </ikev2_info>
+    </WP_VARIANT>
+</IWLAN_S2B_CONFIG>    

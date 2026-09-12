@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carrier Policy for Verizon RPM property 
+$Header: //components/rel/mmcp.mpss/7.9.0/policyman/configurations/Carrier/Verizon/RPM/carrier_policy.xml#1 $
+-->
+<policy name        = "generic"
+        changelist  = "$Change: 31300932 $"
+        policy_ver  = "54.1.2"
+>
+  <initial>
+
+    <boolean_define name="cm:rpm_enabled" initial="true" />
+
+    <boolean_define name="wms:allow_911_SMS_over_IMS" initial="true" />
+
+  </initial>
+
+</policy>

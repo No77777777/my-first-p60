@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+  <NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1" />
+  <NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvItemData>
+  <NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+    <Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+  </NvItemData>
+  <NvEfsItemData name="wcdma_rrc_csfb_skip_sib11_opt" id="65885" description="To enable/disable FEATURE_3GPP_CSFB_SKIP_OPT_WCDMA_SIBS" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_csfb_skip_sib11_opt">
+    <Member name="WCDMA_RRC_CSFB_SKIP_SIB11_OPT" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wcdma_rrc_fast_return_to_lte_after_csfb" id="67219" description="To enable/disable FEATURE_WCDMA_FAST_RETURN_TO_LTE_AFTER_CSFB" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_fast_return_to_lte_after_csfb">
+    <Member name="WCDMA_RRC_FAST_RETURN_TO_LTE_AFTER_CSFB" description="To enable/disable FEATURE_WCDMA_FAST_RETURN_TO_LTE_AFTER_CSFB" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="wcdma_rrc_fast_return_to_lte_after_csfb_timer" id="67220" description="To control the timer value for WCDMA_RRC_FAST_RETURN_TO_LTE_AFTER_CSFB" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_fast_return_to_lte_after_csfb_timer">
+    <Member name="WCDMA_RRC_FAST_RETURN_TO_LTE_AFTER_CSFB_TIMER" description="To control the timer value for WCDMA_RRC_FAST_RETURN_TO_LTE_AFTER_CSFB" comment="" sizeOf="1" type="uint16">2000 </Member>
+  </NvEfsItemData>
+</NvData>

@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<!-- XML for maintaining TCM static and overlay budgets and overlay count. It breaks if budgets are violated -->
+<!-- For every section, name attribute gives the printed name in Budget info -->
+<!-- Attributes-->
+	<!-- tcmType = STATIC/OVERLAY , which implies its Static or Overlay TCM section-->
+	<!-- tcmType = OVERLAY, expect to have OVERLAY element -->
+	<!-- subSection = true, if it has subsections within the section -->
+	<!-- budgeted = true, for the sections which are budgeted -->
+<!-- Elements:-->
+	<!-- Overlay : Has Priority element for now-->
+	<!-- Budget : BudgetType, Marker, BudgetSize in bytes-->
+	<!-- BudgetType : Type of Budget, if its just data or text or combined or bucket budget-->
+
+<TCM static_section="320K" overlay_section="704K" overlay_count="41">
+	<section name="VPE_LMEM" tcmType="STATIC" subSection ="false" budgeted="true">
+		<Budget>
+			<BudgetType>fixed</BudgetType>
+			<Marker>lmem_marker</Marker>
+			<BudgetSize>128K</BudgetSize>
+		</Budget>
+	</section>
+	<section name="KERNEL_TEXT" tcmType="STATIC" subSection ="false" budgeted="true">
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>__tcm_static_kernel_text_max_size__</Marker>
+			<BudgetSize>15132</BudgetSize>
+		</Budget>
+	</section>
+	<section name="KERNEL_DATA" tcmType="STATIC" subSection ="false" budgeted="true">
+		<Budget>
+			<BudgetType>data</BudgetType>
+			<Marker>__tcm_static_kernel_data_max_size__</Marker>
+			<BudgetSize>15000</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_TEXT" tcmType="STATIC" subSection ="false" budgeted="true">
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>__tcm_static_fw_text_reserved__</Marker>
+			<BudgetSize>57344</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_DATA" tcmType="STATIC" subSection ="false" budgeted="true">
+		<Budget>
+			<BudgetType>data</BudgetType>
+			<Marker>__tcm_static_fw_data_reserved__</Marker>
+			<BudgetSize>64512</BudgetSize>
+		</Budget>
+	</section>
+	<section name="SW" tcmType="STATIC" subSection ="true" budgeted="false">
+		<subSection name="RF" tcmType="STATIC" subSection ="false" budgeted="true">
+			<Budget>
+				<BudgetType>textdata</BudgetType>
+				<Marker>__tcm_static_sw_rf_max_size__</Marker>
+				<BudgetSize>65536</BudgetSize>
+			</Budget>
+		</subSection>
+	</section>
+	<section name="FW_LTE_TRAFFIC_0" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>240</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>lte_fw_traffic_0_overlay_text</Marker>
+			<BudgetSize>22528</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_LTE_PAGING_0" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>240</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>lte_fw_paging_0_overlay_text</Marker>
+			<BudgetSize>262144</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_LTE_PAGING_1" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>40</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>lte_fw_paging_1_overlay_text</Marker>
+			<BudgetSize>184320</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_LTE_TRAFFIC_2" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>40</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>lte_fw_traffic_2_overlay_text</Marker>
+			<BudgetSize>7168</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_WCDMA_PTEXT_0" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>255</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>wcdma_fw_paging_0_overlay_text</Marker>
+			<BudgetSize>104448</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_WCDMA_PDATA_0" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>255</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>data</BudgetType>
+			<Marker>wcdma_fw_paging_0_overlay_data</Marker>
+			<BudgetSize>114688</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_WCDMA_TTEXT_1" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>255</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>wcdma_fw_traffic_1_overlay_text</Marker>
+			<BudgetSize>130048</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_WCDMA_TDATA_1" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>255</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>data</BudgetType>
+			<Marker>wcdma_fw_traffic_1_overlay_data</Marker>
+			<BudgetSize>19456</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_GERAN_0" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>55</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>geran_fw_common_0_overlay_text</Marker>
+			<BudgetSize>25600</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_GERAN_1" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>55</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>geran_fw_common_1_overlay_text</Marker>
+			<BudgetSize>25600</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_GERAN_2" tcmType="OVERLAY" subSection ="false" budgeted="false">
+		<Overlay>
+			<Priority>22</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>geran_fw_common_2_overlay_text</Marker>
+			<BudgetSize>122880</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_GERAN_3" tcmType="OVERLAY" subSection ="false" budgeted="false">
+		<Overlay>
+			<Priority>22</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>geran_fw_common_3_overlay_text</Marker>
+			<BudgetSize>216064</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_C2K_0" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>255</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>bucket</BudgetType>
+			<Marker>cdma1x_fw_paging_0_overlay_data, 
+					cdma1x_fw_paging_0_overlay_text,
+					cdma1x_fw_traffic_1_overlay_data,
+					cdma1x_fw_traffic_1_overlay_text,
+					hdr_fw_paging_0_overlay_data,
+					hdr_fw_paging_0_overlay_text
+			</Marker>
+			<BudgetSize>235520</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_C2K_1" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>1</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>bucket</BudgetType>
+			<Marker>c2k_fw_srchpaging_2_overlay_text, 
+					c2k_fw_commonpaging_2_overlay_text,
+					c2k_fw_otherpaging_2_overlay_text					
+			</Marker>
+			<BudgetSize>151552</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_TDS_0" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>255</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>bucket</BudgetType>
+			<Marker>tds_fw_page_0_overlay_data, 
+					tds_fw_traffic_1_overlay_data				
+			</Marker>
+			<BudgetSize>40960</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_TDS_1" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>240</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>bucket</BudgetType>
+			<Marker>tds_fw_page_0_overlay_text, 
+					tds_rf_page_0_overlay_text				
+			</Marker>
+			<BudgetSize>61440</BudgetSize>
+		</Budget>
+	</section>
+	<section name="FW_TDS_2" tcmType="OVERLAY" subSection ="false" budgeted="true">
+		<Overlay>
+			<Priority>20</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>bucket</BudgetType>
+			<Marker>tds_fw_traffic_1_overlay_text, 
+					tds_fw_traffic_2_overlay_text,
+					tds_fw_srchIrat_3_overlay_text				
+			</Marker>
+			<BudgetSize>389120</BudgetSize>
+		</Budget>
+	</section>				
+	<section name="SW_COMMON_AD_0" tcmType="OVERLAY" subSection ="false" budgeted="true">				
+		<Overlay>
+			<Priority>199</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>common_sw_ad_0_overlay_text</Marker>
+			<BudgetSize>20480</BudgetSize>
+		</Budget>
+	</section>	
+	<section name="SW_LTE_AD_0" tcmType="OVERLAY" subSection ="false" budgeted="true">				
+		<Overlay>
+			<Priority>198</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>lte_sw_ad_0_overlay_text</Marker>
+			<BudgetSize>366240</BudgetSize>
+		</Budget>
+	</section>	
+	<section name="SW_LTE_AD_1" tcmType="OVERLAY" subSection="false" budgeted="true">
+		<Overlay>
+			<Priority>99</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>lte_sw_ad_1_overlay_text</Marker>
+			<BudgetSize>122880</BudgetSize>
+		</Budget>	
+	</section>
+	<section name="SW_WCDMA_AD_0" tcmType="OVERLAY" subSection="false" budgeted="true">
+		<Overlay>
+			<Priority>197</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>wcdma_sw_ad_0_overlay_text</Marker>
+			<BudgetSize>348160</BudgetSize>
+		</Budget>	
+	</section>
+	<section name="SW_WCDMA_AD_1" tcmType="OVERLAY" subSection="false" budgeted="true">
+		<Overlay>
+			<Priority>98</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>wcdma_sw_ad_1_overlay_text</Marker>
+			<BudgetSize>71680</BudgetSize>
+		</Budget>	
+	</section>
+	<section name="SW_GERAN_AD_0" tcmType="OVERLAY" subSection="false" budgeted="true">
+		<Overlay>
+			<Priority>10</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>geran_sw_ad_0_overlay_text</Marker>
+			<BudgetSize>81920</BudgetSize>
+		</Budget>	
+	</section>
+	<section name="SW_COMMON_0" tcmType="OVERLAY" subSection="false" budgeted="false">
+		<Overlay>
+			<Priority>199</Priority>
+		</Overlay>
+		<Budget>
+			<BudgetType>text</BudgetType>
+			<Marker>common_sw_ad_0_overlay_text</Marker>
+			<BudgetSize>20480</BudgetSize>
+		</Budget>	
+	</section>		
+</TCM>

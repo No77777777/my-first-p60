@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="data.0.0" type="1"/>
+  <NvEfsItemData name="substitute_modem_cne_profiles_functionality_enabled" id="none" description="" comment="" category="Unknown" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/data/appsrv/substitute_modem_cne_profiles_functionality_enabled">
+    <Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+  </NvEfsItemData>
+  <NvEfsItemData name="platform_config" id="73890" description="Identify Device Platform" comment="" category="" mcfgAttributes="0x09" mcfgVariant="2" fullpathname="/nv/item_files/data/3gpp/platform_config">
+    <Member name="platform_type" description="" comment="" sizeOf="1" type="uint8">1</Member>
+  </NvEfsItemData>
+</NvData>

@@ -1,0 +1,282 @@
+;========================================================================
+;
+; recover_circular_buffer.cmm
+;
+; This script extracts the data from Circular buffer in the dumps and forwards
+; the same to a perl script which parses each chunk to generate a QMDL file
+;
+; Usage instructions found in InitArea routine.
+;
+;
+; Copyright (c) 2016 by QUALCOMM Technologies, Inc
+;=======================================================================
+
+;==========================================================================
+;
+;                       EDIT HISTORY FOR MODULE
+;
+;when       who     what, where, why
+;--------   ---     ------------------------------------------------------------
+;06/13/17   gn      Added support for version 2 qmdl2 
+;04/20/17   gn      Added support for data tagging with Diag ID
+;04/01/17   gn      Added support for buffer separation FR40984
+;03/07/17   gn      Fixed improper memory access issue, added logs for debugging
+;01/23/17   gn      Added formatting for GUID value
+;01/13/16   gn      Created.
+
+;===========================================================================*
+
+
+
+; Declaration of 'constants' used in this script
+local &CIRCULAR_BUFFER_DATA_FILE &CIRCULAR_BUFFER_OUTPUT_QMDL &OUTFILE_DEFAULT_PATH &FORMAT_SCRIPT
+
+&CIRCULAR_BUFFER_DATA_FILE="circular_buffer_data.bin"
+&CIRCULAR_BUFFER_OUTPUT_QMDL="circular_buffer_data.qmdl2"
+&OUTFILE_DEFAULT_PATH="C:\Temp"
+&FORMAT_SCRIPT="FormatCircularBuffer.pl"
+&TOKEN_FILE="circular_buffer_tokens.txt"
+
+local &circular_buf_head &circular_buf_tail &circular_buf_start &circular_buf_size
+local &list &next &diagID &process_name
+local &GUID_idx &nGUID
+; ----------------------------------------------
+; This controls the level of debug messages printed to the log file
+; The higher the value, the more messages will be displayed
+; A level of 0 will not generate a log file 
+; (i.e. must be level 1 or higher to see a log)
+; ----------------------------------------------
+local &debug_level_screen
+&debug_level_screen=0
+
+;Create and open the token file
+OPEN #1 "&OUTFILE_DEFAULT_PATH/&TOKEN_FILE" /CREATE
+
+local &temp &hash_file_addr &hash_length &hash_file_part1 &hash_file_part2 &diag_tagging_support
+&hash_file_part1=0
+&hash_file_part2=0
+&diag_tagging_support=0
+; *************************************************************************
+; Main
+;
+;   This is the main control loop for the script
+; *************************************************************************
+
+Main:
+
+  &final_output="C:\Temp\circular_buffer_output.txt"
+  gosub InitArea
+ 
+  ;printing the values in the T32 area
+
+  
+  if y.exist(diag_tx_mode)
+  (
+    if y.exist(diag_tagging_support)
+    (
+	  &diag_tagging_support=v.value(diag_tagging_support)
+      ; Read the address of the circular buffer
+      &circular_buf_start=v.value(diag_tx_mode[0][0].buf_ptr)
+      gosub DebugPrint 0 "Circular buf start : &circular_buf_start"
+	
+      ;Get the size of the buffer
+      &circular_buf_size=v.value(diag_tx_mode[0][0].buf_size)     
+      gosub DebugPrint 0 "Circular buf size  : &circular_buf_size"
+	
+      ;Read the head
+      &circular_buf_head=v.value(diag_tx_mode[0][0].buf_head)  
+      gosub DebugPrint 0 "Circular buf head  : &circular_buf_head"
+
+      ;Read the tail
+      &circular_buf_tail=v.value(diag_tx_mode[0][0].buf_tail)
+      gosub DebugPrint 0 "Circular buf tail  : &circular_buf_tail"	
+    )
+    else
+    (
+      ; Read the address of the circular buffer
+      &circular_buf_start=v.value(diag_tx_mode[0].buf_ptr)
+      gosub DebugPrint 0 "Circular buf start : &circular_buf_start"
+	
+      ;Get the size of the buffer
+      &circular_buf_size=v.value(diag_tx_mode[0].buf_size)     
+      gosub DebugPrint 0 "Circular buf size  : &circular_buf_size"
+	
+      ;Read the head
+      &circular_buf_head=v.value(diag_tx_mode[0].buf_head)  
+      gosub DebugPrint 0 "Circular buf head  : &circular_buf_head"
+
+      ;Read the tail
+      &circular_buf_tail=v.value(diag_tx_mode[0].buf_tail)
+      gosub DebugPrint 0 "Circular buf tail  : &circular_buf_tail"
+    )
+  )
+  else
+  (
+    gosub DebugPrint 0 "ERROR: diag_tx_mode variable is not present, exiting"
+	ENDDO
+  )
+  
+  ; Write input, output file paths, circular buf head, tail, diag_tagging_support values to Token file
+  WRITE #1 "INPUT_FILE &OUTFILE_DEFAULT_PATH\&CIRCULAR_BUFFER_DATA_FILE"
+  WRITE #1 "OUTPUT_FILE &OUTFILE_DEFAULT_PATH\&CIRCULAR_BUFFER_OUTPUT_QMDL"
+  WRITE #1 "HEAD &circular_buf_head"
+  WRITE #1 "TAIL &circular_buf_tail"
+  WRITE #1 "TAGGING &diag_tagging_support"
+  
+  &hash_length=0x8
+  
+  ; Write all the GUIDs from diag_qshrink_database_file_list to Token file
+  &nGUID= v.value(sizeof(diag_qshrink_database_file_list))/v.value(sizeof(diag_qshrink_database_file_list[0]))
+  &GUID_idx= 0
+  while (&GUID_idx<&nGUID)
+  (
+	  &hash_file_addr=v.value(&diag_qshrink_database_file_list[&GUID_idx])+0xF 
+	  gosub ReadBytes &hash_length
+	  entry &hash_file_part1
+	  gosub ReadBytes &hash_length
+	  entry &hash_file_part2
+	  WRITE #1 "GUID &hash_file_part2 &hash_file_part1"
+	  &GUID_idx=&GUID_idx+0x1
+  )
+  
+  ;Write diagID, diagID name and GUID from diag_diagID_pname_list(going through all entries) to token file
+  if y.exist(diag_diagID_pname_list)
+  (
+	&list= v.value(diag_diagID_pname_list)
+	&next= 0x1
+	while (&next!=0x0)
+	(
+		&diagID= v.value(((diag_diagID_pname_type*)&list)->diagID)
+		&process_name= VAR.STRING(((diag_diagID_pname_type*)&list)->process_name)
+		&next= v.value(((diag_diagID_pname_type*)&list)->next)
+		&hash_file_addr=&list+0x28 
+		&hash_file_part1= Data.LongLong.BigEndian(D:&hash_file_addr)
+		&hash_file_part1= FORMAT.HEX(16.,&hash_file_part1)
+		&hash_file_addr=&hash_file_addr+0x8
+		&hash_file_part2= Data.LongLong.BigEndian(D:&hash_file_addr)
+		&hash_file_part2= FORMAT.HEX(16.,&hash_file_part2)
+		&list=&next
+		WRITE #1 "diagID &diagID &process_name &hash_file_part1 &hash_file_part2"
+	)
+  )
+  
+  gosub DebugPrint 0 "";
+  gosub DebugPrint 0 "Extracting the data from Circular Buffer"
+  
+  DATA.SAVE.Binary "&OUTFILE_DEFAULT_PATH\&CIRCULAR_BUFFER_DATA_FILE" d:(&circular_buf_start)..(&circular_buf_start+&circular_buf_size-0x1)
+  gosub DebugPrint 0 "";
+  gosub DebugPrint 0 "Saved buffer data to &OUTFILE_DEFAULT_PATH\&CIRCULAR_BUFFER_DATA_FILE"
+  local &command &script_path
+  &script_path=OS.PWD()
+  
+  if (!os.file("&script_path\&FORMAT_SCRIPT"))
+  (
+    gosub DebugPrint 0 "ERROR: Missing perl script to format the circular buffer data "
+    gosub DebugPrint 0 " Script &script_path\&FORMAT_SCRIPT can not be located."
+    ENDDO
+  )
+  close #1
+  &command="perl &script_path\&FORMAT_SCRIPT &OUTFILE_DEFAULT_PATH\&TOKEN_FILE"
+  
+  gosub DebugPrint 0 ""
+  gosub DebugPrint 0 "Formatting the circular buffer binary with perl script to create &CIRCULAR_BUFFER_OUTPUT_QMDL"
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "Executing: &command"
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "Please wait..."
+  gosub DebugPrint 0 
+      
+  ; Use 'winprint' command to capture any error messages that might pop up
+  printer.file "&final_output"
+  wp.OS.window &command
+   
+  gosub DebugPrint 0 "Script Complete..."
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "Please find the QMDL file at &OUTFILE_DEFAULT_PATH\&CIRCULAR_BUFFER_OUTPUT_QMDL"
+  gosub DebugPrint 0  
+  
+ENDDO
+
+
+
+; *************************************************************************
+; InitArea
+;
+;   Initializes text areas needed by T32 and any related initialization.
+; *************************************************************************
+
+InitArea:
+
+  Area.Create F3
+  Area.Select F3
+  Area.Clear F3
+  Area F3
+
+  gosub DebugPrint 0 "Beginning recover_circular_buffer.cmm script"
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "Usage: cd.do <path>/recover_circular_buffer.cmm "
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "**** NOTE **** "
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "         Make sure that you copy Qshrink database file to path of qmdl2 file to convert qmdl2 to isf and view on QXDM"
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "         The Compressed Data Binary can be found at &OUTFILE_DEFAULT_PATH\&CIRCULAR_BUFFER_DATA_FILE"
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "         The QMDL file will be saved at &OUTFILE_DEFAULT_PATH\&CIRCULAR_BUFFER_OUTPUT_QMDL"
+  gosub DebugPrint 0 
+  gosub DebugPrint 0 "         For any error logs, please check &final_output"
+  gosub DebugPrint 0 
+
+RETURN
+
+; *************************************************************************
+; ReadBytes &N
+;
+;   This routine reads &N bytes from the address &hash_file_addr returning
+;   a single value that concatinates the &N bytes.;
+;
+;   Returns: &data
+; *************************************************************************
+
+ReadBytes:
+  ENTRY &length
+  local &data
+  &data=0
+  &num_shift=0
+
+  WHILE (&length>0)
+  (
+    &temp=Data.BYTE(D:&hash_file_addr)
+    &data=((&temp<<(&num_shift*8))|&data)
+	&num_shift=&num_shift+1
+    &hash_file_addr=&hash_file_addr-1
+    &length=&length-1
+  )
+  
+  &data=FORMAT.HEX(16.,&data)
+
+RETURN &data
+
+; *************************************************************************
+; DebugPrint &L &M
+;
+;   Prints out debug message &M if &L is less than or equal to the global
+;   variable &debug_level
+; *************************************************************************
+
+DebugPrint:
+  entry &level &debugmsg
+  
+  if &level<=&debug_level_screen
+  (
+    if &level==0
+    (
+      print &debugmsg
+    )
+    else
+    (
+      print "DEBUG &level: &debugmsg"
+    )
+  )
+
+RETURN

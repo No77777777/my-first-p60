@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+    <NvConfigurationData carrierIndex="0" version="" type="1"/>
+	<NvEfsItemData name="XCAPConfigItem" id="73851" description="IMS XCAP Configuration Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_xcap_common_config">
+	    <Member name="Version" description="Version" comment="" sizeOf="1" type="uint8">0</Member> 		
+		<Member name="cAPNWWAN" description="XCAP APN Name on WWAN RAT" comment="" sizeOf="100" type="string"></Member>
+	    <Member name="iIPTypeWWAN" description="XCAP IP Address Type on WWAN RAT" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="cAPNWLAN" description="XCAP APN Name on WLAN RAT" comment="" sizeOf="100" type="string"></Member>
+	    <Member name="iIPTypeWLAN" description="XCAP IP Address Type on WLAN RAT" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="iRatMaskValue" description="XCAP Valid RAT Mask Value" comment="" sizeOf="1" type="uint32">0</Member>
+		<Member name="eGBAMode" description="XCAP GBA Is Enabled" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="eGBAUaTLSMode" description="XCAP TLS connection over Ua Interface" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="cUbUserAgent" description="User Agent for request over Ub interface" comment="" sizeOf="129" type="string"></Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future Versions" comment="" sizeOf="686" type="uint8"></Member>
+	</NvEfsItemData>
+	
+	<NvEfsItemData name="UtConfigItem" id="73852" description="IMS Ut Configuration Parameters" comment="" category="IMS" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/ims/qp_ims_ut_config_item">
+	    <Member name="Version" description="Version" comment="" sizeOf="1" type="uint8">0</Member> 		
+		<Member name="cXCAPServerName" description="Ut XCAP Server Name" comment="" sizeOf="256" type="string"></Member>
+		<Member name="cXCAPApplicationUID" description="Ut XCAP Application ID" comment="" sizeOf="256" type="string"></Member>
+	    <Member name="eMediaElementUsage" description="Ut XCAP Media Element Usage" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="eEmptySIBUsage" description="XCAP Empty SIB Tag Usage" comment="" sizeOf="1" type="uint8">0</Member>
+		<Member name="cUaUserAgent" description="User Agent for request over Ua interface" comment="" sizeOf="256" type="string"></Member>
+		<Member name="ReservedBytes" description="Bytes reserved for future versions" comment="" sizeOf="253" type="uint8"> </Member>
+	</NvEfsItemData>
+</NvData>

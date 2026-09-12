@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<driver name="GPIOInt">
+<include file="DDIGPIOInt.h"/>
+<device id="DALDEVICEID_GPIOINT">
+    <props name="GPIOINT_PHYSICAL_ADDRESS" type="DALPROP_ATTR_TYPE_UINT32">
+    0x00400000
+    </props>
+    <props name="PROCESSOR" type="DALPROP_ATTR_TYPE_UINT32">
+GPIOINT_DEVICE_MODEM
+    </props>
+    <props name="TOTAL_COUNT_OF_GPIOS" type="DALPROP_ATTR_TYPE_UINT32">
+    113
+    </props>
+    <props name="NUMBER_OF_SUPPORTED_DRIVERS" type="DALPROP_ATTR_TYPE_UINT32">
+    2
+    </props>
+    <props name="PRIORITY_LIST_OF_SUPPORTED_DRIVERS" type="DALPROP_ATTR_TYPE_STRUCT_PTR">
+    priority_list_gpioint_drivers
+    </props>
+    <props name="UGPIOINT_DRIVER" type="DALPROP_ATTR_TYPE_UINT32"> 
+    0
+    </props>
+</device>
+</driver>

@@ -1,0 +1,4 @@
+
+/* PGO Plugin */
+PLUGIN_ITER_SECTIONS("SortPGO", "READPGO", "../../config/divar.genw3k.prod/tcm_plugin_sort.cfg")
+PLUGIN_OUTPUT_SECTION_ITER("SortPGO","SORTPGOV2")

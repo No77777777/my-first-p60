@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  CXO masterStats Sleep Low Power Resource/Mode definitions
+
+  Copyright (c) 2016 - 2021 Qualcomm Technologies Inc.
+  All Rights Reserved.
+  Qualcomm Technologies Confidential and Proprietary
+-->
+
+<!--
+Format of Enter/Exit/Backoff latency fields:
+"<Fixed>,<Scaled>"
+Fixed - Unscaled value that is always added to each frequency table entry
+Scaled - Value that will be scaled at 1:1 ratio according to frequency table entries
+         and the initial base profile frequency given via ProfileFreq
+
+Bitwise attribute values (see sleep_mode_attribute enum for full description):
+  0x01 - Unused
+  0x02 - Multiple Entry
+  0x04 - Unused
+  0x08 - No automatic latency tracking
+  0x10 - LPRM is cacheable
+
+-->
+
+<LPRDefinition>
+  <LPR Name="masterstats" CoreMask="0xFFFFFFFF" InitFn="masterstatsLPR_initialize">
+    <Mode Name="cxo"
+      Dependency="rpm"
+	  RevDep="cxo.shutdown"
+      Order="AFTER rpm"
+      PowerSavings="0"
+      EnterLat="120"
+      ExitLat="100"
+      Backoff="100"
+      EnterFn="masterStatsLPR_enter"
+      ProfileExitFn="masterStatsLPR_ProfileExit"
+      Attributes="0x00"
+      Supported="TRUE"
+    >
+    </Mode>
+  </LPR>
+</LPRDefinition>

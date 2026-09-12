@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NvData McfgXmlVersion="2.0">
+<NvConfigurationData carrierIndex="0" version="wcdma.0.0" type="1"/>
+<NvItemData name="RRC Integrity Enabled" id="880" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="integrity_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Ciphering Enabled" id="881" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="ciphering_enabled" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvItemData name="RRC Fake Security Enabled" id="882" description="" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="fake_security_enabled" description="" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvItemData>
+	<NvItemData name="WCDMA RX Diversity Control" id="3851" description="Controls WCDMA Receive Diversity settings" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_rx_diversity_ctrl" description="" comment="" sizeOf="1" type="uint8">3 </Member>
+	</NvItemData>
+	<NvItemData name="Sparse AGC Power Control" id="4118" description="HSDPA category" comment="" category="Factory" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="hsdpa_cat" description="HSDPA category" comment="" sizeOf="1" type="uint8">14 </Member>
+	</NvItemData>
+	<NvItemData name="Sensors - Integrated Measurements" id="5090" description="HSUPA plus CM setting controller - 0 -&gt; Disable, 1 -&gt; Enable" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="wcdma_hsupda_cm_ctrl" description="HSUPA plus CM support on\off controller" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	<NvEfsItemData name="wcdma_rrc_csfb_skip_sib11_opt" id="65885" description="To enable/disable FEATURE_3GPP_CSFB_SKIP_OPT_WCDMA_SIBS" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_csfb_skip_sib11_opt">
+		<Member name="WCDMA_RRC_CSFB_SKIP_SIB11_OPT" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wcdma_rrc_fast_return_to_lte_after_csfb" id="67219" description="To enable/disable FEATURE_WCDMA_FAST_RETURN_TO_LTE_AFTER_CSFB" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_fast_return_to_lte_after_csfb">
+		<Member name="WCDMA_RRC_FAST_RETURN_TO_LTE_AFTER_CSFB" description="To enable/disable FEATURE_WCDMA_FAST_RETURN_TO_LTE_AFTER_CSFB" comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wcdma_rrc_wtol_cm_support" id="67256" description="to enable  or disable the wtol CM code support." comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_wtol_cm_support">
+		<Member name="WCDMA_RRC_W2L_CM_SUPPORT" description="to enable  or disable the wtol CM code support." comment="" sizeOf="1" type="uint8">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wcdma_ppac_support" id="67305" description="If the NV is enabled PPAC will be supported" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_ppac_support">
+		<Member name="wcdma_ppac_support" description="If the NV is enabled PPAC will be supported" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="wcdma_rrc_feature" id="65693" description="To enable/disable RRC feature" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc/wcdma_rrc_feature">
+		<Member name="WCDMA_RRC_FEATURE" description="" comment="" sizeOf="1" type="uint16">0 </Member>
+	</NvEfsItemData>
+	<NvEfsItemData name="rrc_ganss_support_nv" id="none" description="" comment="" category="Unknown" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="2" fullpathname="/nv/item_files/wcdma/rrc_ganss_support_nv">
+		<Member name="Unidentified" description="" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvEfsItemData>
+<NvItemData name="CPU Based Flow Control" id="4261" description="CPU based flow control for throttling data rates for HSPA and apps" comment="" category="WCDMA" subscription_mask="0x07" mcfgAttributes="0x19" mcfgVariant="1">
+		<Member name="cpu_based_flow_control" description="Set to TRUE as a default" comment="" sizeOf="1" type="uint8">1 </Member>
+	</NvItemData>
+	</NvData>
