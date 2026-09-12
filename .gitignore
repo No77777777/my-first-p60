@@ -1,27 +1,41 @@
-# 编译输出文件
+# ===== 1. 严格忽略编译产物 =====
 *.o
 *.obj
 *.a
 *.lib
 *.so
+*.dll
 *.exe
 *.bin
 *.elf
 *.hex
 *.map
 *.lst
+*.d
+*.pbi
+*.pdb
+*.tar
+*.gz
 
-# 日志和数据文件
+# ===== 2. 忽略体积巨大的数据/日志文件 =====
 *.log
 *.hdf
 *.xqcn
-*.txt
 *.zip
+# 你上次上传遇到的 73MB 大文件
+*.ref
 
-# 编译和构建目录 (非常关键)
-build/
+# ===== 3. 忽略纯粹的编译输出目录（如果里面有脚本，请去掉这两行） =====
 out/
-bin/
 obj/
-modem_proc/build/
-modem_proc/*/build/
+
+# ===== 4. 强制放行所有的编译脚本和构建配置（非常重要！） =====
+!Makefile
+!makefile
+!*.mk
+!*.cmake
+!*.sh
+!*.bat
+!*.py
+!*.config
+!*.conf
